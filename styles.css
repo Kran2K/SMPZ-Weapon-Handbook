@@ -58,21 +58,23 @@ body {
 /* 패널 전환 버튼 */
 .panel-switcher {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 15px;
 }
 
 .panel-btn {
     flex: 1;
-    padding: 10px 12px;
+    padding: 8px 4px;
     background: #2a2a2a;
     color: #ffffff;
     border: 2px solid #444;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .panel-btn:hover {

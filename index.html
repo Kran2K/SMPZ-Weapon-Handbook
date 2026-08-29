@@ -16,6 +16,7 @@
             </h1>
             <div class="panel-switcher">
                 <button type="button" class="panel-btn active" data-panel="weapon">SMPZ 웨폰</button>
+                <button type="button" class="panel-btn" data-panel="attachment">SMPZ 부착물</button>
                 <button type="button" class="panel-btn" data-panel="gear">SMPZ 기어</button>
             </div>
             <div class="search-container">
@@ -27,6 +28,11 @@
             <div id="weaponPanel" class="panel-content">
                 <ul class="category-list" id="categoryList">
                     <!-- 무기 카테고리 목록이 여기에 동적으로 추가됩니다 -->
+                </ul>
+            </div>
+            <div id="attachmentPanel" class="panel-content" style="display: none;">
+                <ul class="category-list" id="attachmentCategoryList">
+                    <!-- 부착물 카테고리 목록이 여기에 동적으로 추가됩니다 -->
                 </ul>
             </div>
             <div id="gearPanel" class="panel-content" style="display: none;">
