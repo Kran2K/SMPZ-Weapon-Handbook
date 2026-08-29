@@ -247,6 +247,37 @@ function createBackToGridButton() {
 // 마지막으로 표시된 그리드 상태 (상세 화면에서 "목록으로" 이동 시 사용)
 let lastGridState = null;
 
+// 검색 시작 직전의 화면 상태 (검색창을 비우면 이 화면으로 복귀)
+let preSearchView = null;
+
+function captureCurrentView() {
+    if (currentWeapon) {
+        return { type: 'detail', panel: currentPanel, category: currentCategory, item: currentWeapon, galleryIndex: lastGalleryImageIndex };
+    }
+    if (lastGridState) {
+        return { type: 'grid', title: lastGridState.title, items: lastGridState.items, categoryKey: lastGridState.categoryKey, panelType: lastGridState.panelType };
+    }
+    return { type: 'empty' };
+}
+
+function restoreView(view) {
+    if (!view || view.type === 'empty') {
+        clearDetail();
+        return;
+    }
+    if (view.type === 'detail') {
+        if (view.panel === 'gear') {
+            showGearDetail(view.item, view.category, view.galleryIndex || 0);
+        } else if (view.panel === 'attachment') {
+            showAttachmentDetail(view.item, view.category, view.galleryIndex || 0);
+        } else {
+            showWeaponDetail(view.item, view.category, view.galleryIndex || 0);
+        }
+    } else if (view.type === 'grid') {
+        showGridView(view.title, view.items, view.categoryKey, view.panelType);
+    }
+}
+
 function backToGrid() {
     if (lastGridState) {
         showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType);
@@ -259,6 +290,11 @@ function backToGrid() {
 function renderItemGrid(categoryKey, panelType) {
     panelType = panelType || currentPanel;
     closeDropdown();
+
+    // 검색 중이 아닌 실제 카테고리 진입이므로 검색 상태를 초기화
+    preSearchView = null;
+    const searchInput = document.getElementById('itemSearch');
+    if (searchInput && searchInput.value) searchInput.value = '';
 
     const dataSource = panelType === 'gear' ? gearData : (panelType === 'attachment' ? attachmentData : weaponsData);
     let items;
@@ -1233,6 +1269,7 @@ function clearDetail() {
     currentWeapon = null;
     currentCategory = null;
     lastGridState = null;
+    preSearchView = null;
 }
 
 
@@ -1743,7 +1780,18 @@ function openCompareModal() {
 function searchItems(query) {
     const trimmed = (query || '').trim();
     if (!trimmed) {
+        // 검색창이 비면 검색 시작 전 화면으로 복귀
+        if (preSearchView) {
+            const view = preSearchView;
+            preSearchView = null;
+            restoreView(view);
+        }
         return;
+    }
+
+    // 검색을 처음 시작하는 시점의 화면을 기억해둔다
+    if (!preSearchView) {
+        preSearchView = captureCurrentView();
     }
 
     const lowerQuery = trimmed.toLowerCase();

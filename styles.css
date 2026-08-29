@@ -302,7 +302,7 @@ body {
 .back-to-grid-wrap {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-bottom: 16px;
 }
 
