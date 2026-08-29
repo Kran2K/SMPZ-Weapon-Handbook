@@ -7,57 +7,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 좌측 사이드바 -->
-        <aside class="sidebar">
-            <h1 class="sidebar-title">
-                <img src="assets/doc.png" alt="도감" class="sidebar-title-icon">
-                <span>SMPZ 모드 도감</span>
-            </h1>
-            <div class="panel-switcher">
-                <button type="button" class="panel-btn active" data-panel="weapon">SMPZ 웨폰</button>
-                <button type="button" class="panel-btn" data-panel="attachment">SMPZ 부착물</button>
-                <button type="button" class="panel-btn" data-panel="gear">SMPZ 기어</button>
+    <!-- 상단바 -->
+    <header class="topbar">
+        <h1 class="topbar-title">
+            <img src="assets/doc.png" alt="도감" class="topbar-title-icon">
+            <span>SMPZ 모드 도감</span>
+        </h1>
+        <nav class="panel-switcher">
+            <button type="button" class="panel-btn active" data-panel="weapon">SMPZ 웨폰</button>
+            <button type="button" class="panel-btn" data-panel="attachment">SMPZ 부착물</button>
+            <button type="button" class="panel-btn" data-panel="gear">SMPZ 기어</button>
+        </nav>
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <img src="assets/search.png" alt="검색" class="search-icon">
+                <input type="text" id="itemSearch" class="weapon-search-input" placeholder="검색...">
             </div>
-            <div class="search-container">
-                <div class="search-input-wrapper">
-                    <img src="assets/search.png" alt="검색" class="search-icon">
-                    <input type="text" id="itemSearch" class="weapon-search-input" placeholder="검색...">
-                </div>
-            </div>
-            <div id="weaponPanel" class="panel-content">
-                <ul class="category-list" id="categoryList">
-                    <!-- 무기 카테고리 목록이 여기에 동적으로 추가됩니다 -->
-                </ul>
-            </div>
-            <div id="attachmentPanel" class="panel-content" style="display: none;">
-                <ul class="category-list" id="attachmentCategoryList">
-                    <!-- 부착물 카테고리 목록이 여기에 동적으로 추가됩니다 -->
-                </ul>
-            </div>
-            <div id="gearPanel" class="panel-content" style="display: none;">
-                <div id="gearAddBtnWrap" class="admin-add-wrap" style="display: none;">
-                    <button type="button" id="gearAddBtn" class="add-weapon-btn">기어 추가</button>
-                </div>
-                <ul class="category-list" id="gearCategoryList">
-                    <!-- 기어 카테고리 목록이 여기에 동적으로 추가됩니다 -->
-                </ul>
-            </div>
-            
-            <!-- 관리자 로그인 버튼 -->
-            <div class="admin-section">
-                <button id="adminLoginBtn" class="admin-btn">관리자 로그인</button>
-                <button id="adminLogoutBtn" class="admin-btn" style="display: none;">로그아웃</button>
-            </div>
-        </aside>
+        </div>
+        <div class="admin-section">
+            <button id="adminLoginBtn" class="admin-btn">관리자 로그인</button>
+            <button id="adminLogoutBtn" class="admin-btn" style="display: none;">로그아웃</button>
+        </div>
+    </header>
 
-        <!-- 메인 콘텐츠 영역 -->
-        <main class="main-content">
-            <div class="weapon-detail" id="weaponDetail">
-                <p class="empty-message">좌측에서 카테고리를 선택하고 무기를 클릭하여 정보를 확인하세요.</p>
+    <!-- 카테고리 드롭다운 (상단바 버튼을 누르면 내려옴) -->
+    <div class="category-dropdown" id="categoryDropdown">
+        <div id="weaponPanel" class="panel-content">
+            <ul class="category-list" id="categoryList">
+                <!-- 무기 카테고리 목록이 여기에 동적으로 추가됩니다 -->
+            </ul>
+        </div>
+        <div id="attachmentPanel" class="panel-content" style="display: none;">
+            <ul class="category-list" id="attachmentCategoryList">
+                <!-- 부착물 카테고리 목록이 여기에 동적으로 추가됩니다 -->
+            </ul>
+        </div>
+        <div id="gearPanel" class="panel-content" style="display: none;">
+            <div id="gearAddBtnWrap" class="admin-add-wrap" style="display: none;">
+                <button type="button" id="gearAddBtn" class="add-weapon-btn">기어 추가</button>
             </div>
-        </main>
+            <ul class="category-list" id="gearCategoryList">
+                <!-- 기어 카테고리 목록이 여기에 동적으로 추가됩니다 -->
+            </ul>
+        </div>
     </div>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="main-content">
+        <div class="grid-view" id="gridView" style="display: none;">
+            <div class="grid-header">
+                <h2 class="grid-title" id="gridTitle"></h2>
+                <span class="grid-count" id="gridCount"></span>
+            </div>
+            <div class="weapon-grid" id="itemGrid"></div>
+        </div>
+        <div class="weapon-detail" id="weaponDetail">
+            <p class="empty-message">상단 메뉴에서 카테고리를 선택하고 항목을 클릭하여 정보를 확인하세요.</p>
+        </div>
+    </main>
 
     <!-- 관리자 로그인 모달 -->
     <div id="loginModal" class="modal">
@@ -219,6 +226,7 @@
         <img id="modalImage" class="modal-image-content" src="" alt="">
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
