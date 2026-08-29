@@ -11,65 +11,55 @@ body {
     min-height: 100vh;
 }
 
-.container {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* 사이드바 스타일 */
-.sidebar {
-    width: 280px;
-    background: #1a1a1a;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+/* 상단바 */
+.topbar {
     position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 100;
-    border-right: 1px solid #333;
-}
-
-.sidebar-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #ffffff;
-    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #333;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 0 24px;
+    z-index: 200;
 }
 
-.sidebar-title-icon {
-    width: 24px;
-    height: 24px;
+.topbar-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.topbar-title-icon {
+    width: 22px;
+    height: 22px;
     filter: brightness(0) invert(1);
     object-fit: contain;
     vertical-align: middle;
-}
-
-.sidebar-title span {
-    display: inline-block;
 }
 
 /* 패널 전환 버튼 */
 .panel-switcher {
     display: flex;
     gap: 6px;
-    margin-bottom: 15px;
+    flex-shrink: 0;
 }
 
 .panel-btn {
-    flex: 1;
-    padding: 8px 4px;
+    padding: 9px 16px;
     background: #2a2a2a;
     color: #ffffff;
     border: 2px solid #444;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -89,7 +79,7 @@ body {
 }
 
 .panel-content {
-    margin-bottom: 10px;
+    padding: 20px 24px;
 }
 
 .admin-add-wrap {
@@ -101,8 +91,10 @@ body {
 }
 
 .search-container {
-    margin-bottom: 20px;
-    padding: 0 5px;
+    flex: 1;
+    max-width: 320px;
+    margin: 0;
+    padding: 0;
 }
 
 .search-input-wrapper {
@@ -141,46 +133,43 @@ body {
     color: #666;
 }
 
+/* 카테고리 드롭다운 (상단바 버튼을 누르면 내려옴) */
+.category-dropdown {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    z-index: 199;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.category-dropdown.open {
+    max-height: 420px;
+    opacity: 1;
+    transform: translateY(0);
+    overflow-y: auto;
+}
+
 .category-list {
     list-style: none;
-    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .category-item {
-    margin-bottom: 8px;
-}
-
-.weapon-list-sidebar {
-    list-style: none;
-    margin-top: 5px;
-    padding-left: 20px;
-}
-
-.weapon-item-sidebar {
-    padding: 8px 15px;
-    background: #2a2a2a;
-    border-radius: 6px;
-    margin-bottom: 4px;
-    font-size: 14px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.weapon-item-sidebar:hover {
-    background: #333333;
-    transform: translateX(5px);
-}
-
-.weapon-item-sidebar.active {
-    background: #ffffff;
-    color: #000000;
-    font-weight: bold;
+    margin: 0;
 }
 
 .category-link {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 12px 15px;
     background: #2a2a2a;
@@ -208,13 +197,7 @@ body {
 
 .category-link:hover {
     background: #333333;
-    transform: translateX(5px);
-}
-
-.category-link.active {
-    background: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
+    border-color: #666;
 }
 
 .category-name {
@@ -230,27 +213,135 @@ body {
     font-weight: bold;
 }
 
-.category-link.active .category-count {
-    background: rgba(0, 0, 0, 0.2);
-    color: #000000;
+/* 무기/기어/부착물 그리드 (카테고리 선택 시 메인 영역에 표시) */
+.grid-view {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.grid-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #333;
+}
+
+.grid-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.grid-count {
+    color: #888;
+    font-size: 14px;
+}
+
+.weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+.grid-card {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grid-card:hover {
+    border-color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.15);
+}
+
+.grid-card.active {
+    border-color: #ffffff;
+    background: #242424;
+}
+
+.grid-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #0a0a0a;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.grid-card-placeholder {
+    color: #555;
+    font-size: 14px;
+}
+
+.grid-card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* "목록으로" 버튼 */
+.back-to-grid-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.back-to-grid-btn {
+    padding: 8px 14px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.back-to-grid-btn:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.07);
 }
 
 /* 관리자 섹션 */
 .admin-section {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #444;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    flex-shrink: 0;
 }
 
 .admin-btn {
-    width: 100%;
-    padding: 10px;
+    width: auto;
+    padding: 9px 14px;
     background: #ffffff;
     color: #000000;
     border: 2px solid #ffffff;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -262,11 +353,10 @@ body {
 
 /* 메인 콘텐츠 영역 */
 .main-content {
-    flex: 1;
-    margin-left: 280px;
+    margin-top: 70px;
     padding: 40px;
     background: #000000;
-    min-height: 100vh;
+    min-height: calc(100vh - 70px);
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -994,15 +1084,38 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
+    .topbar {
         position: relative;
         height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .topbar-title {
+        font-size: 17px;
+        flex: 1 1 auto;
+    }
+
+    .search-container {
+        max-width: none;
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .category-dropdown {
+        position: relative;
+        top: 0;
     }
 
     .main-content {
-        margin-left: 0;
+        margin-top: 0;
         padding: 20px;
+    }
+
+    .weapon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
     }
 
     .weapon-detail-card {
