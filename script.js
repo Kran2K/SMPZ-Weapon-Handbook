@@ -229,6 +229,7 @@ function showDetailContainer() {
     if (gridView) gridView.style.display = 'none';
     const weaponDetail = document.getElementById('weaponDetail');
     weaponDetail.style.display = 'flex';
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     return weaponDetail;
 }
 
