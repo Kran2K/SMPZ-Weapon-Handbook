@@ -5,6 +5,7 @@ let currentWeapon = null;
 let currentPanel = 'weapon';
 let currentGear = null;
 let lastGalleryImageIndex = 0;
+let lastGridScrollY = 0;
 let compareTarget = null;
 let isAdmin = false;
 const APP_STATE_KEY = 'smpz_handbook_state';
@@ -226,9 +227,17 @@ function closeDropdown() {
 // 그리드/상세 영역 전환 헬퍼
 function showDetailContainer() {
     const gridView = document.getElementById('gridView');
+    const isFromGrid = gridView && gridView.style.display !== 'none';
+    if (isFromGrid) {
+        lastGridScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    }
     if (gridView) gridView.style.display = 'none';
     const weaponDetail = document.getElementById('weaponDetail');
     weaponDetail.style.display = 'flex';
+
+    if (isFromGrid) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
     return weaponDetail;
 }
 
@@ -251,11 +260,12 @@ let lastGridState = null;
 let preSearchView = null;
 
 function captureCurrentView() {
+    const currentScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
     if (currentWeapon) {
-        return { type: 'detail', panel: currentPanel, category: currentCategory, item: currentWeapon, galleryIndex: lastGalleryImageIndex };
+        return { type: 'detail', panel: currentPanel, category: currentCategory, item: currentWeapon, galleryIndex: lastGalleryImageIndex, scrollY: currentScrollY };
     }
     if (lastGridState) {
-        return { type: 'grid', title: lastGridState.title, items: lastGridState.items, categoryKey: lastGridState.categoryKey, panelType: lastGridState.panelType };
+        return { type: 'grid', title: lastGridState.title, items: lastGridState.items, categoryKey: lastGridState.categoryKey, panelType: lastGridState.panelType, scrollY: currentScrollY };
     }
     return { type: 'empty' };
 }
@@ -273,14 +283,20 @@ function restoreView(view) {
         } else {
             showWeaponDetail(view.item, view.category, view.galleryIndex || 0);
         }
+        if (view.scrollY) {
+            requestAnimationFrame(() => {
+                window.scrollTo({ top: view.scrollY, left: 0, behavior: 'instant' });
+            });
+        }
     } else if (view.type === 'grid') {
-        showGridView(view.title, view.items, view.categoryKey, view.panelType);
+        lastGridScrollY = view.scrollY || 0;
+        showGridView(view.title, view.items, view.categoryKey, view.panelType, true);
     }
 }
 
 function backToGrid() {
     if (lastGridState) {
-        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType);
+        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true);
     } else {
         clearDetail();
     }
@@ -311,7 +327,7 @@ function renderItemGrid(categoryKey, panelType) {
 }
 
 // 이미 계산된 항목 목록을 그리드로 표시 (검색 결과 등에도 사용)
-function showGridView(title, items, categoryKey, panelType) {
+function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false) {
     lastGridState = { title, items, categoryKey, panelType };
     currentPanel = panelType;
     currentCategory = categoryKey;
@@ -342,6 +358,16 @@ function showGridView(title, items, categoryKey, panelType) {
     sortedItems.forEach(item => {
         grid.appendChild(createGridCard(item, categoryKey, panelType));
     });
+
+    if (shouldRestoreScroll && lastGridScrollY > 0) {
+        const targetY = lastGridScrollY;
+        requestAnimationFrame(() => {
+            window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+        });
+    } else if (!shouldRestoreScroll) {
+        lastGridScrollY = 0;
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
 }
 
 // 그리드 카드 생성 (이미지 + 이름)
@@ -1270,6 +1296,8 @@ function clearDetail() {
     currentCategory = null;
     lastGridState = null;
     preSearchView = null;
+    lastGridScrollY = 0;
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 }
 
 
