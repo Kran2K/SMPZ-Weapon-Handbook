@@ -187,6 +187,7 @@ const weaponsData = {
         },
         {
             "id": "SMPZ_Weapon_M4A1",
+            "model": "assets/models/m4.glb",
             "name": "Colt M4A1",
             "category": "돌격 소총",
             "image": "assets/m4a1.png",
