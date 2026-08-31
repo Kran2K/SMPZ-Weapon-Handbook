@@ -490,7 +490,7 @@ function renderGearCategories() {
     });
 }
 
-// 부착물 카테고리 렌더링 (원 제작자 100% 동일 createCategoryItem 사용)
+// 부착물 카테고리 렌더링 (공통 createCategoryItem 템플릿 사용)
 function renderAttachmentCategories() {
     const categoryList = document.getElementById('attachmentCategoryList');
     if (!categoryList) return;
