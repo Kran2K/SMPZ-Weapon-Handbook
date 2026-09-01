@@ -490,7 +490,7 @@ function renderGearCategories() {
     });
 }
 
-// 부착물 카테고리 렌더링 (원 제작자 100% 동일 createCategoryItem 사용)
+// 부착물 카테고리 렌더링 (공통 createCategoryItem 템플릿 사용)
 function renderAttachmentCategories() {
     const categoryList = document.getElementById('attachmentCategoryList');
     if (!categoryList) return;
@@ -575,29 +575,53 @@ function getItemImages(item) {
     return [];
 }
 
-// 이미지 패널 생성 (갤러리 타이틀 + 화살표 포함, 다중 이미지 지원)
+// 이미지/3D 패널 생성 (갤러리 타이틀 + 화살표 + 3D 인스펙트 뷰어 지원)
 function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onImageIndexChange = null) {
     const images = getItemImages(item);
+    const hasModel = Boolean(item && item.model);
     const galleryWrapper = document.createElement('div');
     galleryWrapper.className = 'gallery-panel-wrapper';
+    
+    // 갤러리 헤더 (타이틀 + 모드 스위치)
+    const headerRow = document.createElement('div');
+    headerRow.className = 'gallery-header-row';
     
     const galleryTitle = document.createElement('div');
     galleryTitle.className = 'gallery-title';
     galleryTitle.textContent = '- 갤러리 -';
-    galleryWrapper.appendChild(galleryTitle);
+    headerRow.appendChild(galleryTitle);
+    
+    let is3DMode = false;
+    let modelViewerEl = null;
+
+    if (hasModel) {
+        const modeSwitch = document.createElement('div');
+        modeSwitch.className = 'gallery-mode-switch';
+        
+        const btn2D = document.createElement('button');
+        btn2D.type = 'button';
+        btn2D.className = 'gallery-mode-btn active';
+        btn2D.textContent = '사진';
+        
+        const btn3D = document.createElement('button');
+        btn3D.type = 'button';
+        btn3D.className = 'gallery-mode-btn';
+        btn3D.textContent = '3D';
+        
+        modeSwitch.appendChild(btn2D);
+        modeSwitch.appendChild(btn3D);
+        headerRow.appendChild(modeSwitch);
+        
+        btn2D.onclick = () => switchMode(false);
+        btn3D.onclick = () => switchMode(true);
+    }
+    galleryWrapper.appendChild(headerRow);
     
     const imageContainer = document.createElement('div');
     imageContainer.className = 'weapon-detail-image-container';
     
-    if (images.length === 0) {
-        imageContainer.innerHTML = '<div class="weapon-image-placeholder">-</div>';
-        galleryWrapper.appendChild(imageContainer);
-        return galleryWrapper;
-    }
-    
+    // 2D 뷰 요소들
     const hasMultiple = images.length > 1;
-    
-    // 왼쪽 화살표
     const arrowLeft = document.createElement('button');
     arrowLeft.type = 'button';
     arrowLeft.className = 'image-nav-arrow image-nav-left';
@@ -608,30 +632,33 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         arrowLeft.style.display = 'none';
     }
     
-    // 이미지 래퍼
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'weapon-detail-image-wrapper';
     const img = document.createElement('img');
     img.className = 'weapon-detail-image';
-    let currentIndex = Math.max(0, Math.min(initialImageIndex, images.length - 1));
-    img.src = images[currentIndex];
-    img.alt = itemName;
-    img.style.cursor = 'pointer';
+    let currentIndex = Math.max(0, Math.min(initialImageIndex, Math.max(0, images.length - 1)));
+    if (images.length > 0) {
+        img.src = images[currentIndex];
+        img.alt = itemName;
+        img.style.cursor = 'pointer';
+    }
     const placeholder = document.createElement('div');
     placeholder.className = 'weapon-image-placeholder';
     placeholder.textContent = '-';
-    placeholder.style.display = 'none';
+    placeholder.style.display = images.length === 0 ? 'flex' : 'none';
     imgWrapper.appendChild(placeholder);
-    img.onerror = function() {
-        this.style.display = 'none';
-        placeholder.style.display = 'flex';
-    };
-    img.onclick = function() {
-        openImageModal(images[currentIndex], itemName);
-    };
-    imgWrapper.appendChild(img);
     
-    // 오른쪽 화살표
+    if (images.length > 0) {
+        img.onerror = function() {
+            this.style.display = 'none';
+            placeholder.style.display = 'flex';
+        };
+        img.onclick = function() {
+            openImageModal(images[currentIndex], itemName);
+        };
+        imgWrapper.appendChild(img);
+    }
+    
     const arrowRight = document.createElement('button');
     arrowRight.type = 'button';
     arrowRight.className = 'image-nav-arrow image-nav-right';
@@ -643,6 +670,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     }
     
     function updateImage() {
+        if (images.length === 0) return;
         img.src = images[currentIndex];
         img.alt = itemName;
         img.style.display = '';
@@ -676,6 +704,126 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     imageContainer.appendChild(arrowLeft);
     imageContainer.appendChild(imgWrapper);
     imageContainer.appendChild(arrowRight);
+    
+    // 3D 뷰 요소 (hasModel일 때 준비)
+    let modelViewerContainer = null;
+    if (hasModel) {
+        modelViewerContainer = document.createElement('div');
+        modelViewerContainer.className = 'model-viewer-container';
+        modelViewerContainer.style.display = 'none';
+        
+        modelViewerEl = document.createElement('model-viewer');
+        modelViewerEl.className = 'weapon-model-viewer';
+        modelViewerEl.setAttribute('src', item.model);
+        if (images.length > 0) {
+            modelViewerEl.setAttribute('poster', images[0]);
+        }
+        modelViewerEl.setAttribute('camera-controls', '');
+        modelViewerEl.setAttribute('auto-rotate', '');
+        modelViewerEl.setAttribute('auto-rotate-delay', '3000');
+        modelViewerEl.setAttribute('rotation-per-second', '30deg');
+        modelViewerEl.setAttribute('shadow-intensity', '1');
+        modelViewerEl.setAttribute('shadow-softness', '0.5');
+        modelViewerEl.setAttribute('exposure', '1.0');
+        modelViewerEl.setAttribute('camera-orbit', '45deg 75deg auto');
+        modelViewerEl.setAttribute('interaction-prompt', 'none');
+        
+        const bottomBar = document.createElement('div');
+        bottomBar.className = 'model-viewer-bottom-bar';
+        
+        const bgPresets = [
+            {
+                name: '다크',
+                background: 'radial-gradient(circle at center, #1f1f1f 0%, #0a0a0a 100%)',
+                exposure: '1.0',
+                shadowIntensity: '1.0',
+                shadowSoftness: '0.5'
+            },
+            {
+                name: '하늘',
+                background: 'linear-gradient(180deg, #1d6fa5 0%, #4a9fd5 45%, #9fd3f7 80%, #cfe8fb 100%)',
+                exposure: '1.15',
+                shadowIntensity: '1.4',
+                shadowSoftness: '0.4'
+            },
+            {
+                name: '노을',
+                background: 'linear-gradient(180deg, #201e2b 0%, #3a2e3d 35%, #5d434a 65%, #8a5d53 90%, #a8796b 100%)',
+                exposure: '1.08',
+                shadowIntensity: '1.4',
+                shadowSoftness: '0.4'
+            },
+            {
+                name: '화이트',
+                background: 'radial-gradient(circle at center, #ffffff 0%, #e2e8f0 100%)',
+                exposure: '1.05',
+                shadowIntensity: '1.2',
+                shadowSoftness: '0.6'
+            },
+            {
+                name: '야전',
+                background: 'radial-gradient(circle at center, #243526 0%, #101a11 100%)',
+                exposure: '1.0',
+                shadowIntensity: '1.3',
+                shadowSoftness: '0.5'
+            }
+        ];
+        
+        let currentBgIndex = 0;
+        const bgBtn = document.createElement('button');
+        bgBtn.type = 'button';
+        bgBtn.className = 'model-viewer-bg-btn';
+        bgBtn.title = '배경 및 조명 변경';
+        bgBtn.innerHTML = `
+            <svg class="bg-btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+            </svg>
+            <span class="bg-btn-text">배경</span>
+        `;
+        
+        bgBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentBgIndex = (currentBgIndex + 1) % bgPresets.length;
+            const preset = bgPresets[currentBgIndex];
+            modelViewerContainer.style.background = preset.background;
+            modelViewerEl.setAttribute('exposure', preset.exposure);
+            modelViewerEl.setAttribute('shadow-intensity', preset.shadowIntensity);
+            modelViewerEl.setAttribute('shadow-softness', preset.shadowSoftness);
+        });
+        
+        const controlsHint = document.createElement('div');
+        controlsHint.className = 'model-viewer-controls-hint';
+        controlsHint.innerHTML = '<span>좌클릭 회전</span><span>우클릭 이동</span><span>휠 줌</span>';
+        
+        bottomBar.appendChild(bgBtn);
+        bottomBar.appendChild(controlsHint);
+        
+        modelViewerContainer.appendChild(modelViewerEl);
+        modelViewerContainer.appendChild(bottomBar);
+        imageContainer.appendChild(modelViewerContainer);
+    }
+    
+    function switchMode(to3D) {
+        is3DMode = to3D;
+        const btn2D = headerRow.querySelector('.gallery-mode-btn:first-child');
+        const btn3D = headerRow.querySelector('.gallery-mode-btn:last-child');
+        if (btn2D) btn2D.classList.toggle('active', !to3D);
+        if (btn3D) btn3D.classList.toggle('active', to3D);
+        
+        if (to3D) {
+            imgWrapper.style.display = 'none';
+            arrowLeft.style.display = 'none';
+            arrowRight.style.display = 'none';
+            if (modelViewerContainer) modelViewerContainer.style.display = 'flex';
+        } else {
+            imgWrapper.style.display = 'flex';
+            if (hasMultiple) {
+                arrowLeft.style.display = 'flex';
+                arrowRight.style.display = 'flex';
+            }
+            if (modelViewerContainer) modelViewerContainer.style.display = 'none';
+        }
+    }
     
     galleryWrapper.appendChild(imageContainer);
     return galleryWrapper;
