@@ -166,7 +166,9 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     }
     detailCard.appendChild(descContainer);
     
-    if (attachment.stats) {
+    const hasAttachmentStats = Boolean(attachment.stats);
+    const hasAttachmentSpecs = Boolean(attachment.itemSize || attachment.itemSlots || attachment.cargoSize || attachment.cargoSlots);
+    if (hasAttachmentStats || hasAttachmentSpecs) {
         const statsContainer = document.createElement('div');
         statsContainer.className = 'weapon-stats-container';
         
@@ -181,32 +183,38 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
         
-        const statLabels = {
-            'recoil': '반동',
-            'sway': '흔들림',
-            'weight': '무게',
-            'capacity': '탄창 용량'
-        };
-        
-        Object.keys(attachment.stats).forEach(key => {
-            const row = document.createElement('div');
-            row.className = 'weapon-stat-row';
+        if (attachment.stats) {
+            const statLabels = {
+                'recoil': '반동',
+                'sway': '흔들림',
+                'weight': '무게',
+                'capacity': '탄창 용량'
+            };
             
-            const label = document.createElement('span');
-            label.className = 'weapon-stat-label';
-            label.textContent = `${statLabels[key] || key}:`;
-            
-            const value = document.createElement('span');
-            value.className = 'weapon-stat-value';
-            value.textContent = attachment.stats[key] || '-';
-            
-            row.appendChild(label);
-            row.appendChild(value);
-            statsList.appendChild(row);
-        });
-        
+            Object.keys(attachment.stats).forEach(key => {
+                const row = document.createElement('div');
+                row.className = 'weapon-stat-row';
+                
+                const label = document.createElement('span');
+                label.className = 'weapon-stat-label';
+                label.textContent = `${statLabels[key] || key}:`;
+                
+                const value = document.createElement('span');
+                value.className = 'weapon-stat-value';
+                value.textContent = attachment.stats[key] || '-';
+                
+                row.appendChild(label);
+                row.appendChild(value);
+                statsList.appendChild(row);
+            });
+        }
+
+        appendItemSpecRows(statsList, attachment);
+
         statsContainer.appendChild(statsList);
-        detailCard.appendChild(statsContainer);
+
+        const statsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        statsParent.appendChild(statsContainer);
     }
     
     weaponDetail.appendChild(detailCard);
@@ -573,6 +581,51 @@ function getItemImages(item) {
         return [item.image];
     }
     return [];
+}
+
+// 아이템 크기 및 수납 공간 행 추가 (기존 능력치 항목과 일관된 심플한 스타일)
+function appendItemSpecRows(statsList, item) {
+    if (!item || !statsList) return;
+
+    // 아이템 크기
+    if (item.itemSize || (item.itemSlots !== undefined && item.itemSlots !== null)) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '아이템 크기:';
+
+        const value = document.createElement('span');
+        value.className = 'weapon-stat-value';
+        const sizeStr = item.itemSize || '';
+        const slotStr = (item.itemSlots !== undefined && item.itemSlots !== null) ? `${item.itemSlots}칸` : '';
+        value.textContent = sizeStr ? (slotStr ? `${sizeStr} (${slotStr})` : sizeStr) : slotStr;
+
+        row.appendChild(label);
+        row.appendChild(value);
+        statsList.appendChild(row);
+    }
+
+    // 수납 공간 (수납 공간이 있는 아이템만)
+    if (item.cargoSize || (item.cargoSlots !== undefined && item.cargoSlots !== null)) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '수납 공간:';
+
+        const value = document.createElement('span');
+        value.className = 'weapon-stat-value';
+        const cargoSizeStr = item.cargoSize || '';
+        const cargoSlotStr = (item.cargoSlots !== undefined && item.cargoSlots !== null) ? `${item.cargoSlots}칸` : '';
+        value.textContent = cargoSizeStr ? (cargoSlotStr ? `${cargoSizeStr} (${cargoSlotStr})` : cargoSizeStr) : cargoSlotStr;
+
+        row.appendChild(label);
+        row.appendChild(value);
+        statsList.appendChild(row);
+    }
 }
 
 // 이미지/3D 패널 생성 (갤러리 타이틀 + 화살표 + 3D 인스펙트 뷰어 지원)
@@ -945,23 +998,19 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     detailCard.appendChild(weaponImagePanel);
     
     // 설명란
+    const descContainer = document.createElement('div');
+    descContainer.className = 'weapon-detail-description-container';
     if (weapon.description) {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
-        
         const desc = document.createElement('div');
         desc.className = 'weapon-detail-description';
         desc.innerHTML = weapon.description;
         descContainer.appendChild(desc);
-        
-        detailCard.appendChild(descContainer);
     } else {
         // 설명이 없을 경우 플레이스홀더
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         descContainer.innerHTML = '<div class="weapon-description-placeholder">해당 총기의 설명</div>';
-        detailCard.appendChild(descContainer);
     }
+
+    detailCard.appendChild(descContainer);
 
     // 능력치 섹션
     if (weapon.stats) {
@@ -1130,6 +1179,8 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             }
         });
 
+        appendItemSpecRows(statsList, weapon);
+
         statsContainer.appendChild(statsList);
 
         // 설명 박스와 완전히 같은 폭으로 보이도록,
@@ -1255,23 +1306,23 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     });
     detailCard.appendChild(gearImagePanel);
     
+    const descContainer = document.createElement('div');
+    descContainer.className = 'weapon-detail-description-container';
     if (gear.description) {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         const desc = document.createElement('div');
         desc.className = 'weapon-detail-description';
         desc.innerHTML = gear.description;
         descContainer.appendChild(desc);
-        detailCard.appendChild(descContainer);
     } else {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         descContainer.innerHTML = '<div class="weapon-description-placeholder">해당 기어의 설명</div>';
-        detailCard.appendChild(descContainer);
     }
+
+    detailCard.appendChild(descContainer);
     
-    // 기어 능력치 섹션 (탄/유혈/충격 데미지 보호률)
-    if (gear.stats) {
+    // 기어 능력치 및 규격 섹션
+    const hasGearStats = Boolean(gear.stats);
+    const hasGearSpecs = Boolean(gear.itemSize || gear.itemSlots || gear.cargoSize || gear.cargoSlots);
+    if (hasGearStats || hasGearSpecs) {
         const statsContainer = document.createElement('div');
         statsContainer.className = 'weapon-stats-container';
 
@@ -1292,59 +1343,74 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
-        const gearStatsDefs = [
-            { key: 'bulletDamageProtection', label: '총탄 데미지 보호률' },
-            { key: 'bloodDamageProtection', label: '유혈 데미지 보호률' },
-            { key: 'shockDamageProtection', label: '충격 데미지 보호률' }
-        ];
+        if (gear.stats) {
+            const hasProtectionStats = ['bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
+            if (hasProtectionStats) {
+                const gearStatsDefs = [
+                    { key: 'bulletDamageProtection', label: '총탄 데미지 보호률' },
+                    { key: 'bloodDamageProtection', label: '유혈 데미지 보호률' },
+                    { key: 'shockDamageProtection', label: '충격 데미지 보호률' }
+                ];
 
-        gearStatsDefs.forEach(stat => {
-            const row = document.createElement('div');
-            row.className = 'weapon-stat-row';
+                gearStatsDefs.forEach(stat => {
+                    const row = document.createElement('div');
+                    row.className = 'weapon-stat-row';
 
-            const label = document.createElement('span');
-            label.className = 'weapon-stat-label';
-            label.textContent = `${stat.label}:`;
+                    const label = document.createElement('span');
+                    label.className = 'weapon-stat-label';
+                    label.textContent = `${stat.label}:`;
 
-            const raw = gear.stats[stat.key];
-            const displayText = raw !== undefined && raw !== null && raw !== "" ? `${String(raw)}%` : '-';
+                    const raw = gear.stats[stat.key];
+                    const displayText = raw !== undefined && raw !== null && raw !== "" ? `${String(raw)}%` : '-';
 
-            const value = document.createElement('span');
-            value.className = 'weapon-stat-value';
-            value.textContent = displayText;
+                    const value = document.createElement('span');
+                    value.className = 'weapon-stat-value';
+                    value.textContent = displayText;
 
-            row.appendChild(label);
-            row.appendChild(value);
-            statsList.appendChild(row);
+                    row.appendChild(label);
+                    row.appendChild(value);
+                    statsList.appendChild(row);
 
-            let numericValue = NaN;
-            if (raw !== undefined && raw !== null && raw !== "") {
-                numericValue = parseFloat(String(raw));
+                    let numericValue = NaN;
+                    if (raw !== undefined && raw !== null && raw !== "") {
+                        numericValue = parseFloat(String(raw));
+                    }
+                    const percent = (!isNaN(numericValue) && numericValue >= 0 && numericValue <= 100)
+                        ? Math.min(100, Math.max(0, numericValue)) : 0;
+
+                    const bar = document.createElement('div');
+                    bar.className = 'weapon-stat-bar';
+
+                    const barFill = document.createElement('div');
+                    barFill.className = 'weapon-stat-bar-fill';
+                    barFill.style.width = `${percent}%`;
+
+                    bar.appendChild(barFill);
+                    statsList.appendChild(bar);
+                });
             }
-            const percent = (!isNaN(numericValue) && numericValue >= 0 && numericValue <= 100)
-                ? Math.min(100, Math.max(0, numericValue)) : 0;
 
-            const bar = document.createElement('div');
-            bar.className = 'weapon-stat-bar';
+            if (gear.stats.weight && gear.stats.weight !== '-') {
+                const row = document.createElement('div');
+                row.className = 'weapon-stat-row';
+                const label = document.createElement('span');
+                label.className = 'weapon-stat-label';
+                label.textContent = '무게:';
+                const value = document.createElement('span');
+                value.className = 'weapon-stat-value';
+                value.textContent = gear.stats.weight;
+                row.appendChild(label);
+                row.appendChild(value);
+                statsList.appendChild(row);
+            }
+        }
 
-            const barFill = document.createElement('div');
-            barFill.className = 'weapon-stat-bar-fill';
-            barFill.style.width = `${percent}%`;
-
-            bar.appendChild(barFill);
-            statsList.appendChild(bar);
-        });
+        appendItemSpecRows(statsList, gear);
 
         statsContainer.appendChild(statsList);
 
-        const statsParent = gear.description
-            ? detailCard.querySelector('.weapon-detail-description-container')
-            : detailCard;
-        if (statsParent) {
-            statsParent.appendChild(statsContainer);
-        } else {
-            detailCard.appendChild(statsContainer);
-        }
+        const statsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        statsParent.appendChild(statsContainer);
     }
     
     // 차콜 테블릿 필터 충전 패널 (호흡기, 방독면, Gas mask, respirator - 이름 또는 설명에 포함 시)
@@ -1651,6 +1717,7 @@ function openWeaponModal(weaponId = null, categoryKey = null) {
             document.getElementById('weaponManufacturer').value = weapon.manufacturer || '';
             document.getElementById('weaponManufacturerLogo').value = weapon.manufacturerLogo || '';
             document.getElementById('weaponManufacturerUrl').value = weapon.manufacturerUrl || '';
+            document.getElementById('weaponItemSize').value = weapon.itemSize || '';
             document.getElementById('weaponImage').value = (weapon.images && weapon.images.length) ? weapon.images.join(', ') : (weapon.image || '');
             document.getElementById('weaponDescription').value = weapon.description || '';
         }
@@ -1681,6 +1748,7 @@ function handleWeaponSubmit(e) {
     const manufacturer = document.getElementById('weaponManufacturer').value;
     const manufacturerLogo = document.getElementById('weaponManufacturerLogo').value;
     const manufacturerUrl = document.getElementById('weaponManufacturerUrl').value;
+    const weaponItemSize = document.getElementById('weaponItemSize').value.trim();
     const imageInput = document.getElementById('weaponImage').value.trim();
     const description = document.getElementById('weaponDescription').value;
     const imagePaths = imageInput ? imageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
@@ -1688,6 +1756,12 @@ function handleWeaponSubmit(e) {
     if (!category) {
         alert('카테고리를 선택해주세요.');
         return;
+    }
+
+    let weaponItemSlots;
+    if (weaponItemSize && weaponItemSize.includes('x')) {
+        const [w, h] = weaponItemSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(w) && !isNaN(h)) weaponItemSlots = w * h;
     }
     
     if (editingWeaponId) {
@@ -1698,6 +1772,13 @@ function handleWeaponSubmit(e) {
             weaponsData[category][weaponIndex].manufacturer = manufacturer;
             weaponsData[category][weaponIndex].manufacturerLogo = manufacturerLogo;
             weaponsData[category][weaponIndex].manufacturerUrl = manufacturerUrl;
+            if (weaponItemSize) {
+                weaponsData[category][weaponIndex].itemSize = weaponItemSize;
+                if (weaponItemSlots) weaponsData[category][weaponIndex].itemSlots = weaponItemSlots;
+            } else {
+                delete weaponsData[category][weaponIndex].itemSize;
+                delete weaponsData[category][weaponIndex].itemSlots;
+            }
             if (imagePaths.length > 1) {
                 weaponsData[category][weaponIndex].images = imagePaths;
                 delete weaponsData[category][weaponIndex].image;
@@ -1720,6 +1801,10 @@ function handleWeaponSubmit(e) {
             manufacturerUrl: manufacturerUrl,
             description: description
         };
+        if (weaponItemSize) {
+            newWeapon.itemSize = weaponItemSize;
+            if (weaponItemSlots) newWeapon.itemSlots = weaponItemSlots;
+        }
         if (imagePaths.length > 1) {
             newWeapon.images = imagePaths;
         } else if (imagePaths.length === 1) {
@@ -1782,6 +1867,8 @@ function openGearModal(gearId = null, categoryKey = null) {
             document.getElementById('gearManufacturer').value = gear.manufacturer || '';
             document.getElementById('gearManufacturerLogo').value = gear.manufacturerLogo || '';
             document.getElementById('gearManufacturerUrl').value = gear.manufacturerUrl || '';
+            document.getElementById('gearItemSize').value = gear.itemSize || '';
+            document.getElementById('gearCargoSize').value = gear.cargoSize || '';
             document.getElementById('gearImage').value = (gear.images && gear.images.length) ? gear.images.join(', ') : (gear.image || '');
             document.getElementById('gearDescription').value = gear.description || '';
             document.getElementById('gearBulletDamageProtection').value = gear.stats?.bulletDamageProtection ?? '';
@@ -1815,6 +1902,8 @@ function handleGearSubmit(e) {
     const manufacturer = document.getElementById('gearManufacturer').value;
     const manufacturerLogo = document.getElementById('gearManufacturerLogo').value;
     const manufacturerUrl = document.getElementById('gearManufacturerUrl').value;
+    const gearItemSize = document.getElementById('gearItemSize').value.trim();
+    const gearCargoSize = document.getElementById('gearCargoSize').value.trim();
     const gearImageInput = document.getElementById('gearImage').value.trim();
     const description = document.getElementById('gearDescription').value;
     const gearImagePaths = gearImageInput ? gearImageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
@@ -1831,6 +1920,18 @@ function handleGearSubmit(e) {
         alert('카테고리를 선택해주세요.');
         return;
     }
+
+    let gearItemSlots;
+    if (gearItemSize && gearItemSize.includes('x')) {
+        const [w, h] = gearItemSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(w) && !isNaN(h)) gearItemSlots = w * h;
+    }
+
+    let gearCargoSlots;
+    if (gearCargoSize && gearCargoSize.includes('x')) {
+        const [cw, ch] = gearCargoSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(cw) && !isNaN(ch)) gearCargoSlots = cw * ch;
+    }
     
     if (editingGearId) {
         const gearIndex = gearData[category].findIndex(g => g.id === editingGearId);
@@ -1839,6 +1940,20 @@ function handleGearSubmit(e) {
             gearData[category][gearIndex].manufacturer = manufacturer;
             gearData[category][gearIndex].manufacturerLogo = manufacturerLogo;
             gearData[category][gearIndex].manufacturerUrl = manufacturerUrl;
+            if (gearItemSize) {
+                gearData[category][gearIndex].itemSize = gearItemSize;
+                if (gearItemSlots) gearData[category][gearIndex].itemSlots = gearItemSlots;
+            } else {
+                delete gearData[category][gearIndex].itemSize;
+                delete gearData[category][gearIndex].itemSlots;
+            }
+            if (gearCargoSize) {
+                gearData[category][gearIndex].cargoSize = gearCargoSize;
+                if (gearCargoSlots) gearData[category][gearIndex].cargoSlots = gearCargoSlots;
+            } else {
+                delete gearData[category][gearIndex].cargoSize;
+                delete gearData[category][gearIndex].cargoSlots;
+            }
             if (gearImagePaths.length > 1) {
                 gearData[category][gearIndex].images = gearImagePaths;
                 delete gearData[category][gearIndex].image;
@@ -1861,6 +1976,14 @@ function handleGearSubmit(e) {
             manufacturerUrl: manufacturerUrl,
             description: description
         };
+        if (gearItemSize) {
+            newGear.itemSize = gearItemSize;
+            if (gearItemSlots) newGear.itemSlots = gearItemSlots;
+        }
+        if (gearCargoSize) {
+            newGear.cargoSize = gearCargoSize;
+            if (gearCargoSlots) newGear.cargoSlots = gearCargoSlots;
+        }
         if (gearImagePaths.length > 1) {
             newGear.images = gearImagePaths;
         } else if (gearImagePaths.length === 1) {
