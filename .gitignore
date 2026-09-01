@@ -9,11 +9,21 @@ Thumbs.db
 .vscode/
 .idea/
 
-# 로그 파일
-*.log
+# Python 캐시 및 컴파일 파일
+__pycache__/
+*.py[cod]
+*$py.class
+/tools/__pycache__/
 
-# 임시 파일
+# 도구 캐시 및 로컬 설정 파일
+.cache/
+tools/.cache/
+.config.json
+tools/.config.json
+
+# 로그 및 임시 파일
+*.log
 *.tmp
 *.temp
 *.backup.js
-
+test_*.js

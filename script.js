@@ -10,6 +10,624 @@ let compareTarget = null;
 let isAdmin = false;
 const APP_STATE_KEY = 'smpz_handbook_state';
 
+// 네비게이션 히스토리 스택
+let navStack = [];
+let isNavigatingHistory = false;
+
+// 슬롯명 한국어 매핑 사전
+const slotNameMap = {
+    // AR / 서방권 소총
+    'ARBuffer': 'AR 버퍼 튜브',
+    'ARChargingHandle': 'AR 차징 핸들',
+    'ARpistolgrip': 'AR 피스톨 그립',
+    'M4Receiver': 'M4 리시버',
+    'M4Handguard': 'M4 핸드가드',
+    'ARGasblock': '가스 블록',
+    'AR10Gasblock': 'AR-10 가스 블록',
+    'weaponMuzzleM4': 'M4 총구 부착물',
+    'ARButtstock': 'AR 개머리판',
+    'AR10Handguard': 'AR-10 핸드가드',
+    'ARIntegratedStock': 'AR 일체형 개머리판',
+    'LPTBuffer': 'LPT 버퍼 튜브',
+    '417Buffer': 'HK417 버퍼 튜브',
+    '417Handguard': 'HK417 핸드가드',
+    'HK416Handguard': 'HK416 핸드가드',
+    'SCARButtstock': 'SCAR 개머리판',
+    'SCARBuffer': 'SCAR 버퍼 튜브',
+    'SCARHandguard': 'SCAR 핸드가드',
+    'SCARHandguardCASV': 'SCAR CASV 핸드가드',
+    'SPEARHandguard': 'SPEAR 핸드가드',
+    'SPEARSuppressor': 'SPEAR 소음기',
+    'DD9LowerHandguard': 'DD 9인치 하부 핸드가드',
+    'DD12LowerHandguard': 'DD 12인치 하부 핸드가드',
+    'DDCover': 'DD 레일 커버',
+    'DDCover2': 'DD 레일 커버 2',
+    'JailBreakMuzzle': 'JailBreak 머즐',
+    'SA58Stock': 'SA58 개머리판',
+    'SA58Pistolgrip': 'SA58 피스톨 그립',
+    'SA58Handguard': 'SA58 핸드가드',
+    'SA58Cover': 'SA58 커버',
+    'MDRHandguard': 'MDR 핸드가드',
+    'F2000Handguard': 'F2000 핸드가드',
+    'F2000Rearsight': 'F2000 가늠자',
+    'X17Receiver': 'X-17 리시버',
+    'G36Buttstock': 'G36 개머리판',
+    'G36Optic': 'G36 조준경',
+    'G36Frontsight': 'G36 가늠쇠',
+    'G36Handguard': 'G36 핸드가드',
+    'G36Magwell': 'G36 탄창 삽입구',
+    'MasadaButtstock': '마사다 개머리판',
+    'MasadaHandguard': '마사다 핸드가드',
+    'MCXButtstock': 'MCX 개머리판',
+    'MCXHandguard': 'MCX 핸드가드',
+    'AUGReceiver': 'AUG 리시버',
+    'AUGOptic': 'AUG 조준경',
+    'AUGMount': 'AUG 마운트',
+    'AUGMuzzle': 'AUG 머즐',
+
+    // AK / 동구권 소총
+    'AKpistolgrip': 'AK 피스톨 그립',
+    'AKChargingHandle': 'AK 차징 핸들',
+    'weaponOpticsAK': 'AK 조준경',
+    'AK74MBuffer': 'AK-74M 버퍼 튜브',
+    'AK74MButtstock': 'AK-74M 개머리판',
+    'AKSidemount': 'AK 사이드 마운트',
+    'AKButtpad': 'AK 버트패드',
+    'AKCover': 'AK 리시버 커버',
+    'AKRearsight': 'AK 가늠자',
+    'AKHandguard': 'AK 핸드가드',
+    'AKButtstock': 'AK 개머리판',
+    'AKMSStock': 'AKMS 개머리판',
+    'AKZenitStock': 'AK Zenit 개머리판',
+    'weaponMuzzleAK74': 'AK-74 소염기/소음기',
+    'weaponMuzzleAKM': 'AKM 소염기/소음기',
+    'AK12Cover': 'AK-12 리시버 커버',
+    'AK12Handguard': 'AK-12 핸드가드',
+    'AK12Muzzle': 'AK-12 소염기',
+    'AK308Cover': 'AK-308 리시버 커버',
+    'AK308Handguard': 'AK-308 핸드가드',
+    'AK308Muzzle': 'AK-308 소염기',
+    'AK50Cover': 'AK-50 리시버 커버',
+    'AK50Hndgrd': 'AK-50 핸드가드',
+    'RD704Handguard': 'RD-704 핸드가드',
+    'VPO101Cover': 'VPO-101 커버',
+    'AN94Buttstock': 'AN-94 개머리판',
+    'AKS74UButtstock': 'AKS-74U 개머리판',
+    'AKS74UCover': 'AKS-74U 커버',
+    'AKS74UHandguard': 'AKS-74U 핸드가드',
+    'OpticsOnAKHndgrd': 'AK 핸드가드 조준경',
+
+    // 특수 / 저격 / 지정사수 소총
+    'VALAdapter': 'VAL 어댑터',
+    'VALButtstock': 'VAL 개머리판',
+    'VSSCover': 'VSS 커버',
+    'VSSRearsight': 'VSS 가늠자',
+    'VSSHandguard': 'VSS 핸드가드',
+    'VSSMount': 'VSS 마운트',
+    'ASVALMod4Handguard': 'AS VAL Mod.4 핸드가드',
+    'ASVALMod4Muzzle': 'AS VAL Mod.4 총구',
+    'SR3MSuppressor': 'SR-3M 소음기',
+    'ASH12Suppressor': 'ASh-12 소음기',
+    'SKSHandguard': 'SKS 핸드가드',
+    'SKSStock': 'SKS 개머리판',
+    'SKSReceiver': 'SKS 리시버',
+    'SKSMount': 'SKS 마운트',
+    'SKSRearsight': 'SKS 가늠자',
+    'M1AChassis': 'M1A 섀시',
+    'M1AUpper': 'M1A 어퍼',
+    'M1AScopeMount': 'M1A 스코프 마운트',
+    'SVTStock': 'SVT 개머리판',
+    'SVTMount': 'SVT 마운트',
+    'SVTOptic': 'SVT 조준경',
+    'SVDStock': 'SVD 개머리판',
+    'SVDButtstock': 'SVD 개머리판',
+    'SVDAdapter': 'SVD 어댑터',
+    'SVDCover': 'SVD 리시버 커버',
+    'SVDMK1ChassisUpperBand': 'SVD MK1 섀시 어퍼',
+    'SVDHandguard': 'SVD 핸드가드',
+    '762x54Suppressor': '7.62x54mm 소음기',
+    'AXMCButtstock': 'AXMC 개머리판',
+    'AXMCHandguard': 'AXMC 핸드가드',
+    'M107A1Cheek': 'M107A1 칙패드',
+    'M107A1Rearsight': 'M107A1 가늠자',
+    'M107A1Frontsight': 'M107A1 가늠쇠',
+    'M107A1Bipod': 'M107A1 양각대',
+    'M107A1Muzzle': 'M107A1 머즐',
+    'XM109Muzzle': 'XM109 머즐',
+    'M200Stock': 'M200 개머리판',
+    'M200Handguard': 'M200 핸드가드',
+    'M200Muzzle': 'M200 머즐',
+    'BipodDVL10': 'DVL-10 양각대',
+    'weaponOpticsMosin': '모신나강 조준경',
+    'MosinStock': '모신나강 개머리판',
+    'MosinPatriot': '모신나강 패트리어트 키트',
+    'MosinRearsight': '모신나강 가늠자',
+    'MosinSuppressor': '모신나강 소음기',
+    'MSRStock': 'MSR 개머리판',
+    'CNCstock': 'CNC 개머리판',
+    'CNCAdapter': 'CNC 어댑터',
+    'CNCChassis': 'CNC 섀시',
+    'CNCHandguard': 'CNC 핸드가드',
+    '308Adapter': '.308 어댑터',
+    '300WinSuppressor': '.300 Win 소음기',
+    '338Muzzle': '.338 머즐',
+    '366Muzzle': '.366 머즐',
+    'SV98Bipod': 'SV-98 양각대',
+    'SV98Suppressor': 'SV-98 소음기',
+    'MjolnirHndgrd': '묠니르 핸드가드',
+    'TRGHandguard': 'TRG 핸드가드',
+    'TRGPad': 'TRG 패드',
+    'DRGMount': 'DRG 마운트',
+    'PRSStock': 'PRS 개머리판',
+    'UMSButtstock': 'UMS 개머리판',
+
+    // 기관단총 (SMG)
+    'MP5Stock': 'MP5 개머리판',
+    'MP5Mount': 'MP5 마운트',
+    'MP5Handguard': 'MP5 핸드가드',
+    'MP5Rearsight': 'MP5 가늠자',
+    'MP7Stock': 'MP7 개머리판',
+    'MP7Suppressor': 'MP7 소음기',
+    'MP7SureFireSuppressor': 'MP7 슈어파이어 소음기',
+    'MP9Suppressor': 'MP9 소음기',
+    'MPXChargingHandle': 'MPX 차징 핸들',
+    'MPXHandguard': 'MPX 핸드가드',
+    'MPXSD': 'MPX SD 핸드가드',
+    'P90Optic': 'P90 조준경',
+    'P90Receiver': 'P90 리시버',
+    'P90Suppressor': 'P90 소음기',
+    'PP19Stock': 'PP-19 개머리판',
+    'PP19Cover': 'PP-19 커버',
+    'SR2MSuppressor': 'SR-2M 소음기',
+    'VectorStock': 'Vector 개머리판',
+
+    // 산탄총 (Shotgun)
+    'MP133Stock': 'MP-133 개머리판',
+    'MP133Hndgrd': 'MP-133 핸드가드',
+    'SprutMount': 'Sprut 마운트',
+    'UltimaStock': 'Ultima 개머리판',
+    'UltimaPistolgrip': 'Ultima 피스톨 그립',
+    'UltimaHndgrd': 'Ultima 핸드가드',
+    'UlitmaMount': 'Ultima 마운트',
+    'MP18Stock': 'MP-18 개머리판',
+    'MP18Hndgrd': 'MP-18 핸드가드',
+    '590A1Stock': '590A1 개머리판',
+    '590A1Mount': '590A1 마운트',
+    '590A1Hndgrd': '590A1 핸드가드',
+    'SaigaButtstock': 'Saiga 개머리판',
+    'SaigaCover': 'Saiga 커버',
+    'SaigaRearsight': 'Saiga 가늠자',
+    'SaigaHandguard': 'Saiga 핸드가드',
+    '12gaMuzzle': '12게이지 머즐',
+
+    // 권총 (Pistol)
+    'M9A3Mount': 'M9A3 마운트',
+    'M1911AO': 'M1911 전용 부품',
+    'M1911Mount': 'M1911 마운트',
+    '45ACPSuppressor': '.45 ACP 소음기',
+    'FSRMRMount': 'FS RMR 마운트',
+    'FSBarrel': 'FS 바렐',
+    'FSSuppressor': 'FS 소음기',
+    'GlockButtstock': 'Glock 개머리판',
+    'GlockGrip': 'Glock 그립',
+    'GlockRearsight': 'Glock 가늠자',
+    'GlockFrontsight': 'Glock 가늠쇠',
+    'GlockMount': 'Glock 마운트',
+    'GlockSuppressor': 'Glock 소음기',
+    'GlockSlide': 'Glock 슬라이드',
+    'GlockBarrel': 'Glock 바렐',
+    'GlockOptics': 'Glock 조준경',
+    'pistolOptics': '권총 조준경',
+    'UCPMount': 'UCP 마운트',
+    'UCPPistolgrip': 'UCP 피스톨 그립',
+    'UCPSuppressor': 'UCP 소음기',
+    'USPMount': 'USP 마운트',
+    'USBM': 'USBM 부착물',
+    'SR1MPSidemount': 'SR-1MP 사이드 마운트',
+    'SR1MPSuppressor': 'SR-1MP 소음기',
+
+    // 기관총 (LMG)
+    'RPDStock': 'RPD 개머리판',
+    'RPDHandguard': 'RPD 핸드가드',
+    'RPDMuzzle': 'RPD 총구',
+    'RPDRearsight': 'RPD 가늠자',
+    'RPDBipod': 'RPD 양각대',
+    'PKButtstock': 'PK 개머리판',
+    'PKRearsight': 'PK 가늠자',
+    'PKHandguard': 'PK 핸드가드',
+    'PKMSuppressor': 'PKM 소음기',
+    'B51Mount': 'B-51 마운트',
+    'PKBipod': 'PK 양각대',
+    'PKPSuppressor': 'PKP 소음기',
+    'RPK16Buffer': 'RPK-16 버퍼 튜브',
+    'RPK16Cover': 'RPK-16 리시버 커버',
+    'RPK16Hndgrd': 'RPK-16 핸드가드',
+    'M60Buttstock': 'M60 개머리판',
+    'M60Handguard': 'M60 핸드가드',
+    'M60Bipod': 'M60 양각대',
+    'M60Pistolgrip': 'M60 피스톨 그립',
+    'M60PistolgripGroup': 'M60 피스톨 그립 그룹',
+    'M60Frontsight': 'M60 가늠쇠',
+    'M32Optics': 'M32 조준경',
+
+    // 범용 총기 부착물 / 레일 / 조준경 / 조명 / 손잡이 / 양각대
+    'Rearsight': '가늠자',
+    'Frontsight': '가늠쇠',
+    'weaponOptics': '조준경',
+    'weaponOpticsSecond': '보조 조준경',
+    'HydraOptics': '하이드라 조준경',
+    'noMountRMROptics': 'RMR 직결 조준경',
+    'Grip': '전방 손잡이',
+    'GripCASV': '전방 손잡이',
+    'Bipod': '양각대',
+    'BipodKeymod': 'Keymod 양각대',
+    'BipodKeymodMLOKMount': 'Keymod/M-LOK 양각대 마운트',
+    'BipodKeymodMount': 'Keymod 양각대 마운트',
+    'weaponWrap': '총기 랩',
+    '762Suppressor': '7.62mm 소음기',
+    'weaponFlashlight': '전술 조명',
+    'weaponFlashlightFirst': '전술 조명 1',
+    'weaponFlashlightSecond': '전술 조명 2',
+    'weaponFlashlightThird': '전술 조명 3',
+    'weaponFlashlightFourth': '전술 조명 4',
+    'weaponFlashlightFifth': '전술 조명 5',
+    'Flashlight': '플래시라이트',
+    'M16Mount': 'M16 마운트',
+    'M203': 'M203 유탄발사기',
+    'RiserMount': '라이저 마운트',
+    'CantedMount': '켄티드 마운트',
+    'AimpointT1': 'Aimpoint T-1 마운트',
+    'AimpointACRO': 'Aimpoint ACRO 마운트',
+    'MagnifierCompatOptics': '매그니파이어 호환 조준경',
+    'ROF90Mount': 'ROF-90 마운트',
+    'CRDMuzzle': 'CRD 머즐',
+    'BottomRailCover': '하부 레일 커버',
+    'LeftRailCover': '좌측 레일 커버',
+    'RightRailCover': '우측 레일 커버',
+    'SMRShortRailMountLeft': 'SMR 좌측 레일 마운트',
+    'SMRShortRailMountRight': 'SMR 우측 레일 마운트',
+    'SMRRailMountUnder': 'SMR 하부 레일 마운트',
+    'SMRShortRailMountUnder': 'SMR 하부 쇼트 레일 마운트',
+    'URXStopper': 'URX 스토퍼',
+    'URXPanel': 'URX 패널',
+    'URXPanel2': 'URX 패널 2',
+    'RAPTAR': 'RAPTAR 레이저',
+    'RAPTARSecond': 'RAPTAR 보조',
+    'BatteryD': 'D형 배터리',
+    'WF501B': 'WF-501B 라이트',
+    'FFP3': 'FFP3 필터',
+
+    // 기어 / 헬멧 / 방탄복 부착물
+    'NVG': '야간 투시경 (NVG)',
+    'Visor': '바이저 (안면 보호대)',
+    'HelmetPlate': '헬멧 방탄 플레이트',
+    'Mandible': '턱/안면 보호대 (Mandible)',
+    'HelmetAventail': '방탄 목가리개',
+    'HelmetHeadset': '헤드셋',
+    'AFMLOKChops': 'M-LOK 턱 보호대',
+    'UCSPad': '완충 패드',
+    'PatchLarge': '패치',
+    'Pouch_IFAK': 'IFAK 파우치',
+    'VestHolster': '권총 홀스터',
+    'Case_Front': '전면 케이스',
+    'Tourniquet': '지혈대',
+    'Shoulder': '어깨 보호대',
+    'WalkieTalkie': '무전기',
+    'Chemlight': '케미라이트'
+};
+
+// 슬롯 그룹 매핑 (동일 규격의 1번/2번/3번 슬롯들을 하나의 대표 그룹으로 묶음)
+const slotGroupMap = {
+    // 전방 손잡이 (동일 번호/규격)
+    'Grip': 'grip_group',
+    'GripCASV': 'grip_group',
+    'GripThird': 'grip_group',
+    'GripFourth': 'grip_group',
+
+    // 전술 조명 (1번~11번 및 범용 조명)
+    'weaponFlashlight': 'flashlight_group',
+    'weaponFlashlightFirst': 'flashlight_group',
+    'weaponFlashlightSecond': 'flashlight_group',
+    'weaponFlashlightThird': 'flashlight_group',
+    'weaponFlashlightFourth': 'flashlight_group',
+    'weaponFlashlightFifth': 'flashlight_group',
+    'weaponFlashlightSix': 'flashlight_group',
+    'weaponFlashlightSeven': 'flashlight_group',
+    'weaponFlashlightEight': 'flashlight_group',
+    'weaponFlashlightNine': 'flashlight_group',
+    'weaponFlashlightTen': 'flashlight_group',
+    'weaponFlashlightEleven': 'flashlight_group',
+    'Flashlight': 'flashlight_group',
+
+    // DD 레일 커버 1, 2
+    'DDCover': 'ddcover_group',
+    'DDCover2': 'ddcover_group',
+
+    // URX 패널 1, 2
+    'URXPanel': 'urxpanel_group',
+    'URXPanel2': 'urxpanel_group',
+
+    // RAPTAR 레이저 1, 2
+    'RAPTAR': 'raptar_group',
+    'RAPTARSecond': 'raptar_group'
+};
+
+// 그룹 정의 (표시 이름 및 포함되는 슬롯 키 목록)
+const slotGroupDefinitions = {
+    'grip_group': {
+        name: '전방 손잡이',
+        slots: ['Grip', 'GripCASV', 'GripThird', 'GripFourth']
+    },
+    'flashlight_group': {
+        name: '전술 조명',
+        slots: [
+            'weaponFlashlight', 'weaponFlashlightFirst', 'weaponFlashlightSecond',
+            'weaponFlashlightThird', 'weaponFlashlightFourth', 'weaponFlashlightFifth',
+            'weaponFlashlightSix', 'weaponFlashlightSeven', 'weaponFlashlightEight',
+            'weaponFlashlightNine', 'weaponFlashlightTen', 'weaponFlashlightEleven',
+            'Flashlight'
+        ]
+    },
+    'ddcover_group': {
+        name: 'DD 레일 커버',
+        slots: ['DDCover', 'DDCover2']
+    },
+    'urxpanel_group': {
+        name: 'URX 패널',
+        slots: ['URXPanel', 'URXPanel2']
+    },
+    'raptar_group': {
+        name: 'RAPTAR 레이저',
+        slots: ['RAPTAR', 'RAPTARSecond']
+    }
+};
+
+// 슬롯명 표시 라벨 반환
+function getSlotDisplayName(slotName) {
+    if (!slotName) return '';
+    if (slotNameMap[slotName]) {
+        return slotNameMap[slotName];
+    }
+    return slotName.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
+}
+
+// 전체 데이터베이스 아이템 수집
+function getAllDatabaseItems() {
+    const items = [];
+    if (typeof weaponsData !== 'undefined' && weaponsData) {
+        items.push(...Object.values(weaponsData).flat());
+    }
+    if (typeof gearData !== 'undefined' && gearData) {
+        items.push(...Object.values(gearData).flat());
+    }
+    if (typeof attachmentData !== 'undefined' && attachmentData) {
+        items.push(...Object.values(attachmentData).flat());
+    }
+    return items;
+}
+
+// 복수 슬롯 키 중 하나라도 만족하는 아이템 목록 필터링 (inventorySlots 기준 중복 제거)
+function getItemsForSlotKeys(slotKeys) {
+    const all = getAllDatabaseItems();
+    const results = [];
+    const seen = new Set();
+    const keysSet = new Set(slotKeys);
+    for (const item of all) {
+        if (item && Array.isArray(item.inventorySlots)) {
+            if (item.inventorySlots.some(s => keysSet.has(s))) {
+                if (!seen.has(item.id)) {
+                    seen.add(item.id);
+                    results.push(item);
+                }
+            }
+        }
+    }
+    return results;
+}
+
+// 특정 부착물 슬롯에 장착 가능한 아이템 목록 필터링 (단일 슬롯 키용)
+function getItemsForAttachmentSlot(slotName) {
+    return getItemsForSlotKeys([slotName]);
+}
+
+// 아이템의 attachmentSlots를 그룹화하여 중복 슬롯을 하나로 통합 (부모가 실제 보유한 슬롯만 안전하게 검색)
+function getGroupedAttachmentSlots(rawSlots) {
+    if (!Array.isArray(rawSlots)) return [];
+    const groups = [];
+    const seenGroupIds = new Set();
+    const rawSlotsSet = new Set(rawSlots);
+
+    for (const slot of rawSlots) {
+        const groupId = slotGroupMap[slot];
+        if (groupId && slotGroupDefinitions[groupId]) {
+            if (!seenGroupIds.has(groupId)) {
+                seenGroupIds.add(groupId);
+                const groupDef = slotGroupDefinitions[groupId];
+                // 중요: 부모 아이템이 실제로 가지고 있는 슬롯들만 필터링(교집합)하여 검색 대상 지정
+                const activeSlotsInParent = groupDef.slots.filter(s => rawSlotsSet.has(s));
+                groups.push({
+                    id: groupId,
+                    name: groupDef.name,
+                    slotKeys: activeSlotsInParent
+                });
+            }
+        } else {
+            const singleId = 'single_' + slot;
+            if (!seenGroupIds.has(singleId)) {
+                seenGroupIds.add(singleId);
+                groups.push({
+                    id: singleId,
+                    name: getSlotDisplayName(slot),
+                    slotKeys: [slot]
+                });
+            }
+        }
+    }
+    return groups;
+}
+
+// 아이템의 패널 타입 및 카테고리 자동 판별
+function getItemTypeAndCategory(item) {
+    if (!item) return { panelType: 'weapon', category: 'all' };
+    if (item.category && typeof attachmentData !== 'undefined' && attachmentData[item.category]) {
+        return { panelType: 'attachment', category: item.category };
+    }
+    if (item.category && typeof gearData !== 'undefined' && gearData[item.category]) {
+        return { panelType: 'gear', category: item.category };
+    }
+    if (item.category && typeof weaponsData !== 'undefined' && weaponsData[item.category]) {
+        return { panelType: 'weapon', category: item.category };
+    }
+
+    if (typeof attachmentData !== 'undefined') {
+        for (const [cat, list] of Object.entries(attachmentData)) {
+            if (list.some(x => x.id === item.id)) return { panelType: 'attachment', category: cat };
+        }
+    }
+    if (typeof gearData !== 'undefined') {
+        for (const [cat, list] of Object.entries(gearData)) {
+            if (list.some(x => x.id === item.id)) return { panelType: 'gear', category: cat };
+        }
+    }
+    if (typeof weaponsData !== 'undefined') {
+        for (const [cat, list] of Object.entries(weaponsData)) {
+            if (list.some(x => x.id === item.id)) return { panelType: 'weapon', category: cat };
+        }
+    }
+    return { panelType: 'attachment', category: item.category || 'all' };
+}
+
+// 아이템 상세 화면 자동 렌더링
+function showItemDetailAuto(item, categoryKey, galleryIndex = 0) {
+    const info = getItemTypeAndCategory(item);
+    const cat = categoryKey || info.category;
+    if (info.panelType === 'gear') {
+        showGearDetail(item, cat, galleryIndex);
+    } else if (info.panelType === 'weapon') {
+        showWeaponDetail(item, cat, galleryIndex);
+    } else {
+        showAttachmentDetail(item, cat, galleryIndex);
+    }
+}
+
+// 네비게이션 스택 푸시
+function pushNavState(viewState) {
+    if (isNavigatingHistory) return;
+    if (!viewState || viewState.type === 'empty') return;
+    navStack.push(viewState);
+}
+
+// 네비게이션 스택 팝 (이전 화면으로 복귀)
+function popNavState() {
+    if (navStack.length === 0) {
+        backToGrid();
+        return;
+    }
+    const previousState = navStack.pop();
+    isNavigatingHistory = true;
+    try {
+        restoreView(previousState);
+    } finally {
+        isNavigatingHistory = false;
+    }
+}
+
+// 최초 루트 그리드/목록으로 한 번에 복귀
+function resetToRootGrid() {
+    if (navStack.length > 0) {
+        const rootState = navStack[0];
+        navStack = [];
+        isNavigatingHistory = true;
+        try {
+            restoreView(rootState);
+        } finally {
+            isNavigatingHistory = false;
+        }
+    } else {
+        backToGrid();
+    }
+}
+
+// 슬롯 그룹 클릭 시 해당 그룹의 호환 아이템들을 그리드로 표시
+function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
+    pushNavState(captureCurrentView());
+    const matchedItems = getItemsForSlotKeys(slotKeys);
+    const parentName = parentItem && parentItem.name ? parentItem.name : '';
+    const fullTitle = parentName ? `${parentName} > ${groupName}` : groupName;
+    showGridView(fullTitle, matchedItems, 'slot_group_' + slotKeys[0], 'attachment');
+}
+
+// 기존 showSlotAttachments 호환 유지
+function showSlotAttachments(parentItem, slotName) {
+    const groupId = slotGroupMap[slotName];
+    if (groupId && slotGroupDefinitions[groupId]) {
+        const def = slotGroupDefinitions[groupId];
+        showSlotGroupAttachments(parentItem, def.name, def.slots);
+    } else {
+        const slotTitle = getSlotDisplayName(slotName);
+        showSlotGroupAttachments(parentItem, slotTitle, [slotName]);
+    }
+}
+
+// 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링)
+function createAttachmentSlotsSection(item) {
+    if (!item || !Array.isArray(item.attachmentSlots) || item.attachmentSlots.length === 0) {
+        return null;
+    }
+
+    const groupedSlots = getGroupedAttachmentSlots(item.attachmentSlots);
+    if (groupedSlots.length === 0) {
+        return null;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'attachment-slots-container';
+
+    const header = document.createElement('div');
+    header.className = 'weapon-stats-header';
+    const title = document.createElement('div');
+    title.className = 'weapon-stats-title';
+    title.textContent = '- 장착 가능한 부착물 -';
+    header.appendChild(title);
+    container.appendChild(header);
+
+    const slotsGrid = document.createElement('div');
+    slotsGrid.className = 'attachment-slots-grid';
+
+    groupedSlots.forEach(group => {
+        const matchedItems = getItemsForSlotKeys(group.slotKeys);
+        const count = matchedItems.length;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'attachment-slot-btn';
+        if (count === 0) {
+            btn.classList.add('empty-slot');
+        }
+
+        const slotLabel = document.createElement('span');
+        slotLabel.className = 'slot-label';
+        slotLabel.textContent = group.name;
+
+        const slotCount = document.createElement('span');
+        slotCount.className = 'slot-count';
+        slotCount.textContent = `(${count})`;
+
+        btn.appendChild(slotLabel);
+        btn.appendChild(slotCount);
+
+        btn.onclick = () => {
+            showSlotGroupAttachments(item, group.name, group.slotKeys);
+        };
+
+        slotsGrid.appendChild(btn);
+    });
+
+    container.appendChild(slotsGrid);
+    return container;
+}
+
+
 function loadData() {
     const savedWeapons = localStorage.getItem('smpz_weapons_data');
     if (savedWeapons) {
@@ -166,7 +784,9 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     }
     detailCard.appendChild(descContainer);
     
-    if (attachment.stats) {
+    const hasAttachmentStats = Boolean(attachment.stats);
+    const hasAttachmentSpecs = Boolean(attachment.itemSize || attachment.itemSlots || attachment.cargoSize || attachment.cargoSlots);
+    if (hasAttachmentStats || hasAttachmentSpecs) {
         const statsContainer = document.createElement('div');
         statsContainer.className = 'weapon-stats-container';
         
@@ -181,32 +801,44 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
         
-        const statLabels = {
-            'recoil': '반동',
-            'sway': '흔들림',
-            'weight': '무게',
-            'capacity': '탄창 용량'
-        };
-        
-        Object.keys(attachment.stats).forEach(key => {
-            const row = document.createElement('div');
-            row.className = 'weapon-stat-row';
+        if (attachment.stats) {
+            const statLabels = {
+                'recoil': '반동',
+                'sway': '흔들림',
+                'weight': '무게',
+                'capacity': '탄창 용량'
+            };
             
-            const label = document.createElement('span');
-            label.className = 'weapon-stat-label';
-            label.textContent = `${statLabels[key] || key}:`;
-            
-            const value = document.createElement('span');
-            value.className = 'weapon-stat-value';
-            value.textContent = attachment.stats[key] || '-';
-            
-            row.appendChild(label);
-            row.appendChild(value);
-            statsList.appendChild(row);
-        });
-        
+            Object.keys(attachment.stats).forEach(key => {
+                const row = document.createElement('div');
+                row.className = 'weapon-stat-row';
+                
+                const label = document.createElement('span');
+                label.className = 'weapon-stat-label';
+                label.textContent = `${statLabels[key] || key}:`;
+                
+                const value = document.createElement('span');
+                value.className = 'weapon-stat-value';
+                value.textContent = attachment.stats[key] || '-';
+                
+                row.appendChild(label);
+                row.appendChild(value);
+                statsList.appendChild(row);
+            });
+        }
+
+        appendItemSpecRows(statsList, attachment);
+
         statsContainer.appendChild(statsList);
-        detailCard.appendChild(statsContainer);
+
+        const statsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        statsParent.appendChild(statsContainer);
+    }
+
+    const slotsSection = createAttachmentSlotsSection(attachment);
+    if (slotsSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(slotsSection);
     }
     
     weaponDetail.appendChild(detailCard);
@@ -244,12 +876,23 @@ function showDetailContainer() {
 function createBackToGridButton() {
     const wrap = document.createElement('div');
     wrap.className = 'back-to-grid-wrap';
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'back-to-grid-btn';
-    btn.textContent = '← 목록으로';
-    btn.onclick = backToGrid;
-    wrap.appendChild(btn);
+
+    const btnPrev = document.createElement('button');
+    btnPrev.type = 'button';
+    btnPrev.className = 'back-to-grid-btn';
+    btnPrev.textContent = '← 이전으로';
+    btnPrev.onclick = popNavState;
+    wrap.appendChild(btnPrev);
+
+    if (navStack.length > 0) {
+        const btnRoot = document.createElement('button');
+        btnRoot.type = 'button';
+        btnRoot.className = 'back-to-grid-btn root-grid-btn';
+        btnRoot.textContent = '목록으로';
+        btnRoot.onclick = resetToRootGrid;
+        wrap.appendChild(btnRoot);
+    }
+
     return wrap;
 }
 
@@ -276,13 +919,7 @@ function restoreView(view) {
         return;
     }
     if (view.type === 'detail') {
-        if (view.panel === 'gear') {
-            showGearDetail(view.item, view.category, view.galleryIndex || 0);
-        } else if (view.panel === 'attachment') {
-            showAttachmentDetail(view.item, view.category, view.galleryIndex || 0);
-        } else {
-            showWeaponDetail(view.item, view.category, view.galleryIndex || 0);
-        }
+        showItemDetailAuto(view.item, view.category, view.galleryIndex || 0);
         if (view.scrollY) {
             requestAnimationFrame(() => {
                 window.scrollTo({ top: view.scrollY, left: 0, behavior: 'instant' });
@@ -306,6 +943,9 @@ function backToGrid() {
 function renderItemGrid(categoryKey, panelType) {
     panelType = panelType || currentPanel;
     closeDropdown();
+
+    // 카테고리 전환 시 히스토리 스택 초기화
+    navStack = [];
 
     // 검색 중이 아닌 실제 카테고리 진입이므로 검색 상태를 초기화
     preSearchView = null;
@@ -339,6 +979,34 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     if (gridView) gridView.style.display = 'block';
     weaponDetail.style.display = 'none';
     weaponDetail.innerHTML = '';
+
+    // 상단 이전/목록 버튼 영역 처리
+    let backWrap = gridView.querySelector('.grid-back-wrap');
+    if (!backWrap) {
+        backWrap = document.createElement('div');
+        backWrap.className = 'grid-back-wrap back-to-grid-wrap';
+        gridView.insertBefore(backWrap, gridView.firstChild);
+    }
+    backWrap.innerHTML = '';
+    if (navStack.length > 0) {
+        const btnPrev = document.createElement('button');
+        btnPrev.type = 'button';
+        btnPrev.className = 'back-to-grid-btn';
+        btnPrev.textContent = '← 이전으로';
+        btnPrev.onclick = popNavState;
+        backWrap.appendChild(btnPrev);
+
+        const btnRoot = document.createElement('button');
+        btnRoot.type = 'button';
+        btnRoot.className = 'back-to-grid-btn root-grid-btn';
+        btnRoot.textContent = '목록으로';
+        btnRoot.onclick = resetToRootGrid;
+        backWrap.appendChild(btnRoot);
+
+        backWrap.style.display = 'flex';
+    } else {
+        backWrap.style.display = 'none';
+    }
 
     const gridTitle = document.getElementById('gridTitle');
     const gridCount = document.getElementById('gridCount');
@@ -401,13 +1069,8 @@ function createGridCard(item, categoryKey, panelType) {
     const realCategoryKey = item.category || categoryKey;
     card.addEventListener('click', () => {
         compareTarget = null;
-        if (panelType === 'gear') {
-            showGearDetail(item, realCategoryKey);
-        } else if (panelType === 'attachment') {
-            showAttachmentDetail(item, realCategoryKey);
-        } else {
-            showWeaponDetail(item, realCategoryKey);
-        }
+        pushNavState(captureCurrentView());
+        showItemDetailAuto(item, realCategoryKey);
     });
 
     return card;
@@ -573,6 +1236,51 @@ function getItemImages(item) {
         return [item.image];
     }
     return [];
+}
+
+// 아이템 크기 및 수납 공간 행 추가 (기존 능력치 항목과 일관된 심플한 스타일)
+function appendItemSpecRows(statsList, item) {
+    if (!item || !statsList) return;
+
+    // 아이템 크기
+    if (item.itemSize || (item.itemSlots !== undefined && item.itemSlots !== null)) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '아이템 크기:';
+
+        const value = document.createElement('span');
+        value.className = 'weapon-stat-value';
+        const sizeStr = item.itemSize || '';
+        const slotStr = (item.itemSlots !== undefined && item.itemSlots !== null) ? `${item.itemSlots}칸` : '';
+        value.textContent = sizeStr ? (slotStr ? `${sizeStr} (${slotStr})` : sizeStr) : slotStr;
+
+        row.appendChild(label);
+        row.appendChild(value);
+        statsList.appendChild(row);
+    }
+
+    // 수납 공간 (수납 공간이 있는 아이템만)
+    if (item.cargoSize || (item.cargoSlots !== undefined && item.cargoSlots !== null)) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '수납 공간:';
+
+        const value = document.createElement('span');
+        value.className = 'weapon-stat-value';
+        const cargoSizeStr = item.cargoSize || '';
+        const cargoSlotStr = (item.cargoSlots !== undefined && item.cargoSlots !== null) ? `${item.cargoSlots}칸` : '';
+        value.textContent = cargoSizeStr ? (cargoSlotStr ? `${cargoSizeStr} (${cargoSlotStr})` : cargoSizeStr) : cargoSlotStr;
+
+        row.appendChild(label);
+        row.appendChild(value);
+        statsList.appendChild(row);
+    }
 }
 
 // 이미지/3D 패널 생성 (갤러리 타이틀 + 화살표 + 3D 인스펙트 뷰어 지원)
@@ -945,23 +1653,19 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     detailCard.appendChild(weaponImagePanel);
     
     // 설명란
+    const descContainer = document.createElement('div');
+    descContainer.className = 'weapon-detail-description-container';
     if (weapon.description) {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
-        
         const desc = document.createElement('div');
         desc.className = 'weapon-detail-description';
         desc.innerHTML = weapon.description;
         descContainer.appendChild(desc);
-        
-        detailCard.appendChild(descContainer);
     } else {
         // 설명이 없을 경우 플레이스홀더
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         descContainer.innerHTML = '<div class="weapon-description-placeholder">해당 총기의 설명</div>';
-        detailCard.appendChild(descContainer);
     }
+
+    detailCard.appendChild(descContainer);
 
     // 능력치 섹션
     if (weapon.stats) {
@@ -1130,6 +1834,8 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             }
         });
 
+        appendItemSpecRows(statsList, weapon);
+
         statsContainer.appendChild(statsList);
 
         // 설명 박스와 완전히 같은 폭으로 보이도록,
@@ -1141,6 +1847,18 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             statsParent.appendChild(statsContainer);
         } else {
             detailCard.appendChild(statsContainer);
+        }
+    }
+
+    const slotsSection = createAttachmentSlotsSection(weapon);
+    if (slotsSection) {
+        const slotsParent = weapon.description
+            ? detailCard.querySelector('.weapon-detail-description-container')
+            : detailCard;
+        if (slotsParent) {
+            slotsParent.appendChild(slotsSection);
+        } else {
+            detailCard.appendChild(slotsSection);
         }
     }
     
@@ -1255,23 +1973,23 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     });
     detailCard.appendChild(gearImagePanel);
     
+    const descContainer = document.createElement('div');
+    descContainer.className = 'weapon-detail-description-container';
     if (gear.description) {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         const desc = document.createElement('div');
         desc.className = 'weapon-detail-description';
         desc.innerHTML = gear.description;
         descContainer.appendChild(desc);
-        detailCard.appendChild(descContainer);
     } else {
-        const descContainer = document.createElement('div');
-        descContainer.className = 'weapon-detail-description-container';
         descContainer.innerHTML = '<div class="weapon-description-placeholder">해당 기어의 설명</div>';
-        detailCard.appendChild(descContainer);
     }
+
+    detailCard.appendChild(descContainer);
     
-    // 기어 능력치 섹션 (탄/유혈/충격 데미지 보호률)
-    if (gear.stats) {
+    // 기어 능력치 및 규격 섹션
+    const hasGearStats = Boolean(gear.stats);
+    const hasGearSpecs = Boolean(gear.itemSize || gear.itemSlots || gear.cargoSize || gear.cargoSlots);
+    if (hasGearStats || hasGearSpecs) {
         const statsContainer = document.createElement('div');
         statsContainer.className = 'weapon-stats-container';
 
@@ -1292,59 +2010,74 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
-        const gearStatsDefs = [
-            { key: 'bulletDamageProtection', label: '총탄 데미지 보호률' },
-            { key: 'bloodDamageProtection', label: '유혈 데미지 보호률' },
-            { key: 'shockDamageProtection', label: '충격 데미지 보호률' }
-        ];
+        if (gear.stats) {
+            const hasProtectionStats = ['bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
+            if (hasProtectionStats) {
+                const gearStatsDefs = [
+                    { key: 'bulletDamageProtection', label: '총탄 데미지 보호률' },
+                    { key: 'bloodDamageProtection', label: '유혈 데미지 보호률' },
+                    { key: 'shockDamageProtection', label: '충격 데미지 보호률' }
+                ];
 
-        gearStatsDefs.forEach(stat => {
-            const row = document.createElement('div');
-            row.className = 'weapon-stat-row';
+                gearStatsDefs.forEach(stat => {
+                    const row = document.createElement('div');
+                    row.className = 'weapon-stat-row';
 
-            const label = document.createElement('span');
-            label.className = 'weapon-stat-label';
-            label.textContent = `${stat.label}:`;
+                    const label = document.createElement('span');
+                    label.className = 'weapon-stat-label';
+                    label.textContent = `${stat.label}:`;
 
-            const raw = gear.stats[stat.key];
-            const displayText = raw !== undefined && raw !== null && raw !== "" ? `${String(raw)}%` : '-';
+                    const raw = gear.stats[stat.key];
+                    const displayText = raw !== undefined && raw !== null && raw !== "" ? `${String(raw)}%` : '-';
 
-            const value = document.createElement('span');
-            value.className = 'weapon-stat-value';
-            value.textContent = displayText;
+                    const value = document.createElement('span');
+                    value.className = 'weapon-stat-value';
+                    value.textContent = displayText;
 
-            row.appendChild(label);
-            row.appendChild(value);
-            statsList.appendChild(row);
+                    row.appendChild(label);
+                    row.appendChild(value);
+                    statsList.appendChild(row);
 
-            let numericValue = NaN;
-            if (raw !== undefined && raw !== null && raw !== "") {
-                numericValue = parseFloat(String(raw));
+                    let numericValue = NaN;
+                    if (raw !== undefined && raw !== null && raw !== "") {
+                        numericValue = parseFloat(String(raw));
+                    }
+                    const percent = (!isNaN(numericValue) && numericValue >= 0 && numericValue <= 100)
+                        ? Math.min(100, Math.max(0, numericValue)) : 0;
+
+                    const bar = document.createElement('div');
+                    bar.className = 'weapon-stat-bar';
+
+                    const barFill = document.createElement('div');
+                    barFill.className = 'weapon-stat-bar-fill';
+                    barFill.style.width = `${percent}%`;
+
+                    bar.appendChild(barFill);
+                    statsList.appendChild(bar);
+                });
             }
-            const percent = (!isNaN(numericValue) && numericValue >= 0 && numericValue <= 100)
-                ? Math.min(100, Math.max(0, numericValue)) : 0;
 
-            const bar = document.createElement('div');
-            bar.className = 'weapon-stat-bar';
+            if (gear.stats.weight && gear.stats.weight !== '-') {
+                const row = document.createElement('div');
+                row.className = 'weapon-stat-row';
+                const label = document.createElement('span');
+                label.className = 'weapon-stat-label';
+                label.textContent = '무게:';
+                const value = document.createElement('span');
+                value.className = 'weapon-stat-value';
+                value.textContent = gear.stats.weight;
+                row.appendChild(label);
+                row.appendChild(value);
+                statsList.appendChild(row);
+            }
+        }
 
-            const barFill = document.createElement('div');
-            barFill.className = 'weapon-stat-bar-fill';
-            barFill.style.width = `${percent}%`;
-
-            bar.appendChild(barFill);
-            statsList.appendChild(bar);
-        });
+        appendItemSpecRows(statsList, gear);
 
         statsContainer.appendChild(statsList);
 
-        const statsParent = gear.description
-            ? detailCard.querySelector('.weapon-detail-description-container')
-            : detailCard;
-        if (statsParent) {
-            statsParent.appendChild(statsContainer);
-        } else {
-            detailCard.appendChild(statsContainer);
-        }
+        const statsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        statsParent.appendChild(statsContainer);
     }
     
     // 차콜 테블릿 필터 충전 패널 (호흡기, 방독면, Gas mask, respirator - 이름 또는 설명에 포함 시)
@@ -1397,6 +2130,12 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         const filterParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
         filterParent.appendChild(filterPanel);
     }
+
+    const slotsSection = createAttachmentSlotsSection(gear);
+    if (slotsSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(slotsSection);
+    }
     
     if (isAdmin) {
         const actions = document.createElement('div');
@@ -1444,6 +2183,7 @@ function clearDetail() {
     currentCategory = null;
     lastGridState = null;
     preSearchView = null;
+    navStack = [];
     lastGridScrollY = 0;
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 }
@@ -1651,6 +2391,7 @@ function openWeaponModal(weaponId = null, categoryKey = null) {
             document.getElementById('weaponManufacturer').value = weapon.manufacturer || '';
             document.getElementById('weaponManufacturerLogo').value = weapon.manufacturerLogo || '';
             document.getElementById('weaponManufacturerUrl').value = weapon.manufacturerUrl || '';
+            document.getElementById('weaponItemSize').value = weapon.itemSize || '';
             document.getElementById('weaponImage').value = (weapon.images && weapon.images.length) ? weapon.images.join(', ') : (weapon.image || '');
             document.getElementById('weaponDescription').value = weapon.description || '';
         }
@@ -1681,6 +2422,7 @@ function handleWeaponSubmit(e) {
     const manufacturer = document.getElementById('weaponManufacturer').value;
     const manufacturerLogo = document.getElementById('weaponManufacturerLogo').value;
     const manufacturerUrl = document.getElementById('weaponManufacturerUrl').value;
+    const weaponItemSize = document.getElementById('weaponItemSize').value.trim();
     const imageInput = document.getElementById('weaponImage').value.trim();
     const description = document.getElementById('weaponDescription').value;
     const imagePaths = imageInput ? imageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
@@ -1688,6 +2430,12 @@ function handleWeaponSubmit(e) {
     if (!category) {
         alert('카테고리를 선택해주세요.');
         return;
+    }
+
+    let weaponItemSlots;
+    if (weaponItemSize && weaponItemSize.includes('x')) {
+        const [w, h] = weaponItemSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(w) && !isNaN(h)) weaponItemSlots = w * h;
     }
     
     if (editingWeaponId) {
@@ -1698,6 +2446,13 @@ function handleWeaponSubmit(e) {
             weaponsData[category][weaponIndex].manufacturer = manufacturer;
             weaponsData[category][weaponIndex].manufacturerLogo = manufacturerLogo;
             weaponsData[category][weaponIndex].manufacturerUrl = manufacturerUrl;
+            if (weaponItemSize) {
+                weaponsData[category][weaponIndex].itemSize = weaponItemSize;
+                if (weaponItemSlots) weaponsData[category][weaponIndex].itemSlots = weaponItemSlots;
+            } else {
+                delete weaponsData[category][weaponIndex].itemSize;
+                delete weaponsData[category][weaponIndex].itemSlots;
+            }
             if (imagePaths.length > 1) {
                 weaponsData[category][weaponIndex].images = imagePaths;
                 delete weaponsData[category][weaponIndex].image;
@@ -1720,6 +2475,10 @@ function handleWeaponSubmit(e) {
             manufacturerUrl: manufacturerUrl,
             description: description
         };
+        if (weaponItemSize) {
+            newWeapon.itemSize = weaponItemSize;
+            if (weaponItemSlots) newWeapon.itemSlots = weaponItemSlots;
+        }
         if (imagePaths.length > 1) {
             newWeapon.images = imagePaths;
         } else if (imagePaths.length === 1) {
@@ -1782,6 +2541,8 @@ function openGearModal(gearId = null, categoryKey = null) {
             document.getElementById('gearManufacturer').value = gear.manufacturer || '';
             document.getElementById('gearManufacturerLogo').value = gear.manufacturerLogo || '';
             document.getElementById('gearManufacturerUrl').value = gear.manufacturerUrl || '';
+            document.getElementById('gearItemSize').value = gear.itemSize || '';
+            document.getElementById('gearCargoSize').value = gear.cargoSize || '';
             document.getElementById('gearImage').value = (gear.images && gear.images.length) ? gear.images.join(', ') : (gear.image || '');
             document.getElementById('gearDescription').value = gear.description || '';
             document.getElementById('gearBulletDamageProtection').value = gear.stats?.bulletDamageProtection ?? '';
@@ -1815,6 +2576,8 @@ function handleGearSubmit(e) {
     const manufacturer = document.getElementById('gearManufacturer').value;
     const manufacturerLogo = document.getElementById('gearManufacturerLogo').value;
     const manufacturerUrl = document.getElementById('gearManufacturerUrl').value;
+    const gearItemSize = document.getElementById('gearItemSize').value.trim();
+    const gearCargoSize = document.getElementById('gearCargoSize').value.trim();
     const gearImageInput = document.getElementById('gearImage').value.trim();
     const description = document.getElementById('gearDescription').value;
     const gearImagePaths = gearImageInput ? gearImageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
@@ -1831,6 +2594,18 @@ function handleGearSubmit(e) {
         alert('카테고리를 선택해주세요.');
         return;
     }
+
+    let gearItemSlots;
+    if (gearItemSize && gearItemSize.includes('x')) {
+        const [w, h] = gearItemSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(w) && !isNaN(h)) gearItemSlots = w * h;
+    }
+
+    let gearCargoSlots;
+    if (gearCargoSize && gearCargoSize.includes('x')) {
+        const [cw, ch] = gearCargoSize.split('x').map(s => parseInt(s.trim(), 10));
+        if (!isNaN(cw) && !isNaN(ch)) gearCargoSlots = cw * ch;
+    }
     
     if (editingGearId) {
         const gearIndex = gearData[category].findIndex(g => g.id === editingGearId);
@@ -1839,6 +2614,20 @@ function handleGearSubmit(e) {
             gearData[category][gearIndex].manufacturer = manufacturer;
             gearData[category][gearIndex].manufacturerLogo = manufacturerLogo;
             gearData[category][gearIndex].manufacturerUrl = manufacturerUrl;
+            if (gearItemSize) {
+                gearData[category][gearIndex].itemSize = gearItemSize;
+                if (gearItemSlots) gearData[category][gearIndex].itemSlots = gearItemSlots;
+            } else {
+                delete gearData[category][gearIndex].itemSize;
+                delete gearData[category][gearIndex].itemSlots;
+            }
+            if (gearCargoSize) {
+                gearData[category][gearIndex].cargoSize = gearCargoSize;
+                if (gearCargoSlots) gearData[category][gearIndex].cargoSlots = gearCargoSlots;
+            } else {
+                delete gearData[category][gearIndex].cargoSize;
+                delete gearData[category][gearIndex].cargoSlots;
+            }
             if (gearImagePaths.length > 1) {
                 gearData[category][gearIndex].images = gearImagePaths;
                 delete gearData[category][gearIndex].image;
@@ -1861,6 +2650,14 @@ function handleGearSubmit(e) {
             manufacturerUrl: manufacturerUrl,
             description: description
         };
+        if (gearItemSize) {
+            newGear.itemSize = gearItemSize;
+            if (gearItemSlots) newGear.itemSlots = gearItemSlots;
+        }
+        if (gearCargoSize) {
+            newGear.cargoSize = gearCargoSize;
+            if (gearCargoSlots) newGear.cargoSlots = gearCargoSlots;
+        }
         if (gearImagePaths.length > 1) {
             newGear.images = gearImagePaths;
         } else if (gearImagePaths.length === 1) {

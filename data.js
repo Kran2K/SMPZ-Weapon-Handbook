@@ -19,7 +19,21 @@ const weaponsData = {
                 "accuracy": "1.66 MOA",
                 "velocity": "983 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AN94",
@@ -38,7 +52,17 @@ const weaponsData = {
                 "accuracy": "1.89 MOA",
                 "velocity": "792 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "ARButtstock",
+                "AN94Buttstock",
+                "AKpistolgrip",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_ASVAL",
@@ -59,7 +83,20 @@ const weaponsData = {
                 "accuracy": "3.44 MOA",
                 "velocity": "295 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "VALAdapter",
+                "VALButtstock",
+                "VSSCover",
+                "VSSRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "VSSHandguard",
+                "VSSMount",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_ASVAL_Mod4",
@@ -80,7 +117,18 @@ const weaponsData = {
                 "accuracy": "3.44 MOA",
                 "velocity": "295 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "VALAdapter",
+                "VALButtstock",
+                "VSSCover",
+                "weaponOpticsAK",
+                "ASVALMod4Handguard",
+                "ASVALMod4Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_ASH12",
@@ -101,7 +149,20 @@ const weaponsData = {
                 "accuracy": "1.63 MOA",
                 "velocity": "862 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "Grip",
+                "ASH12Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MK47",
@@ -122,7 +183,18 @@ const weaponsData = {
                 "accuracy": "2.48 MOA",
                 "velocity": "657 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "AR10Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M16A1",
@@ -143,7 +215,21 @@ const weaponsData = {
                 "accuracy": "1.24 MOA",
                 "velocity": "1092 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M16A2",
@@ -164,7 +250,21 @@ const weaponsData = {
                 "accuracy": "1.24 MOA",
                 "velocity": "1092 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M16A3",
@@ -183,7 +283,21 @@ const weaponsData = {
                 "accuracy": "1.82 MOA",
                 "velocity": "1092 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M4A1",
@@ -205,7 +319,21 @@ const weaponsData = {
                 "accuracy": "1.82 MOA",
                 "velocity": "910 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_NL545",
@@ -224,7 +352,19 @@ const weaponsData = {
                 "accuracy": "1.38 MOA",
                 "velocity": "889 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SA58",
@@ -245,7 +385,17 @@ const weaponsData = {
                 "accuracy": "0.90 MOA",
                 "velocity": "1033 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SA58Stock",
+                "SA58Pistolgrip",
+                "SA58Cover",
+                "SA58Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MDR_556",
@@ -264,7 +414,16 @@ const weaponsData = {
                 "accuracy": "1.36 MOA",
                 "velocity": "1092 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "MDRHandguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MDR_762",
@@ -283,7 +442,16 @@ const weaponsData = {
                 "accuracy": "1.36 MOA",
                 "velocity": "1008 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "MDRHandguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_F2000",
@@ -302,7 +470,17 @@ const weaponsData = {
                 "accuracy": "1.53 MOA",
                 "velocity": "928 m/s",
                 "rpm": "850"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "F2000Rearsight",
+                "weaponOptics",
+                "Frontsight",
+                "F2000Handguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SCAR_H",
@@ -321,7 +499,26 @@ const weaponsData = {
                 "accuracy": "1.65 MOA",
                 "velocity": "899 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "SCARButtstock",
+                "SCARBuffer",
+                "Rearsight",
+                "X17Receiver",
+                "ARpistolgrip",
+                "weaponOptics",
+                "Grip",
+                "Frontsight",
+                "SCARHandguard",
+                "SCARHandguardCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SCAR_L",
@@ -340,7 +537,25 @@ const weaponsData = {
                 "accuracy": "1.97 MOA",
                 "velocity": "910 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "SCARButtstock",
+                "SCARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "Grip",
+                "Frontsight",
+                "SCARHandguard",
+                "SCARHandguardCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_HK337",
@@ -359,7 +574,19 @@ const weaponsData = {
                 "accuracy": "2.37 MOA",
                 "velocity": "1104 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARChargingHandle",
+                "ARpistolgrip",
+                "weaponOptics",
+                "HK416Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_HK416A5",
@@ -380,7 +607,19 @@ const weaponsData = {
                 "accuracy": "1.93 MOA",
                 "velocity": "910 m/s",
                 "rpm": "850"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARChargingHandle",
+                "ARpistolgrip",
+                "weaponOptics",
+                "HK416Handguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_G36K",
@@ -399,7 +638,18 @@ const weaponsData = {
                 "accuracy": "2.00 MOA",
                 "velocity": "892 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "G36Buttstock",
+                "G36Magwell",
+                "G36Optic",
+                "G36Frontsight",
+                "G36Handguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_IWI_TavorX95",
@@ -418,7 +668,23 @@ const weaponsData = {
                 "accuracy": "1.53 MOA",
                 "velocity": "928 m/s",
                 "rpm": "850"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "GripCASV",
+                "weaponMuzzleM4",
+                "BottomRailCover",
+                "LeftRailCover",
+                "RightRailCover",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK101",
@@ -437,7 +703,22 @@ const weaponsData = {
                 "accuracy": "1.72 MOA",
                 "velocity": "910 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK102",
@@ -456,7 +737,22 @@ const weaponsData = {
                 "accuracy": "1.93 MOA",
                 "velocity": "855 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK103",
@@ -475,7 +771,22 @@ const weaponsData = {
                 "accuracy": "2.13 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK104",
@@ -494,7 +805,22 @@ const weaponsData = {
                 "accuracy": "2.27 MOA",
                 "velocity": "686 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK105",
@@ -513,7 +839,22 @@ const weaponsData = {
                 "accuracy": "2.06 MOA",
                 "velocity": "818 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK12",
@@ -532,7 +873,18 @@ const weaponsData = {
                 "accuracy": "1.58 MOA",
                 "velocity": "933 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AK12Cover",
+                "AKChargingHandle",
+                "AK12Handguard",
+                "AK12Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK15",
@@ -551,7 +903,18 @@ const weaponsData = {
                 "accuracy": "1.58 MOA",
                 "velocity": "730 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AK12Cover",
+                "AKChargingHandle",
+                "AK12Handguard",
+                "AK12Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK308",
@@ -570,7 +933,18 @@ const weaponsData = {
                 "accuracy": "1.64 MOA",
                 "velocity": "924 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKChargingHandle",
+                "AK308Cover",
+                "AK308Handguard",
+                "AK308Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK74",
@@ -591,7 +965,21 @@ const weaponsData = {
                 "accuracy": "1.99 MOA",
                 "velocity": "880 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK74M",
@@ -612,7 +1000,22 @@ const weaponsData = {
                 "accuracy": "1.89 MOA",
                 "velocity": "880 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AK74MButtstock",
+                "AKpistolgrip",
+                "AKCover",
+                "AKRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK74N",
@@ -633,7 +1036,22 @@ const weaponsData = {
                 "accuracy": "1.96 MOA",
                 "velocity": "880 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKpistolgrip",
+                "AKHandguard",
+                "AKRearsight",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKM",
@@ -654,7 +1072,21 @@ const weaponsData = {
                 "accuracy": "2.30 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "308Adapter",
+                "762Suppressor",
+                "weaponMuzzleAKM",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKMN",
@@ -675,7 +1107,22 @@ const weaponsData = {
                 "accuracy": "2.27 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "308Adapter",
+                "762Suppressor",
+                "weaponMuzzleAKM",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKMS",
@@ -696,7 +1143,21 @@ const weaponsData = {
                 "accuracy": "2.30 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKMSStock",
+                "AKCover",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "308Adapter",
+                "762Suppressor",
+                "weaponMuzzleAKM",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKMSN",
@@ -717,7 +1178,22 @@ const weaponsData = {
                 "accuracy": "2.30 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKMSStock",
+                "AKCover",
+                "weaponOpticsAK",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "308Adapter",
+                "762Suppressor",
+                "weaponMuzzleAKM",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKS74U",
@@ -736,7 +1212,20 @@ const weaponsData = {
                 "accuracy": "3.44 MOA",
                 "velocity": "748 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "5x3",
+            "itemSlots": 15,
+            "attachmentSlots": [
+                "AKS74UButtstock",
+                "AKS74UCover",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKS74UHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AKS74UN",
@@ -755,7 +1244,21 @@ const weaponsData = {
                 "accuracy": "3.44 MOA",
                 "velocity": "748 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "5x3",
+            "itemSlots": 15,
+            "attachmentSlots": [
+                "AKS74UButtstock",
+                "AKS74UCover",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "AKpistolgrip",
+                "AKS74UHandguard",
+                "CNCAdapter",
+                "weaponMuzzleM4",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AS1",
@@ -774,7 +1277,19 @@ const weaponsData = {
                 "accuracy": "1.55 MOA",
                 "velocity": "350 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "GripCASV",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_PDW",
@@ -793,7 +1308,20 @@ const weaponsData = {
                 "accuracy": "2.67 MOA",
                 "velocity": "682 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_TX15",
@@ -812,7 +1340,21 @@ const weaponsData = {
                 "accuracy": "1.41 MOA",
                 "velocity": "1046 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Masada",
@@ -831,7 +1373,20 @@ const weaponsData = {
                 "accuracy": "1.78 MOA",
                 "velocity": "937 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "ARBuffer",
+                "MasadaButtstock",
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "Frontsight",
+                "MasadaHandguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Masada_300BLK",
@@ -850,7 +1405,24 @@ const weaponsData = {
                 "accuracy": "1.78 MOA",
                 "velocity": "937 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "ARIntegratedStock",
+                "ARBuffer",
+                "MasadaButtstock",
+                "Rearsight",
+                "weaponOptics",
+                "RiserMount",
+                "weaponOpticsSecond",
+                "HydraOptics",
+                "weaponFlashlightFirst",
+                "Frontsight",
+                "MasadaHandguard",
+                "weaponMuzzleM4",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_VPO101",
@@ -869,7 +1441,14 @@ const weaponsData = {
                 "accuracy": "2.23 MOA",
                 "velocity": "756 m/s",
                 "rpm": "450"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "VPO101Cover",
+                "weaponOpticsAK",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_VPO136",
@@ -888,7 +1467,21 @@ const weaponsData = {
                 "accuracy": "2.33 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "308Adapter",
+                "762Suppressor",
+                "weaponMuzzleAKM",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_VPO209",
@@ -907,7 +1500,19 @@ const weaponsData = {
                 "accuracy": "2.23 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKCover",
+                "AKChargingHandle",
+                "AKpistolgrip",
+                "AKRearsight",
+                "AKHandguard",
+                "366Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_JAKL",
@@ -926,7 +1531,21 @@ const weaponsData = {
                 "accuracy": "2.68 MOA",
                 "velocity": "828 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "MCXButtstock",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Radian_Weapons_Model1",
@@ -947,7 +1566,21 @@ const weaponsData = {
                 "accuracy": "1.66 MOA",
                 "velocity": "983 m/s",
                 "rpm": "850"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_Multicam",
@@ -966,7 +1599,21 @@ const weaponsData = {
                 "accuracy": "1.66 MOA",
                 "velocity": "983 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "M4Receiver",
+                "ARpistolgrip",
+                "M4Handguard",
+                "ARGasblock",
+                "weaponWrap",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Weapon_RD704",
@@ -985,7 +1632,20 @@ const weaponsData = {
                 "accuracy": "2.09 MOA",
                 "velocity": "730 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "AKButtstock",
+                "AKpistolgrip",
+                "AKChargingHandle",
+                "AKCover",
+                "weaponOpticsAK",
+                "AKRearsight",
+                "RD704Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MCX",
@@ -1006,7 +1666,19 @@ const weaponsData = {
                 "accuracy": "3.04 MOA",
                 "velocity": "819 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "MCXButtstock",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "762Suppressor",
+                "MCXHandguard",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MCX_SPEAR",
@@ -1027,7 +1699,18 @@ const weaponsData = {
                 "accuracy": "1.43 MOA",
                 "velocity": "924 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "MCXButtstock",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "SPEARHandguard",
+                "SPEARSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SR3M",
@@ -1048,7 +1731,20 @@ const weaponsData = {
                 "accuracy": "5.02 MOA",
                 "velocity": "295 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "VALAdapter",
+                "VALButtstock",
+                "VSSCover",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "weaponFlashlightFirst",
+                "weaponFlashlightThird",
+                "SR3MSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AUG_A3",
@@ -1069,7 +1765,17 @@ const weaponsData = {
                 "accuracy": "1.58 MOA",
                 "velocity": "910 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "AUGOptic",
+                "AUGReceiver",
+                "AUGMount",
+                "AUGMuzzle",
+                "weaponFlashlightThird",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_VSS",
@@ -1090,7 +1796,18 @@ const weaponsData = {
                 "accuracy": "3.44 MOA",
                 "velocity": "295 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "VSSCover",
+                "VSSRearsight",
+                "AKChargingHandle",
+                "weaponOpticsAK",
+                "VSSHandguard",
+                "VSSMount",
+                "weaponWrap"
+            ]
         }
     ],
     "저격 소총": [
@@ -1111,7 +1828,24 @@ const weaponsData = {
                 "accuracy": "0.85 MOA",
                 "velocity": "941 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARpistolgrip",
+                "Rearsight",
+                "weaponOptics",
+                "GripCASV",
+                "Frontsight",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "BipodKeymod",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AXMC338",
@@ -1132,7 +1866,17 @@ const weaponsData = {
                 "accuracy": "0.37 MOA",
                 "velocity": "784 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "11x3",
+            "itemSlots": 33,
+            "attachmentSlots": [
+                "AXMCButtstock",
+                "Rearsight",
+                "weaponOptics",
+                "AXMCHandguard",
+                "338Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M107A1",
@@ -1153,7 +1897,20 @@ const weaponsData = {
                 "accuracy": "0.80 MOA",
                 "velocity": "758 m/s",
                 "rpm": "300"
-            }
+            },
+            "itemSize": "12x3",
+            "itemSlots": 36,
+            "attachmentSlots": [
+                "M107A1Cheek",
+                "ARpistolgrip",
+                "M107A1Rearsight",
+                "weaponOptics",
+                "M107A1Frontsight",
+                "weaponFlashlightFirst",
+                "M107A1Bipod",
+                "weaponWrap",
+                "M107A1Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Weapon_XM109",
@@ -1172,7 +1929,17 @@ const weaponsData = {
                 "accuracy": "0.40 MOA",
                 "velocity": "765 m/s",
                 "rpm": "300"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARpistolgrip",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "BipodKeymodMLOKMount",
+                "XM109Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M200",
@@ -1193,7 +1960,17 @@ const weaponsData = {
                 "accuracy": "0.30 MOA",
                 "velocity": "765 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "12x3",
+            "itemSlots": 36,
+            "attachmentSlots": [
+                "M200Stock",
+                "ARpistolgrip",
+                "weaponOptics",
+                "M200Handguard",
+                "M200Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_HK417",
@@ -1212,7 +1989,18 @@ const weaponsData = {
                 "accuracy": "1.12 MOA",
                 "velocity": "829 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "417Buffer",
+                "ARpistolgrip",
+                "Rearsight",
+                "weaponOptics",
+                "417Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_HKG28",
@@ -1231,7 +2019,18 @@ const weaponsData = {
                 "accuracy": "1.10 MOA",
                 "velocity": "829 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "417Buffer",
+                "ARpistolgrip",
+                "Rearsight",
+                "weaponOptics",
+                "417Handguard",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M110",
@@ -1252,7 +2051,19 @@ const weaponsData = {
                 "accuracy": "1.12 MOA",
                 "velocity": "856 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "AR10Handguard",
+                "AR10Gasblock",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SR25",
@@ -1273,7 +2084,19 @@ const weaponsData = {
                 "accuracy": "1.12 MOA",
                 "velocity": "856 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "AR10Handguard",
+                "AR10Gasblock",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_DVL10_338_Suppressed",
@@ -1292,7 +2115,16 @@ const weaponsData = {
                 "accuracy": "0.78 MOA",
                 "velocity": "720 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "11x3",
+            "itemSlots": 33,
+            "attachmentSlots": [
+                "ARpistolgrip",
+                "weaponOptics",
+                "weaponFlashlight",
+                "BipodDVL10",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MXLR",
@@ -1311,7 +2143,9 @@ const weaponsData = {
                 "accuracy": "1.50 MOA",
                 "velocity": "550 m/s",
                 "rpm": "40"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27
         },
         {
             "id": "SMPZ_Weapon_VPO215",
@@ -1330,7 +2164,15 @@ const weaponsData = {
                 "accuracy": "1.55 MOA",
                 "velocity": "975 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "weaponOptics",
+                "BipodKeymod",
+                "366Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Mosin",
@@ -1349,7 +2191,17 @@ const weaponsData = {
                 "accuracy": "1.37 MOA",
                 "velocity": "946 m/s",
                 "rpm": "30"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "MosinStock",
+                "weaponOpticsMosin",
+                "MosinPatriot",
+                "MosinRearsight",
+                "MosinSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MSR",
@@ -1368,7 +2220,22 @@ const weaponsData = {
                 "accuracy": "0.58 MOA",
                 "velocity": "758 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "MSRStock",
+                "Rearsight",
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod",
+                "Frontsight",
+                "300WinSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M700",
@@ -1387,7 +2254,16 @@ const weaponsData = {
                 "accuracy": "0.79 MOA",
                 "velocity": "895 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlight",
+                "Bipod",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M700_MODX",
@@ -1406,7 +2282,24 @@ const weaponsData = {
                 "accuracy": "0.79 MOA",
                 "velocity": "895 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "ARpistolgrip",
+                "Rearsight",
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight",
+                "BipodKeymod",
+                "weaponWrap",
+                "762Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_RSASS",
@@ -1427,7 +2320,19 @@ const weaponsData = {
                 "accuracy": "0.77 MOA",
                 "velocity": "873 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "AR10Handguard",
+                "AR10Gasblock",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SV98",
@@ -1446,7 +2351,19 @@ const weaponsData = {
                 "accuracy": "0.58 MOA",
                 "velocity": "929 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "CNCstock",
+                "AKpistolgrip",
+                "CNCChassis",
+                "weaponOptics",
+                "CNCHandguard",
+                "SV98Bipod",
+                "SV98Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SVD",
@@ -1465,7 +2382,21 @@ const weaponsData = {
                 "accuracy": "1.03 MOA",
                 "velocity": "899 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SVDStock",
+                "ARpistolgrip",
+                "SVDAdapter",
+                "weaponOpticsAK",
+                "SVDCover",
+                "SVDMK1ChassisUpperBand",
+                "SVDHandguard",
+                "DRGMount",
+                "762x54Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SVDS",
@@ -1484,7 +2415,20 @@ const weaponsData = {
                 "accuracy": "1.03 MOA",
                 "velocity": "899 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SVDButtstock",
+                "AKpistolgrip",
+                "weaponOpticsAK",
+                "SVDCover",
+                "SVDMK1ChassisUpperBand",
+                "SVDHandguard",
+                "DRGMount",
+                "762x54Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SVDS_Zryachiy",
@@ -1503,7 +2447,20 @@ const weaponsData = {
                 "accuracy": "1.03 MOA",
                 "velocity": "899 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SVDButtstock",
+                "AKpistolgrip",
+                "weaponOpticsAK",
+                "SVDCover",
+                "SVDMK1ChassisUpperBand",
+                "SVDHandguard",
+                "DRGMount",
+                "762x54Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MK18Mjolnir338",
@@ -1524,7 +2481,18 @@ const weaponsData = {
                 "accuracy": "0.57 MOA",
                 "velocity": "758 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "11x3",
+            "itemSlots": 33,
+            "attachmentSlots": [
+                "ARBuffer",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "MjolnirHndgrd",
+                "338Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_TRG_M10",
@@ -1545,7 +2513,16 @@ const weaponsData = {
                 "accuracy": "0.46 MOA",
                 "velocity": "784 m/s",
                 "rpm": "35"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "TRGHandguard",
+                "338Muzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SKS",
@@ -1564,7 +2541,17 @@ const weaponsData = {
                 "accuracy": "16.90 MOA",
                 "velocity": "803 m/s",
                 "rpm": "450"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "SKSStock",
+                "SKSReceiver",
+                "SKSMount",
+                "SKSRearsight",
+                "SKSHandguard",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M1A",
@@ -1583,7 +2570,16 @@ const weaponsData = {
                 "accuracy": "1.11 MOA",
                 "velocity": "873 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "M1AChassis",
+                "M1AScopeMount",
+                "M1AUpper",
+                "762Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK50",
@@ -1604,7 +2600,14 @@ const weaponsData = {
                 "accuracy": "0.31 MOA",
                 "velocity": "736 m/s",
                 "rpm": "300"
-            }
+            },
+            "itemSize": "11x3",
+            "itemSlots": 33,
+            "attachmentSlots": [
+                "AKpistolgrip",
+                "AK50Cover",
+                "AK50Hndgrd"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AVT40",
@@ -1623,7 +2626,15 @@ const weaponsData = {
                 "accuracy": "6.88 MOA",
                 "velocity": "1058 m/s",
                 "rpm": "750"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SVTStock",
+                "SVTMount",
+                "SVTOptic",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SVT40",
@@ -1644,7 +2655,15 @@ const weaponsData = {
                 "accuracy": "1.72 MOA",
                 "velocity": "1058 m/s",
                 "rpm": "450"
-            }
+            },
+            "itemSize": "10x3",
+            "itemSlots": 30,
+            "attachmentSlots": [
+                "SVTStock",
+                "SVTMount",
+                "SVTOptic",
+                "weaponWrap"
+            ]
         }
     ],
     "기관단총": [
@@ -1665,7 +2684,15 @@ const weaponsData = {
                 "accuracy": "7.22 MOA",
                 "velocity": "441 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "5x3",
+            "itemSlots": 15,
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightThird",
+                "MP9Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_P90",
@@ -1686,7 +2713,17 @@ const weaponsData = {
                 "accuracy": "3.75 MOA",
                 "velocity": "638 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "P90Optic",
+                "P90Receiver",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "P90Suppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP5",
@@ -1705,7 +2742,17 @@ const weaponsData = {
                 "accuracy": "1.50 MOA",
                 "velocity": "418 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "7x3",
+            "itemSlots": 21,
+            "attachmentSlots": [
+                "MP5Stock",
+                "MP5Rearsight",
+                "MP5Mount",
+                "MP5Handguard",
+                "GlockSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP7A1",
@@ -1726,7 +2773,21 @@ const weaponsData = {
                 "accuracy": "0.83 MOA",
                 "velocity": "788 m/s",
                 "rpm": "950"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "MP7Stock",
+                "Rearsight",
+                "weaponOptics",
+                "Frontsight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "MP7Suppressor",
+                "MP7SureFireSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP7A2",
@@ -1745,7 +2806,22 @@ const weaponsData = {
                 "accuracy": "0.83 MOA",
                 "velocity": "788 m/s",
                 "rpm": "950"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "MP7Stock",
+                "Rearsight",
+                "weaponOptics",
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "MP7Suppressor",
+                "MP7SureFireSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_PP19",
@@ -1764,7 +2840,21 @@ const weaponsData = {
                 "accuracy": "4.47 MOA",
                 "velocity": "407 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "AKZenitStock",
+                "AK74MBuffer",
+                "PP19Stock",
+                "AKpistolgrip",
+                "PP19Cover",
+                "AKSidemount",
+                "weaponOptics",
+                "weaponOpticsAK",
+                "AKHandguard",
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_PPSH41",
@@ -1785,7 +2875,12 @@ const weaponsData = {
                 "accuracy": "0.72 MOA",
                 "velocity": "802 m/s",
                 "rpm": "900"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MPX",
@@ -1806,7 +2901,20 @@ const weaponsData = {
                 "accuracy": "5.00 MOA",
                 "velocity": "407 m/s",
                 "rpm": "850"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "MCXButtstock",
+                "MPXChargingHandle",
+                "Rearsight",
+                "ARpistolgrip",
+                "weaponOptics",
+                "MPXHandguard",
+                "GlockSuppressor",
+                "MPXSD",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SR2M",
@@ -1825,7 +2933,15 @@ const weaponsData = {
                 "accuracy": "7.83 MOA",
                 "velocity": "870 m/s",
                 "rpm": "950"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "SR2MSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_STM9",
@@ -1844,7 +2960,23 @@ const weaponsData = {
                 "accuracy": "3.78 MOA",
                 "velocity": "426 m/s",
                 "rpm": "800"
-            }
+            },
+            "itemSize": "5x3",
+            "itemSlots": 15,
+            "attachmentSlots": [
+                "ARIntegratedStock",
+                "ARBuffer",
+                "ARpistolgrip",
+                "ARChargingHandle",
+                "Rearsight",
+                "weaponOptics",
+                "RiserMount",
+                "weaponOpticsSecond",
+                "HydraOptics",
+                "M4Handguard",
+                "weaponWrap",
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_KRISS_Vector_Black",
@@ -1863,7 +2995,26 @@ const weaponsData = {
                 "accuracy": "0.65 MOA",
                 "velocity": "437 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "ARIntegratedStock",
+                "ARBuffer",
+                "VectorStock",
+                "Rearsight",
+                "weaponOptics",
+                "RiserMount",
+                "weaponOpticsSecond",
+                "HydraOptics",
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "GlockSuppressor",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_KRISS_Vector_FDE",
@@ -1882,7 +3033,22 @@ const weaponsData = {
                 "accuracy": "0.65 MOA",
                 "velocity": "437 m/s",
                 "rpm": "600"
-            }
+            },
+            "itemSize": "6x3",
+            "itemSlots": 18,
+            "attachmentSlots": [
+                "ARBuffer",
+                "VectorStock",
+                "Rearsight",
+                "weaponOptics",
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "GlockSuppressor",
+                "weaponWrap"
+            ]
         }
     ],
     "산탄총": [
@@ -1905,7 +3071,12 @@ const weaponsData = {
                 "accuracy": "22.35 MOA",
                 "velocity": "519 m/s",
                 "rpm": "300"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_AA12_Gen2",
@@ -1926,7 +3097,13 @@ const weaponsData = {
                 "accuracy": "22.35 MOA",
                 "velocity": "519 m/s",
                 "rpm": "300"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP133",
@@ -1945,7 +3122,16 @@ const weaponsData = {
                 "accuracy": "21.31 MOA",
                 "velocity": "505 m/s",
                 "rpm": "60"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "MP133Stock",
+                "weaponOptics",
+                "MP133Hndgrd",
+                "SprutMount",
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP155",
@@ -1964,7 +3150,17 @@ const weaponsData = {
                 "accuracy": "21.31 MOA",
                 "velocity": "404 m/s",
                 "rpm": "350"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "UltimaStock",
+                "UltimaPistolgrip",
+                "UltimaHndgrd",
+                "UlitmaMount",
+                "weaponOptics",
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP18",
@@ -1983,7 +3179,15 @@ const weaponsData = {
                 "accuracy": "3.09 MOA",
                 "velocity": "1075 m/s",
                 "rpm": "30"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "MP18Stock",
+                "weaponOptics",
+                "MP18Hndgrd",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_MP43",
@@ -2004,7 +3208,12 @@ const weaponsData = {
                 "accuracy": "13.06 MOA",
                 "velocity": "505 m/s",
                 "rpm": "350"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M590A1",
@@ -2023,7 +3232,15 @@ const weaponsData = {
                 "accuracy": "34.38 MOA",
                 "velocity": "505 m/s",
                 "rpm": "70"
-            }
+            },
+            "itemSize": "9x3",
+            "itemSlots": 27,
+            "attachmentSlots": [
+                "590A1Stock",
+                "590A1Mount",
+                "590A1Hndgrd",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Saiga12",
@@ -2042,7 +3259,22 @@ const weaponsData = {
                 "accuracy": "20.63 MOA",
                 "velocity": "404 m/s",
                 "rpm": "350"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "SaigaButtstock",
+                "AKpistolgrip",
+                "weaponOpticsAK",
+                "SaigaCover",
+                "SaigaRearsight",
+                "AKChargingHandle",
+                "AKSidemount",
+                "SaigaHandguard",
+                "12gaMuzzle",
+                "USBM",
+                "weaponWrap"
+            ]
         }
     ],
     "권총": [
@@ -2063,7 +3295,12 @@ const weaponsData = {
                 "accuracy": "10.28 MOA",
                 "velocity": "380 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "attachmentSlots": [
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Beretta_M9A3",
@@ -2082,7 +3319,14 @@ const weaponsData = {
                 "accuracy": "10.28 MOA",
                 "velocity": "380 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "attachmentSlots": [
+                "M9A3Mount",
+                "weaponFlashlight",
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M1911A1",
@@ -2101,7 +3345,14 @@ const weaponsData = {
                 "accuracy": "1.50 MOA",
                 "velocity": "273 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "attachmentSlots": [
+                "M1911Mount",
+                "M1911AO",
+                "45ACPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M45A1",
@@ -2120,7 +3371,14 @@ const weaponsData = {
                 "accuracy": "1.50 MOA",
                 "velocity": "273 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "attachmentSlots": [
+                "weaponFlashlight",
+                "M1911AO",
+                "45ACPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_FiveSevenMK2",
@@ -2139,7 +3397,15 @@ const weaponsData = {
                 "accuracy": "7.50 MOA",
                 "velocity": "750 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "FSRMRMount",
+                "weaponFlashlight",
+                "FSBarrel",
+                "FSSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Glock17",
@@ -2158,7 +3424,20 @@ const weaponsData = {
                 "accuracy": "11.69 MOA",
                 "velocity": "380 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "GlockButtstock",
+                "GlockGrip",
+                "GlockSlide",
+                "GlockRearsight",
+                "GlockFrontsight",
+                "GlockMount",
+                "GlockBarrel",
+                "GlockSuppressor",
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Glock18C",
@@ -2177,7 +3456,17 @@ const weaponsData = {
                 "accuracy": "12.03 MOA",
                 "velocity": "380 m/s",
                 "rpm": "1100"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "GlockButtstock",
+                "GlockGrip",
+                "GlockRearsight",
+                "GlockFrontsight",
+                "GlockMount",
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Weapon_UCP",
@@ -2196,7 +3485,15 @@ const weaponsData = {
                 "accuracy": "9.63 MOA",
                 "velocity": "750 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "UCPPistolgrip",
+                "UCPMount",
+                "weaponFlashlight",
+                "UCPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_USP",
@@ -2217,7 +3514,14 @@ const weaponsData = {
                 "accuracy": "9.63 MOA",
                 "velocity": "260 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "USPMount",
+                "weaponFlashlight",
+                "45ACPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_DeagleL5_357",
@@ -2239,7 +3543,12 @@ const weaponsData = {
                 "accuracy": "8.94 MOA",
                 "velocity": "440 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Weapon_DeagleL6_50AE",
@@ -2260,7 +3569,13 @@ const weaponsData = {
                 "accuracy": "10.31 MOA",
                 "velocity": "750 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "GlockOptics",
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Weapon_SR1MP",
@@ -2281,7 +3596,14 @@ const weaponsData = {
                 "accuracy": "7.49 MOA",
                 "velocity": "750 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "SR1MPSidemount",
+                "weaponFlashlight",
+                "SR1MPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_Staccato",
@@ -2300,7 +3622,13 @@ const weaponsData = {
                 "accuracy": "7.60 MOA",
                 "velocity": "380 m/s",
                 "rpm": "400"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "attachmentSlots": [
+                "pistolOptics",
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Weapon_TT33",
@@ -2319,7 +3647,9 @@ const weaponsData = {
                 "accuracy": "1.50 MOA",
                 "velocity": "750 m/s",
                 "rpm": "375"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4
         }
     ],
     "경기관총": [
@@ -2340,7 +3670,17 @@ const weaponsData = {
                 "accuracy": "1.31 MOA",
                 "velocity": "876 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "9x4",
+            "itemSlots": 36,
+            "attachmentSlots": [
+                "RPDStock",
+                "RPDRearsight",
+                "RPDHandguard",
+                "RPDBipod",
+                "RPDMuzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_RPDN",
@@ -2359,7 +3699,18 @@ const weaponsData = {
                 "accuracy": "1.31 MOA",
                 "velocity": "876 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "9x4",
+            "itemSlots": 36,
+            "attachmentSlots": [
+                "RPDStock",
+                "weaponOpticsAK",
+                "RPDRearsight",
+                "RPDHandguard",
+                "RPDBipod",
+                "RPDMuzzle",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_PKM",
@@ -2380,7 +3731,19 @@ const weaponsData = {
                 "accuracy": "1.08 MOA",
                 "velocity": "1161 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "10x4",
+            "itemSlots": 40,
+            "attachmentSlots": [
+                "PKButtstock",
+                "AKpistolgrip",
+                "PKRearsight",
+                "B51Mount",
+                "weaponWrap",
+                "PKHandguard",
+                "PKBipod",
+                "PKMSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_PKP",
@@ -2399,7 +3762,20 @@ const weaponsData = {
                 "accuracy": "1.01 MOA",
                 "velocity": "1161 m/s",
                 "rpm": "650"
-            }
+            },
+            "itemSize": "10x4",
+            "itemSlots": 40,
+            "attachmentSlots": [
+                "PKButtstock",
+                "AKpistolgrip",
+                "PKRearsight",
+                "B51Mount",
+                "weaponOpticsAK",
+                "weaponWrap",
+                "PKHandguard",
+                "PKBipod",
+                "PKPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Weapon_RPK16",
@@ -2418,7 +3794,18 @@ const weaponsData = {
                 "accuracy": "1.65 MOA",
                 "velocity": "835 m/s",
                 "rpm": "700"
-            }
+            },
+            "itemSize": "8x3",
+            "itemSlots": 24,
+            "attachmentSlots": [
+                "RPK16Buffer",
+                "AKpistolgrip",
+                "AKChargingHandle",
+                "RPK16Cover",
+                "RPK16Hndgrd",
+                "weaponMuzzleAK74",
+                "weaponWrap"
+            ]
         },
         {
             "id": "SMPZ_Weapon_M60E6",
@@ -2437,7 +3824,19 @@ const weaponsData = {
                 "accuracy": "1.21 MOA",
                 "velocity": "966 m/s",
                 "rpm": "550"
-            }
+            },
+            "itemSize": "10x4",
+            "itemSlots": 40,
+            "attachmentSlots": [
+                "M60Buttstock",
+                "M60PistolgripGroup",
+                "weaponOptics",
+                "Rearsight",
+                "M60Handguard",
+                "M60Bipod",
+                "M60Frontsight",
+                "762Suppressor"
+            ]
         }
     ],
     "유탄 발사기": [
@@ -2460,7 +3859,19 @@ const weaponsData = {
                 "accuracy": "16.50 MOA",
                 "velocity": "750 m/s",
                 "rpm": "60"
-            }
+            },
+            "itemSize": "7x4",
+            "itemSlots": 28,
+            "attachmentSlots": [
+                "ARButtstock",
+                "ARpistolgrip",
+                "M32Optics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Grip",
+                "weaponWrap"
+            ]
         }
     ]
 };
@@ -2484,7 +3895,20 @@ const gearData = {
                 "shockDamageProtection": "55",
                 "hitpoints": "100",
                 "weight": "1.3 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Helmet_Altyn_Green",
@@ -2505,7 +3929,19 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "130",
                 "weight": "2.5 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_Altyn_Green",
@@ -2523,7 +3959,12 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "100",
                 "weight": "1.4 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
@@ -2540,7 +3981,12 @@ const gearData = {
                 "bloodDamageProtection": "0",
                 "shockDamageProtection": "10",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetAventail"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
@@ -2557,7 +4003,15 @@ const gearData = {
                 "bloodDamageProtection": "0",
                 "shockDamageProtection": "10",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
@@ -2575,7 +4029,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "1.0 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
@@ -2593,7 +4052,23 @@ const gearData = {
                 "shockDamageProtection": "75",
                 "hitpoints": "120",
                 "weight": "3.4 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "HelmetPlate",
+                "HelmetAventail",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
@@ -2611,7 +4086,12 @@ const gearData = {
                 "shockDamageProtection": "15",
                 "hitpoints": "100",
                 "weight": "1.4 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
@@ -2629,7 +4109,23 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "110",
                 "weight": "0.9 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Mandible",
+                "Visor",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
@@ -2647,7 +4143,12 @@ const gearData = {
                 "shockDamageProtection": "15",
                 "hitpoints": "100",
                 "weight": "1.4 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "AFMLOKChops"
+            ]
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Black",
@@ -2665,7 +4166,23 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "110",
                 "weight": "0.9 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "AFMLOKChops",
+                "Visor",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin",
@@ -2683,7 +4200,19 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "150",
                 "weight": "1.6 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
@@ -2701,7 +4230,20 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "160",
                 "weight": "2.4 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightSecond"
+            ]
         },
         {
             "id": "SMPZ_Helmet_DA_Bastion_Black",
@@ -2719,7 +4261,20 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "100",
                 "weight": "1.1 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "HelmetPlate"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_DA_Bastion",
@@ -2737,7 +4292,15 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "100",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Mandible_NeoSteel_Black",
@@ -2755,7 +4318,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "-"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
         },
         {
             "id": "SMPZ_Helmet_DA_NeoSteel_Black",
@@ -2773,7 +4341,20 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "140",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Mandible"
+            ]
         },
         {
             "id": "SMPZ_Helmet_FORT_KiverM",
@@ -2791,7 +4372,19 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "70",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_FORT_KiverM",
@@ -2809,7 +4402,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_FORT_KiverM_Alpine",
@@ -2827,7 +4425,19 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "70",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_Trooper_Black",
@@ -2845,7 +4455,15 @@ const gearData = {
                 "shockDamageProtection": "20",
                 "hitpoints": "100",
                 "weight": "0.4 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Visor_Caiman",
@@ -2863,7 +4481,12 @@ const gearData = {
                 "shockDamageProtection": "10",
                 "hitpoints": "100",
                 "weight": "0.3 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_Caiman_Gray",
@@ -2881,7 +4504,15 @@ const gearData = {
                 "shockDamageProtection": "10",
                 "hitpoints": "100",
                 "weight": "0.7 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Mandible_Caiman_Black",
@@ -2899,7 +4530,12 @@ const gearData = {
                 "shockDamageProtection": "20",
                 "hitpoints": "100",
                 "weight": "-"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
         },
         {
             "id": "SMPZ_Helmet_Caiman_Gray",
@@ -2917,7 +4553,24 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "100",
                 "weight": "1.1 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "HelmetPlate",
+                "Mandible",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Black",
@@ -2935,7 +4588,19 @@ const gearData = {
                 "shockDamageProtection": "55",
                 "hitpoints": "100",
                 "weight": "1.9 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Helmet_LShZ_Green",
@@ -2953,7 +4618,25 @@ const gearData = {
                 "shockDamageProtection": "55",
                 "hitpoints": "100",
                 "weight": "1.0 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "HelmetPlate",
+                "Mandible",
+                "HelmetHeadset",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Helmet_MTEK_FLUX_Black",
@@ -2971,7 +4654,21 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "100",
                 "weight": "1.0 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Helmet_Maska_Green",
@@ -2994,7 +4691,19 @@ const gearData = {
                 "shockDamageProtection": "65",
                 "hitpoints": "150",
                 "weight": "2.6 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_Maska_Green",
@@ -3012,7 +4721,12 @@ const gearData = {
                 "shockDamageProtection": "65",
                 "hitpoints": "110",
                 "weight": "1.1 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
@@ -3030,7 +4744,22 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "100",
                 "weight": "2.4 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
@@ -3048,7 +4777,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "1.1 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
@@ -3066,7 +4800,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "1.1 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Mandible_OpsCore_FAST_Black",
@@ -3084,7 +4823,12 @@ const gearData = {
                 "shockDamageProtection": "20",
                 "hitpoints": "100",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
         },
         {
             "id": "SMPZ_Helmet_OpsCore_FASTMT_Black",
@@ -3102,7 +4846,25 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "110",
                 "weight": "0.9 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "HelmetPlate",
+                "Mandible",
+                "HelmetHeadset",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -3120,7 +4882,12 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "100",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
@@ -3137,7 +4904,15 @@ const gearData = {
                 "bloodDamageProtection": "0",
                 "shockDamageProtection": "10",
                 "weight": "1.3 kg"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
         },
         {
             "id": "SMPZ_Helmet_RYS_T_Black",
@@ -3155,7 +4930,19 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "140",
                 "weight": "2.5 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_RYS_T_Black",
@@ -3173,7 +4960,12 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "90",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_SSSh94_Sfera_Green",
@@ -3191,7 +4983,16 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "60",
                 "weight": "3.5 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ]
         },
         {
             "id": "SMPZ_Helmet_Tagilla_WeldingMask_Gorilla",
@@ -3214,7 +5015,16 @@ const gearData = {
                 "shockDamageProtection": "90",
                 "hitpoints": "180",
                 "weight": "1.5 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ]
         },
         {
             "id": "SMPZ_Helmet_TeamWendy_Exfil_Black",
@@ -3232,7 +5042,21 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "120",
                 "weight": "1.2 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "Visor",
+                "HelmetHeadset"
+            ]
         },
         {
             "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
@@ -3250,7 +5074,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "0.8 kg"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_Vulkan_Black",
@@ -3268,7 +5097,19 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "150",
                 "weight": "4.5 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_Vulkan",
@@ -3286,7 +5127,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "-"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Helmet_ZSH12M_Black",
@@ -3304,7 +5150,19 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "120",
                 "weight": "3.7 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
@@ -3322,7 +5180,12 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "100",
                 "weight": "-"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         }
     ],
     "전신 방탄복": [
@@ -3347,7 +5210,19 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "175",
                 "weight": "9.2 kg"
-            }
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Vest_6B2_EMR",
@@ -3365,7 +5240,16 @@ const gearData = {
                 "shockDamageProtection": "30",
                 "hitpoints": "110",
                 "weight": "5.4 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_6B23_EMR",
@@ -3386,7 +5270,16 @@ const gearData = {
                 "shockDamageProtection": "65",
                 "hitpoints": "190",
                 "weight": "10.5 kg"
-            }
+            },
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_6B43_EMR",
@@ -3407,7 +5300,19 @@ const gearData = {
                 "shockDamageProtection": "85",
                 "hitpoints": "400",
                 "weight": "35.0 kg"
-            }
+            },
+            "itemSize": "7x10",
+            "itemSlots": 70,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_6B45",
@@ -3427,7 +5332,21 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "225",
                 "weight": "9.4 kg"
-            }
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_BNTI_Zhuk_EMR",
@@ -3445,7 +5364,16 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "225",
                 "weight": "5.6 kg"
-            }
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_FORT_GladiatorS_Multicam",
@@ -3463,7 +5391,23 @@ const gearData = {
                 "shockDamageProtection": "65",
                 "hitpoints": "225",
                 "weight": "8.5 kg"
-            }
+            },
+            "cargoSize": "5x5",
+            "cargoSlots": 25,
+            "itemSize": "6x6",
+            "itemSlots": 36,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_FORT_RedutM_Green",
@@ -3485,7 +5429,16 @@ const gearData = {
                 "shockDamageProtection": "78",
                 "hitpoints": "225",
                 "weight": "15.5 kg"
-            }
+            },
+            "itemSize": "5x8",
+            "itemSlots": 40,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_FORT_RedutT5_Smog",
@@ -3506,7 +5459,19 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "285",
                 "weight": "25.0 kg"
-            }
+            },
+            "itemSize": "7x10",
+            "itemSlots": 70,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_IOTV_Gen4_Multicam",
@@ -3526,7 +5491,19 @@ const gearData = {
                 "shockDamageProtection": "78",
                 "hitpoints": "225",
                 "weight": "20.0 kg"
-            }
+            },
+            "itemSize": "6x8",
+            "itemSlots": 48,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Vest_NFM_Thor",
@@ -3547,7 +5524,20 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "225",
                 "weight": "25.0 kg"
-            }
+            },
+            "itemSize": "6x8",
+            "itemSlots": 48,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
@@ -3565,7 +5555,16 @@ const gearData = {
                 "shockDamageProtection": "35",
                 "hitpoints": "120",
                 "weight": "11.1 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         }
     ],
     "플레이트 캐리어": [
@@ -3585,7 +5584,16 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "225",
                 "weight": "5.9 kg"
-            }
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
@@ -3603,7 +5611,18 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "500",
                 "weight": "1.7 kg"
-            }
+            },
+            "cargoSize": "8x5",
+            "cargoSlots": 40,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Vest_ArsArma_A18_Skanda_Black",
@@ -3623,7 +5642,18 @@ const gearData = {
                 "shockDamageProtection": "67",
                 "hitpoints": "225",
                 "weight": "11.0 kg"
-            }
+            },
+            "cargoSize": "6x4",
+            "cargoSlots": 24,
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_Tagilla_AVS",
@@ -3644,7 +5674,18 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "260",
                 "weight": "9.2 kg"
-            }
+            },
+            "cargoSize": "3x3",
+            "cargoSlots": 9,
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_JPC_Maritime_Multicam",
@@ -3664,7 +5705,21 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "155",
                 "weight": "5.5 kg"
-            }
+            },
+            "cargoSize": "6x3",
+            "cargoSlots": 18,
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Vest_JPC_Multicam",
@@ -3684,7 +5739,21 @@ const gearData = {
                 "shockDamageProtection": "60",
                 "hitpoints": "145",
                 "weight": "5.5 kg"
-            }
+            },
+            "cargoSize": "6x3",
+            "cargoSlots": 18,
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_ChestRig_Triton_M43A_Black",
@@ -3702,7 +5771,18 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "500",
                 "weight": "1.3 kg"
-            }
+            },
+            "cargoSize": "5x3",
+            "cargoSlots": 15,
+            "itemSize": "4x5",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
@@ -3720,7 +5800,25 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "190",
                 "weight": "8.0 kg"
-            }
+            },
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ]
         },
         {
             "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE",
@@ -3740,7 +5838,22 @@ const gearData = {
                 "shockDamageProtection": "65",
                 "hitpoints": "225",
                 "weight": "7.2 kg"
-            }
+            },
+            "cargoSize": "6x4",
+            "cargoSlots": 24,
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "PatchLarge",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
@@ -3762,7 +5875,24 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "255",
                 "weight": "25.0 kg"
-            }
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "7x10",
+            "itemSlots": 70,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_RangerGreen",
@@ -3780,7 +5910,21 @@ const gearData = {
                 "shockDamageProtection": "75",
                 "hitpoints": "225",
                 "weight": "13.5 kg"
-            }
+            },
+            "cargoSize": "6x5",
+            "cargoSlots": 30,
+            "itemSize": "6x6",
+            "itemSlots": 36,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_ChestRig_LBT1961A_Gray",
@@ -3798,7 +5942,18 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "500",
                 "weight": "1.4 kg"
-            }
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
@@ -3816,7 +5971,16 @@ const gearData = {
                 "shockDamageProtection": "50",
                 "hitpoints": "225",
                 "weight": "6.2 kg"
-            }
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Black",
@@ -3834,7 +5998,16 @@ const gearData = {
                 "shockDamageProtection": "80",
                 "hitpoints": "225",
                 "weight": "9.8 kg"
-            }
+            },
+            "itemSize": "6x6",
+            "itemSlots": 36,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ]
         },
         {
             "id": "SMPZ_ChestRig_PoyasAB_Green",
@@ -3852,7 +6025,18 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "500",
                 "weight": "1.7 kg"
-            }
+            },
+            "cargoSize": "7x5",
+            "cargoSlots": 35,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Vest_SpiritusSystems_LV119_Black",
@@ -3870,7 +6054,24 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "225",
                 "weight": "12.1 kg"
-            }
+            },
+            "cargoSize": "6x4",
+            "cargoSlots": 24,
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Tourniquet"
+            ]
         },
         {
             "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
@@ -3888,7 +6089,24 @@ const gearData = {
                 "shockDamageProtection": "55",
                 "hitpoints": "225",
                 "weight": "8.0 kg"
-            }
+            },
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ]
         },
         {
             "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
@@ -3906,7 +6124,18 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "500",
                 "weight": "1.6 kg"
-            }
+            },
+            "cargoSize": "7x5",
+            "cargoSlots": 35,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         }
     ],
     "마스크": [
@@ -3926,7 +6155,16 @@ const gearData = {
                 "shockDamageProtection": "70",
                 "hitpoints": "225",
                 "weight": "2.1 kg"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_M53A1_GasMask",
@@ -3947,7 +6185,10 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "1500",
                 "weight": "0.7 kg"
-            }
+            },
+            "inventorySlots": [
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_ColdFear_Balaclava",
@@ -3965,7 +6206,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Balaclava_Crow",
@@ -3983,7 +6233,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_DeathShadow_Black",
@@ -4001,7 +6260,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "700",
                 "weight": "0.2 kg"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Samurai_Half_Black",
@@ -4019,7 +6287,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator",
@@ -4037,7 +6314,12 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "1500",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Ghost_Half",
@@ -4055,7 +6337,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.2 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_HalfMask_Black",
@@ -4073,7 +6364,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Momex_Balaclava",
@@ -4094,7 +6394,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         },
         {
             "id": "SMPZ_Mask_Zryachiy_Balaclava",
@@ -4112,7 +6421,16 @@ const gearData = {
                 "shockDamageProtection": "0",
                 "hitpoints": "3000",
                 "weight": "0.1 kg"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Mask"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Mask"
+            ]
         }
     ],
     "백팩": [
@@ -4130,7 +6448,18 @@ const gearData = {
             "manufacturerUrl": "https://www.511tactical.com/",
             "stats": {
                 "weight": "2.6 kg"
-            }
+            },
+            "cargoSize": "10x15",
+            "cargoSlots": 150,
+            "itemSize": "10x12",
+            "itemSlots": 120,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Backpack_6Sh118_Black",
@@ -4152,7 +6481,18 @@ const gearData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "3.5 kg"
-            }
+            },
+            "cargoSize": "10x20",
+            "cargoSlots": 200,
+            "itemSize": "10x13",
+            "itemSlots": 130,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Backpack_F4_Terminator_Black",
@@ -4170,7 +6510,18 @@ const gearData = {
             "manufacturerUrl": "https://eberlestock.com/",
             "stats": {
                 "weight": "4.2 kg"
-            }
+            },
+            "cargoSize": "10x13",
+            "cargoSlots": 130,
+            "itemSize": "10x10",
+            "itemSlots": 100,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
         },
         {
             "id": "SMPZ_Backpack_F5_SwitchBlade_DryEarth",
@@ -4184,7 +6535,21 @@ const gearData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1.6 kg"
-            }
+            },
+            "cargoSize": "10x8",
+            "cargoSlots": 80,
+            "itemSize": "6x6",
+            "itemSlots": 36,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Black",
@@ -4198,7 +6563,25 @@ const gearData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1.6 kg"
-            }
+            },
+            "cargoSize": "4x11",
+            "cargoSlots": 44,
+            "itemSize": "5x10",
+            "itemSlots": 50,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "Shoulder",
+                "Pouch_IFAK",
+                "PatchLarge",
+                "WalkieTalkie",
+                "Chemlight"
+            ]
         },
         {
             "id": "SMPZ_Backpack_2Day_AssaultPack_Black",
@@ -4212,7 +6595,21 @@ const gearData = {
             "manufacturerUrl": "https://www.mysteryranch.com/",
             "stats": {
                 "weight": "1.5 kg"
-            }
+            },
+            "cargoSize": "10x9",
+            "cargoSlots": 90,
+            "itemSize": "6x8",
+            "itemSlots": 48,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Backpack_Blackjack50_Black",
@@ -4232,7 +6629,22 @@ const gearData = {
             "manufacturerUrl": "https://www.mysteryranch.com/",
             "stats": {
                 "weight": "3.3 kg"
-            }
+            },
+            "cargoSize": "10x11",
+            "cargoSlots": 110,
+            "itemSize": "7x11",
+            "itemSlots": 77,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "Shoulder",
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Backpack_SATL_Foliage",
@@ -4246,7 +6658,22 @@ const gearData = {
             "manufacturerUrl": "https://www.mysteryranch.com/",
             "stats": {
                 "weight": "3.0 kg"
-            }
+            },
+            "cargoSize": "10x10",
+            "cargoSlots": 100,
+            "itemSize": "7x8",
+            "itemSlots": 56,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "Shoulder",
+                "PatchLarge"
+            ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
@@ -4260,7 +6687,22 @@ const gearData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "10.8 kg"
-            }
+            },
+            "cargoSize": "6x5",
+            "cargoSlots": 30,
+            "itemSize": "6x6",
+            "itemSlots": 36,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "Pouch_IFAK"
+            ]
         },
         {
             "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Black",
@@ -4274,7 +6716,25 @@ const gearData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1.0 kg"
-            }
+            },
+            "cargoSize": "8x10",
+            "cargoSlots": 80,
+            "itemSize": "6x10",
+            "itemSlots": 60,
+            "inventorySlots": [
+                "Back"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ],
+            "attachmentSlots": [
+                "Shoulder",
+                "Pouch_IFAK",
+                "PatchLarge",
+                "WalkieTalkie",
+                "Chemlight"
+            ]
         }
     ]
 };
@@ -4295,7 +6755,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "120g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ],
+            "attachmentSlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Mk12_Gasblock",
@@ -4310,7 +6778,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "140g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_GS5B_Gasblock",
@@ -4325,7 +6798,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "64g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LoPro_Gasblock",
@@ -4340,7 +6818,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "53g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Sentry7_Gasblock",
@@ -4355,7 +6838,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "40g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock",
@@ -4370,7 +6858,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "116g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "AR10Gasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock_Taupe",
@@ -4385,7 +6878,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "116g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "AR10Gasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Mk12_Gasblock",
@@ -4400,7 +6898,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "53g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ARGasblock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_VDM_Gasblock",
@@ -4414,7 +6917,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "120g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKGasblock"
+            ],
+            "attachmentSlots": [
+                "AKHandguard"
+            ]
         }
     ],
     "개머리판": [
@@ -4432,7 +6943,12 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "-15%",
                 "weight": "680g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "590A1Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AK100_Skeleton_Buttstock",
@@ -4448,7 +6964,15 @@ const attachmentData = {
                 "recoil": "-19%",
                 "sway": "-20%",
                 "weight": "264g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AK74MButtstock"
+            ],
+            "attachmentSlots": [
+                "AKButtpad"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CMMG_RipStock_Buttstock",
@@ -4464,7 +6988,14 @@ const attachmentData = {
                 "recoil": "-24%",
                 "sway": "-25%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Viper_Mod1_Buttstock",
@@ -4480,7 +7011,14 @@ const attachmentData = {
                 "recoil": "-40%",
                 "sway": "-30%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
@@ -4496,7 +7034,12 @@ const attachmentData = {
                 "recoil": "-37%",
                 "sway": "-45%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_B5_System_Precision_Buttstock",
@@ -4512,7 +7055,12 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-25%",
                 "weight": "160g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_N1_Buttstock",
@@ -4528,7 +7076,14 @@ const attachmentData = {
                 "recoil": "-17%",
                 "sway": "-29%",
                 "weight": "126g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_ACS_Stock",
@@ -4544,7 +7099,14 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-30%",
                 "weight": "327g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Buttstock",
@@ -4560,7 +7122,12 @@ const attachmentData = {
                 "recoil": "-31%",
                 "sway": "-30%",
                 "weight": "126g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_SASS_Stock",
@@ -4576,7 +7143,12 @@ const attachmentData = {
                 "recoil": "-31%",
                 "sway": "-30%",
                 "weight": "580g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_Stock",
@@ -4592,7 +7164,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-30%",
                 "weight": "467g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ],
+            "attachmentSlots": [
+                "UCSPad"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_CheekRiser",
@@ -4607,7 +7187,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "43g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "UCSPad"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
@@ -4623,7 +7208,14 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-40%",
                 "weight": "170g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Yellow",
@@ -4639,7 +7231,14 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-40%",
                 "weight": "170g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
@@ -4655,7 +7254,14 @@ const attachmentData = {
                 "recoil": "-28%",
                 "sway": "-45%",
                 "weight": "170g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "UMSButtstock",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Yellow",
@@ -4671,7 +7277,14 @@ const attachmentData = {
                 "recoil": "-28%",
                 "sway": "-45%",
                 "weight": "170g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "UMSButtstock",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Baskak_Stock",
@@ -4687,7 +7300,12 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-40%",
                 "weight": "270g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E4_Buttstock",
@@ -4703,7 +7321,12 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "253g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M60Buttstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M700_MODX_Chassis",
@@ -4731,7 +7354,12 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-30%",
                 "weight": "511g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MasadaButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_PDW_Buttstock",
@@ -4747,7 +7375,12 @@ const attachmentData = {
                 "recoil": "-17%",
                 "sway": "-25%",
                 "weight": "557g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MasadaButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_MaximDefense_Buttstock",
@@ -4763,7 +7396,12 @@ const attachmentData = {
                 "recoil": "-21%",
                 "sway": "-20%",
                 "weight": "501g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_SVD_Style_Stock",
@@ -4779,7 +7417,12 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-45%",
                 "weight": "1217g"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "SVTStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP7_ARS_Stock",
@@ -4795,7 +7438,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-1%",
                 "weight": "520g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP7Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Buttstock",
@@ -4811,7 +7459,12 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "-15%",
                 "weight": "460g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MP133Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Short_Buttstock",
@@ -4827,7 +7480,12 @@ const attachmentData = {
                 "recoil": "+50%",
                 "sway": "+50%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP133Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP18_Polymer_Buttstock",
@@ -4843,7 +7501,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-20%",
                 "weight": "470g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MP18Stock"
+            ]
         },
         {
             "id": "SMPZ_Att_MP5_A3_Buttstock",
@@ -4859,7 +7522,12 @@ const attachmentData = {
                 "recoil": "-21%",
                 "sway": "-50%",
                 "weight": "430g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP5Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPD_DSARMS_Buttstock",
@@ -4874,7 +7542,16 @@ const attachmentData = {
             "stats": {
                 "sway": "-20%",
                 "weight": "1230g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "RPDStock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer",
+                "SA58Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Humpback_Polymer_Stock",
@@ -4890,7 +7567,12 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-30%",
                 "weight": "800g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SA58Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_BRS_Stock",
@@ -4906,7 +7588,12 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-31%",
                 "weight": "950g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SA58Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_SPR_Stock",
@@ -4922,7 +7609,12 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-31%",
                 "weight": "950g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SA58Stock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CTR_Buttstock",
@@ -4938,7 +7630,14 @@ const attachmentData = {
                 "recoil": "-33%",
                 "sway": "-30%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ECB_Buttstock",
@@ -4954,7 +7653,14 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_GLCore_Buttstock",
@@ -4970,7 +7676,14 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-22%",
                 "weight": "271g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_GLCore_Buttstock_Black",
@@ -4986,7 +7699,14 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-22%",
                 "weight": "271g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M4_Standard_Buttstock",
@@ -5002,7 +7722,14 @@ const attachmentData = {
                 "recoil": "-18%",
                 "sway": "-30%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MOE_Buttstock",
@@ -5018,7 +7745,14 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-30%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck",
@@ -5034,7 +7768,15 @@ const attachmentData = {
                 "recoil": "-45%",
                 "sway": "-45%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4",
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck_Black",
@@ -5050,7 +7792,15 @@ const attachmentData = {
                 "recoil": "-45%",
                 "sway": "-45%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4",
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PRS_Gen2_Bttstck",
@@ -5066,7 +7816,15 @@ const attachmentData = {
                 "recoil": "-40%",
                 "sway": "-45%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4",
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SLK_Buttstock",
@@ -5082,7 +7840,14 @@ const attachmentData = {
                 "recoil": "-27%",
                 "sway": "-30%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SLM_Buttstock_Black",
@@ -5098,7 +7863,14 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-22%",
                 "weight": "148g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_TFS_Buttstock",
@@ -5114,7 +7886,12 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "-25%",
                 "weight": "336g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_CTS_Buttstock",
@@ -5130,7 +7907,12 @@ const attachmentData = {
                 "recoil": "-18%",
                 "sway": "-26%",
                 "weight": "396g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_GLR_Buttstock",
@@ -5146,7 +7928,12 @@ const attachmentData = {
                 "recoil": "-45%",
                 "sway": "-45%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "GlockButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_PT1_Buttstock",
@@ -5162,7 +7949,12 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "290g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKZenitStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_PT3_Buttstock",
@@ -5178,7 +7970,12 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-30%",
                 "weight": "210g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKZenitStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ACE_SOCOM_Buttstock",
@@ -5194,7 +7991,12 @@ const attachmentData = {
                 "recoil": "-33%",
                 "sway": "-35%",
                 "weight": "470g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_UBR_Gen2_Buttstock",
@@ -5210,7 +8012,12 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-40%",
                 "weight": "610g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_PT2_Buttstock",
@@ -5225,7 +8032,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-30%",
                 "weight": "643g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "PKButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Arcangel_AA47_Buttstock",
@@ -5241,7 +8053,12 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-40%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_ZhukovS_Buttstock",
@@ -5257,7 +8074,12 @@ const attachmentData = {
                 "recoil": "-28%",
                 "sway": "-29%",
                 "weight": "425g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_KV_Adjustable_Buttstock",
@@ -5273,7 +8095,12 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "907g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "G36Buttstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_IDZ_Adjustable_Buttstock",
@@ -5289,7 +8116,12 @@ const attachmentData = {
                 "recoil": "-27%",
                 "sway": "-30%",
                 "weight": "419g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "G36Buttstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Mosin_ATI_Monte_Carlo_Stock",
@@ -5305,7 +8137,15 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "1200g"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "MosinStock"
+            ],
+            "attachmentSlots": [
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SKS_ATI_Monte_Carlo_Stock",
@@ -5321,7 +8161,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-5%",
                 "weight": "1100g"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "SKSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_EVO_Buttstock",
@@ -5337,7 +8182,13 @@ const attachmentData = {
                 "recoil": "-27%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AK74MButtstock",
+                "RPK16Buttstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK_E1_Buttstock",
@@ -5353,7 +8204,14 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-25%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK_Slimline_Buttstock",
@@ -5369,7 +8227,14 @@ const attachmentData = {
                 "recoil": "-27%",
                 "sway": "-25%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK_Slimline_Buttstock_RAL8000",
@@ -5385,7 +8250,14 @@ const attachmentData = {
                 "recoil": "-27%",
                 "sway": "-25%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
@@ -5401,7 +8273,14 @@ const attachmentData = {
                 "recoil": "-25%",
                 "sway": "-25%",
                 "weight": "140g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SBA3_Buttstock",
@@ -5417,7 +8296,14 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-30%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DS150_Buttstock",
@@ -5433,7 +8319,14 @@ const attachmentData = {
                 "recoil": "-26%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DS150_Buttstock_FDE",
@@ -5449,7 +8342,14 @@ const attachmentData = {
                 "recoil": "-26%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1A_Archangel_Chassis",
@@ -5465,7 +8365,16 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-55%",
                 "weight": "1900g"
-            }
+            },
+            "itemSize": "6x2",
+            "itemSlots": 12,
+            "inventorySlots": [
+                "M1AChassis"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Stock",
@@ -5481,7 +8390,12 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "UltimaStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Chassis",
@@ -5497,7 +8411,12 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "-20%",
                 "weight": "550g"
-            }
+            },
+            "itemSize": "4x2",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "CNCChassis"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Stock",
@@ -5513,7 +8432,12 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "1004g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "CNCStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock",
@@ -5529,7 +8453,14 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-30%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock_FDE",
@@ -5545,7 +8476,14 @@ const attachmentData = {
                 "recoil": "-29%",
                 "sway": "-30%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
@@ -5561,7 +8499,12 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SCARStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock_FDE",
@@ -5577,7 +8520,12 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SCARStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock",
@@ -5593,7 +8541,12 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-25%",
                 "weight": "220g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SCARStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock_FDE",
@@ -5609,7 +8562,12 @@ const attachmentData = {
                 "recoil": "-32%",
                 "sway": "-25%",
                 "weight": "220g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SCARStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CQR_pistolgrip",
@@ -5625,7 +8583,12 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-45%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CQR47_pistolgrip",
@@ -5641,7 +8604,12 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-45%",
                 "weight": "525g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         }
     ],
     "광학 조준경": [
@@ -5657,7 +8625,19 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
@@ -5671,7 +8651,20 @@ const attachmentData = {
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
                 "weight": "814g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_12x50",
@@ -5685,7 +8678,24 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1150g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "RAPTAR",
+                "RAPTARSecond"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Bravo4",
@@ -5699,7 +8709,19 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Bravo5",
@@ -5713,7 +8735,19 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo7",
@@ -5727,7 +8761,27 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "354g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo8T",
@@ -5741,7 +8795,27 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "388g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter_HCO",
@@ -5755,7 +8829,27 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "433g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "GlockOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Aimpoint_CompM4",
@@ -5769,7 +8863,27 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "470g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "GlockOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_OKP7",
@@ -5783,7 +8897,25 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "255g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_OKP7_Dovetail",
@@ -5797,7 +8929,13 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "295g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK",
+                "MK12Optics"
+            ]
         },
         {
             "id": "SMPZ_Optics_MRS",
@@ -5811,7 +8949,25 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "255g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SwampFox_Prism",
@@ -5825,7 +8981,23 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "436g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "OpticsOnAKHndgrd",
+                "MK1Optics",
+                "CSSOptics",
+                "MK12Optics",
+                "GlockOptics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SVT_AVT_PUScope",
@@ -5839,7 +9011,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "800g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SVTOptic"
+            ]
         },
         {
             "id": "SMPZ_Optics_Valday_PK120",
@@ -5853,7 +9030,25 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "300g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_553",
@@ -5867,7 +9062,25 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "349g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Burris_FastFire3_FFP",
@@ -5881,7 +9094,13 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "53g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "FFP3"
+            ]
         },
         {
             "id": "SMPZ_Optics_Aimpoint_T1",
@@ -5895,7 +9114,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "84g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "AimpointT1"
+            ]
         },
         {
             "id": "SMPZ_Optics_Aimpoint_H2",
@@ -5909,7 +9134,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "94g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "HydraOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo4",
@@ -5923,7 +9154,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "90g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "HydraOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_G33_Magnifier",
@@ -5937,7 +9174,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "MagnifierCompatOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Nightforce_ATACR_35x56",
@@ -5951,7 +9196,20 @@ const attachmentData = {
             "manufacturerUrl": "https://www.nightforceoptics.com/",
             "stats": {
                 "weight": "1339g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Helsoldt_FF4_16x56",
@@ -5965,7 +9223,20 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1126g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_SwampFox_Justice",
@@ -5979,7 +9250,13 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Trijicon_SRO",
@@ -5993,7 +9270,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Steiner_R1X",
@@ -6007,7 +9290,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.steiner-optics.com/",
             "stats": {
                 "weight": "272g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
@@ -6021,7 +9310,13 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "160g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Optics_Aimpoint_ACRO_P1",
@@ -6035,7 +9330,12 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "60g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AimpointACRO"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_WMX",
@@ -6049,7 +9349,28 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "210g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_CSS_Rail",
@@ -6063,7 +9384,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "30g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaRearsight"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TigerShark_SightMount",
@@ -6077,7 +9406,15 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockMount"
+            ],
+            "attachmentSlots": [
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_Flip_up_Rail",
@@ -6091,7 +9428,16 @@ const attachmentData = {
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
                 "weight": "453g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "G36Optic"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AUG_M1_High_Mount",
@@ -6105,7 +9451,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.steyr-arms.com/en/",
             "stats": {
                 "weight": "154g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AUGReceiver"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
@@ -6119,7 +9473,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1AScopeMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Vortex_UH1",
@@ -6133,7 +9495,26 @@ const attachmentData = {
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
                 "weight": "330g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "CSSOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics",
+                "G33MagnifierOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_SIG_Tango6T",
@@ -6147,7 +9528,19 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Vortex_Razor",
@@ -6161,7 +9554,19 @@ const attachmentData = {
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Vortex_Razor_Black",
@@ -6175,7 +9580,19 @@ const attachmentData = {
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Vortex_Razor_MountFDE",
@@ -6189,7 +9606,19 @@ const attachmentData = {
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_RMR",
@@ -6203,7 +9632,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_M4_CarryHandle",
@@ -6217,7 +9652,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "150g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_Vudu",
@@ -6231,7 +9671,23 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "ROF90Mount"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_Vudu_MountFDE",
@@ -6245,7 +9701,23 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "ROF90Mount"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_EXPS3",
@@ -6259,7 +9731,30 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "GlockOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics",
+                "G33MagnifierOptics",
+                "MagnifierCompatOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_XPS3",
@@ -6273,7 +9768,27 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "225g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "GlockOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_BOSS",
@@ -6287,7 +9802,26 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "SidemountOptics",
+                "CSSOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_8x24",
@@ -6301,7 +9835,19 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1114g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_8x24_MountFDE",
@@ -6315,7 +9861,19 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1114g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_PSO_1M2_Optic",
@@ -6329,7 +9887,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Optics_NPZ_Obzor",
@@ -6343,7 +9909,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "520g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
         },
         {
             "id": "SMPZ_Optics_PKAA",
@@ -6357,7 +9928,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "450g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
         },
         {
             "id": "SMPZ_Optics_EKP_1S",
@@ -6371,7 +9947,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "273g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
         },
         {
             "id": "SMPZ_Optics_Leupold_HAMR",
@@ -6385,7 +9966,20 @@ const attachmentData = {
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
                 "weight": "411g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "M32Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter",
@@ -6399,7 +9993,22 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "640g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter_FDE",
@@ -6413,7 +10022,22 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "640g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter_Tan",
@@ -6427,7 +10051,22 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "640g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Optics_Burris_FullField_TAC30",
@@ -6441,7 +10080,20 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "570g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_MarchTactical_3x24_FFP",
@@ -6455,7 +10107,20 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "854g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_25x56",
@@ -6469,7 +10134,20 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "1310g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AROptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "MK1Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
         },
         {
             "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
@@ -6483,7 +10161,17 @@ const attachmentData = {
             "manufacturerUrl": "https://milkorusa.com/",
             "stats": {
                 "weight": "600g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M32Optics"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         }
     ],
     "권총 손잡이": [
@@ -6501,7 +10189,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-23%",
                 "weight": "88g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SA58Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_SAW_Style_pistolgrip",
@@ -6517,7 +10210,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-20%",
                 "weight": "88g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SA58Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_PUFGUN_SG_M2_pistolgrip",
@@ -6533,7 +10231,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-22%",
                 "weight": "132g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Orion_pistolgrip",
@@ -6548,7 +10251,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-20%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TD_HEX_pistolgrip",
@@ -6563,7 +10271,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-24%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_A1_pistolgrip",
@@ -6578,7 +10291,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-1%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TD_Skeletonzied_pistolgrip",
@@ -6593,7 +10311,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-23%",
                 "weight": "38g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Sierra_Precision_SPR_pistolgrip",
@@ -6608,7 +10331,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-20%",
                 "weight": "90g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
@@ -6623,7 +10351,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip",
@@ -6638,7 +10371,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-9%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
@@ -6653,7 +10391,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_MCX_pistolgrip",
@@ -6668,7 +10411,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-15%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_MPX_pistolgrip",
@@ -6683,7 +10431,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-15%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Gladman_Skeleton_pistolgrip",
@@ -6699,7 +10452,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-35%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
@@ -6714,7 +10472,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-43%",
                 "weight": "112g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Yellow",
@@ -6729,7 +10492,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-43%",
                 "weight": "112g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Zenit_RK3_pistolgrip",
@@ -6745,7 +10513,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-35%",
                 "weight": "212g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "VALAdapter"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
@@ -6759,7 +10532,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M60PistolgripGroup"
+            ],
+            "attachmentSlots": [
+                "M60Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip_Group",
@@ -6773,7 +10554,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M60PistolgripGroup"
+            ],
+            "attachmentSlots": [
+                "M60Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip",
@@ -6785,7 +10574,12 @@ const attachmentData = {
             "manufacturer": "",
             "manufacturerLogo": "",
             "manufacturerUrl": "",
-            "stats": {}
+            "stats": {},
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M60Pistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
@@ -6800,7 +10594,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-40%",
                 "weight": "90g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip_MilSpec",
@@ -6815,7 +10614,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-40%",
                 "weight": "90g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip_UCP",
@@ -6831,7 +10635,15 @@ const attachmentData = {
                 "recoil": "-45%",
                 "sway": "-55%",
                 "weight": "167g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AGS74_pistolgrip",
@@ -6846,7 +10658,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-25%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Ergo_pistolgrip",
@@ -6861,7 +10678,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-25%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY1_pistolgrip",
@@ -6876,7 +10698,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_pistolgrip",
@@ -6891,7 +10718,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-22%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_PC_pistolgrip",
@@ -6906,7 +10738,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-23%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MOE_pistolgrip",
@@ -6921,7 +10758,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-20%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Naroh_pistolgrip",
@@ -6936,7 +10778,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-25%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RK3_pistolgrip",
@@ -6951,7 +10798,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-22%",
                 "weight": "225g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip",
@@ -6966,7 +10818,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_FDE",
@@ -6981,7 +10838,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GE",
@@ -6996,7 +10858,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GG",
@@ -7011,7 +10878,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_OD",
@@ -7026,7 +10898,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HG15_pistolgrip",
@@ -7041,7 +10918,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-20%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
@@ -7056,7 +10938,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip_FDE",
@@ -7071,7 +10958,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
@@ -7086,7 +10978,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-18%",
                 "weight": "91g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip_FDE",
@@ -7101,7 +10998,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-18%",
                 "weight": "91g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
@@ -7116,7 +11018,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-22%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
@@ -7131,7 +11038,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-17%",
                 "weight": "120g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_pistolgrip",
@@ -7146,7 +11058,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-19%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "UltimaPistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip",
@@ -7161,7 +11078,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip_FDE",
@@ -7176,7 +11098,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-21%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DLG123_pistolgrip",
@@ -7191,7 +11118,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-15%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip",
@@ -7206,7 +11138,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-18%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip_Black",
@@ -7221,7 +11158,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-18%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip",
@@ -7236,7 +11178,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-26%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ]
         }
     ],
     "기계식 조준기": [
@@ -7253,7 +11200,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_A2_Rearsight",
@@ -7268,7 +11220,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP7_Frontsight",
@@ -7283,7 +11240,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP7_Rearsight",
@@ -7298,7 +11260,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E4_Frontsight",
@@ -7312,7 +11279,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "84g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "M60Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60_Rearsight",
@@ -7327,7 +11299,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "92g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E6_Frontsight_Rail",
@@ -7341,7 +11318,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "78g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "M60Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight",
@@ -7356,7 +11338,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight_FDE",
@@ -7371,7 +11358,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight",
@@ -7386,7 +11378,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight_FDE",
@@ -7401,7 +11398,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_Frontsight",
@@ -7416,7 +11418,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_Rearsight",
@@ -7431,7 +11438,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "34g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ARMS_40_Rearsight",
@@ -7446,7 +11458,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Matech_BUIS_Rearsight",
@@ -7461,7 +11478,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "95g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_RD_ERS_Rearsight",
@@ -7475,7 +11497,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "26g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK12_Rearsight",
@@ -7489,7 +11516,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK74_Rearsight",
@@ -7503,7 +11535,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKM_Rearsight",
@@ -7517,7 +11554,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight",
@@ -7531,7 +11573,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "25g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Enhanced_Rearsight",
@@ -7546,7 +11593,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Mosin_Rearsight",
@@ -7561,7 +11613,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MosinRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SKS_Rearsight",
@@ -7576,7 +11633,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SKSRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Tula_TT01_Rail_Rearsight",
@@ -7590,7 +11652,17 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "85g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight",
+                "SaigaRearsight",
+                "AKS74URearsight"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Frontsight",
@@ -7605,7 +11677,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "68g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "G36Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Rearsight",
@@ -7619,7 +11696,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.knightarmco.com/",
             "stats": {
                 "weight": "108g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "G36Optic"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Fixed_Frontsight",
@@ -7634,7 +11719,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "30g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Fixed_Rearsight",
@@ -7649,7 +11739,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "40g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Defiance_Frontsight",
@@ -7664,7 +11759,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Defiance_Rearsight",
@@ -7679,7 +11779,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Frontsight",
@@ -7694,7 +11799,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Rearsight",
@@ -7709,7 +11819,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Micro_Frontsight",
@@ -7724,7 +11839,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Micro_Rearsight",
@@ -7739,7 +11859,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Frontsight",
@@ -7754,7 +11879,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Rearsight",
@@ -7769,7 +11899,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_Frontsight",
@@ -7784,7 +11919,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_Rearsight",
@@ -7799,7 +11939,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Frontsight",
@@ -7814,7 +11959,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Rearsight",
@@ -7829,7 +11979,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Rearsight",
@@ -7844,7 +11999,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Rearsight",
@@ -7859,7 +12019,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_TFX_Frontsight",
@@ -7873,7 +12038,12 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "7g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockFrontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_TFX_Rearsight",
@@ -7887,7 +12057,12 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "7g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "GlockRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Frontsight",
@@ -7902,7 +12077,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Rearsight",
@@ -7917,7 +12097,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-3%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Rearsight"
+            ]
         }
     ],
     "레이저 표적기": [
@@ -7934,7 +12119,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_Wilcox_RAID_XE_Black",
@@ -7949,7 +12156,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_BE_Meyers_MAWL",
@@ -7964,7 +12193,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_Insight_Anpeq2_IR",
@@ -7979,7 +12230,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_Steiner_DBAL_A4",
@@ -7994,7 +12267,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_Anpeq15",
@@ -8009,7 +12304,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Lasers_Perst3",
@@ -8024,7 +12341,29 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "DecoLazerFirst",
+                "DecoLazerSCARSecond",
+                "DecoLazerThird",
+                "weaponFlashlight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         }
     ],
     "리시버": [
@@ -8041,7 +12380,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "300g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_M16A1_Standard_Receiver",
@@ -8056,7 +12400,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "370g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Receiver"
+            ],
+            "attachmentSlots": [
+                "M16Mount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_M16A2_Standard_Receiver",
@@ -8071,7 +12423,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Receiver"
+            ],
+            "attachmentSlots": [
+                "M16Mount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_WOS_Receiver",
@@ -8086,7 +12446,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "188g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MK2_Receiver",
@@ -8101,7 +12466,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-7%",
                 "weight": "440g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_ADAR2_Standard_Receiver",
@@ -8116,7 +12486,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "+1%",
                 "weight": "270g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_TTI_MUR_Receiver",
@@ -8131,7 +12506,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "271g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_Receiver",
@@ -8146,7 +12526,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "285g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Gen3_Receiver",
@@ -8161,7 +12546,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "212g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_MUR_Receiver",
@@ -8176,7 +12566,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "246g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_Standard_Receiver",
@@ -8191,7 +12586,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-1%",
                 "weight": "270g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B33_Receiver",
@@ -8205,7 +12605,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKCover"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_DogLeg_Receiver",
@@ -8219,7 +12627,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "195g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKCover"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_PDC_Receiver",
@@ -8233,7 +12649,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "202g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKCover"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Pilgrim_Receiver",
@@ -8247,7 +12671,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "120g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKS74UCover"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_Moto_Receiver",
@@ -8261,7 +12693,12 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "190g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSlide"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_Viper_Receiver",
@@ -8275,7 +12712,12 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "190g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSlide"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_ZT_RMR_Receiver",
@@ -8289,7 +12731,15 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "190g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSlide"
+            ],
+            "attachmentSlots": [
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_ZT_Spartan_Receiver",
@@ -8303,7 +12753,15 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "190g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSlide"
+            ],
+            "attachmentSlots": [
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_P90_Effen90_Upper_Receiver",
@@ -8317,7 +12775,17 @@ const attachmentData = {
             "manufacturerUrl": "https://fnherstal.com/",
             "stats": {
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "P90Receiver"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AUG_Vltor_Receiver_with_Rail",
@@ -8332,7 +12800,18 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "1400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AUGReceiver"
+            ],
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_X17_Lower_Receiver",
@@ -8346,7 +12825,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "X17Receiver"
+            ]
         }
     ],
     "마운트": [
@@ -8362,7 +12846,18 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "125g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "USBM"
+            ],
+            "attachmentSlots": [
+                "WF501B",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DeltaTek_Pump_Shotgun_Sprut_Mount",
@@ -8376,7 +12871,17 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "96g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "SprutMount"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SVD_CAA_DRG_Mount",
@@ -8390,7 +12895,16 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "75g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DRGMount"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M590A1_Top_Rail_Mount",
@@ -8404,7 +12918,21 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "450g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "590A1Mount"
+            ],
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
@@ -8418,7 +12946,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
@@ -8432,7 +12968,16 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "140g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Unity_FAST_Riser_Mount",
@@ -8446,7 +12991,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "140g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
@@ -8460,7 +13013,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Precision_Reflex_GEN3_SPR_Rail",
@@ -8474,7 +13035,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "300g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "SPRTopRail"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Long_Panel",
@@ -8488,7 +13057,13 @@ const attachmentData = {
             "manufacturerUrl": "https://www.knightarmco.com/",
             "stats": {
                 "weight": "5g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "URXPanel",
+                "URXPanel2"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_APS_ScopeMount",
@@ -8502,7 +13077,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "300g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SVTMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
@@ -8516,7 +13099,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
                 "weight": "16g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Standard_Mount",
@@ -8530,7 +13121,16 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "15g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
@@ -8544,7 +13144,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "15g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RMR_Mount",
@@ -8558,7 +13166,17 @@ const attachmentData = {
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
                 "weight": "17g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponOptics",
+                "PistolOpticMount",
+                "OpticsOnAKHndgrd"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_FiveSeven_RMR_Mount",
@@ -8572,7 +13190,15 @@ const attachmentData = {
             "manufacturerUrl": "https://fnherstal.com/",
             "stats": {
                 "weight": "17g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "FSRMRMount"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ROF90_RMR_Mount",
@@ -8586,7 +13212,15 @@ const attachmentData = {
             "manufacturerUrl": "https://geissele.com/",
             "stats": {
                 "weight": "20g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ROF90Mount"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPR45_Backup_Mount",
@@ -8600,7 +13234,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "40g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "CantedMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_RSA55_Stock_Adapter",
@@ -8614,7 +13256,16 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "30g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaButtstock",
+                "AK74MButtstock"
+            ],
+            "attachmentSlots": [
+                "MCXButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AK74M_Zenit_PT_Lock_Stock_Adapter",
@@ -8628,7 +13279,16 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "30g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaButtstock",
+                "AK74MButtstock"
+            ],
+            "attachmentSlots": [
+                "AKZenitStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AKM_Zenit_PT_Lock_Stock_Adapter",
@@ -8642,7 +13302,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "30g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ],
+            "attachmentSlots": [
+                "AKZenitStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AKS74U_Zenit_PT_Lock_Stock_Adapter",
@@ -8656,7 +13324,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "30g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKS74UButtstock"
+            ],
+            "attachmentSlots": [
+                "AKZenitStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKM_RD_AKtoM4_Buffer_Adapter",
@@ -8670,7 +13346,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKM_ME4_Buffer_Adapter",
@@ -8685,7 +13369,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-1%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_Knuckle_Stock_Adapter",
@@ -8699,7 +13391,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_LSHA_Stock_Adapter",
@@ -8713,7 +13413,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ],
+            "attachmentSlots": [
+                "LPTBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK12_Rearsight_Base_Mount",
@@ -8727,7 +13435,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsightBase"
+            ],
+            "attachmentSlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight_Base_Mount",
@@ -8741,7 +13457,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsightBase"
+            ],
+            "attachmentSlots": [
+                "AKRearsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_MWS_Bipod_Adapter",
@@ -8755,7 +13479,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.knightarmco.com/",
             "stats": {
                 "weight": "42g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Bipod"
+            ],
+            "attachmentSlots": [
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_MLOK_Bipod_Adapter",
@@ -8769,7 +13501,15 @@ const attachmentData = {
             "manufacturerUrl": "https://magpul.com/",
             "stats": {
                 "weight": "42g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "BipodKeymodMLOKMount"
+            ],
+            "attachmentSlots": [
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AXMC_KeySlot_Bipod_Adapter",
@@ -8783,7 +13523,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.accuracyinternational.com/",
             "stats": {
                 "weight": "42g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "BipodKeySlot"
+            ],
+            "attachmentSlots": [
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_OdinWorks_KeyMod_Bipod_Adapter",
@@ -8797,7 +13545,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "42g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "BipodKeymodMount"
+            ],
+            "attachmentSlots": [
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Zenit_B18_Mount",
@@ -8811,7 +13567,17 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "85g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKRearsight",
+                "SaigaRearsight",
+                "AKS74URearsight"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SVDS_Stock_Adapter",
@@ -8825,7 +13591,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "127g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SVDButtstock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_ZEV_Cap",
@@ -8839,7 +13613,12 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
                 "weight": "5g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "noMountRMROptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Burris_FastFire_Weaver_Mount",
@@ -8853,7 +13632,17 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "17g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponOptics",
+                "PistolOpticMount",
+                "OpticsOnAKHndgrd"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
@@ -8867,7 +13656,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M16Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_NcSTAR_Mount",
@@ -8881,7 +13678,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "40g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Mount"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_Weig_SightMount",
@@ -8895,7 +13700,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "120g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_B51_Mount",
@@ -8909,7 +13722,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "900g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "B51Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP5_MTI_Scope_Mount",
@@ -8923,7 +13744,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP5Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_OMM_Riser_Mount",
@@ -8937,7 +13766,16 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_25mm_Ring_Mount",
@@ -8951,7 +13789,28 @@ const attachmentData = {
             "manufacturerUrl": "https://danieldefense.com/",
             "stats": {
                 "weight": "60g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "Flashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KibaArms_25mm_Ring_Mount",
@@ -8965,7 +13824,28 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "85g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "Flashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_EraTac_Sunshade_Mount",
@@ -8979,7 +13859,16 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "15g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ],
+            "attachmentSlots": [
+                "AimpointT1"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BT_QD_NAR_ACRO_Mount",
@@ -8993,7 +13882,16 @@ const attachmentData = {
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
                 "weight": "15g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ],
+            "attachmentSlots": [
+                "AimpointACRO"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Geissele_SMR_HK_Rail_Mount",
@@ -9007,7 +13905,15 @@ const attachmentData = {
             "manufacturerUrl": "https://geissele.com/",
             "stats": {
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SMRRailMountUnder"
+            ],
+            "attachmentSlots": [
+                "Grip"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Geissele_SMR_HK_Short_Rail_Mount",
@@ -9021,7 +13927,17 @@ const attachmentData = {
             "manufacturerUrl": "https://geissele.com/",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SMRShortRailMountUnder",
+                "SMRShortRailMountLeft",
+                "SMRShortRailMountRight"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_UCP_Mount",
@@ -9035,7 +13951,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
                 "weight": "80g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "UCPMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_USP_Mount",
@@ -9049,7 +13973,15 @@ const attachmentData = {
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
                 "weight": "80g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "USPMount"
+            ],
+            "attachmentSlots": [
+                "FFP3"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M9A3_Mount",
@@ -9063,7 +13995,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "28g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M9A3Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zveno_Buffer_Adapter",
@@ -9078,7 +14018,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "+3%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "PKButtstock"
+            ],
+            "attachmentSlots": [
+                "ARBuffer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Hndgrd_Cover",
@@ -9092,7 +14040,13 @@ const attachmentData = {
             "manufacturerUrl": "https://danieldefense.com/",
             "stats": {
                 "weight": "5g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DDCover",
+                "DDCover2"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_B13V_Sidemount",
@@ -9106,7 +14060,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "175g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Axion_Kobra_Sidemount",
@@ -9120,7 +14082,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "165g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AK303_Sidemount",
@@ -9134,7 +14104,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "166g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_SAG_SVD_Low_Sidemount",
@@ -9148,7 +14126,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "165g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_SVD_CAA_RGL_Sidemount",
@@ -9162,7 +14148,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "225g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_6P29M_Mount",
@@ -9176,7 +14170,17 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "95g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "VSSMount"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SAG_Sidemount",
@@ -9190,7 +14194,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "165g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_B13_Sidemount",
@@ -9204,7 +14216,15 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "175g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_SR3MP_SideMount",
@@ -9218,7 +14238,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_P90_Top_Rail_Mount",
@@ -9232,7 +14260,15 @@ const attachmentData = {
             "manufacturerUrl": "https://fnherstal.com/",
             "stats": {
                 "weight": "270g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "P90Optic"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Mosin_Patriot_Rail_Mount",
@@ -9246,7 +14282,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "220g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MosinPatriot"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SKS_MTU017_Cover_Mount",
@@ -9260,7 +14304,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "220g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SKSReceiver"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SKS_UTG_SOCOM_Mount",
@@ -9274,7 +14326,19 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SKSMount"
+            ],
+            "attachmentSlots": [
+                "OpticsOnAKHndgrd",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1A_DCSB_Mount",
@@ -9288,7 +14352,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1A_Vltor_CASV_Rail_Mount",
@@ -9302,7 +14374,17 @@ const attachmentData = {
             "manufacturerUrl": "https://www.vltor.com/",
             "stats": {
                 "weight": "200g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M1AUpper"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponFlashlightFirst"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1A_Leapers_UTG4_Scope_Mount",
@@ -9316,7 +14398,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1AScopeMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Mount",
@@ -9330,7 +14420,20 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "450g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "UlitmaMount"
+            ],
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Frontsight"
+            ]
         }
     ],
     "방아쇠": [
@@ -9346,7 +14449,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Trigger"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_M45A1_Trigger",
@@ -9360,7 +14468,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Trigger"
+            ]
         }
     ],
     "버퍼 튜브": [
@@ -9377,7 +14490,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "162g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "PRSStock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKMS_TubeBuffer",
@@ -9392,7 +14513,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "436g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKMSStock"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CGNL_TubeBuffer",
@@ -9407,7 +14536,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "132g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Phase5_Hexone_TubeBuffer",
@@ -9422,7 +14559,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-7%",
                 "weight": "180g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "UMSButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
@@ -9437,7 +14582,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-4%",
                 "weight": "162g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "LPTBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK12_TubeBuffer",
@@ -9452,7 +14605,17 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "142g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaButtstock",
+                "AK74MButtstock",
+                "RPK16Buffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_NB_TubeBuffer",
@@ -9467,7 +14630,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "161g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "VALButtstock"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPK16_TubeBuffer",
@@ -9482,7 +14653,16 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "142g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "RPK16Buffer",
+                "AK74MBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKM_AK74_CAA_AKTS_TubeBuffer",
@@ -9497,7 +14677,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "240g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK74M_AK74_CAA_AKTS_TubeBuffer",
@@ -9512,7 +14700,16 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "240g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaButtstock",
+                "AK74MButtstock"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_Carbine_TubeBuffer",
@@ -9527,7 +14724,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "162g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ATP_TubeBuffer",
@@ -9542,7 +14747,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-4%",
                 "weight": "115g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ARE_TubeBuffer",
@@ -9557,7 +14770,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Rotor43_Pistolgrip_Adapter",
@@ -9573,7 +14794,15 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-3%",
                 "weight": "65g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "VALAdapter"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ]
         }
     ],
     "소염기 / 머즐": [
@@ -9590,7 +14819,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-1%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "CNCAdapter"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_AKM_KibaArms_308_Muzzle_Device_Adapter",
@@ -9605,7 +14839,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-1%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "308Adapter"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Fortis_RED_762x51_Muzzle",
@@ -9620,7 +14859,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_12ga_GK02_Muzzle",
@@ -9635,7 +14880,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "340g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MSR_DualPort_MuzzleBrake",
@@ -9650,7 +14900,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "300WinSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Cadex_Defense_MX1_Multi_Caliber_MuzzleBrake",
@@ -9665,7 +14920,14 @@ const attachmentData = {
             "stats": {
                 "recoil": "-14%",
                 "weight": "281g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "338Muzzle",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_AC858_338_MuzzleBrake",
@@ -9680,7 +14942,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_MuzzleBrake",
@@ -9695,7 +14962,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "192g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Noveske_KX3_556_Muzzle",
@@ -9710,7 +14982,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A1_3Prong_556_Muzzle",
@@ -9725,7 +15002,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-4%",
                 "weight": "64g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A2_556_Muzzle",
@@ -9740,7 +15022,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "64g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_CQB_556_Muzzle",
@@ -9755,7 +15042,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "300g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ],
+            "attachmentSlots": [
+                "CRDMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_556_CRD",
@@ -9770,7 +15065,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "140g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "CRDMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_FSK_762x51_Muzzle",
@@ -9785,7 +15085,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "110g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PotomacArmory_M110_762x51_Muzzle",
@@ -9800,7 +15106,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M82A1_Muzzle",
@@ -9815,7 +15127,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-13%",
                 "weight": "620g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M107A1Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle",
@@ -9830,7 +15147,14 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "281g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor",
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_SF3P_556_Muzzle",
@@ -9845,7 +15169,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "60g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_SF4P_556_Muzzle",
@@ -9860,7 +15189,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "60g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_L_556_Muzzle",
@@ -9875,7 +15209,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_762x51_Muzzle",
@@ -9890,7 +15229,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "160g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HKG28_762x51_Muzzle",
@@ -9905,7 +15250,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "122g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_762x51_Muzzle",
@@ -9920,7 +15271,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "145g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AAC_51T_762x51_Muzzle",
@@ -9935,7 +15292,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "122g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SPR_556_Muzzle",
@@ -9950,7 +15313,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Muzzle",
@@ -9965,7 +15333,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_JailBreak_Muzzle_Device",
@@ -9980,7 +15353,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "73g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ASVALMod4JB"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Suppressor_Cap",
@@ -9995,7 +15373,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ASVALMod4Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_AO_Muzzle",
@@ -10010,7 +15393,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "105g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "M1911AO"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP7_SureFire_Muzzle",
@@ -10025,7 +15413,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "weight": "72g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "MP7Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_XM109_DualPort_Muzzle",
@@ -10040,7 +15433,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "670g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "XM109Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPD_Thread_Protector_Muzzle",
@@ -10054,7 +15452,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "10g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "RPDMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKM_Muzzle",
@@ -10069,7 +15472,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-6%",
                 "weight": "63g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "PKMSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Muzzle",
@@ -10084,7 +15492,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-5%",
                 "weight": "140g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Aero556_Muzzle",
@@ -10099,7 +15513,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "70g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Alien556_Muzzle",
@@ -10114,7 +15533,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASR556_Muzzle",
@@ -10129,7 +15553,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_blitz556_Muzzle",
@@ -10144,7 +15573,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_bulletec556_Muzzle",
@@ -10159,7 +15593,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_cc450_556_Muzzle",
@@ -10174,7 +15613,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_12ga_Claw_Muzzle",
@@ -10189,7 +15633,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-17%",
                 "weight": "340g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_claymore556_Muzzle",
@@ -10204,7 +15653,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_cqb556_Muzzle",
@@ -10219,7 +15673,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_dtk556_Muzzle",
@@ -10234,7 +15693,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G3P_Muzzle",
@@ -10249,7 +15713,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G4P_Muzzle",
@@ -10264,7 +15733,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_G4_SlideComp_Compensator",
@@ -10279,7 +15753,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_gate556_Muzzle",
@@ -10294,7 +15773,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_jailbreak556_Muzzle",
@@ -10309,7 +15793,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-20%",
                 "weight": "64g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "JailBreakMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_nero556_Muzzle",
@@ -10324,7 +15813,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_phantom556_Muzzle",
@@ -10339,7 +15833,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PSR_Multi_Caliber_Muzzle",
@@ -10354,7 +15853,15 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "762Suppressor",
+                "SPEARSuppressor",
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_pws556_Muzzle",
@@ -10369,7 +15876,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_qdc556_Muzzle",
@@ -10384,7 +15896,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-7%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_vette556_Muzzle",
@@ -10399,7 +15916,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_vp09556_Muzzle",
@@ -10414,7 +15936,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_war556_Muzzle",
@@ -10429,7 +15956,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_wave556_Muzzle",
@@ -10444,7 +15976,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "85g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_ZK38_Muzzle",
@@ -10459,7 +15996,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "35g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TMB_338_Muzzle",
@@ -10473,7 +16016,12 @@ const attachmentData = {
             "manufacturerUrl": "https://www.accuracyinternational.com/",
             "stats": {
                 "weight": "230g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Venom_762x39_Muzzle",
@@ -10488,7 +16036,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-12%",
                 "weight": "96g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAKM"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_DTK545_Muzzle",
@@ -10503,7 +16056,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-12%",
                 "weight": "128g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Lantac_DGN_762x51_Muzzle",
@@ -10518,7 +16076,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "90g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Lantac_BMD_with_DGN_762x51_Muzzle",
@@ -10533,7 +16097,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-18%",
                 "weight": "90g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Keymount_762x51_Muzzle",
@@ -10548,7 +16118,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M11_762x51_Muzzle",
@@ -10563,7 +16139,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MK47_762x51_Muzzle",
@@ -10578,7 +16160,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Prong_Muzzle",
@@ -10594,7 +16182,13 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "+15%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "ARMuzzle"
+            ]
         }
     ],
     "소음기": [
@@ -10611,7 +16205,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-9%",
                 "weight": "530g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSuppressor",
+                "GlockSuppressorSecond"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor",
@@ -10626,7 +16226,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-13%",
                 "weight": "743g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
@@ -10641,7 +16246,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-13%",
                 "weight": "743g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_CQB_556_Suppressor",
@@ -10656,7 +16266,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-13%",
                 "weight": "477g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Salvo12_12ga_Suppressor",
@@ -10671,7 +16286,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-17%",
                 "weight": "1080g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Rotor43_366TKM_Suppressor",
@@ -10686,7 +16306,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "570g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "366Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MSR_300Winchester_Suppressor",
@@ -10701,7 +16326,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-16%",
                 "weight": "327g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "300WinSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_Suppressor",
@@ -10716,7 +16346,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-15%",
                 "weight": "832g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -10731,7 +16366,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-10%",
                 "weight": "507g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_PRS_QDC_762x51_Suppressor",
@@ -10746,7 +16386,13 @@ const attachmentData = {
             "stats": {
                 "recoil": "-15%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
@@ -10761,7 +16407,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-17%",
                 "weight": "848g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "762Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
@@ -10776,7 +16427,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-17%",
                 "weight": "848g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "762Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Barrett_50BMG_Suppressor",
@@ -10791,7 +16447,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-18%",
                 "weight": "2290g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M107A1Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AMF_408_Suppressor",
@@ -10806,7 +16467,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-11%",
                 "weight": "2000g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M200Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AAC_SDN6_Multi_Caliber_Suppressor",
@@ -10822,7 +16488,14 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "+15%",
                 "weight": "689g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "weaponMuzzleM4",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
@@ -10838,7 +16511,13 @@ const attachmentData = {
                 "recoil": "-14%",
                 "sway": "+13%",
                 "weight": "659g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AEM5_556_Suppressor",
@@ -10854,7 +16533,12 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "+15%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_Osprey45_Suppressor",
@@ -10870,7 +16554,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "270g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "45ACPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKM_DTKP_Suppressor",
@@ -10886,7 +16575,12 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "+10%",
                 "weight": "990g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "PKMSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PKP_DTKP_Suppressor",
@@ -10902,7 +16596,12 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "+10%",
                 "weight": "990g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "PKPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
@@ -10918,7 +16617,13 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+15%",
                 "weight": "690g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
@@ -10934,7 +16639,14 @@ const attachmentData = {
                 "recoil": "-13%",
                 "sway": "+10%",
                 "weight": "453g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AAC_9x19_Suppressor",
@@ -10950,7 +16662,13 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "+10%",
                 "weight": "300g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSuppressor",
+                "GlockSuppressorSecond"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AUG_SL7i_Suppressor",
@@ -10966,7 +16684,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AUGMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AWC_Multi_Caliber_Suppressor",
@@ -10982,7 +16705,14 @@ const attachmentData = {
                 "recoil": "-19%",
                 "sway": "+10%",
                 "weight": "850g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "weaponMuzzleM4",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Mosin_Bramit_Suppressor",
@@ -10998,7 +16728,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "1100g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MosinSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_FD917_Suppressor",
@@ -11014,7 +16749,15 @@ const attachmentData = {
                 "recoil": "-16%",
                 "sway": "+10%",
                 "weight": "350g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSuppressor"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hexagon_12ga_Suppressor",
@@ -11030,7 +16773,12 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+10%",
                 "weight": "493g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "12gaMuzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor",
@@ -11046,7 +16794,23 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "200g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "weaponMuzzleAK",
+                "weaponMuzzleAK74",
+                "weaponMuzzleAKM",
+                "MP7Suppressor",
+                "SMGSuppressor",
+                "762Suppressor",
+                "AKSuppressor",
+                "GlockSuppressor",
+                "GlockSuppressorSecond",
+                "AUGMuzzle",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
@@ -11062,7 +16826,23 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "1500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "weaponMuzzleAK",
+                "weaponMuzzleAK74",
+                "weaponMuzzleAKM",
+                "MP7Suppressor",
+                "SMGSuppressor",
+                "762Suppressor",
+                "AKSuppressor",
+                "GlockSuppressor",
+                "GlockSuppressorSecond",
+                "AUGMuzzle",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M4SD_556_Suppressor",
@@ -11078,7 +16858,12 @@ const attachmentData = {
                 "recoil": "-18%",
                 "sway": "+10%",
                 "weight": "397g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_Monster556_Mini_Suppressor",
@@ -11094,7 +16879,13 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+10%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "MP7SureFireSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
@@ -11110,7 +16901,13 @@ const attachmentData = {
                 "recoil": "-13%",
                 "sway": "+10%",
                 "weight": "546g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4",
+                "MP7SureFireSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_SD_Suppressor",
@@ -11126,7 +16923,12 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+10%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MPXSD"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Omega_45ACP_Suppressor",
@@ -11142,7 +16944,12 @@ const attachmentData = {
                 "recoil": "-9%",
                 "sway": "+10%",
                 "weight": "411g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "45ACPSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Gemtech_ONE_Multi_Caliber_Suppressor",
@@ -11158,7 +16965,14 @@ const attachmentData = {
                 "recoil": "-9%",
                 "sway": "+10%",
                 "weight": "850g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "weaponMuzzleM4",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Osprey9_9x19_Suppressor",
@@ -11174,7 +16988,13 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "270g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GlockSuppressor",
+                "GlockSuppressorSecond"
+            ]
         },
         {
             "id": "SMPZ_Attachments_P90_Suppressor",
@@ -11190,7 +17010,12 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+15%",
                 "weight": "677g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "P90Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_PBS1_762x39_Suppressor",
@@ -11206,7 +17031,12 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+10%",
                 "weight": "435g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleAKM"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_PBS4_545x39_Suppressor",
@@ -11222,7 +17052,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "+10%",
                 "weight": "700g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
@@ -11238,7 +17073,12 @@ const attachmentData = {
                 "recoil": "-16%",
                 "sway": "+10%",
                 "weight": "510g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleM4"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SRD762QD",
@@ -11254,7 +17094,14 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "+10%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXSuppressor",
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SRD762TI",
@@ -11270,7 +17117,14 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "+10%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXSuppressor",
+                "762Suppressor",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SV98_Suppressor",
@@ -11286,7 +17140,12 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "+10%",
                 "weight": "330g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SV98Suppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TSM_338_Suppressor",
@@ -11302,7 +17161,12 @@ const attachmentData = {
                 "recoil": "-19%",
                 "sway": "+10%",
                 "weight": "665g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "338Muzzle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Ultra5_Multi_Caliber_556Suppressor",
@@ -11318,7 +17182,14 @@ const attachmentData = {
                 "recoil": "-16%",
                 "sway": "+10%",
                 "weight": "210g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "762Suppressor",
+                "weaponMuzzleM4",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Hexagon_Waffle_545x39_Suppressor",
@@ -11334,7 +17205,12 @@ const attachmentData = {
                 "recoil": "-19%",
                 "sway": "+10%",
                 "weight": "385g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ]
         },
         {
             "id": "SMPZ_Attachments_WAVE_Multi_Caliber_Suppressor",
@@ -11350,7 +17226,14 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "+10%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "762Suppressor",
+                "weaponMuzzleM4",
+                "SPEARSuppressor"
+            ]
         },
         {
             "id": "SMPZ_Attachments_338Suppressor",
@@ -11366,7 +17249,13 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "+10%",
                 "weight": "1500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "308Suppressor",
+                "338Suppressor"
+            ]
         },
         {
             "id": "Slot_338Suppressor",
@@ -11378,7 +17267,8 @@ const attachmentData = {
             "manufacturer": "",
             "manufacturerLogo": "",
             "manufacturerUrl": "",
-            "stats": {}
+            "stats": {},
+            "inventorySlots": "338Suppressor"
         }
     ],
     "양각대": [
@@ -11396,7 +17286,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "312g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Bipod_Harris_HBR",
@@ -11412,7 +17307,13 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "277g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "BipodKeymod",
+                "BipodKeySlot"
+            ]
         },
         {
             "id": "SMPZ_Bipod_SV98",
@@ -11428,7 +17329,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "472g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SV98Bipod"
+            ]
         },
         {
             "id": "SMPZ_Bipod_M60",
@@ -11444,7 +17350,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "472g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M60Bipod"
+            ]
         },
         {
             "id": "SMPZ_Bipod_PKM_PKP",
@@ -11460,7 +17371,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "472g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "PKBipod"
+            ]
         },
         {
             "id": "SMPZ_Bipod_M107A1",
@@ -11476,7 +17392,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "472g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M107A1Bipod"
+            ]
         },
         {
             "id": "SMPZ_Bipod_M200",
@@ -11492,7 +17413,12 @@ const attachmentData = {
                 "recoil": "-70%",
                 "sway": "-95%",
                 "weight": "870g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M200Bipod"
+            ]
         }
     ],
     "장전 손잡이": [
@@ -11510,7 +17436,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-15%",
                 "weight": "40g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Noveske_SBA_ChargingHandle",
@@ -11526,7 +17457,12 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-10%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle",
@@ -11542,7 +17478,12 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-10%",
                 "weight": "64g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_ACH_ChargingHandle",
@@ -11558,7 +17499,12 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-10%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Avalanche_ChargingHandle",
@@ -11574,7 +17520,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle",
@@ -11590,7 +17541,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-12%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle_FDE",
@@ -11606,7 +17562,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-12%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_ChargingHandle",
@@ -11622,7 +17583,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-12%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_GRIP_N_RIP_ChargingHandle",
@@ -11638,7 +17604,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-11%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Badger_Ordnance_ChargingHandle",
@@ -11654,7 +17625,12 @@ const attachmentData = {
                 "recoil": "-2%",
                 "sway": "-8%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_MASP_Battle_ChargingHandle",
@@ -11670,7 +17646,12 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-7%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_RP1_ChargingHandle",
@@ -11686,7 +17667,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "AKChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_SCH_ChargingHandle",
@@ -11701,7 +17687,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_ChargingHandle",
@@ -11716,7 +17707,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-9%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXChargingHandle"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Latch_ChargingHandle",
@@ -11731,7 +17727,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-11%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXChargingHandle"
+            ]
         }
     ],
     "전방 손잡이": [
@@ -11749,7 +17750,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-55%",
                 "weight": "28g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
@@ -11765,7 +17774,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-55%",
                 "weight": "28g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
@@ -11781,7 +17798,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-55%",
                 "weight": "28g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
@@ -11797,7 +17822,12 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-18%",
                 "weight": "5g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "URXStopper"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Vertical_Grip",
@@ -11813,7 +17843,15 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-52%",
                 "weight": "72g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip",
@@ -11829,7 +17867,15 @@ const attachmentData = {
                 "recoil": "-31%",
                 "sway": "-30%",
                 "weight": "136g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
@@ -11845,7 +17891,15 @@ const attachmentData = {
                 "recoil": "-31%",
                 "sway": "-30%",
                 "weight": "136g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_IRBIS_30AL_Grip",
@@ -11861,7 +17915,15 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-55%",
                 "weight": "151g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_IRBIS_45AL_Grip",
@@ -11877,7 +17939,15 @@ const attachmentData = {
                 "recoil": "-15%",
                 "sway": "-30%",
                 "weight": "151g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
@@ -11893,7 +17963,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-50%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
@@ -11909,7 +17987,15 @@ const attachmentData = {
                 "recoil": "-35%",
                 "sway": "-50%",
                 "weight": "50g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip",
@@ -11925,7 +18011,15 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "-30%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip_FDE",
@@ -11941,7 +18035,15 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "-30%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -11957,7 +18059,15 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "-30%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip_FDE",
@@ -11973,7 +18083,15 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "-30%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip",
@@ -11989,7 +18107,15 @@ const attachmentData = {
                 "recoil": "-45%",
                 "sway": "-55%",
                 "weight": "167g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DD_MLOK_Grip",
@@ -12005,7 +18131,15 @@ const attachmentData = {
                 "recoil": "-25%",
                 "sway": "-30%",
                 "weight": "28g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
@@ -12021,7 +18155,15 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "67g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip",
@@ -12037,7 +18179,15 @@ const attachmentData = {
                 "recoil": "-16%",
                 "sway": "-32%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip_FDE",
@@ -12053,7 +18203,15 @@ const attachmentData = {
                 "recoil": "-16%",
                 "sway": "-32%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Shift_Grip",
@@ -12069,7 +18227,15 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "-29%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
@@ -12085,7 +18251,15 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-35%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
@@ -12101,7 +18275,15 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-35%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_Black",
@@ -12117,7 +18299,15 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FDE",
@@ -12133,7 +18323,15 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FG",
@@ -12149,7 +18347,15 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_OD",
@@ -12165,7 +18371,15 @@ const attachmentData = {
                 "recoil": "-22%",
                 "sway": "-30%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
@@ -12181,7 +18395,15 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-30%",
                 "weight": "82g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_B25U_Grip",
@@ -12197,7 +18419,15 @@ const attachmentData = {
                 "recoil": "-42%",
                 "sway": "-45%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK0_Grip",
@@ -12213,7 +18443,15 @@ const attachmentData = {
                 "recoil": "-17%",
                 "sway": "-10%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK1_Grip",
@@ -12229,7 +18467,15 @@ const attachmentData = {
                 "recoil": "-34%",
                 "sway": "-27%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK2_Grip",
@@ -12245,7 +18491,15 @@ const attachmentData = {
                 "recoil": "-40%",
                 "sway": "-50%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK4_Grip",
@@ -12261,7 +18515,15 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "-11%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK5_Grip",
@@ -12277,7 +18539,15 @@ const attachmentData = {
                 "recoil": "-24%",
                 "sway": "-22%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK6_Grip",
@@ -12293,7 +18563,15 @@ const attachmentData = {
                 "recoil": "-11%",
                 "sway": "-10%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip",
@@ -12309,7 +18587,15 @@ const attachmentData = {
                 "recoil": "-30%",
                 "sway": "-23%",
                 "weight": "55g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_GripGlove",
@@ -12324,7 +18610,12 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "80g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockGrip"
+            ]
         }
     ],
     "전술 플래시": [
@@ -12340,7 +18631,28 @@ const attachmentData = {
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
                 "weight": "50g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_Zenit_Klesch2U_Extreme_HighBeam",
@@ -12354,7 +18666,28 @@ const attachmentData = {
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
                 "weight": "259g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_SureFire_M600",
@@ -12368,7 +18701,28 @@ const attachmentData = {
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_Armytek_XHP35",
@@ -12382,7 +18736,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "120g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "Flashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_X400U",
@@ -12396,7 +18758,28 @@ const attachmentData = {
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
                 "weight": "130g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_UltraFire_WF501B_HighBeam",
@@ -12410,7 +18793,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "210g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "Flashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Flashlights_Olight_Baldr_Pro",
@@ -12424,7 +18815,28 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "130g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
@@ -12439,7 +18851,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-4%",
                 "weight": "190g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         }
     ],
     "총열": [
@@ -12456,7 +18873,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-20%",
                 "weight": "2920g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_AlphaWolf_Barrel",
@@ -12471,7 +18893,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-4%",
                 "weight": "180g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockBarrel"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_SAI_114_Barrel",
@@ -12486,7 +18913,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-8%",
                 "weight": "180g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockBarrel"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Glock_DoubleDiamond_Barrel",
@@ -12501,7 +18933,12 @@ const attachmentData = {
             "stats": {
                 "recoil": "-3%",
                 "weight": "180g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockBarrel"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_14inch_Barrel",
@@ -12515,7 +18952,12 @@ const attachmentData = {
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
                 "weight": "350g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MPXBarrel"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_Threaded_Barrel",
@@ -12529,7 +18971,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "120g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Barrel"
+            ]
         }
     ],
     "탄창": [
@@ -12546,7 +18993,17 @@ const attachmentData = {
             "stats": {
                 "weight": "109g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PP19_Drum_50Rnd",
@@ -12562,7 +19019,17 @@ const attachmentData = {
                 "recoil": "+5%",
                 "weight": "680g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_M700_10Rnd",
@@ -12577,7 +19044,17 @@ const attachmentData = {
             "stats": {
                 "weight": "500g",
                 "capacity": "10발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_M700_PMAG_10Rnd",
@@ -12592,7 +19069,17 @@ const attachmentData = {
             "stats": {
                 "weight": "120g",
                 "capacity": "10발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SA58_XFAL_Drum_50Rnd",
@@ -12608,7 +19095,17 @@ const attachmentData = {
                 "recoil": "+10%",
                 "weight": "236g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SA58_MMW_20Rnd",
@@ -12623,7 +19120,17 @@ const attachmentData = {
             "stats": {
                 "weight": "290g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SA58_30Rnd",
@@ -12638,7 +19145,17 @@ const attachmentData = {
             "stats": {
                 "weight": "500g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SA58_L1A1_30Rnd",
@@ -12653,7 +19170,17 @@ const attachmentData = {
             "stats": {
                 "weight": "500g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Drum_Proamg_AKA16_762x39_73Rnd",
@@ -12669,7 +19196,17 @@ const attachmentData = {
                 "recoil": "+14%",
                 "weight": "729g",
                 "capacity": "73발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MP7_20Rnd",
@@ -12684,7 +19221,17 @@ const attachmentData = {
             "stats": {
                 "weight": "100g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MP7_30Rnd",
@@ -12699,7 +19246,17 @@ const attachmentData = {
             "stats": {
                 "weight": "100g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PPSH41_71Rnd",
@@ -12715,7 +19272,17 @@ const attachmentData = {
                 "recoil": "+5%",
                 "weight": "900g",
                 "capacity": "71발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AA12_20Rnd",
@@ -12730,7 +19297,17 @@ const attachmentData = {
             "stats": {
                 "weight": "1130g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Saiga_MD_Arms_Drum_20Rnd",
@@ -12745,7 +19322,17 @@ const attachmentData = {
             "stats": {
                 "weight": "660g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SVT_AVT_15Rnd",
@@ -12760,7 +19347,17 @@ const attachmentData = {
             "stats": {
                 "weight": "130g",
                 "capacity": "15발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MSR_FMJ_10Rnd",
@@ -12775,7 +19372,17 @@ const attachmentData = {
             "stats": {
                 "weight": "160g",
                 "capacity": "10발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Beretta_M9A3_CX4_30Rnd",
@@ -12790,7 +19397,17 @@ const attachmentData = {
             "stats": {
                 "weight": "91g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_TROY_BattleMag_STANAG_30Rnd",
@@ -12805,7 +19422,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_TROY_BattleMag_STANAG_M62_Tracer_30Rnd",
@@ -12820,7 +19447,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_HK_Steel_STANAG_30Rnd",
@@ -12835,7 +19472,17 @@ const attachmentData = {
             "stats": {
                 "weight": "320g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_HK_MR556_STANAG_556_30Rnd",
@@ -12850,7 +19497,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_40Rnd",
@@ -12865,7 +19522,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "40발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_40Rnd_FDE",
@@ -12880,7 +19547,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "40발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SR3M_30Rnd",
@@ -12895,7 +19572,17 @@ const attachmentData = {
             "stats": {
                 "weight": "400g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_SR2M_30Rnd",
@@ -12910,7 +19597,17 @@ const attachmentData = {
             "stats": {
                 "weight": "150g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Fostech_Barrett_Drum_20Rnd",
@@ -12925,7 +19622,17 @@ const attachmentData = {
             "stats": {
                 "weight": "1960g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_762x51_25Rnd",
@@ -12940,7 +19647,17 @@ const attachmentData = {
             "stats": {
                 "weight": "350g",
                 "capacity": "25발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_L5AWM_556_30Rnd",
@@ -12955,7 +19672,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AK308_24Rnd",
@@ -12970,7 +19697,17 @@ const attachmentData = {
             "stats": {
                 "weight": "260g",
                 "capacity": "24발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MP5_30Rnd",
@@ -12985,7 +19722,17 @@ const attachmentData = {
             "stats": {
                 "weight": "170g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MP5_X5_50Rnd",
@@ -13000,7 +19747,17 @@ const attachmentData = {
             "stats": {
                 "weight": "640g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AK12_30Rnd",
@@ -13015,7 +19772,17 @@ const attachmentData = {
             "stats": {
                 "weight": "190g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AKMS_30Rnd",
@@ -13030,7 +19797,17 @@ const attachmentData = {
             "stats": {
                 "weight": "170g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AKMS_Aluminium_10Rnd",
@@ -13045,7 +19822,17 @@ const attachmentData = {
             "stats": {
                 "weight": "170g",
                 "capacity": "10발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_L7AWM_762x51_20Rnd",
@@ -13060,7 +19847,17 @@ const attachmentData = {
             "stats": {
                 "weight": "300g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_L7AWM_762x51_25Rnd",
@@ -13075,7 +19872,17 @@ const attachmentData = {
             "stats": {
                 "weight": "350g",
                 "capacity": "25발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_DrumPMAG556_60Rnd",
@@ -13091,7 +19898,17 @@ const attachmentData = {
                 "recoil": "+20%",
                 "weight": "580g",
                 "capacity": "60발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PM2_30Rnd",
@@ -13106,7 +19923,17 @@ const attachmentData = {
             "stats": {
                 "weight": "160g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd",
@@ -13121,7 +19948,17 @@ const attachmentData = {
             "stats": {
                 "weight": "100g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Saiga_Powermag_12ga_20Rnd",
@@ -13136,7 +19973,17 @@ const attachmentData = {
             "stats": {
                 "weight": "660g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_762x51_20Rnd",
@@ -13151,7 +19998,17 @@ const attachmentData = {
             "stats": {
                 "weight": "350g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_68x51_20Rnd",
@@ -13166,7 +20023,17 @@ const attachmentData = {
             "stats": {
                 "weight": "350g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Saiga_Pro_12ga_10Rnd",
@@ -13181,7 +20048,17 @@ const attachmentData = {
             "stats": {
                 "weight": "210g",
                 "capacity": "10발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_STANAG_30Rnd",
@@ -13196,7 +20073,17 @@ const attachmentData = {
             "stats": {
                 "weight": "117g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Ultimag_762_30Rnd",
@@ -13211,7 +20098,17 @@ const attachmentData = {
             "stats": {
                 "weight": "156g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_STANAG_60Rnd",
@@ -13227,7 +20124,17 @@ const attachmentData = {
                 "recoil": "+15%",
                 "weight": "180g",
                 "capacity": "60발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_STANAG_100Rnd",
@@ -13243,7 +20150,17 @@ const attachmentData = {
                 "recoil": "+40%",
                 "weight": "270g",
                 "capacity": "100발"
-            }
+            },
+            "itemSize": "2x5",
+            "itemSlots": 10,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L10_762_30Rnd",
@@ -13258,7 +20175,17 @@ const attachmentData = {
             "stats": {
                 "weight": "370g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6P2_762_40Rnd",
@@ -13273,7 +20200,17 @@ const attachmentData = {
             "stats": {
                 "weight": "320g",
                 "capacity": "40발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L18_545_45Rnd",
@@ -13288,7 +20225,17 @@ const attachmentData = {
             "stats": {
                 "weight": "300g",
                 "capacity": "45발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L23_545_30Rnd",
@@ -13303,7 +20250,17 @@ const attachmentData = {
             "stats": {
                 "weight": "215g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L23_545_30Rnd_Plum",
@@ -13318,7 +20275,17 @@ const attachmentData = {
             "stats": {
                 "weight": "215g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L26_545_45Rnd",
@@ -13333,7 +20300,17 @@ const attachmentData = {
             "stats": {
                 "weight": "300g",
                 "capacity": "45발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L31_545_60Rnd",
@@ -13349,7 +20326,17 @@ const attachmentData = {
                 "recoil": "+13%",
                 "weight": "300g",
                 "capacity": "60발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_6L35_9x39_50Rnd",
@@ -13364,7 +20351,17 @@ const attachmentData = {
             "stats": {
                 "weight": "300g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_RPK16_Drum_545_95Rnd",
@@ -13379,7 +20376,17 @@ const attachmentData = {
             "stats": {
                 "weight": "680g",
                 "capacity": "95발"
-            }
+            },
+            "itemSize": "2x4",
+            "itemSlots": 8,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd",
@@ -13394,7 +20401,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd_FDE",
@@ -13409,7 +20426,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd",
@@ -13424,7 +20451,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd_FDE",
@@ -13439,7 +20476,17 @@ const attachmentData = {
             "stats": {
                 "weight": "200g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_AK101_SLR556_30Rnd",
@@ -13454,7 +20501,17 @@ const attachmentData = {
             "stats": {
                 "weight": "450g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Drum_X47_762x39_50Rnd",
@@ -13470,7 +20527,17 @@ const attachmentData = {
                 "recoil": "+10%",
                 "weight": "700g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Drum_X25_762x51_50Rnd",
@@ -13486,7 +20553,17 @@ const attachmentData = {
                 "recoil": "+10%",
                 "weight": "690g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "2x3",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_M1A_20Rnd",
@@ -13501,7 +20578,17 @@ const attachmentData = {
             "stats": {
                 "weight": "80g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_M1A_30Rnd",
@@ -13516,7 +20603,17 @@ const attachmentData = {
             "stats": {
                 "weight": "80g",
                 "capacity": "30발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Beta_CMAG_556_100Rnd",
@@ -13532,7 +20629,17 @@ const attachmentData = {
                 "recoil": "+50%",
                 "weight": "1000g",
                 "capacity": "100발"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_KAC_Steel_762x51_20Rnd",
@@ -13547,7 +20654,17 @@ const attachmentData = {
             "stats": {
                 "weight": "520g",
                 "capacity": "20발"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_MPX_Drum_50Rnd",
@@ -13563,7 +20680,17 @@ const attachmentData = {
                 "recoil": "+10%",
                 "weight": "650g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Glock_Drum_50Rnd",
@@ -13579,7 +20706,17 @@ const attachmentData = {
                 "recoil": "+10%",
                 "weight": "600g",
                 "capacity": "50발"
-            }
+            },
+            "itemSize": "1x4",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_M1911_MecGar_11Rnd",
@@ -13594,7 +20731,17 @@ const attachmentData = {
             "stats": {
                 "weight": "240g",
                 "capacity": "11발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
@@ -13609,7 +20756,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "37발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         },
         {
             "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd_FDE",
@@ -13624,7 +20781,17 @@ const attachmentData = {
             "stats": {
                 "weight": "138g",
                 "capacity": "37발"
-            }
+            },
+            "itemSize": "1x3",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "magazine",
+                "magazine2",
+                "magazine3",
+                "MagPouch1",
+                "MagPouch2",
+                "MagPouch3"
+            ]
         }
     ],
     "해머": [
@@ -13640,7 +20807,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Hammer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_STI_HEX_Hammer",
@@ -13654,7 +20826,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Hammer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_Wilson_Retro_Hammer",
@@ -13668,7 +20845,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Hammer"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_Wilson_Skeletonized_Hammer",
@@ -13682,7 +20864,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1911Hammer"
+            ]
         }
     ],
     "핸드가드": [
@@ -13700,7 +20887,19 @@ const attachmentData = {
                 "recoil": "-2%",
                 "sway": "-8%",
                 "weight": "280g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416A7_G95K_13inch_Hndgrd",
@@ -13716,7 +20915,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "CantedMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd",
@@ -13732,7 +20945,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "367g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "SMRShortRailMountLeft",
+                "SMRShortRailMountRight",
+                "SMRRailMountUnder",
+                "weaponFlashlightFirst",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd_DDC",
@@ -13748,7 +20973,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "367g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "SMRShortRailMountLeft",
+                "SMRShortRailMountRight",
+                "SMRRailMountUnder",
+                "weaponFlashlightFirst",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd",
@@ -13764,7 +21001,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "462g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "SMRShortRailMountLeft",
+                "SMRShortRailMountRight",
+                "SMRRailMountUnder",
+                "SMRShortRailMountUnder",
+                "weaponFlashlightFirst",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd_DDC",
@@ -13780,7 +21030,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "462g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "SMRShortRailMountLeft",
+                "SMRShortRailMountRight",
+                "SMRRailMountUnder",
+                "SMRShortRailMountUnder",
+                "weaponFlashlightFirst",
+                "Frontsight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PP19_Vector_VR_LPS_Hndgrd",
@@ -13796,7 +21059,16 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-20%",
                 "weight": "502g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_PP19_SAG_MK1_MLOK_Hndgrd",
@@ -13812,7 +21084,17 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "502g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK12_Rotor43_Hndgrd",
@@ -13828,7 +21110,20 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-15%",
                 "weight": "164g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AK12Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK12_N4_Hndgrd",
@@ -13844,7 +21139,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "470g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AK12Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_CNC_OV_Hndgrd",
@@ -13860,7 +21167,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "586g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Grip",
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_X47_Hndgrd",
@@ -13876,7 +21196,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "420g"
-            }
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Grip",
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_SWS_Split_Hndgrd",
@@ -13892,7 +21225,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-8%",
                 "weight": "502g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_Lancer_LCH7_Hndgrd",
@@ -13908,7 +21252,14 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "360g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_Midwest_308_CombatRail_15inch_Hndgrd",
@@ -13924,7 +21275,18 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-11%",
                 "weight": "411g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
@@ -13940,7 +21302,17 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-10%",
                 "weight": "431g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd_Taupe",
@@ -13956,7 +21328,17 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-10%",
                 "weight": "431g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd",
@@ -13972,7 +21354,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "431g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "URXStopper",
+                "URXPanel",
+                "URXPanel2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd_Taupe",
@@ -13988,7 +21384,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "431g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "URXStopper",
+                "URXPanel",
+                "URXPanel2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd",
@@ -14004,7 +21414,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "450g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12_FSP",
@@ -14020,7 +21441,18 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-7%",
                 "weight": "450g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP",
@@ -14036,7 +21468,19 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-5%",
                 "weight": "450g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod",
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd",
@@ -14052,7 +21496,16 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-5%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "attachmentSlots": [
+                "Frontsight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "DD9LowerHandguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd",
@@ -14068,7 +21521,17 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-5%",
                 "weight": "116g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DD9LowerHandguard"
+            ],
+            "attachmentSlots": [
+                "Grip",
+                "weaponFlashlight",
+                "BipodKeymodMLOKMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd",
@@ -14084,7 +21547,16 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-5%",
                 "weight": "300g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "DD12LowerHandguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd",
@@ -14100,7 +21572,17 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-5%",
                 "weight": "170g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DD12LowerHandguard"
+            ],
+            "attachmentSlots": [
+                "Grip",
+                "weaponFlashlight",
+                "BipodKeymodMLOKMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd",
@@ -14116,7 +21598,16 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-11%",
                 "weight": "450g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Magpul_MOE_SL_Carbine_Hndgrd",
@@ -14132,7 +21623,14 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "190g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd",
@@ -14148,7 +21646,16 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "410g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd",
@@ -14164,7 +21671,16 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "410g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd",
@@ -14180,7 +21696,18 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "480g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd",
@@ -14196,7 +21723,18 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "540g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AlexanderArms_MK10_Hndgrd",
@@ -14212,7 +21750,16 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "514g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_10inch_Hndgrd",
@@ -14228,7 +21775,16 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "355g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd",
@@ -14244,7 +21800,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "470g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Multicam",
@@ -14260,7 +21827,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "470g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
@@ -14276,7 +21854,17 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-10%",
                 "weight": "670g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Yellow",
@@ -14292,7 +21880,17 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-10%",
                 "weight": "670g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_KAC_FF_RAS_Hndgrd",
@@ -14308,7 +21906,18 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-6%",
                 "weight": "462g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_KAC_M5_RAS_Hndgrd",
@@ -14324,7 +21933,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-11%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod",
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
@@ -14340,7 +21961,21 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-12%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_CAR15_Skinny_Hndgrd",
@@ -14356,7 +21991,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-18%",
                 "weight": "125g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "attachmentSlots": [
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Hndgrd",
@@ -14372,7 +22012,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-18%",
                 "weight": "125g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AeroPrecision_Gen2_Enhanced_9inch_Hndgrd",
@@ -14388,7 +22033,16 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "204g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AeroPrecision_Gen2_Enhanced_12inch_Hndgrd",
@@ -14404,7 +22058,18 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-8%",
                 "weight": "272g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_KAC_URX_3_13inch_Hndgrd",
@@ -14420,7 +22085,24 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-10%",
                 "weight": "362g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "URXStopper",
+                "URXPanel",
+                "URXPanel2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_12inch_Hndgrd",
@@ -14436,7 +22118,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "295g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_14inch_Hndgrd",
@@ -14452,7 +22148,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "295g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_16inch_Hndgrd",
@@ -14468,7 +22178,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "295g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd",
@@ -14484,7 +22208,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "333g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd",
@@ -14500,7 +22235,18 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "410g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_STM9_15inch_Hndgrd",
@@ -14516,7 +22262,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "155g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_F2000_Tri_Rail_Hndgrd",
@@ -14532,7 +22290,17 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "310g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "F2000Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_M110A1_MLOK_Hndgrd",
@@ -14548,7 +22316,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "417Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_M110A1_14inch_MLOK_Hndgrd",
@@ -14564,7 +22346,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "417Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "Grip",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMLOKMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M590A1_MOE_Hndgrd",
@@ -14580,7 +22376,17 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "670g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "590A1Hndgrd"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E4_Hndgrd",
@@ -14596,7 +22402,17 @@ const attachmentData = {
                 "recoil": "-9%",
                 "sway": "-10%",
                 "weight": "479g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M60Handguard"
+            ],
+            "attachmentSlots": [
+                "Grip",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd",
@@ -14612,7 +22428,17 @@ const attachmentData = {
                 "recoil": "-2%",
                 "sway": "-10%",
                 "weight": "380g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MasadaHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd",
@@ -14628,7 +22454,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "663g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MasadaHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
@@ -14644,7 +22482,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "682g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MasadaHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd",
@@ -14660,7 +22511,20 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-17%",
                 "weight": "682g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MasadaHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_LVAW_Hndgrd",
@@ -14676,7 +22540,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-11%",
                 "weight": "517g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_105_Hndgrd",
@@ -14692,7 +22569,20 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-11%",
                 "weight": "380g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_12_Hndgrd",
@@ -14708,7 +22598,20 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-12%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_18_Hndgrd",
@@ -14724,7 +22627,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MCXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_Black",
@@ -14740,7 +22656,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-11%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MDRHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_Black",
@@ -14756,7 +22684,21 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-11%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MDRHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_Black",
@@ -14772,7 +22714,19 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-10%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MDRHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_Black",
@@ -14788,7 +22742,19 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-11%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MDRHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_Black",
@@ -14804,7 +22770,16 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-30%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MDRHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Rail_Hndgrd",
@@ -14820,7 +22795,17 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP133Hndgrd"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP18_Polymer_Hndgrd",
@@ -14836,7 +22821,12 @@ const attachmentData = {
                 "recoil": "-1%",
                 "sway": "-5%",
                 "weight": "130g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP18Hndgrd"
+            ]
         },
         {
             "id": "SMPZ_Att_MP5_CAA_HX5_Hndgrd",
@@ -14851,7 +22841,19 @@ const attachmentData = {
             "stats": {
                 "recoil": "-2%",
                 "sway": "-11%"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MP5Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_RPD_DSARMS_Hndgrd",
@@ -14866,7 +22868,19 @@ const attachmentData = {
             "stats": {
                 "sway": "-10%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "RPDHandguard"
+            ],
+            "attachmentSlots": [
+                "OpticsOnAKHndgrd",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "GripCASV"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Original_Hndgrd",
@@ -14882,7 +22896,12 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-7%",
                 "weight": "610g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_AIM_Sports_KeyMod_Hndgrd",
@@ -14898,7 +22917,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "610g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_AIM_Sports_MLOK_Hndgrd",
@@ -14914,7 +22945,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "610g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Quad_Rail_Full_Length_Hndgrd",
@@ -14930,7 +22974,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-6%",
                 "weight": "610g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Quad_Rail_Short_Length_Hndgrd",
@@ -14946,7 +23003,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-8%",
                 "weight": "480g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Vltor_CASV_Hndgrd",
@@ -14962,7 +23031,19 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "444g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SA58_Vltor_CASV_Short_Hndgrd",
@@ -14978,7 +23059,18 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-12%",
                 "weight": "232g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SA58Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_HedonS_Hndgrd",
@@ -14994,7 +23086,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-20%",
                 "weight": "455g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SaigaHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_TRG_M10_MLOK_Hndgrd",
@@ -15010,7 +23115,21 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-20%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "TRGHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "TRGPad",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Troy_Hndgrd_with_Gastube",
@@ -15026,7 +23145,17 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-17%",
                 "weight": "550g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKGasblock"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_White",
@@ -15042,7 +23171,18 @@ const attachmentData = {
                 "recoil": "-3%",
                 "sway": "-17%",
                 "weight": "590g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKGasblock"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_15inch_Hndgrd",
@@ -15058,7 +23198,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "343g"
-            }
+            },
+            "itemSize": "5x1",
+            "itemSlots": 5,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B30B31_Hndgrd",
@@ -15074,7 +23228,19 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_Bravo_Hndgrd",
@@ -15090,7 +23256,22 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "370g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SaigaHandguard"
+            ],
+            "attachmentSlots": [
+                "Grip",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_CRUX_Hndgrd",
@@ -15106,7 +23287,20 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-13%",
                 "weight": "440g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
@@ -15122,7 +23316,23 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-14%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "DDCover",
+                "DDCover2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
@@ -15138,7 +23348,23 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-14%",
                 "weight": "502g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "DDCover",
+                "DDCover2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd",
@@ -15154,7 +23380,21 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-15%",
                 "weight": "286g"
-            }
+            },
+            "itemSize": "5x1",
+            "itemSlots": 5,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Lonestar_Ion_Hndgrd",
@@ -15170,7 +23410,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-14%",
                 "weight": "380g"
-            }
+            },
+            "itemSize": "5x1",
+            "itemSlots": 5,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
@@ -15186,7 +23440,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-14%",
                 "weight": "500g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd",
@@ -15202,7 +23470,21 @@ const attachmentData = {
                 "recoil": "-9%",
                 "sway": "-14%",
                 "weight": "580g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Midwest_9inch_Hndgrd",
@@ -15218,7 +23500,19 @@ const attachmentData = {
                 "recoil": "-4%",
                 "sway": "-15%",
                 "weight": "280g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Midwest_13inch_Hndgrd",
@@ -15234,7 +23528,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "370g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Extended_Hndgrd",
@@ -15250,7 +23558,21 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-10%",
                 "weight": "540g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "Grip",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_MRS_KeyMod_Hndgrd",
@@ -15266,7 +23588,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "390g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Troy_Hndgrd",
@@ -15282,7 +23618,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HK416Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_FSP_Hndgrd",
@@ -15298,7 +23648,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-12%",
                 "weight": "300g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "DDCover",
+                "DDCover2",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_CMMG_MK3_RML_9inch_Hndgrd",
@@ -15314,7 +23678,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "155g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AR10Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_CMMG_MK3_RML_15inch_Hndgrd",
@@ -15330,7 +23706,20 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-10%",
                 "weight": "156g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AR10Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SAI_Hndgrd",
@@ -15346,7 +23735,22 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-15%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "JailBreakMuzzle",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SAI_145_Hndgrd",
@@ -15362,7 +23766,22 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-13%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "JailBreakMuzzle",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Skull_Hndgrd",
@@ -15378,7 +23797,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd",
@@ -15394,7 +23818,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "335g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd_Silver",
@@ -15410,7 +23846,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "335g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd",
@@ -15426,7 +23874,21 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-15%",
                 "weight": "480g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd_Silver",
@@ -15442,7 +23904,21 @@ const attachmentData = {
                 "recoil": "-6%",
                 "sway": "-15%",
                 "weight": "480g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_SWS_Hndgrd",
@@ -15458,7 +23934,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "502g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AR10Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_Type340_Hndgrd",
@@ -15474,7 +23964,17 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-14%",
                 "weight": "240g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "SaigaHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Hndgrd",
@@ -15490,7 +23990,24 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-10%",
                 "weight": "568g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "SaigaHandguard"
+            ],
+            "attachmentSlots": [
+                "Rearsight",
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "OpticsOnAKHndgrd",
+                "Frontsight",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_URX_10inch_Hndgrd",
@@ -15506,7 +24023,24 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-10%",
                 "weight": "224g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "URXStopper",
+                "URXPanel",
+                "URXPanel2",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd",
@@ -15522,7 +24056,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "420g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "AR10Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_VYPR_Hndgrd",
@@ -15538,7 +24086,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-14%",
                 "weight": "100g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Goliaf_Hndgrd",
@@ -15554,7 +24116,20 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "150g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKS74UHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Goliaf_Mlok_Hndgrd",
@@ -15570,7 +24145,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "250g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKS74UHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_B11_B12_Hndgrd",
@@ -15586,7 +24171,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-10%",
                 "weight": "237g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKS74UHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "OpticsOnAKHndgrd",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AKS74U_XRSU47_Hndgrd",
@@ -15602,7 +24199,20 @@ const attachmentData = {
                 "recoil": "-2%",
                 "sway": "-20%",
                 "weight": "520g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKS74UHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Grip",
+                "OpticsOnAKHndgrd"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B10_B19_Hndgrd",
@@ -15618,7 +24228,17 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-14%",
                 "weight": "260g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd",
@@ -15634,7 +24254,20 @@ const attachmentData = {
                 "recoil": "-12%",
                 "sway": "-15%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Black",
@@ -15650,7 +24283,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "221g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Gold",
@@ -15666,7 +24309,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "221g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Red",
@@ -15682,7 +24335,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-13%",
                 "weight": "221g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Black",
@@ -15698,7 +24361,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-12%",
                 "weight": "310g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_FDE",
@@ -15714,7 +24387,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-12%",
                 "weight": "310g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Plum",
@@ -15730,7 +24413,17 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-12%",
                 "weight": "310g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_UFM_Keymod_Hndgrd",
@@ -15746,7 +24439,20 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-11%",
                 "weight": "465g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Agressor_Hndgrd",
@@ -15762,7 +24468,20 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-11%",
                 "weight": "260g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_ASPID_Hndgrd",
@@ -15778,7 +24497,21 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-8%",
                 "weight": "370g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponOptics",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_Carbine_Hndgrd",
@@ -15794,7 +24527,12 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "193g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Handguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_KAC_RIS_Hndgrd",
@@ -15810,7 +24548,19 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-12%",
                 "weight": "226g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "M203"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_Slimline_Hndgrd",
@@ -15826,7 +24576,18 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-15%",
                 "weight": "440g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "G36Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Quadrail_Hndgrd",
@@ -15842,7 +24603,20 @@ const attachmentData = {
                 "recoil": "-10%",
                 "sway": "-14%",
                 "weight": "510g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "G36Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SKS_ATI_Monte_Carlo_Hndgrd",
@@ -15856,7 +24630,12 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "100g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SKSHandguard"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Hndgrd",
@@ -15870,7 +24649,15 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {
                 "weight": "300g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "UltimaHndgrd"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlight"
+            ]
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Hndgrd",
@@ -15886,7 +24673,19 @@ const attachmentData = {
                 "recoil": "-8%",
                 "sway": "-14%",
                 "weight": "400g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "CNCHandguard"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "BipodKeymodMount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd",
@@ -15902,7 +24701,21 @@ const attachmentData = {
                 "recoil": "-5%",
                 "sway": "-15%",
                 "weight": "279g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "Frontsight",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
@@ -15918,7 +24731,17 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-12%",
                 "weight": "221g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Plum",
@@ -15934,7 +24757,17 @@ const attachmentData = {
                 "recoil": "-7%",
                 "sway": "-12%",
                 "weight": "221g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_6inch_Hndgrd",
@@ -15950,7 +24783,18 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "482g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_8inch_Hndgrd",
@@ -15966,7 +24810,18 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "503g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_6inch_Hndgrd",
@@ -15982,7 +24837,18 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "480g"
-            }
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MPXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_10inch_Hndgrd",
@@ -15998,7 +24864,21 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MPXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_14inch_Hndgrd",
@@ -16014,7 +24894,21 @@ const attachmentData = {
                 "recoil": "-20%",
                 "sway": "-20%",
                 "weight": "600g"
-            }
+            },
+            "itemSize": "4x1",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "MPXHandguard"
+            ],
+            "attachmentSlots": [
+                "Frontsight",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "Bipod"
+            ]
         }
     ]
 };
