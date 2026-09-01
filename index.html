@@ -15,9 +15,24 @@
             <span>SMPZ 모드 도감</span>
         </h1>
         <nav class="panel-switcher">
-            <button type="button" class="panel-btn active" data-panel="weapon">SMPZ 웨폰</button>
-            <button type="button" class="panel-btn" data-panel="attachment">SMPZ 부착물</button>
-            <button type="button" class="panel-btn" data-panel="gear">SMPZ 기어</button>
+            <button type="button" class="panel-btn active" data-panel="weapon">
+                <span>SMPZ 웨폰</span>
+                <svg class="panel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <button type="button" class="panel-btn" data-panel="attachment">
+                <span>SMPZ 부착물</span>
+                <svg class="panel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <button type="button" class="panel-btn" data-panel="gear">
+                <span>SMPZ 기어</span>
+                <svg class="panel-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
         </nav>
         <div class="search-container">
             <div class="search-input-wrapper">
@@ -57,8 +72,20 @@
     <main class="main-content">
         <div class="grid-view" id="gridView" style="display: none;">
             <div class="grid-header">
-                <h2 class="grid-title" id="gridTitle"></h2>
-                <span class="grid-count" id="gridCount"></span>
+                <div class="grid-header-left">
+                    <h2 class="grid-title" id="gridTitle"></h2>
+                    <span class="grid-count" id="gridCount"></span>
+                </div>
+                <div class="grid-header-right" id="gridHeaderRight">
+                    <div class="grid-search-box" id="gridSearchBox">
+                        <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="gridInlineSearch" class="grid-inline-search-input" placeholder="현재 목록에서 검색...">
+                        <button type="button" id="gridInlineSearchClear" class="grid-search-clear-btn" style="display: none;" title="검색어 지우기">&times;</button>
+                    </div>
+                </div>
             </div>
             <div class="weapon-grid" id="itemGrid"></div>
         </div>
