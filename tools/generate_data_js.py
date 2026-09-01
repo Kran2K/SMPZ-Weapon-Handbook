@@ -16,12 +16,11 @@ sys.stdout.reconfigure(encoding='utf-8')
 # Default project paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
-if not os.path.exists(os.path.join(PROJECT_ROOT, 'data.js')):
-    PROJECT_ROOT = r'd:\work\SMPZ-Weapon-Handbook'
 
 DEFAULT_DATA_JS_PATH = os.path.join(PROJECT_ROOT, 'data.js')
 DEFAULT_BACKUP_JS_PATH = os.path.join(PROJECT_ROOT, 'data.backup.js')
 DEFAULT_ASSETS_DIR = os.path.join(PROJECT_ROOT, 'assets')
+DEFAULT_MODELS_DIR = os.path.join(DEFAULT_ASSETS_DIR, 'models')
 CACHE_DIR = os.path.join(SCRIPT_DIR, '.cache')
 CONFIG_FILE = os.path.join(SCRIPT_DIR, '.config.json')
 
@@ -95,9 +94,37 @@ def parse_cpp_file(filepath):
             
     return classes
 
+def parse_array_value(raw_val):
+    """Parses a DayZ C++ array value like {10, 15} or {"Vest", "Body"} into a Python list"""
+    raw = raw_val.strip().strip('{}')
+    if not raw:
+        return []
+    items = []
+    for part in raw.split(','):
+        part = part.strip()
+        if not part:
+            continue
+        if part.startswith('"') and part.endswith('"'):
+            items.append(part[1:-1])
+        elif part.isdigit():
+            items.append(int(part))
+        else:
+            try:
+                items.append(float(part))
+            except ValueError:
+                items.append(part.strip('"'))
+    return items
+
 def extract_properties(body):
-    """Extracts property dictionary from raw class body"""
+    """Extracts property dictionary from raw class body, including arrays"""
     props = {}
+    
+    # 1. First extract array properties (e.g., itemsCargoSize[], itemSize[], inventorySlot[], attachments[], itemInfo[])
+    for m in re.finditer(r'([A-Za-z0-9_]+)\[\]\s*=\s*\{([^}]*)\};', body):
+        k = m.group(1)
+        props[k] = parse_array_value(m.group(2))
+        
+    # 2. Clean out arrays and nested classes to parse scalar key = value;
     clean_body = re.sub(r'[A-Za-z0-9_]+\[\]\s*=\s*\{[^}]*\};', '', body)
     clean_body = re.sub(r'class\s+[A-Za-z0-9_]+(?:\s*:\s*[A-Za-z0-9_]+)?\s*\{[^}]*\}', '', clean_body)
     for m in re.finditer(r'([A-Za-z0-9_]+)\s*=\s*([^;]+);', clean_body):
@@ -134,7 +161,7 @@ def load_stringtables(smpz_dir):
     return strings
 
 def load_asset_files(assets_dir):
-    """Builds lowercase filename map for automatic asset linking"""
+    """Builds lowercase filename map for automatic image asset linking"""
     file_map = {}
     if os.path.exists(assets_dir):
         for f in os.listdir(assets_dir):
@@ -142,6 +169,69 @@ def load_asset_files(assets_dir):
                 base = os.path.splitext(f)[0].lower()
                 file_map[base] = f"assets/{f}"
     return file_map
+
+def load_model_files(models_dir):
+    """Builds filename map for 3D model files (.glb, .gltf) in assets/models"""
+    model_map = {}
+    if os.path.exists(models_dir):
+        for root, _, files in os.walk(models_dir):
+            for f in files:
+                if f.lower().endswith(('.glb', '.gltf')):
+                    rel_path = os.path.relpath(os.path.join(root, f), PROJECT_ROOT).replace('\\', '/')
+                    base = os.path.splitext(f)[0].lower()
+                    model_map[base] = rel_path
+                    clean_key = re.sub(r'[^a-z0-9]', '', base)
+                    if clean_key and clean_key != base:
+                        model_map[clean_key] = rel_path
+    return model_map
+
+def match_model_for_item(item_id, item_name, model_map, sec_type='weapon'):
+    """Finds best matching 3D model file for an item according to section type"""
+    if not model_map:
+        return None
+
+    # 1. Exact match with item_id (lowercase)
+    id_lower = item_id.lower()
+    if id_lower in model_map:
+        return model_map[id_lower]
+
+    # 2. Cleaned ID without prefixes (e.g. "SMPZ_Weapon_M4A1" -> "m4a1", "m4")
+    id_cleaned = re.sub(r'^(smpz_weapon_|smpz_gear_|smpz_optics_|smpz_attachments_|smpz_)', '', id_lower)
+    if id_cleaned in model_map:
+        return model_map[id_cleaned]
+
+    clean_alphanum = re.sub(r'[^a-z0-9]', '', id_cleaned)
+    if clean_alphanum in model_map:
+        return model_map[clean_alphanum]
+
+    # 3. For weapons: match base weapon model (e.g. key="m4" matches "SMPZ_Weapon_M4A1", "m4a1", but NOT attachments/gear)
+    if sec_type == 'weapon':
+        for key, path in model_map.items():
+            if len(key) >= 2:
+                pattern = r'^' + re.escape(key) + r'(?:[a-z]|_|$)'
+                if re.match(pattern, id_cleaned) or re.match(pattern, clean_alphanum):
+                    if key[-1].isdigit() and len(clean_alphanum) > len(key):
+                        next_char = clean_alphanum[len(key)]
+                        if next_char.isdigit():
+                            continue
+                    return path
+
+        # Word match in Weapon Name (e.g. "Colt M4A1" -> "m4a1" matching "m4")
+        if item_name:
+            name_lower = item_name.lower()
+            name_words = re.findall(r'[a-z0-9]+', name_lower)
+            for w in name_words:
+                if w in model_map and len(w) >= 2:
+                    return model_map[w]
+                for key, path in model_map.items():
+                    if len(key) >= 2:
+                        pattern = r'^' + re.escape(key) + r'(?:[a-z]|_|$)'
+                        if re.match(pattern, w):
+                            if key[-1].isdigit() and len(w) > len(key) and w[len(key)].isdigit():
+                                continue
+                            return path
+
+    return None
 
 # ---------------------------------------------------------------------------
 # LOCAL CONFIG & TRANSLATION CACHES
@@ -277,28 +367,29 @@ def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
 # ---------------------------------------------------------------------------
 # DATASET GENERATION PIPELINE
 # ---------------------------------------------------------------------------
-def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, data_js_path=DEFAULT_DATA_JS_PATH, backup_js_path=DEFAULT_BACKUP_JS_PATH):
+def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MODELS_DIR, data_js_path=DEFAULT_DATA_JS_PATH, backup_js_path=DEFAULT_BACKUP_JS_PATH):
     """
     Main conversion pipeline:
-    1. Parses SMPZ mod packages.
-    2. Resolves descriptions:
-       - Preserves existing descriptions from current dataset.
-       - Translates missing descriptions via Google Translate API.
-    3. Links image assets.
-    4. Outputs data.js.
+    1. Parses SMPZ mod packages and extracts properties (including arrays: itemsCargoSize, itemSize, inventorySlot, attachments, itemInfo).
+    2. Resolves descriptions (preserves existing, translates missing via Google Translate).
+    3. Links 2D image assets and 3D .glb models.
+    4. Computes backpack grid size & slot capacity, preserves raw C++ slots & attachment info.
+    5. Outputs data.js.
     """
     print("=" * 70)
     print("  SMPZ 모드팩: data.js 자동 생성기")
-    print("  (기존 설명 보존 + 누락된 설명 구글 번역)")
+    print("  (가방 수납 크기 + 슬롯 메타데이터 + 3D 모델 + 설명 번역 자동 연동)")
     print("=" * 70)
 
-    # 1. Load Stringtables, Assets, and Caches
+    # 1. Load Stringtables, Assets, Models, and Caches
     str_table = load_stringtables(smpz_dir)
     file_map = load_asset_files(assets_dir)
+    model_map = load_model_files(models_dir)
     google_cache = load_google_translation_cache()
 
     print(f"[*] 로컬라이제이션 스트링테이블 {len(str_table)}개 항목 로드 완료.")
-    print(f"[*] 에셋 인덱싱 완료 ({len(file_map)}개 파일): {assets_dir}")
+    print(f"[*] 에셋 이미지 인덱싱 완료 ({len(file_map)}개 파일): {assets_dir}")
+    print(f"[*] 3D 모델 인덱싱 완료 ({len(model_map)}개 키): {models_dir}")
     print(f"[*] 캐시된 구글 번역 {len(google_cache)}개 로드 완료.")
 
     # 2. Parse C++ Classes across SMPZ packages
@@ -380,7 +471,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, data_js_path=DEFAULT_
     stats_summary = {
         'existing': 0,
         'google_translate': 0,
-        'empty': 0
+        'empty': 0,
+        'cargo_items': 0,
+        'models_linked': 0,
+        'slots_linked': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -389,17 +483,66 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, data_js_path=DEFAULT_
             result_data[sec_name][cat] = []
             for item in items:
                 item_id = item['id']
-                item_name = item['name']
+                item_name = item.get('name', '')
                 existing_desc = item.get('description', '')
                 item_obj = dict(item)
+                props = get_inherited_props(item_id)
 
-                # Asset Image mapping
+                # 1. 2D Image Asset mapping
                 matched_img = file_map.get(item_id.lower())
                 if matched_img:
                     item_obj['image'] = matched_img
                     item_obj['images'] = [matched_img]
 
-                # Description resolution
+                # 2. 3D Model Asset mapping (.glb)
+                matched_model = match_model_for_item(
+                    item_id=item_id,
+                    item_name=item_name,
+                    model_map=model_map,
+                    sec_type=sec_type
+                )
+                if matched_model:
+                    item_obj['model'] = matched_model
+                    stats_summary['models_linked'] += 1
+                elif 'model' in item_obj:
+                    del item_obj['model']
+
+                # 3. Cargo Size & Item Size parsing (raw dimensions & slot counts)
+                cargo_size_arr = props.get('itemsCargoSize') or props.get('itemCargoSize')
+                if cargo_size_arr and len(cargo_size_arr) >= 2:
+                    try:
+                        cw = int(cargo_size_arr[0])
+                        ch = int(cargo_size_arr[1])
+                        item_obj['cargoSize'] = f"{cw}x{ch}"
+                        item_obj['cargoSlots'] = cw * ch
+                        stats_summary['cargo_items'] += 1
+                    except (ValueError, TypeError):
+                        pass
+
+                item_size_arr = props.get('itemSize')
+                if item_size_arr and len(item_size_arr) >= 2:
+                    try:
+                        iw = int(item_size_arr[0])
+                        ih = int(item_size_arr[1])
+                        item_obj['itemSize'] = f"{iw}x{ih}"
+                        item_obj['itemSlots'] = iw * ih
+                    except (ValueError, TypeError):
+                        pass
+
+                # 4. Raw C++ Slots & Attachments metadata
+                inv_slots = props.get('inventorySlot')
+                item_info = props.get('itemInfo')
+                att_slots = props.get('attachments')
+
+                if inv_slots:
+                    item_obj['inventorySlots'] = inv_slots
+                    stats_summary['slots_linked'] += 1
+                if item_info:
+                    item_obj['itemInfo'] = item_info
+                if att_slots:
+                    item_obj['attachmentSlots'] = att_slots
+
+                # 5. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
@@ -410,10 +553,13 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, data_js_path=DEFAULT_
     save_google_translation_cache(google_cache)
 
     print("\n" + "-" * 70)
-    print(f"[*] 설명 처리 통계:")
+    print(f"[*] 데이터 생성 및 처리 통계:")
     print(f"    - 기존 설명 보존:               {stats_summary['existing']}개")
     print(f"    - 구글 번역(캐시 및 신규 번역):  {stats_summary['google_translate']}개")
     print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
+    print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
+    print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
+    print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 
     return result_data['weaponsData'], result_data['gearData'], result_data['attachmentData']
@@ -443,6 +589,7 @@ def main():
     parser.add_argument('--select-dir', action='store_true', help="GUI 폴더 선택 창을 띄워 SMPZ 모드팩 경로를 새로 지정합니다")
     parser.add_argument('--no-gui', action='store_true', help="GUI 다이얼로그를 띄우지 않고 콘솔만 사용합니다")
     parser.add_argument('--assets-dir', default=DEFAULT_ASSETS_DIR, help="assets 디렉토리 경로")
+    parser.add_argument('--models-dir', default=DEFAULT_MODELS_DIR, help="assets/models 디렉토리 경로")
     parser.add_argument('--output', default=DEFAULT_DATA_JS_PATH, help="출력할 data.js 파일 경로")
     args = parser.parse_args()
 
@@ -451,7 +598,7 @@ def main():
         print("\n[오류] 유효한 SMPZ 모드팩 디렉토리를 찾을 수 없습니다.")
         print("  - GUI 창에서 SMPZ 모드팩 폴더를 선택하거나,")
         print("  - --smpz-dir 옵션을 사용하여 경로를 지정해주세요.")
-        print('  예: python tools/generate_data_js.py --smpz-dir "D:\\work\\SMPZ"')
+        print('  예: python tools/generate_data_js.py --smpz-dir "path/to/SMPZ"')
         sys.exit(1)
 
     print(f"[*] 사용 중인 SMPZ 모드팩 경로: {smpz_dir}")
@@ -459,6 +606,7 @@ def main():
     weapons, gear, attachments = build_data_js(
         smpz_dir=smpz_dir,
         assets_dir=args.assets_dir,
+        models_dir=args.models_dir,
         data_js_path=args.output,
         backup_js_path=DEFAULT_BACKUP_JS_PATH
     )
