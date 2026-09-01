@@ -885,13 +885,100 @@ let lastGridState = null;
 // 검색 시작 직전의 화면 상태 (검색창을 비우면 이 화면으로 복귀)
 let preSearchView = null;
 
+// 현재 그리드에 로드된 원본 아이템 목록 및 인라인 검색 상태
+let currentGridRawItems = [];
+let currentGridCategoryKey = null;
+let currentGridPanelType = null;
+
+// 그리드 아이템 필터링 헬퍼
+function filterGridItems(items, query) {
+    if (!query) return items;
+    const q = query.toLowerCase();
+    return items.filter(item => {
+        const nameMatch = item.name && item.name.toLowerCase().includes(q);
+        const catMatch = item.category && item.category.toLowerCase().includes(q);
+        const descMatch = item.description && item.description.toLowerCase().includes(q);
+        const mfgMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(q);
+        return nameMatch || catMatch || descMatch || mfgMatch;
+    });
+}
+
+// 그리드 카드 렌더링 헬퍼
+function renderGridCards(items, categoryKey, panelType) {
+    const grid = document.getElementById('itemGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    if (!items || items.length === 0) {
+        grid.innerHTML = '<p class="empty-message">표시할 항목이 없습니다.</p>';
+        return;
+    }
+
+    const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+    sortedItems.forEach(item => {
+        grid.appendChild(createGridCard(item, categoryKey, panelType));
+    });
+}
+
+// 그리드 인라인 검색 초기화 및 이벤트 등록
+function initGridInlineSearch() {
+    const input = document.getElementById('gridInlineSearch');
+    const clearBtn = document.getElementById('gridInlineSearchClear');
+    if (!input) return;
+
+    input.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        const gridCount = document.getElementById('gridCount');
+        if (lastGridState) {
+            lastGridState.searchQuery = query;
+        }
+
+        if (clearBtn) {
+            clearBtn.style.display = query ? 'flex' : 'none';
+        }
+
+        if (!query) {
+            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
+            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
+            return;
+        }
+
+        const filtered = filterGridItems(currentGridRawItems, query);
+        renderGridCards(filtered, currentGridCategoryKey, currentGridPanelType);
+        if (gridCount) {
+            gridCount.textContent = `검색 ${filtered.length}개 / 전체 ${currentGridRawItems.length}개`;
+        }
+    });
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            clearBtn.style.display = 'none';
+            if (lastGridState) lastGridState.searchQuery = '';
+            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
+            const gridCount = document.getElementById('gridCount');
+            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
+            input.focus();
+        });
+    }
+}
+
 function captureCurrentView() {
     const currentScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    const inlineSearchQuery = (document.getElementById('gridInlineSearch')?.value || '').trim();
     if (currentWeapon) {
         return { type: 'detail', panel: currentPanel, category: currentCategory, item: currentWeapon, galleryIndex: lastGalleryImageIndex, scrollY: currentScrollY };
     }
     if (lastGridState) {
-        return { type: 'grid', title: lastGridState.title, items: lastGridState.items, categoryKey: lastGridState.categoryKey, panelType: lastGridState.panelType, scrollY: currentScrollY };
+        return {
+            type: 'grid',
+            title: lastGridState.title,
+            items: lastGridState.items,
+            categoryKey: lastGridState.categoryKey,
+            panelType: lastGridState.panelType,
+            scrollY: currentScrollY,
+            searchQuery: inlineSearchQuery || lastGridState.searchQuery || ''
+        };
     }
     return { type: 'empty' };
 }
@@ -910,13 +997,13 @@ function restoreView(view) {
         }
     } else if (view.type === 'grid') {
         lastGridScrollY = view.scrollY || 0;
-        showGridView(view.title, view.items, view.categoryKey, view.panelType, true);
+        showGridView(view.title, view.items, view.categoryKey, view.panelType, true, view.searchQuery || '');
     }
 }
 
 function backToGrid() {
     if (lastGridState) {
-        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true);
+        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true, lastGridState.searchQuery || '');
     } else {
         clearDetail();
     }
@@ -950,11 +1037,14 @@ function renderItemGrid(categoryKey, panelType) {
 }
 
 // 이미 계산된 항목 목록을 그리드로 표시 (검색 결과 등에도 사용)
-function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false) {
-    lastGridState = { title, items, categoryKey, panelType };
+function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false, savedSearchQuery = '') {
+    lastGridState = { title, items, categoryKey, panelType, searchQuery: savedSearchQuery };
     currentPanel = panelType;
     currentCategory = categoryKey;
     currentWeapon = null;
+    currentGridRawItems = items || [];
+    currentGridCategoryKey = categoryKey;
+    currentGridPanelType = panelType;
     saveAppState();
 
     const gridView = document.getElementById('gridView');
@@ -994,21 +1084,36 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     const gridTitle = document.getElementById('gridTitle');
     const gridCount = document.getElementById('gridCount');
     if (gridTitle) gridTitle.textContent = title;
-    if (gridCount) gridCount.textContent = `${items.length}개`;
 
-    const grid = document.getElementById('itemGrid');
-    if (!grid) return;
-    grid.innerHTML = '';
+    // 인라인 검색창 placeholder 동적 설정 및 이전 검색어 복원
+    const inlineSearchInput = document.getElementById('gridInlineSearch');
+    const inlineClearBtn = document.getElementById('gridInlineSearchClear');
+    if (inlineSearchInput) {
+        // placeholder 설정: ">" 가 있으면 하위 슬롯명 추출, 없으면 전체 제목 활용
+        let targetName = title;
+        if (title.includes('>')) {
+            const parts = title.split('>');
+            targetName = parts[parts.length - 1].trim();
+        }
+        inlineSearchInput.placeholder = `${targetName}에서 검색...`;
 
-    if (items.length === 0) {
-        grid.innerHTML = '<p class="empty-message">표시할 항목이 없습니다.</p>';
-        return;
+        inlineSearchInput.value = savedSearchQuery || '';
+        if (inlineClearBtn) {
+            inlineClearBtn.style.display = savedSearchQuery ? 'flex' : 'none';
+        }
     }
 
-    const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-    sortedItems.forEach(item => {
-        grid.appendChild(createGridCard(item, categoryKey, panelType));
-    });
+    let itemsToRender = currentGridRawItems;
+    if (savedSearchQuery) {
+        itemsToRender = filterGridItems(currentGridRawItems, savedSearchQuery);
+        if (gridCount) {
+            gridCount.textContent = `검색 ${itemsToRender.length}개 / 전체 ${currentGridRawItems.length}개`;
+        }
+    } else {
+        if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
+    }
+
+    renderGridCards(itemsToRender, categoryKey, panelType);
 
     if (shouldRestoreScroll && lastGridScrollY > 0) {
         const targetY = lastGridScrollY;
@@ -2174,6 +2279,8 @@ function clearDetail() {
 
 // 이벤트 리스너 설정
 function setupEventListeners() {
+    initGridInlineSearch();
+
     // 패널 전환 버튼 (누르면 카테고리 드롭다운이 내려옴)
     // 같은 패널을 다시 누른 경우에는 드롭다운만 여닫고, 현재 표시 중인 목록/상세는 그대로 유지한다.
     document.querySelectorAll('.panel-btn').forEach(btn => {
