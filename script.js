@@ -684,6 +684,26 @@ function restoreAppState() {
     return false;
 }
 
+let currentDropdownPanel = null;
+
+function showDropdownPanel(panel) {
+    currentDropdownPanel = panel;
+    const weaponPanel = document.getElementById('weaponPanel');
+    const gearPanel = document.getElementById('gearPanel');
+    const attachmentPanel = document.getElementById('attachmentPanel');
+    
+    if (weaponPanel) weaponPanel.style.display = panel === 'weapon' ? 'block' : 'none';
+    if (gearPanel) gearPanel.style.display = panel === 'gear' ? 'block' : 'none';
+    if (attachmentPanel) attachmentPanel.style.display = panel === 'attachment' ? 'block' : 'none';
+
+    const dropdown = document.getElementById('categoryDropdown');
+    if (dropdown && dropdown.classList.contains('open')) {
+        document.querySelectorAll('.panel-btn').forEach(btn => {
+            btn.classList.toggle('dropdown-open', btn.dataset.panel === panel);
+        });
+    }
+}
+
 function switchPanel(panel) {
     currentPanel = panel;
     saveAppState();
@@ -692,26 +712,12 @@ function switchPanel(panel) {
         btn.classList.toggle('active', btn.dataset.panel === panel);
     });
     
-    const weaponPanel = document.getElementById('weaponPanel');
-    const gearPanel = document.getElementById('gearPanel');
-    const attachmentPanel = document.getElementById('attachmentPanel');
-    
-    if (weaponPanel) weaponPanel.style.display = panel === 'weapon' ? 'block' : 'none';
-    if (gearPanel) gearPanel.style.display = panel === 'gear' ? 'block' : 'none';
-    if (attachmentPanel) attachmentPanel.style.display = panel === 'attachment' ? 'block' : 'none';
+    showDropdownPanel(panel);
     
     clearDetail();
     
     const searchInput = document.getElementById('itemSearch');
     if (searchInput) searchInput.value = '';
-    
-    if (panel === 'gear') {
-        renderGearCategories();
-    } else if (panel === 'attachment') {
-        renderAttachmentCategories();
-    } else {
-        renderCategories();
-    }
 }
 
 
@@ -828,15 +834,25 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
 }
 
 
-// 카테고리 드롭다운 열기/닫기 (상단바 버튼을 누르면 내려오는 목록)
-function openDropdown() {
+// 카테고리 드롭다운 열기/닫기 (상단바 버튼 클릭 시 내려오는 목록)
+function openDropdown(panel) {
+    if (panel) {
+        showDropdownPanel(panel);
+    }
     const dropdown = document.getElementById('categoryDropdown');
     if (dropdown) dropdown.classList.add('open');
+    document.querySelectorAll('.panel-btn').forEach(btn => {
+        btn.classList.toggle('dropdown-open', btn.dataset.panel === (panel || currentDropdownPanel));
+    });
 }
 
 function closeDropdown() {
     const dropdown = document.getElementById('categoryDropdown');
     if (dropdown) dropdown.classList.remove('open');
+    currentDropdownPanel = null;
+    document.querySelectorAll('.panel-btn').forEach(btn => {
+        btn.classList.remove('dropdown-open');
+    });
 }
 
 // 그리드/상세 영역 전환 헬퍼
@@ -1027,7 +1043,7 @@ function renderItemGrid(categoryKey, panelType) {
     let title;
     if (categoryKey === 'all') {
         items = Object.values(dataSource).flat();
-        title = panelType === 'gear' ? '기어 전체' : (panelType === 'attachment' ? '부착물 전체' : '무기 전체');
+        title = panelType === 'gear' ? '기어 전체' : (panelType === 'attachment' ? '부착물 전체' : '웨폰 전체');
     } else {
         items = dataSource[categoryKey] || [];
         title = categoryKey;
@@ -1046,6 +1062,10 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     currentGridCategoryKey = categoryKey;
     currentGridPanelType = panelType;
     saveAppState();
+
+    document.querySelectorAll('.panel-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.panel === panelType);
+    });
 
     const gridView = document.getElementById('gridView');
     const weaponDetail = document.getElementById('weaponDetail');
@@ -1211,9 +1231,9 @@ function renderCategories() {
     if (!categoryList) return;
     categoryList.innerHTML = '';
 
-    // 전체 무기 카테고리 추가
+    // 전체 웨폰 카테고리 추가
     const totalCount = Object.values(weaponsData).reduce((sum, weapons) => sum + weapons.length, 0);
-    const allCategory = createCategoryItem('무기', totalCount, 'all', 'weapon');
+    const allCategory = createCategoryItem('웨폰 전체', totalCount, 'all', 'weapon');
     categoryList.appendChild(allCategory);
 
     // 각 카테고리 추가
@@ -2281,22 +2301,18 @@ function clearDetail() {
 function setupEventListeners() {
     initGridInlineSearch();
 
-    // 패널 전환 버튼 (누르면 카테고리 드롭다운이 내려옴)
-    // 같은 패널을 다시 누른 경우에는 드롭다운만 여닫고, 현재 표시 중인 목록/상세는 그대로 유지한다.
+    // 패널 전환 버튼 (클릭 시 드롭다운 토글)
     document.querySelectorAll('.panel-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const panel = btn.dataset.panel;
+        const panel = btn.dataset.panel;
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const dropdown = document.getElementById('categoryDropdown');
             const isOpen = dropdown && dropdown.classList.contains('open');
 
-            if (panel !== currentPanel) {
-                switchPanel(panel);
-                renderItemGrid('all', panel);
-                openDropdown();
-            } else if (isOpen) {
+            if (isOpen && currentDropdownPanel === panel) {
                 closeDropdown();
             } else {
-                openDropdown();
+                openDropdown(panel);
             }
         });
     });

@@ -60,7 +60,11 @@ body {
 }
 
 .panel-btn {
-    padding: 9px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 14px;
     background: #2a2a2a;
     color: #ffffff;
     border: 2px solid #444;
@@ -82,6 +86,23 @@ body {
     background: #ffffff;
     color: #000000;
     border-color: #ffffff;
+}
+
+.panel-chevron {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+.panel-btn.dropdown-open .panel-chevron {
+    transform: rotate(180deg);
+}
+
+.panel-btn.dropdown-open:not(.active) {
+    border-color: #777;
+    background: #333333;
 }
 
 .panel-content {
@@ -139,7 +160,7 @@ body {
     color: #666;
 }
 
-/* 카테고리 드롭다운 (상단바 버튼을 누르면 내려옴) */
+/* 카테고리 드롭다운 (상단바 버튼 클릭 시 내려옴) */
 .category-dropdown {
     position: fixed;
     top: 70px;
@@ -153,6 +174,7 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translateY(-8px);
+    pointer-events: none;
     transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
@@ -161,6 +183,7 @@ body {
     opacity: 1;
     transform: translateY(0);
     overflow-y: auto;
+    pointer-events: auto;
 }
 
 .category-list {
