@@ -728,12 +728,78 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         modelViewerEl.setAttribute('camera-orbit', '45deg 75deg auto');
         modelViewerEl.setAttribute('interaction-prompt', 'none');
         
+        const bottomBar = document.createElement('div');
+        bottomBar.className = 'model-viewer-bottom-bar';
+        
+        const bgPresets = [
+            {
+                name: '다크',
+                background: 'radial-gradient(circle at center, #1f1f1f 0%, #0a0a0a 100%)',
+                exposure: '1.0',
+                shadowIntensity: '1.0',
+                shadowSoftness: '0.5'
+            },
+            {
+                name: '하늘',
+                background: 'linear-gradient(180deg, #1d6fa5 0%, #4a9fd5 45%, #9fd3f7 80%, #cfe8fb 100%)',
+                exposure: '1.15',
+                shadowIntensity: '1.4',
+                shadowSoftness: '0.4'
+            },
+            {
+                name: '노을',
+                background: 'linear-gradient(180deg, #201e2b 0%, #3a2e3d 35%, #5d434a 65%, #8a5d53 90%, #a8796b 100%)',
+                exposure: '1.08',
+                shadowIntensity: '1.4',
+                shadowSoftness: '0.4'
+            },
+            {
+                name: '화이트',
+                background: 'radial-gradient(circle at center, #ffffff 0%, #e2e8f0 100%)',
+                exposure: '1.05',
+                shadowIntensity: '1.2',
+                shadowSoftness: '0.6'
+            },
+            {
+                name: '야전',
+                background: 'radial-gradient(circle at center, #243526 0%, #101a11 100%)',
+                exposure: '1.0',
+                shadowIntensity: '1.3',
+                shadowSoftness: '0.5'
+            }
+        ];
+        
+        let currentBgIndex = 0;
+        const bgBtn = document.createElement('button');
+        bgBtn.type = 'button';
+        bgBtn.className = 'model-viewer-bg-btn';
+        bgBtn.title = '배경 및 조명 변경';
+        bgBtn.innerHTML = `
+            <svg class="bg-btn-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+            </svg>
+            <span class="bg-btn-text">배경</span>
+        `;
+        
+        bgBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentBgIndex = (currentBgIndex + 1) % bgPresets.length;
+            const preset = bgPresets[currentBgIndex];
+            modelViewerContainer.style.background = preset.background;
+            modelViewerEl.setAttribute('exposure', preset.exposure);
+            modelViewerEl.setAttribute('shadow-intensity', preset.shadowIntensity);
+            modelViewerEl.setAttribute('shadow-softness', preset.shadowSoftness);
+        });
+        
         const controlsHint = document.createElement('div');
         controlsHint.className = 'model-viewer-controls-hint';
         controlsHint.innerHTML = '<span>좌클릭 회전</span><span>우클릭 이동</span><span>휠 줌</span>';
         
+        bottomBar.appendChild(bgBtn);
+        bottomBar.appendChild(controlsHint);
+        
         modelViewerContainer.appendChild(modelViewerEl);
-        modelViewerContainer.appendChild(controlsHint);
+        modelViewerContainer.appendChild(bottomBar);
         imageContainer.appendChild(modelViewerContainer);
     }
     

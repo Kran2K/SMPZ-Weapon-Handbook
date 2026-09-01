@@ -1243,9 +1243,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0a0a0a;
+    background: radial-gradient(circle at center, #1f1f1f 0%, #0a0a0a 100%);
     border-radius: 10px;
     overflow: hidden;
+    transition: background 0.4s ease;
 }
 
 model-viewer.weapon-model-viewer {
@@ -1260,10 +1261,57 @@ model-viewer.weapon-model-viewer:active {
     cursor: grabbing;
 }
 
-.model-viewer-controls-hint {
+.model-viewer-bottom-bar {
     position: absolute;
     right: 12px;
     bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.model-viewer-bg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #a0a0a0;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.model-viewer-bg-btn:hover {
+    background: rgba(35, 35, 35, 0.85);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.model-viewer-bg-btn:active {
+    transform: scale(0.97);
+}
+
+.model-viewer-bg-btn .bg-btn-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.model-viewer-bg-btn:hover .bg-btn-icon {
+    transform: rotate(45deg);
+}
+
+.model-viewer-controls-hint {
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
@@ -1277,7 +1325,6 @@ model-viewer.weapon-model-viewer:active {
     color: #a0a0a0;
     pointer-events: none;
     user-select: none;
-    z-index: 10;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
