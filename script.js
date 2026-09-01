@@ -601,12 +601,12 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         const btn2D = document.createElement('button');
         btn2D.type = 'button';
         btn2D.className = 'gallery-mode-btn active';
-        btn2D.textContent = '2D 사진';
+        btn2D.textContent = '사진';
         
         const btn3D = document.createElement('button');
         btn3D.type = 'button';
         btn3D.className = 'gallery-mode-btn';
-        btn3D.textContent = '3D 인스펙트';
+        btn3D.textContent = '3D';
         
         modeSwitch.appendChild(btn2D);
         modeSwitch.appendChild(btn3D);
@@ -719,13 +719,21 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
             modelViewerEl.setAttribute('poster', images[0]);
         }
         modelViewerEl.setAttribute('camera-controls', '');
+        modelViewerEl.setAttribute('auto-rotate', '');
+        modelViewerEl.setAttribute('auto-rotate-delay', '3000');
+        modelViewerEl.setAttribute('rotation-per-second', '30deg');
         modelViewerEl.setAttribute('shadow-intensity', '1');
         modelViewerEl.setAttribute('shadow-softness', '0.5');
         modelViewerEl.setAttribute('exposure', '1.0');
         modelViewerEl.setAttribute('camera-orbit', '45deg 75deg auto');
         modelViewerEl.setAttribute('interaction-prompt', 'none');
         
+        const controlsHint = document.createElement('div');
+        controlsHint.className = 'model-viewer-controls-hint';
+        controlsHint.innerHTML = '<span>좌클릭 회전</span><span>우클릭 이동</span><span>휠 줌</span>';
+        
         modelViewerContainer.appendChild(modelViewerEl);
+        modelViewerContainer.appendChild(controlsHint);
         imageContainer.appendChild(modelViewerContainer);
     }
     
