@@ -1449,7 +1449,7 @@ model-viewer.weapon-model-viewer:active {
     font-weight: bold;
 }
 
-/* 장착 가능한 부착물 슬롯 섹션 */
+/* 장착 가능한 부착물 및 상위 아이템 슬롯 섹션 */
 .attachment-slots-container {
     margin-top: 20px;
     padding: 16px 20px;
@@ -1457,6 +1457,10 @@ model-viewer.weapon-model-viewer:active {
     border-radius: 8px;
     border: 1px solid #333333;
     width: 100%;
+}
+
+.attachment-slots-container + .parent-compatible-container {
+    margin-top: 16px;
 }
 
 .attachment-slots-grid {

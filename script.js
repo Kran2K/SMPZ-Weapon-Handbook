@@ -610,6 +610,125 @@ function createAttachmentSlotsSection(item) {
     return container;
 }
 
+// 특정 아이템을 장착할 수 있는 상위 부모 아이템 목록 필터링
+function getCompatibleParentItems(targetItem) {
+    if (!targetItem || !Array.isArray(targetItem.inventorySlots) || targetItem.inventorySlots.length === 0) {
+        return [];
+    }
+    const targetSlotsSet = new Set(targetItem.inventorySlots);
+    const allItems = getAllDatabaseItems();
+    const parentMatches = [];
+    const seen = new Set();
+
+    for (const item of allItems) {
+        if (!item || item.id === targetItem.id) continue;
+        if (Array.isArray(item.attachmentSlots) && item.attachmentSlots.some(s => targetSlotsSet.has(s))) {
+            if (!seen.has(item.id)) {
+                seen.add(item.id);
+                parentMatches.push(item);
+            }
+        }
+    }
+    return parentMatches;
+}
+
+// 상위 부모 아이템들을 카테고리별로 그룹화 및 정렬
+function getGroupedParentCategories(targetItem) {
+    const parentItems = getCompatibleParentItems(targetItem);
+    if (parentItems.length === 0) return [];
+
+    const categoryMap = new Map();
+    for (const item of parentItems) {
+        const itemInfo = getItemTypeAndCategory(item);
+        const catName = item.category || itemInfo.category || '기타';
+        if (!categoryMap.has(catName)) {
+            categoryMap.set(catName, {
+                category: catName,
+                panelType: itemInfo.panelType,
+                items: []
+            });
+        }
+        categoryMap.get(catName).items.push(item);
+    }
+
+    // 패널 우선순위 (무기 -> 기어 -> 부착물)
+    const panelPriority = { 'weapon': 1, 'gear': 2, 'attachment': 3 };
+    const groups = Array.from(categoryMap.values());
+    groups.sort((a, b) => {
+        const pA = panelPriority[a.panelType] || 99;
+        const pB = panelPriority[b.panelType] || 99;
+        if (pA !== pB) return pA - pB;
+        return a.category.localeCompare(b.category, 'ko');
+    });
+
+    return groups;
+}
+
+// 상위 카테고리 클릭 시 해당 아이템들을 그리드로 표시
+function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
+    pushNavState(captureCurrentView());
+    const sourceName = sourceItem && sourceItem.name ? sourceItem.name : '';
+    const fullTitle = sourceName ? `${sourceName} > ${categoryName}` : categoryName;
+    showGridView(fullTitle, items, 'parent_cat_' + categoryName, panelType || 'weapon');
+}
+
+// 이 아이템을 장착할 수 있는 아이템 (상위 아이템) 슬롯 UI 섹션 생성
+function createParentCompatibleSection(item) {
+    if (!item || !Array.isArray(item.inventorySlots) || item.inventorySlots.length === 0) {
+        return null;
+    }
+
+    const groupedCategories = getGroupedParentCategories(item);
+    if (groupedCategories.length === 0) {
+        return null;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'attachment-slots-container parent-compatible-container';
+
+    const header = document.createElement('div');
+    header.className = 'weapon-stats-header';
+    const title = document.createElement('div');
+    title.className = 'weapon-stats-title';
+    title.textContent = '- 이 아이템을 장착할 수 있는 아이템 -';
+    header.appendChild(title);
+    container.appendChild(header);
+
+    const slotsGrid = document.createElement('div');
+    slotsGrid.className = 'attachment-slots-grid';
+
+    groupedCategories.forEach(group => {
+        const count = group.items.length;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'attachment-slot-btn parent-slot-btn';
+        if (count === 0) {
+            btn.classList.add('empty-slot');
+        }
+
+        const slotLabel = document.createElement('span');
+        slotLabel.className = 'slot-label';
+        slotLabel.textContent = group.category;
+
+        const slotCount = document.createElement('span');
+        slotCount.className = 'slot-count';
+        slotCount.textContent = `(${count})`;
+
+        btn.appendChild(slotLabel);
+        btn.appendChild(slotCount);
+
+        btn.onclick = () => {
+            showParentCategoryItems(item, group.category, group.items, group.panelType);
+        };
+
+        slotsGrid.appendChild(btn);
+    });
+
+    container.appendChild(slotsGrid);
+    return container;
+}
+
 
 function loadData() {
     const savedWeapons = localStorage.getItem('smpz_weapons_data');
@@ -828,6 +947,12 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     if (slotsSection) {
         const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
         slotsParent.appendChild(slotsSection);
+    }
+
+    const parentSection = createParentCompatibleSection(attachment);
+    if (parentSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(parentSection);
     }
     
     weaponDetail.appendChild(detailCard);
@@ -1971,6 +2096,18 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             detailCard.appendChild(slotsSection);
         }
     }
+
+    const parentSection = createParentCompatibleSection(weapon);
+    if (parentSection) {
+        const slotsParent = weapon.description
+            ? detailCard.querySelector('.weapon-detail-description-container')
+            : detailCard;
+        if (slotsParent) {
+            slotsParent.appendChild(parentSection);
+        } else {
+            detailCard.appendChild(parentSection);
+        }
+    }
     
     // 관리자 모드일 경우 편집/삭제 버튼 표시
     if (isAdmin) {
@@ -2245,6 +2382,12 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     if (slotsSection) {
         const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
         slotsParent.appendChild(slotsSection);
+    }
+
+    const parentSection = createParentCompatibleSection(gear);
+    if (parentSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(parentSection);
     }
     
     if (isAdmin) {
