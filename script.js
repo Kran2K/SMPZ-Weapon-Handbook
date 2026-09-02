@@ -990,6 +990,19 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
+
+        // 카테고리 (스펙 제일 앞에 표시)
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = attachment.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
         
         if (attachment.stats) {
             const statLabels = {
@@ -1387,6 +1400,22 @@ const SORT_METRICS = {
             return order === 'desc' ? -res : res;
         },
         badge: null
+    },
+    category: {
+        id: 'category',
+        label: '종류',
+        group: 'common',
+        defaultOrder: 'asc',
+        compare: (a, b, order) => {
+            const catA = a.category || '';
+            const catB = b.category || '';
+            const res = catA.localeCompare(catB, 'ko', { numeric: true, sensitivity: 'base' });
+            if (res !== 0) {
+                return order === 'desc' ? -res : res;
+            }
+            return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+        },
+        badge: (item) => item?.category ? `${item.category}` : null
     },
     weight: {
         id: 'weight',
@@ -2390,17 +2419,14 @@ function createGridCard(item, categoryKey, panelType) {
         imgWrap.appendChild(modelBadge);
     }
 
-    // 현재 선택된 정렬 기준에 따른 스펙 뱃지 (우측 상단)
-    const currentMetric = SORT_METRICS[currentGridSortMetric];
-    if (currentMetric && currentMetric.badge) {
-        const rawVal = currentMetric.parser ? currentMetric.parser(item) : null;
-        const badgeText = currentMetric.badge(item, rawVal);
-        if (badgeText) {
-            const specBadge = document.createElement('span');
-            specBadge.className = 'grid-card-badge';
-            specBadge.textContent = badgeText;
-            imgWrap.appendChild(specBadge);
-        }
+    // 카테고리 뱃지 상시 표시 (우측 상단)
+    const itemCat = item.category || (categoryKey !== 'all' && categoryKey !== 'search' ? categoryKey : '') || '';
+    if (itemCat) {
+        const catBadge = document.createElement('span');
+        catBadge.className = 'grid-card-badge grid-card-category-badge';
+        catBadge.textContent = itemCat;
+        catBadge.title = `카테고리: ${itemCat}`;
+        imgWrap.appendChild(catBadge);
     }
 
     card.appendChild(imgWrap);
@@ -3164,6 +3190,19 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
+        // 카테고리 (스펙 제일 앞에 표시)
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = weapon.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
+
         // 각 능력치별 최대값과 스케일 정의
         const statsDefs = [
             { key: 'recoil',      label: '반동',     max: 120,  invert: false },
@@ -3455,7 +3494,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     detailCard.appendChild(descContainer);
     
     // 기어 능력치 및 규격 섹션
-    const hasGearStats = Boolean(gear.stats);
+    const hasGearStats = Boolean(gear.stats) || Boolean(gear.category);
     const hasGearSpecs = Boolean(gear.itemSize || gear.itemSlots || gear.cargoSize || gear.cargoSlots);
     if (hasGearStats || hasGearSpecs) {
         const statsContainer = document.createElement('div');
@@ -3477,6 +3516,19 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
+
+        // 카테고리 (스펙 제일 앞에 표시)
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = gear.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
 
         if (gear.stats) {
             const hasProtectionStats = ['bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
