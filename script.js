@@ -1649,7 +1649,8 @@ function getItemCoreSpecs(item, categoryKey, panelType) {
         specs.push({ label: '흔들림', text: `흔들림 ${swy}`, tagClass: 'spec-sway' });
     }
     if (cap) {
-        specs.push({ label: '용량', text: `${cap}발`, tagClass: 'spec-capacity' });
+        const capText = String(cap).endsWith('발') ? String(cap) : `${cap}발`;
+        specs.push({ label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
     return specs;
