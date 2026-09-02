@@ -1376,6 +1376,9 @@ const DataParsers = {
         return null;
     },
     magnification: (item) => {
+        if (!item) return null;
+        const isOptic = item.category === '광학 조준경' || Boolean(item?.stats?.magnification);
+        if (!isOptic) return null;
         const mag = item?.stats?.magnification || (typeof getOpticMagnification === 'function' ? getOpticMagnification(item) : null);
         if (!mag) return null;
         const m = /(\d+(?:\.\d+)?)/g;
@@ -1605,45 +1608,45 @@ function getOpticMagnification(item) {
     if (item.stats?.magnification) {
         return item.stats.magnification;
     }
+    const isOptic = item.category === '광학 조준경' || /Optic|Scope|Sight|조준경/i.test(item.id || '');
     const name = item.name || '';
     const m = /(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?x(?:\/\d+x)?|\d+(?:\.\d+)?x)/i.exec(name);
     if (m) return m[1].toLowerCase();
-    return '1x';
+    if (isOptic) return '1x';
+    return null;
 }
 
-// 아이템 카드에 항상 표시될 핵심 대표 스펙 추출
-function getItemCoreSpecs(item, categoryKey, panelType) {
+// 아이템 카드에 항상 표시될 핵심 대표 스펙 추출 (정렬 기준값 동적 포함 및 하이라이트 지원)
+function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = currentGridSortMetric) {
     if (!item) return [];
     const specs = [];
     const cat = item.category || categoryKey || '';
     const pType = panelType || currentPanel;
 
-    // 1. 무기 (사용 탄종)
     const isWeapon = pType === 'weapon' || !!item.modes || (item.chamberableFrom && item.chamberableFrom.length > 0) || (item.stats && item.stats.rpm);
+
+    // 1. 무기 (사용 탄종)
     if (isWeapon) {
         const cal = getItemCaliber(item);
         if (cal) {
-            specs.push({ label: '탄종', text: cal, tagClass: 'spec-caliber' });
+            specs.push({ metricKey: 'caliber', label: '탄종', text: cal, tagClass: 'spec-caliber' });
         }
-        return specs;
     }
 
     // 2. 전술 플래시 (조사 거리)
     if (cat === '전술 플래시' || item.stats?.lightDistance) {
         const dist = item.stats?.lightDistance || (DataParsers.lightDistance(item) ? `${DataParsers.lightDistance(item)}m` : null);
         if (dist) {
-            specs.push({ label: '조사거리', text: dist, tagClass: 'spec-light' });
+            specs.push({ metricKey: 'light_distance', label: '조사거리', text: dist, tagClass: 'spec-light' });
         }
-        return specs;
     }
 
     // 3. 광학 조준경 (배율)
     if (cat === '광학 조준경') {
         const mag = getOpticMagnification(item);
         if (mag) {
-            specs.push({ label: '배율', text: mag, tagClass: 'spec-optic' });
+            specs.push({ metricKey: 'magnification', label: '배율', text: mag, tagClass: 'spec-optic' });
         }
-        return specs;
     }
 
     // 4. 기어 (방탄복, 헬멧, 가방, 체스트 리그 등)
@@ -1654,32 +1657,67 @@ function getItemCoreSpecs(item, categoryKey, panelType) {
         const cargo = DataParsers.cargoSlots(item);
 
         if (bProt !== null && bProt > 0) {
-            specs.push({ label: '방탄', text: `방탄 ${bProt}%`, tagClass: 'spec-armor' });
+            specs.push({ metricKey: 'bullet_protection', label: '방탄', text: `방탄 ${bProt}%`, tagClass: 'spec-armor' });
         }
         if (sProt !== null && sProt > 0) {
-            specs.push({ label: '쇼크', text: `쇼크 ${sProt}%`, tagClass: 'spec-shock' });
+            specs.push({ metricKey: 'shock_protection', label: '쇼크', text: `쇼크 ${sProt}%`, tagClass: 'spec-shock' });
         }
         if (cargo && cargo > 0) {
             const cargoText = item.cargoSize ? `수납 ${item.cargoSize} (${cargo}칸)` : `수납 ${cargo}칸`;
-            specs.push({ label: '수납', text: cargoText, tagClass: 'spec-cargo' });
+            specs.push({ metricKey: 'cargo_slots', label: '수납', text: cargoText, tagClass: 'spec-cargo' });
         }
-        return specs;
     }
 
-    // 5. 기타 부착물 (반동, 흔들림, 탄창 용량)
+    // 5. 탄창 (탄종)
+    if (cat === '탄창') {
+        const cal = getItemCaliber(item);
+        if (cal && !specs.some(s => s.metricKey === 'caliber')) {
+            specs.push({ metricKey: 'caliber', label: '탄종', text: cal, tagClass: 'spec-caliber' });
+        }
+    }
+
+    // 6. 부착물 성능 (반동, 흔들림, 탄창 용량)
     const rec = item.stats?.recoil;
     const swy = item.stats?.sway;
     const cap = item.stats?.capacity;
 
-    if (rec && (String(rec).includes('%') || String(rec).startsWith('-') || String(rec).startsWith('+'))) {
-        specs.push({ label: '반동', text: `반동 ${rec}`, tagClass: 'spec-recoil' });
+    if (!isWeapon && rec && (String(rec).includes('%') || String(rec).startsWith('-') || String(rec).startsWith('+'))) {
+        specs.push({ metricKey: 'recoil_reduction', label: '반동', text: `반동 ${rec}`, tagClass: 'spec-recoil' });
     }
-    if (swy && (String(swy).includes('%') || String(swy).startsWith('-') || String(swy).startsWith('+'))) {
-        specs.push({ label: '흔들림', text: `흔들림 ${swy}`, tagClass: 'spec-sway' });
+    if (!isWeapon && swy && (String(swy).includes('%') || String(swy).startsWith('-') || String(swy).startsWith('+'))) {
+        specs.push({ metricKey: 'sway_reduction', label: '흔들림', text: `흔들림 ${swy}`, tagClass: 'spec-sway' });
     }
-    if (cap) {
+    if (cap && !specs.some(s => s.metricKey === 'capacity')) {
         const capText = String(cap).endsWith('발') ? String(cap) : `${cap}발`;
-        specs.push({ label: '용량', text: capText, tagClass: 'spec-capacity' });
+        specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
+    }
+
+    // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
+    if (activeMetricKey && activeMetricKey !== 'name' && activeMetricKey !== 'category') {
+        const alreadyHasMetric = specs.some(s => s.metricKey === activeMetricKey);
+        if (!alreadyHasMetric) {
+            if (isWeapon) {
+                if (activeMetricKey === 'rpm' && item.stats?.rpm) {
+                    specs.push({ metricKey: 'rpm', label: 'RPM', text: `${item.stats.rpm} RPM`, tagClass: 'spec-rpm' });
+                } else if (activeMetricKey === 'moa' && item.stats?.accuracy) {
+                    specs.push({ metricKey: 'moa', label: 'MOA', text: `${item.stats.accuracy}`, tagClass: 'spec-moa' });
+                } else if (activeMetricKey === 'velocity' && item.stats?.velocity) {
+                    specs.push({ metricKey: 'velocity', label: '탄속', text: `${item.stats.velocity}`, tagClass: 'spec-velocity' });
+                } else if (activeMetricKey === 'weapon_recoil' && item.stats?.recoil) {
+                    specs.push({ metricKey: 'weapon_recoil', label: '반동', text: `반동 ${item.stats.recoil}`, tagClass: 'spec-recoil' });
+                } else if (activeMetricKey === 'weapon_sway' && item.stats?.sway) {
+                    specs.push({ metricKey: 'weapon_sway', label: '흔들림', text: `흔들림 ${item.stats.sway}`, tagClass: 'spec-sway' });
+                } else if (activeMetricKey === 'ergonomics' && item.stats?.ergonomics) {
+                    specs.push({ metricKey: 'ergonomics', label: '에르고', text: `에르고 ${item.stats.ergonomics}`, tagClass: 'spec-ergo' });
+                }
+            }
+            if (activeMetricKey === 'weight' && item.stats?.weight) {
+                specs.push({ metricKey: 'weight', label: '무게', text: `${item.stats.weight}`, tagClass: 'spec-weight' });
+            } else if (activeMetricKey === 'item_slots' && (item.itemSlots !== undefined && item.itemSlots !== null)) {
+                const slotText = item.itemSize ? `${item.itemSize} (${item.itemSlots}칸)` : `${item.itemSlots}칸`;
+                specs.push({ metricKey: 'item_slots', label: '크기', text: slotText, tagClass: 'spec-size' });
+            }
+        }
     }
 
     return specs;
@@ -1809,6 +1847,21 @@ function hasAnyValidValueForMetric(items, metric) {
         return items.some(item => {
             const str = String(item?.stats?.sway || '').trim();
             return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+        });
+    }
+    if (metric.id === 'magnification') {
+        return items.some(item => {
+            return (item.category === '광학 조준경' || Boolean(item?.stats?.magnification)) && DataParsers.magnification(item) !== null;
+        });
+    }
+    if (metric.id === 'light_distance') {
+        return items.some(item => {
+            return (item.category === '전술 플래시' || Boolean(item?.stats?.lightDistance)) && DataParsers.lightDistance(item) !== null;
+        });
+    }
+    if (metric.id === 'capacity') {
+        return items.some(item => {
+            return (item.category === '탄창' || Boolean(item?.stats?.capacity)) && DataParsers.capacity(item) !== null;
         });
     }
     if (metric.id === 'bullet_protection' || metric.id === 'shock_protection') {
@@ -2436,14 +2489,15 @@ function createGridCard(item, categoryKey, panelType) {
     nameEl.textContent = item.name;
     card.appendChild(nameEl);
 
-    // 카드 핵심 대표 스펙 태그 상시 표시
-    const coreSpecs = getItemCoreSpecs(item, categoryKey, panelType);
+    // 카드 핵심 대표 스펙 태그 상시 표시 (정렬 기준값 하이라이트)
+    const coreSpecs = getItemCoreSpecs(item, categoryKey, panelType, currentGridSortMetric);
     if (coreSpecs.length > 0) {
         const specsContainer = document.createElement('div');
         specsContainer.className = 'grid-card-core-specs';
         coreSpecs.forEach(spec => {
+            const isHighlighted = Boolean(spec.metricKey && currentGridSortMetric && spec.metricKey === currentGridSortMetric);
             const tag = document.createElement('span');
-            tag.className = `core-spec-tag ${spec.tagClass || ''}`;
+            tag.className = `core-spec-tag ${spec.tagClass || ''} ${isHighlighted ? 'spec-highlight' : ''}`;
             tag.textContent = spec.text;
             tag.title = `${spec.label}: ${spec.text}`;
             specsContainer.appendChild(tag);

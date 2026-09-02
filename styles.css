@@ -680,6 +680,51 @@ body {
     color: #999999;
 }
 
+.core-spec-tag.spec-rpm {
+    background: #1d181c;
+    border-color: #332630;
+    color: #a8829d;
+}
+
+.core-spec-tag.spec-moa {
+    background: #171c1b;
+    border-color: #243330;
+    color: #82a89d;
+}
+
+.core-spec-tag.spec-velocity {
+    background: #181b1d;
+    border-color: #262f33;
+    color: #829da8;
+}
+
+.core-spec-tag.spec-ergo {
+    background: #1b1c18;
+    border-color: #303324;
+    color: #9da882;
+}
+
+.core-spec-tag.spec-weight {
+    background: #1a1a1a;
+    border-color: #333333;
+    color: #aaaaaa;
+}
+
+.core-spec-tag.spec-size {
+    background: #19181c;
+    border-color: #2d2633;
+    color: #9f8fb3;
+}
+
+/* 정렬 기준 스펙 하이라이트 (은은하고 차분한 강조 톤) */
+.core-spec-tag.spec-highlight {
+    background: #24221c !important;
+    border-color: #8c734b !important;
+    color: #e5cf9e !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+}
+
 /* 플로팅 네비게이션 독 (이전으로 / 목록으로 / 맨 위로) */
 .floating-nav-dock {
     position: fixed;
