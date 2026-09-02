@@ -42,6 +42,18 @@ body {
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s ease, filter 0.15s ease;
+}
+
+.topbar-title:hover {
+    opacity: 0.88;
+    filter: brightness(1.1);
+}
+
+.topbar-title:active {
+    transform: scale(0.985);
 }
 
 .topbar-title-icon {

@@ -3820,9 +3820,44 @@ function clearDetail() {
 }
 
 
+// 홈 화면으로 이동 (SMPZ 웨폰 전체 화면)
+function goToHomePage() {
+    closeDropdown();
+    navStack = [];
+    preSearchView = null;
+    compareTarget = null;
+    
+    // 전체 검색창 및 인라인 검색창 초기화
+    const mainSearchInput = document.getElementById('itemSearch');
+    if (mainSearchInput) mainSearchInput.value = '';
+    const inlineSearchInput = document.getElementById('gridInlineSearch');
+    if (inlineSearchInput) inlineSearchInput.value = '';
+    const inlineClearBtn = document.getElementById('gridInlineSearchClear');
+    if (inlineClearBtn) inlineClearBtn.style.display = 'none';
+
+    // 웨폰 전체 화면 렌더링
+    renderItemGrid('all', 'weapon');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}
+
 // 이벤트 리스너 설정
 function setupEventListeners() {
     initGridInlineSearch();
+
+    // 좌측 상단 로고/타이틀 클릭 시 최초 홈 화면(웨폰 전체)으로 이동
+    const homeLogoBtn = document.getElementById('homeLogoBtn') || document.querySelector('.topbar-title');
+    if (homeLogoBtn) {
+        homeLogoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            goToHomePage();
+        });
+        homeLogoBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                goToHomePage();
+            }
+        });
+    }
 
     // 스크롤 시 플로팅 네비게이션 독 갱신 (맨 위로 버튼 등)
     window.addEventListener('scroll', () => {
