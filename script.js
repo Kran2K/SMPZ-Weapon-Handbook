@@ -912,10 +912,10 @@ function filterGridItems(items, query) {
     const q = query.toLowerCase();
     return items.filter(item => {
         const nameMatch = item.name && item.name.toLowerCase().includes(q);
-        const catMatch = item.category && item.category.toLowerCase().includes(q);
-        const descMatch = item.description && item.description.toLowerCase().includes(q);
+        const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(q);
         const mfgMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(q);
-        return nameMatch || catMatch || descMatch || mfgMatch;
+        const catMatch = item.category && item.category.toLowerCase().includes(q);
+        return nameMatch || keywordMatch || mfgMatch || catMatch;
     });
 }
 
@@ -1109,9 +1109,11 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     const inlineSearchInput = document.getElementById('gridInlineSearch');
     const inlineClearBtn = document.getElementById('gridInlineSearchClear');
     if (inlineSearchInput) {
-        // placeholder 설정: ">" 가 있으면 하위 슬롯명 추출, 없으면 전체 제목 활용
+        // placeholder 설정: 검색 결과, ">" 하위 슬롯명 추출, 또는 전체 제목 활용
         let targetName = title;
-        if (title.includes('>')) {
+        if (categoryKey === 'search') {
+            targetName = '검색 결과';
+        } else if (title.includes('>')) {
             const parts = title.split('>');
             targetName = parts[parts.length - 1].trim();
         }
@@ -2855,7 +2857,7 @@ function openCompareModal() {
     modal.style.display = 'block';
 }
 
-// 무기/기어 검색 함수 (검색 결과를 그리드로 표시)
+// 무기/부착물/기어 전체 검색 함수 (검색 결과를 그리드로 표시)
 function searchItems(query) {
     const trimmed = (query || '').trim();
     if (!trimmed) {
@@ -2874,21 +2876,38 @@ function searchItems(query) {
     }
 
     const lowerQuery = trimmed.toLowerCase();
-    const dataSource = currentPanel === 'gear' ? gearData : (currentPanel === 'attachment' ? attachmentData : weaponsData);
-
     const matches = [];
-    Object.keys(dataSource).forEach(categoryKey => {
-        dataSource[categoryKey].forEach(item => {
-            const nameMatch = item.name.toLowerCase().includes(lowerQuery);
-            const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(lowerQuery);
-            const manufacturerMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(lowerQuery);
-            if (nameMatch || keywordMatch || manufacturerMatch) {
-                matches.push(item);
+    const seenIds = new Set();
+
+    const dataSources = [
+        typeof weaponsData !== 'undefined' ? weaponsData : {},
+        typeof attachmentData !== 'undefined' ? attachmentData : {},
+        typeof gearData !== 'undefined' ? gearData : {}
+    ];
+
+    dataSources.forEach(source => {
+        Object.keys(source).forEach(categoryKey => {
+            const list = source[categoryKey];
+            if (Array.isArray(list)) {
+                list.forEach(item => {
+                    if (!item) return;
+                    if (item.id) {
+                        if (seenIds.has(item.id)) return;
+                        seenIds.add(item.id);
+                    }
+                    const nameMatch = item.name && item.name.toLowerCase().includes(lowerQuery);
+                    const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(lowerQuery);
+                    const manufacturerMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(lowerQuery);
+                    const categoryMatch = item.category && item.category.toLowerCase().includes(lowerQuery);
+                    if (nameMatch || keywordMatch || manufacturerMatch || categoryMatch) {
+                        matches.push(item);
+                    }
+                });
             }
         });
     });
 
     closeDropdown();
-    showGridView(`"${trimmed}" 검색 결과`, matches, 'search', currentPanel);
+    showGridView(`"${trimmed}" 검색 결과`, matches, 'search', 'search');
 }
 
