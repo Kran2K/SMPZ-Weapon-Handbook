@@ -42,6 +42,18 @@ body {
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s ease, filter 0.15s ease;
+}
+
+.topbar-title:hover {
+    opacity: 0.88;
+    filter: brightness(1.1);
+}
+
+.topbar-title:active {
+    transform: scale(0.985);
 }
 
 .topbar-title-icon {
@@ -109,13 +121,6 @@ body {
     padding: 20px 24px;
 }
 
-.admin-add-wrap {
-    margin-bottom: 12px;
-}
-
-.admin-add-wrap .add-weapon-btn {
-    width: 100%;
-}
 
 .search-container {
     width: 280px;
@@ -160,7 +165,7 @@ body {
     color: #666;
 }
 
-/* 카테고리 드롭다운 (상단바 버튼 클릭 시 내려옴) */
+/* 카테고리 드롭다운 */
 .category-dropdown {
     position: fixed;
     top: 70px;
@@ -242,7 +247,7 @@ body {
     font-weight: bold;
 }
 
-/* 무기/기어/부착물 그리드 (카테고리 선택 시 메인 영역에 표시) */
+/* 아이템 그리드 */
 .grid-view {
     width: 100%;
     max-width: 1200px;
@@ -261,7 +266,7 @@ body {
 
 .grid-header-left {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -280,6 +285,182 @@ body {
 .grid-header-right {
     display: flex;
     align-items: center;
+}
+
+.grid-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.grid-sort-box {
+    display: flex;
+    align-items: center;
+    background: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0 8px;
+    transition: all 0.2s ease;
+}
+
+.grid-sort-box:focus-within,
+.grid-sort-box:hover {
+    border-color: #888;
+    background: #222;
+}
+
+.grid-sort-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 4px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.grid-sort-icon {
+    color: #888;
+}
+
+.grid-sort-select,
+.grid-sort-order-select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 18px 6px 4px;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+}
+
+.grid-sort-order-select {
+    border-left: 1px solid #333333;
+    padding-left: 8px;
+    margin-left: 2px;
+    color: #cccccc;
+}
+
+.grid-sort-select option,
+.grid-sort-select optgroup,
+.grid-sort-order-select option {
+    background: #1c1c1c;
+    color: #eee;
+}
+
+.grid-sort-select optgroup {
+    color: #888;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.grid-filter-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: -8px;
+    margin-bottom: 18px;
+    padding: 6px 0;
+}
+
+.grid-filter-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.grid-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.grid-filter-row-label {
+    color: #888888;
+    font-size: 11.5px;
+    font-weight: 600;
+    min-width: 60px;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.grid-filter-chips-list {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.grid-filter-chip {
+    background: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    color: #aaa;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.grid-filter-chip:hover {
+    background: #282828;
+    color: #fff;
+    border-color: #666;
+}
+
+.grid-filter-chip.active {
+    background: #ffffff;
+    color: #121212;
+    border-color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.grid-filter-chip-cal.active {
+    background: #f5c842;
+    color: #111111;
+    border-color: #f5c842;
+    box-shadow: 0 2px 8px rgba(245, 200, 66, 0.3);
+}
+
+.grid-filter-reset-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    color: #aaa;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.grid-filter-reset-btn:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
 }
 
 .grid-search-box {
@@ -346,6 +527,20 @@ body {
     gap: 16px;
 }
 
+.empty-message {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    color: #888888;
+    font-size: 16px;
+    padding: 60px 20px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .grid-card {
     background: #1a1a1a;
     border: 2px solid #333;
@@ -370,6 +565,7 @@ body {
 }
 
 .grid-card-image {
+    position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
     background: #0a0a0a;
@@ -386,6 +582,31 @@ body {
     object-fit: contain;
 }
 
+.grid-card-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+}
+
+.grid-card-badge.badge-model {
+    left: 6px;
+    right: auto;
+    background: rgba(30, 80, 200, 0.85);
+    border-color: rgba(100, 160, 255, 0.4);
+}
+
 .grid-card-placeholder {
     color: #555;
     font-size: 14px;
@@ -397,6 +618,130 @@ body {
     color: #ffffff;
     text-align: center;
     word-break: keep-all;
+}
+
+.grid-card-core-specs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 2px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.core-spec-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #181818;
+    border: 1px solid #2e2e2e;
+    color: #9e9e9e;
+    line-height: 1.3;
+    letter-spacing: -0.1px;
+    white-space: nowrap;
+}
+
+.core-spec-tag.spec-caliber {
+    background: #1d1b17;
+    border-color: #383126;
+    color: #c4ae82;
+}
+
+.core-spec-tag.spec-recoil {
+    background: #181c19;
+    border-color: #263328;
+    color: #829f86;
+}
+
+.core-spec-tag.spec-sway {
+    background: #171b1c;
+    border-color: #243033;
+    color: #7e9ca0;
+}
+
+.core-spec-tag.spec-armor {
+    background: #181a1d;
+    border-color: #262c33;
+    color: #8595a8;
+}
+
+.core-spec-tag.spec-shock {
+    background: #1d1a18;
+    border-color: #332b25;
+    color: #aa8f76;
+}
+
+.core-spec-tag.spec-cargo {
+    background: #1c181d;
+    border-color: #302633;
+    color: #9c89a3;
+}
+
+.core-spec-tag.spec-light {
+    background: #1c1c17;
+    border-color: #333325;
+    color: #abaa80;
+}
+
+.core-spec-tag.spec-optic {
+    background: #171c1c;
+    border-color: #243333;
+    color: #829f9f;
+}
+
+.core-spec-tag.spec-capacity {
+    background: #191919;
+    border-color: #2f2f2f;
+    color: #999999;
+}
+
+.core-spec-tag.spec-rpm {
+    background: #1d181c;
+    border-color: #332630;
+    color: #a8829d;
+}
+
+.core-spec-tag.spec-moa {
+    background: #171c1b;
+    border-color: #243330;
+    color: #82a89d;
+}
+
+.core-spec-tag.spec-velocity {
+    background: #181b1d;
+    border-color: #262f33;
+    color: #829da8;
+}
+
+.core-spec-tag.spec-ergo {
+    background: #1b1c18;
+    border-color: #303324;
+    color: #9da882;
+}
+
+.core-spec-tag.spec-weight {
+    background: #1a1a1a;
+    border-color: #333333;
+    color: #aaaaaa;
+}
+
+.core-spec-tag.spec-size {
+    background: #19181c;
+    border-color: #2d2633;
+    color: #9f8fb3;
+}
+
+/* 정렬 기준 스펙 하이라이트 */
+.core-spec-tag.spec-highlight {
+    background: #24221c !important;
+    border-color: #8c734b !important;
+    color: #e5cf9e !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
 }
 
 /* 플로팅 네비게이션 독 (이전으로 / 목록으로 / 맨 위로) */
@@ -517,38 +862,11 @@ body {
     margin: 0 2px;
 }
 
-/* "이전으로 / 목록으로" 레거시 호환 및 상단 영역 */
+/* 레거시 네비게이션 영역 */
 .back-to-grid-wrap {
     display: none;
 }
 
-/* 관리자 섹션 */
-.admin-section {
-    display: flex;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    flex-shrink: 0;
-}
-
-.admin-btn {
-    width: auto;
-    padding: 9px 14px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.admin-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
 
 /* 메인 콘텐츠 영역 */
 .main-content {
@@ -604,7 +922,7 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* 특정 로고는 필터 제거 (원본 색상 유지) */
+/* 특정 로고 원본 색상 유지 */
 .weapon-manufacturer-logo.logo-no-filter {
     filter: none;
 }
@@ -637,7 +955,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* 갤러리 패널: 타이틀 + 사진 (간격 최소화), 설명 길이와 무관하게 크기 유지 */
+/* 갤러리 패널 */
 .gallery-panel-wrapper {
     width: 100%;
     margin-bottom: 30px;
@@ -677,7 +995,7 @@ body {
     overflow: hidden;
 }
 
-/* 화살표: 이미지 위 오버레이, 검은색 바 없음, 잔상 제거 */
+/* 이미지 탐색 화살표 */
 .image-nav-arrow {
     position: absolute;
     top: 0;
@@ -810,7 +1128,7 @@ body {
 }
 
 .weapon-stats-spacer {
-    width: 72px; /* 비교 버튼과 균형 맞추기용 */
+    width: 72px;
 }
 
 .weapon-stats-title {
@@ -818,7 +1136,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: #ffffff;
-    font-size: 28px; /* 총기 이름(36px)보다 살짝 작게 */
+    font-size: 28px;
 }
 
 .weapon-compare-btn {
@@ -844,7 +1162,7 @@ body {
 
 .weapon-stat-row {
     display: block;
-    font-size: 16px; /* 설명 텍스트와 동일한 크기 */
+    font-size: 16px;
     line-height: 1.8;
     color: #ffffff;
 }
@@ -883,6 +1201,39 @@ body {
 
 .weapon-stat-bar-compare .weapon-stat-bar-fill.stat-worse {
     background: #e74c3c;
+}
+
+/* 방호 부위 / 사용 탄종 / 발사 모드 칩 스타일 */
+.weapon-stat-row-areas {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.protection-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.protection-area-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    font-size: 13px;
+    color: #e6e6e6;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
 }
 
 /* 기어 필터 충전 패널 */
@@ -959,432 +1310,6 @@ body {
     background: #222222;
 }
 
-.weapon-detail-actions {
-    margin-top: 30px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.weapon-card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #333;
-}
-
-.weapon-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    border-color: #ffffff;
-}
-
-.weapon-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.weapon-description {
-    color: #cccccc;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.empty-message {
-    text-align: center;
-    color: #666;
-    font-size: 18px;
-    padding: 60px 20px;
-}
-
-/* 관리자 모드 버튼 */
-.admin-actions {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.add-weapon-btn {
-    padding: 12px 30px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.add-weapon-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.weapon-actions {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.edit-btn, .delete-btn {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.edit-btn {
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-}
-
-.edit-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.delete-btn {
-    background: #333333;
-    color: #ffffff;
-    border: 2px solid #666666;
-}
-
-.delete-btn:hover {
-    background: #444444;
-    border-color: #888888;
-}
-
-/* 모달 스타일 */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.3s;
-}
-
-/* 이미지 모달은 기본 모달 스타일을 덮어씀 */
-.modal.image-modal {
-    display: none;
-}
-
-.modal-content {
-    background-color: #1a1a1a;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.1);
-    animation: slideDown 0.3s;
-    border: 2px solid #ffffff;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close {
-    color: #ffffff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 20px;
-}
-
-.close:hover {
-    color: #ccc;
-}
-
-.modal-content h2 {
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #444;
-    border-radius: 6px;
-    font-size: 14px;
-    background: #000000;
-    color: #ffffff;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #ffffff;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #666;
-}
-
-.form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.submit-btn {
-    flex: 1;
-    padding: 12px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.cancel-btn {
-    flex: 1;
-    padding: 12px;
-    background: #333333;
-    color: #ffffff;
-    border: 2px solid #666666;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cancel-btn:hover {
-    background: #444444;
-    border-color: #888888;
-}
-
-/* 이미지 확대 모달 */
-.image-modal {
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.image-modal[style*="display: flex"],
-.image-modal[style*="display:block"] {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.close-image {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001;
-    transition: all 0.3s ease;
-    line-height: 1;
-    background: rgba(0, 0, 0, 0.5);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.close-image:hover {
-    color: #ccc;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.modal-image-content {
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
-    animation: zoomIn 0.3s ease;
-    margin: auto !important;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    transform: scale(1.5);
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .topbar {
-        position: relative;
-        height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px 16px;
-    }
-
-    .topbar-title {
-        font-size: 17px;
-        flex: 1 1 auto;
-    }
-
-    .panel-switcher {
-        flex-shrink: 1;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-    }
-
-    .panel-btn {
-        padding: 9px 14px;
-        font-size: 13px;
-    }
-
-    .search-container {
-        max-width: none;
-        flex: 1 1 100%;
-        order: 3;
-    }
-
-    .category-dropdown {
-        position: relative;
-        top: 0;
-    }
-
-    .main-content {
-        margin-top: 0;
-        padding: 20px;
-    }
-
-    .weapon-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 12px;
-    }
-
-    .weapon-detail-card {
-        padding: 30px 20px;
-    }
-    
-    .weapon-detail-name {
-        font-size: 28px;
-    }
-    
-    .weapon-manufacturer-text {
-        font-size: 18px;
-    }
-    
-    .weapon-stats-title {
-        font-size: 22px;
-    }
-    
-    .weapon-compare-btn {
-        font-size: 11px;
-        padding: 3px 8px;
-    }
-    
-    .weapon-stats-spacer {
-        width: 60px;
-    }
-    
-    .weapon-detail-description {
-        font-size: 14px;
-        padding: 15px;
-    }
-    
-    .weapon-stat-row {
-        font-size: 14px;
-    }
-    
-    .modal-content {
-        padding: 20px;
-        margin: 10% auto;
-    }
-    
-    .close-image {
-        top: 10px;
-        right: 20px;
-        font-size: 32px;
-        width: 40px;
-        height: 40px;
-    }
-    
-    .weapon-detail-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .edit-btn, .delete-btn {
-        width: 100%;
-    }
-
     .floating-nav-dock {
         bottom: 16px;
         right: 16px;
@@ -1410,13 +1335,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 8px;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .gallery-mode-switch {
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
+    margin: 0 auto;
 }
 
 .gallery-mode-btn {
@@ -1626,6 +1557,252 @@ model-viewer.weapon-model-viewer:active {
     align-items: center;
     gap: 8px;
     margin-bottom: 16px;
+}
+
+/* 모달 공통 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+}
+
+.modal.image-modal {
+    display: none;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.1);
+    animation: slideDown 0.3s;
+    border: 2px solid #ffffff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/* 이미지 확대 모달 */
+.image-modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.image-modal[style*="display: flex"],
+.image-modal[style*="display:block"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.close-image {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    transition: all 0.3s ease;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-image:hover {
+    color: #ccc;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-image-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+    margin: auto !important;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .topbar {
+        position: relative;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .topbar-title {
+        font-size: 17px;
+        flex: 1 1 auto;
+    }
+
+    .panel-switcher {
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .panel-btn {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .search-container {
+        max-width: none;
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .category-dropdown {
+        position: relative;
+        top: 0;
+    }
+
+    .main-content {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .weapon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .weapon-detail-card {
+        padding: 30px 20px;
+    }
+    
+    .weapon-detail-name {
+        font-size: 28px;
+    }
+    
+    .weapon-manufacturer-text {
+        font-size: 18px;
+    }
+    
+    .weapon-stats-title {
+        font-size: 22px;
+    }
+    
+    .weapon-compare-btn {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .weapon-stats-spacer {
+        width: 60px;
+    }
+    
+    .weapon-detail-description {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .weapon-stat-row {
+        font-size: 14px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 10% auto;
+    }
+    
+    .close-image {
+        top: 10px;
+        right: 20px;
+        font-size: 32px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .floating-nav-dock {
+        bottom: 16px;
+        right: 16px;
+        padding: 5px 6px;
+        gap: 5px;
+    }
+
+    .floating-nav-btn {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+
+    .floating-top-btn {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 

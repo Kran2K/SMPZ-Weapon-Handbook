@@ -158,6 +158,12 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -230,6 +236,14 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -276,6 +290,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -320,6 +341,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -362,6 +390,10 @@ const weaponsData = {
                 "SMPZ_Ammo_127x55_PS12A",
                 "SMPZ_Ammo_127x55_PS12",
                 "SMPZ_Ammo_127x55_PS12B"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -446,6 +478,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -602,6 +641,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -758,6 +804,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -912,6 +965,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -1069,6 +1129,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -1143,6 +1210,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -1193,6 +1267,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -1342,6 +1423,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -1425,6 +1513,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -1481,6 +1576,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -1584,6 +1686,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -1742,6 +1851,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -1894,6 +2010,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -2048,6 +2171,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2199,6 +2329,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2355,6 +2492,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2409,6 +2553,13 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP4"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2463,6 +2614,13 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP4"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2549,6 +2707,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -2635,6 +2800,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -2712,6 +2884,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -2777,6 +2956,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -2841,6 +3027,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -2887,6 +3080,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -2965,6 +3165,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3044,6 +3251,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3123,6 +3337,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3210,6 +3431,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -3298,6 +3526,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -3385,6 +3620,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -3473,6 +3715,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -3548,6 +3797,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3624,6 +3880,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3698,6 +3961,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3742,6 +4012,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -3896,6 +4173,12 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -4049,6 +4332,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -4175,6 +4465,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -4217,6 +4514,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -4302,6 +4605,12 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -4377,6 +4686,12 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".366 TKM"
             ]
         },
         {
@@ -4531,6 +4846,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -4687,6 +5009,12 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -4841,6 +5169,13 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -4925,6 +5260,13 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -5079,6 +5421,13 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP45"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -5171,6 +5520,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "6.8x51mm"
             ]
         },
         {
@@ -5217,6 +5573,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -5296,6 +5659,13 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP45"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -5340,6 +5710,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         }
     ],
@@ -5394,6 +5771,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5435,6 +5818,12 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -5478,6 +5867,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_50BMG_M33",
                 "SMPZ_Ammo_50BMG_M903"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -5513,6 +5908,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_25x59_HE"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -5550,6 +5951,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_408CT"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".408 CheyTac"
             ]
         },
         {
@@ -5600,6 +6007,13 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5650,6 +6064,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5743,6 +6163,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5836,6 +6262,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5873,6 +6305,12 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -5897,6 +6335,12 @@ const weaponsData = {
             "itemSlots": 27,
             "chamberableFrom": [
                 "Ammo_357"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".357 Magnum"
             ]
         },
         {
@@ -5933,6 +6377,12 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".366 TKM"
             ]
         },
         {
@@ -5967,6 +6417,12 @@ const weaponsData = {
                 "Ammo_762x54",
                 "Ammo_762x54Tracer",
                 "Mag_CLIP762x54_5Rnd"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6011,6 +6467,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_300Win_FMJ",
                 "SMPZ_Ammo_300Win_AP"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".300 Win"
             ]
         },
         {
@@ -6058,6 +6520,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6113,6 +6581,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6205,6 +6679,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6243,6 +6723,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6286,6 +6772,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6328,6 +6820,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6370,6 +6868,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6412,6 +6916,12 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -6454,6 +6964,12 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -6497,6 +7013,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -6543,6 +7065,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6579,6 +7107,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_50BMG_M33",
                 "SMPZ_Ammo_50BMG_M903"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -6616,6 +7150,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6655,6 +7196,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         }
     ],
@@ -6691,6 +7238,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -6735,6 +7289,13 @@ const weaponsData = {
                 "SMPZ_Ammo_57x28_L191",
                 "SMPZ_Ammo_57x28_SB193",
                 "SMPZ_Ammo_57x28_SS190"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.7x28mm"
             ]
         },
         {
@@ -6775,6 +7336,14 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -6823,6 +7392,13 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -6870,6 +7446,13 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -6911,6 +7494,13 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_9x19"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -6944,6 +7534,13 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_762x25"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         },
         {
@@ -6988,6 +7585,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7027,6 +7631,13 @@ const weaponsData = {
                 "SMPZ_Ammo_9x21_7U4",
                 "SMPZ_Ammo_9x21_BTgzh",
                 "SMPZ_Ammo_9x21_7N42"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -7070,6 +7681,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_9x19"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7117,6 +7734,14 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7160,6 +7785,14 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         }
     ],
@@ -7198,6 +7831,12 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7235,6 +7874,12 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7269,6 +7914,12 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7304,6 +7955,12 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7335,6 +7992,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -7366,6 +8029,13 @@ const weaponsData = {
                 "Ammo_12gaPellets",
                 "Ammo_12gaSlug",
                 "Mag_12gaSnaploader_2Rnd"
+            ],
+            "modes": [
+                "Single",
+                "Double"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7399,6 +8069,12 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7445,6 +8121,13 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         }
     ],
@@ -7480,6 +8163,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7515,6 +8204,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7548,6 +8243,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_45ACP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -7581,6 +8282,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_45ACP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -7626,6 +8333,12 @@ const weaponsData = {
                 "SMPZ_Ammo_57x28_L191",
                 "SMPZ_Ammo_57x28_SB193",
                 "SMPZ_Ammo_57x28_SS190"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "5.7x28mm"
             ]
         },
         {
@@ -7667,6 +8380,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7705,6 +8424,13 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7742,6 +8468,12 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -7778,6 +8510,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_45ACP",
                 "SMPZ_Ammo_45ACP_AP"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -7811,6 +8549,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_357"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".357 Magnum"
             ]
         },
         {
@@ -7850,6 +8594,12 @@ const weaponsData = {
                 "SMPZ_Ammo_50AE_JSP",
                 "SMPZ_Ammo_50AE_COPPER",
                 "SMPZ_Ammo_50AE_FMJ"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                ".50 AE"
             ]
         },
         {
@@ -7889,6 +8639,12 @@ const weaponsData = {
                 "SMPZ_Ammo_9x21_7U4",
                 "SMPZ_Ammo_9x21_BTgzh",
                 "SMPZ_Ammo_9x21_7N42"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -7921,6 +8677,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7948,6 +8710,12 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_762x25"
+            ],
+            "modes": [
+                "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         }
     ],
@@ -7995,6 +8763,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -8041,6 +8815,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -8081,6 +8861,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -8120,6 +8906,12 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -8185,6 +8977,13 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -8233,6 +9032,12 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         }
     ],
@@ -8278,6 +9083,12 @@ const weaponsData = {
                 "Ammo_40mm_Smoke_Green",
                 "Ammo_40mm_Smoke_White",
                 "Ammo_40mm_Smoke_Black"
+            ],
+            "modes": [
+                "Single"
+            ],
+            "calibers": [
+                "40mm"
             ]
         }
     ]
@@ -8351,99 +9162,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_Altyn_Green",
-            "name": "Altyn Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "60",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "60",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Aventail",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "15",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetAventail"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Cover",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "10",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.0 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
             "name": "BNTI LShZ-2DTM Helmet",
             "category": "헬멧",
@@ -8478,29 +9196,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
-            "name": "Crye Precision AirFrame Chops",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Crye Precision",
-            "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "15",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
             "name": "Crye Precision AirFrame Helmet",
             "category": "헬멧",
@@ -8532,29 +9227,6 @@ const gearData = {
                 "Visor",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-            "name": "Crye Precision AirFrame M-LOK Chops",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Crye Precision",
-            "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "15",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "AFMLOKChops"
             ]
         },
         {
@@ -8622,37 +9294,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-            "name": "DevTac Ronin Respirator",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "85",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "80",
-                "hitpoints": "160",
-                "weight": "2.4 kg"
-            },
-            "itemSize": "4x4",
-            "itemSlots": 16,
-            "inventorySlots": [
-                "Headgear"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Headgear"
-            ],
-            "attachmentSlots": [
-                "NVG",
-                "weaponFlashlightSecond"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_DA_Bastion_Black",
             "name": "Diamond Age Bastion Helmet",
             "category": "헬멧",
@@ -8681,55 +9322,6 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "HelmetPlate"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_DA_Bastion",
-            "name": "Diamond Age Bastion Helmet Armor Plate",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "70",
-                "hitpoints": "100",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_NeoSteel_Black",
-            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -8794,29 +9386,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_FORT_KiverM",
-            "name": "FORT Kiver-M Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_FORT_KiverM_Alpine",
             "name": "FORT Kiver-M Helmet",
             "category": "헬멧",
@@ -8844,104 +9413,6 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_Trooper_Black",
-            "name": "Galac-Tac Armor Mandalorian Helmet Mask",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "0.4 kg"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_Caiman",
-            "name": "Galvion Caiman Fixed Arm Visor",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "15",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "hitpoints": "100",
-                "weight": "0.3 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_Caiman_Gray",
-            "name": "Galvion Caiman Hybrid Ballistic Applique",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "hitpoints": "100",
-                "weight": "0.7 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_Caiman_Black",
-            "name": "Galvion Caiman Hybrid Ballistic Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -9113,29 +9584,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_Maska_Green",
-            "name": "Maska-1SCH Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "65",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "65",
-                "hitpoints": "110",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
             "name": "NPP KIASS Tor-2 Ballistic Helmet",
             "category": "헬멧",
@@ -9166,75 +9614,6 @@ const gearData = {
                 "Visor",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
-            "name": "NPP KIASS Tor-2 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
-            "name": "NPP KIASS Tor2 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_OpsCore_FAST_Black",
-            "name": "Ops-Core FAST Gunsight Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -9274,54 +9653,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
-            "name": "Ops-Core FAST Multi-Hit Ballistic Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
-            "name": "Ops-Core SLAAP Armor Helmet Plate",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "10",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "1.3 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_RYS_T_Black",
             "name": "Rys-T",
             "category": "헬멧",
@@ -9348,29 +9679,6 @@ const gearData = {
                 "Headgear"
             ],
             "attachmentSlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_RYS_T_Black",
-            "name": "Rys-T Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "50",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "90",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
                 "Visor"
             ]
         },
@@ -9466,29 +9774,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
-            "name": "Team Wendy Exfil Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "0.8 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_Vulkan_Black",
             "name": "Vulkan-5 LShZ-5",
             "category": "헬멧",
@@ -9515,29 +9800,6 @@ const gearData = {
                 "Headgear"
             ],
             "attachmentSlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_Vulkan",
-            "name": "Vulkan-5 LShZ-5 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "검은색",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
                 "Visor"
             ]
         },
@@ -9570,11 +9832,562 @@ const gearData = {
             "attachmentSlots": [
                 "Visor"
             ]
+        }
+    ],
+    "헬멧 부착물": [
+        {
+            "id": "SMPZ_Visor_Altyn_Green",
+            "name": "Altyn Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "60",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "60",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Aventail",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "15",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetAventail"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Cover",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "10",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.0 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
+            "name": "Crye Precision AirFrame Chops",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Crye Precision",
+            "manufacturerLogo": "assets/crye-logo.png",
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "15",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
+            "name": "Crye Precision AirFrame M-LOK Chops",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Crye Precision",
+            "manufacturerLogo": "assets/crye-logo.png",
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "15",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "AFMLOKChops"
+            ]
+        },
+        {
+            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
+            "name": "DevTac Ronin Respirator",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "85",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "80",
+                "hitpoints": "160",
+                "weight": "2.4 kg"
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightSecond"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_DA_Bastion",
+            "name": "Diamond Age Bastion Helmet Armor Plate",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "70",
+                "hitpoints": "100",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_NeoSteel_Black",
+            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_FORT_KiverM",
+            "name": "FORT Kiver-M Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_Trooper_Black",
+            "name": "Galac-Tac Armor Mandalorian Helmet Mask",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "0.4 kg"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Caiman",
+            "name": "Galvion Caiman Fixed Arm Visor",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "15",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "hitpoints": "100",
+                "weight": "0.3 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_Caiman_Gray",
+            "name": "Galvion Caiman Hybrid Ballistic Applique",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "hitpoints": "100",
+                "weight": "0.7 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_Caiman_Black",
+            "name": "Galvion Caiman Hybrid Ballistic Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Maska_Green",
+            "name": "Maska-1SCH Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "65",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "65",
+                "hitpoints": "110",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
+            "name": "NPP KIASS Tor-2 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
+            "name": "NPP KIASS Tor2 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_OpsCore_FAST_Black",
+            "name": "Ops-Core FAST Gunsight Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
+            "name": "Ops-Core FAST Multi-Hit Ballistic Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
+            "name": "Ops-Core SLAAP Armor Helmet Plate",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "10",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "1.3 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_RYS_T_Black",
+            "name": "Rys-T Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "50",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "90",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
+            "name": "Team Wendy Exfil Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "0.8 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Vulkan",
+            "name": "Vulkan-5 LShZ-5 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "검은색",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
             "name": "ZSh-1-2M Face Shield",
-            "category": "헬멧",
+            "category": "헬멧 부착물",
             "image": "",
             "images": [],
             "description": "",
@@ -9629,6 +10442,14 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -9656,6 +10477,14 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -9686,6 +10515,14 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -9719,6 +10556,17 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
@@ -9753,6 +10601,14 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -9780,6 +10636,13 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -9814,6 +10677,17 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
@@ -9845,6 +10719,15 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
@@ -9878,6 +10761,17 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
@@ -9910,6 +10804,17 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
@@ -9944,11 +10849,72 @@ const gearData = {
             "attachmentSlots": [
                 "VestHolster",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         },
         {
-            "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
-            "name": "NPP KIASS Kora-Kulon Body Armor",
+            "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
+            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier",
+            "category": "전신 방탄복",
+            "image": "assets/mass.png",
+            "images": [
+                "assets/mass.png",
+                "assets/mass_2.png",
+                "assets/mass_3.png"
+            ],
+            "description": "First Spear Siege-R Optimized M.A.S.S. 플레이트 캐리어는 미국의 전술 장비 제조사인 First Spear에서 개발한 혁신적인 중량급 플레이트 캐리어입니다. 이 제품은 기존의 무거운 웨빙 대신 레이저 커팅 기술인 6/12™ 시스템을 적용하여 전체 무게를 획기적으로 줄였으며\n독자적인 Tubes™ 퀵 릴리즈 시스템을 통해 단 한 번의 조작으로 신속한 착용과 탈거가 가능합니다. 특히 M.A.S.S. 옵션을 선택할 경우\n목, 어깨, 사타구니 등 전신 방호 파츠를 추가로 결합할 수 있어, 경량화와 최대 수준의 방호력을 동시에 요구하는 특수부대 및 법 집행 기관의 중갑 대원들에게 최적화된 장비입니다.",
+            "manufacturer": "FirstSpear",
+            "manufacturerLogo": "assets/firstspear-logo.png",
+            "manufacturerUrl": "https://www.first-spear.com/",
+            "stats": {
+                "bulletDamageProtection": "80",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "80",
+                "hitpoints": "255",
+                "weight": "25.0 kg"
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "7x10",
+            "itemSlots": 70,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
+            "name": "Eagle Industries MMAC Plate Carrier",
             "category": "전신 방탄복",
             "image": "",
             "images": [],
@@ -9957,20 +10923,124 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "35",
+                "bulletDamageProtection": "65",
                 "bloodDamageProtection": "0",
-                "shockDamageProtection": "35",
-                "hitpoints": "120",
-                "weight": "11.1 kg"
+                "shockDamageProtection": "50",
+                "hitpoints": "190",
+                "weight": "8.0 kg"
             },
-            "itemSize": "4x4",
-            "itemSlots": 16,
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
             "inventorySlots": [
                 "Vest"
             ],
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
+            "name": "Tasmanian Tiger MKIII Plate Carrier",
+            "category": "전신 방탄복",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "55",
+                "hitpoints": "225",
+                "weight": "8.0 kg"
+            },
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
+            "name": "LBT-6094A Slick",
+            "category": "전신 방탄복",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "225",
+                "weight": "6.2 kg"
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
             ]
         }
     ],
@@ -10000,35 +11070,13 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
-            "name": "ANA Tactical Alpha Chest Rig",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "ANA Tactical에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.7 kg"
-            },
-            "cargoSize": "8x5",
-            "cargoSlots": 40,
-            "itemSize": "5x6",
-            "itemSlots": 30,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10060,6 +11108,13 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10092,6 +11147,13 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10126,6 +11188,13 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10160,71 +11229,13 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_Triton_M43A_Black",
-            "name": "Dynaforce Triton M43-A Chest Harness",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "다이나포스에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.3 kg"
-            },
-            "cargoSize": "5x3",
-            "cargoSlots": 15,
-            "itemSize": "4x5",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
-            "name": "Eagle Industries MMAC Plate Carrier",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "65",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "190",
-                "weight": "8.0 kg"
-            },
-            "cargoSize": "4x5",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "Vest"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "Case_Front",
-                "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK",
-                "Tourniquet"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10260,45 +11271,13 @@ const gearData = {
             "attachmentSlots": [
                 "PatchLarge",
                 "Pouch_IFAK"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
-            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier",
-            "category": "플레이트 캐리어",
-            "image": "assets/mass.png",
-            "images": [
-                "assets/mass.png",
-                "assets/mass_2.png",
-                "assets/mass_3.png"
             ],
-            "description": "First Spear Siege-R Optimized M.A.S.S. 플레이트 캐리어는 미국의 전술 장비 제조사인 First Spear에서 개발한 혁신적인 중량급 플레이트 캐리어입니다. 이 제품은 기존의 무거운 웨빙 대신 레이저 커팅 기술인 6/12™ 시스템을 적용하여 전체 무게를 획기적으로 줄였으며\n독자적인 Tubes™ 퀵 릴리즈 시스템을 통해 단 한 번의 조작으로 신속한 착용과 탈거가 가능합니다. 특히 M.A.S.S. 옵션을 선택할 경우\n목, 어깨, 사타구니 등 전신 방호 파츠를 추가로 결합할 수 있어, 경량화와 최대 수준의 방호력을 동시에 요구하는 특수부대 및 법 집행 기관의 중갑 대원들에게 최적화된 장비입니다.",
-            "manufacturer": "FirstSpear",
-            "manufacturerLogo": "assets/firstspear-logo.png",
-            "manufacturerUrl": "https://www.first-spear.com/",
-            "stats": {
-                "bulletDamageProtection": "80",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "80",
-                "hitpoints": "255",
-                "weight": "25.0 kg"
-            },
-            "cargoSize": "5x4",
-            "cargoSlots": 20,
-            "itemSize": "7x10",
-            "itemSlots": 70,
-            "inventorySlots": [
-                "Vest"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "Case_Front",
-                "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10331,62 +11310,13 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_LBT1961A_Gray",
-            "name": "LBT-1961A Load Bearing Chest Rig",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "런던 브리지 트레이딩(London Bridge Trading)에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.4 kg"
-            },
-            "cargoSize": "5x4",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
-            "name": "LBT-6094A Slick",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "225",
-                "weight": "6.2 kg"
-            },
-            "itemSize": "5x5",
-            "itemSlots": 25,
-            "inventorySlots": [
-                "Vest"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10414,11 +11344,18 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
-            "id": "SMPZ_ChestRig_PoyasAB_Green",
-            "name": "Poyas-A + Poyas-B Gear Chest Rig",
+            "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
+            "name": "NPP KIASS Kora-Kulon Body Armor",
             "category": "플레이트 캐리어",
             "image": "",
             "images": [],
@@ -10427,22 +11364,27 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "0",
+                "bulletDamageProtection": "35",
                 "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.7 kg"
+                "shockDamageProtection": "35",
+                "hitpoints": "120",
+                "weight": "11.1 kg"
             },
-            "cargoSize": "7x5",
-            "cargoSlots": 35,
-            "itemSize": "5x6",
-            "itemSlots": 30,
+            "itemSize": "4x4",
+            "itemSlots": 16,
             "inventorySlots": [
-                "ChestRig"
+                "Vest"
             ],
             "itemInfo": [
                 "Clothing",
-                "Back"
+                "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
@@ -10478,11 +11420,18 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ]
         },
         {
-            "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
-            "name": "Tasmanian Tiger MKIII Plate Carrier",
+            "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
+            "name": "NPP KIASS Bagariy Plate Carrier",
             "category": "플레이트 캐리어",
             "image": "",
             "images": [],
@@ -10491,16 +11440,12 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "55",
-                "hitpoints": "225",
-                "weight": "8.0 kg"
+                "weight": "10.8 kg"
             },
-            "cargoSize": "4x5",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
+            "cargoSize": "6x5",
+            "cargoSlots": 30,
+            "itemSize": "6x6",
+            "itemSlots": 36,
             "inventorySlots": [
                 "Vest"
             ],
@@ -10510,15 +11455,138 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK",
-                "Tourniquet"
+                "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ]
+        }
+    ],
+    "체스트 리그": [
+        {
+            "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
+            "name": "ANA Tactical Alpha Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "ANA Tactical에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.7 kg"
+            },
+            "cargoSize": "8x5",
+            "cargoSlots": 40,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_Triton_M43A_Black",
+            "name": "Dynaforce Triton M43-A Chest Harness",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "다이나포스에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.3 kg"
+            },
+            "cargoSize": "5x3",
+            "cargoSlots": 15,
+            "itemSize": "4x5",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_LBT1961A_Gray",
+            "name": "LBT-1961A Load Bearing Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "런던 브리지 트레이딩(London Bridge Trading)에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.4 kg"
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_PoyasAB_Green",
+            "name": "Poyas-A + Poyas-B Gear Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.7 kg"
+            },
+            "cargoSize": "7x5",
+            "cargoSlots": 35,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
             ]
         },
         {
             "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
             "name": "WARTECH MK3 TV-104 Chest Rig",
-            "category": "플레이트 캐리어",
+            "category": "체스트 리그",
             "image": "",
             "images": [],
             "description": "제조사: WARTECH",
@@ -11080,35 +12148,6 @@ const gearData = {
             "attachmentSlots": [
                 "Shoulder",
                 "PatchLarge"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
-            "name": "NPP KIASS Bagariy Plate Carrier",
-            "category": "백팩",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "10.8 kg"
-            },
-            "cargoSize": "6x5",
-            "cargoSlots": 30,
-            "itemSize": "6x6",
-            "itemSlots": 36,
-            "inventorySlots": [
-                "Vest"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "VestHolster",
-                "Pouch_IFAK"
             ]
         },
         {
@@ -13031,7 +14070,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13057,7 +14097,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
-                "weight": "814g"
+                "weight": "814g",
+                "magnification": "6-20x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13084,7 +14125,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1150g"
+                "weight": "1150g",
+                "magnification": "3-20x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13115,7 +14157,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "4x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13141,7 +14184,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "5x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13167,7 +14211,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "354g"
+                "weight": "354g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13201,7 +14246,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "388g"
+                "weight": "388g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13235,7 +14281,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "433g"
+                "weight": "433g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13269,7 +14316,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "470g"
+                "weight": "470g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13303,7 +14351,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "255g"
+                "weight": "255g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13335,7 +14384,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "295g"
+                "weight": "295g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -13355,7 +14405,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "255g"
+                "weight": "255g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13387,7 +14438,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "436g"
+                "weight": "436g",
+                "magnification": "3.5x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13417,7 +14469,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "800g"
+                "weight": "800g",
+                "magnification": "3.5x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -13436,7 +14489,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "300g"
+                "weight": "300g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13468,7 +14522,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "349g"
+                "weight": "349g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13500,7 +14555,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "53g"
+                "weight": "53g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -13520,7 +14576,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "84g"
+                "weight": "84g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13540,7 +14597,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "94g"
+                "weight": "94g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13560,7 +14618,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "90g"
+                "weight": "90g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13580,7 +14639,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13602,7 +14662,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.nightforceoptics.com/",
             "stats": {
-                "weight": "1339g"
+                "weight": "1339g",
+                "magnification": "6-25x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13629,7 +14690,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1126g"
+                "weight": "1126g",
+                "magnification": "4-16x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13656,7 +14718,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -13676,7 +14739,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -13696,7 +14760,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.steiner-optics.com/",
             "stats": {
-                "weight": "272g"
+                "weight": "272g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13716,7 +14781,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "160g"
+                "weight": "160g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13736,47 +14802,13 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "60g"
+                "weight": "60g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
             "inventorySlots": [
                 "AimpointACRO"
-            ]
-        },
-        {
-            "id": "SMPZ_Flashlights_WMX",
-            "name": "Insight WMX200 tactical flashlight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "최대 빛 거리: 100m",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "210g"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven",
-                "pistolFlashlight",
-                "pistolFlashlightSecond",
-                "helmetFlashlight"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
             ]
         },
         {
@@ -13790,7 +14822,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "30g"
+                "weight": "30g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13812,7 +14845,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
-                "weight": "50g"
+                "weight": "50g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13834,7 +14868,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
-                "weight": "453g"
+                "weight": "453g",
+                "magnification": "1x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -13857,7 +14892,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/",
             "stats": {
-                "weight": "154g"
+                "weight": "154g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13879,7 +14915,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13901,7 +14938,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "330g"
+                "weight": "330g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13934,7 +14972,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -13960,7 +14999,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -13986,7 +15026,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14012,7 +15053,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14038,7 +15080,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -14058,7 +15101,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "150g"
+                "weight": "150g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14077,7 +15121,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14107,7 +15152,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14137,7 +15183,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14174,7 +15221,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "225g"
+                "weight": "225g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14208,7 +15256,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14241,7 +15290,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1114g"
+                "weight": "1114g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14267,7 +15317,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1114g"
+                "weight": "1114g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14293,7 +15344,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "600g"
+                "weight": "600g",
+                "magnification": "20x"
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -14315,7 +15367,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "520g"
+                "weight": "520g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14334,7 +15387,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "450g"
+                "weight": "450g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14353,7 +15407,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "273g"
+                "weight": "273g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14372,7 +15427,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
-                "weight": "411g"
+                "weight": "411g",
+                "magnification": "4x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14399,7 +15455,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14428,7 +15485,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14457,7 +15515,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14486,7 +15545,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14513,7 +15573,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "854g"
+                "weight": "854g",
+                "magnification": "3-24x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14540,7 +15601,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1310g"
+                "weight": "1310g",
+                "magnification": "5-25x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14567,7 +15629,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/milkor-logo.png",
             "manufacturerUrl": "https://milkorusa.com/",
             "stats": {
-                "weight": "600g"
+                "weight": "600g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -17238,6 +18301,26 @@ const attachmentData = {
             "inventorySlots": [
                 "X17Receiver"
             ]
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
+            "name": "TX-15 5.56x45 Lightweight Upper Receiver",
+            "category": "리시버",
+            "image": "",
+            "images": [],
+            "description": "AR-15 소총에만 부착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "recoil": "-4%",
+                "weight": "190g"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         }
     ],
     "마운트": [
@@ -17483,7 +18566,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "300g"
+                "weight": "300g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18062,7 +19146,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "70g"
+                "weight": "70g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18106,7 +19191,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "120g"
+                "weight": "120g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18150,7 +19236,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
-                "weight": "70g"
+                "weight": "70g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18804,7 +19891,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23037,7 +24125,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "50g"
+                "weight": "50g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23072,7 +24161,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
-                "weight": "259g"
+                "weight": "259g",
+                "lightDistance": "300m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23107,7 +24197,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23142,7 +24233,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "120g"
+                "weight": "120g",
+                "lightDistance": "300m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23164,7 +24256,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "130g"
+                "weight": "130g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23199,7 +24292,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "210g"
+                "weight": "210g",
+                "lightDistance": "150m"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -23221,7 +24315,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "130g"
+                "weight": "130g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23246,23 +24341,39 @@ const attachmentData = {
             ]
         },
         {
-            "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
-            "name": "TX-15 5.56x45 Lightweight Upper Receiver",
+            "id": "SMPZ_Flashlights_WMX",
+            "name": "Insight WMX200 tactical flashlight",
             "category": "전술 플래시",
             "image": "",
             "images": [],
-            "description": "AR-15 소총에만 부착 가능",
+            "description": "최대 빛 거리: 100m",
             "manufacturer": "",
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "recoil": "-4%",
-                "weight": "190g"
+                "weight": "210g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
             "inventorySlots": [
-                "M4Receiver"
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
             ]
         }
     ],
@@ -23410,6 +24521,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -23436,6 +24550,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -23461,6 +24578,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23486,6 +24606,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23512,6 +24635,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23537,6 +24663,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23562,6 +24691,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23587,6 +24719,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -23613,6 +24748,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -23638,6 +24777,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -23663,6 +24805,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -23689,6 +24834,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         },
         {
@@ -23714,6 +24862,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -23739,6 +24890,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -23764,6 +24918,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -23789,6 +24946,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 Win"
             ]
         },
         {
@@ -23814,6 +24974,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -23839,6 +25002,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23864,6 +25031,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23889,6 +25060,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23914,6 +25089,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23939,6 +25118,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23964,6 +25147,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -23989,6 +25176,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -24014,6 +25204,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -24039,6 +25232,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -24064,6 +25260,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24089,6 +25289,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24114,6 +25318,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24139,6 +25346,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24164,6 +25374,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24189,6 +25402,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24214,6 +25430,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24239,6 +25459,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24264,6 +25488,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24289,6 +25517,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24315,6 +25547,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24340,6 +25576,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24365,6 +25605,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24390,6 +25634,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -24415,6 +25662,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24440,6 +25691,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24465,6 +25720,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -24490,6 +25748,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24515,6 +25777,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24541,6 +25807,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24567,6 +25837,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24592,6 +25866,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24617,6 +25895,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24642,6 +25924,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24667,6 +25952,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24692,6 +25980,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24717,6 +26008,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24743,6 +26037,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24768,6 +26065,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -24793,6 +26093,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24818,6 +26121,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24843,6 +26149,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24868,6 +26177,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24893,6 +26206,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24918,6 +26235,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -24944,6 +26264,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24970,6 +26294,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24995,6 +26323,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -25020,6 +26351,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -25046,6 +26380,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25071,6 +26409,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25097,6 +26439,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -25123,6 +26468,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -25148,6 +26496,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -25173,6 +26524,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25198,6 +26553,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         }
     ],

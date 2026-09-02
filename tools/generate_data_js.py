@@ -453,13 +453,114 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return "", 'empty'
 
         clean_raw = raw_desc.replace('\r\n', ' ').replace('\n', ' ').strip()
-        if clean_raw in google_cache:
-            return google_cache[clean_raw], 'google_translate'
-
         # Live Google Translate API fallback
         translated = google_translate(clean_raw)
         google_cache[clean_raw] = translated
         return translated, 'google_translate'
+
+    # Helper: Extract C++ OpticsInfo Magnification
+    def get_class_optics_info_body(cname):
+        curr = cname
+        visited = set()
+        while curr and curr not in visited and curr in all_classes:
+            visited.add(curr)
+            body = all_classes[curr].get('body', '')
+            if 'class OpticsInfo' in body:
+                m = re.search(r'\bclass\s+OpticsInfo\b[^{]*\{', body)
+                if m:
+                    start_idx = m.end() - 1
+                    depth = 1
+                    i = start_idx + 1
+                    n = len(body)
+                    while i < n and depth > 0:
+                        if body[i] == '{': depth += 1
+                        elif body[i] == '}': depth -= 1
+                        i += 1
+                    return body[start_idx+1:i-1]
+            curr = all_classes[curr].get('parent')
+        return None
+
+    def eval_safe_expr(expr_str):
+        cleaned = re.sub(r'[^0-9+\-*/.()]', '', expr_str)
+        if not cleaned: return None
+        try:
+            return eval(cleaned, {"__builtins__": None}, {})
+        except:
+            return None
+
+    def extract_optic_magnification(item_id):
+        oi_body = get_class_optics_info_body(item_id)
+        if not oi_body:
+            return None
+        
+        # 1. discretefov[]
+        dfov_m = re.search(r'discretefov\[\]\s*=\s*\{([^}]+)\};', oi_body, re.IGNORECASE)
+        if dfov_m:
+            raw_list = [x.strip().strip('"\'') for x in dfov_m.group(1).split(',')]
+            zooms = []
+            for r in raw_list:
+                if '/' in r:
+                    parts = r.split('/')
+                    val = eval_safe_expr(parts[1])
+                    if val is not None:
+                        zooms.append(val)
+                else:
+                    val = eval_safe_expr(r)
+                    if val is not None and val > 0:
+                        mag = 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
+                        zooms.append(mag)
+            if zooms:
+                min_z = min(zooms)
+                max_z = max(zooms)
+                min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
+                max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
+                return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
+        
+        # 2. opticsZoomMin / Max
+        min_m = re.search(r'opticsZoomMin\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+        max_m = re.search(r'opticsZoomMax\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+        if min_m and max_m:
+            min_raw = min_m.group(1).strip()
+            max_raw = max_m.group(1).strip()
+            def calc_mag(s):
+                if '/' in s:
+                    parts = s.split('/')
+                    val = eval_safe_expr(parts[1])
+                    return val if val is not None else 1.0
+                val = eval_safe_expr(s)
+                if val is not None and val > 0:
+                    return 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
+                return 1.0
+            mag1 = calc_mag(min_raw)
+            mag2 = calc_mag(max_raw)
+            min_z = min(mag1, mag2)
+            max_z = max(mag1, mag2)
+            min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
+            max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
+            return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
+            
+        return '1x'
+
+    # Korean Translation map for C++ ProtectionAreas
+    PROTECTION_AREAS_MAP = {
+        'Neck': '목',
+        'Torso': '흉부',
+        'Back': '등',
+        'LeftShoulder': '좌측 어깨',
+        'RightShoulder': '우측 어깨',
+        'Stomach': '복부',
+        'LeftSide': '좌측 옆구리',
+        'RightSide': '우측 옆구리',
+        'Groin': '낭심(사타구니)',
+        'Head': '두부(머리)',
+        'Face': '안면(얼굴)',
+        'Ears': '귀',
+        'Eyes': '눈',
+        'Arms': '팔',
+        'Legs': '다리',
+        'Feet': '발',
+        'Hands': '손'
+    }
 
     # Reconstruct datasets
     sections = [
@@ -474,7 +575,9 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'empty': 0,
         'cargo_items': 0,
         'models_linked': 0,
-        'slots_linked': 0
+        'slots_linked': 0,
+        'protection_items': 0,
+        'optics_magnification': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -486,6 +589,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_name = item.get('name', '')
                 existing_desc = item.get('description', '')
                 item_obj = dict(item)
+                item_obj.pop('modesKo', None)
+                item_obj.pop('protectionAreasKo', None)
                 props = get_inherited_props(item_id)
 
                 # 1. 2D Image Asset mapping
@@ -548,12 +653,50 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
-                # 5. Description resolution
+                # 4-1. Weapon Designated Primary Caliber
+                if sec_name == 'weaponsData':
+                    w_cals = extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props)
+                    if w_cals:
+                        item_obj['calibers'] = w_cals
+
+                # 5. Protection Areas metadata
+                prot_areas = props.get('ProtectionAreas')
+                if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
+                    item_obj['protectionAreas'] = prot_areas
+                    stats_summary['protection_items'] += 1
+
+                # 6. Weapon Fire Modes metadata
+                modes_arr = props.get('modes')
+                if modes_arr and isinstance(modes_arr, list) and len(modes_arr) > 0:
+                    item_obj['modes'] = modes_arr
+
+                # 7. Tactical Flashlight Light Distance
+                if 'Flashlight' in item_id or item_obj.get('category') == '전술 플래시':
+                    desc_short = str(props.get('descriptionShort', ''))
+                    m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.IGNORECASE)
+                    if m_dist:
+                        item_obj.setdefault('stats', {})['lightDistance'] = f"{m_dist.group(1)}m"
+                    elif 'M600' in item_id:
+                        item_obj.setdefault('stats', {})['lightDistance'] = "100m"
+                    elif 'XHP35' in item_id:
+                        item_obj.setdefault('stats', {})['lightDistance'] = "300m"
+
+                # 8. Optics Magnification
+                if item_obj.get('category') == '광학 조준경' or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
+                    mag = extract_optic_magnification(item_id)
+                    if mag:
+                        item_obj.setdefault('stats', {})['magnification'] = mag
+                        stats_summary['optics_magnification'] += 1
+
+                # 9. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
 
                 result_data[sec_name][cat].append(item_obj)
+
+    # 10. Enrich magazine and weapon compatible calibers
+    enrich_magazine_calibers(result_data['weaponsData'], result_data['attachmentData'])
 
     # Save updated translation cache
     save_google_translation_cache(google_cache)
@@ -565,10 +708,158 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
     print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
+    print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
+    print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 
     return result_data['weaponsData'], result_data['gearData'], result_data['attachmentData']
+
+def normalize_ammo_caliber(raw_str):
+    """Normalizes an ammo/caliber string from C++ config (caliberName, bulletType, chamberableFrom) into standard name"""
+    if not raw_str:
+        return None
+    raw = str(raw_str).lower().replace(' ', '').replace('_', '').replace('-', '')
+    raw_lower = str(raw_str).lower()
+    
+    # 1. .50 AE vs .50 BMG
+    if '50ae' in raw or 'actionexpress' in raw:
+        return '.50 AE'
+    if '50bmg' in raw or '12.7x99' in raw or '12.7x108' in raw or (('50cal' in raw or '.50' in raw_lower) and 'bmg' in raw_lower):
+        return '.50 BMG'
+    
+    # 2. Shotgun 12ga
+    if '12ga' in raw or '12gauge' in raw or '12x70' in raw or '12/70' in raw:
+        return '12 Gauge'
+    
+    # 3. Specific Calibers from C++ config
+    if '300blk' in raw or '300aac' in raw or '300blackout' in raw or '300whisper' in raw or '300vmax' in raw or '300bcp' in raw:
+        return '.300 BLK'
+    if '68x51' in raw or '6.8x51' in raw_lower or '277fury' in raw or '277sig' in raw:
+        return '6.8x51mm'
+    if '366tkm' in raw or '.366' in raw_lower:
+        return '.366 TKM'
+    if '556x45' in raw or '5.56x45' in raw_lower or '556nato' in raw or '223rem' in raw:
+        return '5.56x45mm'
+    if '545x39' in raw or '5.45x39' in raw_lower:
+        return '5.45x39mm'
+    if '762x39' in raw or '7.62x39' in raw_lower:
+        return '7.62x39mm'
+    if '762x51' in raw or '7.62x51' in raw_lower or '308win' in raw or '.308' in raw_lower:
+        return '7.62x51mm'
+    if '762x54' in raw or '7.62x54' in raw_lower:
+        return '7.62x54mmR'
+    if '762x25' in raw or '7.62x25' in raw_lower or 'tokarev' in raw:
+        return '7.62x25mm'
+    if '9x19' in raw or 'parabellum' in raw or 'luger' in raw:
+        return '9x19mm'
+    if '9x39' in raw:
+        return '9x39mm'
+    if '9x18' in raw or 'makarov' in raw:
+        return '9x18mm'
+    if '9x21' in raw or 'gyurza' in raw:
+        return '9x21mm'
+    if '45acp' in raw or '.45acp' in raw_lower or '11.43x23' in raw:
+        return '.45 ACP'
+    if '57x28' in raw or '5.7x28' in raw_lower:
+        return '5.7x28mm'
+    if '46x30' in raw or '4.6x30' in raw_lower:
+        return '4.6x30mm'
+    if '338' in raw or 'lapua' in raw:
+        return '.338 Lapua'
+    if '300win' in raw or '300wm' in raw:
+        return '.300 Win'
+    if '408ct' in raw or 'cheytac' in raw or 'm200' in raw:
+        return '.408 CheyTac'
+    if '357' in raw or 'magnum' in raw:
+        return '.357 Magnum'
+    if '22lr' in raw:
+        return '.22 LR'
+    if '40mm' in raw or 'grenade' in raw:
+        return '40mm'
+    
+    return None
+
+def extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props):
+    """
+    Pure C++ driven primary caliber resolution:
+    1. Reads C++ `caliberName` property from inherited class chain.
+    2. Reads C++ `bulletType` property from inherited class chain.
+    3. Analyzes C++ `chamberableFrom[]` array.
+    """
+    # 1. C++ caliberName
+    c_name = props.get('caliberName')
+    if c_name:
+        cal = normalize_ammo_caliber(c_name)
+        if cal:
+            return [cal]
+            
+    # 2. C++ bulletType
+    b_type = props.get('bulletType')
+    if b_type:
+        cal = normalize_ammo_caliber(b_type)
+        if cal:
+            return [cal]
+            
+    # 3. C++ chamberableFrom (single caliber or first primary)
+    chamber = props.get('chamberableFrom') or item_obj.get('chamberableFrom', [])
+    if chamber:
+        cals = []
+        for ammo in chamber:
+            cal = normalize_ammo_caliber(ammo)
+            if cal and cal not in cals:
+                cals.append(cal)
+        if len(cals) == 1:
+            return cals
+        elif len(cals) > 1:
+            return [cals[0]]
+            
+    return []
+
+def enrich_magazine_calibers(weaponsData, attachmentData):
+    """Links weapons' chamberableFrom calibers to compatible magazines, populating calibers[]"""
+    mag_to_calibers = {}
+
+    # 1. Cross-reference weapons to magazines
+    for cat, weapons in weaponsData.items():
+        for weapon in weapons:
+            w_mags = weapon.get('magazines') or []
+            w_chamber = weapon.get('chamberableFrom') or []
+            w_cals = [normalize_ammo_caliber(a) for a in w_chamber]
+            w_cals = [c for c in w_cals if c]
+
+            for m_id in w_mags:
+                if m_id not in mag_to_calibers:
+                    mag_to_calibers[m_id] = set()
+                for c in w_cals:
+                    mag_to_calibers[m_id].add(c)
+
+    # 2. Enrich attachmentData['탄창'] items
+    mag_items = attachmentData.get('탄창', [])
+    for mag in mag_items:
+        m_id = mag.get('id', '')
+        cals_set = mag_to_calibers.get(m_id, set())
+
+        # Fallback heuristics for standalone/custom magazines
+        if not cals_set:
+            id_lower = m_id.lower()
+            name_lower = str(mag.get('name', '')).lower()
+            all_str = f"{id_lower} {name_lower}"
+
+            if any(k in all_str for k in ['stanag', '556', 'ar15', 'pmag_40', 'drumpmag556', 'beta_cmag_556', 'troy_battlemag', 'l5awm']):
+                cals_set = {'5.56x45mm', '.300 BLK'}
+            elif any(k in all_str for k in ['762x51', '68x51', 'l7awm', 'drum_x25', 'sr25', 'm110', 'kac_steel', '308']):
+                cals_set = {'6.8x51mm', '7.62x51mm'}
+            elif any(k in all_str for k in ['762x39', 'akms', 'aka16', 'ultimag_762', '6l10', '6p2', 'x47']):
+                cals_set = {'7.62x39mm', '.366 TKM'}
+            else:
+                single_cal = normalize_ammo_caliber(all_str)
+                if single_cal:
+                    cals_set = {single_cal}
+
+        # Sort calibers deterministically
+        if cals_set:
+            mag['calibers'] = sorted(list(cals_set))
 
 def save_data_js(weaponsData, gearData, attachmentData, output_file=DEFAULT_DATA_JS_PATH):
     """Outputs data.js with formatting"""

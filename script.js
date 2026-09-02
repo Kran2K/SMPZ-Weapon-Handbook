@@ -7,7 +7,6 @@ let currentGear = null;
 let lastGalleryImageIndex = 0;
 let lastGridScrollY = 0;
 let compareTarget = null;
-let isAdmin = false;
 const APP_STATE_KEY = 'smpz_handbook_state';
 
 // 네비게이션 히스토리 스택
@@ -224,7 +223,7 @@ const slotNameMap = {
     'SCARButtstock': 'SCAR Folding Polymer 개머리판',
     'SCARHandguard': 'SCAR 핸드가드',
     'SCARHandguardCASV': 'CASV 핸드가드',
-    'Shoulder': '어깨 보호대',
+    'Shoulder': '어깨',
     'SKSHandguard': 'SKS 가스 튜브 커버',
     'SKSMount': 'UTG SOCOM 레일 마운트',
     'SKSRearsight': 'SKS 가늠자',
@@ -408,10 +407,6 @@ function getItemsForSlotKeys(slotKeys) {
     return results;
 }
 
-// 특정 부착물 슬롯에 장착 가능한 아이템 목록 필터링 (단일 슬롯 키용)
-function getItemsForAttachmentSlot(slotName) {
-    return getItemsForSlotKeys([slotName]);
-}
 
 // 아이템의 attachmentSlots를 그룹화하여 중복 슬롯을 하나로 통합 (부모가 실제 보유한 슬롯만 안전하게 검색)
 function getGroupedAttachmentSlots(rawSlots) {
@@ -554,7 +549,7 @@ function resetToRootGrid() {
     }
 }
 
-// 슬롯 그룹 클릭 시 해당 그룹의 호환 아이템들을 그리드로 표시
+// 호환 아이템 그리드 표시
 function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     pushNavState(captureCurrentView());
     const matchedItems = getItemsForSlotKeys(slotKeys);
@@ -563,17 +558,6 @@ function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     showGridView(fullTitle, matchedItems, 'slot_group_' + slotKeys[0], 'attachment');
 }
 
-// 기존 showSlotAttachments 호환 유지
-function showSlotAttachments(parentItem, slotName) {
-    const groupId = slotGroupMap[slotName];
-    if (groupId && slotGroupDefinitions[groupId]) {
-        const def = slotGroupDefinitions[groupId];
-        showSlotGroupAttachments(parentItem, def.name, def.slots);
-    } else {
-        const slotTitle = getSlotDisplayName(slotName);
-        showSlotGroupAttachments(parentItem, slotTitle, [slotName]);
-    }
-}
 
 // 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링 + 호환 탄창 포함)
 function createAttachmentSlotsSection(item) {
@@ -749,7 +733,7 @@ function getGroupedParentCategories(targetItem) {
     return groups;
 }
 
-// 상위 카테고리 클릭 시 해당 아이템들을 그리드로 표시
+// 상위 아이템 그리드 표시
 function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
     pushNavState(captureCurrentView());
     const sourceName = sourceItem && sourceItem.name ? sourceItem.name : '';
@@ -813,27 +797,6 @@ function createParentCompatibleSection(item) {
 }
 
 
-function loadData() {
-    const savedWeapons = localStorage.getItem('smpz_weapons_data');
-    if (savedWeapons) {
-        try {
-            const parsed = JSON.parse(savedWeapons);
-            Object.assign(weaponsData, parsed);
-        } catch(e) {}
-    }
-    const savedGear = localStorage.getItem('smpz_gear_data');
-    if (savedGear) {
-        try {
-            const parsed = JSON.parse(savedGear);
-            Object.assign(gearData, parsed);
-        } catch(e) {}
-    }
-}
-
-function saveData() {
-    localStorage.setItem('smpz_weapons_data', JSON.stringify(weaponsData));
-    localStorage.setItem('smpz_gear_data', JSON.stringify(gearData));
-}
 
 function saveAppState() {
     const state = {
@@ -990,6 +953,19 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
+
+        // 카테고리 표시
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = attachment.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
         
         if (attachment.stats) {
             const statLabels = {
@@ -1189,12 +1165,6 @@ function updateFloatingNav() {
     }
 }
 
-function createBackToGridButton() {
-    // 플로팅 독으로 대체됨 (레거시 코드 호환용 빈 요소)
-    const wrap = document.createElement('div');
-    wrap.className = 'back-to-grid-wrap';
-    return wrap;
-}
 
 // 마지막으로 표시된 그리드 상태 (상세 화면에서 "목록으로" 이동 시 사용)
 let lastGridState = null;
@@ -1206,8 +1176,522 @@ let preSearchView = null;
 let currentGridRawItems = [];
 let currentGridCategoryKey = null;
 let currentGridPanelType = null;
+let currentGridSortMetric = 'name';
+let currentGridSortOrder = 'asc';
+let currentGridActiveChips = new Set();
 
-// 그리드 아이템 필터링 헬퍼
+// ===========================================================================
+// 데이터 정규화 및 정렬/필터 엔진
+// ===========================================================================
+
+const ATTACHMENT_CATEGORY_SET = new Set([
+    '가스 블록', '개머리판', '광학 조준경', '권총 손잡이', '기계식 조준기',
+    '레이저 표적기', '리시버', '마운트', '방아쇠', '버퍼 튜브', '소염기 / 머즐',
+    '소음기', '양각대', '장전 손잡이', '전방 손잡이', '전술 플래시', '총열', '탄창', '해머', '핸드가드'
+]);
+
+function isAttachmentItem(item) {
+    if (!item) return false;
+    if (item.category && ATTACHMENT_CATEGORY_SET.has(item.category)) return true;
+    if (typeof attachmentData !== 'undefined' && item.category && attachmentData[item.category]) return true;
+    return false;
+}
+
+const DataParsers = {
+    weight: (item) => {
+        const val = item?.stats?.weight;
+        if (!val) return null;
+        const str = String(val).toLowerCase();
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        if (isNaN(num)) return null;
+        if (str.includes('kg')) return num * 1000;
+        return num; // g 단위
+    },
+    capacity: (item) => {
+        const val = item?.stats?.capacity;
+        if (!val) return null;
+        const num = parseInt(String(val).replace(/[^0-9]/g, ''), 10);
+        return isNaN(num) ? null : num;
+    },
+    // 부착물 반동 보정율 (-% 값, 없는 부착물은 0%)
+    recoilReduction: (item) => {
+        const val = item?.stats?.recoil;
+        if (val !== undefined && val !== null && val !== '') {
+            const str = String(val).trim();
+            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
+                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+                return isNaN(num) ? null : num;
+            }
+        }
+        if (isAttachmentItem(item)) {
+            return 0; // 보정치 없음 = 0%
+        }
+        return null;
+    },
+    // 부착물 흔들림 보정율 (음수일수록 우수, 없는 부착물은 0%, 양수는 페널티)
+    swayReduction: (item) => {
+        const val = item?.stats?.sway;
+        if (val !== undefined && val !== null && val !== '') {
+            const str = String(val).trim();
+            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
+                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+                return isNaN(num) ? null : num;
+            }
+        }
+        if (isAttachmentItem(item)) {
+            return 0; // 페널티 없음 = 0%
+        }
+        return null;
+    },
+    // 전술 플래시 조사 거리 (m 단위)
+    lightDistance: (item) => {
+        const val = item?.stats?.lightDistance;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    // 총기 기본 반동 (퍼센트 없는 수치)
+    weaponRecoil: (item) => {
+        const val = item?.stats?.recoil;
+        if (val === undefined || val === null || val === '') return null;
+        const str = String(val).trim();
+        if (str.includes('%')) return null;
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    // 총기 기본 흔들림 (퍼센트 없는 수치)
+    weaponSway: (item) => {
+        const val = item?.stats?.sway;
+        if (val === undefined || val === null || val === '') return null;
+        const str = String(val).trim();
+        if (str.includes('%')) return null;
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    accuracy: (item) => {
+        const val = item?.stats?.accuracy;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    velocity: (item) => {
+        const val = item?.stats?.velocity;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    rpm: (item) => {
+        const val = item?.stats?.rpm;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    ergonomics: (item) => {
+        const val = item?.stats?.ergonomics;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    bulletProtection: (item) => {
+        const val = item?.stats?.bulletDamageProtection;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    shockProtection: (item) => {
+        const val = item?.stats?.shockDamageProtection;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    hitpoints: (item) => {
+        const val = item?.stats?.hitpoints;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    itemSlots: (item) => {
+        return (item?.itemSlots !== undefined && item?.itemSlots !== null) ? Number(item.itemSlots) : null;
+    },
+    cargoSlots: (item) => {
+        return (item?.cargoSlots !== undefined && item?.cargoSlots !== null) ? Number(item.cargoSlots) : null;
+    },
+    magnification: (item) => {
+        const mag = item?.stats?.magnification;
+        if (!mag) return null;
+        const m = /(\d+(?:\.\d+)?)/g;
+        const matches = [...String(mag).matchAll(m)].map(x => parseFloat(x[0]));
+        return matches.length > 0 ? Math.max(...matches) : null;
+    },
+    has3dModel: (item) => {
+        return Boolean(item?.model || item?.model3d);
+    }
+};
+
+// 정렬 기준 설정
+const SORT_METRICS = {
+    name: {
+        id: 'name',
+        label: '이름',
+        group: 'common',
+        defaultOrder: 'asc',
+        compare: (a, b, order) => {
+            const res = (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+            return order === 'desc' ? -res : res;
+        },
+        badge: null
+    },
+    category: {
+        id: 'category',
+        label: '종류',
+        group: 'common',
+        defaultOrder: 'asc',
+        compare: (a, b, order) => {
+            const catA = a.category || '';
+            const catB = b.category || '';
+            const res = catA.localeCompare(catB, 'ko', { numeric: true, sensitivity: 'base' });
+            if (res !== 0) {
+                return order === 'desc' ? -res : res;
+            }
+            return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+        },
+        badge: (item) => item?.category ? `${item.category}` : null
+    },
+    weight: {
+        id: 'weight',
+        label: '무게',
+        group: 'common',
+        parser: DataParsers.weight,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.weight ? `${item.stats.weight}` : null
+    },
+    item_slots: {
+        id: 'item_slots',
+        label: '크기',
+        group: 'common',
+        parser: DataParsers.itemSlots,
+        defaultOrder: 'asc',
+        badge: (item, val) => val ? `${val}칸` : null
+    },
+
+    // 기어 수납
+    cargo_slots: {
+        id: 'cargo_slots',
+        label: '수납 크기',
+        group: 'gear',
+        parser: DataParsers.cargoSlots,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `수납 ${val}칸` : null
+    },
+
+    // 부착물 성능 및 탄창
+    capacity: {
+        id: 'capacity',
+        label: '탄창 용량',
+        group: 'attachment',
+        parser: DataParsers.capacity,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `${val}발` : null
+    },
+
+    // 부착물 성능
+    recoil_reduction: {
+        id: 'recoil_reduction',
+        label: '반동 보정',
+        group: 'attachment',
+        parser: DataParsers.recoilReduction,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.recoil ? `반동 ${item.stats.recoil}` : (isAttachmentItem(item) ? '반동 0%' : null)
+    },
+    sway_reduction: {
+        id: 'sway_reduction',
+        label: '흔들림 보정',
+        group: 'attachment',
+        parser: DataParsers.swayReduction,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.sway ? `흔들림 ${item.stats.sway}` : (isAttachmentItem(item) ? '흔들림 0%' : null)
+    },
+    light_distance: {
+        id: 'light_distance',
+        label: '조사 거리',
+        group: 'attachment',
+        parser: DataParsers.lightDistance,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `${val}m` : null
+    },
+    magnification: {
+        id: 'magnification',
+        label: '조준경 배율',
+        group: 'attachment',
+        parser: DataParsers.magnification,
+        defaultOrder: 'desc',
+        badge: (item) => item?.stats?.magnification ? `배율 ${item.stats.magnification}` : null
+    },
+
+    // 방어구 성능
+    bullet_protection: {
+        id: 'bullet_protection',
+        label: '방탄 보호율',
+        group: 'gear',
+        parser: DataParsers.bulletProtection,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `방탄 ${val}%` : null
+    },
+    shock_protection: {
+        id: 'shock_protection',
+        label: '쇼크 보호율',
+        group: 'gear',
+        parser: DataParsers.shockProtection,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `쇼크 ${val}%` : null
+    },
+    hitpoints: {
+        id: 'hitpoints',
+        label: '내구도',
+        group: 'gear',
+        parser: DataParsers.hitpoints,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `내구도 ${val}` : null
+    },
+
+    // 총기 성능
+    rpm: {
+        id: 'rpm',
+        label: 'RPM',
+        group: 'weapon',
+        parser: DataParsers.rpm,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `${val} RPM` : null
+    },
+    moa: {
+        id: 'moa',
+        label: 'MOA',
+        group: 'weapon',
+        parser: DataParsers.accuracy,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.accuracy ? `${item.stats.accuracy}` : null
+    },
+    velocity: {
+        id: 'velocity',
+        label: '포구초속',
+        group: 'weapon',
+        parser: DataParsers.velocity,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `${val} m/s` : null
+    },
+    weapon_recoil: {
+        id: 'weapon_recoil',
+        label: '반동',
+        group: 'weapon',
+        parser: DataParsers.weaponRecoil,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.recoil ? `반동 ${item.stats.recoil}` : null
+    },
+    weapon_sway: {
+        id: 'weapon_sway',
+        label: '흔들림',
+        group: 'weapon',
+        parser: DataParsers.weaponSway,
+        defaultOrder: 'asc',
+        badge: (item) => item?.stats?.sway ? `흔들림 ${item.stats.sway}` : null
+    },
+    ergonomics: {
+        id: 'ergonomics',
+        label: '인체공학',
+        group: 'weapon',
+        parser: DataParsers.ergonomics,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `에르고 ${val}` : null
+    }
+};
+
+// 아이템이 지원/호환하는 모든 탄종 목록 추출 (data.js의 calibers 필드 직결)
+function getItemCalibers(item) {
+    if (!item?.calibers || !Array.isArray(item.calibers)) return [];
+    return item.calibers;
+}
+
+// 단일/대표 탄종 문자열 반환 (UI 표시용)
+function getItemCaliber(item) {
+    const cals = getItemCalibers(item);
+    return cals.length > 0 ? cals.join(', ') : null;
+}
+
+// 광학 조준경 배율 추출 (data.js의 stats.magnification 직결)
+function getOpticMagnification(item) {
+    return item?.stats?.magnification || null;
+}
+
+// 대표 스펙 추출
+function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = currentGridSortMetric) {
+    if (!item) return [];
+    const specs = [];
+    const cat = item.category || categoryKey || '';
+    const pType = panelType || currentPanel;
+
+    const isWeapon = pType === 'weapon' || Boolean(weaponsData[cat] || item.modes);
+
+    // 1. 무기 (사용 탄종 - 탄종별 1칸씩 분리 표시)
+    if (isWeapon) {
+        const cals = getItemCalibers(item);
+        cals.forEach(cal => {
+            specs.push({ metricKey: 'caliber', label: '탄종', text: cal, tagClass: 'spec-caliber' });
+        });
+    }
+
+    // 2. 전술 플래시 (조사 거리)
+    if (cat === '전술 플래시' || item.stats?.lightDistance) {
+        const dist = item.stats?.lightDistance || (DataParsers.lightDistance(item) ? `${DataParsers.lightDistance(item)}m` : null);
+        if (dist) {
+            specs.push({ metricKey: 'light_distance', label: '조사거리', text: dist, tagClass: 'spec-light' });
+        }
+    }
+
+    // 3. 광학 조준경 (배율)
+    if (cat === '광학 조준경') {
+        const mag = getOpticMagnification(item);
+        if (mag) {
+            specs.push({ metricKey: 'magnification', label: '배율', text: mag, tagClass: 'spec-optic' });
+        }
+    }
+
+    // 4. 기어 (방탄복, 헬멧, 가방, 체스트 리그 등)
+    const isGear = pType === 'gear' || ['전신 방탄복', '플레이트 캐리어', '방탄복', '헬멧', '헬멧 부착물', '마스크', '백팩', '체스트 리그'].includes(cat);
+    if (isGear) {
+        const bProt = DataParsers.bulletProtection(item);
+        const sProt = DataParsers.shockProtection(item);
+        const cargo = DataParsers.cargoSlots(item);
+
+        if (bProt !== null && bProt > 0) {
+            specs.push({ metricKey: 'bullet_protection', label: '방탄', text: `방탄 ${bProt}%`, tagClass: 'spec-armor' });
+        }
+        if (sProt !== null && sProt > 0) {
+            specs.push({ metricKey: 'shock_protection', label: '쇼크', text: `쇼크 ${sProt}%`, tagClass: 'spec-shock' });
+        }
+        if (cargo && cargo > 0) {
+            const cargoText = item.cargoSize ? `수납 ${item.cargoSize} (${cargo}칸)` : `수납 ${cargo}칸`;
+            specs.push({ metricKey: 'cargo_slots', label: '수납', text: cargoText, tagClass: 'spec-cargo' });
+        }
+    }
+
+    // 5. 탄창 (탄종 - 탄종별 1칸씩 분리 표시)
+    if (cat === '탄창') {
+        const cals = getItemCalibers(item);
+        cals.forEach(cal => {
+            if (!specs.some(s => s.metricKey === 'caliber' && s.text === cal)) {
+                specs.push({ metricKey: 'caliber', label: '탄종', text: cal, tagClass: 'spec-caliber' });
+            }
+        });
+    }
+
+    // 6. 부착물 성능 (반동, 흔들림, 탄창 용량)
+    const rec = item.stats?.recoil;
+    const swy = item.stats?.sway;
+    const cap = item.stats?.capacity;
+
+    if (!isWeapon && rec && (String(rec).includes('%') || String(rec).startsWith('-') || String(rec).startsWith('+'))) {
+        specs.push({ metricKey: 'recoil_reduction', label: '반동', text: `반동 ${rec}`, tagClass: 'spec-recoil' });
+    }
+    if (!isWeapon && swy && (String(swy).includes('%') || String(swy).startsWith('-') || String(swy).startsWith('+'))) {
+        specs.push({ metricKey: 'sway_reduction', label: '흔들림', text: `흔들림 ${swy}`, tagClass: 'spec-sway' });
+    }
+    if (cap && !specs.some(s => s.metricKey === 'capacity')) {
+        const capText = String(cap).endsWith('발') ? String(cap) : `${cap}발`;
+        specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
+    }
+
+    // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
+    if (activeMetricKey && activeMetricKey !== 'name' && activeMetricKey !== 'category') {
+        const alreadyHasMetric = specs.some(s => s.metricKey === activeMetricKey);
+        if (!alreadyHasMetric) {
+            if (isWeapon) {
+                if (activeMetricKey === 'rpm' && item.stats?.rpm) {
+                    specs.push({ metricKey: 'rpm', label: 'RPM', text: `${item.stats.rpm} RPM`, tagClass: 'spec-rpm' });
+                } else if (activeMetricKey === 'moa' && item.stats?.accuracy) {
+                    specs.push({ metricKey: 'moa', label: 'MOA', text: `${item.stats.accuracy}`, tagClass: 'spec-moa' });
+                } else if (activeMetricKey === 'velocity' && item.stats?.velocity) {
+                    specs.push({ metricKey: 'velocity', label: '탄속', text: `${item.stats.velocity}`, tagClass: 'spec-velocity' });
+                } else if (activeMetricKey === 'weapon_recoil' && item.stats?.recoil) {
+                    specs.push({ metricKey: 'weapon_recoil', label: '반동', text: `반동 ${item.stats.recoil}`, tagClass: 'spec-recoil' });
+                } else if (activeMetricKey === 'weapon_sway' && item.stats?.sway) {
+                    specs.push({ metricKey: 'weapon_sway', label: '흔들림', text: `흔들림 ${item.stats.sway}`, tagClass: 'spec-sway' });
+                } else if (activeMetricKey === 'ergonomics' && item.stats?.ergonomics) {
+                    specs.push({ metricKey: 'ergonomics', label: '에르고', text: `에르고 ${item.stats.ergonomics}`, tagClass: 'spec-ergo' });
+                }
+            }
+            if (activeMetricKey === 'weight' && item.stats?.weight) {
+                specs.push({ metricKey: 'weight', label: '무게', text: `${item.stats.weight}`, tagClass: 'spec-weight' });
+            } else if (activeMetricKey === 'item_slots' && (item.itemSlots !== undefined && item.itemSlots !== null)) {
+                const slotText = item.itemSize ? `${item.itemSize} (${item.itemSlots}칸)` : `${item.itemSlots}칸`;
+                specs.push({ metricKey: 'item_slots', label: '크기', text: slotText, tagClass: 'spec-size' });
+            }
+        }
+    }
+
+    return specs;
+}
+
+// 정렬 그룹 설정
+const SORT_GROUPS = [
+    { key: 'common', label: '공통' },
+    { key: 'attachment', label: '부착물' },
+    { key: 'gear', label: '기어' },
+    { key: 'weapon', label: '웨폰' }
+];
+
+// 고정 필터 칩 설정 (기어 및 무기 발사모드)
+const STATIC_FILTER_CHIPS = [
+    // 1. 무기 탭: 발사 모드 필터 (단발 전용, 점사, 연사)
+    {
+        id: 'mode_single',
+        label: '단발 전용',
+        group: 'mode',
+        panels: ['weapon'],
+        filter: (item) => {
+            const m = item.modes || [];
+            // 연사(FullAuto)가 없고 단발(Single/SemiAuto)만 가능한 단발 전용 화기
+            return m.length > 0 && m.every(mode => ['Single', 'SemiAuto', 'Double'].includes(mode));
+        }
+    },
+    {
+        id: 'mode_burst',
+        label: '점사',
+        group: 'mode',
+        panels: ['weapon'],
+        filter: (item) => {
+            const m = item.modes || [];
+            return m.some(mode => mode === 'Burst');
+        }
+    },
+    {
+        id: 'mode_fullauto',
+        label: '연사',
+        group: 'mode',
+        panels: ['weapon'],
+        filter: (item) => {
+            const m = item.modes || [];
+            return m.some(mode => mode === 'FullAuto');
+        }
+    },
+
+    // 2. 기어 탭: 방탄 및 수납 공간 보유 필터
+    {
+        id: 'is_armor',
+        label: '방탄',
+        group: 'gear',
+        panels: ['gear'],
+        filter: (item) => (DataParsers.bulletProtection(item) || 0) > 0
+    },
+    {
+        id: 'is_storage',
+        label: '수납 공간 보유',
+        group: 'gear',
+        panels: ['gear'],
+        filter: (item) => (DataParsers.cargoSlots(item) || 0) > 0
+    }
+];
+
+// 그리드 아이템 텍스트 필터링 헬퍼
 function filterGridItems(items, query) {
     if (!query) return items;
     const q = query.toLowerCase();
@@ -1220,6 +1704,468 @@ function filterGridItems(items, query) {
     });
 }
 
+// 아이템 목록 정렬 함수 (2단계 정렬: metricKey + order)
+function sortGridItemList(items, metricKey, order = 'desc') {
+    const metric = SORT_METRICS[metricKey] || SORT_METRICS.name;
+
+    return [...items].sort((a, b) => {
+        if (metric.compare) {
+            return metric.compare(a, b, order);
+        }
+
+        const valA = metric.parser(a);
+        const valB = metric.parser(b);
+
+        const aValid = valA !== null && valA !== undefined && !isNaN(valA);
+        const bValid = valB !== null && valB !== undefined && !isNaN(valB);
+
+        // 1. 둘 다 값이 없음 -> 2차 정렬 (이름순)
+        if (!aValid && !bValid) {
+            return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+        }
+        // 2. a만 없음 -> 뒤로
+        if (!aValid) return 1;
+        // 3. b만 없음 -> 뒤로
+        if (!bValid) return -1;
+
+        // 4. 값 비교
+        if (valA !== valB) {
+            return order === 'asc' ? valA - valB : valB - valA;
+        }
+
+        // 5. 동점 시 2차 정렬 (이름순)
+        return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+    });
+}
+
+// 특정 정렬 기준에 대해 현재 목록의 아이템 중 유효한 값이 존재하는지 확인
+function hasAnyValidValueForMetric(items, metric) {
+    if (metric.compare) return true; // 이름순은 항상 유효
+    if (!items || items.length === 0) return false;
+
+    // 부착물 반동/흔들림의 경우, 실제로 stats에 관련 보정치/페널티 데이터가 1개라도 존재하는지 확인
+    if (metric.id === 'recoil_reduction') {
+        return items.some(item => {
+            const str = String(item?.stats?.recoil || '').trim();
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+        });
+    }
+    if (metric.id === 'sway_reduction') {
+        return items.some(item => {
+            const str = String(item?.stats?.sway || '').trim();
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+        });
+    }
+    if (metric.id === 'magnification') {
+        return items.some(item => {
+            return (item.category === '광학 조준경' || Boolean(item?.stats?.magnification)) && DataParsers.magnification(item) !== null;
+        });
+    }
+    if (metric.id === 'light_distance') {
+        return items.some(item => {
+            return (item.category === '전술 플래시' || Boolean(item?.stats?.lightDistance)) && DataParsers.lightDistance(item) !== null;
+        });
+    }
+    if (metric.id === 'capacity') {
+        return items.some(item => {
+            return (item.category === '탄창' || Boolean(item?.stats?.capacity)) && DataParsers.capacity(item) !== null;
+        });
+    }
+    if (metric.id === 'bullet_protection' || metric.id === 'shock_protection') {
+        return items.some(item => {
+            const val = metric.parser ? metric.parser(item) : null;
+            return val !== null && val > 0;
+        });
+    }
+
+    return items.some(item => {
+        if (!metric.parser) return false;
+        const val = metric.parser(item);
+        return val !== null && val !== undefined && !isNaN(val);
+    });
+}
+
+// 카테고리별 추천 기본 정렬 기준 및 방향 결정
+function getCategoryDefaultSort(panelType, categoryKey) {
+    if (categoryKey === '탄창') {
+        return { metric: 'capacity', order: 'desc' };
+    }
+    if (['전방 손잡이', '권총 손잡이', '소음기', '소염기 / 머즐', '개머리판', '핸드가드', '양각대'].includes(categoryKey)) {
+        return { metric: 'recoil_reduction', order: 'asc' };
+    }
+    if (categoryKey === '전술 플래시') {
+        return { metric: 'light_distance', order: 'desc' };
+    }
+    if (['헬멧', '헬멧 부착물', '전신 방탄복', '플레이트 캐리어', '마스크'].includes(categoryKey)) {
+        return { metric: 'bullet_protection', order: 'desc' };
+    }
+    if (['백팩', '체스트 리그'].includes(categoryKey)) {
+        return { metric: 'cargo_slots', order: 'desc' };
+    }
+    if (panelType === 'weapon' && categoryKey !== 'all') {
+        return { metric: 'rpm', order: 'desc' };
+    }
+    return { metric: 'name', order: 'asc' };
+}
+
+// 정렬 옵션 드롭다운 갱신 (null만 있는 정렬 카테고리는 표시하지 않음)
+function updateSortOptionsDropdown(panelType, categoryKey, preferredMetric, preferredOrder, items) {
+    const metricSelect = document.getElementById('gridSortSelect');
+    const orderSelect = document.getElementById('gridSortOrderSelect');
+    if (!metricSelect) return;
+
+    metricSelect.innerHTML = '';
+
+    const itemsToCheck = items || currentGridRawItems || [];
+    const defaultSort = getCategoryDefaultSort(panelType, categoryKey);
+
+    const availableMetricIds = new Set();
+
+    SORT_GROUPS.forEach(group => {
+        const groupMetrics = Object.values(SORT_METRICS).filter(m => m.group === group.key);
+        // 현재 아이템 목록에서 유효한 값이 1개라도 있는 설정만 필터링
+        const validMetrics = groupMetrics.filter(metric => hasAnyValidValueForMetric(itemsToCheck, metric));
+        if (validMetrics.length === 0) return;
+
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = group.label;
+
+        validMetrics.forEach(metric => {
+            availableMetricIds.add(metric.id);
+            const option = document.createElement('option');
+            option.value = metric.id;
+            option.textContent = metric.label;
+            optgroup.appendChild(option);
+        });
+
+        metricSelect.appendChild(optgroup);
+    });
+
+    // 레거시 키 호환 지원 (예: 'rpm_desc' -> metric='rpm', order='desc')
+    let reqMetric = preferredMetric;
+    let reqOrder = preferredOrder;
+    if (typeof reqMetric === 'string' && reqMetric.includes('_') && !SORT_METRICS[reqMetric]) {
+        if (reqMetric.endsWith('_asc')) {
+            const mKey = reqMetric.replace('_asc', '');
+            reqMetric = mKey;
+            reqOrder = 'asc';
+        } else if (reqMetric.endsWith('_desc')) {
+            const mKey = reqMetric.replace('_desc', '');
+            reqMetric = mKey;
+            reqOrder = 'desc';
+        }
+    }
+
+    // 정렬 메트릭 결정
+    let targetMetric = reqMetric || currentGridSortMetric || defaultSort.metric;
+    if (!availableMetricIds.has(targetMetric)) {
+        targetMetric = availableMetricIds.has(defaultSort.metric) ? defaultSort.metric : 'name';
+    }
+
+    // 정렬 방향 결정
+    let targetOrder = reqOrder || currentGridSortOrder;
+    if (!targetOrder) {
+        targetOrder = SORT_METRICS[targetMetric]?.defaultOrder || defaultSort.order || 'desc';
+    }
+
+    currentGridSortMetric = targetMetric;
+    currentGridSortOrder = targetOrder;
+
+    metricSelect.value = currentGridSortMetric;
+    if (orderSelect) {
+        orderSelect.value = currentGridSortOrder;
+    }
+}
+
+// 빠른 필터 칩 바 갱신
+function updateFilterChipsBar(panelType, categoryKey, items) {
+    const container = document.getElementById('gridFilterChips');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const itemsToCheck = items || currentGridRawItems || [];
+    const effectivePanel = (categoryKey === 'search' || panelType === 'search') ? 'all' : panelType;
+    const isWeaponView = effectivePanel === 'weapon' || (effectivePanel === 'all' && itemsToCheck.some(it => !!it.modes || !!it.chamberableFrom));
+    const isGearView = effectivePanel === 'gear';
+    const isMagazineOnlyView = !isWeaponView && (categoryKey === '탄창' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '탄창')));
+
+    // 1. 무기 탭 필터
+    if (isWeaponView) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+
+        // 1행: 사용 탄종
+        const availableCalibers = Array.from(
+            new Set(itemsToCheck.flatMap(getItemCalibers).filter(Boolean))
+        ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+        if (availableCalibers.length > 0) {
+            const calRow = document.createElement('div');
+            calRow.className = 'grid-filter-row';
+
+            const label = document.createElement('span');
+            label.className = 'grid-filter-row-label';
+            label.textContent = '사용 탄종:';
+            calRow.appendChild(label);
+
+            const chipsWrap = document.createElement('div');
+            chipsWrap.className = 'grid-filter-chips-list';
+
+            availableCalibers.forEach(cal => {
+                const chipId = `cal_${cal}`;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `grid-filter-chip grid-filter-chip-cal ${currentGridActiveChips.has(chipId) ? 'active' : ''}`;
+                btn.dataset.chipId = chipId;
+                btn.innerHTML = `<span>${cal}</span>`;
+
+                btn.addEventListener('click', () => {
+                    if (currentGridActiveChips.has(chipId)) {
+                        currentGridActiveChips.delete(chipId);
+                        btn.classList.remove('active');
+                    } else {
+                        currentGridActiveChips.add(chipId);
+                        btn.classList.add('active');
+                    }
+                    applyGridSortAndFilters();
+                });
+
+                chipsWrap.appendChild(btn);
+            });
+
+            calRow.appendChild(chipsWrap);
+            wrap.appendChild(calRow);
+        }
+
+        // 2행: 발사 모드
+        const modeChips = STATIC_FILTER_CHIPS.filter(c => c.group === 'mode');
+        const availableModes = modeChips.filter(chip => itemsToCheck.some(it => chip.filter(it)));
+
+        if (availableModes.length > 0) {
+            const modeRow = document.createElement('div');
+            modeRow.className = 'grid-filter-row';
+
+            const label = document.createElement('span');
+            label.className = 'grid-filter-row-label';
+            label.textContent = '발사 모드:';
+            modeRow.appendChild(label);
+
+            const chipsWrap = document.createElement('div');
+            chipsWrap.className = 'grid-filter-chips-list';
+
+            availableModes.forEach(chip => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `grid-filter-chip ${currentGridActiveChips.has(chip.id) ? 'active' : ''}`;
+                btn.dataset.chipId = chip.id;
+                btn.innerHTML = `<span>${chip.label}</span>`;
+
+                btn.addEventListener('click', () => {
+                    if (currentGridActiveChips.has(chip.id)) {
+                        currentGridActiveChips.delete(chip.id);
+                        btn.classList.remove('active');
+                    } else {
+                        currentGridActiveChips.add(chip.id);
+                        btn.classList.add('active');
+                    }
+                    applyGridSortAndFilters();
+                });
+
+                chipsWrap.appendChild(btn);
+            });
+
+            modeRow.appendChild(chipsWrap);
+            wrap.appendChild(modeRow);
+        }
+
+        container.appendChild(wrap);
+        return;
+    }
+
+    // 2. 탄창 전용 탭/목록: 사용 탄종 필터 칩 바
+    if (isMagazineOnlyView) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+
+        const availableCalibers = Array.from(
+            new Set(itemsToCheck.flatMap(getItemCalibers).filter(Boolean))
+        ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+        if (availableCalibers.length > 0) {
+            const calRow = document.createElement('div');
+            calRow.className = 'grid-filter-row';
+
+            const label = document.createElement('span');
+            label.className = 'grid-filter-row-label';
+            label.textContent = '사용 탄종:';
+            calRow.appendChild(label);
+
+            const chipsWrap = document.createElement('div');
+            chipsWrap.className = 'grid-filter-chips-list';
+
+            availableCalibers.forEach(cal => {
+                const chipId = `cal_${cal}`;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `grid-filter-chip grid-filter-chip-cal ${currentGridActiveChips.has(chipId) ? 'active' : ''}`;
+                btn.dataset.chipId = chipId;
+                btn.innerHTML = `<span>${cal}</span>`;
+
+                btn.addEventListener('click', () => {
+                    if (currentGridActiveChips.has(chipId)) {
+                        currentGridActiveChips.delete(chipId);
+                        btn.classList.remove('active');
+                    } else {
+                        currentGridActiveChips.add(chipId);
+                        btn.classList.add('active');
+                    }
+                    applyGridSortAndFilters();
+                });
+
+                chipsWrap.appendChild(btn);
+            });
+
+            calRow.appendChild(chipsWrap);
+            wrap.appendChild(calRow);
+        }
+
+        container.appendChild(wrap);
+        return;
+    }
+
+    // 3. 기어 탭: 방탄 / 수납 공간 보유
+    if (isGearView) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+
+        const gearRow = document.createElement('div');
+        gearRow.className = 'grid-filter-row';
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'grid-filter-chips-list';
+
+        const gearChips = STATIC_FILTER_CHIPS.filter(c => c.group === 'gear');
+        gearChips.forEach(chip => {
+            if (!itemsToCheck.some(it => chip.filter(it))) return;
+
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = `grid-filter-chip ${currentGridActiveChips.has(chip.id) ? 'active' : ''}`;
+            btn.dataset.chipId = chip.id;
+            btn.innerHTML = `<span>${chip.label}</span>`;
+
+            btn.addEventListener('click', () => {
+                if (currentGridActiveChips.has(chip.id)) {
+                    currentGridActiveChips.delete(chip.id);
+                    btn.classList.remove('active');
+                } else {
+                    currentGridActiveChips.add(chip.id);
+                    btn.classList.add('active');
+                }
+                applyGridSortAndFilters();
+            });
+
+            chipsWrap.appendChild(btn);
+        });
+
+        gearRow.appendChild(chipsWrap);
+        wrap.appendChild(gearRow);
+        container.appendChild(wrap);
+        return;
+    }
+}
+
+// 그리드 정렬 및 필터 적용 메인 파이프라인
+function applyGridSortAndFilters() {
+    const gridCount = document.getElementById('gridCount');
+    const resetBtn = document.getElementById('gridFilterResetBtn');
+    const inlineInput = document.getElementById('gridInlineSearch');
+    const searchQuery = inlineInput ? inlineInput.value.trim() : '';
+
+    let items = currentGridRawItems || [];
+
+    // 1. 텍스트 검색 필터
+    if (searchQuery) {
+        items = filterGridItems(items, searchQuery);
+    }
+
+    // 2. 활성 필터 칩 적용 (탄종 OR, 발사모드 OR, 기어 AND)
+    if (currentGridActiveChips.size > 0) {
+        const activeCalibers = [];
+        const activeModes = [];
+        const activeGear = [];
+
+        currentGridActiveChips.forEach(chipId => {
+            if (chipId.startsWith('cal_')) {
+                activeCalibers.push(chipId.replace('cal_', ''));
+            } else if (chipId.startsWith('mode_')) {
+                activeModes.push(chipId);
+            } else {
+                activeGear.push(chipId);
+            }
+        });
+
+        items = items.filter(item => {
+            // 2-1. 탄종 필터 (선택된 탄종들 중 하나라도 일치하면 통과)
+            if (activeCalibers.length > 0) {
+                const itemCals = getItemCalibers(item);
+                if (!itemCals || !itemCals.some(c => activeCalibers.includes(c))) {
+                    return false;
+                }
+            }
+
+            // 2-2. 발사 모드 필터 (선택된 발사모드들 중 하나라도 만족하면 통과)
+            if (activeModes.length > 0) {
+                const passMode = activeModes.some(mId => {
+                    const chip = STATIC_FILTER_CHIPS.find(c => c.id === mId);
+                    return chip ? chip.filter(item) : false;
+                });
+                if (!passMode) return false;
+            }
+
+            // 2-3. 기어 필터 (선택된 모든 기어 조건 충족)
+            if (activeGear.length > 0) {
+                const passGear = activeGear.every(gId => {
+                    const chip = STATIC_FILTER_CHIPS.find(c => c.id === gId);
+                    return chip ? chip.filter(item) : true;
+                });
+                if (!passGear) return false;
+            }
+
+            return true;
+        });
+    }
+
+    // 3. 정렬 적용 (2단계 정렬: metric + order)
+    const sortedItems = sortGridItemList(items, currentGridSortMetric, currentGridSortOrder);
+
+    // 4. 개수 텍스트 업데이트
+    const isFiltered = searchQuery || currentGridActiveChips.size > 0;
+    if (gridCount) {
+        if (isFiltered) {
+            gridCount.textContent = `조건 결과 ${sortedItems.length}개 / 전체 ${currentGridRawItems.length}개`;
+        } else {
+            gridCount.textContent = `${currentGridRawItems.length}개`;
+        }
+    }
+
+    // 5. 필터 초기화 버튼 표시 여부
+    const isDefaultSort = currentGridSortMetric === 'name' && currentGridSortOrder === 'asc';
+    if (resetBtn) {
+        resetBtn.style.display = (isFiltered || !isDefaultSort) ? 'flex' : 'none';
+    }
+
+    // 6. 렌더링
+    renderGridCards(sortedItems, currentGridCategoryKey, currentGridPanelType);
+
+    if (lastGridState) {
+        lastGridState.searchQuery = searchQuery;
+        lastGridState.sortMetric = currentGridSortMetric;
+        lastGridState.sortOrder = currentGridSortOrder;
+        lastGridState.activeChips = Array.from(currentGridActiveChips);
+    }
+}
+
 // 그리드 카드 렌더링 헬퍼
 function renderGridCards(items, categoryKey, panelType) {
     const grid = document.getElementById('itemGrid');
@@ -1227,55 +2173,76 @@ function renderGridCards(items, categoryKey, panelType) {
     grid.innerHTML = '';
 
     if (!items || items.length === 0) {
-        grid.innerHTML = '<p class="empty-message">표시할 항목이 없습니다.</p>';
+        grid.innerHTML = '<p class="empty-message">조건에 부합하는 항목이 없습니다.</p>';
         return;
     }
 
-    const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-    sortedItems.forEach(item => {
+    items.forEach(item => {
         grid.appendChild(createGridCard(item, categoryKey, panelType));
     });
 }
 
-// 그리드 인라인 검색 초기화 및 이벤트 등록
+// 그리드 인라인 검색 및 정렬/필터 초기화 및 이벤트 등록
 function initGridInlineSearch() {
     const input = document.getElementById('gridInlineSearch');
     const clearBtn = document.getElementById('gridInlineSearchClear');
-    if (!input) return;
+    const sortSelect = document.getElementById('gridSortSelect');
+    const sortOrderSelect = document.getElementById('gridSortOrderSelect');
+    const resetBtn = document.getElementById('gridFilterResetBtn');
 
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-        const gridCount = document.getElementById('gridCount');
-        if (lastGridState) {
-            lastGridState.searchQuery = query;
-        }
+    if (input) {
+        input.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (clearBtn) {
+                clearBtn.style.display = query ? 'flex' : 'none';
+            }
+            applyGridSortAndFilters();
+        });
+    }
 
-        if (clearBtn) {
-            clearBtn.style.display = query ? 'flex' : 'none';
-        }
-
-        if (!query) {
-            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
-            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
-            return;
-        }
-
-        const filtered = filterGridItems(currentGridRawItems, query);
-        renderGridCards(filtered, currentGridCategoryKey, currentGridPanelType);
-        if (gridCount) {
-            gridCount.textContent = `검색 ${filtered.length}개 / 전체 ${currentGridRawItems.length}개`;
-        }
-    });
-
-    if (clearBtn) {
+    if (clearBtn && input) {
         clearBtn.addEventListener('click', () => {
             input.value = '';
             clearBtn.style.display = 'none';
-            if (lastGridState) lastGridState.searchQuery = '';
-            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
-            const gridCount = document.getElementById('gridCount');
-            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
+            applyGridSortAndFilters();
             input.focus();
+        });
+    }
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            currentGridSortMetric = e.target.value;
+            // 메트릭 변경 시 해당 메트릭의 defaultOrder를 기본값으로 자동 설정
+            if (SORT_METRICS[currentGridSortMetric]) {
+                currentGridSortOrder = SORT_METRICS[currentGridSortMetric].defaultOrder || 'desc';
+                if (sortOrderSelect) {
+                    sortOrderSelect.value = currentGridSortOrder;
+                }
+            }
+            applyGridSortAndFilters();
+        });
+    }
+
+    if (sortOrderSelect) {
+        sortOrderSelect.addEventListener('change', (e) => {
+            currentGridSortOrder = e.target.value;
+            applyGridSortAndFilters();
+        });
+    }
+
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            if (input) {
+                input.value = '';
+                if (clearBtn) clearBtn.style.display = 'none';
+            }
+            currentGridActiveChips.clear();
+            document.querySelectorAll('.grid-filter-chip').forEach(btn => btn.classList.remove('active'));
+            currentGridSortMetric = 'name';
+            currentGridSortOrder = 'asc';
+            if (sortSelect) sortSelect.value = 'name';
+            if (sortOrderSelect) sortOrderSelect.value = 'asc';
+            applyGridSortAndFilters();
         });
     }
 }
@@ -1294,7 +2261,10 @@ function captureCurrentView() {
             categoryKey: lastGridState.categoryKey,
             panelType: lastGridState.panelType,
             scrollY: currentScrollY,
-            searchQuery: inlineSearchQuery || lastGridState.searchQuery || ''
+            searchQuery: inlineSearchQuery || lastGridState.searchQuery || '',
+            sortMetric: currentGridSortMetric,
+            sortOrder: currentGridSortOrder,
+            activeChips: Array.from(currentGridActiveChips)
         };
     }
     return { type: 'empty' };
@@ -1314,13 +2284,13 @@ function restoreView(view) {
         }
     } else if (view.type === 'grid') {
         lastGridScrollY = view.scrollY || 0;
-        showGridView(view.title, view.items, view.categoryKey, view.panelType, true, view.searchQuery || '');
+        showGridView(view.title, view.items, view.categoryKey, view.panelType, true, view.searchQuery || '', view.sortMetric, view.sortOrder, view.activeChips);
     }
 }
 
 function backToGrid() {
     if (lastGridState) {
-        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true, lastGridState.searchQuery || '');
+        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true, lastGridState.searchQuery || '', lastGridState.sortMetric, lastGridState.sortOrder, lastGridState.activeChips);
     } else {
         clearDetail();
     }
@@ -1354,14 +2324,30 @@ function renderItemGrid(categoryKey, panelType) {
 }
 
 // 이미 계산된 항목 목록을 그리드로 표시 (검색 결과 등에도 사용)
-function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false, savedSearchQuery = '') {
-    lastGridState = { title, items, categoryKey, panelType, searchQuery: savedSearchQuery };
+function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false, savedSearchQuery = '', savedSortMetric = null, savedSortOrder = null, savedActiveChips = null) {
+    lastGridState = {
+        title,
+        items,
+        categoryKey,
+        panelType,
+        searchQuery: savedSearchQuery,
+        sortMetric: savedSortMetric,
+        sortOrder: savedSortOrder,
+        activeChips: savedActiveChips
+    };
     currentPanel = panelType;
     currentCategory = categoryKey;
     currentWeapon = null;
     currentGridRawItems = items || [];
     currentGridCategoryKey = categoryKey;
     currentGridPanelType = panelType;
+
+    if (savedActiveChips && Array.isArray(savedActiveChips)) {
+        currentGridActiveChips = new Set(savedActiveChips);
+    } else if (!savedActiveChips && !shouldRestoreScroll) {
+        currentGridActiveChips = new Set();
+    }
+
     saveAppState();
 
     document.querySelectorAll('.panel-btn').forEach(btn => {
@@ -1375,14 +2361,12 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     weaponDetail.innerHTML = '';
 
     const gridTitle = document.getElementById('gridTitle');
-    const gridCount = document.getElementById('gridCount');
     if (gridTitle) gridTitle.textContent = title;
 
     // 인라인 검색창 placeholder 동적 설정 및 이전 검색어 복원
     const inlineSearchInput = document.getElementById('gridInlineSearch');
     const inlineClearBtn = document.getElementById('gridInlineSearchClear');
     if (inlineSearchInput) {
-        // placeholder 설정: 검색 결과, ">" 하위 슬롯명 추출, 또는 전체 제목 활용
         let targetName = title;
         if (categoryKey === 'search') {
             targetName = '검색 결과';
@@ -1391,24 +2375,18 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
             targetName = parts[parts.length - 1].trim();
         }
         inlineSearchInput.placeholder = `${targetName}에서 검색...`;
-
         inlineSearchInput.value = savedSearchQuery || '';
         if (inlineClearBtn) {
             inlineClearBtn.style.display = savedSearchQuery ? 'flex' : 'none';
         }
     }
 
-    let itemsToRender = currentGridRawItems;
-    if (savedSearchQuery) {
-        itemsToRender = filterGridItems(currentGridRawItems, savedSearchQuery);
-        if (gridCount) {
-            gridCount.textContent = `검색 ${itemsToRender.length}개 / 전체 ${currentGridRawItems.length}개`;
-        }
-    } else {
-        if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
-    }
+    // 정렬 옵션 및 필터 칩 바 초기화/갱신
+    updateSortOptionsDropdown(panelType, categoryKey, savedSortMetric, savedSortOrder, currentGridRawItems);
+    updateFilterChipsBar(panelType, categoryKey, currentGridRawItems);
 
-    renderGridCards(itemsToRender, categoryKey, panelType);
+    // 필터 및 정렬 적용하여 그리드 렌더링
+    applyGridSortAndFilters();
 
     if (shouldRestoreScroll && lastGridScrollY > 0) {
         const targetY = lastGridScrollY;
@@ -1422,7 +2400,7 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     updateFloatingNav();
 }
 
-// 그리드 카드 생성 (이미지 + 이름)
+// 그리드 카드 생성 (이미지 + 이름 + 동적 스펙 뱃지)
 function createGridCard(item, categoryKey, panelType) {
     const card = document.createElement('div');
     card.className = 'grid-card';
@@ -1443,12 +2421,48 @@ function createGridCard(item, categoryKey, panelType) {
     } else {
         imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
     }
+
+    // 3D 모델 보유 뱃지 (좌측 상단)
+    if (item.model || item.model3d) {
+        const modelBadge = document.createElement('span');
+        modelBadge.className = 'grid-card-badge badge-model';
+        modelBadge.textContent = '3D';
+        modelBadge.title = '3D 모델 지원';
+        imgWrap.appendChild(modelBadge);
+    }
+
+    // 카테고리 뱃지 상시 표시 (우측 상단)
+    const itemCat = item.category || (categoryKey !== 'all' && categoryKey !== 'search' ? categoryKey : '') || '';
+    if (itemCat) {
+        const catBadge = document.createElement('span');
+        catBadge.className = 'grid-card-badge grid-card-category-badge';
+        catBadge.textContent = itemCat;
+        catBadge.title = `카테고리: ${itemCat}`;
+        imgWrap.appendChild(catBadge);
+    }
+
     card.appendChild(imgWrap);
 
     const nameEl = document.createElement('div');
     nameEl.className = 'grid-card-name';
     nameEl.textContent = item.name;
     card.appendChild(nameEl);
+
+    // 대표 스펙 태그 표시
+    const coreSpecs = getItemCoreSpecs(item, categoryKey, panelType, currentGridSortMetric);
+    if (coreSpecs.length > 0) {
+        const specsContainer = document.createElement('div');
+        specsContainer.className = 'grid-card-core-specs';
+        coreSpecs.forEach(spec => {
+            const isHighlighted = Boolean(spec.metricKey && currentGridSortMetric && spec.metricKey === currentGridSortMetric);
+            const tag = document.createElement('span');
+            tag.className = `core-spec-tag ${spec.tagClass || ''} ${isHighlighted ? 'spec-highlight' : ''}`;
+            tag.textContent = spec.text;
+            tag.title = `${spec.label}: ${spec.text}`;
+            specsContainer.appendChild(tag);
+        });
+        card.appendChild(specsContainer);
+    }
 
     const realCategoryKey = item.category || categoryKey;
     card.addEventListener('click', () => {
@@ -1479,7 +2493,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    loadData();
     renderCategories();
     renderGearCategories();
     renderAttachmentCategories();
@@ -1583,7 +2596,6 @@ function createCategoryItem(name, count, key, panelType) {
         iconImg.src = categoryIcons[key];
         iconImg.alt = name;
         iconImg.className = 'category-icon';
-        // 돌격 소총, 기관단총, 저격 소총 아이콘은 더 크게
         if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기') {
             iconImg.classList.add('category-icon-large');
         }
@@ -1622,9 +2634,68 @@ function getItemImages(item) {
     return [];
 }
 
-// 아이템 크기 및 수납 공간 행 추가 (기존 능력치 항목과 일관된 심플한 스타일)
+// 한글 동적 번역 매핑 (순수 원본 데이터에서 UI 라벨로 변환)
+const PROTECTION_AREAS_KO_MAP = {
+    Neck: '목',
+    Torso: '흉부',
+    Back: '등',
+    LeftShoulder: '좌측 어깨',
+    RightShoulder: '우측 어깨',
+    Stomach: '복부',
+    LeftSide: '좌측 옆구리',
+    RightSide: '우측 옆구리',
+    Groin: '낭심(사타구니)',
+    Head: '두부(머리)',
+    Face: '안면(얼굴)',
+    Ears: '귀',
+    Eyes: '눈',
+    Arms: '팔',
+    Legs: '다리',
+    Feet: '발',
+    Hands: '손'
+};
+
+const FIRE_MODES_KO_MAP = {
+    Single: '단발',
+    SemiAuto: '단발',
+    Burst: '점사',
+    FullAuto: '연사',
+    Double: '더블'
+};
+
+// 아이템 크기 및 수납 공간 행 추가
 function appendItemSpecRows(statsList, item) {
     if (!item || !statsList) return;
+
+    // 사용 탄종 / 삽탄가능 탄종
+    const isMag = item.category === '탄창';
+    const isWeapon = !isMag && Boolean(weaponsData[item.category] || currentPanel === 'weapon' || item.modes);
+
+    if (isWeapon || isMag) {
+        const calibers = getItemCalibers(item);
+        if (calibers && calibers.length > 0) {
+            const row = document.createElement('div');
+            row.className = 'weapon-stat-row weapon-stat-row-areas';
+
+            const label = document.createElement('span');
+            label.className = 'weapon-stat-label';
+            label.textContent = isMag ? '삽탄가능 탄종:' : '사용 탄종:';
+
+            const chipsWrap = document.createElement('div');
+            chipsWrap.className = 'protection-chips-wrapper';
+
+            calibers.forEach(cal => {
+                const chip = document.createElement('span');
+                chip.className = 'protection-area-chip';
+                chip.textContent = cal;
+                chipsWrap.appendChild(chip);
+            });
+
+            row.appendChild(label);
+            row.appendChild(chipsWrap);
+            statsList.appendChild(row);
+        }
+    }
 
     // 아이템 크기
     if (item.itemSize || (item.itemSlots !== undefined && item.itemSlots !== null)) {
@@ -1663,6 +2734,75 @@ function appendItemSpecRows(statsList, item) {
 
         row.appendChild(label);
         row.appendChild(value);
+        statsList.appendChild(row);
+    }
+
+    // 조사 거리 (전술 플래시)
+    if (item.stats?.lightDistance) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '조사 거리:';
+
+        const value = document.createElement('span');
+        value.className = 'weapon-stat-value';
+        value.textContent = item.stats.lightDistance;
+
+        row.appendChild(label);
+        row.appendChild(value);
+        statsList.appendChild(row);
+    }
+
+    // 발사 모드 (Weapon Fire Modes)
+    if (item.modes && Array.isArray(item.modes) && item.modes.length > 0) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row weapon-stat-row-areas';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '발사 모드:';
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'protection-chips-wrapper';
+
+        item.modes.forEach(mode => {
+            const koLabel = FIRE_MODES_KO_MAP[mode] || mode;
+            const chip = document.createElement('span');
+            chip.className = 'protection-area-chip';
+            chip.textContent = koLabel;
+            chipsWrap.appendChild(chip);
+        });
+
+        row.appendChild(label);
+        row.appendChild(chipsWrap);
+        statsList.appendChild(row);
+    }
+
+    // 방호 부위 (Protection Areas)
+    const protAreas = item.protectionAreas;
+    if (protAreas && Array.isArray(protAreas) && protAreas.length > 0) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row weapon-stat-row-areas';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '방호 부위:';
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'protection-chips-wrapper';
+
+        protAreas.forEach(area => {
+            const koLabel = PROTECTION_AREAS_KO_MAP[area] || area;
+            const chip = document.createElement('span');
+            chip.className = 'protection-area-chip';
+            chip.textContent = koLabel;
+            chipsWrap.appendChild(chip);
+        });
+
+        row.appendChild(label);
+        row.appendChild(chipsWrap);
         statsList.appendChild(row);
     }
 }
@@ -1954,7 +3094,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     if (weapon.manufacturerLogo) {
         const logoImg = document.createElement('img');
         logoImg.className = 'weapon-manufacturer-logo';
-        // 특정 로고는 필터 제거 (원본 색상 유지)
+        // 특정 로고 원본 색상 유지
         const logosWithoutFilter = ['ai-logo', 'TsNIITochMash-logo', 'hk-logo', 'radian-logo', 'milkor-logo', 'kalashnikov-logo', 'mf-logo', 'dsarms-logo', 'barrett-logo', 'cheytac-logo'];
         if (logosWithoutFilter.some(logo => weapon.manufacturerLogo.includes(logo))) {
             logoImg.classList.add('logo-no-filter');
@@ -2090,6 +3230,19 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
+
+        // 카테고리 표시
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = weapon.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
 
         // 각 능력치별 최대값과 스케일 정의
         const statsDefs = [
@@ -2257,26 +3410,6 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         }
     }
     
-    // 관리자 모드일 경우 편집/삭제 버튼 표시
-    if (isAdmin) {
-        const actions = document.createElement('div');
-        actions.className = 'weapon-detail-actions';
-        
-        const editBtn = document.createElement('button');
-        editBtn.className = 'edit-btn';
-        editBtn.textContent = '수정';
-        editBtn.onclick = () => editWeapon(weapon.id, categoryKey);
-        
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'delete-btn';
-        deleteBtn.textContent = '삭제';
-        deleteBtn.onclick = () => deleteWeapon(weapon.id, categoryKey);
-        
-        actions.appendChild(editBtn);
-        actions.appendChild(deleteBtn);
-        detailCard.appendChild(actions);
-    }
-    
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
 }
@@ -2382,7 +3515,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     detailCard.appendChild(descContainer);
     
     // 기어 능력치 및 규격 섹션
-    const hasGearStats = Boolean(gear.stats);
+    const hasGearStats = Boolean(gear.stats) || Boolean(gear.category);
     const hasGearSpecs = Boolean(gear.itemSize || gear.itemSlots || gear.cargoSize || gear.cargoSlots);
     if (hasGearStats || hasGearSpecs) {
         const statsContainer = document.createElement('div');
@@ -2404,6 +3537,19 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
+
+        // 카테고리 표시
+        const catRow = document.createElement('div');
+        catRow.className = 'weapon-stat-row';
+        const catLabel = document.createElement('span');
+        catLabel.className = 'weapon-stat-label';
+        catLabel.textContent = '카테고리:';
+        const catValue = document.createElement('span');
+        catValue.className = 'weapon-stat-value';
+        catValue.textContent = gear.category || categoryKey || '-';
+        catRow.appendChild(catLabel);
+        catRow.appendChild(catValue);
+        statsList.appendChild(catRow);
 
         if (gear.stats) {
             const hasProtectionStats = ['bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
@@ -2538,33 +3684,10 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         slotsParent.appendChild(parentSection);
     }
     
-    if (isAdmin) {
-        const actions = document.createElement('div');
-        actions.className = 'weapon-detail-actions';
-        
-        const editBtn = document.createElement('button');
-        editBtn.className = 'edit-btn';
-        editBtn.textContent = '수정';
-        editBtn.onclick = () => editGear(gear.id, categoryKey);
-        
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'delete-btn';
-        deleteBtn.textContent = '삭제';
-        deleteBtn.onclick = () => deleteGear(gear.id, categoryKey);
-        
-        actions.appendChild(editBtn);
-        actions.appendChild(deleteBtn);
-        detailCard.appendChild(actions);
-    }
-    
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
 }
 
-// 무기 상세 정보 초기화
-function clearWeaponDetail() {
-    clearDetail();
-}
 
 // 상세 정보 초기화 (무기/기어 공통)
 function clearDetail() {
@@ -2592,9 +3715,44 @@ function clearDetail() {
 }
 
 
+// 홈 화면으로 이동 (SMPZ 웨폰 전체 화면)
+function goToHomePage() {
+    closeDropdown();
+    navStack = [];
+    preSearchView = null;
+    compareTarget = null;
+    
+    // 전체 검색창 및 인라인 검색창 초기화
+    const mainSearchInput = document.getElementById('itemSearch');
+    if (mainSearchInput) mainSearchInput.value = '';
+    const inlineSearchInput = document.getElementById('gridInlineSearch');
+    if (inlineSearchInput) inlineSearchInput.value = '';
+    const inlineClearBtn = document.getElementById('gridInlineSearchClear');
+    if (inlineClearBtn) inlineClearBtn.style.display = 'none';
+
+    // 웨폰 전체 화면 렌더링
+    renderItemGrid('all', 'weapon');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}
+
 // 이벤트 리스너 설정
 function setupEventListeners() {
     initGridInlineSearch();
+
+    // 좌측 상단 로고/타이틀 클릭 시 최초 홈 화면(웨폰 전체)으로 이동
+    const homeLogoBtn = document.getElementById('homeLogoBtn') || document.querySelector('.topbar-title');
+    if (homeLogoBtn) {
+        homeLogoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            goToHomePage();
+        });
+        homeLogoBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                goToHomePage();
+            }
+        });
+    }
 
     // 스크롤 시 플로팅 네비게이션 독 갱신 (맨 위로 버튼 등)
     window.addEventListener('scroll', () => {
@@ -2625,29 +3783,6 @@ function setupEventListeners() {
         if (e.target.closest('.panel-btn')) return;
         closeDropdown();
     });
-
-    // 관리자 로그인 버튼
-    document.getElementById('adminLoginBtn').addEventListener('click', () => {
-        document.getElementById('loginModal').style.display = 'block';
-    });
-    
-    // 로그아웃 버튼
-    document.getElementById('adminLogoutBtn').addEventListener('click', logout);
-    
-    // 로그인 폼
-    document.getElementById('loginForm').addEventListener('submit', handleLogin);
-    
-    // 무기 폼
-    document.getElementById('weaponForm').addEventListener('submit', handleWeaponSubmit);
-    
-    // 기어 폼
-    document.getElementById('gearForm').addEventListener('submit', handleGearSubmit);
-    
-    // 기어 추가 버튼
-    const gearAddBtn = document.getElementById('gearAddBtn');
-    if (gearAddBtn) {
-        gearAddBtn.addEventListener('click', () => openGearModal(null, null));
-    }
     
     // 검색창 이벤트 리스너
     const searchInput = document.getElementById('itemSearch');
@@ -2755,385 +3890,7 @@ function openImageModal(imageSrc, imageAlt) {
     }
 }
 
-// 로그인 처리
-function handleLogin(e) {
-    e.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    
-    // 간단한 인증 (실제로는 서버에서 처리해야 함)
-    // 기본 관리자 계정: admin / 488538
-    if (username === 'admin' && password === '488538') {
-        isAdmin = true;
-        document.getElementById('adminLoginBtn').style.display = 'none';
-        document.getElementById('adminLogoutBtn').style.display = 'block';
-        document.getElementById('loginModal').style.display = 'none';
-        
-        const gearAddWrap = document.getElementById('gearAddBtnWrap');
-        if (gearAddWrap) gearAddWrap.style.display = 'block';
-        
-        if (currentWeapon && currentCategory) {
-            if (currentPanel === 'gear') {
-                showGearDetail(currentWeapon, currentCategory);
-            } else {
-                showWeaponDetail(currentWeapon, currentCategory);
-            }
-        }
-        
-        alert('관리자로 로그인되었습니다.');
-    } else {
-        alert('잘못된 사용자명 또는 비밀번호입니다.');
-    }
-}
 
-// 로그아웃
-function logout() {
-    isAdmin = false;
-    document.getElementById('adminLoginBtn').style.display = 'block';
-    document.getElementById('adminLogoutBtn').style.display = 'none';
-    
-    const gearAddWrap = document.getElementById('gearAddBtnWrap');
-    if (gearAddWrap) gearAddWrap.style.display = 'none';
-    
-    if (currentWeapon && currentCategory) {
-        if (currentPanel === 'gear') {
-            showGearDetail(currentWeapon, currentCategory);
-        } else {
-            showWeaponDetail(currentWeapon, currentCategory);
-        }
-    }
-    
-    alert('로그아웃되었습니다.');
-}
-
-// 무기 모달 열기
-function openWeaponModal(weaponId = null, categoryKey = null) {
-    editingWeaponId = weaponId;
-    const modal = document.getElementById('weaponModal');
-    const title = document.getElementById('weaponModalTitle');
-    
-    if (weaponId) {
-        title.textContent = '무기 수정';
-        const weapon = weaponsData[categoryKey].find(w => w.id === weaponId);
-        if (weapon) {
-            document.getElementById('weaponId').value = weaponId;
-            document.getElementById('weaponName').value = weapon.name;
-            document.getElementById('weaponCategory').value = categoryKey;
-            document.getElementById('weaponManufacturer').value = weapon.manufacturer || '';
-            document.getElementById('weaponManufacturerLogo').value = weapon.manufacturerLogo || '';
-            document.getElementById('weaponManufacturerUrl').value = weapon.manufacturerUrl || '';
-            document.getElementById('weaponItemSize').value = weapon.itemSize || '';
-            document.getElementById('weaponImage').value = (weapon.images && weapon.images.length) ? weapon.images.join(', ') : (weapon.image || '');
-            document.getElementById('weaponDescription').value = weapon.description || '';
-        }
-    } else {
-        title.textContent = '무기 추가';
-        document.getElementById('weaponForm').reset();
-        document.getElementById('weaponId').value = '';
-        if (currentCategory && currentCategory !== 'all' && currentCategory !== 'search') {
-            document.getElementById('weaponCategory').value = currentCategory;
-        }
-    }
-    
-    modal.style.display = 'block';
-}
-
-// 무기 모달 닫기
-function closeWeaponModal() {
-    document.getElementById('weaponModal').style.display = 'none';
-    editingWeaponId = null;
-}
-
-// 무기 추가/수정 처리
-function handleWeaponSubmit(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('weaponName').value;
-    const category = document.getElementById('weaponCategory').value;
-    const manufacturer = document.getElementById('weaponManufacturer').value;
-    const manufacturerLogo = document.getElementById('weaponManufacturerLogo').value;
-    const manufacturerUrl = document.getElementById('weaponManufacturerUrl').value;
-    const weaponItemSize = document.getElementById('weaponItemSize').value.trim();
-    const imageInput = document.getElementById('weaponImage').value.trim();
-    const description = document.getElementById('weaponDescription').value;
-    const imagePaths = imageInput ? imageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
-    
-    if (!category) {
-        alert('카테고리를 선택해주세요.');
-        return;
-    }
-
-    let weaponItemSlots;
-    if (weaponItemSize && weaponItemSize.includes('x')) {
-        const [w, h] = weaponItemSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(w) && !isNaN(h)) weaponItemSlots = w * h;
-    }
-    
-    if (editingWeaponId) {
-        // 수정
-        const weaponIndex = weaponsData[category].findIndex(w => w.id === editingWeaponId);
-        if (weaponIndex !== -1) {
-            weaponsData[category][weaponIndex].name = name;
-            weaponsData[category][weaponIndex].manufacturer = manufacturer;
-            weaponsData[category][weaponIndex].manufacturerLogo = manufacturerLogo;
-            weaponsData[category][weaponIndex].manufacturerUrl = manufacturerUrl;
-            if (weaponItemSize) {
-                weaponsData[category][weaponIndex].itemSize = weaponItemSize;
-                if (weaponItemSlots) weaponsData[category][weaponIndex].itemSlots = weaponItemSlots;
-            } else {
-                delete weaponsData[category][weaponIndex].itemSize;
-                delete weaponsData[category][weaponIndex].itemSlots;
-            }
-            if (imagePaths.length > 1) {
-                weaponsData[category][weaponIndex].images = imagePaths;
-                delete weaponsData[category][weaponIndex].image;
-            } else if (imagePaths.length === 1) {
-                weaponsData[category][weaponIndex].image = imagePaths[0];
-                delete weaponsData[category][weaponIndex].images;
-            } else {
-                weaponsData[category][weaponIndex].image = '';
-                delete weaponsData[category][weaponIndex].images;
-            }
-            weaponsData[category][weaponIndex].description = description;
-        }
-    } else {
-        // 추가
-        const newWeapon = {
-            id: Date.now().toString(),
-            name: name,
-            manufacturer: manufacturer,
-            manufacturerLogo: manufacturerLogo,
-            manufacturerUrl: manufacturerUrl,
-            description: description
-        };
-        if (weaponItemSize) {
-            newWeapon.itemSize = weaponItemSize;
-            if (weaponItemSlots) newWeapon.itemSlots = weaponItemSlots;
-        }
-        if (imagePaths.length > 1) {
-            newWeapon.images = imagePaths;
-        } else if (imagePaths.length === 1) {
-            newWeapon.image = imagePaths[0];
-        } else {
-            newWeapon.image = '';
-        }
-        weaponsData[category].push(newWeapon);
-    }
-    
-    saveData();
-    renderCategories();
-    refreshGridIfShowing(category, 'weapon');
-
-    closeWeaponModal();
-    
-    alert(editingWeaponId ? '무기가 수정되었습니다.' : '무기가 추가되었습니다.');
-    
-    // 수정한 경우 현재 표시된 무기 정보 업데이트
-    if (editingWeaponId) {
-        const updatedWeapon = weaponsData[category].find(w => w.id === editingWeaponId);
-        if (updatedWeapon) {
-            showWeaponDetail(updatedWeapon, category);
-        }
-    }
-}
-
-// 무기 수정
-function editWeapon(weaponId, categoryKey) {
-    openWeaponModal(weaponId, categoryKey);
-}
-
-// 무기 삭제
-function deleteWeapon(weaponId, categoryKey) {
-    if (confirm('정말 이 무기를 삭제하시겠습니까?')) {
-        weaponsData[categoryKey] = weaponsData[categoryKey].filter(w => w.id !== weaponId);
-        saveData();
-        renderCategories();
-        refreshGridIfShowing(categoryKey, 'weapon');
-
-        // 메인 영역 초기화
-        clearWeaponDetail();
-        alert('무기가 삭제되었습니다.');
-    }
-}
-
-// 기어 모달 열기
-function openGearModal(gearId = null, categoryKey = null) {
-    editingGearId = gearId;
-    const modal = document.getElementById('gearModal');
-    const title = document.getElementById('gearModalTitle');
-    
-    if (gearId) {
-        title.textContent = '기어 수정';
-        const gear = gearData[categoryKey].find(g => g.id === gearId);
-        if (gear) {
-            document.getElementById('gearId').value = gearId;
-            document.getElementById('gearName').value = gear.name;
-            document.getElementById('gearCategory').value = categoryKey;
-            document.getElementById('gearManufacturer').value = gear.manufacturer || '';
-            document.getElementById('gearManufacturerLogo').value = gear.manufacturerLogo || '';
-            document.getElementById('gearManufacturerUrl').value = gear.manufacturerUrl || '';
-            document.getElementById('gearItemSize').value = gear.itemSize || '';
-            document.getElementById('gearCargoSize').value = gear.cargoSize || '';
-            document.getElementById('gearImage').value = (gear.images && gear.images.length) ? gear.images.join(', ') : (gear.image || '');
-            document.getElementById('gearDescription').value = gear.description || '';
-            document.getElementById('gearBulletDamageProtection').value = gear.stats?.bulletDamageProtection ?? '';
-            document.getElementById('gearBloodDamageProtection').value = gear.stats?.bloodDamageProtection ?? '';
-            document.getElementById('gearShockDamageProtection').value = gear.stats?.shockDamageProtection ?? '';
-        }
-    } else {
-        title.textContent = '기어 추가';
-        document.getElementById('gearForm').reset();
-        document.getElementById('gearId').value = '';
-        if (currentCategory && currentCategory !== 'all' && currentCategory !== 'search') {
-            document.getElementById('gearCategory').value = currentCategory;
-        }
-    }
-    
-    modal.style.display = 'block';
-}
-
-// 기어 모달 닫기
-function closeGearModal() {
-    document.getElementById('gearModal').style.display = 'none';
-    editingGearId = null;
-}
-
-// 기어 추가/수정 처리
-function handleGearSubmit(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('gearName').value;
-    const category = document.getElementById('gearCategory').value;
-    const manufacturer = document.getElementById('gearManufacturer').value;
-    const manufacturerLogo = document.getElementById('gearManufacturerLogo').value;
-    const manufacturerUrl = document.getElementById('gearManufacturerUrl').value;
-    const gearItemSize = document.getElementById('gearItemSize').value.trim();
-    const gearCargoSize = document.getElementById('gearCargoSize').value.trim();
-    const gearImageInput = document.getElementById('gearImage').value.trim();
-    const description = document.getElementById('gearDescription').value;
-    const gearImagePaths = gearImageInput ? gearImageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
-    const bulletProt = document.getElementById('gearBulletDamageProtection').value.trim();
-    const bloodProt = document.getElementById('gearBloodDamageProtection').value.trim();
-    const shockProt = document.getElementById('gearShockDamageProtection').value.trim();
-
-    const stats = {};
-    if (bulletProt !== '') stats.bulletDamageProtection = bulletProt;
-    if (bloodProt !== '') stats.bloodDamageProtection = bloodProt;
-    if (shockProt !== '') stats.shockDamageProtection = shockProt;
-    
-    if (!category) {
-        alert('카테고리를 선택해주세요.');
-        return;
-    }
-
-    let gearItemSlots;
-    if (gearItemSize && gearItemSize.includes('x')) {
-        const [w, h] = gearItemSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(w) && !isNaN(h)) gearItemSlots = w * h;
-    }
-
-    let gearCargoSlots;
-    if (gearCargoSize && gearCargoSize.includes('x')) {
-        const [cw, ch] = gearCargoSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(cw) && !isNaN(ch)) gearCargoSlots = cw * ch;
-    }
-    
-    if (editingGearId) {
-        const gearIndex = gearData[category].findIndex(g => g.id === editingGearId);
-        if (gearIndex !== -1) {
-            gearData[category][gearIndex].name = name;
-            gearData[category][gearIndex].manufacturer = manufacturer;
-            gearData[category][gearIndex].manufacturerLogo = manufacturerLogo;
-            gearData[category][gearIndex].manufacturerUrl = manufacturerUrl;
-            if (gearItemSize) {
-                gearData[category][gearIndex].itemSize = gearItemSize;
-                if (gearItemSlots) gearData[category][gearIndex].itemSlots = gearItemSlots;
-            } else {
-                delete gearData[category][gearIndex].itemSize;
-                delete gearData[category][gearIndex].itemSlots;
-            }
-            if (gearCargoSize) {
-                gearData[category][gearIndex].cargoSize = gearCargoSize;
-                if (gearCargoSlots) gearData[category][gearIndex].cargoSlots = gearCargoSlots;
-            } else {
-                delete gearData[category][gearIndex].cargoSize;
-                delete gearData[category][gearIndex].cargoSlots;
-            }
-            if (gearImagePaths.length > 1) {
-                gearData[category][gearIndex].images = gearImagePaths;
-                delete gearData[category][gearIndex].image;
-            } else if (gearImagePaths.length === 1) {
-                gearData[category][gearIndex].image = gearImagePaths[0];
-                delete gearData[category][gearIndex].images;
-            } else {
-                gearData[category][gearIndex].image = '';
-                delete gearData[category][gearIndex].images;
-            }
-            gearData[category][gearIndex].description = description;
-            gearData[category][gearIndex].stats = Object.keys(stats).length > 0 ? stats : undefined;
-        }
-    } else {
-        const newGear = {
-            id: Date.now().toString(),
-            name: name,
-            manufacturer: manufacturer,
-            manufacturerLogo: manufacturerLogo,
-            manufacturerUrl: manufacturerUrl,
-            description: description
-        };
-        if (gearItemSize) {
-            newGear.itemSize = gearItemSize;
-            if (gearItemSlots) newGear.itemSlots = gearItemSlots;
-        }
-        if (gearCargoSize) {
-            newGear.cargoSize = gearCargoSize;
-            if (gearCargoSlots) newGear.cargoSlots = gearCargoSlots;
-        }
-        if (gearImagePaths.length > 1) {
-            newGear.images = gearImagePaths;
-        } else if (gearImagePaths.length === 1) {
-            newGear.image = gearImagePaths[0];
-        } else {
-            newGear.image = '';
-        }
-        if (Object.keys(stats).length > 0) {
-            newGear.stats = stats;
-        }
-        gearData[category].push(newGear);
-    }
-    
-    saveData();
-    renderGearCategories();
-    refreshGridIfShowing(category, 'gear');
-
-    closeGearModal();
-    alert(editingGearId ? '기어가 수정되었습니다.' : '기어가 추가되었습니다.');
-    
-    if (editingGearId) {
-        const updatedGear = gearData[category].find(g => g.id === editingGearId);
-        if (updatedGear) {
-            showGearDetail(updatedGear, category);
-        }
-    }
-}
-
-// 기어 수정
-function editGear(gearId, categoryKey) {
-    openGearModal(gearId, categoryKey);
-}
-
-// 기어 삭제
-function deleteGear(gearId, categoryKey) {
-    if (confirm('정말 이 기어를 삭제하시겠습니까?')) {
-        gearData[categoryKey] = gearData[categoryKey].filter(g => g.id !== gearId);
-        saveData();
-        renderGearCategories();
-        refreshGridIfShowing(categoryKey, 'gear');
-
-        clearDetail();
-        alert('기어가 삭제되었습니다.');
-    }
-}
 
 // 능력치 비교 모달 열기
 function openCompareModal() {
@@ -3149,7 +3906,7 @@ function openCompareModal() {
 
     listContainer.innerHTML = '';
     if (currentLabel) {
-        // 기준 무기 표시는 이름만 사용 (이름 안에 제조사가 포함될 수 있으므로)
+        // 기준 무기 표시
         currentLabel.textContent = `기준 무기: ${currentWeapon.name}`;
     }
 
@@ -3163,7 +3920,7 @@ function openCompareModal() {
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'compare-weapon-item';
-            // 비교 목록에는 총기 이름만 표기 (이미 이름에 제조사가 포함될 수 있음)
+            // 비교 대상 무기 목록 생성
             btn.textContent = w.name;
             btn.onclick = () => {
                 compareTarget = { weapon: w, categoryKey };

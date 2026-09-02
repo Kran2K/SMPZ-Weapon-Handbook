@@ -10,7 +10,7 @@
 <body>
     <!-- 상단바 -->
     <header class="topbar">
-        <h1 class="topbar-title">
+        <h1 class="topbar-title" id="homeLogoBtn" role="button" tabindex="0">
             <img src="assets/doc.png" alt="도감" class="topbar-title-icon">
             <span>SMPZ 모드 도감</span>
         </h1>
@@ -40,10 +40,6 @@
                 <input type="text" id="itemSearch" class="weapon-search-input" placeholder="전체 검색...">
             </div>
         </div>
-        <div class="admin-section">
-            <button id="adminLoginBtn" class="admin-btn">관리자 로그인</button>
-            <button id="adminLogoutBtn" class="admin-btn" style="display: none;">로그아웃</button>
-        </div>
     </header>
 
     <!-- 카테고리 드롭다운 (상단바 버튼을 누르면 내려옴) -->
@@ -59,9 +55,6 @@
             </ul>
         </div>
         <div id="gearPanel" class="panel-content" style="display: none;">
-            <div id="gearAddBtnWrap" class="admin-add-wrap" style="display: none;">
-                <button type="button" id="gearAddBtn" class="add-weapon-btn">기어 추가</button>
-            </div>
             <ul class="category-list" id="gearCategoryList">
                 <!-- 기어 카테고리 목록이 여기에 동적으로 추가됩니다 -->
             </ul>
@@ -75,17 +68,42 @@
                 <div class="grid-header-left">
                     <h2 class="grid-title" id="gridTitle"></h2>
                     <span class="grid-count" id="gridCount"></span>
+                    <button type="button" id="gridFilterResetBtn" class="grid-filter-reset-btn" style="display: none;" title="필터 초기화">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        <span>초기화</span>
+                    </button>
                 </div>
                 <div class="grid-header-right" id="gridHeaderRight">
-                    <div class="grid-search-box" id="gridSearchBox">
-                        <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="text" id="gridInlineSearch" class="grid-inline-search-input" placeholder="현재 목록에서 검색...">
-                        <button type="button" id="gridInlineSearchClear" class="grid-search-clear-btn" style="display: none;" title="검색어 지우기">&times;</button>
+                    <div class="grid-controls-row">
+                        <div class="grid-sort-box">
+                            <label for="gridSortSelect" class="grid-sort-label">
+                                <svg class="grid-sort-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6h18M6 12h12m-9 6h6"/>
+                                </svg>
+                                <span>정렬:</span>
+                            </label>
+                            <select id="gridSortSelect" class="grid-sort-select" aria-label="정렬 기준"></select>
+                            <select id="gridSortOrderSelect" class="grid-sort-order-select" aria-label="정렬 방향">
+                                <option value="desc">내림차순</option>
+                                <option value="asc">오름차순</option>
+                            </select>
+                        </div>
+                        <div class="grid-search-box" id="gridSearchBox">
+                            <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="gridInlineSearch" class="grid-inline-search-input" placeholder="현재 목록에서 검색...">
+                            <button type="button" id="gridInlineSearchClear" class="grid-search-clear-btn" style="display: none;" title="검색어 지우기">&times;</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="grid-filter-bar" id="gridFilterBar">
+                <div class="grid-filter-chips" id="gridFilterChips"></div>
             </div>
             <div class="weapon-grid" id="itemGrid"></div>
         </div>
@@ -95,161 +113,6 @@
 
     <!-- 플로팅 네비게이션 독 (이전으로 / 목록으로 / 맨 위로) -->
     <nav id="floatingNav" class="floating-nav-dock" aria-label="화면 이동"></nav>
-
-    <!-- 관리자 로그인 모달 -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>관리자 로그인</h2>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">사용자명:</label>
-                    <input type="text" id="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">비밀번호:</label>
-                    <input type="password" id="password" required>
-                </div>
-                <button type="submit" class="submit-btn">로그인</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- 무기 추가/수정 모달 -->
-    <div id="weaponModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="weaponModalTitle">무기 추가</h2>
-            <form id="weaponForm">
-                <input type="hidden" id="weaponId">
-                <div class="form-group">
-                    <label for="weaponName">무기 이름:</label>
-                    <input type="text" id="weaponName" required>
-                </div>
-                <div class="form-group">
-                    <label for="weaponCategory">카테고리:</label>
-                    <select id="weaponCategory" required>
-                        <option value="">선택하세요</option>
-                        <option value="권총">권총</option>
-                        <option value="돌격 소총">돌격 소총</option>
-                        <option value="기관단총">기관단총</option>
-                        <option value="저격 소총">저격 소총</option>
-                        <option value="산탄총">산탄총</option>
-                        <option value="경기관총">경기관총</option>
-                        <option value="유탄 발사기">유탄 발사기</option>
-                        <option value="특수">특수</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="weaponManufacturer">제조사 (선택사항):</label>
-                    <input type="text" id="weaponManufacturer" placeholder="예: Colt">
-                </div>
-                <div class="form-group">
-                    <label for="weaponManufacturerLogo">제조사 로고 경로 (선택사항):</label>
-                    <input type="text" id="weaponManufacturerLogo" placeholder="예: assets/colt-logo.png">
-                </div>
-                <div class="form-group">
-                    <label for="weaponManufacturerUrl">제조사 사이트 URL (선택사항):</label>
-                    <input type="url" id="weaponManufacturerUrl" placeholder="예: https://www.colt.com/">
-                </div>
-                <div class="form-group">
-                    <label for="weaponImage">이미지 경로 (선택사항, 여러 장은 쉼표로 구분):</label>
-                    <input type="text" id="weaponImage" placeholder="예: assets/m16a1.png 또는 assets/a.png, assets/b.png">
-                </div>
-                <div class="form-group">
-                    <label for="weaponItemSize">아이템 크기 (선택사항, 예: 8x3):</label>
-                    <input type="text" id="weaponItemSize" placeholder="예: 8x3">
-                </div>
-                <div class="form-group">
-                    <label for="weaponDescription">설명 (선택사항):</label>
-                    <textarea id="weaponDescription" rows="4"></textarea>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="submit-btn">저장</button>
-                    <button type="button" class="cancel-btn" onclick="closeWeaponModal()">취소</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- 기어 추가/수정 모달 -->
-    <div id="gearModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="gearModalTitle">기어 추가</h2>
-            <form id="gearForm">
-                <input type="hidden" id="gearId">
-                <div class="form-group">
-                    <label for="gearName">기어 이름:</label>
-                    <input type="text" id="gearName" required>
-                </div>
-                <div class="form-group">
-                    <label for="gearCategory">카테고리:</label>
-                    <select id="gearCategory" required>
-                        <option value="">선택하세요</option>
-                        <option value="헬멧">헬멧</option>
-                        <option value="전신 방탄복">전신 방탄복</option>
-                        <option value="플레이트 캐리어">플레이트 캐리어</option>
-                        <option value="마스크">마스크</option>
-                        <option value="백팩">백팩</option>
-                        <option value="기어 부품">기어 부품</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="gearManufacturer">제조사 (선택사항):</label>
-                    <input type="text" id="gearManufacturer" placeholder="예: Avon Protection">
-                </div>
-                <div class="form-group">
-                    <label for="gearManufacturerLogo">제조사 로고 경로 (선택사항):</label>
-                    <input type="text" id="gearManufacturerLogo" placeholder="예: assets/avon-logo.png">
-                </div>
-                <div class="form-group">
-                    <label for="gearManufacturerUrl">제조사 사이트 URL (선택사항):</label>
-                    <input type="url" id="gearManufacturerUrl" placeholder="예: https://www.avon-protection.com/">
-                </div>
-                <div class="form-group">
-                    <label for="gearImage">이미지 경로 (선택사항, 여러 장은 쉼표로 구분):</label>
-                    <input type="text" id="gearImage" placeholder="예: assets/m53a1.png 또는 assets/a.png, assets/b.png">
-                </div>
-                <div class="form-group">
-                    <label for="gearItemSize">아이템 크기 (선택사항, 예: 6x6):</label>
-                    <input type="text" id="gearItemSize" placeholder="예: 6x6">
-                </div>
-                <div class="form-group">
-                    <label for="gearCargoSize">수납 공간 크기 (선택사항, 예: 10x15):</label>
-                    <input type="text" id="gearCargoSize" placeholder="예: 10x15">
-                </div>
-                <div class="form-group">
-                    <label for="gearDescription">설명 (선택사항):</label>
-                    <textarea id="gearDescription" rows="4"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="gearBulletDamageProtection">탄 데미지 보호률 (0~100, 선택사항):</label>
-                    <input type="number" id="gearBulletDamageProtection" min="0" max="100" placeholder="예: 50">
-                </div>
-                <div class="form-group">
-                    <label for="gearBloodDamageProtection">유혈 데미지 보호률 (0~100, 선택사항):</label>
-                    <input type="number" id="gearBloodDamageProtection" min="0" max="100" placeholder="예: 30">
-                </div>
-                <div class="form-group">
-                    <label for="gearShockDamageProtection">충격 데미지 보호률 (0~100, 선택사항):</label>
-                    <input type="number" id="gearShockDamageProtection" min="0" max="100" placeholder="예: 80">
-                </div>
-                <div class="form-group gear-filter-charge-field">
-                    <label for="gearFilterChargeable">차콜 테블릿 필터 충전 가능 (호흡기/방독면용, 선택사항):</label>
-                    <select id="gearFilterChargeable">
-                        <option value="">선택 안 함</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="submit-btn">저장</button>
-                    <button type="button" class="cancel-btn" onclick="closeGearModal()">취소</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- 능력치 비교 모달 -->
     <div id="compareModal" class="modal">
