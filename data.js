@@ -158,6 +158,9 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -230,6 +233,11 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
             ]
         },
         {
@@ -276,6 +284,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -320,6 +332,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -362,6 +378,10 @@ const weaponsData = {
                 "SMPZ_Ammo_127x55_PS12A",
                 "SMPZ_Ammo_127x55_PS12",
                 "SMPZ_Ammo_127x55_PS12B"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -446,6 +466,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -602,6 +626,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -758,6 +786,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst"
             ]
         },
         {
@@ -912,6 +944,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst"
             ]
         },
         {
@@ -1069,6 +1105,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1143,6 +1183,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1193,6 +1237,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1342,6 +1390,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1425,6 +1477,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1481,6 +1537,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1584,6 +1644,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1742,6 +1806,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -1894,6 +1962,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2048,6 +2120,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2199,6 +2275,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2355,6 +2435,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2409,6 +2493,10 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP4"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2463,6 +2551,10 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP4"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2549,6 +2641,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2635,6 +2731,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2712,6 +2812,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2777,6 +2881,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2841,6 +2949,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2887,6 +2999,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -2965,6 +3081,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3044,6 +3164,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3123,6 +3247,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3210,6 +3338,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3298,6 +3430,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3385,6 +3521,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3473,6 +3613,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3548,6 +3692,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3624,6 +3772,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3698,6 +3850,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3742,6 +3898,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -3896,6 +4056,9 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -4049,6 +4212,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -4175,6 +4342,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -4217,6 +4388,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -4302,6 +4476,9 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -4377,6 +4554,9 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -4531,6 +4711,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -4687,6 +4871,9 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -4841,6 +5028,10 @@ const weaponsData = {
                 "SMPZ_Ammo_300BLK_M62_Tracer",
                 "SMPZ_Ammo_300BLK_CBJ",
                 "SMPZ_Ammo_300BLK_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -4925,6 +5116,10 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5079,6 +5274,10 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP45"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5171,6 +5370,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5217,6 +5420,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5296,6 +5503,10 @@ const weaponsData = {
                 "SMPZ_Ammo_556x45_M995",
                 "SMPZ_Ammo_556x45_SSAAP",
                 "SMPZ_Ammo_556x45_AP45"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5340,6 +5551,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x39",
                 "Ammo_9x39AP"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         }
     ],
@@ -5394,6 +5609,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5435,6 +5653,9 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5478,6 +5699,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_50BMG_M33",
                 "SMPZ_Ammo_50BMG_M903"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -5513,6 +5737,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_25x59_HE"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -5550,6 +5777,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_408CT"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5600,6 +5830,10 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -5650,6 +5884,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -5743,6 +5980,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -5836,6 +6076,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -5873,6 +6116,9 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5897,6 +6143,9 @@ const weaponsData = {
             "itemSlots": 27,
             "chamberableFrom": [
                 "Ammo_357"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5933,6 +6182,9 @@ const weaponsData = {
                 "SMPZ_Ammo_366TKM_FMJ",
                 "SMPZ_Ammo_366TKM_EKO",
                 "SMPZ_Ammo_366TKM_AP"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -5967,6 +6219,9 @@ const weaponsData = {
                 "Ammo_762x54",
                 "Ammo_762x54Tracer",
                 "Mag_CLIP762x54_5Rnd"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6011,6 +6266,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_300Win_FMJ",
                 "SMPZ_Ammo_300Win_AP"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6058,6 +6316,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6113,6 +6374,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6205,6 +6469,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6243,6 +6510,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6286,6 +6556,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6328,6 +6601,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6370,6 +6646,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_762x54"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6412,6 +6691,9 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6454,6 +6736,9 @@ const weaponsData = {
                 "SMPZ_Ammo_338LM_UCW",
                 "SMPZ_Ammo_338LM_FMJ",
                 "SMPZ_Ammo_338LM_AP"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -6497,6 +6782,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6543,6 +6831,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6579,6 +6870,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "SMPZ_Ammo_50BMG_M33",
                 "SMPZ_Ammo_50BMG_M903"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -6616,6 +6910,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6655,6 +6953,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         }
     ],
@@ -6691,6 +6992,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6735,6 +7040,10 @@ const weaponsData = {
                 "SMPZ_Ammo_57x28_L191",
                 "SMPZ_Ammo_57x28_SB193",
                 "SMPZ_Ammo_57x28_SS190"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6775,6 +7084,11 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
             ]
         },
         {
@@ -6823,6 +7137,10 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6870,6 +7188,10 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6911,6 +7233,10 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_9x19"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6944,6 +7270,10 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_762x25"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -6988,6 +7318,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -7027,6 +7361,10 @@ const weaponsData = {
                 "SMPZ_Ammo_9x21_7U4",
                 "SMPZ_Ammo_9x21_BTgzh",
                 "SMPZ_Ammo_9x21_7N42"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -7070,6 +7408,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_9x19"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7117,6 +7458,11 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
             ]
         },
         {
@@ -7160,6 +7506,11 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "Burst",
+                "FullAuto"
             ]
         }
     ],
@@ -7198,6 +7549,9 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -7235,6 +7589,9 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -7269,6 +7626,9 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -7304,6 +7664,9 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -7335,6 +7698,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -7366,6 +7732,10 @@ const weaponsData = {
                 "Ammo_12gaPellets",
                 "Ammo_12gaSlug",
                 "Mag_12gaSnaploader_2Rnd"
+            ],
+            "modes": [
+                "Single",
+                "Double"
             ]
         },
         {
@@ -7399,6 +7769,9 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "Single"
             ]
         },
         {
@@ -7445,6 +7818,10 @@ const weaponsData = {
                 "Ammo_12gaSlug",
                 "Ammo_12gaRubberSlug",
                 "Ammo_12gaBeanbag"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         }
     ],
@@ -7480,6 +7857,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7515,6 +7895,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7548,6 +7931,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_45ACP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7581,6 +7967,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_45ACP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7626,6 +8015,9 @@ const weaponsData = {
                 "SMPZ_Ammo_57x28_L191",
                 "SMPZ_Ammo_57x28_SB193",
                 "SMPZ_Ammo_57x28_SS190"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7667,6 +8059,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7705,6 +8100,10 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -7742,6 +8141,9 @@ const weaponsData = {
                 "SMPZ_Ammo_46x30JSPSX",
                 "SMPZ_Ammo_46x30FMJSX",
                 "SMPZ_Ammo_46x30APSX"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7778,6 +8180,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_45ACP",
                 "SMPZ_Ammo_45ACP_AP"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7811,6 +8216,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "Ammo_357"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7850,6 +8258,9 @@ const weaponsData = {
                 "SMPZ_Ammo_50AE_JSP",
                 "SMPZ_Ammo_50AE_COPPER",
                 "SMPZ_Ammo_50AE_FMJ"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7889,6 +8300,9 @@ const weaponsData = {
                 "SMPZ_Ammo_9x21_7U4",
                 "SMPZ_Ammo_9x21_BTgzh",
                 "SMPZ_Ammo_9x21_7N42"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7921,6 +8335,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_9x19",
                 "SMPZ_Ammo_9x19_AP63"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         },
         {
@@ -7948,6 +8365,9 @@ const weaponsData = {
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_762x25"
+            ],
+            "modes": [
+                "SemiAuto"
             ]
         }
     ],
@@ -7995,6 +8415,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -8041,6 +8464,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x39_PPgzh",
                 "SMPZ_Ammo_762x39_BPgzh",
                 "SMPZ_Ammo_762x39_MAIAP"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -8081,6 +8507,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -8120,6 +8549,9 @@ const weaponsData = {
             "chamberableFrom": [
                 "Ammo_762x54",
                 "Ammo_762x54Tracer"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         },
         {
@@ -8185,6 +8617,10 @@ const weaponsData = {
                 "SMPZ_Ammo_545x39_BPgs",
                 "SMPZ_Ammo_545x39_BSgs",
                 "SMPZ_Ammo_545x39_PPBSgs"
+            ],
+            "modes": [
+                "SemiAuto",
+                "FullAuto"
             ]
         },
         {
@@ -8233,6 +8669,9 @@ const weaponsData = {
                 "SMPZ_Ammo_762x51_M61",
                 "SMPZ_Ammo_762x51_M993",
                 "SMPZ_Ammo_762x51_M80A1"
+            ],
+            "modes": [
+                "FullAuto"
             ]
         }
     ],
@@ -8278,6 +8717,9 @@ const weaponsData = {
                 "Ammo_40mm_Smoke_Green",
                 "Ammo_40mm_Smoke_White",
                 "Ammo_40mm_Smoke_Black"
+            ],
+            "modes": [
+                "Single"
             ]
         }
     ]
@@ -9639,14 +10081,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -9682,14 +10116,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -9728,14 +10154,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -9780,17 +10198,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -9833,14 +10240,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -9875,13 +10274,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -9927,17 +10319,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -9978,15 +10359,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10031,17 +10403,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10085,17 +10446,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10141,17 +10491,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10202,17 +10541,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10260,17 +10588,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10317,17 +10634,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         },
         {
@@ -10366,17 +10672,6 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
-            ],
-            "protectionAreasKo": [
-                "목",
-                "흉부",
-                "등",
-                "좌측 어깨",
-                "우측 어깨",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리",
-                "낭심(사타구니)"
             ]
         }
     ],
@@ -10413,13 +10708,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10458,13 +10746,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10504,13 +10785,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10552,13 +10826,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10600,13 +10867,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10649,13 +10909,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10695,13 +10948,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10736,13 +10982,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10777,13 +11016,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10826,13 +11058,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         },
         {
@@ -10869,13 +11094,6 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
-            ],
-            "protectionAreasKo": [
-                "흉부",
-                "등",
-                "복부",
-                "좌측 옆구리",
-                "우측 옆구리"
             ]
         }
     ],
@@ -13483,7 +13701,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13509,7 +13728,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
-                "weight": "814g"
+                "weight": "814g",
+                "magnification": "6-20x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13536,7 +13756,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1150g"
+                "weight": "1150g",
+                "magnification": "3-20x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -13567,7 +13788,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "4x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13593,7 +13815,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "5x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13619,7 +13842,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "354g"
+                "weight": "354g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13653,7 +13877,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "388g"
+                "weight": "388g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13687,7 +13912,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "433g"
+                "weight": "433g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13721,7 +13947,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "470g"
+                "weight": "470g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13755,7 +13982,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "255g"
+                "weight": "255g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13787,7 +14015,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "295g"
+                "weight": "295g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -13807,7 +14036,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "255g"
+                "weight": "255g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13839,7 +14069,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "436g"
+                "weight": "436g",
+                "magnification": "3.5x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13869,7 +14100,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "800g"
+                "weight": "800g",
+                "magnification": "3.5x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -13888,7 +14120,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "300g"
+                "weight": "300g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13920,7 +14153,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "349g"
+                "weight": "349g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13952,7 +14186,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "53g"
+                "weight": "53g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -13972,7 +14207,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "84g"
+                "weight": "84g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -13992,7 +14228,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "94g"
+                "weight": "94g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14012,7 +14249,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "90g"
+                "weight": "90g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14032,7 +14270,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14054,7 +14293,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.nightforceoptics.com/",
             "stats": {
-                "weight": "1339g"
+                "weight": "1339g",
+                "magnification": "6-25x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -14081,7 +14321,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1126g"
+                "weight": "1126g",
+                "magnification": "4-16x"
             },
             "itemSize": "4x1",
             "itemSlots": 4,
@@ -14108,7 +14349,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -14128,7 +14370,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -14148,7 +14391,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.steiner-optics.com/",
             "stats": {
-                "weight": "272g"
+                "weight": "272g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14168,7 +14412,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "160g"
+                "weight": "160g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14188,47 +14433,13 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.aimpoint.com/",
             "stats": {
-                "weight": "60g"
+                "weight": "60g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
             "inventorySlots": [
                 "AimpointACRO"
-            ]
-        },
-        {
-            "id": "SMPZ_Flashlights_WMX",
-            "name": "Insight WMX200 tactical flashlight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "최대 빛 거리: 100m",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "210g"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven",
-                "pistolFlashlight",
-                "pistolFlashlightSecond",
-                "helmetFlashlight"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
             ]
         },
         {
@@ -14242,7 +14453,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "30g"
+                "weight": "30g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14264,7 +14476,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/",
             "stats": {
-                "weight": "50g"
+                "weight": "50g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14286,7 +14499,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
-                "weight": "453g"
+                "weight": "453g",
+                "magnification": "1x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14309,7 +14523,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/",
             "stats": {
-                "weight": "154g"
+                "weight": "154g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14331,7 +14546,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "200g"
+                "weight": "200g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14353,7 +14569,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "330g"
+                "weight": "330g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14386,7 +14603,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14412,7 +14630,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14438,7 +14657,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14464,7 +14684,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://vortexoptics.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14490,7 +14711,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.trijicon.com/",
             "stats": {
-                "weight": "25g"
+                "weight": "25g",
+                "magnification": "1x"
             },
             "itemSize": "1x1",
             "itemSlots": 1,
@@ -14510,7 +14732,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "150g"
+                "weight": "150g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14529,7 +14752,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14559,7 +14783,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14589,7 +14814,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "400g"
+                "weight": "400g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14626,7 +14852,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
-                "weight": "225g"
+                "weight": "225g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14660,7 +14887,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14693,7 +14921,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1114g"
+                "weight": "1114g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14719,7 +14948,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1114g"
+                "weight": "1114g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14745,7 +14975,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "600g"
+                "weight": "600g",
+                "magnification": "20x"
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -14767,7 +14998,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "520g"
+                "weight": "520g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14786,7 +15018,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "450g"
+                "weight": "450g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14805,7 +15038,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "273g"
+                "weight": "273g",
+                "magnification": "1x"
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -14824,7 +15058,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.leupold.com/",
             "stats": {
-                "weight": "411g"
+                "weight": "411g",
+                "magnification": "4x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14851,7 +15086,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14880,7 +15116,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14909,7 +15146,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "640g"
+                "weight": "640g",
+                "magnification": "1-4x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14938,7 +15176,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "570g"
+                "weight": "570g",
+                "magnification": "2-6x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14965,7 +15204,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "854g"
+                "weight": "854g",
+                "magnification": "3-24x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -14992,7 +15232,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "1310g"
+                "weight": "1310g",
+                "magnification": "5-25x"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -15019,7 +15260,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/milkor-logo.png",
             "manufacturerUrl": "https://milkorusa.com/",
             "stats": {
-                "weight": "600g"
+                "weight": "600g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -17690,6 +17932,26 @@ const attachmentData = {
             "inventorySlots": [
                 "X17Receiver"
             ]
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
+            "name": "TX-15 5.56x45 Lightweight Upper Receiver",
+            "category": "리시버",
+            "image": "",
+            "images": [],
+            "description": "AR-15 소총에만 부착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "recoil": "-4%",
+                "weight": "190g"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M4Receiver"
+            ]
         }
     ],
     "마운트": [
@@ -17935,7 +18197,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "300g"
+                "weight": "300g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18514,7 +18777,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "70g"
+                "weight": "70g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18558,7 +18822,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "120g"
+                "weight": "120g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -18602,7 +18867,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
             "stats": {
-                "weight": "70g"
+                "weight": "70g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -19256,7 +19522,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "magnification": "1x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23489,7 +23756,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "50g"
+                "weight": "50g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23524,7 +23792,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://zenitco.ru/",
             "stats": {
-                "weight": "259g"
+                "weight": "259g",
+                "lightDistance": "300m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23559,7 +23828,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "250g"
+                "weight": "250g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23594,7 +23864,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "120g"
+                "weight": "120g",
+                "lightDistance": "300m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23616,7 +23887,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "https://www.surefire.com/",
             "stats": {
-                "weight": "130g"
+                "weight": "130g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23651,7 +23923,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "210g"
+                "weight": "210g",
+                "lightDistance": "150m"
             },
             "itemSize": "3x1",
             "itemSlots": 3,
@@ -23673,7 +23946,8 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "weight": "130g"
+                "weight": "130g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -23698,23 +23972,39 @@ const attachmentData = {
             ]
         },
         {
-            "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
-            "name": "TX-15 5.56x45 Lightweight Upper Receiver",
+            "id": "SMPZ_Flashlights_WMX",
+            "name": "Insight WMX200 tactical flashlight",
             "category": "전술 플래시",
             "image": "",
             "images": [],
-            "description": "AR-15 소총에만 부착 가능",
+            "description": "최대 빛 거리: 100m",
             "manufacturer": "",
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "recoil": "-4%",
-                "weight": "190g"
+                "weight": "210g",
+                "lightDistance": "100m"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
             "inventorySlots": [
-                "M4Receiver"
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "weaponFlashlightFourth",
+                "weaponFlashlightFifth",
+                "weaponFlashlightSix",
+                "weaponFlashlightSeven",
+                "weaponFlashlightEight",
+                "weaponFlashlightNine",
+                "weaponFlashlightTen",
+                "weaponFlashlightEleven",
+                "pistolFlashlight",
+                "pistolFlashlightSecond",
+                "helmetFlashlight"
+            ],
+            "attachmentSlots": [
+                "BatteryD"
             ]
         }
     ],
