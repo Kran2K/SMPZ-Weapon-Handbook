@@ -9629,6 +9629,22 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -9656,6 +9672,22 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -9686,6 +9718,22 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -9719,6 +9767,28 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
@@ -9753,6 +9823,22 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -9780,6 +9866,20 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -9814,6 +9914,28 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
@@ -9845,6 +9967,24 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
@@ -9878,6 +10018,28 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
@@ -9910,6 +10072,28 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
@@ -9944,11 +10128,94 @@ const gearData = {
             "attachmentSlots": [
                 "VestHolster",
                 "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         },
         {
-            "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
-            "name": "NPP KIASS Kora-Kulon Body Armor",
+            "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
+            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier",
+            "category": "전신 방탄복",
+            "image": "assets/mass.png",
+            "images": [
+                "assets/mass.png",
+                "assets/mass_2.png",
+                "assets/mass_3.png"
+            ],
+            "description": "First Spear Siege-R Optimized M.A.S.S. 플레이트 캐리어는 미국의 전술 장비 제조사인 First Spear에서 개발한 혁신적인 중량급 플레이트 캐리어입니다. 이 제품은 기존의 무거운 웨빙 대신 레이저 커팅 기술인 6/12™ 시스템을 적용하여 전체 무게를 획기적으로 줄였으며\n독자적인 Tubes™ 퀵 릴리즈 시스템을 통해 단 한 번의 조작으로 신속한 착용과 탈거가 가능합니다. 특히 M.A.S.S. 옵션을 선택할 경우\n목, 어깨, 사타구니 등 전신 방호 파츠를 추가로 결합할 수 있어, 경량화와 최대 수준의 방호력을 동시에 요구하는 특수부대 및 법 집행 기관의 중갑 대원들에게 최적화된 장비입니다.",
+            "manufacturer": "FirstSpear",
+            "manufacturerLogo": "assets/firstspear-logo.png",
+            "manufacturerUrl": "https://www.first-spear.com/",
+            "stats": {
+                "bulletDamageProtection": "80",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "80",
+                "hitpoints": "255",
+                "weight": "25.0 kg"
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "7x10",
+            "itemSlots": 70,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
+            "name": "Eagle Industries MMAC Plate Carrier",
             "category": "전신 방탄복",
             "image": "",
             "images": [],
@@ -9957,20 +10224,157 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "35",
+                "bulletDamageProtection": "65",
                 "bloodDamageProtection": "0",
-                "shockDamageProtection": "35",
-                "hitpoints": "120",
-                "weight": "11.1 kg"
+                "shockDamageProtection": "50",
+                "hitpoints": "190",
+                "weight": "8.0 kg"
             },
-            "itemSize": "4x4",
-            "itemSlots": 16,
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
             "inventorySlots": [
                 "Vest"
             ],
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "attachmentSlots": [
+                "Case_Front",
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
+            "name": "Tasmanian Tiger MKIII Plate Carrier",
+            "category": "전신 방탄복",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "55",
+                "hitpoints": "225",
+                "weight": "8.0 kg"
+            },
+            "cargoSize": "4x5",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "attachmentSlots": [
+                "VestHolster",
+                "PatchLarge",
+                "Pouch_IFAK",
+                "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
+            ]
+        },
+        {
+            "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
+            "name": "LBT-6094A Slick",
+            "category": "전신 방탄복",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "225",
+                "weight": "6.2 kg"
+            },
+            "itemSize": "5x5",
+            "itemSlots": 25,
+            "inventorySlots": [
+                "Vest"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Vest"
+            ],
+            "protectionAreas": [
+                "Neck",
+                "Torso",
+                "Back",
+                "LeftShoulder",
+                "RightShoulder",
+                "Stomach",
+                "LeftSide",
+                "RightSide",
+                "Groin"
+            ],
+            "protectionAreasKo": [
+                "목",
+                "흉부",
+                "등",
+                "좌측 어깨",
+                "우측 어깨",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리",
+                "낭심(사타구니)"
             ]
         }
     ],
@@ -10000,35 +10404,20 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
-            "name": "ANA Tactical Alpha Chest Rig",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "ANA Tactical에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.7 kg"
-            },
-            "cargoSize": "8x5",
-            "cargoSlots": 40,
-            "itemSize": "5x6",
-            "itemSlots": 30,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10060,6 +10449,20 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10092,6 +10495,20 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10126,6 +10543,20 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10160,71 +10591,20 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_Triton_M43A_Black",
-            "name": "Dynaforce Triton M43-A Chest Harness",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "다이나포스에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.3 kg"
-            },
-            "cargoSize": "5x3",
-            "cargoSlots": 15,
-            "itemSize": "4x5",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
-            "name": "Eagle Industries MMAC Plate Carrier",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "65",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "190",
-                "weight": "8.0 kg"
-            },
-            "cargoSize": "4x5",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "Vest"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "Case_Front",
-                "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK",
-                "Tourniquet"
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10260,45 +10640,20 @@ const gearData = {
             "attachmentSlots": [
                 "PatchLarge",
                 "Pouch_IFAK"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
-            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier",
-            "category": "플레이트 캐리어",
-            "image": "assets/mass.png",
-            "images": [
-                "assets/mass.png",
-                "assets/mass_2.png",
-                "assets/mass_3.png"
             ],
-            "description": "First Spear Siege-R Optimized M.A.S.S. 플레이트 캐리어는 미국의 전술 장비 제조사인 First Spear에서 개발한 혁신적인 중량급 플레이트 캐리어입니다. 이 제품은 기존의 무거운 웨빙 대신 레이저 커팅 기술인 6/12™ 시스템을 적용하여 전체 무게를 획기적으로 줄였으며\n독자적인 Tubes™ 퀵 릴리즈 시스템을 통해 단 한 번의 조작으로 신속한 착용과 탈거가 가능합니다. 특히 M.A.S.S. 옵션을 선택할 경우\n목, 어깨, 사타구니 등 전신 방호 파츠를 추가로 결합할 수 있어, 경량화와 최대 수준의 방호력을 동시에 요구하는 특수부대 및 법 집행 기관의 중갑 대원들에게 최적화된 장비입니다.",
-            "manufacturer": "FirstSpear",
-            "manufacturerLogo": "assets/firstspear-logo.png",
-            "manufacturerUrl": "https://www.first-spear.com/",
-            "stats": {
-                "bulletDamageProtection": "80",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "80",
-                "hitpoints": "255",
-                "weight": "25.0 kg"
-            },
-            "cargoSize": "5x4",
-            "cargoSlots": 20,
-            "itemSize": "7x10",
-            "itemSlots": 70,
-            "inventorySlots": [
-                "Vest"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "Case_Front",
-                "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK"
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10331,62 +10686,20 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Pouch_IFAK"
-            ]
-        },
-        {
-            "id": "SMPZ_ChestRig_LBT1961A_Gray",
-            "name": "LBT-1961A Load Bearing Chest Rig",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "런던 브리지 트레이딩(London Bridge Trading)에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "0",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.4 kg"
-            },
-            "cargoSize": "5x4",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
-            "inventorySlots": [
-                "ChestRig"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Back"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
-            "name": "LBT-6094A Slick",
-            "category": "플레이트 캐리어",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "225",
-                "weight": "6.2 kg"
-            },
-            "itemSize": "5x5",
-            "itemSlots": 25,
-            "inventorySlots": [
-                "Vest"
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
             ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10414,11 +10727,25 @@ const gearData = {
             "itemInfo": [
                 "Clothing",
                 "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
-            "id": "SMPZ_ChestRig_PoyasAB_Green",
-            "name": "Poyas-A + Poyas-B Gear Chest Rig",
+            "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
+            "name": "NPP KIASS Kora-Kulon Body Armor",
             "category": "플레이트 캐리어",
             "image": "",
             "images": [],
@@ -10427,22 +10754,34 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "0",
+                "bulletDamageProtection": "35",
                 "bloodDamageProtection": "0",
-                "shockDamageProtection": "0",
-                "hitpoints": "500",
-                "weight": "1.7 kg"
+                "shockDamageProtection": "35",
+                "hitpoints": "120",
+                "weight": "11.1 kg"
             },
-            "cargoSize": "7x5",
-            "cargoSlots": 35,
-            "itemSize": "5x6",
-            "itemSlots": 30,
+            "itemSize": "4x4",
+            "itemSlots": 16,
             "inventorySlots": [
-                "ChestRig"
+                "Vest"
             ],
             "itemInfo": [
                 "Clothing",
-                "Back"
+                "Vest"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
@@ -10478,11 +10817,25 @@ const gearData = {
                 "VestHolster",
                 "PatchLarge",
                 "Tourniquet"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
             ]
         },
         {
-            "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
-            "name": "Tasmanian Tiger MKIII Plate Carrier",
+            "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
+            "name": "NPP KIASS Bagariy Plate Carrier",
             "category": "플레이트 캐리어",
             "image": "",
             "images": [],
@@ -10491,16 +10844,12 @@ const gearData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "55",
-                "hitpoints": "225",
-                "weight": "8.0 kg"
+                "weight": "10.8 kg"
             },
-            "cargoSize": "4x5",
-            "cargoSlots": 20,
-            "itemSize": "5x4",
-            "itemSlots": 20,
+            "cargoSize": "6x5",
+            "cargoSlots": 30,
+            "itemSize": "6x6",
+            "itemSlots": 36,
             "inventorySlots": [
                 "Vest"
             ],
@@ -10510,15 +10859,145 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "VestHolster",
-                "PatchLarge",
-                "Pouch_IFAK",
-                "Tourniquet"
+                "Pouch_IFAK"
+            ],
+            "protectionAreas": [
+                "Torso",
+                "Back",
+                "Stomach",
+                "LeftSide",
+                "RightSide"
+            ],
+            "protectionAreasKo": [
+                "흉부",
+                "등",
+                "복부",
+                "좌측 옆구리",
+                "우측 옆구리"
+            ]
+        }
+    ],
+    "체스트 리그": [
+        {
+            "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
+            "name": "ANA Tactical Alpha Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "ANA Tactical에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.7 kg"
+            },
+            "cargoSize": "8x5",
+            "cargoSlots": 40,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_Triton_M43A_Black",
+            "name": "Dynaforce Triton M43-A Chest Harness",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "다이나포스에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.3 kg"
+            },
+            "cargoSize": "5x3",
+            "cargoSlots": 15,
+            "itemSize": "4x5",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_LBT1961A_Gray",
+            "name": "LBT-1961A Load Bearing Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "런던 브리지 트레이딩(London Bridge Trading)에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.4 kg"
+            },
+            "cargoSize": "5x4",
+            "cargoSlots": 20,
+            "itemSize": "5x4",
+            "itemSlots": 20,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
+            ]
+        },
+        {
+            "id": "SMPZ_ChestRig_PoyasAB_Green",
+            "name": "Poyas-A + Poyas-B Gear Chest Rig",
+            "category": "체스트 리그",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "0",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "0",
+                "hitpoints": "500",
+                "weight": "1.7 kg"
+            },
+            "cargoSize": "7x5",
+            "cargoSlots": 35,
+            "itemSize": "5x6",
+            "itemSlots": 30,
+            "inventorySlots": [
+                "ChestRig"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Back"
             ]
         },
         {
             "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
             "name": "WARTECH MK3 TV-104 Chest Rig",
-            "category": "플레이트 캐리어",
+            "category": "체스트 리그",
             "image": "",
             "images": [],
             "description": "제조사: WARTECH",
@@ -11080,35 +11559,6 @@ const gearData = {
             "attachmentSlots": [
                 "Shoulder",
                 "PatchLarge"
-            ]
-        },
-        {
-            "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
-            "name": "NPP KIASS Bagariy Plate Carrier",
-            "category": "백팩",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "10.8 kg"
-            },
-            "cargoSize": "6x5",
-            "cargoSlots": 30,
-            "itemSize": "6x6",
-            "itemSlots": 36,
-            "inventorySlots": [
-                "Vest"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Vest"
-            ],
-            "attachmentSlots": [
-                "VestHolster",
-                "Pouch_IFAK"
             ]
         },
         {

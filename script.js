@@ -1620,6 +1620,12 @@ function hasAnyValidValueForSort(items, cfg) {
             return str.includes('%') || str.startsWith('-') || str.startsWith('+');
         });
     }
+    if (cfg.id === 'bullet_prot_desc' || cfg.id === 'shock_prot_desc') {
+        return items.some(item => {
+            const val = cfg.parser ? cfg.parser(item) : null;
+            return val !== null && val > 0;
+        });
+    }
 
     return items.some(item => {
         if (!cfg.parser) return false;
@@ -1645,7 +1651,7 @@ function updateSortOptionsDropdown(panelType, categoryKey, preferredSortKey, ite
         defaultKey = 'recoil_reduction_desc';
     } else if (['헬멧', '전신 방탄복', '플레이트 캐리어', '마스크'].includes(categoryKey)) {
         defaultKey = 'bullet_prot_desc';
-    } else if (categoryKey === '백팩') {
+    } else if (['백팩', '체스트 리그'].includes(categoryKey)) {
         defaultKey = 'cargo_desc';
     } else if (panelType === 'weapon' && categoryKey !== 'all') {
         defaultKey = 'rpm_desc';
@@ -2257,6 +2263,31 @@ function appendItemSpecRows(statsList, item) {
 
         row.appendChild(label);
         row.appendChild(value);
+        statsList.appendChild(row);
+    }
+
+    // 방호 부위 (Protection Areas)
+    const protAreas = item.protectionAreasKo || (item.protectionAreas ? item.protectionAreas : null);
+    if (protAreas && protAreas.length > 0) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row weapon-stat-row-areas';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '방호 부위:';
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'protection-chips-wrapper';
+
+        protAreas.forEach(area => {
+            const chip = document.createElement('span');
+            chip.className = 'protection-area-chip';
+            chip.textContent = area;
+            chipsWrap.appendChild(chip);
+        });
+
+        row.appendChild(label);
+        row.appendChild(chipsWrap);
         statsList.appendChild(row);
     }
 }

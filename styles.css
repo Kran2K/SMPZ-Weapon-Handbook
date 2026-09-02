@@ -1050,6 +1050,34 @@ body {
     background: #e74c3c;
 }
 
+/* 방호 부위 (Protection Areas) 칩 스타일 */
+.weapon-stat-row-areas {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.protection-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.protection-area-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    font-size: 13px;
+    color: #e6e6e6;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+}
+
 /* 기어 필터 충전 패널 */
 .gear-filter-charge-panel {
     width: 100%;

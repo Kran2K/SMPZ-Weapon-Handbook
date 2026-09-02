@@ -461,6 +461,27 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         google_cache[clean_raw] = translated
         return translated, 'google_translate'
 
+    # Korean Translation map for C++ ProtectionAreas
+    PROTECTION_AREAS_MAP = {
+        'Neck': '목',
+        'Torso': '흉부',
+        'Back': '등',
+        'LeftShoulder': '좌측 어깨',
+        'RightShoulder': '우측 어깨',
+        'Stomach': '복부',
+        'LeftSide': '좌측 옆구리',
+        'RightSide': '우측 옆구리',
+        'Groin': '낭심(사타구니)',
+        'Head': '두부(머리)',
+        'Face': '안면(얼굴)',
+        'Ears': '귀',
+        'Eyes': '눈',
+        'Arms': '팔',
+        'Legs': '다리',
+        'Feet': '발',
+        'Hands': '손'
+    }
+
     # Reconstruct datasets
     sections = [
         ('weaponsData', target_w, 'weapon'),
@@ -474,7 +495,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'empty': 0,
         'cargo_items': 0,
         'models_linked': 0,
-        'slots_linked': 0
+        'slots_linked': 0,
+        'protection_items': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -548,7 +570,14 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
-                # 5. Description resolution
+                # 5. Protection Areas metadata (방호 부위)
+                prot_areas = props.get('ProtectionAreas')
+                if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
+                    item_obj['protectionAreas'] = prot_areas
+                    item_obj['protectionAreasKo'] = [PROTECTION_AREAS_MAP.get(a, a) for a in prot_areas]
+                    stats_summary['protection_items'] += 1
+
+                # 6. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
@@ -565,6 +594,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
     print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
+    print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 
