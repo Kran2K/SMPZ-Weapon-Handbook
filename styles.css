@@ -121,13 +121,6 @@ body {
     padding: 20px 24px;
 }
 
-.admin-add-wrap {
-    margin-bottom: 12px;
-}
-
-.admin-add-wrap .add-weapon-btn {
-    width: 100%;
-}
 
 .search-container {
     width: 280px;
@@ -860,33 +853,6 @@ body {
     display: none;
 }
 
-/* 관리자 섹션 */
-.admin-section {
-    display: flex;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    flex-shrink: 0;
-}
-
-.admin-btn {
-    width: auto;
-    padding: 9px 14px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.admin-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
 
 /* 메인 콘텐츠 영역 */
 .main-content {
@@ -1325,432 +1291,6 @@ body {
     background: #222222;
 }
 
-.weapon-detail-actions {
-    margin-top: 30px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.weapon-card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #333;
-}
-
-.weapon-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    border-color: #ffffff;
-}
-
-.weapon-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.weapon-description {
-    color: #cccccc;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.empty-message {
-    text-align: center;
-    color: #666;
-    font-size: 18px;
-    padding: 60px 20px;
-}
-
-/* 관리자 모드 버튼 */
-.admin-actions {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.add-weapon-btn {
-    padding: 12px 30px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.add-weapon-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.weapon-actions {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.edit-btn, .delete-btn {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.edit-btn {
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-}
-
-.edit-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.delete-btn {
-    background: #333333;
-    color: #ffffff;
-    border: 2px solid #666666;
-}
-
-.delete-btn:hover {
-    background: #444444;
-    border-color: #888888;
-}
-
-/* 모달 스타일 */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.3s;
-}
-
-/* 이미지 모달은 기본 모달 스타일을 덮어씀 */
-.modal.image-modal {
-    display: none;
-}
-
-.modal-content {
-    background-color: #1a1a1a;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.1);
-    animation: slideDown 0.3s;
-    border: 2px solid #ffffff;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close {
-    color: #ffffff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 20px;
-}
-
-.close:hover {
-    color: #ccc;
-}
-
-.modal-content h2 {
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #444;
-    border-radius: 6px;
-    font-size: 14px;
-    background: #000000;
-    color: #ffffff;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #ffffff;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #666;
-}
-
-.form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.submit-btn {
-    flex: 1;
-    padding: 12px;
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #000000;
-    color: #ffffff;
-}
-
-.cancel-btn {
-    flex: 1;
-    padding: 12px;
-    background: #333333;
-    color: #ffffff;
-    border: 2px solid #666666;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cancel-btn:hover {
-    background: #444444;
-    border-color: #888888;
-}
-
-/* 이미지 확대 모달 */
-.image-modal {
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.image-modal[style*="display: flex"],
-.image-modal[style*="display:block"] {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.close-image {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001;
-    transition: all 0.3s ease;
-    line-height: 1;
-    background: rgba(0, 0, 0, 0.5);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.close-image:hover {
-    color: #ccc;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.modal-image-content {
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
-    animation: zoomIn 0.3s ease;
-    margin: auto !important;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    transform: scale(1.5);
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .topbar {
-        position: relative;
-        height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px 16px;
-    }
-
-    .topbar-title {
-        font-size: 17px;
-        flex: 1 1 auto;
-    }
-
-    .panel-switcher {
-        flex-shrink: 1;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-    }
-
-    .panel-btn {
-        padding: 9px 14px;
-        font-size: 13px;
-    }
-
-    .search-container {
-        max-width: none;
-        flex: 1 1 100%;
-        order: 3;
-    }
-
-    .category-dropdown {
-        position: relative;
-        top: 0;
-    }
-
-    .main-content {
-        margin-top: 0;
-        padding: 20px;
-    }
-
-    .weapon-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 12px;
-    }
-
-    .weapon-detail-card {
-        padding: 30px 20px;
-    }
-    
-    .weapon-detail-name {
-        font-size: 28px;
-    }
-    
-    .weapon-manufacturer-text {
-        font-size: 18px;
-    }
-    
-    .weapon-stats-title {
-        font-size: 22px;
-    }
-    
-    .weapon-compare-btn {
-        font-size: 11px;
-        padding: 3px 8px;
-    }
-    
-    .weapon-stats-spacer {
-        width: 60px;
-    }
-    
-    .weapon-detail-description {
-        font-size: 14px;
-        padding: 15px;
-    }
-    
-    .weapon-stat-row {
-        font-size: 14px;
-    }
-    
-    .modal-content {
-        padding: 20px;
-        margin: 10% auto;
-    }
-    
-    .close-image {
-        top: 10px;
-        right: 20px;
-        font-size: 32px;
-        width: 40px;
-        height: 40px;
-    }
-    
-    .weapon-detail-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .edit-btn, .delete-btn {
-        width: 100%;
-    }
-
     .floating-nav-dock {
         bottom: 16px;
         right: 16px;
@@ -1992,6 +1532,252 @@ model-viewer.weapon-model-viewer:active {
     align-items: center;
     gap: 8px;
     margin-bottom: 16px;
+}
+
+/* 모달 공통 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+}
+
+.modal.image-modal {
+    display: none;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.1);
+    animation: slideDown 0.3s;
+    border: 2px solid #ffffff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/* 이미지 확대 모달 */
+.image-modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.image-modal[style*="display: flex"],
+.image-modal[style*="display:block"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.close-image {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    transition: all 0.3s ease;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-image:hover {
+    color: #ccc;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-image-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+    margin: auto !important;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .topbar {
+        position: relative;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .topbar-title {
+        font-size: 17px;
+        flex: 1 1 auto;
+    }
+
+    .panel-switcher {
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .panel-btn {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .search-container {
+        max-width: none;
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .category-dropdown {
+        position: relative;
+        top: 0;
+    }
+
+    .main-content {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .weapon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .weapon-detail-card {
+        padding: 30px 20px;
+    }
+    
+    .weapon-detail-name {
+        font-size: 28px;
+    }
+    
+    .weapon-manufacturer-text {
+        font-size: 18px;
+    }
+    
+    .weapon-stats-title {
+        font-size: 22px;
+    }
+    
+    .weapon-compare-btn {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .weapon-stats-spacer {
+        width: 60px;
+    }
+    
+    .weapon-detail-description {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .weapon-stat-row {
+        font-size: 14px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 10% auto;
+    }
+    
+    .close-image {
+        top: 10px;
+        right: 20px;
+        font-size: 32px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .floating-nav-dock {
+        bottom: 16px;
+        right: 16px;
+        padding: 5px 6px;
+        gap: 5px;
+    }
+
+    .floating-nav-btn {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+
+    .floating-top-btn {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 

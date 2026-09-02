@@ -7,7 +7,6 @@ let currentGear = null;
 let lastGalleryImageIndex = 0;
 let lastGridScrollY = 0;
 let compareTarget = null;
-let isAdmin = false;
 const APP_STATE_KEY = 'smpz_handbook_state';
 
 // 네비게이션 히스토리 스택
@@ -408,10 +407,6 @@ function getItemsForSlotKeys(slotKeys) {
     return results;
 }
 
-// 특정 부착물 슬롯에 장착 가능한 아이템 목록 필터링 (단일 슬롯 키용)
-function getItemsForAttachmentSlot(slotName) {
-    return getItemsForSlotKeys([slotName]);
-}
 
 // 아이템의 attachmentSlots를 그룹화하여 중복 슬롯을 하나로 통합 (부모가 실제 보유한 슬롯만 안전하게 검색)
 function getGroupedAttachmentSlots(rawSlots) {
@@ -563,17 +558,6 @@ function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     showGridView(fullTitle, matchedItems, 'slot_group_' + slotKeys[0], 'attachment');
 }
 
-// 기존 showSlotAttachments 호환 유지
-function showSlotAttachments(parentItem, slotName) {
-    const groupId = slotGroupMap[slotName];
-    if (groupId && slotGroupDefinitions[groupId]) {
-        const def = slotGroupDefinitions[groupId];
-        showSlotGroupAttachments(parentItem, def.name, def.slots);
-    } else {
-        const slotTitle = getSlotDisplayName(slotName);
-        showSlotGroupAttachments(parentItem, slotTitle, [slotName]);
-    }
-}
 
 // 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링 + 호환 탄창 포함)
 function createAttachmentSlotsSection(item) {
@@ -813,27 +797,6 @@ function createParentCompatibleSection(item) {
 }
 
 
-function loadData() {
-    const savedWeapons = localStorage.getItem('smpz_weapons_data');
-    if (savedWeapons) {
-        try {
-            const parsed = JSON.parse(savedWeapons);
-            Object.assign(weaponsData, parsed);
-        } catch(e) {}
-    }
-    const savedGear = localStorage.getItem('smpz_gear_data');
-    if (savedGear) {
-        try {
-            const parsed = JSON.parse(savedGear);
-            Object.assign(gearData, parsed);
-        } catch(e) {}
-    }
-}
-
-function saveData() {
-    localStorage.setItem('smpz_weapons_data', JSON.stringify(weaponsData));
-    localStorage.setItem('smpz_gear_data', JSON.stringify(gearData));
-}
 
 function saveAppState() {
     const state = {
@@ -1202,12 +1165,6 @@ function updateFloatingNav() {
     }
 }
 
-function createBackToGridButton() {
-    // 플로팅 독으로 대체됨 (레거시 코드 호환용 빈 요소)
-    const wrap = document.createElement('div');
-    wrap.className = 'back-to-grid-wrap';
-    return wrap;
-}
 
 // 마지막으로 표시된 그리드 상태 (상세 화면에서 "목록으로" 이동 시 사용)
 let lastGridState = null;
@@ -1558,11 +1515,6 @@ function getItemCalibers(item) {
 function getItemCaliber(item) {
     const cals = getItemCalibers(item);
     return cals.length > 0 ? cals.join(', ') : null;
-}
-
-// 무기 탄종 식별 헬퍼 (하위 호환 유지)
-function getWeaponCaliber(item) {
-    return getItemCaliber(item);
 }
 
 // 광학 조준경 배율 추출 (data.js의 stats.magnification 직결)
@@ -2541,7 +2493,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    loadData();
     renderCategories();
     renderGearCategories();
     renderAttachmentCategories();
@@ -2831,7 +2782,7 @@ function appendItemSpecRows(statsList, item) {
     }
 
     // 방호 부위 (Protection Areas)
-    const protAreas = item.protectionAreas || item.protectionAreasKo;
+    const protAreas = item.protectionAreas;
     if (protAreas && Array.isArray(protAreas) && protAreas.length > 0) {
         const row = document.createElement('div');
         row.className = 'weapon-stat-row weapon-stat-row-areas';
@@ -3460,26 +3411,6 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         }
     }
     
-    // 관리자 모드일 경우 편집/삭제 버튼 표시
-    if (isAdmin) {
-        const actions = document.createElement('div');
-        actions.className = 'weapon-detail-actions';
-        
-        const editBtn = document.createElement('button');
-        editBtn.className = 'edit-btn';
-        editBtn.textContent = '수정';
-        editBtn.onclick = () => editWeapon(weapon.id, categoryKey);
-        
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'delete-btn';
-        deleteBtn.textContent = '삭제';
-        deleteBtn.onclick = () => deleteWeapon(weapon.id, categoryKey);
-        
-        actions.appendChild(editBtn);
-        actions.appendChild(deleteBtn);
-        detailCard.appendChild(actions);
-    }
-    
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
 }
@@ -3754,33 +3685,10 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         slotsParent.appendChild(parentSection);
     }
     
-    if (isAdmin) {
-        const actions = document.createElement('div');
-        actions.className = 'weapon-detail-actions';
-        
-        const editBtn = document.createElement('button');
-        editBtn.className = 'edit-btn';
-        editBtn.textContent = '수정';
-        editBtn.onclick = () => editGear(gear.id, categoryKey);
-        
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'delete-btn';
-        deleteBtn.textContent = '삭제';
-        deleteBtn.onclick = () => deleteGear(gear.id, categoryKey);
-        
-        actions.appendChild(editBtn);
-        actions.appendChild(deleteBtn);
-        detailCard.appendChild(actions);
-    }
-    
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
 }
 
-// 무기 상세 정보 초기화
-function clearWeaponDetail() {
-    clearDetail();
-}
 
 // 상세 정보 초기화 (무기/기어 공통)
 function clearDetail() {
@@ -3876,29 +3784,6 @@ function setupEventListeners() {
         if (e.target.closest('.panel-btn')) return;
         closeDropdown();
     });
-
-    // 관리자 로그인 버튼
-    document.getElementById('adminLoginBtn').addEventListener('click', () => {
-        document.getElementById('loginModal').style.display = 'block';
-    });
-    
-    // 로그아웃 버튼
-    document.getElementById('adminLogoutBtn').addEventListener('click', logout);
-    
-    // 로그인 폼
-    document.getElementById('loginForm').addEventListener('submit', handleLogin);
-    
-    // 무기 폼
-    document.getElementById('weaponForm').addEventListener('submit', handleWeaponSubmit);
-    
-    // 기어 폼
-    document.getElementById('gearForm').addEventListener('submit', handleGearSubmit);
-    
-    // 기어 추가 버튼
-    const gearAddBtn = document.getElementById('gearAddBtn');
-    if (gearAddBtn) {
-        gearAddBtn.addEventListener('click', () => openGearModal(null, null));
-    }
     
     // 검색창 이벤트 리스너
     const searchInput = document.getElementById('itemSearch');
@@ -4006,385 +3891,7 @@ function openImageModal(imageSrc, imageAlt) {
     }
 }
 
-// 로그인 처리
-function handleLogin(e) {
-    e.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    
-    // 간단한 인증 (실제로는 서버에서 처리해야 함)
-    // 기본 관리자 계정: admin / 488538
-    if (username === 'admin' && password === '488538') {
-        isAdmin = true;
-        document.getElementById('adminLoginBtn').style.display = 'none';
-        document.getElementById('adminLogoutBtn').style.display = 'block';
-        document.getElementById('loginModal').style.display = 'none';
-        
-        const gearAddWrap = document.getElementById('gearAddBtnWrap');
-        if (gearAddWrap) gearAddWrap.style.display = 'block';
-        
-        if (currentWeapon && currentCategory) {
-            if (currentPanel === 'gear') {
-                showGearDetail(currentWeapon, currentCategory);
-            } else {
-                showWeaponDetail(currentWeapon, currentCategory);
-            }
-        }
-        
-        alert('관리자로 로그인되었습니다.');
-    } else {
-        alert('잘못된 사용자명 또는 비밀번호입니다.');
-    }
-}
 
-// 로그아웃
-function logout() {
-    isAdmin = false;
-    document.getElementById('adminLoginBtn').style.display = 'block';
-    document.getElementById('adminLogoutBtn').style.display = 'none';
-    
-    const gearAddWrap = document.getElementById('gearAddBtnWrap');
-    if (gearAddWrap) gearAddWrap.style.display = 'none';
-    
-    if (currentWeapon && currentCategory) {
-        if (currentPanel === 'gear') {
-            showGearDetail(currentWeapon, currentCategory);
-        } else {
-            showWeaponDetail(currentWeapon, currentCategory);
-        }
-    }
-    
-    alert('로그아웃되었습니다.');
-}
-
-// 무기 모달 열기
-function openWeaponModal(weaponId = null, categoryKey = null) {
-    editingWeaponId = weaponId;
-    const modal = document.getElementById('weaponModal');
-    const title = document.getElementById('weaponModalTitle');
-    
-    if (weaponId) {
-        title.textContent = '무기 수정';
-        const weapon = weaponsData[categoryKey].find(w => w.id === weaponId);
-        if (weapon) {
-            document.getElementById('weaponId').value = weaponId;
-            document.getElementById('weaponName').value = weapon.name;
-            document.getElementById('weaponCategory').value = categoryKey;
-            document.getElementById('weaponManufacturer').value = weapon.manufacturer || '';
-            document.getElementById('weaponManufacturerLogo').value = weapon.manufacturerLogo || '';
-            document.getElementById('weaponManufacturerUrl').value = weapon.manufacturerUrl || '';
-            document.getElementById('weaponItemSize').value = weapon.itemSize || '';
-            document.getElementById('weaponImage').value = (weapon.images && weapon.images.length) ? weapon.images.join(', ') : (weapon.image || '');
-            document.getElementById('weaponDescription').value = weapon.description || '';
-        }
-    } else {
-        title.textContent = '무기 추가';
-        document.getElementById('weaponForm').reset();
-        document.getElementById('weaponId').value = '';
-        if (currentCategory && currentCategory !== 'all' && currentCategory !== 'search') {
-            document.getElementById('weaponCategory').value = currentCategory;
-        }
-    }
-    
-    modal.style.display = 'block';
-}
-
-// 무기 모달 닫기
-function closeWeaponModal() {
-    document.getElementById('weaponModal').style.display = 'none';
-    editingWeaponId = null;
-}
-
-// 무기 추가/수정 처리
-function handleWeaponSubmit(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('weaponName').value;
-    const category = document.getElementById('weaponCategory').value;
-    const manufacturer = document.getElementById('weaponManufacturer').value;
-    const manufacturerLogo = document.getElementById('weaponManufacturerLogo').value;
-    const manufacturerUrl = document.getElementById('weaponManufacturerUrl').value;
-    const weaponItemSize = document.getElementById('weaponItemSize').value.trim();
-    const imageInput = document.getElementById('weaponImage').value.trim();
-    const description = document.getElementById('weaponDescription').value;
-    const imagePaths = imageInput ? imageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
-    
-    if (!category) {
-        alert('카테고리를 선택해주세요.');
-        return;
-    }
-
-    let weaponItemSlots;
-    if (weaponItemSize && weaponItemSize.includes('x')) {
-        const [w, h] = weaponItemSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(w) && !isNaN(h)) weaponItemSlots = w * h;
-    }
-    
-    if (editingWeaponId) {
-        // 수정
-        const weaponIndex = weaponsData[category].findIndex(w => w.id === editingWeaponId);
-        if (weaponIndex !== -1) {
-            weaponsData[category][weaponIndex].name = name;
-            weaponsData[category][weaponIndex].manufacturer = manufacturer;
-            weaponsData[category][weaponIndex].manufacturerLogo = manufacturerLogo;
-            weaponsData[category][weaponIndex].manufacturerUrl = manufacturerUrl;
-            if (weaponItemSize) {
-                weaponsData[category][weaponIndex].itemSize = weaponItemSize;
-                if (weaponItemSlots) weaponsData[category][weaponIndex].itemSlots = weaponItemSlots;
-            } else {
-                delete weaponsData[category][weaponIndex].itemSize;
-                delete weaponsData[category][weaponIndex].itemSlots;
-            }
-            if (imagePaths.length > 1) {
-                weaponsData[category][weaponIndex].images = imagePaths;
-                delete weaponsData[category][weaponIndex].image;
-            } else if (imagePaths.length === 1) {
-                weaponsData[category][weaponIndex].image = imagePaths[0];
-                delete weaponsData[category][weaponIndex].images;
-            } else {
-                weaponsData[category][weaponIndex].image = '';
-                delete weaponsData[category][weaponIndex].images;
-            }
-            weaponsData[category][weaponIndex].description = description;
-        }
-    } else {
-        // 추가
-        const newWeapon = {
-            id: Date.now().toString(),
-            name: name,
-            manufacturer: manufacturer,
-            manufacturerLogo: manufacturerLogo,
-            manufacturerUrl: manufacturerUrl,
-            description: description
-        };
-        if (weaponItemSize) {
-            newWeapon.itemSize = weaponItemSize;
-            if (weaponItemSlots) newWeapon.itemSlots = weaponItemSlots;
-        }
-        if (imagePaths.length > 1) {
-            newWeapon.images = imagePaths;
-        } else if (imagePaths.length === 1) {
-            newWeapon.image = imagePaths[0];
-        } else {
-            newWeapon.image = '';
-        }
-        weaponsData[category].push(newWeapon);
-    }
-    
-    saveData();
-    renderCategories();
-    refreshGridIfShowing(category, 'weapon');
-
-    closeWeaponModal();
-    
-    alert(editingWeaponId ? '무기가 수정되었습니다.' : '무기가 추가되었습니다.');
-    
-    // 수정한 경우 현재 표시된 무기 정보 업데이트
-    if (editingWeaponId) {
-        const updatedWeapon = weaponsData[category].find(w => w.id === editingWeaponId);
-        if (updatedWeapon) {
-            showWeaponDetail(updatedWeapon, category);
-        }
-    }
-}
-
-// 무기 수정
-function editWeapon(weaponId, categoryKey) {
-    openWeaponModal(weaponId, categoryKey);
-}
-
-// 무기 삭제
-function deleteWeapon(weaponId, categoryKey) {
-    if (confirm('정말 이 무기를 삭제하시겠습니까?')) {
-        weaponsData[categoryKey] = weaponsData[categoryKey].filter(w => w.id !== weaponId);
-        saveData();
-        renderCategories();
-        refreshGridIfShowing(categoryKey, 'weapon');
-
-        // 메인 영역 초기화
-        clearWeaponDetail();
-        alert('무기가 삭제되었습니다.');
-    }
-}
-
-// 기어 모달 열기
-function openGearModal(gearId = null, categoryKey = null) {
-    editingGearId = gearId;
-    const modal = document.getElementById('gearModal');
-    const title = document.getElementById('gearModalTitle');
-    
-    if (gearId) {
-        title.textContent = '기어 수정';
-        const gear = gearData[categoryKey].find(g => g.id === gearId);
-        if (gear) {
-            document.getElementById('gearId').value = gearId;
-            document.getElementById('gearName').value = gear.name;
-            document.getElementById('gearCategory').value = categoryKey;
-            document.getElementById('gearManufacturer').value = gear.manufacturer || '';
-            document.getElementById('gearManufacturerLogo').value = gear.manufacturerLogo || '';
-            document.getElementById('gearManufacturerUrl').value = gear.manufacturerUrl || '';
-            document.getElementById('gearItemSize').value = gear.itemSize || '';
-            document.getElementById('gearCargoSize').value = gear.cargoSize || '';
-            document.getElementById('gearImage').value = (gear.images && gear.images.length) ? gear.images.join(', ') : (gear.image || '');
-            document.getElementById('gearDescription').value = gear.description || '';
-            document.getElementById('gearBulletDamageProtection').value = gear.stats?.bulletDamageProtection ?? '';
-            document.getElementById('gearBloodDamageProtection').value = gear.stats?.bloodDamageProtection ?? '';
-            document.getElementById('gearShockDamageProtection').value = gear.stats?.shockDamageProtection ?? '';
-        }
-    } else {
-        title.textContent = '기어 추가';
-        document.getElementById('gearForm').reset();
-        document.getElementById('gearId').value = '';
-        if (currentCategory && currentCategory !== 'all' && currentCategory !== 'search') {
-            document.getElementById('gearCategory').value = currentCategory;
-        }
-    }
-    
-    modal.style.display = 'block';
-}
-
-// 기어 모달 닫기
-function closeGearModal() {
-    document.getElementById('gearModal').style.display = 'none';
-    editingGearId = null;
-}
-
-// 기어 추가/수정 처리
-function handleGearSubmit(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('gearName').value;
-    const category = document.getElementById('gearCategory').value;
-    const manufacturer = document.getElementById('gearManufacturer').value;
-    const manufacturerLogo = document.getElementById('gearManufacturerLogo').value;
-    const manufacturerUrl = document.getElementById('gearManufacturerUrl').value;
-    const gearItemSize = document.getElementById('gearItemSize').value.trim();
-    const gearCargoSize = document.getElementById('gearCargoSize').value.trim();
-    const gearImageInput = document.getElementById('gearImage').value.trim();
-    const description = document.getElementById('gearDescription').value;
-    const gearImagePaths = gearImageInput ? gearImageInput.split(',').map(s => s.trim()).filter(Boolean) : [];
-    const bulletProt = document.getElementById('gearBulletDamageProtection').value.trim();
-    const bloodProt = document.getElementById('gearBloodDamageProtection').value.trim();
-    const shockProt = document.getElementById('gearShockDamageProtection').value.trim();
-
-    const stats = {};
-    if (bulletProt !== '') stats.bulletDamageProtection = bulletProt;
-    if (bloodProt !== '') stats.bloodDamageProtection = bloodProt;
-    if (shockProt !== '') stats.shockDamageProtection = shockProt;
-    
-    if (!category) {
-        alert('카테고리를 선택해주세요.');
-        return;
-    }
-
-    let gearItemSlots;
-    if (gearItemSize && gearItemSize.includes('x')) {
-        const [w, h] = gearItemSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(w) && !isNaN(h)) gearItemSlots = w * h;
-    }
-
-    let gearCargoSlots;
-    if (gearCargoSize && gearCargoSize.includes('x')) {
-        const [cw, ch] = gearCargoSize.split('x').map(s => parseInt(s.trim(), 10));
-        if (!isNaN(cw) && !isNaN(ch)) gearCargoSlots = cw * ch;
-    }
-    
-    if (editingGearId) {
-        const gearIndex = gearData[category].findIndex(g => g.id === editingGearId);
-        if (gearIndex !== -1) {
-            gearData[category][gearIndex].name = name;
-            gearData[category][gearIndex].manufacturer = manufacturer;
-            gearData[category][gearIndex].manufacturerLogo = manufacturerLogo;
-            gearData[category][gearIndex].manufacturerUrl = manufacturerUrl;
-            if (gearItemSize) {
-                gearData[category][gearIndex].itemSize = gearItemSize;
-                if (gearItemSlots) gearData[category][gearIndex].itemSlots = gearItemSlots;
-            } else {
-                delete gearData[category][gearIndex].itemSize;
-                delete gearData[category][gearIndex].itemSlots;
-            }
-            if (gearCargoSize) {
-                gearData[category][gearIndex].cargoSize = gearCargoSize;
-                if (gearCargoSlots) gearData[category][gearIndex].cargoSlots = gearCargoSlots;
-            } else {
-                delete gearData[category][gearIndex].cargoSize;
-                delete gearData[category][gearIndex].cargoSlots;
-            }
-            if (gearImagePaths.length > 1) {
-                gearData[category][gearIndex].images = gearImagePaths;
-                delete gearData[category][gearIndex].image;
-            } else if (gearImagePaths.length === 1) {
-                gearData[category][gearIndex].image = gearImagePaths[0];
-                delete gearData[category][gearIndex].images;
-            } else {
-                gearData[category][gearIndex].image = '';
-                delete gearData[category][gearIndex].images;
-            }
-            gearData[category][gearIndex].description = description;
-            gearData[category][gearIndex].stats = Object.keys(stats).length > 0 ? stats : undefined;
-        }
-    } else {
-        const newGear = {
-            id: Date.now().toString(),
-            name: name,
-            manufacturer: manufacturer,
-            manufacturerLogo: manufacturerLogo,
-            manufacturerUrl: manufacturerUrl,
-            description: description
-        };
-        if (gearItemSize) {
-            newGear.itemSize = gearItemSize;
-            if (gearItemSlots) newGear.itemSlots = gearItemSlots;
-        }
-        if (gearCargoSize) {
-            newGear.cargoSize = gearCargoSize;
-            if (gearCargoSlots) newGear.cargoSlots = gearCargoSlots;
-        }
-        if (gearImagePaths.length > 1) {
-            newGear.images = gearImagePaths;
-        } else if (gearImagePaths.length === 1) {
-            newGear.image = gearImagePaths[0];
-        } else {
-            newGear.image = '';
-        }
-        if (Object.keys(stats).length > 0) {
-            newGear.stats = stats;
-        }
-        gearData[category].push(newGear);
-    }
-    
-    saveData();
-    renderGearCategories();
-    refreshGridIfShowing(category, 'gear');
-
-    closeGearModal();
-    alert(editingGearId ? '기어가 수정되었습니다.' : '기어가 추가되었습니다.');
-    
-    if (editingGearId) {
-        const updatedGear = gearData[category].find(g => g.id === editingGearId);
-        if (updatedGear) {
-            showGearDetail(updatedGear, category);
-        }
-    }
-}
-
-// 기어 수정
-function editGear(gearId, categoryKey) {
-    openGearModal(gearId, categoryKey);
-}
-
-// 기어 삭제
-function deleteGear(gearId, categoryKey) {
-    if (confirm('정말 이 기어를 삭제하시겠습니까?')) {
-        gearData[categoryKey] = gearData[categoryKey].filter(g => g.id !== gearId);
-        saveData();
-        renderGearCategories();
-        refreshGridIfShowing(categoryKey, 'gear');
-
-        clearDetail();
-        alert('기어가 삭제되었습니다.');
-    }
-}
 
 // 능력치 비교 모달 열기
 function openCompareModal() {
