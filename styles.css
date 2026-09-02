@@ -399,42 +399,127 @@ body {
     word-break: keep-all;
 }
 
-/* "이전으로 / 목록으로" 버튼 */
-.back-to-grid-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+/* 플로팅 네비게이션 독 (이전으로 / 목록으로 / 맨 위로) */
+.floating-nav-dock {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 150;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
+    padding: 6px 8px;
+    background: rgba(18, 18, 18, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.3);
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px) scale(0.95);
+    visibility: hidden;
 }
 
-.back-to-grid-btn {
+.floating-nav-dock.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+.floating-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     padding: 8px 14px;
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid #555;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    user-select: none;
+    color: #ffffff;
+    background: transparent;
 }
 
-.back-to-grid-btn:hover {
-    border-color: #ffffff;
-    background: rgba(255, 255, 255, 0.07);
+.floating-nav-btn svg {
+    flex-shrink: 0;
+    pointer-events: none;
 }
 
-.back-to-grid-btn.root-grid-btn {
-    border-color: #444;
-    color: #aaa;
+/* 주요 액션 (이전으로) */
+.floating-nav-btn.primary {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
 }
 
-.back-to-grid-btn.root-grid-btn:hover {
-    border-color: #888;
-    color: #fff;
+.floating-nav-btn.primary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+}
+
+.floating-nav-btn.primary:active {
+    transform: translateY(0);
+}
+
+/* 보조 액션 (목록으로) */
+.floating-nav-btn.secondary {
     background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #d0d0d0;
+}
+
+.floating-nav-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+.floating-nav-btn.secondary:active {
+    transform: translateY(0);
+}
+
+/* 맨 위로 스크롤 버튼 */
+.floating-top-btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #aaaaaa;
+}
+
+.floating-top-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.floating-top-btn:active {
+    transform: translateY(0);
+}
+
+.floating-nav-divider {
+    width: 1px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.18);
+    margin: 0 2px;
+}
+
+/* "이전으로 / 목록으로" 레거시 호환 및 상단 영역 */
+.back-to-grid-wrap {
+    display: none;
 }
 
 /* 관리자 섹션 */
@@ -1298,6 +1383,23 @@ body {
     
     .edit-btn, .delete-btn {
         width: 100%;
+    }
+
+    .floating-nav-dock {
+        bottom: 16px;
+        right: 16px;
+        padding: 5px 6px;
+        gap: 5px;
+    }
+
+    .floating-nav-btn {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+
+    .floating-top-btn {
+        width: 30px;
+        height: 30px;
     }
 }
 

@@ -503,7 +503,17 @@ function pushNavState(viewState) {
 // 네비게이션 스택 팝 (이전 화면으로 복귀)
 function popNavState() {
     if (navStack.length === 0) {
+        if (preSearchView) {
+            const view = preSearchView;
+            preSearchView = null;
+            const searchInput = document.getElementById('itemSearch');
+            if (searchInput) searchInput.value = '';
+            restoreView(view);
+            updateFloatingNav();
+            return;
+        }
         backToGrid();
+        updateFloatingNav();
         return;
     }
     const previousState = navStack.pop();
@@ -512,6 +522,7 @@ function popNavState() {
         restoreView(previousState);
     } finally {
         isNavigatingHistory = false;
+        updateFloatingNav();
     }
 }
 
@@ -520,14 +531,26 @@ function resetToRootGrid() {
     if (navStack.length > 0) {
         const rootState = navStack[0];
         navStack = [];
+        preSearchView = null;
+        const searchInput = document.getElementById('itemSearch');
+        if (searchInput) searchInput.value = '';
         isNavigatingHistory = true;
         try {
             restoreView(rootState);
         } finally {
             isNavigatingHistory = false;
+            updateFloatingNav();
         }
+    } else if (preSearchView) {
+        const view = preSearchView;
+        preSearchView = null;
+        const searchInput = document.getElementById('itemSearch');
+        if (searchInput) searchInput.value = '';
+        restoreView(view);
+        updateFloatingNav();
     } else {
         backToGrid();
+        updateFloatingNav();
     }
 }
 
@@ -917,7 +940,6 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     weaponDetail.innerHTML = '';
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
@@ -1016,6 +1038,7 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 
@@ -1057,26 +1080,119 @@ function showDetailContainer() {
     return weaponDetail;
 }
 
-function createBackToGridButton() {
-    const wrap = document.createElement('div');
-    wrap.className = 'back-to-grid-wrap';
-
-    const btnPrev = document.createElement('button');
-    btnPrev.type = 'button';
-    btnPrev.className = 'back-to-grid-btn';
-    btnPrev.textContent = '← 이전으로';
-    btnPrev.onclick = popNavState;
-    wrap.appendChild(btnPrev);
-
-    if (navStack.length > 0) {
-        const btnRoot = document.createElement('button');
-        btnRoot.type = 'button';
-        btnRoot.className = 'back-to-grid-btn root-grid-btn';
-        btnRoot.textContent = '목록으로';
-        btnRoot.onclick = resetToRootGrid;
-        wrap.appendChild(btnRoot);
+// 플로팅 네비게이션 독 갱신 (이전으로 / 목록으로 / 맨 위로)
+function updateFloatingNav() {
+    let dock = document.getElementById('floatingNav');
+    if (!dock) {
+        dock = document.createElement('nav');
+        dock.id = 'floatingNav';
+        dock.className = 'floating-nav-dock';
+        dock.setAttribute('aria-label', '화면 이동');
+        document.body.appendChild(dock);
     }
 
+    dock.innerHTML = '';
+
+    const isDetailView = !!currentWeapon;
+    const isSearchGrid = currentGridCategoryKey === 'search' || (lastGridState && lastGridState.categoryKey === 'search');
+    const hasNavStack = navStack.length > 0;
+    const hasPreSearch = !!preSearchView;
+
+    const showPrev = isDetailView || hasNavStack || isSearchGrid || hasPreSearch;
+    const showRoot = hasNavStack;
+    
+    // 현재 스크롤 위치 (맨 위로 버튼 노출 판단용)
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    const isScrolled = scrollY > 120;
+
+    // 네비게이션 액션도 없고 스크롤도 안 된 경우 숨김
+    if (!showPrev && !showRoot && !isScrolled) {
+        dock.classList.remove('visible');
+        return;
+    }
+
+    let hasAnyBtn = false;
+
+    // 1. "← 이전으로" 버튼
+    if (showPrev) {
+        const btnPrev = document.createElement('button');
+        btnPrev.type = 'button';
+        btnPrev.className = 'floating-nav-btn primary';
+        btnPrev.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>이전으로</span>
+        `;
+        btnPrev.title = '이전 화면으로 돌아가기 (ESC)';
+        btnPrev.onclick = (e) => {
+            e.preventDefault();
+            popNavState();
+        };
+        dock.appendChild(btnPrev);
+        hasAnyBtn = true;
+    }
+
+    // 2. "목록으로" 버튼 (깊은 네비게이션 시 최상위 목록 복귀)
+    if (showRoot) {
+        const btnRoot = document.createElement('button');
+        btnRoot.type = 'button';
+        btnRoot.className = 'floating-nav-btn secondary';
+        btnRoot.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>목록으로</span>
+        `;
+        btnRoot.title = '최초 목록으로 돌아가기';
+        btnRoot.onclick = (e) => {
+            e.preventDefault();
+            resetToRootGrid();
+        };
+        dock.appendChild(btnRoot);
+        hasAnyBtn = true;
+    }
+
+    // 3. 구분선 및 "맨 위로" 버튼
+    if (hasAnyBtn || isScrolled) {
+        if (hasAnyBtn) {
+            const divider = document.createElement('div');
+            divider.className = 'floating-nav-divider';
+            dock.appendChild(divider);
+        }
+
+        const btnTop = document.createElement('button');
+        btnTop.type = 'button';
+        btnTop.className = 'floating-nav-btn floating-top-btn';
+        btnTop.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        `;
+        btnTop.title = '맨 위로 스크롤';
+        btnTop.onclick = (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        dock.appendChild(btnTop);
+        hasAnyBtn = true;
+    }
+
+    if (hasAnyBtn) {
+        dock.classList.add('visible');
+    } else {
+        dock.classList.remove('visible');
+    }
+}
+
+function createBackToGridButton() {
+    // 플로팅 독으로 대체됨 (레거시 코드 호환용 빈 요소)
+    const wrap = document.createElement('div');
+    wrap.className = 'back-to-grid-wrap';
     return wrap;
 }
 
@@ -1258,34 +1374,6 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     weaponDetail.style.display = 'none';
     weaponDetail.innerHTML = '';
 
-    // 상단 이전/목록 버튼 영역 처리
-    let backWrap = gridView.querySelector('.grid-back-wrap');
-    if (!backWrap) {
-        backWrap = document.createElement('div');
-        backWrap.className = 'grid-back-wrap back-to-grid-wrap';
-        gridView.insertBefore(backWrap, gridView.firstChild);
-    }
-    backWrap.innerHTML = '';
-    if (navStack.length > 0) {
-        const btnPrev = document.createElement('button');
-        btnPrev.type = 'button';
-        btnPrev.className = 'back-to-grid-btn';
-        btnPrev.textContent = '← 이전으로';
-        btnPrev.onclick = popNavState;
-        backWrap.appendChild(btnPrev);
-
-        const btnRoot = document.createElement('button');
-        btnRoot.type = 'button';
-        btnRoot.className = 'back-to-grid-btn root-grid-btn';
-        btnRoot.textContent = '목록으로';
-        btnRoot.onclick = resetToRootGrid;
-        backWrap.appendChild(btnRoot);
-
-        backWrap.style.display = 'flex';
-    } else {
-        backWrap.style.display = 'none';
-    }
-
     const gridTitle = document.getElementById('gridTitle');
     const gridCount = document.getElementById('gridCount');
     if (gridTitle) gridTitle.textContent = title;
@@ -1331,6 +1419,7 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
         lastGridScrollY = 0;
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
+    updateFloatingNav();
 }
 
 // 그리드 카드 생성 (이미지 + 이름)
@@ -1853,7 +1942,6 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     // 무기 이름 (로고 포함)
     const nameContainer = document.createElement('div');
@@ -2190,6 +2278,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 // 기어 상세 정보 표시
@@ -2212,7 +2301,6 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
 
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
@@ -2470,6 +2558,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 // 무기 상세 정보 초기화
@@ -2499,12 +2588,18 @@ function clearDetail() {
     navStack = [];
     lastGridScrollY = 0;
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    updateFloatingNav();
 }
 
 
 // 이벤트 리스너 설정
 function setupEventListeners() {
     initGridInlineSearch();
+
+    // 스크롤 시 플로팅 네비게이션 독 갱신 (맨 위로 버튼 등)
+    window.addEventListener('scroll', () => {
+        updateFloatingNav();
+    }, { passive: true });
 
     // 패널 전환 버튼 (클릭 시 드롭다운 토글)
     document.querySelectorAll('.panel-btn').forEach(btn => {
@@ -2599,26 +2694,51 @@ function setupEventListeners() {
         });
     }
     
-    // ESC 키로 모든 모달 닫기
+    // ESC 키로 모든 모달 닫기 및 이전 화면 복귀
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeDropdown();
+            let closedSomething = false;
+
+            const dropdown = document.getElementById('categoryDropdown');
+            if (dropdown && dropdown.classList.contains('open')) {
+                closeDropdown();
+                closedSomething = true;
+            }
+
             const imageModal = document.getElementById('imageModal');
             if (imageModal) {
                 const computedStyle = window.getComputedStyle(imageModal);
                 if (computedStyle.display !== 'none') {
                     imageModal.style.setProperty('display', 'none', 'important');
+                    closedSomething = true;
                 }
             }
+
             // 다른 모달들도 닫기
             document.querySelectorAll('.modal').forEach(modal => {
                 if (modal.id !== 'imageModal') {
                     const computedStyle = window.getComputedStyle(modal);
                     if (computedStyle.display !== 'none') {
                         modal.style.display = 'none';
+                        closedSomething = true;
                     }
                 }
             });
+
+            if (closedSomething) return;
+
+            // 텍스트 인풋 포커스 해제
+            if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+                document.activeElement.blur();
+                return;
+            }
+
+            // 상세 화면이나 검색 그리드 등에서 이전 화면으로 복귀
+            const isDetailView = !!currentWeapon;
+            const isSearchGrid = currentGridCategoryKey === 'search' || (lastGridState && lastGridState.categoryKey === 'search');
+            if (isDetailView || navStack.length > 0 || isSearchGrid || preSearchView) {
+                popNavState();
+            }
         }
     });
 }
@@ -3069,6 +3189,7 @@ function searchItems(query) {
             const view = preSearchView;
             preSearchView = null;
             restoreView(view);
+            updateFloatingNav();
         }
         return;
     }
