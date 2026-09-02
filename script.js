@@ -552,14 +552,13 @@ function showSlotAttachments(parentItem, slotName) {
     }
 }
 
-// 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링)
+// 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링 + 호환 탄창 포함)
 function createAttachmentSlotsSection(item) {
-    if (!item || !Array.isArray(item.attachmentSlots) || item.attachmentSlots.length === 0) {
-        return null;
-    }
+    const rawSlots = Array.isArray(item?.attachmentSlots) ? item.attachmentSlots : [];
+    const groupedSlots = getGroupedAttachmentSlots(rawSlots);
+    const matchedMags = getCompatibleMagazinesForWeapon(item);
 
-    const groupedSlots = getGroupedAttachmentSlots(item.attachmentSlots);
-    if (groupedSlots.length === 0) {
+    if (groupedSlots.length === 0 && matchedMags.length === 0) {
         return null;
     }
 
@@ -606,29 +605,92 @@ function createAttachmentSlotsSection(item) {
         slotsGrid.appendChild(btn);
     });
 
+    if (matchedMags.length > 0) {
+        const magBtn = document.createElement('button');
+        magBtn.type = 'button';
+        magBtn.className = 'attachment-slot-btn weapon-mag-btn';
+
+        const magLabel = document.createElement('span');
+        magLabel.className = 'slot-label';
+        magLabel.textContent = '탄창';
+
+        const magCount = document.createElement('span');
+        magCount.className = 'slot-count';
+        magCount.textContent = `(${matchedMags.length})`;
+
+        magBtn.appendChild(magLabel);
+        magBtn.appendChild(magCount);
+
+        magBtn.onclick = () => {
+            pushNavState(captureCurrentView());
+            const fullTitle = item.name ? `${item.name} > 탄창` : '탄창';
+            showGridView(fullTitle, matchedMags, 'weapon_magazines_' + item.id, 'attachment');
+        };
+
+        slotsGrid.appendChild(magBtn);
+    }
+
     container.appendChild(slotsGrid);
     return container;
 }
 
-// 특정 아이템을 장착할 수 있는 상위 부모 아이템 목록 필터링
-function getCompatibleParentItems(targetItem) {
-    if (!targetItem || !Array.isArray(targetItem.inventorySlots) || targetItem.inventorySlots.length === 0) {
+// 특정 총기에서 사용 가능한 탄창 아이템 목록 검색
+function getCompatibleMagazinesForWeapon(weapon) {
+    if (!weapon || !Array.isArray(weapon.magazines) || weapon.magazines.length === 0) {
         return [];
     }
-    const targetSlotsSet = new Set(targetItem.inventorySlots);
+    const magIdSet = new Set(weapon.magazines);
+    const allItems = getAllDatabaseItems();
+    const matchedMags = [];
+    const seen = new Set();
+
+    for (const item of allItems) {
+        if (!item || item.id === weapon.id) continue;
+        if (magIdSet.has(item.id)) {
+            if (!seen.has(item.id)) {
+                seen.add(item.id);
+                matchedMags.push(item);
+            }
+        }
+    }
+    return matchedMags;
+}
+
+// 특정 아이템을 장착할 수 있는 상위 부모 아이템 목록 필터링 (슬롯 및 탄창 양방향 지원)
+function getCompatibleParentItems(targetItem) {
+    if (!targetItem) return [];
     const allItems = getAllDatabaseItems();
     const parentMatches = [];
     const seen = new Set();
 
-    for (const item of allItems) {
-        if (!item || item.id === targetItem.id) continue;
-        if (Array.isArray(item.attachmentSlots) && item.attachmentSlots.some(s => targetSlotsSet.has(s))) {
-            if (!seen.has(item.id)) {
-                seen.add(item.id);
-                parentMatches.push(item);
+    // 1. 슬롯 기반 매칭 (inventorySlots ↔ attachmentSlots)
+    if (Array.isArray(targetItem.inventorySlots) && targetItem.inventorySlots.length > 0) {
+        const targetSlotsSet = new Set(targetItem.inventorySlots);
+        for (const item of allItems) {
+            if (!item || item.id === targetItem.id) continue;
+            if (Array.isArray(item.attachmentSlots) && item.attachmentSlots.some(s => targetSlotsSet.has(s))) {
+                if (!seen.has(item.id)) {
+                    seen.add(item.id);
+                    parentMatches.push(item);
+                }
             }
         }
     }
+
+    // 2. 탄창 전용 매칭 (targetItem.id ↔ weapon.magazines)
+    if (typeof weaponsData !== 'undefined' && weaponsData) {
+        const allWeapons = Object.values(weaponsData).flat();
+        for (const weapon of allWeapons) {
+            if (!weapon || weapon.id === targetItem.id) continue;
+            if (Array.isArray(weapon.magazines) && weapon.magazines.includes(targetItem.id)) {
+                if (!seen.has(weapon.id)) {
+                    seen.add(weapon.id);
+                    parentMatches.push(weapon);
+                }
+            }
+        }
+    }
+
     return parentMatches;
 }
 
@@ -674,9 +736,7 @@ function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
 
 // 이 아이템을 장착할 수 있는 아이템 (상위 아이템) 슬롯 UI 섹션 생성
 function createParentCompatibleSection(item) {
-    if (!item || !Array.isArray(item.inventorySlots) || item.inventorySlots.length === 0) {
-        return null;
-    }
+    if (!item) return null;
 
     const groupedCategories = getGroupedParentCategories(item);
     if (groupedCategories.length === 0) {

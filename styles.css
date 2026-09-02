@@ -1459,7 +1459,9 @@ model-viewer.weapon-model-viewer:active {
     width: 100%;
 }
 
-.attachment-slots-container + .parent-compatible-container {
+.attachment-slots-container + .attachment-slots-container,
+.attachment-slots-container + .parent-compatible-container,
+.attachment-slots-container + .weapon-magazines-container {
     margin-top: 16px;
 }
 
