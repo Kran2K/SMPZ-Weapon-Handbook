@@ -653,24 +653,24 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
-                # 4-1. Weapon Designated Primary Caliber (C++ caliberName / bulletType / chamberableFrom 직결 파싱)
+                # 4-1. Weapon Designated Primary Caliber
                 if sec_name == 'weaponsData':
                     w_cals = extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props)
                     if w_cals:
                         item_obj['calibers'] = w_cals
 
-                # 5. Protection Areas metadata (방호 부위 - C++ 원본 데이터만 저장)
+                # 5. Protection Areas metadata
                 prot_areas = props.get('ProtectionAreas')
                 if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
                     item_obj['protectionAreas'] = prot_areas
                     stats_summary['protection_items'] += 1
 
-                # 6. Weapon Fire Modes metadata (단발/점사/연사 발사 모드 - C++ 원본 데이터만 저장)
+                # 6. Weapon Fire Modes metadata
                 modes_arr = props.get('modes')
                 if modes_arr and isinstance(modes_arr, list) and len(modes_arr) > 0:
                     item_obj['modes'] = modes_arr
 
-                # 7. Tactical Flashlight Light Distance (조사 거리 stats)
+                # 7. Tactical Flashlight Light Distance
                 if 'Flashlight' in item_id or item_obj.get('category') == '전술 플래시':
                     desc_short = str(props.get('descriptionShort', ''))
                     m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.IGNORECASE)
@@ -681,14 +681,14 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                     elif 'XHP35' in item_id:
                         item_obj.setdefault('stats', {})['lightDistance'] = "300m"
 
-                # 8. Optics Magnification (광학 조준경 소스코드 C++ 필드 추출 배율)
+                # 8. Optics Magnification
                 if item_obj.get('category') == '광학 조준경' or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
                     mag = extract_optic_magnification(item_id)
                     if mag:
                         item_obj.setdefault('stats', {})['magnification'] = mag
                         stats_summary['optics_magnification'] += 1
 
-                # 9. Description resolution (스트링테이블/C++ 본래 설명 보존)
+                # 9. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
@@ -834,7 +834,7 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
                 for c in w_cals:
                     mag_to_calibers[m_id].add(c)
 
-    # 2. Enrich attachmentData['탄창'] items (탄창은 물리적 삽탄 가능한 복수 탄종 모두 호환)
+    # 2. Enrich attachmentData['탄창'] items
     mag_items = attachmentData.get('탄창', [])
     for mag in mag_items:
         m_id = mag.get('id', '')

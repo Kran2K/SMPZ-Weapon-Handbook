@@ -549,7 +549,7 @@ function resetToRootGrid() {
     }
 }
 
-// 슬롯 그룹 클릭 시 해당 그룹의 호환 아이템들을 그리드로 표시
+// 호환 아이템 그리드 표시
 function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     pushNavState(captureCurrentView());
     const matchedItems = getItemsForSlotKeys(slotKeys);
@@ -733,7 +733,7 @@ function getGroupedParentCategories(targetItem) {
     return groups;
 }
 
-// 상위 카테고리 클릭 시 해당 아이템들을 그리드로 표시
+// 상위 아이템 그리드 표시
 function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
     pushNavState(captureCurrentView());
     const sourceName = sourceItem && sourceItem.name ? sourceItem.name : '';
@@ -954,7 +954,7 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
-        // 카테고리 (스펙 제일 앞에 표시)
+        // 카테고리 표시
         const catRow = document.createElement('div');
         catRow.className = 'weapon-stat-row';
         const catLabel = document.createElement('span');
@@ -1328,7 +1328,7 @@ const DataParsers = {
     }
 };
 
-// 정렬 기준 설정 (담백한 명칭 체계)
+// 정렬 기준 설정
 const SORT_METRICS = {
     name: {
         id: 'name',
@@ -1522,7 +1522,7 @@ function getOpticMagnification(item) {
     return item?.stats?.magnification || null;
 }
 
-// 아이템 카드에 항상 표시될 핵심 대표 스펙 추출 (정렬 기준값 동적 포함 및 하이라이트 지원)
+// 대표 스펙 추출
 function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = currentGridSortMetric) {
     if (!item) return [];
     const specs = [];
@@ -1877,7 +1877,7 @@ function updateSortOptionsDropdown(panelType, categoryKey, preferredMetric, pref
     }
 }
 
-// 빠른 필터 칩 바 갱신 (1행: 사용 탄종, 2행: 발사 모드 / 기어: 방탄, 수납 / 탄창: 사용 탄종)
+// 빠른 필터 칩 바 갱신
 function updateFilterChipsBar(panelType, categoryKey, items) {
     const container = document.getElementById('gridFilterChips');
     if (!container) return;
@@ -1889,7 +1889,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     const isGearView = effectivePanel === 'gear';
     const isMagazineOnlyView = !isWeaponView && (categoryKey === '탄창' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '탄창')));
 
-    // 1. 무기 탭: 1행(사용 탄종) + 2행(발사 모드) 2단 구성
+    // 1. 무기 탭 필터
     if (isWeaponView) {
         const wrap = document.createElement('div');
         wrap.className = 'grid-filter-groups';
@@ -2448,7 +2448,7 @@ function createGridCard(item, categoryKey, panelType) {
     nameEl.textContent = item.name;
     card.appendChild(nameEl);
 
-    // 카드 핵심 대표 스펙 태그 상시 표시 (정렬 기준값 하이라이트)
+    // 대표 스펙 태그 표시
     const coreSpecs = getItemCoreSpecs(item, categoryKey, panelType, currentGridSortMetric);
     if (coreSpecs.length > 0) {
         const specsContainer = document.createElement('div');
@@ -2596,7 +2596,6 @@ function createCategoryItem(name, count, key, panelType) {
         iconImg.src = categoryIcons[key];
         iconImg.alt = name;
         iconImg.className = 'category-icon';
-        // 돌격 소총, 기관단총, 저격 소총 아이콘은 더 크게
         if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기') {
             iconImg.classList.add('category-icon-large');
         }
@@ -2664,11 +2663,11 @@ const FIRE_MODES_KO_MAP = {
     Double: '더블'
 };
 
-// 아이템 크기 및 수납 공간 행 추가 (기존 능력치 항목과 일관된 심플한 스타일)
+// 아이템 크기 및 수납 공간 행 추가
 function appendItemSpecRows(statsList, item) {
     if (!item || !statsList) return;
 
-    // 1. 총기 사용 탄종 또는 탄창 삽탄가능 탄종 (탄종별 1칸씩 칩으로 분리 표시)
+    // 사용 탄종 / 삽탄가능 탄종
     const isMag = item.category === '탄창';
     const isWeapon = !isMag && Boolean(weaponsData[item.category] || currentPanel === 'weapon' || item.modes);
 
@@ -3095,7 +3094,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     if (weapon.manufacturerLogo) {
         const logoImg = document.createElement('img');
         logoImg.className = 'weapon-manufacturer-logo';
-        // 특정 로고는 필터 제거 (원본 색상 유지)
+        // 특정 로고 원본 색상 유지
         const logosWithoutFilter = ['ai-logo', 'TsNIITochMash-logo', 'hk-logo', 'radian-logo', 'milkor-logo', 'kalashnikov-logo', 'mf-logo', 'dsarms-logo', 'barrett-logo', 'cheytac-logo'];
         if (logosWithoutFilter.some(logo => weapon.manufacturerLogo.includes(logo))) {
             logoImg.classList.add('logo-no-filter');
@@ -3232,7 +3231,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
-        // 카테고리 (스펙 제일 앞에 표시)
+        // 카테고리 표시
         const catRow = document.createElement('div');
         catRow.className = 'weapon-stat-row';
         const catLabel = document.createElement('span');
@@ -3539,7 +3538,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         const statsList = document.createElement('div');
         statsList.className = 'weapon-stats-list';
 
-        // 카테고리 (스펙 제일 앞에 표시)
+        // 카테고리 표시
         const catRow = document.createElement('div');
         catRow.className = 'weapon-stat-row';
         const catLabel = document.createElement('span');
@@ -3907,7 +3906,7 @@ function openCompareModal() {
 
     listContainer.innerHTML = '';
     if (currentLabel) {
-        // 기준 무기 표시는 이름만 사용 (이름 안에 제조사가 포함될 수 있으므로)
+        // 기준 무기 표시
         currentLabel.textContent = `기준 무기: ${currentWeapon.name}`;
     }
 
@@ -3921,7 +3920,7 @@ function openCompareModal() {
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'compare-weapon-item';
-            // 비교 목록에는 총기 이름만 표기 (이미 이름에 제조사가 포함될 수 있음)
+            // 비교 대상 무기 목록 생성
             btn.textContent = w.name;
             btn.onclick = () => {
                 compareTarget = { weapon: w, categoryKey };

@@ -165,7 +165,7 @@ body {
     color: #666;
 }
 
-/* 카테고리 드롭다운 (상단바 버튼 클릭 시 내려옴) */
+/* 카테고리 드롭다운 */
 .category-dropdown {
     position: fixed;
     top: 70px;
@@ -247,7 +247,7 @@ body {
     font-weight: bold;
 }
 
-/* 무기/기어/부착물 그리드 (카테고리 선택 시 메인 영역에 표시) */
+/* 아이템 그리드 */
 .grid-view {
     width: 100%;
     max-width: 1200px;
@@ -527,6 +527,20 @@ body {
     gap: 16px;
 }
 
+.empty-message {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    color: #888888;
+    font-size: 16px;
+    padding: 60px 20px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .grid-card {
     background: #1a1a1a;
     border: 2px solid #333;
@@ -721,7 +735,7 @@ body {
     color: #9f8fb3;
 }
 
-/* 정렬 기준 스펙 하이라이트 (은은하고 차분한 강조 톤) */
+/* 정렬 기준 스펙 하이라이트 */
 .core-spec-tag.spec-highlight {
     background: #24221c !important;
     border-color: #8c734b !important;
@@ -848,7 +862,7 @@ body {
     margin: 0 2px;
 }
 
-/* "이전으로 / 목록으로" 레거시 호환 및 상단 영역 */
+/* 레거시 네비게이션 영역 */
 .back-to-grid-wrap {
     display: none;
 }
@@ -908,7 +922,7 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* 특정 로고는 필터 제거 (원본 색상 유지) */
+/* 특정 로고 원본 색상 유지 */
 .weapon-manufacturer-logo.logo-no-filter {
     filter: none;
 }
@@ -941,7 +955,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* 갤러리 패널: 타이틀 + 사진 (간격 최소화), 설명 길이와 무관하게 크기 유지 */
+/* 갤러리 패널 */
 .gallery-panel-wrapper {
     width: 100%;
     margin-bottom: 30px;
@@ -981,7 +995,7 @@ body {
     overflow: hidden;
 }
 
-/* 화살표: 이미지 위 오버레이, 검은색 바 없음, 잔상 제거 */
+/* 이미지 탐색 화살표 */
 .image-nav-arrow {
     position: absolute;
     top: 0;
@@ -1114,7 +1128,7 @@ body {
 }
 
 .weapon-stats-spacer {
-    width: 72px; /* 비교 버튼과 균형 맞추기용 */
+    width: 72px;
 }
 
 .weapon-stats-title {
@@ -1122,7 +1136,7 @@ body {
     text-align: center;
     font-weight: bold;
     color: #ffffff;
-    font-size: 28px; /* 총기 이름(36px)보다 살짝 작게 */
+    font-size: 28px;
 }
 
 .weapon-compare-btn {
@@ -1148,7 +1162,7 @@ body {
 
 .weapon-stat-row {
     display: block;
-    font-size: 16px; /* 설명 텍스트와 동일한 크기 */
+    font-size: 16px;
     line-height: 1.8;
     color: #ffffff;
 }
@@ -1189,17 +1203,22 @@ body {
     background: #e74c3c;
 }
 
-/* 방호 부위 (Protection Areas) 칩 스타일 */
+/* 방호 부위 / 사용 탄종 / 발사 모드 칩 스타일 */
 .weapon-stat-row-areas {
     margin-top: 6px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 4px;
 }
 
 .protection-chips-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 6px;
     margin-top: 2px;
 }
@@ -1316,13 +1335,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 8px;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .gallery-mode-switch {
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
+    margin: 0 auto;
 }
 
 .gallery-mode-btn {
