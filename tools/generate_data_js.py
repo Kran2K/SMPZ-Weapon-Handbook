@@ -653,6 +653,12 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
+                # 4-1. Weapon Designated Primary Caliber (C++ caliberName / bulletType / chamberableFrom 직결 파싱)
+                if sec_name == 'weaponsData':
+                    w_cals = extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props)
+                    if w_cals:
+                        item_obj['calibers'] = w_cals
+
                 # 5. Protection Areas metadata (방호 부위 - C++ 원본 데이터만 저장)
                 prot_areas = props.get('ProtectionAreas')
                 if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
@@ -709,60 +715,106 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
     return result_data['weaponsData'], result_data['gearData'], result_data['attachmentData']
 
-def normalize_ammo_caliber(ammo_name):
-    """Normalizes an ammo classname into a standard caliber name (e.g. 5.56x45mm, .300 BLK)"""
-    if not ammo_name:
+def normalize_ammo_caliber(raw_str):
+    """Normalizes an ammo/caliber string from C++ config (caliberName, bulletType, chamberableFrom) into standard name"""
+    if not raw_str:
         return None
-    raw = str(ammo_name).lower()
-    if '556x45' in raw or '5_56x45' in raw or '5.56x45' in raw:
-        return '5.56x45mm'
-    if any(k in raw for k in ['300blk', '300aac', '300blackout', '300_whisper', '300_vmax', '300_bcp']):
+    raw = str(raw_str).lower().replace(' ', '').replace('_', '').replace('-', '')
+    raw_lower = str(raw_str).lower()
+    
+    # 1. .50 AE vs .50 BMG
+    if '50ae' in raw or 'actionexpress' in raw:
+        return '.50 AE'
+    if '50bmg' in raw or '12.7x99' in raw or '12.7x108' in raw or (('50cal' in raw or '.50' in raw_lower) and 'bmg' in raw_lower):
+        return '.50 BMG'
+    
+    # 2. Shotgun 12ga
+    if '12ga' in raw or '12gauge' in raw or '12x70' in raw or '12/70' in raw:
+        return '12 Gauge'
+    
+    # 3. Specific Calibers from C++ config
+    if '300blk' in raw or '300aac' in raw or '300blackout' in raw or '300whisper' in raw or '300vmax' in raw or '300bcp' in raw:
         return '.300 BLK'
-    if '545x39' in raw or '5_45x39' in raw or '5.45x39' in raw:
-        return '5.45x39mm'
-    if '762x39' in raw or '7_62x39' in raw or '7.62x39' in raw:
-        return '7.62x39mm'
-    if '366tkm' in raw or '.366' in raw:
-        return '.366 TKM'
-    if '762x51' in raw or '7_62x51' in raw or '7.62x51' in raw or '308win' in raw or '.308' in raw:
-        return '7.62x51mm'
-    if '68x51' in raw or '6_8x51' in raw or '6.8x51' in raw or '277fury' in raw or 'spear' in raw:
+    if '68x51' in raw or '6.8x51' in raw_lower or '277fury' in raw or '277sig' in raw:
         return '6.8x51mm'
-    if '762x54' in raw or '7_62x54' in raw or '7.62x54' in raw:
+    if '366tkm' in raw or '.366' in raw_lower:
+        return '.366 TKM'
+    if '556x45' in raw or '5.56x45' in raw_lower or '556nato' in raw or '223rem' in raw:
+        return '5.56x45mm'
+    if '545x39' in raw or '5.45x39' in raw_lower:
+        return '5.45x39mm'
+    if '762x39' in raw or '7.62x39' in raw_lower:
+        return '7.62x39mm'
+    if '762x51' in raw or '7.62x51' in raw_lower or '308win' in raw or '.308' in raw_lower:
+        return '7.62x51mm'
+    if '762x54' in raw or '7.62x54' in raw_lower:
         return '7.62x54mmR'
-    if '9x19' in raw:
+    if '762x25' in raw or '7.62x25' in raw_lower or 'tokarev' in raw:
+        return '7.62x25mm'
+    if '9x19' in raw or 'parabellum' in raw or 'luger' in raw:
         return '9x19mm'
     if '9x39' in raw:
         return '9x39mm'
-    if '9x18' in raw:
+    if '9x18' in raw or 'makarov' in raw:
         return '9x18mm'
-    if '9x21' in raw:
+    if '9x21' in raw or 'gyurza' in raw:
         return '9x21mm'
-    if '45acp' in raw or '45_acp' in raw or '.45' in raw:
+    if '45acp' in raw or '.45acp' in raw_lower or '11.43x23' in raw:
         return '.45 ACP'
-    if '57x28' in raw or '5.7x28' in raw:
+    if '57x28' in raw or '5.7x28' in raw_lower:
         return '5.7x28mm'
-    if '46x30' in raw or '4.6x30' in raw:
+    if '46x30' in raw or '4.6x30' in raw_lower:
         return '4.6x30mm'
-    if '12ga' in raw or '12gauge' in raw or '12/70' in raw:
-        return '12 Gauge'
-    if '50bmg' in raw or '.50' in raw:
-        return '.50 BMG'
     if '338' in raw or 'lapua' in raw:
         return '.338 Lapua'
-    if '300win' in raw:
+    if '300win' in raw or '300wm' in raw:
         return '.300 Win'
-    if '762x25' in raw:
-        return '7.62x25mm'
+    if '408ct' in raw or 'cheytac' in raw or 'm200' in raw:
+        return '.408 CheyTac'
+    if '357' in raw or 'magnum' in raw:
+        return '.357 Magnum'
     if '22lr' in raw:
         return '.22 LR'
-    if '357' in raw:
-        return '.357 Magnum'
-    if '50ae' in raw:
-        return '.50 AE'
-    if '408ct' in raw or 'm200' in raw:
-        return '.408 CheyTac'
+    if '40mm' in raw or 'grenade' in raw:
+        return '40mm'
+    
     return None
+
+def extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props):
+    """
+    Pure C++ driven primary caliber resolution:
+    1. Reads C++ `caliberName` property from inherited class chain.
+    2. Reads C++ `bulletType` property from inherited class chain.
+    3. Analyzes C++ `chamberableFrom[]` array.
+    """
+    # 1. C++ caliberName
+    c_name = props.get('caliberName')
+    if c_name:
+        cal = normalize_ammo_caliber(c_name)
+        if cal:
+            return [cal]
+            
+    # 2. C++ bulletType
+    b_type = props.get('bulletType')
+    if b_type:
+        cal = normalize_ammo_caliber(b_type)
+        if cal:
+            return [cal]
+            
+    # 3. C++ chamberableFrom (single caliber or first primary)
+    chamber = props.get('chamberableFrom') or item_obj.get('chamberableFrom', [])
+    if chamber:
+        cals = []
+        for ammo in chamber:
+            cal = normalize_ammo_caliber(ammo)
+            if cal and cal not in cals:
+                cals.append(cal)
+        if len(cals) == 1:
+            return cals
+        elif len(cals) > 1:
+            return [cals[0]]
+            
+    return []
 
 def enrich_magazine_calibers(weaponsData, attachmentData):
     """Links weapons' chamberableFrom calibers to compatible magazines, populating calibers[]"""
@@ -782,7 +834,7 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
                 for c in w_cals:
                     mag_to_calibers[m_id].add(c)
 
-    # 2. Enrich attachmentData['탄창'] items
+    # 2. Enrich attachmentData['탄창'] items (탄창은 물리적 삽탄 가능한 복수 탄종 모두 호환)
     mag_items = attachmentData.get('탄창', [])
     for mag in mag_items:
         m_id = mag.get('id', '')
@@ -808,15 +860,6 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
         # Sort calibers deterministically
         if cals_set:
             mag['calibers'] = sorted(list(cals_set))
-
-    # 3. Also enrich weapon items with normalized calibers[]
-    for cat, weapons in weaponsData.items():
-        for weapon in weapons:
-            w_chamber = weapon.get('chamberableFrom') or []
-            w_cals = [normalize_ammo_caliber(a) for a in w_chamber]
-            w_cals = sorted(list(set(c for c in w_cals if c)))
-            if w_cals:
-                weapon['calibers'] = w_cals
 
 def save_data_js(weaponsData, gearData, attachmentData, output_file=DEFAULT_DATA_JS_PATH):
     """Outputs data.js with formatting"""

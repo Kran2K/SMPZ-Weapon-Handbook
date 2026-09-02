@@ -163,7 +163,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -485,7 +484,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -649,7 +647,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -813,7 +810,6 @@ const weaponsData = {
                 "Burst"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -975,7 +971,6 @@ const weaponsData = {
                 "Burst"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -1140,7 +1135,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -1435,7 +1429,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -1526,7 +1519,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                "6.8x51mm",
                 "7.62x51mm"
             ]
         },
@@ -1590,7 +1582,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -1701,7 +1692,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                "6.8x51mm",
                 "7.62x51mm"
             ]
         },
@@ -1867,7 +1857,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -2027,8 +2016,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
+                ".300 BLK"
             ]
         },
         {
@@ -2189,7 +2177,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -2348,7 +2335,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -2512,7 +2498,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -2728,7 +2713,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -2822,7 +2806,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -3454,7 +3437,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -3550,7 +3532,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -3645,7 +3626,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -3741,7 +3721,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -4199,7 +4178,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -4360,7 +4338,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -4494,8 +4471,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
+                ".300 BLK"
             ]
         },
         {
@@ -4634,7 +4610,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -4716,8 +4691,7 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                ".366 TKM",
-                "7.62x39mm"
+                ".366 TKM"
             ]
         },
         {
@@ -4878,8 +4852,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
+                ".300 BLK"
             ]
         },
         {
@@ -5041,7 +5014,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -5203,7 +5175,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
                 "5.56x45mm"
             ]
         },
@@ -5295,7 +5266,6 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".366 TKM",
                 "7.62x39mm"
             ]
         },
@@ -5457,8 +5427,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
+                ".300 BLK"
             ]
         },
         {
@@ -5557,8 +5526,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
+                "6.8x51mm"
             ]
         },
         {
@@ -5943,6 +5911,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -6197,7 +6168,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                "6.8x51mm",
                 "7.62x51mm"
             ]
         },
@@ -6297,7 +6267,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                "6.8x51mm",
                 "7.62x51mm"
             ]
         },
@@ -6715,7 +6684,6 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "calibers": [
-                "6.8x51mm",
                 "7.62x51mm"
             ]
         },
@@ -9118,6 +9086,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "40mm"
             ]
         }
     ]
