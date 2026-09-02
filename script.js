@@ -2019,7 +2019,7 @@ function updateSortOptionsDropdown(panelType, categoryKey, preferredMetric, pref
     }
 }
 
-// 빠른 필터 칩 바 갱신 (1행: 사용 탄종, 2행: 발사 모드 / 기어: 방탄, 수납)
+// 빠른 필터 칩 바 갱신 (1행: 사용 탄종, 2행: 발사 모드 / 기어: 방탄, 수납 / 탄창: 사용 탄종)
 function updateFilterChipsBar(panelType, categoryKey, items) {
     const container = document.getElementById('gridFilterChips');
     if (!container) return;
@@ -2029,6 +2029,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     const effectivePanel = (categoryKey === 'search' || panelType === 'search') ? 'all' : panelType;
     const isWeaponView = effectivePanel === 'weapon' || (effectivePanel === 'all' && itemsToCheck.some(it => !!it.modes || !!it.chamberableFrom));
     const isGearView = effectivePanel === 'gear';
+    const isMagazineOnlyView = !isWeaponView && (categoryKey === '탄창' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '탄창')));
 
     // 1. 무기 탭: 1행(사용 탄종) + 2행(발사 모드) 2단 구성
     if (isWeaponView) {
@@ -2037,7 +2038,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
 
         // 1행: 사용 탄종
         const availableCalibers = Array.from(
-            new Set(itemsToCheck.map(getWeaponCaliber).filter(Boolean))
+            new Set(itemsToCheck.map(getItemCaliber).filter(Boolean))
         ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 
         if (availableCalibers.length > 0) {
@@ -2123,7 +2124,58 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         return;
     }
 
-    // 2. 기어 탭: 방탄 / 수납 공간 보유
+    // 2. 탄창 전용 탭/목록: 사용 탄종 필터 칩 바
+    if (isMagazineOnlyView) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+
+        const availableCalibers = Array.from(
+            new Set(itemsToCheck.map(getItemCaliber).filter(Boolean))
+        ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+        if (availableCalibers.length > 0) {
+            const calRow = document.createElement('div');
+            calRow.className = 'grid-filter-row';
+
+            const label = document.createElement('span');
+            label.className = 'grid-filter-row-label';
+            label.textContent = '사용 탄종:';
+            calRow.appendChild(label);
+
+            const chipsWrap = document.createElement('div');
+            chipsWrap.className = 'grid-filter-chips-list';
+
+            availableCalibers.forEach(cal => {
+                const chipId = `cal_${cal}`;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `grid-filter-chip grid-filter-chip-cal ${currentGridActiveChips.has(chipId) ? 'active' : ''}`;
+                btn.dataset.chipId = chipId;
+                btn.innerHTML = `<span>${cal}</span>`;
+
+                btn.addEventListener('click', () => {
+                    if (currentGridActiveChips.has(chipId)) {
+                        currentGridActiveChips.delete(chipId);
+                        btn.classList.remove('active');
+                    } else {
+                        currentGridActiveChips.add(chipId);
+                        btn.classList.add('active');
+                    }
+                    applyGridSortAndFilters();
+                });
+
+                chipsWrap.appendChild(btn);
+            });
+
+            calRow.appendChild(chipsWrap);
+            wrap.appendChild(calRow);
+        }
+
+        container.appendChild(wrap);
+        return;
+    }
+
+    // 3. 기어 탭: 방탄 / 수납 공간 보유
     if (isGearView) {
         const wrap = document.createElement('div');
         wrap.className = 'grid-filter-groups';
@@ -2198,7 +2250,7 @@ function applyGridSortAndFilters() {
         items = items.filter(item => {
             // 2-1. 탄종 필터 (선택된 탄종들 중 하나라도 일치하면 통과)
             if (activeCalibers.length > 0) {
-                const cal = getWeaponCaliber(item);
+                const cal = getItemCaliber(item);
                 if (!cal || !activeCalibers.includes(cal)) {
                     return false;
                 }
