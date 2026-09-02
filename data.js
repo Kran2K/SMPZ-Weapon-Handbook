@@ -8351,99 +8351,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_Altyn_Green",
-            "name": "Altyn Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "60",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "60",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Aventail",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "15",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetAventail"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Cover",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "10",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
-            "name": "BNTI LShZ-2DTM Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.0 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
             "name": "BNTI LShZ-2DTM Helmet",
             "category": "헬멧",
@@ -8478,29 +8385,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
-            "name": "Crye Precision AirFrame Chops",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Crye Precision",
-            "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "15",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
             "name": "Crye Precision AirFrame Helmet",
             "category": "헬멧",
@@ -8532,29 +8416,6 @@ const gearData = {
                 "Visor",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-            "name": "Crye Precision AirFrame M-LOK Chops",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Crye Precision",
-            "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "15",
-                "hitpoints": "100",
-                "weight": "1.4 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "AFMLOKChops"
             ]
         },
         {
@@ -8622,37 +8483,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-            "name": "DevTac Ronin Respirator",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "85",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "80",
-                "hitpoints": "160",
-                "weight": "2.4 kg"
-            },
-            "itemSize": "4x4",
-            "itemSlots": 16,
-            "inventorySlots": [
-                "Headgear"
-            ],
-            "itemInfo": [
-                "Clothing",
-                "Headgear"
-            ],
-            "attachmentSlots": [
-                "NVG",
-                "weaponFlashlightSecond"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_DA_Bastion_Black",
             "name": "Diamond Age Bastion Helmet",
             "category": "헬멧",
@@ -8681,55 +8511,6 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "HelmetPlate"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_DA_Bastion",
-            "name": "Diamond Age Bastion Helmet Armor Plate",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "70",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "70",
-                "hitpoints": "100",
-                "weight": "0.1 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_NeoSteel_Black",
-            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -8794,29 +8575,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_FORT_KiverM",
-            "name": "FORT Kiver-M Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_FORT_KiverM_Alpine",
             "name": "FORT Kiver-M Helmet",
             "category": "헬멧",
@@ -8844,104 +8602,6 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_Trooper_Black",
-            "name": "Galac-Tac Armor Mandalorian Helmet Mask",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "0.4 kg"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_Caiman",
-            "name": "Galvion Caiman Fixed Arm Visor",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "15",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "hitpoints": "100",
-                "weight": "0.3 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_Caiman_Gray",
-            "name": "Galvion Caiman Hybrid Ballistic Applique",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "hitpoints": "100",
-                "weight": "0.7 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_Caiman_Black",
-            "name": "Galvion Caiman Hybrid Ballistic Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -9113,29 +8773,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_Maska_Green",
-            "name": "Maska-1SCH Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "65",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "65",
-                "hitpoints": "110",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
             "name": "NPP KIASS Tor-2 Ballistic Helmet",
             "category": "헬멧",
@@ -9166,75 +8803,6 @@ const gearData = {
                 "Visor",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
-            "name": "NPP KIASS Tor-2 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
-            "name": "NPP KIASS Tor2 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "1.1 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Mandible_OpsCore_FAST_Black",
-            "name": "Ops-Core FAST Gunsight Mandible",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "20",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "20",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "Mandible"
             ]
         },
         {
@@ -9274,54 +8842,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
-            "name": "Ops-Core FAST Multi-Hit Ballistic Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "100",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
-            "name": "Ops-Core SLAAP Armor Helmet Plate",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Gentex Corporation",
-            "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/",
-            "stats": {
-                "bulletDamageProtection": "10",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "10",
-                "weight": "1.3 kg"
-            },
-            "itemSize": "3x2",
-            "itemSlots": 6,
-            "inventorySlots": [
-                "HelmetPlate"
-            ],
-            "attachmentSlots": [
-                "NVG"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_RYS_T_Black",
             "name": "Rys-T",
             "category": "헬멧",
@@ -9348,29 +8868,6 @@ const gearData = {
                 "Headgear"
             ],
             "attachmentSlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_RYS_T_Black",
-            "name": "Rys-T Helmet Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "50",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "50",
-                "hitpoints": "90",
-                "weight": "1.2 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
                 "Visor"
             ]
         },
@@ -9466,29 +8963,6 @@ const gearData = {
             ]
         },
         {
-            "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
-            "name": "Team Wendy Exfil Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "0.8 kg"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
-                "Visor"
-            ]
-        },
-        {
             "id": "SMPZ_Helmet_Vulkan_Black",
             "name": "Vulkan-5 LShZ-5",
             "category": "헬멧",
@@ -9515,29 +8989,6 @@ const gearData = {
                 "Headgear"
             ],
             "attachmentSlots": [
-                "Visor"
-            ]
-        },
-        {
-            "id": "SMPZ_Visor_Vulkan",
-            "name": "Vulkan-5 LShZ-5 Face Shield",
-            "category": "헬멧",
-            "image": "",
-            "images": [],
-            "description": "검은색",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "bulletDamageProtection": "30",
-                "bloodDamageProtection": "0",
-                "shockDamageProtection": "30",
-                "hitpoints": "100",
-                "weight": "-"
-            },
-            "itemSize": "3x3",
-            "itemSlots": 9,
-            "inventorySlots": [
                 "Visor"
             ]
         },
@@ -9570,11 +9021,562 @@ const gearData = {
             "attachmentSlots": [
                 "Visor"
             ]
+        }
+    ],
+    "헬멧 부착물": [
+        {
+            "id": "SMPZ_Visor_Altyn_Green",
+            "name": "Altyn Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "60",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "60",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Aventail",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "15",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetAventail"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Cover",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "10",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
+            "name": "BNTI LShZ-2DTM Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.0 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
+            "name": "Crye Precision AirFrame Chops",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Crye Precision",
+            "manufacturerLogo": "assets/crye-logo.png",
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "15",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
+            "name": "Crye Precision AirFrame M-LOK Chops",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Crye Precision",
+            "manufacturerLogo": "assets/crye-logo.png",
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "15",
+                "hitpoints": "100",
+                "weight": "1.4 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "AFMLOKChops"
+            ]
+        },
+        {
+            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
+            "name": "DevTac Ronin Respirator",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "85",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "80",
+                "hitpoints": "160",
+                "weight": "2.4 kg"
+            },
+            "itemSize": "4x4",
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "itemInfo": [
+                "Clothing",
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightSecond"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_DA_Bastion",
+            "name": "Diamond Age Bastion Helmet Armor Plate",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "70",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "70",
+                "hitpoints": "100",
+                "weight": "0.1 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_NeoSteel_Black",
+            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_FORT_KiverM",
+            "name": "FORT Kiver-M Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_Trooper_Black",
+            "name": "Galac-Tac Armor Mandalorian Helmet Mask",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "0.4 kg"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Caiman",
+            "name": "Galvion Caiman Fixed Arm Visor",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "15",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "hitpoints": "100",
+                "weight": "0.3 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_Caiman_Gray",
+            "name": "Galvion Caiman Hybrid Ballistic Applique",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "hitpoints": "100",
+                "weight": "0.7 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_Caiman_Black",
+            "name": "Galvion Caiman Hybrid Ballistic Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Maska_Green",
+            "name": "Maska-1SCH Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "65",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "65",
+                "hitpoints": "110",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
+            "name": "NPP KIASS Tor-2 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
+            "name": "NPP KIASS Tor2 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "1.1 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Mandible_OpsCore_FAST_Black",
+            "name": "Ops-Core FAST Gunsight Mandible",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "20",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "20",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "Mandible"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
+            "name": "Ops-Core FAST Multi-Hit Ballistic Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "100",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
+            "name": "Ops-Core SLAAP Armor Helmet Plate",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Gentex Corporation",
+            "manufacturerLogo": "assets/gentex-logo.png",
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "stats": {
+                "bulletDamageProtection": "10",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "10",
+                "weight": "1.3 kg"
+            },
+            "itemSize": "3x2",
+            "itemSlots": 6,
+            "inventorySlots": [
+                "HelmetPlate"
+            ],
+            "attachmentSlots": [
+                "NVG"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_RYS_T_Black",
+            "name": "Rys-T Helmet Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "50",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "50",
+                "hitpoints": "90",
+                "weight": "1.2 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
+            "name": "Team Wendy Exfil Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "0.8 kg"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
+        },
+        {
+            "id": "SMPZ_Visor_Vulkan",
+            "name": "Vulkan-5 LShZ-5 Face Shield",
+            "category": "헬멧 부착물",
+            "image": "",
+            "images": [],
+            "description": "검은색",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "bulletDamageProtection": "30",
+                "bloodDamageProtection": "0",
+                "shockDamageProtection": "30",
+                "hitpoints": "100",
+                "weight": "-"
+            },
+            "itemSize": "3x3",
+            "itemSlots": 9,
+            "inventorySlots": [
+                "Visor"
+            ]
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
             "name": "ZSh-1-2M Face Shield",
-            "category": "헬멧",
+            "category": "헬멧 부착물",
             "image": "",
             "images": [],
             "description": "",

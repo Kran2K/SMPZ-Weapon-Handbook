@@ -1649,7 +1649,7 @@ function updateSortOptionsDropdown(panelType, categoryKey, preferredSortKey, ite
         defaultKey = 'capacity_desc';
     } else if (['전방 손잡이', '권총 손잡이', '소음기', '소염기 / 머즐', '개머리판', '핸드가드', '양각대'].includes(categoryKey)) {
         defaultKey = 'recoil_reduction_desc';
-    } else if (['헬멧', '전신 방탄복', '플레이트 캐리어', '마스크'].includes(categoryKey)) {
+    } else if (['헬멧', '헬멧 부착물', '전신 방탄복', '플레이트 캐리어', '마스크'].includes(categoryKey)) {
         defaultKey = 'bullet_prot_desc';
     } else if (['백팩', '체스트 리그'].includes(categoryKey)) {
         defaultKey = 'cargo_desc';
