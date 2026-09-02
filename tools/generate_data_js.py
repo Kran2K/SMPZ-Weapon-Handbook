@@ -689,6 +689,9 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
                 result_data[sec_name][cat].append(item_obj)
 
+    # 10. Enrich magazine and weapon compatible calibers
+    enrich_magazine_calibers(result_data['weaponsData'], result_data['attachmentData'])
+
     # Save updated translation cache
     save_google_translation_cache(google_cache)
 
@@ -705,6 +708,115 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print("-" * 70)
 
     return result_data['weaponsData'], result_data['gearData'], result_data['attachmentData']
+
+def normalize_ammo_caliber(ammo_name):
+    """Normalizes an ammo classname into a standard caliber name (e.g. 5.56x45mm, .300 BLK)"""
+    if not ammo_name:
+        return None
+    raw = str(ammo_name).lower()
+    if '556x45' in raw or '5_56x45' in raw or '5.56x45' in raw:
+        return '5.56x45mm'
+    if any(k in raw for k in ['300blk', '300aac', '300blackout', '300_whisper', '300_vmax', '300_bcp']):
+        return '.300 BLK'
+    if '545x39' in raw or '5_45x39' in raw or '5.45x39' in raw:
+        return '5.45x39mm'
+    if '762x39' in raw or '7_62x39' in raw or '7.62x39' in raw:
+        return '7.62x39mm'
+    if '366tkm' in raw or '.366' in raw:
+        return '.366 TKM'
+    if '762x51' in raw or '7_62x51' in raw or '7.62x51' in raw or '308win' in raw or '.308' in raw:
+        return '7.62x51mm'
+    if '68x51' in raw or '6_8x51' in raw or '6.8x51' in raw or '277fury' in raw or 'spear' in raw:
+        return '6.8x51mm'
+    if '762x54' in raw or '7_62x54' in raw or '7.62x54' in raw:
+        return '7.62x54mmR'
+    if '9x19' in raw:
+        return '9x19mm'
+    if '9x39' in raw:
+        return '9x39mm'
+    if '9x18' in raw:
+        return '9x18mm'
+    if '9x21' in raw:
+        return '9x21mm'
+    if '45acp' in raw or '45_acp' in raw or '.45' in raw:
+        return '.45 ACP'
+    if '57x28' in raw or '5.7x28' in raw:
+        return '5.7x28mm'
+    if '46x30' in raw or '4.6x30' in raw:
+        return '4.6x30mm'
+    if '12ga' in raw or '12gauge' in raw or '12/70' in raw:
+        return '12 Gauge'
+    if '50bmg' in raw or '.50' in raw:
+        return '.50 BMG'
+    if '338' in raw or 'lapua' in raw:
+        return '.338 Lapua'
+    if '300win' in raw:
+        return '.300 Win'
+    if '762x25' in raw:
+        return '7.62x25mm'
+    if '22lr' in raw:
+        return '.22 LR'
+    if '357' in raw:
+        return '.357 Magnum'
+    if '50ae' in raw:
+        return '.50 AE'
+    if '408ct' in raw or 'm200' in raw:
+        return '.408 CheyTac'
+    return None
+
+def enrich_magazine_calibers(weaponsData, attachmentData):
+    """Links weapons' chamberableFrom calibers to compatible magazines, populating calibers[]"""
+    mag_to_calibers = {}
+
+    # 1. Cross-reference weapons to magazines
+    for cat, weapons in weaponsData.items():
+        for weapon in weapons:
+            w_mags = weapon.get('magazines') or []
+            w_chamber = weapon.get('chamberableFrom') or []
+            w_cals = [normalize_ammo_caliber(a) for a in w_chamber]
+            w_cals = [c for c in w_cals if c]
+
+            for m_id in w_mags:
+                if m_id not in mag_to_calibers:
+                    mag_to_calibers[m_id] = set()
+                for c in w_cals:
+                    mag_to_calibers[m_id].add(c)
+
+    # 2. Enrich attachmentData['탄창'] items
+    mag_items = attachmentData.get('탄창', [])
+    for mag in mag_items:
+        m_id = mag.get('id', '')
+        cals_set = mag_to_calibers.get(m_id, set())
+
+        # Fallback heuristics for standalone/custom magazines
+        if not cals_set:
+            id_lower = m_id.lower()
+            name_lower = str(mag.get('name', '')).lower()
+            all_str = f"{id_lower} {name_lower}"
+
+            if any(k in all_str for k in ['stanag', '556', 'ar15', 'pmag_40', 'drumpmag556', 'beta_cmag_556', 'troy_battlemag', 'l5awm']):
+                cals_set = {'5.56x45mm', '.300 BLK'}
+            elif any(k in all_str for k in ['762x51', '68x51', 'l7awm', 'drum_x25', 'sr25', 'm110', 'kac_steel', '308']):
+                cals_set = {'6.8x51mm', '7.62x51mm'}
+            elif any(k in all_str for k in ['762x39', 'akms', 'aka16', 'ultimag_762', '6l10', '6p2', 'x47']):
+                cals_set = {'7.62x39mm', '.366 TKM'}
+            else:
+                single_cal = normalize_ammo_caliber(all_str)
+                if single_cal:
+                    cals_set = {single_cal}
+
+        # Sort calibers deterministically
+        if cals_set:
+            mag['calibers'] = sorted(list(cals_set))
+
+    # 3. Also enrich weapon items with normalized calibers[]
+    for cat, weapons in weaponsData.items():
+        for weapon in weapons:
+            w_chamber = weapon.get('chamberableFrom') or []
+            w_cals = [normalize_ammo_caliber(a) for a in w_chamber]
+            w_cals = sorted(list(set(c for c in w_cals if c)))
+            if w_cals:
+                weapon['calibers'] = w_cals
 
 def save_data_js(weaponsData, gearData, attachmentData, output_file=DEFAULT_DATA_JS_PATH):
     """Outputs data.js with formatting"""

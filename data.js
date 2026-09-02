@@ -161,6 +161,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -238,6 +242,9 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -288,6 +295,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -336,6 +346,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -470,6 +483,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -630,6 +647,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -790,6 +811,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "Burst"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -948,6 +973,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "Burst"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -1109,6 +1138,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -1187,6 +1220,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -1241,6 +1277,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -1394,6 +1433,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -1481,6 +1524,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -1541,6 +1588,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -1648,6 +1699,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -1810,6 +1865,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -1966,6 +2025,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -2124,6 +2187,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -2279,6 +2346,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -2439,6 +2510,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -2497,6 +2572,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2555,6 +2633,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -2645,6 +2726,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -2735,6 +2820,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -2816,6 +2905,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -2885,6 +2977,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -2953,6 +3048,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -3003,6 +3101,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -3085,6 +3186,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3168,6 +3272,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3251,6 +3358,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3342,6 +3452,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -3434,6 +3548,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -3525,6 +3643,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -3617,6 +3739,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -3696,6 +3822,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3776,6 +3905,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3854,6 +3986,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -3902,6 +4037,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK"
             ]
         },
         {
@@ -4059,6 +4197,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -4216,6 +4358,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -4346,6 +4492,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -4391,6 +4541,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -4479,6 +4632,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -4557,6 +4714,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -4715,6 +4876,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -4874,6 +5039,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -5032,6 +5201,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -5120,6 +5293,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -5278,6 +5455,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -5374,6 +5555,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -5424,6 +5609,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -5507,6 +5695,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -5555,6 +5746,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         }
     ],
@@ -5612,6 +5806,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5656,6 +5853,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -5702,6 +5902,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -5780,6 +5983,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".408 CheyTac"
             ]
         },
         {
@@ -5834,6 +6040,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5887,6 +6096,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -5983,6 +6195,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -6079,6 +6295,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -6119,6 +6339,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -6146,6 +6369,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".357 Magnum"
             ]
         },
         {
@@ -6185,6 +6411,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".366 TKM"
             ]
         },
         {
@@ -6222,6 +6451,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6269,6 +6501,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".300 Win"
             ]
         },
         {
@@ -6319,6 +6554,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6377,6 +6615,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6472,6 +6713,10 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -6513,6 +6758,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6559,6 +6807,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6604,6 +6855,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6649,6 +6903,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6694,6 +6951,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -6739,6 +6999,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                ".338 Lapua"
             ]
         },
         {
@@ -6785,6 +7048,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -6834,6 +7100,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -6873,6 +7142,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -6914,6 +7186,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -6956,6 +7231,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         }
     ],
@@ -6996,6 +7274,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7044,6 +7325,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.7x28mm"
             ]
         },
         {
@@ -7089,6 +7373,9 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7141,6 +7428,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -7192,6 +7482,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -7237,6 +7530,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7274,6 +7570,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         },
         {
@@ -7322,6 +7621,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7365,6 +7667,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -7411,6 +7716,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7463,6 +7771,9 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7511,6 +7822,9 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         }
     ],
@@ -7552,6 +7866,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7592,6 +7909,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7629,6 +7949,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7667,6 +7990,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7701,6 +8027,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -7736,6 +8065,9 @@ const weaponsData = {
             "modes": [
                 "Single",
                 "Double"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7772,6 +8104,9 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -7822,6 +8157,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         }
     ],
@@ -7860,6 +8198,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7898,6 +8239,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -7934,6 +8278,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -7970,6 +8317,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -8018,6 +8368,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "5.7x28mm"
             ]
         },
         {
@@ -8062,6 +8415,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -8104,6 +8460,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -8144,6 +8503,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -8183,6 +8545,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -8219,6 +8584,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".357 Magnum"
             ]
         },
         {
@@ -8261,6 +8629,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                ".50 AE"
             ]
         },
         {
@@ -8303,6 +8674,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -8338,6 +8712,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -8368,6 +8745,9 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         }
     ],
@@ -8418,6 +8798,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -8467,6 +8850,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x39mm"
             ]
         },
         {
@@ -8510,6 +8896,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -8552,6 +8941,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -8621,6 +9013,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -8672,6 +9067,9 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         }
     ],
@@ -24152,6 +24550,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24178,6 +24579,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24203,6 +24607,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24228,6 +24635,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24254,6 +24664,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24279,6 +24692,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24304,6 +24720,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24329,6 +24748,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24355,6 +24777,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24380,6 +24806,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -24405,6 +24834,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "4.6x30mm"
             ]
         },
         {
@@ -24431,6 +24863,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x25mm"
             ]
         },
         {
@@ -24456,6 +24891,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -24481,6 +24919,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -24506,6 +24947,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x54mmR"
             ]
         },
         {
@@ -24531,6 +24975,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 Win"
             ]
         },
         {
@@ -24556,6 +25003,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24581,6 +25031,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24606,6 +25060,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24631,6 +25089,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24656,6 +25118,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24681,6 +25147,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24706,6 +25176,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24731,6 +25205,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -24756,6 +25233,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x21mm"
             ]
         },
         {
@@ -24781,6 +25261,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".50 BMG"
             ]
         },
         {
@@ -24806,6 +25289,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -24831,6 +25318,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -24856,6 +25347,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -24881,6 +25375,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24906,6 +25403,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -24931,6 +25431,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -24956,6 +25459,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -24981,6 +25488,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25006,6 +25517,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25031,6 +25546,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25057,6 +25576,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25082,6 +25605,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25107,6 +25634,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25132,6 +25663,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -25157,6 +25691,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25182,6 +25720,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25207,6 +25749,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "12 Gauge"
             ]
         },
         {
@@ -25232,6 +25777,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25257,6 +25806,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25283,6 +25836,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25309,6 +25866,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25334,6 +25895,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25359,6 +25924,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25384,6 +25953,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25409,6 +25981,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25434,6 +26009,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25459,6 +26037,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25485,6 +26066,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25510,6 +26094,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x39mm"
             ]
         },
         {
@@ -25535,6 +26122,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25560,6 +26150,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25585,6 +26178,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.45x39mm"
             ]
         },
         {
@@ -25610,6 +26206,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25635,6 +26235,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25660,6 +26264,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "5.56x45mm"
             ]
         },
         {
@@ -25686,6 +26293,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".366 TKM",
+                "7.62x39mm"
             ]
         },
         {
@@ -25712,6 +26323,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25737,6 +26352,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -25762,6 +26380,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "7.62x51mm"
             ]
         },
         {
@@ -25788,6 +26409,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25813,6 +26438,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "6.8x51mm",
+                "7.62x51mm"
             ]
         },
         {
@@ -25839,6 +26468,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -25865,6 +26497,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                "9x19mm"
             ]
         },
         {
@@ -25890,6 +26525,9 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".45 ACP"
             ]
         },
         {
@@ -25915,6 +26553,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         },
         {
@@ -25940,6 +26582,10 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
+            ],
+            "calibers": [
+                ".300 BLK",
+                "5.56x45mm"
             ]
         }
     ],
