@@ -1437,19 +1437,21 @@ const SORT_METRICS = {
         badge: (item, val) => val ? `${val}칸` : null
     },
 
-    // 탄창 및 수납
+    // 기어 수납
     cargo_slots: {
         id: 'cargo_slots',
         label: '수납 크기',
-        group: 'mag_cargo',
+        group: 'gear',
         parser: DataParsers.cargoSlots,
         defaultOrder: 'desc',
         badge: (item, val) => val ? `수납 ${val}칸` : null
     },
+
+    // 부착물 성능 및 탄창
     capacity: {
         id: 'capacity',
         label: '탄창 용량',
-        group: 'mag_cargo',
+        group: 'attachment',
         parser: DataParsers.capacity,
         defaultOrder: 'desc',
         badge: (item, val) => val ? `${val}발` : null
@@ -1566,40 +1568,88 @@ const SORT_METRICS = {
     }
 };
 
-// 무기 탄종(Caliber) 정밀 식별 헬퍼 (chamberableFrom 우선 참조)
-function getWeaponCaliber(item) {
+// 아이템 탄종 식별 헬퍼 엔진 (총기 및 72종 탄창 전수 매핑 지원)
+function getItemCaliber(item) {
     if (!item) return null;
-    const chamber = item.chamberableFrom || [];
-    const name = item.name || '';
-    const id = item.id || '';
 
-    const allStr = `${chamber.join(' ')} ${name} ${id}`;
+    // 1. 총기: chamberableFrom 배열에서 탄종 식별
+    if (item.chamberableFrom && Array.isArray(item.chamberableFrom) && item.chamberableFrom.length > 0) {
+        for (const ammoName of item.chamberableFrom) {
+            const m = /^(ammo_([0-9a-zA-Z]+)|([0-9.]+(?:x[0-9]+(?:mm)?)?|[0-9.]+\s*(?:cal|gauge|ACP|NATO|BLM|Auto|Magnum|R|Special)?))/i.exec(ammoName);
+            if (m) {
+                const raw = (m[2] || m[1]).toLowerCase();
+                const CALIBER_MAP = {
+                    '556x45': '5.56x45mm', '545x39': '5.45x39mm', '762x39': '7.62x39mm',
+                    '762x51': '7.62x51mm', '762x54': '7.62x54mmR', '762x54r': '7.62x54mmR',
+                    '9x19': '9x19mm', '9x39': '9x39mm', '9x18': '9x18mm', '9x21': '9x21mm',
+                    '45acp': '.45 ACP', '45': '.45 ACP', '4570': '.45-70 Govt',
+                    '300aac': '.300 BLK', '300blk': '.300 BLK', '300blackout': '.300 BLK',
+                    '308': '.308 Win', '308win': '.308 Win', '338': '.338 Lapua', '338lapua': '.338 Lapua',
+                    '50bmg': '.50 BMG', '12ga': '12 Gauge', '12gauge': '12 Gauge', '12g': '12 Gauge',
+                    '20ga': '20 Gauge', '22lr': '.22 LR', '57x28': '5.7x28mm', '46x30': '4.6x30mm'
+                };
+                if (CALIBER_MAP[raw]) return CALIBER_MAP[raw];
+            }
+        }
+    }
 
-    if (/556x45|5_56x45|5\.56x45/i.test(allStr)) return '5.56x45mm';
-    if (/762x39|7_62x39|7\.62x39/i.test(allStr)) return '7.62x39mm';
-    if (/762x51|7_62x51|7\.62x51|308Win|\.308/i.test(allStr)) return '7.62x51mm';
-    if (/762x54|7_62x54|7\.62x54/i.test(allStr)) return '7.62x54mmR';
-    if (/545x39|5_45x39|5\.45x39/i.test(allStr)) return '5.45x39mm';
-    if (/9x19/i.test(allStr)) return '9x19mm';
-    if (/9x39/i.test(allStr)) return '9x39mm';
-    if (/45ACP|45_acp|\.45\s*acp/i.test(allStr)) return '.45 ACP';
-    if (/338LM|338\s*Lapua|\.338/i.test(allStr)) return '.338 Lapua';
-    if (/127x55|12\.7x55|ASH12/i.test(allStr)) return '12.7x55mm';
-    if (/50BMG|127x99|12\.7x99|\.50\s*BMG/i.test(allStr)) return '.50 BMG';
-    if (/12ga|12_ga|12Gauge|12\/70|MP-155|MP-133|MP-43|MP-18|AA-12/i.test(allStr)) return '12 Gauge';
-    if (/57x28|5\.7x28|FiveSeven|P90/i.test(allStr)) return '5.7x28mm';
-    if (/46x30|4\.6x30|MP7/i.test(allStr)) return '4.6x30mm';
-    if (/9x21/i.test(allStr)) return '9x21mm';
-    if (/300BLK|300Blackout|\.300\s*Blackout/i.test(allStr)) return '.300 Blackout';
-    if (/300Win|\.300\s*Win/i.test(allStr)) return '.300 Win';
-    if (/357|\.357/i.test(allStr)) return '.357 Magnum';
-    if (/366TKM|\.366/i.test(allStr)) return '.366 TKM';
-    if (/762x25|7\.62x25|PPSH|TT33/i.test(allStr)) return '7.62x25mm';
-    if (/50AE|\.50\s*AE/i.test(allStr)) return '.50 AE';
-    if (/408CT|\.408|M200/i.test(allStr)) return '.408 CheyTac';
-    if (/25x59/i.test(allStr)) return '25x59mm';
-    if (/40mm|M32A1/i.test(allStr)) return '40mm';
+    // 2. 탄창 / 아이템: ID 및 이름 기반 정밀 탄종 매핑
+    const id = (item.id || '').toLowerCase();
+    const name = (item.name || '').toLowerCase();
+
+    // 2-1. 특수 탄종 패턴 우선 매칭
+    if (id.includes('45acp') || name.includes('.45 acp') || name.includes('.45acp') || id.includes('m1911') || id.includes('m45a1') || id.includes('vector45') || id.includes('ump45') || id.includes('usp45')) return '.45 ACP';
+    if (id.includes('556x45') || name.includes('5.56x45') || id.includes('stanag') || id.includes('pmag') || id.includes('ar15') || id.includes('m4a1') || id.includes('scar_l') || id.includes('aug') || id.includes('g36') || id.includes('hk416')) return '5.56x45mm';
+    if (id.includes('545x39') || name.includes('5.45x39') || id.includes('ak74') || id.includes('rpk16')) return '5.45x39mm';
+    if (id.includes('762x39') || name.includes('7.62x39') || id.includes('akm') || id.includes('ak103') || id.includes('rpd') || id.includes('sks') || id.includes('vz58')) return '7.62x39mm';
+    if (id.includes('762x51') || name.includes('7.62x51') || id.includes('m110') || id.includes('scar_h') || id.includes('sr25') || id.includes('fal') || id.includes('m14') || id.includes('g3') || id.includes('m60') || id.includes('sa58')) return '7.62x51mm';
+    if (id.includes('762x54') || name.includes('7.62x54') || id.includes('svd') || id.includes('mosin') || id.includes('pkm') || id.includes('pkp') || id.includes('sv98')) return '7.62x54mmR';
+    if (id.includes('9x19') || name.includes('9x19') || id.includes('mp5') || id.includes('mpx') || id.includes('glock') || id.includes('p226') || id.includes('m9a3') || id.includes('beretta') || id.includes('cz75') || id.includes('pp19') || id.includes('bizon') || id.includes('vector9')) return '9x19mm';
+    if (id.includes('9x39') || name.includes('9x39') || id.includes('vss') || id.includes('val') || id.includes('sr3m') || id.includes('groza')) return '9x39mm';
+    if (id.includes('9x18') || name.includes('9x18') || id.includes('makarov') || id.includes('pm') || id.includes('aps') || id.includes('kedr') || id.includes('bizon2')) return '9x18mm';
+    if (id.includes('9x21') || name.includes('9x21') || id.includes('gyurza') || id.includes('sr1mp') || id.includes('veresk')) return '9x21mm';
+    if (id.includes('57x28') || name.includes('5.7x28') || id.includes('fiveseven') || id.includes('p90')) return '5.7x28mm';
+    if (id.includes('46x30') || name.includes('4.6x30') || id.includes('mp7')) return '4.6x30mm';
+    if (id.includes('12ga') || id.includes('12gauge') || name.includes('12/70') || name.includes('12ga') || name.includes('12 gauge') || id.includes('saiga12') || id.includes('mp153') || id.includes('mp133') || id.includes('m590') || id.includes('aa12')) return '12 Gauge';
+    if (id.includes('338') || name.includes('.338') || id.includes('lapua') || id.includes('axmc')) return '.338 Lapua';
+    if (id.includes('50bmg') || name.includes('.50 bmg') || id.includes('m107') || id.includes('m82') || id.includes('barrett')) return '.50 BMG';
+    if (id.includes('300aac') || id.includes('300blk') || name.includes('.300 blk') || name.includes('.300 aac')) return '.300 BLK';
+    if (id.includes('22lr') || name.includes('.22 lr')) return '.22 LR';
+
+    // 2-2. 텍스트 정규식 탐색
+    const fullText = (item.name || '') + ' ' + (item.description || '');
+    const regexList = [
+        { pattern: /5\.56\s*x\s*45(?:mm)?(?:\s*NATO)?/i, caliber: '5.56x45mm' },
+        { pattern: /5\.45\s*x\s*39(?:mm)?/i, caliber: '5.45x39mm' },
+        { pattern: /7\.62\s*x\s*39(?:mm)?/i, caliber: '7.62x39mm' },
+        { pattern: /7\.62\s*x\s*51(?:mm)?(?:\s*NATO)?|\.308\s*Win/i, caliber: '7.62x51mm' },
+        { pattern: /7\.62\s*x\s*54(?:mm)?(?:\s*R)?/i, caliber: '7.62x54mmR' },
+        { pattern: /9\s*x\s*19(?:mm)?(?:\s*Parabellum|\s*Luger)?/i, caliber: '9x19mm' },
+        { pattern: /9\s*x\s*39(?:mm)?/i, caliber: '9x39mm' },
+        { pattern: /9\s*x\s*18(?:mm)?(?:\s*PM)?/i, caliber: '9x18mm' },
+        { pattern: /9\s*x\s*21(?:mm)?/i, caliber: '9x21mm' },
+        { pattern: /\.45\s*ACP/i, caliber: '.45 ACP' },
+        { pattern: /5\.7\s*x\s*28(?:mm)?/i, caliber: '5.7x28mm' },
+        { pattern: /4\.6\s*x\s*30(?:mm)?/i, caliber: '4.6x30mm' },
+        { pattern: /12\s*(?:Gauge|ga|\/70|\/76)/i, caliber: '12 Gauge' },
+        { pattern: /\.338\s*Lapua(?:\s*Magnum)?/i, caliber: '.338 Lapua' },
+        { pattern: /\.50\s*BMG|12\.7\s*x\s*99(?:mm)?/i, caliber: '.50 BMG' },
+        { pattern: /\.300\s*(?:AAC|BLK|Blackout)/i, caliber: '.300 BLK' },
+        { pattern: /\.22\s*LR/i, caliber: '.22 LR' }
+    ];
+
+    for (const { pattern, caliber } of regexList) {
+        if (pattern.test(fullText)) {
+            return caliber;
+        }
+    }
+
     return null;
+}
+
+// 무기 탄종 식별 헬퍼 (하위 호환 유지)
+function getWeaponCaliber(item) {
+    return getItemCaliber(item);
 }
 
 // 광학 조준경 배율 파서 (C++ 소스코드 stats.magnification 우선 참조)
@@ -1726,10 +1776,9 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
 // 정렬 그룹 설정
 const SORT_GROUPS = [
     { key: 'common', label: '공통' },
-    { key: 'mag_cargo', label: '탄창 & 수납' },
     { key: 'attachment', label: '부착물' },
-    { key: 'gear', label: '방어구' },
-    { key: 'weapon', label: '총기' }
+    { key: 'gear', label: '기어' },
+    { key: 'weapon', label: '웨폰' }
 ];
 
 // 고정 필터 칩 설정 (기어 및 무기 발사모드)
