@@ -75,6 +75,13 @@
                 <div class="grid-header-left">
                     <h2 class="grid-title" id="gridTitle"></h2>
                     <span class="grid-count" id="gridCount"></span>
+                    <button type="button" id="gridFilterResetBtn" class="grid-filter-reset-btn" style="display: none;" title="필터 초기화">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        <span>초기화</span>
+                    </button>
                 </div>
                 <div class="grid-header-right" id="gridHeaderRight">
                     <div class="grid-controls-row">
@@ -85,7 +92,11 @@
                                 </svg>
                                 <span>정렬:</span>
                             </label>
-                            <select id="gridSortSelect" class="grid-sort-select" aria-label="아이템 정렬"></select>
+                            <select id="gridSortSelect" class="grid-sort-select" aria-label="정렬 기준"></select>
+                            <select id="gridSortOrderSelect" class="grid-sort-order-select" aria-label="정렬 방향">
+                                <option value="desc">내림차순 (▼)</option>
+                                <option value="asc">오름차순 (▲)</option>
+                            </select>
                         </div>
                         <div class="grid-search-box" id="gridSearchBox">
                             <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -100,13 +111,6 @@
             </div>
             <div class="grid-filter-bar" id="gridFilterBar">
                 <div class="grid-filter-chips" id="gridFilterChips"></div>
-                <button type="button" id="gridFilterResetBtn" class="grid-filter-reset-btn" style="display: none;" title="필터 초기화">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="1 4 1 10 7 10"></polyline>
-                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-                    </svg>
-                    <span>필터 초기화</span>
-                </button>
             </div>
             <div class="weapon-grid" id="itemGrid"></div>
         </div>
