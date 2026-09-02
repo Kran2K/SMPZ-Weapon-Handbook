@@ -1592,7 +1592,7 @@ function getItemCoreSpecs(item, categoryKey, panelType) {
     // 1. 무기 (사용 탄종)
     const isWeapon = pType === 'weapon' || !!item.modes || (item.chamberableFrom && item.chamberableFrom.length > 0) || (item.stats && item.stats.rpm);
     if (isWeapon) {
-        const cal = getWeaponCaliber(item);
+        const cal = getItemCaliber(item);
         if (cal) {
             specs.push({ label: '탄종', text: cal, tagClass: 'spec-caliber' });
         }
