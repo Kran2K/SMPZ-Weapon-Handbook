@@ -503,7 +503,17 @@ function pushNavState(viewState) {
 // 네비게이션 스택 팝 (이전 화면으로 복귀)
 function popNavState() {
     if (navStack.length === 0) {
+        if (preSearchView) {
+            const view = preSearchView;
+            preSearchView = null;
+            const searchInput = document.getElementById('itemSearch');
+            if (searchInput) searchInput.value = '';
+            restoreView(view);
+            updateFloatingNav();
+            return;
+        }
         backToGrid();
+        updateFloatingNav();
         return;
     }
     const previousState = navStack.pop();
@@ -512,6 +522,7 @@ function popNavState() {
         restoreView(previousState);
     } finally {
         isNavigatingHistory = false;
+        updateFloatingNav();
     }
 }
 
@@ -520,14 +531,26 @@ function resetToRootGrid() {
     if (navStack.length > 0) {
         const rootState = navStack[0];
         navStack = [];
+        preSearchView = null;
+        const searchInput = document.getElementById('itemSearch');
+        if (searchInput) searchInput.value = '';
         isNavigatingHistory = true;
         try {
             restoreView(rootState);
         } finally {
             isNavigatingHistory = false;
+            updateFloatingNav();
         }
+    } else if (preSearchView) {
+        const view = preSearchView;
+        preSearchView = null;
+        const searchInput = document.getElementById('itemSearch');
+        if (searchInput) searchInput.value = '';
+        restoreView(view);
+        updateFloatingNav();
     } else {
         backToGrid();
+        updateFloatingNav();
     }
 }
 
@@ -552,14 +575,13 @@ function showSlotAttachments(parentItem, slotName) {
     }
 }
 
-// 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링)
+// 장착 가능한 부착물 슬롯 UI 섹션 생성 (동일 종류 통합 렌더링 + 호환 탄창 포함)
 function createAttachmentSlotsSection(item) {
-    if (!item || !Array.isArray(item.attachmentSlots) || item.attachmentSlots.length === 0) {
-        return null;
-    }
+    const rawSlots = Array.isArray(item?.attachmentSlots) ? item.attachmentSlots : [];
+    const groupedSlots = getGroupedAttachmentSlots(rawSlots);
+    const matchedMags = getCompatibleMagazinesForWeapon(item);
 
-    const groupedSlots = getGroupedAttachmentSlots(item.attachmentSlots);
-    if (groupedSlots.length === 0) {
+    if (groupedSlots.length === 0 && matchedMags.length === 0) {
         return null;
     }
 
@@ -601,6 +623,186 @@ function createAttachmentSlotsSection(item) {
 
         btn.onclick = () => {
             showSlotGroupAttachments(item, group.name, group.slotKeys);
+        };
+
+        slotsGrid.appendChild(btn);
+    });
+
+    if (matchedMags.length > 0) {
+        const magBtn = document.createElement('button');
+        magBtn.type = 'button';
+        magBtn.className = 'attachment-slot-btn weapon-mag-btn';
+
+        const magLabel = document.createElement('span');
+        magLabel.className = 'slot-label';
+        magLabel.textContent = '탄창';
+
+        const magCount = document.createElement('span');
+        magCount.className = 'slot-count';
+        magCount.textContent = `(${matchedMags.length})`;
+
+        magBtn.appendChild(magLabel);
+        magBtn.appendChild(magCount);
+
+        magBtn.onclick = () => {
+            pushNavState(captureCurrentView());
+            const fullTitle = item.name ? `${item.name} > 탄창` : '탄창';
+            showGridView(fullTitle, matchedMags, 'weapon_magazines_' + item.id, 'attachment');
+        };
+
+        slotsGrid.appendChild(magBtn);
+    }
+
+    container.appendChild(slotsGrid);
+    return container;
+}
+
+// 특정 총기에서 사용 가능한 탄창 아이템 목록 검색
+function getCompatibleMagazinesForWeapon(weapon) {
+    if (!weapon || !Array.isArray(weapon.magazines) || weapon.magazines.length === 0) {
+        return [];
+    }
+    const magIdSet = new Set(weapon.magazines);
+    const allItems = getAllDatabaseItems();
+    const matchedMags = [];
+    const seen = new Set();
+
+    for (const item of allItems) {
+        if (!item || item.id === weapon.id) continue;
+        if (magIdSet.has(item.id)) {
+            if (!seen.has(item.id)) {
+                seen.add(item.id);
+                matchedMags.push(item);
+            }
+        }
+    }
+    return matchedMags;
+}
+
+// 특정 아이템을 장착할 수 있는 상위 부모 아이템 목록 필터링 (슬롯 및 탄창 양방향 지원)
+function getCompatibleParentItems(targetItem) {
+    if (!targetItem) return [];
+    const allItems = getAllDatabaseItems();
+    const parentMatches = [];
+    const seen = new Set();
+
+    // 1. 슬롯 기반 매칭 (inventorySlots ↔ attachmentSlots)
+    if (Array.isArray(targetItem.inventorySlots) && targetItem.inventorySlots.length > 0) {
+        const targetSlotsSet = new Set(targetItem.inventorySlots);
+        for (const item of allItems) {
+            if (!item || item.id === targetItem.id) continue;
+            if (Array.isArray(item.attachmentSlots) && item.attachmentSlots.some(s => targetSlotsSet.has(s))) {
+                if (!seen.has(item.id)) {
+                    seen.add(item.id);
+                    parentMatches.push(item);
+                }
+            }
+        }
+    }
+
+    // 2. 탄창 전용 매칭 (targetItem.id ↔ weapon.magazines)
+    if (typeof weaponsData !== 'undefined' && weaponsData) {
+        const allWeapons = Object.values(weaponsData).flat();
+        for (const weapon of allWeapons) {
+            if (!weapon || weapon.id === targetItem.id) continue;
+            if (Array.isArray(weapon.magazines) && weapon.magazines.includes(targetItem.id)) {
+                if (!seen.has(weapon.id)) {
+                    seen.add(weapon.id);
+                    parentMatches.push(weapon);
+                }
+            }
+        }
+    }
+
+    return parentMatches;
+}
+
+// 상위 부모 아이템들을 카테고리별로 그룹화 및 정렬
+function getGroupedParentCategories(targetItem) {
+    const parentItems = getCompatibleParentItems(targetItem);
+    if (parentItems.length === 0) return [];
+
+    const categoryMap = new Map();
+    for (const item of parentItems) {
+        const itemInfo = getItemTypeAndCategory(item);
+        const catName = item.category || itemInfo.category || '기타';
+        if (!categoryMap.has(catName)) {
+            categoryMap.set(catName, {
+                category: catName,
+                panelType: itemInfo.panelType,
+                items: []
+            });
+        }
+        categoryMap.get(catName).items.push(item);
+    }
+
+    // 패널 우선순위 (무기 -> 기어 -> 부착물)
+    const panelPriority = { 'weapon': 1, 'gear': 2, 'attachment': 3 };
+    const groups = Array.from(categoryMap.values());
+    groups.sort((a, b) => {
+        const pA = panelPriority[a.panelType] || 99;
+        const pB = panelPriority[b.panelType] || 99;
+        if (pA !== pB) return pA - pB;
+        return a.category.localeCompare(b.category, 'ko');
+    });
+
+    return groups;
+}
+
+// 상위 카테고리 클릭 시 해당 아이템들을 그리드로 표시
+function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
+    pushNavState(captureCurrentView());
+    const sourceName = sourceItem && sourceItem.name ? sourceItem.name : '';
+    const fullTitle = sourceName ? `${sourceName} > ${categoryName}` : categoryName;
+    showGridView(fullTitle, items, 'parent_cat_' + categoryName, panelType || 'weapon');
+}
+
+// 이 아이템을 장착할 수 있는 아이템 (상위 아이템) 슬롯 UI 섹션 생성
+function createParentCompatibleSection(item) {
+    if (!item) return null;
+
+    const groupedCategories = getGroupedParentCategories(item);
+    if (groupedCategories.length === 0) {
+        return null;
+    }
+
+    const container = document.createElement('div');
+    container.className = 'attachment-slots-container parent-compatible-container';
+
+    const header = document.createElement('div');
+    header.className = 'weapon-stats-header';
+    const title = document.createElement('div');
+    title.className = 'weapon-stats-title';
+    title.textContent = '- 이 아이템을 장착할 수 있는 아이템 -';
+    header.appendChild(title);
+    container.appendChild(header);
+
+    const slotsGrid = document.createElement('div');
+    slotsGrid.className = 'attachment-slots-grid';
+
+    groupedCategories.forEach(group => {
+        const count = group.items.length;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'attachment-slot-btn parent-slot-btn';
+        if (count === 0) {
+            btn.classList.add('empty-slot');
+        }
+
+        const slotLabel = document.createElement('span');
+        slotLabel.className = 'slot-label';
+        slotLabel.textContent = group.category;
+
+        const slotCount = document.createElement('span');
+        slotCount.className = 'slot-count';
+        slotCount.textContent = `(${count})`;
+
+        btn.appendChild(slotLabel);
+        btn.appendChild(slotCount);
+
+        btn.onclick = () => {
+            showParentCategoryItems(item, group.category, group.items, group.panelType);
         };
 
         slotsGrid.appendChild(btn);
@@ -738,7 +940,6 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     weaponDetail.innerHTML = '';
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
@@ -829,8 +1030,15 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
         slotsParent.appendChild(slotsSection);
     }
+
+    const parentSection = createParentCompatibleSection(attachment);
+    if (parentSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(parentSection);
+    }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 
@@ -872,26 +1080,119 @@ function showDetailContainer() {
     return weaponDetail;
 }
 
-function createBackToGridButton() {
-    const wrap = document.createElement('div');
-    wrap.className = 'back-to-grid-wrap';
-
-    const btnPrev = document.createElement('button');
-    btnPrev.type = 'button';
-    btnPrev.className = 'back-to-grid-btn';
-    btnPrev.textContent = '← 이전으로';
-    btnPrev.onclick = popNavState;
-    wrap.appendChild(btnPrev);
-
-    if (navStack.length > 0) {
-        const btnRoot = document.createElement('button');
-        btnRoot.type = 'button';
-        btnRoot.className = 'back-to-grid-btn root-grid-btn';
-        btnRoot.textContent = '목록으로';
-        btnRoot.onclick = resetToRootGrid;
-        wrap.appendChild(btnRoot);
+// 플로팅 네비게이션 독 갱신 (이전으로 / 목록으로 / 맨 위로)
+function updateFloatingNav() {
+    let dock = document.getElementById('floatingNav');
+    if (!dock) {
+        dock = document.createElement('nav');
+        dock.id = 'floatingNav';
+        dock.className = 'floating-nav-dock';
+        dock.setAttribute('aria-label', '화면 이동');
+        document.body.appendChild(dock);
     }
 
+    dock.innerHTML = '';
+
+    const isDetailView = !!currentWeapon;
+    const isSearchGrid = currentGridCategoryKey === 'search' || (lastGridState && lastGridState.categoryKey === 'search');
+    const hasNavStack = navStack.length > 0;
+    const hasPreSearch = !!preSearchView;
+
+    const showPrev = isDetailView || hasNavStack || isSearchGrid || hasPreSearch;
+    const showRoot = hasNavStack;
+    
+    // 현재 스크롤 위치 (맨 위로 버튼 노출 판단용)
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    const isScrolled = scrollY > 120;
+
+    // 네비게이션 액션도 없고 스크롤도 안 된 경우 숨김
+    if (!showPrev && !showRoot && !isScrolled) {
+        dock.classList.remove('visible');
+        return;
+    }
+
+    let hasAnyBtn = false;
+
+    // 1. "← 이전으로" 버튼
+    if (showPrev) {
+        const btnPrev = document.createElement('button');
+        btnPrev.type = 'button';
+        btnPrev.className = 'floating-nav-btn primary';
+        btnPrev.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>이전으로</span>
+        `;
+        btnPrev.title = '이전 화면으로 돌아가기 (ESC)';
+        btnPrev.onclick = (e) => {
+            e.preventDefault();
+            popNavState();
+        };
+        dock.appendChild(btnPrev);
+        hasAnyBtn = true;
+    }
+
+    // 2. "목록으로" 버튼 (깊은 네비게이션 시 최상위 목록 복귀)
+    if (showRoot) {
+        const btnRoot = document.createElement('button');
+        btnRoot.type = 'button';
+        btnRoot.className = 'floating-nav-btn secondary';
+        btnRoot.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>목록으로</span>
+        `;
+        btnRoot.title = '최초 목록으로 돌아가기';
+        btnRoot.onclick = (e) => {
+            e.preventDefault();
+            resetToRootGrid();
+        };
+        dock.appendChild(btnRoot);
+        hasAnyBtn = true;
+    }
+
+    // 3. 구분선 및 "맨 위로" 버튼
+    if (hasAnyBtn || isScrolled) {
+        if (hasAnyBtn) {
+            const divider = document.createElement('div');
+            divider.className = 'floating-nav-divider';
+            dock.appendChild(divider);
+        }
+
+        const btnTop = document.createElement('button');
+        btnTop.type = 'button';
+        btnTop.className = 'floating-nav-btn floating-top-btn';
+        btnTop.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        `;
+        btnTop.title = '맨 위로 스크롤';
+        btnTop.onclick = (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        dock.appendChild(btnTop);
+        hasAnyBtn = true;
+    }
+
+    if (hasAnyBtn) {
+        dock.classList.add('visible');
+    } else {
+        dock.classList.remove('visible');
+    }
+}
+
+function createBackToGridButton() {
+    // 플로팅 독으로 대체됨 (레거시 코드 호환용 빈 요소)
+    const wrap = document.createElement('div');
+    wrap.className = 'back-to-grid-wrap';
     return wrap;
 }
 
@@ -912,10 +1213,10 @@ function filterGridItems(items, query) {
     const q = query.toLowerCase();
     return items.filter(item => {
         const nameMatch = item.name && item.name.toLowerCase().includes(q);
-        const catMatch = item.category && item.category.toLowerCase().includes(q);
-        const descMatch = item.description && item.description.toLowerCase().includes(q);
+        const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(q);
         const mfgMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(q);
-        return nameMatch || catMatch || descMatch || mfgMatch;
+        const catMatch = item.category && item.category.toLowerCase().includes(q);
+        return nameMatch || keywordMatch || mfgMatch || catMatch;
     });
 }
 
@@ -1073,34 +1374,6 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     weaponDetail.style.display = 'none';
     weaponDetail.innerHTML = '';
 
-    // 상단 이전/목록 버튼 영역 처리
-    let backWrap = gridView.querySelector('.grid-back-wrap');
-    if (!backWrap) {
-        backWrap = document.createElement('div');
-        backWrap.className = 'grid-back-wrap back-to-grid-wrap';
-        gridView.insertBefore(backWrap, gridView.firstChild);
-    }
-    backWrap.innerHTML = '';
-    if (navStack.length > 0) {
-        const btnPrev = document.createElement('button');
-        btnPrev.type = 'button';
-        btnPrev.className = 'back-to-grid-btn';
-        btnPrev.textContent = '← 이전으로';
-        btnPrev.onclick = popNavState;
-        backWrap.appendChild(btnPrev);
-
-        const btnRoot = document.createElement('button');
-        btnRoot.type = 'button';
-        btnRoot.className = 'back-to-grid-btn root-grid-btn';
-        btnRoot.textContent = '목록으로';
-        btnRoot.onclick = resetToRootGrid;
-        backWrap.appendChild(btnRoot);
-
-        backWrap.style.display = 'flex';
-    } else {
-        backWrap.style.display = 'none';
-    }
-
     const gridTitle = document.getElementById('gridTitle');
     const gridCount = document.getElementById('gridCount');
     if (gridTitle) gridTitle.textContent = title;
@@ -1109,9 +1382,11 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     const inlineSearchInput = document.getElementById('gridInlineSearch');
     const inlineClearBtn = document.getElementById('gridInlineSearchClear');
     if (inlineSearchInput) {
-        // placeholder 설정: ">" 가 있으면 하위 슬롯명 추출, 없으면 전체 제목 활용
+        // placeholder 설정: 검색 결과, ">" 하위 슬롯명 추출, 또는 전체 제목 활용
         let targetName = title;
-        if (title.includes('>')) {
+        if (categoryKey === 'search') {
+            targetName = '검색 결과';
+        } else if (title.includes('>')) {
             const parts = title.split('>');
             targetName = parts[parts.length - 1].trim();
         }
@@ -1144,6 +1419,7 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
         lastGridScrollY = 0;
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
+    updateFloatingNav();
 }
 
 // 그리드 카드 생성 (이미지 + 이름)
@@ -1666,7 +1942,6 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     // 무기 이름 (로고 포함)
     const nameContainer = document.createElement('div');
@@ -1969,6 +2244,18 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             detailCard.appendChild(slotsSection);
         }
     }
+
+    const parentSection = createParentCompatibleSection(weapon);
+    if (parentSection) {
+        const slotsParent = weapon.description
+            ? detailCard.querySelector('.weapon-detail-description-container')
+            : detailCard;
+        if (slotsParent) {
+            slotsParent.appendChild(parentSection);
+        } else {
+            detailCard.appendChild(parentSection);
+        }
+    }
     
     // 관리자 모드일 경우 편집/삭제 버튼 표시
     if (isAdmin) {
@@ -1991,6 +2278,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 // 기어 상세 정보 표시
@@ -2013,7 +2301,6 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
 
     const detailCard = document.createElement('div');
     detailCard.className = 'weapon-detail-card';
-    detailCard.appendChild(createBackToGridButton());
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
@@ -2244,6 +2531,12 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
         slotsParent.appendChild(slotsSection);
     }
+
+    const parentSection = createParentCompatibleSection(gear);
+    if (parentSection) {
+        const slotsParent = detailCard.querySelector('.weapon-detail-description-container') || detailCard;
+        slotsParent.appendChild(parentSection);
+    }
     
     if (isAdmin) {
         const actions = document.createElement('div');
@@ -2265,6 +2558,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     }
     
     weaponDetail.appendChild(detailCard);
+    updateFloatingNav();
 }
 
 // 무기 상세 정보 초기화
@@ -2294,12 +2588,18 @@ function clearDetail() {
     navStack = [];
     lastGridScrollY = 0;
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    updateFloatingNav();
 }
 
 
 // 이벤트 리스너 설정
 function setupEventListeners() {
     initGridInlineSearch();
+
+    // 스크롤 시 플로팅 네비게이션 독 갱신 (맨 위로 버튼 등)
+    window.addEventListener('scroll', () => {
+        updateFloatingNav();
+    }, { passive: true });
 
     // 패널 전환 버튼 (클릭 시 드롭다운 토글)
     document.querySelectorAll('.panel-btn').forEach(btn => {
@@ -2394,26 +2694,51 @@ function setupEventListeners() {
         });
     }
     
-    // ESC 키로 모든 모달 닫기
+    // ESC 키로 모든 모달 닫기 및 이전 화면 복귀
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeDropdown();
+            let closedSomething = false;
+
+            const dropdown = document.getElementById('categoryDropdown');
+            if (dropdown && dropdown.classList.contains('open')) {
+                closeDropdown();
+                closedSomething = true;
+            }
+
             const imageModal = document.getElementById('imageModal');
             if (imageModal) {
                 const computedStyle = window.getComputedStyle(imageModal);
                 if (computedStyle.display !== 'none') {
                     imageModal.style.setProperty('display', 'none', 'important');
+                    closedSomething = true;
                 }
             }
+
             // 다른 모달들도 닫기
             document.querySelectorAll('.modal').forEach(modal => {
                 if (modal.id !== 'imageModal') {
                     const computedStyle = window.getComputedStyle(modal);
                     if (computedStyle.display !== 'none') {
                         modal.style.display = 'none';
+                        closedSomething = true;
                     }
                 }
             });
+
+            if (closedSomething) return;
+
+            // 텍스트 인풋 포커스 해제
+            if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+                document.activeElement.blur();
+                return;
+            }
+
+            // 상세 화면이나 검색 그리드 등에서 이전 화면으로 복귀
+            const isDetailView = !!currentWeapon;
+            const isSearchGrid = currentGridCategoryKey === 'search' || (lastGridState && lastGridState.categoryKey === 'search');
+            if (isDetailView || navStack.length > 0 || isSearchGrid || preSearchView) {
+                popNavState();
+            }
         }
     });
 }
@@ -2855,7 +3180,7 @@ function openCompareModal() {
     modal.style.display = 'block';
 }
 
-// 무기/기어 검색 함수 (검색 결과를 그리드로 표시)
+// 무기/부착물/기어 전체 검색 함수 (검색 결과를 그리드로 표시)
 function searchItems(query) {
     const trimmed = (query || '').trim();
     if (!trimmed) {
@@ -2864,6 +3189,7 @@ function searchItems(query) {
             const view = preSearchView;
             preSearchView = null;
             restoreView(view);
+            updateFloatingNav();
         }
         return;
     }
@@ -2874,21 +3200,38 @@ function searchItems(query) {
     }
 
     const lowerQuery = trimmed.toLowerCase();
-    const dataSource = currentPanel === 'gear' ? gearData : (currentPanel === 'attachment' ? attachmentData : weaponsData);
-
     const matches = [];
-    Object.keys(dataSource).forEach(categoryKey => {
-        dataSource[categoryKey].forEach(item => {
-            const nameMatch = item.name.toLowerCase().includes(lowerQuery);
-            const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(lowerQuery);
-            const manufacturerMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(lowerQuery);
-            if (nameMatch || keywordMatch || manufacturerMatch) {
-                matches.push(item);
+    const seenIds = new Set();
+
+    const dataSources = [
+        typeof weaponsData !== 'undefined' ? weaponsData : {},
+        typeof attachmentData !== 'undefined' ? attachmentData : {},
+        typeof gearData !== 'undefined' ? gearData : {}
+    ];
+
+    dataSources.forEach(source => {
+        Object.keys(source).forEach(categoryKey => {
+            const list = source[categoryKey];
+            if (Array.isArray(list)) {
+                list.forEach(item => {
+                    if (!item) return;
+                    if (item.id) {
+                        if (seenIds.has(item.id)) return;
+                        seenIds.add(item.id);
+                    }
+                    const nameMatch = item.name && item.name.toLowerCase().includes(lowerQuery);
+                    const keywordMatch = item.keyword && item.keyword.toLowerCase().includes(lowerQuery);
+                    const manufacturerMatch = item.manufacturer && item.manufacturer.toLowerCase().includes(lowerQuery);
+                    const categoryMatch = item.category && item.category.toLowerCase().includes(lowerQuery);
+                    if (nameMatch || keywordMatch || manufacturerMatch || categoryMatch) {
+                        matches.push(item);
+                    }
+                });
             }
         });
     });
 
     closeDropdown();
-    showGridView(`"${trimmed}" 검색 결과`, matches, 'search', currentPanel);
+    showGridView(`"${trimmed}" 검색 결과`, matches, 'search', 'search');
 }
 

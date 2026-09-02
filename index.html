@@ -37,7 +37,7 @@
         <div class="search-container">
             <div class="search-input-wrapper">
                 <img src="assets/search.png" alt="검색" class="search-icon">
-                <input type="text" id="itemSearch" class="weapon-search-input" placeholder="검색...">
+                <input type="text" id="itemSearch" class="weapon-search-input" placeholder="전체 검색...">
             </div>
         </div>
         <div class="admin-section">
@@ -91,8 +91,10 @@
         </div>
         <div class="weapon-detail" id="weaponDetail">
             <p class="empty-message">상단 메뉴에서 카테고리를 선택하고 항목을 클릭하여 정보를 확인하세요.</p>
-        </div>
     </main>
+
+    <!-- 플로팅 네비게이션 독 (이전으로 / 목록으로 / 맨 위로) -->
+    <nav id="floatingNav" class="floating-nav-dock" aria-label="화면 이동"></nav>
 
     <!-- 관리자 로그인 모달 -->
     <div id="loginModal" class="modal">

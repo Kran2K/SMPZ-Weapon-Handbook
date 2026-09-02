@@ -533,6 +533,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 inv_slots = props.get('inventorySlot')
                 item_info = props.get('itemInfo')
                 att_slots = props.get('attachments')
+                magazines = props.get('magazines')
+                chamberable = props.get('chamberableFrom')
 
                 if inv_slots:
                     item_obj['inventorySlots'] = inv_slots
@@ -541,6 +543,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                     item_obj['itemInfo'] = item_info
                 if att_slots:
                     item_obj['attachmentSlots'] = att_slots
+                if magazines:
+                    item_obj['magazines'] = magazines
+                if chamberable:
+                    item_obj['chamberableFrom'] = chamberable
 
                 # 5. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
