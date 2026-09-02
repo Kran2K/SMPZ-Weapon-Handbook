@@ -453,13 +453,93 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return "", 'empty'
 
         clean_raw = raw_desc.replace('\r\n', ' ').replace('\n', ' ').strip()
-        if clean_raw in google_cache:
-            return google_cache[clean_raw], 'google_translate'
-
         # Live Google Translate API fallback
         translated = google_translate(clean_raw)
         google_cache[clean_raw] = translated
         return translated, 'google_translate'
+
+    # Helper: Extract C++ OpticsInfo Magnification
+    def get_class_optics_info_body(cname):
+        curr = cname
+        visited = set()
+        while curr and curr not in visited and curr in all_classes:
+            visited.add(curr)
+            body = all_classes[curr].get('body', '')
+            if 'class OpticsInfo' in body:
+                m = re.search(r'\bclass\s+OpticsInfo\b[^{]*\{', body)
+                if m:
+                    start_idx = m.end() - 1
+                    depth = 1
+                    i = start_idx + 1
+                    n = len(body)
+                    while i < n and depth > 0:
+                        if body[i] == '{': depth += 1
+                        elif body[i] == '}': depth -= 1
+                        i += 1
+                    return body[start_idx+1:i-1]
+            curr = all_classes[curr].get('parent')
+        return None
+
+    def eval_safe_expr(expr_str):
+        cleaned = re.sub(r'[^0-9+\-*/.()]', '', expr_str)
+        if not cleaned: return None
+        try:
+            return eval(cleaned, {"__builtins__": None}, {})
+        except:
+            return None
+
+    def extract_optic_magnification(item_id):
+        oi_body = get_class_optics_info_body(item_id)
+        if not oi_body:
+            return None
+        
+        # 1. discretefov[]
+        dfov_m = re.search(r'discretefov\[\]\s*=\s*\{([^}]+)\};', oi_body, re.IGNORECASE)
+        if dfov_m:
+            raw_list = [x.strip().strip('"\'') for x in dfov_m.group(1).split(',')]
+            zooms = []
+            for r in raw_list:
+                if '/' in r:
+                    parts = r.split('/')
+                    val = eval_safe_expr(parts[1])
+                    if val is not None:
+                        zooms.append(val)
+                else:
+                    val = eval_safe_expr(r)
+                    if val is not None and val > 0:
+                        mag = 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
+                        zooms.append(mag)
+            if zooms:
+                min_z = min(zooms)
+                max_z = max(zooms)
+                min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
+                max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
+                return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
+        
+        # 2. opticsZoomMin / Max
+        min_m = re.search(r'opticsZoomMin\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+        max_m = re.search(r'opticsZoomMax\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+        if min_m and max_m:
+            min_raw = min_m.group(1).strip()
+            max_raw = max_m.group(1).strip()
+            def calc_mag(s):
+                if '/' in s:
+                    parts = s.split('/')
+                    val = eval_safe_expr(parts[1])
+                    return val if val is not None else 1.0
+                val = eval_safe_expr(s)
+                if val is not None and val > 0:
+                    return 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
+                return 1.0
+            mag1 = calc_mag(min_raw)
+            mag2 = calc_mag(max_raw)
+            min_z = min(mag1, mag2)
+            max_z = max(mag1, mag2)
+            min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
+            max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
+            return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
+            
+        return '1x'
 
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
@@ -496,7 +576,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'cargo_items': 0,
         'models_linked': 0,
         'slots_linked': 0,
-        'protection_items': 0
+        'protection_items': 0,
+        'optics_magnification': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -508,6 +589,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_name = item.get('name', '')
                 existing_desc = item.get('description', '')
                 item_obj = dict(item)
+                item_obj.pop('modesKo', None)
+                item_obj.pop('protectionAreasKo', None)
                 props = get_inherited_props(item_id)
 
                 # 1. 2D Image Asset mapping
@@ -570,14 +653,36 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
-                # 5. Protection Areas metadata (방호 부위)
+                # 5. Protection Areas metadata (방호 부위 - C++ 원본 데이터만 저장)
                 prot_areas = props.get('ProtectionAreas')
                 if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
                     item_obj['protectionAreas'] = prot_areas
-                    item_obj['protectionAreasKo'] = [PROTECTION_AREAS_MAP.get(a, a) for a in prot_areas]
                     stats_summary['protection_items'] += 1
 
-                # 6. Description resolution
+                # 6. Weapon Fire Modes metadata (단발/점사/연사 발사 모드 - C++ 원본 데이터만 저장)
+                modes_arr = props.get('modes')
+                if modes_arr and isinstance(modes_arr, list) and len(modes_arr) > 0:
+                    item_obj['modes'] = modes_arr
+
+                # 7. Tactical Flashlight Light Distance (조사 거리 stats)
+                if 'Flashlight' in item_id or item_obj.get('category') == '전술 플래시':
+                    desc_short = str(props.get('descriptionShort', ''))
+                    m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.IGNORECASE)
+                    if m_dist:
+                        item_obj.setdefault('stats', {})['lightDistance'] = f"{m_dist.group(1)}m"
+                    elif 'M600' in item_id:
+                        item_obj.setdefault('stats', {})['lightDistance'] = "100m"
+                    elif 'XHP35' in item_id:
+                        item_obj.setdefault('stats', {})['lightDistance'] = "300m"
+
+                # 8. Optics Magnification (광학 조준경 소스코드 C++ 필드 추출 배율)
+                if item_obj.get('category') == '광학 조준경' or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
+                    mag = extract_optic_magnification(item_id)
+                    if mag:
+                        item_obj.setdefault('stats', {})['magnification'] = mag
+                        stats_summary['optics_magnification'] += 1
+
+                # 9. Description resolution (스트링테이블/C++ 본래 설명 보존)
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
@@ -595,6 +700,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
+    print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 
