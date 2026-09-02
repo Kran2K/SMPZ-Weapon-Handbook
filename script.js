@@ -1251,7 +1251,7 @@ const DataParsers = {
         return num; // g 단위
     },
     capacity: (item) => {
-        const val = item?.stats?.capacity || item?.capacity || item?.magCapacity;
+        const val = item?.stats?.capacity;
         if (!val) return null;
         const num = parseInt(String(val).replace(/[^0-9]/g, ''), 10);
         return isNaN(num) ? null : num;
@@ -1288,23 +1288,17 @@ const DataParsers = {
     },
     // 전술 플래시 조사 거리 (m 단위)
     lightDistance: (item) => {
-        if (item?.stats?.lightDistance) {
-            const num = parseFloat(String(item.stats.lightDistance).replace(/[^0-9.]/g, ''));
-            if (!isNaN(num)) return num;
-        }
-        const desc = `${item?.description || ''} ${item?.descriptionShort || ''}`;
-        const m = desc.match(/(?:빛\s*거리|distance)\s*[:：]?\s*(\d+)\s*m/i);
-        if (m) {
-            return parseInt(m[1], 10);
-        }
-        return null;
+        const val = item?.stats?.lightDistance;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
     },
     // 총기 기본 반동 (퍼센트 없는 수치)
     weaponRecoil: (item) => {
         const val = item?.stats?.recoil;
         if (val === undefined || val === null || val === '') return null;
         const str = String(val).trim();
-        if (str.includes('%')) return null; // 부착물 퍼센트 제외
+        if (str.includes('%')) return null;
         const num = parseFloat(str.replace(/[^0-9.]/g, ''));
         return isNaN(num) ? null : num;
     },
@@ -1360,34 +1354,20 @@ const DataParsers = {
         return isNaN(num) ? null : num;
     },
     itemSlots: (item) => {
-        if (item?.itemSlots) return Number(item.itemSlots);
-        if (item?.itemSize) {
-            const [w, h] = item.itemSize.split('x').map(Number);
-            if (w && h) return w * h;
-        }
-        return null;
+        return (item?.itemSlots !== undefined && item?.itemSlots !== null) ? Number(item.itemSlots) : null;
     },
     cargoSlots: (item) => {
-        if (item?.cargoSlots) return Number(item.cargoSlots);
-        if (item?.cargoSize) {
-            const [w, h] = item.cargoSize.split('x').map(Number);
-            if (w && h) return w * h;
-        }
-        return null;
+        return (item?.cargoSlots !== undefined && item?.cargoSlots !== null) ? Number(item.cargoSlots) : null;
     },
     magnification: (item) => {
-        if (!item) return null;
-        const isOptic = item.category === '광학 조준경' || Boolean(item?.stats?.magnification);
-        if (!isOptic) return null;
-        const mag = item?.stats?.magnification || (typeof getOpticMagnification === 'function' ? getOpticMagnification(item) : null);
+        const mag = item?.stats?.magnification;
         if (!mag) return null;
         const m = /(\d+(?:\.\d+)?)/g;
-        const matches = [...mag.matchAll(m)].map(x => parseFloat(x[0]));
+        const matches = [...String(mag).matchAll(m)].map(x => parseFloat(x[0]));
         return matches.length > 0 ? Math.max(...matches) : null;
     },
     has3dModel: (item) => {
-        if (!item) return false;
-        return Boolean(item.model || item.model3d);
+        return Boolean(item?.model || item?.model3d);
     }
 };
 
@@ -1568,60 +1548,16 @@ const SORT_METRICS = {
     }
 };
 
-// 탄약 식별 및 정규화 헬퍼 (구경 정밀 매핑 - 폴백용)
-function normalizeAmmoCaliber(ammoName) {
-    if (!ammoName) return null;
-    const raw = String(ammoName).toLowerCase();
-    if (raw.includes('556x45') || raw.includes('5_56x45') || raw.includes('5.56x45')) return '5.56x45mm';
-    if (raw.includes('300blk') || raw.includes('300aac') || raw.includes('300blackout') || raw.includes('300_whisper') || raw.includes('300_vmax') || raw.includes('300_bcp')) return '.300 BLK';
-    if (raw.includes('545x39') || raw.includes('5_45x39') || raw.includes('5.45x39')) return '5.45x39mm';
-    if (raw.includes('762x39') || raw.includes('7_62x39') || raw.includes('7.62x39')) return '7.62x39mm';
-    if (raw.includes('366tkm') || raw.includes('.366')) return '.366 TKM';
-    if (raw.includes('762x51') || raw.includes('7_62x51') || raw.includes('7.62x51') || raw.includes('308win') || raw.includes('.308')) return '7.62x51mm';
-    if (raw.includes('68x51') || raw.includes('6_8x51') || raw.includes('6.8x51') || raw.includes('277fury') || raw.includes('spear')) return '6.8x51mm';
-    if (raw.includes('762x54') || raw.includes('7_62x54') || raw.includes('7.62x54')) return '7.62x54mmR';
-    if (raw.includes('9x19')) return '9x19mm';
-    if (raw.includes('9x39')) return '9x39mm';
-    if (raw.includes('9x18')) return '9x18mm';
-    if (raw.includes('9x21')) return '9x21mm';
-    if (raw.includes('45acp') || raw.includes('45_acp') || raw.includes('.45')) return '.45 ACP';
-    if (raw.includes('57x28') || raw.includes('5.7x28')) return '5.7x28mm';
-    if (raw.includes('46x30') || raw.includes('4.6x30')) return '4.6x30mm';
-    if (raw.includes('12ga') || raw.includes('12gauge') || raw.includes('12/70')) return '12 Gauge';
-    if (raw.includes('50bmg') || raw.includes('.50')) return '.50 BMG';
-    if (raw.includes('338') || raw.includes('lapua')) return '.338 Lapua';
-    if (raw.includes('300win')) return '.300 Win';
-    if (raw.includes('762x25')) return '7.62x25mm';
-    if (raw.includes('22lr')) return '.22 LR';
-    if (raw.includes('357')) return '.357 Magnum';
-    if (raw.includes('50ae')) return '.50 AE';
-    if (raw.includes('408ct') || raw.includes('m200')) return '.408 CheyTac';
-    return null;
-}
-
-// 아이템이 지원/호환하는 모든 탄종 목록 추출 (data.js에 빌드된 calibers 우선 참조)
+// 아이템이 지원/호환하는 모든 탄종 목록 추출 (data.js의 calibers 필드 직결)
 function getItemCalibers(item) {
-    if (!item) return [];
-
-    // 1. data.js에 정적으로 저장된 calibers 배열 직결 (단일 진실 공급원)
-    if (item.calibers && Array.isArray(item.calibers) && item.calibers.length > 0) {
-        return item.calibers;
-    }
-
-    // 2. 총기 chamberableFrom 배열 파싱 (폴백 지원)
-    if (item.chamberableFrom && Array.isArray(item.chamberableFrom) && item.chamberableFrom.length > 0) {
-        const cals = new Set(item.chamberableFrom.map(normalizeAmmoCaliber).filter(Boolean));
-        if (cals.size > 0) return Array.from(cals);
-    }
-
-    return [];
+    if (!item?.calibers || !Array.isArray(item.calibers)) return [];
+    return item.calibers;
 }
 
 // 단일/대표 탄종 문자열 반환 (UI 표시용)
 function getItemCaliber(item) {
     const cals = getItemCalibers(item);
-    if (cals.length === 0) return null;
-    return cals.join(', ');
+    return cals.length > 0 ? cals.join(', ') : null;
 }
 
 // 무기 탄종 식별 헬퍼 (하위 호환 유지)
@@ -1629,18 +1565,9 @@ function getWeaponCaliber(item) {
     return getItemCaliber(item);
 }
 
-// 광학 조준경 배율 파서 (C++ 소스코드 stats.magnification 우선 참조)
+// 광학 조준경 배율 추출 (data.js의 stats.magnification 직결)
 function getOpticMagnification(item) {
-    if (!item) return null;
-    if (item.stats?.magnification) {
-        return item.stats.magnification;
-    }
-    const isOptic = item.category === '광학 조준경' || /Optic|Scope|Sight|조준경/i.test(item.id || '');
-    const name = item.name || '';
-    const m = /(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?x(?:\/\d+x)?|\d+(?:\.\d+)?x)/i.exec(name);
-    if (m) return m[1].toLowerCase();
-    if (isOptic) return '1x';
-    return null;
+    return item?.stats?.magnification || null;
 }
 
 // 아이템 카드에 항상 표시될 핵심 대표 스펙 추출 (정렬 기준값 동적 포함 및 하이라이트 지원)
@@ -1650,7 +1577,7 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
     const cat = item.category || categoryKey || '';
     const pType = panelType || currentPanel;
 
-    const isWeapon = pType === 'weapon' || !!item.modes || (item.chamberableFrom && item.chamberableFrom.length > 0) || (item.stats && item.stats.rpm);
+    const isWeapon = pType === 'weapon' || Boolean(weaponsData[cat] || item.modes);
 
     // 1. 무기 (사용 탄종 - 탄종별 1칸씩 분리 표시)
     if (isWeapon) {
@@ -2791,8 +2718,8 @@ function appendItemSpecRows(statsList, item) {
     if (!item || !statsList) return;
 
     // 1. 총기 사용 탄종 또는 탄창 삽탄가능 탄종 (탄종별 1칸씩 칩으로 분리 표시)
-    const isWeapon = !!item.modes || (item.chamberableFrom && item.chamberableFrom.length > 0) || (item.stats && item.stats.rpm);
-    const isMag = item.category === '탄창' || (item.stats?.capacity && !isWeapon);
+    const isMag = item.category === '탄창';
+    const isWeapon = !isMag && Boolean(weaponsData[item.category] || currentPanel === 'weapon' || item.modes);
 
     if (isWeapon || isMag) {
         const calibers = getItemCalibers(item);
