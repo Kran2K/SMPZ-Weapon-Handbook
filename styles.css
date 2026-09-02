@@ -282,6 +282,145 @@ body {
     align-items: center;
 }
 
+.grid-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.grid-sort-box {
+    display: flex;
+    align-items: center;
+    background: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0 8px;
+    transition: all 0.2s ease;
+}
+
+.grid-sort-box:focus-within,
+.grid-sort-box:hover {
+    border-color: #888;
+    background: #222;
+}
+
+.grid-sort-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 4px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.grid-sort-icon {
+    color: #888;
+}
+
+.grid-sort-select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 20px 6px 4px;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+}
+
+.grid-sort-select option,
+.grid-sort-select optgroup {
+    background: #1c1c1c;
+    color: #eee;
+}
+
+.grid-sort-select optgroup {
+    color: #888;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.grid-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+    padding: 6px 0;
+    overflow-x: auto;
+}
+
+.grid-filter-chips {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.grid-filter-chip {
+    background: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    color: #aaa;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.grid-filter-chip:hover {
+    background: #282828;
+    color: #fff;
+    border-color: #555;
+}
+
+.grid-filter-chip.active {
+    background: #ffffff;
+    color: #121212;
+    border-color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.grid-filter-reset-btn {
+    background: transparent;
+    border: 1px dashed #555;
+    color: #888;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.grid-filter-reset-btn:hover {
+    color: #ff5555;
+    border-color: #ff5555;
+    background: rgba(255, 85, 85, 0.1);
+}
+
 .grid-search-box {
     position: relative;
     display: flex;
@@ -370,6 +509,7 @@ body {
 }
 
 .grid-card-image {
+    position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
     background: #0a0a0a;
@@ -384,6 +524,31 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.grid-card-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+}
+
+.grid-card-badge.badge-model {
+    left: 6px;
+    right: auto;
+    background: rgba(30, 80, 200, 0.85);
+    border-color: rgba(100, 160, 255, 0.4);
 }
 
 .grid-card-placeholder {

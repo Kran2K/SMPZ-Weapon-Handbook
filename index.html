@@ -77,15 +77,36 @@
                     <span class="grid-count" id="gridCount"></span>
                 </div>
                 <div class="grid-header-right" id="gridHeaderRight">
-                    <div class="grid-search-box" id="gridSearchBox">
-                        <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="text" id="gridInlineSearch" class="grid-inline-search-input" placeholder="현재 목록에서 검색...">
-                        <button type="button" id="gridInlineSearchClear" class="grid-search-clear-btn" style="display: none;" title="검색어 지우기">&times;</button>
+                    <div class="grid-controls-row">
+                        <div class="grid-sort-box">
+                            <label for="gridSortSelect" class="grid-sort-label">
+                                <svg class="grid-sort-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6h18M6 12h12m-9 6h6"/>
+                                </svg>
+                                <span>정렬:</span>
+                            </label>
+                            <select id="gridSortSelect" class="grid-sort-select" aria-label="아이템 정렬"></select>
+                        </div>
+                        <div class="grid-search-box" id="gridSearchBox">
+                            <svg class="grid-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="gridInlineSearch" class="grid-inline-search-input" placeholder="현재 목록에서 검색...">
+                            <button type="button" id="gridInlineSearchClear" class="grid-search-clear-btn" style="display: none;" title="검색어 지우기">&times;</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="grid-filter-bar" id="gridFilterBar">
+                <div class="grid-filter-chips" id="gridFilterChips"></div>
+                <button type="button" id="gridFilterResetBtn" class="grid-filter-reset-btn" style="display: none;" title="필터 초기화">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="1 4 1 10 7 10"></polyline>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                    </svg>
+                    <span>필터 초기화</span>
+                </button>
             </div>
             <div class="weapon-grid" id="itemGrid"></div>
         </div>

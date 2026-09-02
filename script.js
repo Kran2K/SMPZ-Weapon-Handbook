@@ -1206,8 +1206,356 @@ let preSearchView = null;
 let currentGridRawItems = [];
 let currentGridCategoryKey = null;
 let currentGridPanelType = null;
+let currentGridSortKey = 'name_asc';
+let currentGridActiveChips = new Set();
 
-// 그리드 아이템 필터링 헬퍼
+// ===========================================================================
+// 데이터 정규화 및 정렬/필터 엔진
+// ===========================================================================
+
+const ATTACHMENT_CATEGORY_SET = new Set([
+    '가스 블록', '개머리판', '광학 조준경', '권총 손잡이', '기계식 조준기',
+    '레이저 표적기', '리시버', '마운트', '방아쇠', '버퍼 튜브', '소염기 / 머즐',
+    '소음기', '양각대', '장전 손잡이', '전방 손잡이', '전술 플래시', '총열', '탄창', '해머', '핸드가드'
+]);
+
+function isAttachmentItem(item) {
+    if (!item) return false;
+    if (item.category && ATTACHMENT_CATEGORY_SET.has(item.category)) return true;
+    if (typeof attachmentData !== 'undefined' && item.category && attachmentData[item.category]) return true;
+    return false;
+}
+
+const DataParsers = {
+    weight: (item) => {
+        const val = item?.stats?.weight;
+        if (!val) return null;
+        const str = String(val).toLowerCase();
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        if (isNaN(num)) return null;
+        if (str.includes('kg')) return num * 1000;
+        return num; // g 단위
+    },
+    capacity: (item) => {
+        const val = item?.stats?.capacity || item?.capacity || item?.magCapacity;
+        if (!val) return null;
+        const num = parseInt(String(val).replace(/[^0-9]/g, ''), 10);
+        return isNaN(num) ? null : num;
+    },
+    // 부착물 반동 감소율 (-% 값, 없는 부착물은 0%)
+    recoilReduction: (item) => {
+        const val = item?.stats?.recoil;
+        if (val !== undefined && val !== null && val !== '') {
+            const str = String(val).trim();
+            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
+                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+                return isNaN(num) ? null : num;
+            }
+        }
+        if (isAttachmentItem(item)) {
+            return 0; // 보정치 없음 = 0%
+        }
+        return null;
+    },
+    // 부착물 흔들림 감소율 (음수일수록 우수, 없는 부착물은 0%, 양수는 페널티)
+    swayReduction: (item) => {
+        const val = item?.stats?.sway;
+        if (val !== undefined && val !== null && val !== '') {
+            const str = String(val).trim();
+            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
+                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+                return isNaN(num) ? null : num;
+            }
+        }
+        if (isAttachmentItem(item)) {
+            return 0; // 페널티 없음 = 0%
+        }
+        return null;
+    },
+    // 총기 기본 반동 (퍼센트 없는 수치)
+    weaponRecoil: (item) => {
+        const val = item?.stats?.recoil;
+        if (val === undefined || val === null || val === '') return null;
+        const str = String(val).trim();
+        if (str.includes('%')) return null; // 부착물 퍼센트 제외
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    // 총기 기본 흔들림 (퍼센트 없는 수치)
+    weaponSway: (item) => {
+        const val = item?.stats?.sway;
+        if (val === undefined || val === null || val === '') return null;
+        const str = String(val).trim();
+        if (str.includes('%')) return null;
+        const num = parseFloat(str.replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    accuracy: (item) => {
+        const val = item?.stats?.accuracy;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    velocity: (item) => {
+        const val = item?.stats?.velocity;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    rpm: (item) => {
+        const val = item?.stats?.rpm;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    ergonomics: (item) => {
+        const val = item?.stats?.ergonomics;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    bulletProtection: (item) => {
+        const val = item?.stats?.bulletDamageProtection;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    shockProtection: (item) => {
+        const val = item?.stats?.shockDamageProtection;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    hitpoints: (item) => {
+        const val = item?.stats?.hitpoints;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
+    itemSlots: (item) => {
+        if (item?.itemSlots) return Number(item.itemSlots);
+        if (item?.itemSize) {
+            const [w, h] = item.itemSize.split('x').map(Number);
+            if (w && h) return w * h;
+        }
+        return null;
+    },
+    cargoSlots: (item) => {
+        if (item?.cargoSlots) return Number(item.cargoSlots);
+        if (item?.cargoSize) {
+            const [w, h] = item.cargoSize.split('x').map(Number);
+            if (w && h) return w * h;
+        }
+        return null;
+    },
+    has3dModel: (item) => {
+        if (!item) return false;
+        return Boolean(item.model || item.model3d);
+    }
+};
+
+const SORT_CONFIGS = {
+    name_asc: {
+        id: 'name_asc',
+        label: '이름순 (A-Z / 가나다)',
+        group: 'common',
+        order: 'asc',
+        compare: (a, b) => (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' }),
+        badge: null
+    },
+    name_desc: {
+        id: 'name_desc',
+        label: '이름 역순 (Z-A)',
+        group: 'common',
+        order: 'desc',
+        compare: (a, b) => (b.name || '').localeCompare(a.name || '', 'ko', { numeric: true, sensitivity: 'base' }),
+        badge: null
+    },
+    weight_asc: {
+        id: 'weight_asc',
+        label: '무게 가벼운순',
+        group: 'common',
+        parser: DataParsers.weight,
+        order: 'asc',
+        badge: (item) => item?.stats?.weight ? `${item.stats.weight}` : null
+    },
+    weight_desc: {
+        id: 'weight_desc',
+        label: '무게 무거운순',
+        group: 'common',
+        parser: DataParsers.weight,
+        order: 'desc',
+        badge: (item) => item?.stats?.weight ? `${item.stats.weight}` : null
+    },
+    item_slots_asc: {
+        id: 'item_slots_asc',
+        label: '차지 칸수 적은순',
+        group: 'common',
+        parser: DataParsers.itemSlots,
+        order: 'asc',
+        badge: (item, val) => val ? `${val}칸` : null
+    },
+    item_slots_desc: {
+        id: 'item_slots_desc',
+        label: '차지 칸수 많은순',
+        group: 'common',
+        parser: DataParsers.itemSlots,
+        order: 'desc',
+        badge: (item, val) => val ? `${val}칸` : null
+    },
+
+    // 탄창 및 수납
+    capacity_desc: {
+        id: 'capacity_desc',
+        label: '탄창 용량 많은순 (발 수)',
+        group: 'mag_cargo',
+        parser: DataParsers.capacity,
+        order: 'desc',
+        badge: (item, val) => val ? `${val}발` : null
+    },
+    capacity_asc: {
+        id: 'capacity_asc',
+        label: '탄창 용량 적은순',
+        group: 'mag_cargo',
+        parser: DataParsers.capacity,
+        order: 'asc',
+        badge: (item, val) => val ? `${val}발` : null
+    },
+    cargo_desc: {
+        id: 'cargo_desc',
+        label: '수납 칸수 많은순 (가방/조끼)',
+        group: 'mag_cargo',
+        parser: DataParsers.cargoSlots,
+        order: 'desc',
+        badge: (item, val) => val ? `수납 ${val}칸` : null
+    },
+
+    // 부착물 성능
+    recoil_reduction_desc: {
+        id: 'recoil_reduction_desc',
+        label: '반동 감소율 큰순 (-% 효과)',
+        group: 'attachment',
+        parser: DataParsers.recoilReduction,
+        order: 'asc',
+        badge: (item) => item?.stats?.recoil ? `반동 ${item.stats.recoil}` : (isAttachmentItem(item) ? '반동 0%' : null)
+    },
+    sway_reduction_desc: {
+        id: 'sway_reduction_desc',
+        label: '흔들림 감소율 큰순 (-% 효과)',
+        group: 'attachment',
+        parser: DataParsers.swayReduction,
+        order: 'asc',
+        badge: (item) => item?.stats?.sway ? `흔들림 ${item.stats.sway}` : (isAttachmentItem(item) ? '흔들림 0%' : null)
+    },
+
+    // 방어구 성능
+    bullet_prot_desc: {
+        id: 'bullet_prot_desc',
+        label: '방탄 보호율 높은순 (%)',
+        group: 'gear',
+        parser: DataParsers.bulletProtection,
+        order: 'desc',
+        badge: (item, val) => val ? `방탄 ${val}%` : null
+    },
+    shock_prot_desc: {
+        id: 'shock_prot_desc',
+        label: '쇼크 보호율 높은순 (%)',
+        group: 'gear',
+        parser: DataParsers.shockProtection,
+        order: 'desc',
+        badge: (item, val) => val ? `쇼크 ${val}%` : null
+    },
+    hitpoints_desc: {
+        id: 'hitpoints_desc',
+        label: '방어구 내구도 높은순 (HP)',
+        group: 'gear',
+        parser: DataParsers.hitpoints,
+        order: 'desc',
+        badge: (item, val) => val ? `내구도 ${val}` : null
+    },
+
+    // 총기 성능
+    rpm_desc: {
+        id: 'rpm_desc',
+        label: '연사속도 빠른순 (RPM)',
+        group: 'weapon',
+        parser: DataParsers.rpm,
+        order: 'desc',
+        badge: (item, val) => val ? `${val} RPM` : null
+    },
+    accuracy_asc: {
+        id: 'accuracy_asc',
+        label: '명중률 우수순 (MOA 낮음)',
+        group: 'weapon',
+        parser: DataParsers.accuracy,
+        order: 'asc',
+        badge: (item) => item?.stats?.accuracy ? `${item.stats.accuracy}` : null
+    },
+    velocity_desc: {
+        id: 'velocity_desc',
+        label: '탄속 빠른순 (m/s)',
+        group: 'weapon',
+        parser: DataParsers.velocity,
+        order: 'desc',
+        badge: (item, val) => val ? `${val} m/s` : null
+    },
+    recoil_stat_asc: {
+        id: 'recoil_stat_asc',
+        label: '총기 반동 낮은순',
+        group: 'weapon',
+        parser: DataParsers.weaponRecoil,
+        order: 'asc',
+        badge: (item) => item?.stats?.recoil ? `반동 ${item.stats.recoil}` : null
+    },
+    ergo_desc: {
+        id: 'ergo_desc',
+        label: '인체공학 높은순 (에르고)',
+        group: 'weapon',
+        parser: DataParsers.ergonomics,
+        order: 'desc',
+        badge: (item, val) => val ? `에르고 ${val}` : null
+    }
+};
+
+const SORT_GROUPS = [
+    { key: 'common', label: '공통 기본' },
+    { key: 'mag_cargo', label: '탄창 & 수납' },
+    { key: 'attachment', label: '부착물 성능' },
+    { key: 'gear', label: '방어구 성능' },
+    { key: 'weapon', label: '총기 성능' }
+];
+
+const FILTER_CHIPS_CONFIG = [
+    {
+        id: 'has_3d',
+        label: '3D 모델',
+        panels: ['weapon', 'gear', 'attachment', 'all'],
+        filter: (item) => DataParsers.has3dModel(item)
+    },
+    {
+        id: 'is_armor',
+        label: '방탄 장비',
+        panels: ['gear', 'all'],
+        filter: (item) => (DataParsers.bulletProtection(item) || 0) > 0
+    },
+    {
+        id: 'is_storage',
+        label: '수납 장비',
+        panels: ['gear', 'all'],
+        filter: (item) => (DataParsers.cargoSlots(item) || 0) > 0
+    },
+    {
+        id: 'is_recoil_reduct',
+        label: '반동 감소',
+        panels: ['attachment', 'all'],
+        filter: (item) => {
+            const r = DataParsers.recoilReduction(item);
+            return r !== null && r < 0;
+        }
+    }
+];
+
+// 그리드 아이템 텍스트 필터링 헬퍼
 function filterGridItems(items, query) {
     if (!query) return items;
     const q = query.toLowerCase();
@@ -1220,6 +1568,216 @@ function filterGridItems(items, query) {
     });
 }
 
+// 아이템 목록 정렬 함수 (Nulls Last 원칙 적용)
+function sortGridItemList(items, sortKey) {
+    const config = SORT_CONFIGS[sortKey] || SORT_CONFIGS.name_asc;
+
+    return [...items].sort((a, b) => {
+        if (config.compare) {
+            return config.compare(a, b);
+        }
+
+        const valA = config.parser(a);
+        const valB = config.parser(b);
+
+        const aValid = valA !== null && valA !== undefined && !isNaN(valA);
+        const bValid = valB !== null && valB !== undefined && !isNaN(valB);
+
+        // 1. 둘 다 값이 없음 -> 2차 정렬 (이름순)
+        if (!aValid && !bValid) {
+            return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+        }
+        // 2. a만 없음 -> 뒤로
+        if (!aValid) return 1;
+        // 3. b만 없음 -> 뒤로
+        if (!bValid) return -1;
+
+        // 4. 값 비교
+        if (valA !== valB) {
+            return config.order === 'asc' ? valA - valB : valB - valA;
+        }
+
+        // 5. 값이 같은 경우 2차 정렬 (이름순)
+        return (a.name || '').localeCompare(b.name || '', 'ko', { numeric: true, sensitivity: 'base' });
+    });
+}
+
+// 특정 정렬 옵션에 대해 현재 목록의 아이템 중 유효한 값이 존재하는지 확인
+function hasAnyValidValueForSort(items, cfg) {
+    if (cfg.compare) return true; // 이름순은 항상 유효
+    if (!items || items.length === 0) return false;
+
+    // 부착물 반동/흔들림의 경우, 실제로 stats에 관련 보정치/페널티 데이터가 1개라도 존재하는지 확인
+    if (cfg.id === 'recoil_reduction_desc') {
+        return items.some(item => {
+            const str = String(item?.stats?.recoil || '').trim();
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+        });
+    }
+    if (cfg.id === 'sway_reduction_desc') {
+        return items.some(item => {
+            const str = String(item?.stats?.sway || '').trim();
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+        });
+    }
+
+    return items.some(item => {
+        if (!cfg.parser) return false;
+        const val = cfg.parser(item);
+        return val !== null && val !== undefined && !isNaN(val);
+    });
+}
+
+// 정렬 옵션 드롭다운 갱신 (null만 있는 정렬 카테고리는 표시하지 않음)
+function updateSortOptionsDropdown(panelType, categoryKey, preferredSortKey, items) {
+    const select = document.getElementById('gridSortSelect');
+    if (!select) return;
+
+    select.innerHTML = '';
+
+    const itemsToCheck = items || currentGridRawItems || [];
+
+    // 카테고리별 추천 기본 정렬 키 결정
+    let defaultKey = 'name_asc';
+    if (categoryKey === '탄창') {
+        defaultKey = 'capacity_desc';
+    } else if (['전방 손잡이', '권총 손잡이', '소음기', '소염기 / 머즐', '개머리판', '핸드가드', '양각대'].includes(categoryKey)) {
+        defaultKey = 'recoil_reduction_desc';
+    } else if (['헬멧', '전신 방탄복', '플레이트 캐리어', '마스크'].includes(categoryKey)) {
+        defaultKey = 'bullet_prot_desc';
+    } else if (categoryKey === '백팩') {
+        defaultKey = 'cargo_desc';
+    } else if (panelType === 'weapon' && categoryKey !== 'all') {
+        defaultKey = 'rpm_desc';
+    }
+
+    const availableOptionIds = new Set();
+
+    SORT_GROUPS.forEach(group => {
+        const groupConfigs = Object.values(SORT_CONFIGS).filter(c => c.group === group.key);
+        // 현재 아이템 목록에서 유효한 값이 1개라도 있는 설정만 필터링
+        const validConfigs = groupConfigs.filter(cfg => hasAnyValidValueForSort(itemsToCheck, cfg));
+        if (validConfigs.length === 0) return;
+
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = group.label;
+
+        validConfigs.forEach(cfg => {
+            availableOptionIds.add(cfg.id);
+            const option = document.createElement('option');
+            option.value = cfg.id;
+            option.textContent = cfg.label;
+            optgroup.appendChild(option);
+        });
+
+        select.appendChild(optgroup);
+    });
+
+    // 만약 타겟 정렬 키가 유효한 목록에 없다면 fallback
+    let targetSortKey = preferredSortKey || currentGridSortKey || defaultKey;
+    if (!availableOptionIds.has(targetSortKey)) {
+        targetSortKey = availableOptionIds.has(defaultKey) ? defaultKey : 'name_asc';
+    }
+
+    currentGridSortKey = targetSortKey;
+    select.value = currentGridSortKey;
+}
+
+// 빠른 필터 칩 바 갱신 (유효한 아이템이 있는 칩만 노출 및 이모티콘 제외)
+function updateFilterChipsBar(panelType, categoryKey, items) {
+    const container = document.getElementById('gridFilterChips');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const itemsToCheck = items || currentGridRawItems || [];
+    const effectivePanel = categoryKey === 'all' || categoryKey === 'search' ? 'all' : panelType;
+    const applicableChips = FILTER_CHIPS_CONFIG.filter(chip => chip.panels.includes(effectivePanel) || chip.panels.includes('all'));
+
+    applicableChips.forEach(chip => {
+        // 현재 아이템 중 해당 필터를 만족하는 아이템이 최소 1개 이상 있을 때만 칩 노출
+        const hasMatchingItem = itemsToCheck.some(item => chip.filter(item));
+        if (!hasMatchingItem) {
+            currentGridActiveChips.delete(chip.id);
+            return;
+        }
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `grid-filter-chip ${currentGridActiveChips.has(chip.id) ? 'active' : ''}`;
+        btn.dataset.chipId = chip.id;
+        btn.innerHTML = `<span>${chip.label}</span>`;
+
+        btn.addEventListener('click', () => {
+            if (currentGridActiveChips.has(chip.id)) {
+                currentGridActiveChips.delete(chip.id);
+                btn.classList.remove('active');
+            } else {
+                currentGridActiveChips.add(chip.id);
+                btn.classList.add('active');
+            }
+            applyGridSortAndFilters();
+        });
+
+        container.appendChild(btn);
+    });
+}
+
+// 그리드 정렬 및 필터 적용 메인 파이프라인
+function applyGridSortAndFilters() {
+    const gridCount = document.getElementById('gridCount');
+    const resetBtn = document.getElementById('gridFilterResetBtn');
+    const inlineInput = document.getElementById('gridInlineSearch');
+    const searchQuery = inlineInput ? inlineInput.value.trim() : '';
+
+    let items = currentGridRawItems || [];
+
+    // 1. 텍스트 검색 필터
+    if (searchQuery) {
+        items = filterGridItems(items, searchQuery);
+    }
+
+    // 2. 활성 필터 칩 적용
+    if (currentGridActiveChips.size > 0) {
+        items = items.filter(item => {
+            for (const chipId of currentGridActiveChips) {
+                const chip = FILTER_CHIPS_CONFIG.find(c => c.id === chipId);
+                if (chip && !chip.filter(item)) {
+                    return false;
+                }
+            }
+            return true;
+        });
+    }
+
+    // 3. 정렬 적용
+    const sortedItems = sortGridItemList(items, currentGridSortKey);
+
+    // 4. 개수 텍스트 업데이트
+    const isFiltered = searchQuery || currentGridActiveChips.size > 0;
+    if (gridCount) {
+        if (isFiltered) {
+            gridCount.textContent = `조건 결과 ${sortedItems.length}개 / 전체 ${currentGridRawItems.length}개`;
+        } else {
+            gridCount.textContent = `${currentGridRawItems.length}개`;
+        }
+    }
+
+    // 5. 필터 초기화 버튼 표시 여부
+    const isDefaultSort = currentGridSortKey === 'name_asc';
+    if (resetBtn) {
+        resetBtn.style.display = (isFiltered || !isDefaultSort) ? 'flex' : 'none';
+    }
+
+    // 6. 렌더링
+    renderGridCards(sortedItems, currentGridCategoryKey, currentGridPanelType);
+
+    if (lastGridState) {
+        lastGridState.searchQuery = searchQuery;
+        lastGridState.sortKey = currentGridSortKey;
+        lastGridState.activeChips = Array.from(currentGridActiveChips);
+    }
+}
+
 // 그리드 카드 렌더링 헬퍼
 function renderGridCards(items, categoryKey, panelType) {
     const grid = document.getElementById('itemGrid');
@@ -1227,55 +1785,59 @@ function renderGridCards(items, categoryKey, panelType) {
     grid.innerHTML = '';
 
     if (!items || items.length === 0) {
-        grid.innerHTML = '<p class="empty-message">표시할 항목이 없습니다.</p>';
+        grid.innerHTML = '<p class="empty-message">조건에 부합하는 항목이 없습니다.</p>';
         return;
     }
 
-    const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-    sortedItems.forEach(item => {
+    items.forEach(item => {
         grid.appendChild(createGridCard(item, categoryKey, panelType));
     });
 }
 
-// 그리드 인라인 검색 초기화 및 이벤트 등록
+// 그리드 인라인 검색 및 정렬/필터 초기화 및 이벤트 등록
 function initGridInlineSearch() {
     const input = document.getElementById('gridInlineSearch');
     const clearBtn = document.getElementById('gridInlineSearchClear');
-    if (!input) return;
+    const sortSelect = document.getElementById('gridSortSelect');
+    const resetBtn = document.getElementById('gridFilterResetBtn');
 
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.trim();
-        const gridCount = document.getElementById('gridCount');
-        if (lastGridState) {
-            lastGridState.searchQuery = query;
-        }
+    if (input) {
+        input.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (clearBtn) {
+                clearBtn.style.display = query ? 'flex' : 'none';
+            }
+            applyGridSortAndFilters();
+        });
+    }
 
-        if (clearBtn) {
-            clearBtn.style.display = query ? 'flex' : 'none';
-        }
-
-        if (!query) {
-            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
-            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
-            return;
-        }
-
-        const filtered = filterGridItems(currentGridRawItems, query);
-        renderGridCards(filtered, currentGridCategoryKey, currentGridPanelType);
-        if (gridCount) {
-            gridCount.textContent = `검색 ${filtered.length}개 / 전체 ${currentGridRawItems.length}개`;
-        }
-    });
-
-    if (clearBtn) {
+    if (clearBtn && input) {
         clearBtn.addEventListener('click', () => {
             input.value = '';
             clearBtn.style.display = 'none';
-            if (lastGridState) lastGridState.searchQuery = '';
-            renderGridCards(currentGridRawItems, currentGridCategoryKey, currentGridPanelType);
-            const gridCount = document.getElementById('gridCount');
-            if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
+            applyGridSortAndFilters();
             input.focus();
+        });
+    }
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            currentGridSortKey = e.target.value;
+            applyGridSortAndFilters();
+        });
+    }
+
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            if (input) {
+                input.value = '';
+                if (clearBtn) clearBtn.style.display = 'none';
+            }
+            currentGridActiveChips.clear();
+            document.querySelectorAll('.grid-filter-chip').forEach(btn => btn.classList.remove('active'));
+            currentGridSortKey = 'name_asc';
+            if (sortSelect) sortSelect.value = 'name_asc';
+            applyGridSortAndFilters();
         });
     }
 }
@@ -1294,7 +1856,9 @@ function captureCurrentView() {
             categoryKey: lastGridState.categoryKey,
             panelType: lastGridState.panelType,
             scrollY: currentScrollY,
-            searchQuery: inlineSearchQuery || lastGridState.searchQuery || ''
+            searchQuery: inlineSearchQuery || lastGridState.searchQuery || '',
+            sortKey: currentGridSortKey,
+            activeChips: Array.from(currentGridActiveChips)
         };
     }
     return { type: 'empty' };
@@ -1314,13 +1878,13 @@ function restoreView(view) {
         }
     } else if (view.type === 'grid') {
         lastGridScrollY = view.scrollY || 0;
-        showGridView(view.title, view.items, view.categoryKey, view.panelType, true, view.searchQuery || '');
+        showGridView(view.title, view.items, view.categoryKey, view.panelType, true, view.searchQuery || '', view.sortKey, view.activeChips);
     }
 }
 
 function backToGrid() {
     if (lastGridState) {
-        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true, lastGridState.searchQuery || '');
+        showGridView(lastGridState.title, lastGridState.items, lastGridState.categoryKey, lastGridState.panelType, true, lastGridState.searchQuery || '', lastGridState.sortKey, lastGridState.activeChips);
     } else {
         clearDetail();
     }
@@ -1354,14 +1918,29 @@ function renderItemGrid(categoryKey, panelType) {
 }
 
 // 이미 계산된 항목 목록을 그리드로 표시 (검색 결과 등에도 사용)
-function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false, savedSearchQuery = '') {
-    lastGridState = { title, items, categoryKey, panelType, searchQuery: savedSearchQuery };
+function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll = false, savedSearchQuery = '', savedSortKey = null, savedActiveChips = null) {
+    lastGridState = {
+        title,
+        items,
+        categoryKey,
+        panelType,
+        searchQuery: savedSearchQuery,
+        sortKey: savedSortKey,
+        activeChips: savedActiveChips
+    };
     currentPanel = panelType;
     currentCategory = categoryKey;
     currentWeapon = null;
     currentGridRawItems = items || [];
     currentGridCategoryKey = categoryKey;
     currentGridPanelType = panelType;
+
+    if (savedActiveChips && Array.isArray(savedActiveChips)) {
+        currentGridActiveChips = new Set(savedActiveChips);
+    } else if (!savedActiveChips && !shouldRestoreScroll) {
+        currentGridActiveChips = new Set();
+    }
+
     saveAppState();
 
     document.querySelectorAll('.panel-btn').forEach(btn => {
@@ -1375,14 +1954,12 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     weaponDetail.innerHTML = '';
 
     const gridTitle = document.getElementById('gridTitle');
-    const gridCount = document.getElementById('gridCount');
     if (gridTitle) gridTitle.textContent = title;
 
     // 인라인 검색창 placeholder 동적 설정 및 이전 검색어 복원
     const inlineSearchInput = document.getElementById('gridInlineSearch');
     const inlineClearBtn = document.getElementById('gridInlineSearchClear');
     if (inlineSearchInput) {
-        // placeholder 설정: 검색 결과, ">" 하위 슬롯명 추출, 또는 전체 제목 활용
         let targetName = title;
         if (categoryKey === 'search') {
             targetName = '검색 결과';
@@ -1391,24 +1968,18 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
             targetName = parts[parts.length - 1].trim();
         }
         inlineSearchInput.placeholder = `${targetName}에서 검색...`;
-
         inlineSearchInput.value = savedSearchQuery || '';
         if (inlineClearBtn) {
             inlineClearBtn.style.display = savedSearchQuery ? 'flex' : 'none';
         }
     }
 
-    let itemsToRender = currentGridRawItems;
-    if (savedSearchQuery) {
-        itemsToRender = filterGridItems(currentGridRawItems, savedSearchQuery);
-        if (gridCount) {
-            gridCount.textContent = `검색 ${itemsToRender.length}개 / 전체 ${currentGridRawItems.length}개`;
-        }
-    } else {
-        if (gridCount) gridCount.textContent = `${currentGridRawItems.length}개`;
-    }
+    // 정렬 옵션 및 필터 칩 바 초기화/갱신
+    updateSortOptionsDropdown(panelType, categoryKey, savedSortKey, currentGridRawItems);
+    updateFilterChipsBar(panelType, categoryKey, currentGridRawItems);
 
-    renderGridCards(itemsToRender, categoryKey, panelType);
+    // 필터 및 정렬 적용하여 그리드 렌더링
+    applyGridSortAndFilters();
 
     if (shouldRestoreScroll && lastGridScrollY > 0) {
         const targetY = lastGridScrollY;
@@ -1422,7 +1993,7 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     updateFloatingNav();
 }
 
-// 그리드 카드 생성 (이미지 + 이름)
+// 그리드 카드 생성 (이미지 + 이름 + 동적 스펙 뱃지)
 function createGridCard(item, categoryKey, panelType) {
     const card = document.createElement('div');
     card.className = 'grid-card';
@@ -1443,6 +2014,29 @@ function createGridCard(item, categoryKey, panelType) {
     } else {
         imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
     }
+
+    // 3D 모델 보유 뱃지 (좌측 상단)
+    if (item.model || item.model3d) {
+        const modelBadge = document.createElement('span');
+        modelBadge.className = 'grid-card-badge badge-model';
+        modelBadge.textContent = '3D';
+        modelBadge.title = '3D 모델 지원';
+        imgWrap.appendChild(modelBadge);
+    }
+
+    // 현재 선택된 정렬 기준에 따른 스펙 뱃지 (우측 상단)
+    const currentSortConfig = SORT_CONFIGS[currentGridSortKey];
+    if (currentSortConfig && currentSortConfig.badge) {
+        const rawVal = currentSortConfig.parser ? currentSortConfig.parser(item) : null;
+        const badgeText = currentSortConfig.badge(item, rawVal);
+        if (badgeText) {
+            const specBadge = document.createElement('span');
+            specBadge.className = 'grid-card-badge';
+            specBadge.textContent = badgeText;
+            imgWrap.appendChild(specBadge);
+        }
+    }
+
     card.appendChild(imgWrap);
 
     const nameEl = document.createElement('div');
