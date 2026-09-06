@@ -2411,6 +2411,74 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     updateFloatingNav();
 }
 
+const CATEGORY_PLACEHOLDER_FILES = {
+    '백팩': 'assets/placeholders/gear-backpack.png',
+    '헬멧': 'assets/placeholders/gear-helmet.png',
+    '헬멧 부착물': 'assets/placeholders/gear-visor.png',
+    '전신 방탄복': 'assets/placeholders/gear-full-armor.png',
+    '플레이트 캐리어': 'assets/placeholders/gear-plate-carrier.png',
+    '체스트 리그': 'assets/placeholders/gear-chest-rig.png',
+    '마스크': 'assets/placeholders/gear-mask.png',
+
+    '탄창': 'assets/placeholders/att-magazine.png',
+    '광학 조준경': 'assets/placeholders/att-optic.png',
+    '기계식 조준기': 'assets/placeholders/att-iron-sight.png',
+    '소음기': 'assets/placeholders/att-suppressor.png',
+    '소염기 / 머즐': 'assets/placeholders/att-muzzle.png',
+    '개머리판': 'assets/placeholders/att-stock.png',
+    '핸드가드': 'assets/placeholders/att-handguard.png',
+    '총열': 'assets/placeholders/att-barrel.png',
+    '리시버': 'assets/placeholders/att-receiver.png',
+    '권총 손잡이': 'assets/placeholders/att-pistol-grip.png',
+    '전방 손잡이': 'assets/placeholders/att-foregrip.png',
+    '양각대': 'assets/placeholders/att-bipod.png',
+    '레이저 표적기': 'assets/placeholders/att-laser.png',
+    '전술 플래시': 'assets/placeholders/att-flashlight.png',
+    '마운트': 'assets/placeholders/att-mount.png',
+    '버퍼 튜브': 'assets/placeholders/att-buffer-tube.png',
+    '가스 블록': 'assets/placeholders/att-gas-block.png',
+    '장전 손잡이': 'assets/placeholders/att-charging-handle.png',
+    '방아쇠': 'assets/placeholders/att-trigger.png',
+    '해머': 'assets/placeholders/att-hammer.png',
+
+    '돌격 소총': 'assets/ar.png',
+    '저격 소총': 'assets/sr.png',
+    '기관단총': 'assets/smg.png',
+    '산탄총': 'assets/shotgun.png',
+    '권총': 'assets/pistol.png',
+    '경기관총': 'assets/lmg.png',
+    '유탄 발사기': 'assets/gl.png'
+};
+
+const DEFAULT_PLACEHOLDER_FILE = 'assets/placeholders/default.svg';
+
+function getPlaceholderIconHtml(item, categoryKey, panelType, context = 'card') {
+    const rawCategory = (item && item.category) || (categoryKey !== 'all' && categoryKey !== 'search' ? categoryKey : '') || '';
+    const cat = rawCategory.trim();
+
+    let filePath = CATEGORY_PLACEHOLDER_FILES[cat];
+    if (!filePath) {
+        if (panelType === 'gear') {
+            filePath = CATEGORY_PLACEHOLDER_FILES['백팩'];
+        } else if (panelType === 'attachment') {
+            filePath = CATEGORY_PLACEHOLDER_FILES['마운트'];
+        } else {
+            filePath = CATEGORY_PLACEHOLDER_FILES['돌격 소총'];
+        }
+    }
+    if (!filePath) {
+        filePath = DEFAULT_PLACEHOLDER_FILE;
+    }
+
+    const imgClass = context === 'detail' ? 'detail-placeholder-img' : 'grid-card-placeholder-img';
+    const altText = cat || '아이템';
+
+    if (context === 'detail') {
+        return `<img src="${filePath}" alt="${altText}" class="${imgClass}">`;
+    }
+    return `<div class="grid-card-placeholder-wrap"><img src="${filePath}" alt="${altText}" class="${imgClass}"></div>`;
+}
+
 // 그리드 카드 생성 (이미지 + 이름 + 동적 스펙 뱃지)
 function createGridCard(item, categoryKey, panelType) {
     const card = document.createElement('div');
@@ -2426,11 +2494,11 @@ function createGridCard(item, categoryKey, panelType) {
         img.src = images[0];
         img.alt = item.name;
         img.onerror = function() {
-            imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
+            imgWrap.innerHTML = getPlaceholderIconHtml(item, categoryKey, panelType, 'card');
         };
         imgWrap.appendChild(img);
     } else {
-        imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
+        imgWrap.innerHTML = getPlaceholderIconHtml(item, categoryKey, panelType, 'card');
     }
 
     // 3D 모델 보유 뱃지 (좌측 상단)
@@ -2590,24 +2658,13 @@ function createCategoryItem(name, count, key, panelType) {
     link.className = 'category-link';
     link.dataset.category = key;
     
-    // 카테고리별 아이콘 매핑
-    const categoryIcons = {
-        '권총': 'assets/pistol.png',
-        '돌격 소총': 'assets/ar.png',
-        '기관단총': 'assets/smg.png',
-        '저격 소총': 'assets/sr.png',
-        '산탄총': 'assets/shotgun.png',
-        '경기관총': 'assets/lmg.png',
-        '유탄 발사기': 'assets/gl.png'
-    };
-    
-    // 아이콘 추가 (해당 카테고리에 아이콘이 있는 경우)
-    if (categoryIcons[key]) {
+    const iconPath = CATEGORY_PLACEHOLDER_FILES[key];
+    if (iconPath) {
         const iconImg = document.createElement('img');
-        iconImg.src = categoryIcons[key];
+        iconImg.src = iconPath;
         iconImg.alt = name;
         iconImg.className = 'category-icon';
-        if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기') {
+        if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기' || key === '총열' || key === '핸드가드') {
             iconImg.classList.add('category-icon-large');
         }
         link.appendChild(iconImg);
@@ -2887,7 +2944,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     }
     const placeholder = document.createElement('div');
     placeholder.className = 'weapon-image-placeholder';
-    placeholder.textContent = '-';
+    placeholder.innerHTML = getPlaceholderIconHtml(item, item?.category, currentPanel, 'detail');
     placeholder.style.display = images.length === 0 ? 'flex' : 'none';
     imgWrapper.appendChild(placeholder);
     
