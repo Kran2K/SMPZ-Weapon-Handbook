@@ -1197,6 +1197,12 @@ function isAttachmentItem(item) {
     return false;
 }
 
+function isWeaponItem(item) {
+    if (!item) return false;
+    if (typeof weaponsData !== 'undefined' && item.category && weaponsData[item.category]) return true;
+    return false;
+}
+
 const DataParsers = {
     weight: (item) => {
         const val = item?.stats?.weight;
@@ -1275,6 +1281,7 @@ const DataParsers = {
         return isNaN(num) ? null : num;
     },
     velocity: (item) => {
+        if (!isWeaponItem(item)) return null;
         if (item?.stats?.velocity) {
             const num = parseFloat(String(item.stats.velocity).replace(/[^0-9.]/g, ''));
             if (!isNaN(num)) return num;
