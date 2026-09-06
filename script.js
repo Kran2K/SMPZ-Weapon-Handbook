@@ -1275,10 +1275,14 @@ const DataParsers = {
         return isNaN(num) ? null : num;
     },
     velocity: (item) => {
-        const val = item?.stats?.velocity;
-        if (!val) return null;
-        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
-        return isNaN(num) ? null : num;
+        if (item?.stats?.velocity) {
+            const num = parseFloat(String(item.stats.velocity).replace(/[^0-9.]/g, ''));
+            if (!isNaN(num)) return num;
+        }
+        const cal = item?.calibers?.[0];
+        const baseSpeed = cal ? (CALIBER_BASE_SPEEDS[cal] || (cal === '7.62x51mm' ? CALIBER_BASE_SPEEDS['.308 WIN'] : 0)) : 0;
+        const mult = item?.stats?.velocityMultiplier !== undefined ? item.stats.velocityMultiplier : 1.0;
+        return baseSpeed > 0 ? Math.round(baseSpeed * mult) : null;
     },
     rpm: (item) => {
         const val = item?.stats?.rpm;
@@ -1609,8 +1613,11 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
                     specs.push({ metricKey: 'rpm', label: 'RPM', text: `${item.stats.rpm} RPM`, tagClass: 'spec-rpm' });
                 } else if (activeMetricKey === 'moa' && item.stats?.accuracy) {
                     specs.push({ metricKey: 'moa', label: 'MOA', text: `${item.stats.accuracy}`, tagClass: 'spec-moa' });
-                } else if (activeMetricKey === 'velocity' && item.stats?.velocity) {
-                    specs.push({ metricKey: 'velocity', label: '탄속', text: `${item.stats.velocity}`, tagClass: 'spec-velocity' });
+                } else if (activeMetricKey === 'velocity') {
+                    const vel = DataParsers.velocity(item);
+                    if (vel !== null) {
+                        specs.push({ metricKey: 'velocity', label: '탄속', text: `${vel} m/s`, tagClass: 'spec-velocity' });
+                    }
                 } else if (activeMetricKey === 'weapon_recoil' && item.stats?.recoil) {
                     specs.push({ metricKey: 'weapon_recoil', label: '반동', text: `반동 ${item.stats.recoil}`, tagClass: 'spec-recoil' });
                 } else if (activeMetricKey === 'weapon_sway' && item.stats?.sway) {
@@ -3129,6 +3136,35 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     return galleryWrapper;
 }
 
+const CALIBER_BASE_SPEEDS = {
+    '5.56x45mm': 850,
+    '.308 WIN': 770,
+    '7.62x51mm': 770,
+    '5.45x39mm': 880,
+    '7.62x39mm': 640,
+    '7.62x54mmR': 785,
+    '.300 BLK': 442,
+    '9x39mm': 280,
+    '9x19mm': 350,
+    '.45 ACP': 260,
+    '.357 Magnum': 440,
+    '12 Gauge': 340,
+    '.338 Lapua': 900,
+    '.50 BMG': 887,
+    '.408 CheyTac': 998,
+    '.366 TKM': 580,
+    '6.8x51mm': 899,
+    '5.7x28mm': 715,
+    '4.6x30mm': 620,
+    '7.62x25mm': 425,
+    '9x21mm': 410,
+    '.50 AE': 440,
+    '12.7x55mm': 285,
+    '.300 Win': 895,
+    '.22 LR': 320,
+    '40mm': 76
+};
+
 // 무기 상세 정보 표시
 function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     const weaponDetail = showDetailContainer();
@@ -3334,8 +3370,30 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             const value = document.createElement('span');
             value.className = 'weapon-stat-value';
             const raw = weapon.stats[stat.key];
-            const displayText = raw !== undefined && raw !== null && raw !== "" ? String(raw) : '-';
+            let displayText = raw !== undefined && raw !== null && raw !== "" ? String(raw) : '-';
+            let calcSpeed = 0;
+            let baseSpeed = 0;
+
+            if (stat.key === 'velocity') {
+                const primaryCal = weapon.calibers && weapon.calibers[0];
+                baseSpeed = primaryCal ? (CALIBER_BASE_SPEEDS[primaryCal] || 0) : 0;
+                const mult = (weapon.stats && weapon.stats.velocityMultiplier !== undefined) ? weapon.stats.velocityMultiplier : 1.0;
+                calcSpeed = baseSpeed > 0 ? Math.round(baseSpeed * mult) : (raw ? parseFloat(raw) : 0);
+                if (calcSpeed > 0) {
+                    displayText = `${calcSpeed} m/s`;
+                }
+            }
+
             value.textContent = displayText;
+
+            if (stat.key === 'velocity' && calcSpeed > 0 && weapon.stats && weapon.stats.velocityMultiplier !== undefined && baseSpeed > 0) {
+                const footnote = document.createElement('sup');
+                footnote.className = 'stat-footnote';
+                footnote.textContent = '*';
+                const multStr = Number(weapon.stats.velocityMultiplier).toString();
+                footnote.setAttribute('data-tooltip', `기준 탄속 ${baseSpeed} m/s × 무기 탄속 배율 ${multStr}배`);
+                value.appendChild(footnote);
+            }
 
             row.appendChild(label);
             row.appendChild(value);
@@ -3343,7 +3401,9 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
             // 게이지 바 계산 (기준 무기)
             let numericValue = NaN;
-            if (raw !== undefined && raw !== null && raw !== "") {
+            if (stat.key === 'velocity') {
+                numericValue = calcSpeed > 0 ? calcSpeed : NaN;
+            } else if (raw !== undefined && raw !== null && raw !== "") {
                 if (stat.isMoa) {
                     // "1.24 MOA" 같은 문자열에서 숫자만 추출
                     const match = /([\d.]+)/.exec(String(raw));
@@ -3379,7 +3439,13 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             if (compareWeapon && compareWeapon.stats && compareWeapon.id !== weapon.id) {
                 const rawCompare = compareWeapon.stats[stat.key];
                 let numericCompare = NaN;
-                if (rawCompare !== undefined && rawCompare !== null && rawCompare !== "") {
+                if (stat.key === 'velocity') {
+                    const compCal = compareWeapon.calibers && compareWeapon.calibers[0];
+                    const compBase = compCal ? (CALIBER_BASE_SPEEDS[compCal] || 0) : 0;
+                    const compMult = (compareWeapon.stats && compareWeapon.stats.velocityMultiplier !== undefined) ? compareWeapon.stats.velocityMultiplier : 1.0;
+                    const compSpeed = compBase > 0 ? Math.round(compBase * compMult) : (rawCompare ? parseFloat(rawCompare) : 0);
+                    numericCompare = compSpeed > 0 ? compSpeed : NaN;
+                } else if (rawCompare !== undefined && rawCompare !== null && rawCompare !== "") {
                     if (stat.isMoa) {
                         const match2 = /([\d.]+)/.exec(String(rawCompare));
                         if (match2) numericCompare = parseFloat(match2[1]);

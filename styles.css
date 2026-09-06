@@ -1249,6 +1249,83 @@ body {
     margin-right: 4px;
 }
 
+.weapon-stat-value:has(.stat-footnote) {
+    cursor: help;
+}
+
+.stat-footnote {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    font-size: 0.8em;
+    font-weight: bold;
+    vertical-align: super;
+    margin-left: 1px;
+    cursor: help;
+    user-select: none;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+}
+
+.stat-footnote:hover,
+.weapon-stat-value:hover .stat-footnote {
+    opacity: 1;
+}
+
+.stat-footnote::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #1e1e1e;
+    color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    border: 1px solid #444444;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+    z-index: 1000;
+}
+
+.stat-footnote::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    margin-left: -5px;
+    border-width: 6px 5px 0 5px;
+    border-style: solid;
+    border-color: #444444 transparent transparent transparent;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+    z-index: 1000;
+}
+
+.stat-footnote:hover::after,
+.weapon-stat-value:hover .stat-footnote::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.stat-footnote:hover::before,
+.weapon-stat-value:hover .stat-footnote::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .weapon-stat-value {
     display: inline-block;
 }
