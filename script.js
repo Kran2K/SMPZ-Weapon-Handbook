@@ -886,6 +886,23 @@ function switchPanel(panel) {
 }
 
 
+function createWebSearchButton(itemName) {
+    const link = document.createElement('a');
+    link.href = `https://www.google.com/search?q=${encodeURIComponent(itemName)}`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.className = 'item-web-search-btn';
+    link.title = 'Google에서 검색';
+    link.setAttribute('aria-label', `${itemName} Google에서 검색`);
+    link.innerHTML = `
+        <svg class="item-web-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    `;
+    return link;
+}
+
 function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) {
     const weaponDetail = showDetailContainer();
     currentCategory = categoryKey;
@@ -908,10 +925,14 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     nameContainer.className = 'weapon-detail-name-container';
     const name = document.createElement('div');
     name.className = 'weapon-detail-name';
+    const nameWrap = document.createElement('div');
+    nameWrap.className = 'weapon-name-wrap';
     const nameText = document.createElement('span');
     nameText.className = 'weapon-name-text';
     nameText.textContent = attachment.name;
-    name.appendChild(nameText);
+    nameWrap.appendChild(nameText);
+    nameWrap.appendChild(createWebSearchButton(attachment.name));
+    name.appendChild(nameWrap);
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
     
@@ -3267,10 +3288,14 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         }
     }
     
+    const nameWrap = document.createElement('div');
+    nameWrap.className = 'weapon-name-wrap';
     const nameText = document.createElement('span');
     nameText.className = 'weapon-name-text';
     nameText.textContent = weapon.name;
-    name.appendChild(nameText);
+    nameWrap.appendChild(nameText);
+    nameWrap.appendChild(createWebSearchButton(weapon.name));
+    name.appendChild(nameWrap);
     
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
@@ -3642,10 +3667,14 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         }
     }
     
+    const nameWrap = document.createElement('div');
+    nameWrap.className = 'weapon-name-wrap';
     const nameText = document.createElement('span');
     nameText.className = 'weapon-name-text';
     nameText.textContent = gear.name;
-    name.appendChild(nameText);
+    nameWrap.appendChild(nameText);
+    nameWrap.appendChild(createWebSearchButton(gear.name));
+    name.appendChild(nameWrap);
     
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
