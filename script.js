@@ -3395,6 +3395,24 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
                 value.appendChild(footnote);
             }
 
+            if (stat.key === 'accuracy' && raw) {
+                const match = /([\d.]+)/.exec(String(raw));
+                if (match) {
+                    const moaNum = parseFloat(match[1]);
+                    if (!isNaN(moaNum) && moaNum > 0) {
+                        const footnote = document.createElement('sup');
+                        footnote.className = 'stat-footnote';
+                        footnote.textContent = '*';
+                        const d100 = Number((moaNum * 2.9).toFixed(1));
+                        const d300 = Number((moaNum * 2.9 * 3).toFixed(1));
+                        const d500 = Number((moaNum * 2.9 * 5).toFixed(1));
+                        const tooltipText = `100m 탄착군 지름 약 ${d100}cm\n300m 탄착군 지름 약 ${d300}cm\n500m 탄착군 지름 약 ${d500}cm`;
+                        footnote.setAttribute('data-tooltip', tooltipText);
+                        value.appendChild(footnote);
+                    }
+                }
+            }
+
             row.appendChild(label);
             row.appendChild(value);
             statsList.appendChild(row);

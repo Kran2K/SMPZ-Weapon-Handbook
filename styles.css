@@ -1284,8 +1284,10 @@ body {
     border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
-    line-height: 1.4;
-    white-space: nowrap;
+    line-height: 1.5;
+    white-space: pre;
+    width: max-content;
+    text-align: left;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
     border: 1px solid #444444;
     pointer-events: none;
