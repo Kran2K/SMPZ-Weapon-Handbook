@@ -14204,233 +14204,6 @@ const attachmentData = {
             ]
         },
         {
-            "id": "SMPZ_Optics_SIG_Romeo7",
-            "name": "SIG Sauer ROMEO7 1x30 reflex sight (Prototype)",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "SIG Sauer에서 제작",
-            "manufacturer": "SIG Sauer",
-            "manufacturerLogo": "assets/sigsauer-logo.png",
-            "manufacturerUrl": "https://www.sigsauer.com/",
-            "stats": {
-                "weight": "354g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "GlockOptics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_SIG_Romeo8T",
-            "name": "SIG Sauer ROMEO8T reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "SIG Sauer에서 제작",
-            "manufacturer": "SIG Sauer",
-            "manufacturerLogo": "assets/sigsauer-logo.png",
-            "manufacturerUrl": "https://www.sigsauer.com/",
-            "stats": {
-                "weight": "388g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "GlockOptics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Elcan_Specter_HCO",
-            "name": "ELCAN Specter HCO holographic sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사 ELCAN",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "433g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "GlockOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Aimpoint_CompM4",
-            "name": "Aimpoint CompM4 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: 에임포인트",
-            "manufacturer": "Aimpoint",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.aimpoint.com/",
-            "stats": {
-                "weight": "470g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "GlockOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_OKP7",
-            "name": "OKP-7 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "255g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_OKP7_Dovetail",
-            "name": "OKP-7 dovetail reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "295g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "weaponOpticsAK",
-                "MK12Optics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_MRS",
-            "name": "Walther MRS reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "255g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
             "id": "SMPZ_Optics_SwampFox_Prism",
             "name": "SwampFox Trihawk Prism Scope 3x30",
             "category": "광학 조준경",
@@ -14479,156 +14252,6 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SVTOptic"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Valday_PK120",
-            "name": "Valday PK-120 (1P87) reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "300g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_553",
-            "name": "EOTech 553 holographic sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "EOTech",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.eotechinc.com/",
-            "stats": {
-                "weight": "349g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Burris_FastFire3_FFP",
-            "name": "Burris FastFire 3 Reflex Sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조회사: Burris",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "53g",
-                "magnification": "1x"
-            },
-            "itemSize": "1x1",
-            "itemSlots": 1,
-            "inventorySlots": [
-                "pistolOptics",
-                "FFP3"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Aimpoint_T1",
-            "name": "Aimpoint Micro T-1 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: 에임포인트",
-            "manufacturer": "Aimpoint",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.aimpoint.com/",
-            "stats": {
-                "weight": "84g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "AimpointT1"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Aimpoint_H2",
-            "name": "Aimpoint H-2 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: 에임포인트",
-            "manufacturer": "Aimpoint",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.aimpoint.com/",
-            "stats": {
-                "weight": "94g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "HydraOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_SIG_Romeo4",
-            "name": "SIG Sauer ROMEO 4 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "SIG Sauer에서 제작",
-            "manufacturer": "SIG Sauer",
-            "manufacturerLogo": "assets/sigsauer-logo.png",
-            "manufacturerUrl": "https://www.sigsauer.com/",
-            "stats": {
-                "weight": "90g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "HydraOptics"
             ]
         },
         {
@@ -14708,144 +14331,6 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_SwampFox_Justice",
-            "name": "SwampFox Justice Reflex Sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "SwampFox에서 제조",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "25g",
-                "magnification": "1x"
-            },
-            "itemSize": "1x1",
-            "itemSlots": 1,
-            "inventorySlots": [
-                "pistolOptics",
-                "noMountRMROptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Trijicon_SRO",
-            "name": "Trijicon SRO Reflex Sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: 트리지콘",
-            "manufacturer": "Trijicon",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.trijicon.com/",
-            "stats": {
-                "weight": "25g",
-                "magnification": "1x"
-            },
-            "itemSize": "1x1",
-            "itemSlots": 1,
-            "inventorySlots": [
-                "pistolOptics",
-                "noMountRMROptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Steiner_R1X",
-            "name": "Steiner R1X Reflex Sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: Steiner",
-            "manufacturer": "Steiner Optics",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.steiner-optics.com/",
-            "stats": {
-                "weight": "272g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "OpticsOnAKHndgrd"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
-            "name": "VOMZ Pilad P1x42 Weaver Reflex Sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: VOMZ",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "160g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "OpticsOnAKHndgrd"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Aimpoint_ACRO_P1",
-            "name": "Aimpoint ACRO P-1 reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: 에임포인트",
-            "manufacturer": "Aimpoint",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.aimpoint.com/",
-            "stats": {
-                "weight": "60g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AimpointACRO"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Vortex_UH1",
-            "name": "Vortex Razor AMG UH-1 holographic sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "제조사: Vortex",
-            "manufacturer": "Vortex Optics",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://vortexoptics.com/",
-            "stats": {
-                "weight": "330g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "CSSOptics",
-                "M32Optics",
-                "GlockOptics",
-                "MK12Optics",
-                "weaponOpticsKobra",
-                "UNITYTOptics",
-                "G33MagnifierOptics"
             ]
         },
         {
@@ -14957,27 +14442,6 @@ const attachmentData = {
             ]
         },
         {
-            "id": "SMPZ_Optics_RMR",
-            "name": "Trijicon RMR reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "Trijicon",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.trijicon.com/",
-            "stats": {
-                "weight": "25g",
-                "magnification": "1x"
-            },
-            "itemSize": "1x1",
-            "itemSlots": 1,
-            "inventorySlots": [
-                "pistolOptics",
-                "noMountRMROptics"
-            ]
-        },
-        {
             "id": "SMPZ_Optics_EOTECH_Vudu",
             "name": "EOTech Vudu 1-6x24 30mm riflescope",
             "category": "광학 조준경",
@@ -15037,113 +14501,6 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ROF90Mount"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_EXPS3",
-            "name": "EOTech EXPS3 holographic sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "EOTech에서 제조",
-            "manufacturer": "EOTech",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.eotechinc.com/",
-            "stats": {
-                "weight": "400g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "GlockOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra",
-                "UNITYTOptics",
-                "G33MagnifierOptics",
-                "MagnifierCompatOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_XPS3",
-            "name": "EOTech XPS3-0 holographic sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "EOTech에서 제조",
-            "manufacturer": "EOTech",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "https://www.eotechinc.com/",
-            "stats": {
-                "weight": "225g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "GlockOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_BOSS",
-            "name": "Wilcox BOSS Xe reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "250g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "SidemountOptics",
-                "CSSOptics",
-                "M32Optics",
-                "GlockOptics",
-                "MK12Optics",
-                "weaponOpticsKobra",
-                "UNITYTOptics"
             ]
         },
         {
@@ -15221,66 +14578,6 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_NPZ_Obzor",
-            "name": "NPZ PK1 Obzor dovetail reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "AK형 소총에 장착 가능",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "520g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "weaponOpticsAK"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_PKAA",
-            "name": "BelOMO PK-AA dovetail reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "AK형 소총에 장착 가능",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "450g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "weaponOpticsAK"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_EKP_1S",
-            "name": "Axion Kobra EKP-1S-03 dovetail reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "AK형 소총에 장착 가능",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "273g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x2",
-            "itemSlots": 4,
-            "inventorySlots": [
-                "weaponOpticsAK"
             ]
         },
         {
@@ -15483,31 +14780,6 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
-            "name": "Milkor M2A1 grenade launcher reflex sight",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "Milkor USA Inc에서 제조",
-            "manufacturer": "Milkor USA",
-            "manufacturerLogo": "assets/milkor-logo.png",
-            "manufacturerUrl": "https://milkorusa.com/",
-            "stats": {
-                "weight": "600g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M32Optics"
-            ],
-            "attachmentSlots": [
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
             ]
         }
     ],
@@ -17479,6 +16751,736 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
+            ]
+        }
+    ],
+    "도트/홀로그램": [
+        {
+            "id": "SMPZ_Optics_SIG_Romeo7",
+            "name": "SIG Sauer ROMEO7 1x30 reflex sight (Prototype)",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "SIG Sauer에서 제작",
+            "manufacturer": "SIG Sauer",
+            "manufacturerLogo": "assets/sigsauer-logo.png",
+            "manufacturerUrl": "https://www.sigsauer.com/",
+            "stats": {
+                "weight": "354g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_SIG_Romeo8T",
+            "name": "SIG Sauer ROMEO8T reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "SIG Sauer에서 제작",
+            "manufacturer": "SIG Sauer",
+            "manufacturerLogo": "assets/sigsauer-logo.png",
+            "manufacturerUrl": "https://www.sigsauer.com/",
+            "stats": {
+                "weight": "388g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Elcan_Specter_HCO",
+            "name": "ELCAN Specter HCO holographic sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사 ELCAN",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "433g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "GlockOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Aimpoint_CompM4",
+            "name": "Aimpoint CompM4 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: 에임포인트",
+            "manufacturer": "Aimpoint",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.aimpoint.com/",
+            "stats": {
+                "weight": "470g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "GlockOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_OKP7",
+            "name": "OKP-7 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "255g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_OKP7_Dovetail",
+            "name": "OKP-7 dovetail reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "295g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK",
+                "MK12Optics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_MRS",
+            "name": "Walther MRS reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "255g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Valday_PK120",
+            "name": "Valday PK-120 (1P87) reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "300g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_EOTECH_553",
+            "name": "EOTech 553 holographic sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "EOTech",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.eotechinc.com/",
+            "stats": {
+                "weight": "349g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Burris_FastFire3_FFP",
+            "name": "Burris FastFire 3 Reflex Sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조회사: Burris",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "53g",
+                "magnification": "1x"
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "FFP3"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Aimpoint_T1",
+            "name": "Aimpoint Micro T-1 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: 에임포인트",
+            "manufacturer": "Aimpoint",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.aimpoint.com/",
+            "stats": {
+                "weight": "84g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "AimpointT1"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Aimpoint_H2",
+            "name": "Aimpoint H-2 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: 에임포인트",
+            "manufacturer": "Aimpoint",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.aimpoint.com/",
+            "stats": {
+                "weight": "94g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "HydraOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_SIG_Romeo4",
+            "name": "SIG Sauer ROMEO 4 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "SIG Sauer에서 제작",
+            "manufacturer": "SIG Sauer",
+            "manufacturerLogo": "assets/sigsauer-logo.png",
+            "manufacturerUrl": "https://www.sigsauer.com/",
+            "stats": {
+                "weight": "90g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "HydraOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_SwampFox_Justice",
+            "name": "SwampFox Justice Reflex Sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "SwampFox에서 제조",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "25g",
+                "magnification": "1x"
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Trijicon_SRO",
+            "name": "Trijicon SRO Reflex Sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: 트리지콘",
+            "manufacturer": "Trijicon",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.trijicon.com/",
+            "stats": {
+                "weight": "25g",
+                "magnification": "1x"
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Steiner_R1X",
+            "name": "Steiner R1X Reflex Sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: Steiner",
+            "manufacturer": "Steiner Optics",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.steiner-optics.com/",
+            "stats": {
+                "weight": "272g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
+            "name": "VOMZ Pilad P1x42 Weaver Reflex Sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: VOMZ",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "160g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "OpticsOnAKHndgrd"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Aimpoint_ACRO_P1",
+            "name": "Aimpoint ACRO P-1 reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: 에임포인트",
+            "manufacturer": "Aimpoint",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.aimpoint.com/",
+            "stats": {
+                "weight": "60g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AimpointACRO"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Vortex_UH1",
+            "name": "Vortex Razor AMG UH-1 holographic sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "제조사: Vortex",
+            "manufacturer": "Vortex Optics",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://vortexoptics.com/",
+            "stats": {
+                "weight": "330g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "CSSOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics",
+                "G33MagnifierOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_RMR",
+            "name": "Trijicon RMR reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "Trijicon",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.trijicon.com/",
+            "stats": {
+                "weight": "25g",
+                "magnification": "1x"
+            },
+            "itemSize": "1x1",
+            "itemSlots": 1,
+            "inventorySlots": [
+                "pistolOptics",
+                "noMountRMROptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_EOTECH_EXPS3",
+            "name": "EOTech EXPS3 holographic sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "EOTech에서 제조",
+            "manufacturer": "EOTech",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.eotechinc.com/",
+            "stats": {
+                "weight": "400g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "GlockOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics",
+                "G33MagnifierOptics",
+                "MagnifierCompatOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_EOTECH_XPS3",
+            "name": "EOTech XPS3-0 holographic sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "EOTech에서 제조",
+            "manufacturer": "EOTech",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "https://www.eotechinc.com/",
+            "stats": {
+                "weight": "225g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "DeagleOptics",
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "weaponOpticsHunting",
+                "FSOptics",
+                "GlockOptics",
+                "CSSOptics",
+                "SR3MPOptics",
+                "M32Optics",
+                "MK12Optics",
+                "weaponOpticsKobra"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_BOSS",
+            "name": "Wilcox BOSS Xe reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "250g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics",
+                "weaponOpticsSecond",
+                "weaponOpticsThird",
+                "weaponOpticsFourth",
+                "weaponOpticsHunting",
+                "OpticsOnAKHndgrd",
+                "OpticsOnAKHndgrdSecond",
+                "OpticsOnAKHndgrdThird",
+                "SidemountOptics",
+                "CSSOptics",
+                "M32Optics",
+                "GlockOptics",
+                "MK12Optics",
+                "weaponOpticsKobra",
+                "UNITYTOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_NPZ_Obzor",
+            "name": "NPZ PK1 Obzor dovetail reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "AK형 소총에 장착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "520g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_PKAA",
+            "name": "BelOMO PK-AA dovetail reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "AK형 소총에 장착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "450g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_EKP_1S",
+            "name": "Axion Kobra EKP-1S-03 dovetail reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "AK형 소총에 장착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "273g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x2",
+            "itemSlots": 4,
+            "inventorySlots": [
+                "weaponOpticsAK"
+            ]
+        },
+        {
+            "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
+            "name": "Milkor M2A1 grenade launcher reflex sight",
+            "category": "도트/홀로그램",
+            "image": "",
+            "images": [],
+            "description": "Milkor USA Inc에서 제조",
+            "manufacturer": "Milkor USA",
+            "manufacturerLogo": "assets/milkor-logo.png",
+            "manufacturerUrl": "https://milkorusa.com/",
+            "stats": {
+                "weight": "600g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M32Optics"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
             ]
         }
     ],

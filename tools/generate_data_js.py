@@ -720,6 +720,12 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         target_cat = '권총 손잡이'
                     elif 'carryhandle' in item_id.lower() or '/attachments/ironsights' in src_file:
                         target_cat = '기계식 조준기'
+                    elif '/attachments/optics' in src_file or target_cat in ('광학 조준경', '도트/홀로그램'):
+                        mag_val = item_obj.get('stats', {}).get('magnification', '1x')
+                        if mag_val == '1x':
+                            target_cat = '도트/홀로그램'
+                        else:
+                            target_cat = '광학 조준경'
                     item_obj['category'] = target_cat
 
                 if target_cat not in result_data[sec_name]:

@@ -1185,7 +1185,7 @@ let currentGridActiveChips = new Set();
 // ===========================================================================
 
 const ATTACHMENT_CATEGORY_SET = new Set([
-    '가스 블록', '개머리판', '광학 조준경', '권총 손잡이', '기계식 조준기',
+    '가스 블록', '개머리판', '광학 조준경', '권총 손잡이', '기계식 조준기', '도트/홀로그램',
     '레이저 표적기', '리시버', '마운트', '방아쇠', '버퍼 튜브', '소염기 / 머즐',
     '소음기', '양각대', '장전 손잡이', '전방 손잡이', '전술 플래시', '총열', '탄창', '해머', '핸드가드'
 ]);
@@ -1558,8 +1558,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         }
     }
 
-    // 3. 광학 조준경 (배율)
-    if (cat === '광학 조준경') {
+    // 3. 광학 조준경 및 도트/홀로그램 (배율)
+    if (cat === '광학 조준경' || cat === '도트/홀로그램') {
         const mag = getOpticMagnification(item);
         if (mag) {
             specs.push({ metricKey: 'magnification', label: '배율', text: mag, tagClass: 'spec-optic' });
@@ -1783,7 +1783,7 @@ function hasAnyValidValueForMetric(items, metric) {
     }
     if (metric.id === 'magnification') {
         return items.some(item => {
-            return (item.category === '광학 조준경' || Boolean(item?.stats?.magnification)) && DataParsers.magnification(item) !== null;
+            return (item.category === '광학 조준경' || item.category === '도트/홀로그램' || Boolean(item?.stats?.magnification)) && DataParsers.magnification(item) !== null;
         });
     }
     if (metric.id === 'light_distance') {
@@ -2436,6 +2436,7 @@ const CATEGORY_PLACEHOLDER_FILES = {
 
     '탄창': 'assets/placeholders/att-magazine.png',
     '광학 조준경': 'assets/placeholders/att-optic.png',
+    '도트/홀로그램': 'assets/placeholders/att-dot.png',
     '기계식 조준기': 'assets/placeholders/att-iron-sight.png',
     '소음기': 'assets/placeholders/att-suppressor.png',
     '소염기 / 머즐': 'assets/placeholders/att-muzzle.png',
