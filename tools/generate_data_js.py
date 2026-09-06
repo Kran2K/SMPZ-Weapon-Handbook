@@ -422,12 +422,12 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         return merged
 
     # 3. Load Canonical Reference Items
-    if os.path.exists(data_js_path):
-        ref_file = data_js_path
-    elif os.path.exists(DEFAULT_DATA_JS_PATH):
-        ref_file = DEFAULT_DATA_JS_PATH
-    else:
+    if os.path.exists(backup_js_path):
         ref_file = backup_js_path
+    elif os.path.exists(data_js_path):
+        ref_file = data_js_path
+    else:
+        ref_file = DEFAULT_DATA_JS_PATH
     with open(ref_file, 'r', encoding='utf-8') as f:
         text = f.read()
 
@@ -489,6 +489,14 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return None
 
     def extract_optic_magnification(item_id):
+        props = get_inherited_props(item_id)
+        mag_mult_raw = props.get('magnifierMultiplier')
+        if mag_mult_raw:
+            val = eval_safe_expr(str(mag_mult_raw))
+            if val and val > 0:
+                calc_mag = round(1.0 / val)
+                return f"{calc_mag}x"
+
         oi_body = get_class_optics_info_body(item_id)
         if not oi_body:
             return None
@@ -583,7 +591,6 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     for sec_name, sec_dict, sec_type in sections:
         result_data[sec_name] = {}
         for cat, items in sec_dict.items():
-            result_data[sec_name][cat] = []
             for item in items:
                 item_id = item['id']
                 item_name = item.get('name', '')
@@ -692,7 +699,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj.setdefault('stats', {})['lightDistance'] = "300m"
 
                 # 8. Optics Magnification
-                if item_obj.get('category') == '광학 조준경' or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
+                if item_obj.get('category') in ('광학 조준경', '도트/홀로그램') or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
                     mag = extract_optic_magnification(item_id)
                     if mag:
                         item_obj.setdefault('stats', {})['magnification'] = mag
@@ -703,7 +710,25 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
 
-                result_data[sec_name][cat].append(item_obj)
+                target_cat = cat
+                if sec_name == 'attachmentData':
+                    cls_info = all_classes.get(item_id, {})
+                    src_file = cls_info.get('source_file', '').replace('\\', '/').lower()
+                    if '/attachments/mount' in src_file or '/attachments/sidemount' in src_file:
+                        target_cat = '마운트'
+                    elif '/attachments/pistolgrip' in src_file and target_cat == '전방 손잡이':
+                        target_cat = '권총 손잡이'
+                    elif 'carryhandle' in item_id.lower() or '/attachments/ironsights' in src_file:
+                        target_cat = '기계식 조준기'
+                    item_obj['category'] = target_cat
+
+                if target_cat not in result_data[sec_name]:
+                    result_data[sec_name][target_cat] = []
+                result_data[sec_name][target_cat].append(item_obj)
+
+        if sec_name == 'attachmentData':
+            result_data[sec_name] = {k: v for k, v in result_data[sec_name].items() if len(v) > 0}
+            result_data[sec_name] = dict(sorted(result_data[sec_name].items()))
 
     # 10. Enrich magazine and weapon compatible calibers
     enrich_magazine_calibers(result_data['weaponsData'], result_data['attachmentData'])

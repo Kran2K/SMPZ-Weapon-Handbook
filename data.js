@@ -14074,7 +14074,7 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "200g",
-                "magnification": "1x"
+                "magnification": "3x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14643,7 +14643,7 @@ const attachmentData = {
             "manufacturerUrl": "https://www.eotechinc.com/",
             "stats": {
                 "weight": "200g",
-                "magnification": "1x"
+                "magnification": "3x"
             },
             "itemSize": "2x1",
             "itemSlots": 2,
@@ -14815,122 +14815,6 @@ const attachmentData = {
             ]
         },
         {
-            "id": "SMPZ_Attachments_Saiga_CSS_Rail",
-            "name": "Saiga-12 CSS rear sight rail mount",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "Saiga에만 장착 가능",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "30g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "SaigaRearsight"
-            ],
-            "attachmentSlots": [
-                "weaponOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_TigerShark_SightMount",
-            "name": "Glock Aimtech Tiger Shark sight mount",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "Glock 17에만 장착할 수 있습니다.",
-            "manufacturer": "Glock",
-            "manufacturerLogo": "assets/glock-logo.png",
-            "manufacturerUrl": "https://us.glock.com/",
-            "stats": {
-                "weight": "50g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "GlockMount"
-            ],
-            "attachmentSlots": [
-                "OpticsOnAKHndgrd"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_G36_Flip_up_Rail",
-            "name": "HK G36 optic rail with flip-up sights",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "HK G36에만 부착 가능",
-            "manufacturer": "Heckler & Koch",
-            "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en",
-            "stats": {
-                "weight": "453g",
-                "magnification": "1x"
-            },
-            "itemSize": "3x1",
-            "itemSlots": 3,
-            "inventorySlots": [
-                "G36Optic"
-            ],
-            "attachmentSlots": [
-                "weaponOptics",
-                "weaponFlashlightFirst"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AUG_M1_High_Mount",
-            "name": "Steyr AUG A3 M1 high sight mount",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "AUG A3에만 부착 가능",
-            "manufacturer": "Steyr Mannlicher",
-            "manufacturerLogo": "assets/steyr-logo.png",
-            "manufacturerUrl": "https://www.steyr-arms.com/en/",
-            "stats": {
-                "weight": "154g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AUGReceiver"
-            ],
-            "attachmentSlots": [
-                "weaponOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
-            "name": "M14 A.R.M.S. #18 scope mount",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "M1A에만 부착 가능",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "200g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M1AScopeMount"
-            ],
-            "attachmentSlots": [
-                "weaponOptics"
-            ]
-        },
-        {
             "id": "SMPZ_Optics_Vortex_UH1",
             "name": "Vortex Razor AMG UH-1 holographic sight",
             "category": "광학 조준경",
@@ -15091,26 +14975,6 @@ const attachmentData = {
             "inventorySlots": [
                 "pistolOptics",
                 "noMountRMROptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_M4_CarryHandle",
-            "name": "AR-15 rear sight carry handle",
-            "category": "광학 조준경",
-            "image": "",
-            "images": [],
-            "description": "AR15 시리즈 소총에만 장착 가능합니다.",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {
-                "weight": "150g",
-                "magnification": "1x"
-            },
-            "itemSize": "2x1",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics"
             ]
         },
         {
@@ -16657,9 +16521,49 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ]
+        },
+        {
+            "id": "SMPZ_Attachments_Glock_GripGlove",
+            "name": "Glock Pachmayr Tactical Grip Glove",
+            "category": "권총 손잡이",
+            "image": "",
+            "images": [],
+            "description": "Glock 17 및 Glock 18C에만 부착 가능",
+            "manufacturer": "Glock",
+            "manufacturerLogo": "assets/glock-logo.png",
+            "manufacturerUrl": "https://us.glock.com/",
+            "stats": {
+                "sway": "-10%",
+                "weight": "80g"
+            },
+            "itemSize": "1x2",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockGrip"
+            ]
         }
     ],
     "기계식 조준기": [
+        {
+            "id": "SMPZ_Optics_M4_CarryHandle",
+            "name": "AR-15 rear sight carry handle",
+            "category": "기계식 조준기",
+            "image": "",
+            "images": [],
+            "description": "AR15 시리즈 소총에만 장착 가능합니다.",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "150g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ]
+        },
         {
             "id": "SMPZ_Attachments_Leapers_UTG_A2_Frontsight",
             "name": "AR-15 Leapers UTG Low Profile A2 front sight",
@@ -18327,6 +18231,122 @@ const attachmentData = {
         }
     ],
     "마운트": [
+        {
+            "id": "SMPZ_Attachments_Saiga_CSS_Rail",
+            "name": "Saiga-12 CSS rear sight rail mount",
+            "category": "마운트",
+            "image": "",
+            "images": [],
+            "description": "Saiga에만 장착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "30g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "SaigaRearsight"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Attachments_TigerShark_SightMount",
+            "name": "Glock Aimtech Tiger Shark sight mount",
+            "category": "마운트",
+            "image": "",
+            "images": [],
+            "description": "Glock 17에만 장착할 수 있습니다.",
+            "manufacturer": "Glock",
+            "manufacturerLogo": "assets/glock-logo.png",
+            "manufacturerUrl": "https://us.glock.com/",
+            "stats": {
+                "weight": "50g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GlockMount"
+            ],
+            "attachmentSlots": [
+                "OpticsOnAKHndgrd"
+            ]
+        },
+        {
+            "id": "SMPZ_Attachments_G36_Flip_up_Rail",
+            "name": "HK G36 optic rail with flip-up sights",
+            "category": "마운트",
+            "image": "",
+            "images": [],
+            "description": "HK G36에만 부착 가능",
+            "manufacturer": "Heckler & Koch",
+            "manufacturerLogo": "assets/hk-logo.png",
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "stats": {
+                "weight": "453g",
+                "magnification": "1x"
+            },
+            "itemSize": "3x1",
+            "itemSlots": 3,
+            "inventorySlots": [
+                "G36Optic"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst"
+            ]
+        },
+        {
+            "id": "SMPZ_Attachments_AUG_M1_High_Mount",
+            "name": "Steyr AUG A3 M1 high sight mount",
+            "category": "마운트",
+            "image": "",
+            "images": [],
+            "description": "AUG A3에만 부착 가능",
+            "manufacturer": "Steyr Mannlicher",
+            "manufacturerLogo": "assets/steyr-logo.png",
+            "manufacturerUrl": "https://www.steyr-arms.com/en/",
+            "stats": {
+                "weight": "154g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AUGReceiver"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
+        },
+        {
+            "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
+            "name": "M14 A.R.M.S. #18 scope mount",
+            "category": "마운트",
+            "image": "",
+            "images": [],
+            "description": "M1A에만 부착 가능",
+            "manufacturer": "",
+            "manufacturerLogo": "",
+            "manufacturerUrl": "",
+            "stats": {
+                "weight": "200g",
+                "magnification": "1x"
+            },
+            "itemSize": "2x1",
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M1AScopeMount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics"
+            ]
+        },
         {
             "id": "SMPZ_Attachments_Leapers_UTG_Universal_Shotgun_Mount",
             "name": "Leapers UTG Universal Shotgun Barrel Mount",
@@ -24093,26 +24113,6 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_Glock_GripGlove",
-            "name": "Glock Pachmayr Tactical Grip Glove",
-            "category": "전방 손잡이",
-            "image": "",
-            "images": [],
-            "description": "Glock 17 및 Glock 18C에만 부착 가능",
-            "manufacturer": "Glock",
-            "manufacturerLogo": "assets/glock-logo.png",
-            "manufacturerUrl": "https://us.glock.com/",
-            "stats": {
-                "sway": "-10%",
-                "weight": "80g"
-            },
-            "itemSize": "1x2",
-            "itemSlots": 2,
-            "inventorySlots": [
-                "GlockGrip"
             ]
         }
     ],
