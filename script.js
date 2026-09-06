@@ -888,12 +888,12 @@ function switchPanel(panel) {
 
 function createWebSearchButton(itemName) {
     const link = document.createElement('a');
-    link.href = `https://www.google.com/search?q=${encodeURIComponent(itemName)}`;
+    link.href = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(itemName)}`;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.className = 'item-web-search-btn';
-    link.title = 'Google에서 검색';
-    link.setAttribute('aria-label', `${itemName} Google에서 검색`);
+    link.title = 'Google 이미지에서 검색';
+    link.setAttribute('aria-label', `${itemName} Google 이미지 검색`);
     link.innerHTML = `
         <svg class="item-web-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
