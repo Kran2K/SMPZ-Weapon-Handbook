@@ -549,6 +549,34 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             
         return '1x'
 
+    def classify_mount_type(item_obj):
+        att = [s.lower() for s in item_obj.get('attachmentSlots', [])]
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        item_id = item_obj.get('id', '').lower()
+        name = item_obj.get('name', '').lower()
+
+        # 1. 개머리판 어댑터: 개머리판/버퍼튜브 슬롯을 제공하거나 장착 위치가 버트스톡인 부품
+        if any('buffer' in s or 'stock' in s for s in att) or \
+           any('buttstock' in s for s in inv) or \
+           'stock_adapter' in item_id or 'buffer_adapter' in item_id:
+            return '개머리판 어댑터'
+
+        # 2. 바이포드 어댑터: 바이포드 슬롯을 제공하거나 바이포드 규격 변환 어댑터
+        if any('bipod' in s for s in att) or 'bipod_adapter' in item_id or 'bipod' in name:
+            return '바이포드 어댑터'
+
+        # 3. 플래시라이트 마운트: 조준경 슬롯 없이 순수하게 라이트/플래시 슬롯 및 링을 제공하는 마운트
+        has_optic_slot = any('optic' in s or 'aimpoint' in s or 'ffp3' in s for s in att)
+        if not has_optic_slot and (any('flashlight' in s or 'wf501b' in s for s in att) or 'ring_mount' in item_id or 'ring mount' in name or 'sprut' in name):
+            return '플래시라이트 마운트'
+
+        # 4. 기타 레일/패널: 조준경 슬롯 없이 레일 커버 패널 또는 손잡이(Grip) 전용 레일 조각
+        if not has_optic_slot and ('cover' in item_id or 'panel' in item_id or 'panel' in name or 'grip' in att):
+            return '기타 레일/패널'
+
+        # 5. 조준경 마운트: 조준경(Optics, RMR, Dovetail 등) 장착 슬롯을 제공하거나 관련 라이저/레일
+        return '조준경 마운트'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -585,7 +613,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'models_linked': 0,
         'slots_linked': 0,
         'protection_items': 0,
-        'optics_magnification': 0
+        'optics_magnification': 0,
+        'mount_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -727,6 +756,9 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         else:
                             target_cat = '광학 조준경'
                     item_obj['category'] = target_cat
+                    if target_cat == '마운트':
+                        item_obj['mountType'] = classify_mount_type(item_obj)
+                        stats_summary['mount_types'] += 1
 
                 if target_cat not in result_data[sec_name]:
                     result_data[sec_name][target_cat] = []
@@ -751,6 +783,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
+    print(f"    - 마운트 하위 분류(mountType) 연동: {stats_summary['mount_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 

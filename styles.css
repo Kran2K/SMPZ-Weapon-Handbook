@@ -761,6 +761,12 @@ body {
     color: #829f9f;
 }
 
+.core-spec-tag.spec-mount {
+    background: #161b22;
+    border-color: #283648;
+    color: #79a8d7;
+}
+
 .core-spec-tag.spec-capacity {
     background: #191919;
     border-color: #2f2f2f;

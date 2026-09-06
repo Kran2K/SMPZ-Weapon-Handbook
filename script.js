@@ -1632,6 +1632,10 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
+    if (cat === '마운트' && item.mountType) {
+        specs.push({ metricKey: 'mount_type', label: '분류', text: item.mountType, tagClass: 'spec-mount' });
+    }
+
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
     if (activeMetricKey && activeMetricKey !== 'name' && activeMetricKey !== 'category') {
         const alreadyHasMetric = specs.some(s => s.metricKey === activeMetricKey);
@@ -2119,6 +2123,87 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         container.appendChild(wrap);
         return;
     }
+
+    // 4. 마운트 전용 탭: 하위 분류 필터 칩 바
+    const isMountOnlyView = !isWeaponView && !isMagazineOnlyView && !isGearView && 
+        (categoryKey === '마운트' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '마운트')));
+
+    if (isMountOnlyView) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+
+        const mountRow = document.createElement('div');
+        mountRow.className = 'grid-filter-row';
+
+        const label = document.createElement('span');
+        label.className = 'grid-filter-row-label';
+        label.textContent = '마운트 분류:';
+        mountRow.appendChild(label);
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'grid-filter-chips-list';
+
+        const mountTypes = ['조준경 마운트', '개머리판 어댑터', '플래시라이트 마운트', '바이포드 어댑터', '기타 레일/패널'];
+        const mountCounts = {
+            'all': itemsToCheck.length
+        };
+        mountTypes.forEach(t => {
+            mountCounts[t] = itemsToCheck.filter(it => it.mountType === t).length;
+        });
+
+        const anySpecificActive = Array.from(currentGridActiveChips).some(id => id.startsWith('mount_') && id !== 'mount_all');
+
+        const subChips = [
+            { id: 'mount_all', label: `전체 (${mountCounts['all']})`, isAll: true },
+            ...mountTypes.filter(t => (mountCounts[t] || 0) > 0).map(t => ({
+                id: `mount_${t}`,
+                label: `${t} (${mountCounts[t]})`,
+                type: t
+            }))
+        ];
+
+        subChips.forEach(chip => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            const isActive = chip.isAll ? !anySpecificActive : currentGridActiveChips.has(chip.id);
+            btn.className = `grid-filter-chip ${isActive ? 'active' : ''}`;
+            btn.dataset.chipId = chip.id;
+            btn.innerHTML = `<span>${chip.label}</span>`;
+
+            btn.addEventListener('click', () => {
+                if (chip.isAll) {
+                    Array.from(currentGridActiveChips).forEach(id => {
+                        if (id.startsWith('mount_')) currentGridActiveChips.delete(id);
+                    });
+                } else {
+                    if (currentGridActiveChips.has(chip.id)) {
+                        currentGridActiveChips.delete(chip.id);
+                    } else {
+                        currentGridActiveChips.add(chip.id);
+                    }
+                }
+
+                const isAnySpecific = Array.from(currentGridActiveChips).some(id => id.startsWith('mount_') && id !== 'mount_all');
+                chipsWrap.querySelectorAll('.grid-filter-chip').forEach(b => {
+                    const cId = b.dataset.chipId;
+                    if (cId === 'mount_all') {
+                        b.classList.toggle('active', !isAnySpecific);
+                    } else {
+                        b.classList.toggle('active', currentGridActiveChips.has(cId));
+                    }
+                });
+
+                applyGridSortAndFilters();
+            });
+
+            chipsWrap.appendChild(btn);
+        });
+
+        mountRow.appendChild(chipsWrap);
+        wrap.appendChild(mountRow);
+        container.appendChild(wrap);
+        return;
+    }
 }
 
 // 그리드 정렬 및 필터 적용 메인 파이프라인
@@ -2140,12 +2225,17 @@ function applyGridSortAndFilters() {
         const activeCalibers = [];
         const activeModes = [];
         const activeGear = [];
+        const activeMounts = [];
 
         currentGridActiveChips.forEach(chipId => {
             if (chipId.startsWith('cal_')) {
                 activeCalibers.push(chipId.replace('cal_', ''));
             } else if (chipId.startsWith('mode_')) {
                 activeModes.push(chipId);
+            } else if (chipId.startsWith('mount_')) {
+                if (chipId !== 'mount_all') {
+                    activeMounts.push(chipId.replace('mount_', ''));
+                }
             } else {
                 activeGear.push(chipId);
             }
@@ -2176,6 +2266,13 @@ function applyGridSortAndFilters() {
                     return chip ? chip.filter(item) : true;
                 });
                 if (!passGear) return false;
+            }
+
+            // 2-4. 마운트 하위 분류 필터 (선택된 마운트 유형들 중 하나라도 일치하면 통과)
+            if (activeMounts.length > 0) {
+                if (!item.mountType || !activeMounts.includes(item.mountType)) {
+                    return false;
+                }
             }
 
             return true;
@@ -2284,6 +2381,8 @@ function initGridInlineSearch() {
             }
             currentGridActiveChips.clear();
             document.querySelectorAll('.grid-filter-chip').forEach(btn => btn.classList.remove('active'));
+            const mountAllBtn = document.querySelector('[data-chip-id="mount_all"]');
+            if (mountAllBtn) mountAllBtn.classList.add('active');
             currentGridSortMetric = 'name';
             currentGridSortOrder = 'asc';
             if (sortSelect) sortSelect.value = 'name';
