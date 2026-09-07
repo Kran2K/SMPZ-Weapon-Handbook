@@ -23726,7 +23726,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
@@ -23750,7 +23752,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "M-LOK 직결",
+            "subCategory": "M-LOK 직결"
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
@@ -23774,7 +23778,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "M-LOK 직결",
+            "subCategory": "M-LOK 직결"
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
@@ -23795,7 +23801,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "URXStopper"
-            ]
+            ],
+            "foregripType": "URX 전용 규격",
+            "subCategory": "URX 전용 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_Vertical_Grip",
@@ -23819,7 +23827,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip",
@@ -23843,7 +23853,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
@@ -23867,7 +23879,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_IRBIS_30AL_Grip",
@@ -23891,7 +23905,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_IRBIS_45AL_Grip",
@@ -23915,7 +23931,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
@@ -23939,7 +23957,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
@@ -23963,7 +23983,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip",
@@ -23987,7 +24009,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip_FDE",
@@ -24011,7 +24035,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -24035,7 +24061,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip_FDE",
@@ -24059,7 +24087,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip",
@@ -24083,7 +24113,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_DD_MLOK_Grip",
@@ -24107,7 +24139,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "M-LOK 직결",
+            "subCategory": "M-LOK 직결"
         },
         {
             "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
@@ -24131,7 +24165,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip",
@@ -24155,7 +24191,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip_FDE",
@@ -24179,7 +24217,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Shift_Grip",
@@ -24203,7 +24243,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
@@ -24227,7 +24269,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
@@ -24251,7 +24295,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_Black",
@@ -24275,7 +24321,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FDE",
@@ -24299,7 +24347,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FG",
@@ -24323,7 +24373,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_OD",
@@ -24347,7 +24399,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
@@ -24371,7 +24425,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_B25U_Grip",
@@ -24395,7 +24451,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK0_Grip",
@@ -24419,7 +24477,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK1_Grip",
@@ -24443,7 +24503,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK2_Grip",
@@ -24467,7 +24529,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK4_Grip",
@@ -24491,7 +24555,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK5_Grip",
@@ -24515,7 +24581,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK6_Grip",
@@ -24539,7 +24607,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "피카티니 레일 (20mm)",
+            "subCategory": "피카티니 레일 (20mm)"
         },
         {
             "id": "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip",
@@ -24563,7 +24633,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "foregripType": "KeyMod 직결",
+            "subCategory": "KeyMod 직결"
         }
     ],
     "전술 플래시": [

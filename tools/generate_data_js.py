@@ -620,6 +620,28 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return '턱/하안부 보호구'
         return '기타'
 
+    def classify_foregrip_type(item_obj, all_classes):
+        item_id = item_obj.get('id', '')
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+
+        curr = item_id
+        chain = []
+        visited = set()
+        while curr and curr not in visited and curr in all_classes:
+            visited.add(curr)
+            chain.append(curr)
+            curr = all_classes[curr].get('parent')
+
+        item_id_lower = item_id.lower()
+
+        if any('mlok' in c.lower() for c in chain) or '_mlok_' in item_id_lower:
+            return 'M-LOK 직결'
+        if any('keymod' in c.lower() for c in chain) or '_keymod_' in item_id_lower:
+            return 'KeyMod 직결'
+        if any('urxstopper' in s for s in inv) or 'stopper' in item_id_lower:
+            return 'URX 전용 규격'
+        return '피카티니 레일 (20mm)'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -661,7 +683,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'ironsight_types': 0,
         'pistolgrip_types': 0,
         'dotsight_types': 0,
-        'helmet_types': 0
+        'helmet_types': 0,
+        'foregrip_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -819,6 +842,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['dotType'] = classify_dotsight_type(item_obj)
                         item_obj['subCategory'] = item_obj['dotType']
                         stats_summary['dotsight_types'] += 1
+                    elif target_cat == '전방 손잡이':
+                        item_obj['foregripType'] = classify_foregrip_type(item_obj, all_classes)
+                        item_obj['subCategory'] = item_obj['foregripType']
+                        stats_summary['foregrip_types'] += 1
                 elif sec_name == 'gearData':
                     if target_cat == '헬멧 부착물':
                         item_obj['helmetPartType'] = classify_helmet_attachment_type(item_obj)
@@ -852,6 +879,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 기계식 조준기 분류(sightType) 연동: {stats_summary['ironsight_types']}개")
     print(f"    - 권총 손잡이 분류(gripPlatform) 연동: {stats_summary['pistolgrip_types']}개")
     print(f"    - 도트/홀로그램 분류(dotType) 연동:   {stats_summary['dotsight_types']}개")
+    print(f"    - 전방 손잡이 분류(foregripType) 연동: {stats_summary['foregrip_types']}개")
     print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
