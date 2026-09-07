@@ -16984,7 +16984,9 @@ const attachmentData = {
                 "GlockOptics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo8T",
@@ -17019,7 +17021,9 @@ const attachmentData = {
                 "GlockOptics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter_HCO",
@@ -17054,7 +17058,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_CompM4",
@@ -17089,7 +17095,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_OKP7",
@@ -17122,7 +17130,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_OKP7_Dovetail",
@@ -17143,7 +17153,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK",
                 "MK12Optics"
-            ]
+            ],
+            "dotType": "AK 도브테일 직결",
+            "subCategory": "AK 도브테일 직결"
         },
         {
             "id": "SMPZ_Optics_MRS",
@@ -17176,7 +17188,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Valday_PK120",
@@ -17209,7 +17223,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_EOTECH_553",
@@ -17242,7 +17258,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Burris_FastFire3_FFP",
@@ -17263,7 +17281,9 @@ const attachmentData = {
             "inventorySlots": [
                 "pistolOptics",
                 "FFP3"
-            ]
+            ],
+            "dotType": "권총 / 마이크로 도트",
+            "subCategory": "권총 / 마이크로 도트"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_T1",
@@ -17284,7 +17304,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "AimpointT1"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_H2",
@@ -17305,7 +17327,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "HydraOptics"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo4",
@@ -17326,7 +17350,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "HydraOptics"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SwampFox_Justice",
@@ -17347,7 +17373,9 @@ const attachmentData = {
             "inventorySlots": [
                 "pistolOptics",
                 "noMountRMROptics"
-            ]
+            ],
+            "dotType": "권총 / 마이크로 도트",
+            "subCategory": "권총 / 마이크로 도트"
         },
         {
             "id": "SMPZ_Optics_Trijicon_SRO",
@@ -17368,7 +17396,9 @@ const attachmentData = {
             "inventorySlots": [
                 "pistolOptics",
                 "noMountRMROptics"
-            ]
+            ],
+            "dotType": "권총 / 마이크로 도트",
+            "subCategory": "권총 / 마이크로 도트"
         },
         {
             "id": "SMPZ_Optics_Steiner_R1X",
@@ -17389,7 +17419,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "OpticsOnAKHndgrd"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
@@ -17410,7 +17442,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "OpticsOnAKHndgrd"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_ACRO_P1",
@@ -17430,7 +17464,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AimpointACRO"
-            ]
+            ],
+            "dotType": "권총 / 마이크로 도트",
+            "subCategory": "권총 / 마이크로 도트"
         },
         {
             "id": "SMPZ_Optics_Vortex_UH1",
@@ -17464,7 +17500,9 @@ const attachmentData = {
                 "weaponOpticsKobra",
                 "UNITYTOptics",
                 "G33MagnifierOptics"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_RMR",
@@ -17485,7 +17523,9 @@ const attachmentData = {
             "inventorySlots": [
                 "pistolOptics",
                 "noMountRMROptics"
-            ]
+            ],
+            "dotType": "권총 / 마이크로 도트",
+            "subCategory": "권총 / 마이크로 도트"
         },
         {
             "id": "SMPZ_Optics_EOTECH_EXPS3",
@@ -17523,7 +17563,9 @@ const attachmentData = {
                 "UNITYTOptics",
                 "G33MagnifierOptics",
                 "MagnifierCompatOptics"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_EOTECH_XPS3",
@@ -17558,7 +17600,9 @@ const attachmentData = {
                 "M32Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_BOSS",
@@ -17592,7 +17636,9 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra",
                 "UNITYTOptics"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_NPZ_Obzor",
@@ -17612,7 +17658,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "weaponOpticsAK"
-            ]
+            ],
+            "dotType": "AK 도브테일 직결",
+            "subCategory": "AK 도브테일 직결"
         },
         {
             "id": "SMPZ_Optics_PKAA",
@@ -17632,7 +17680,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "weaponOpticsAK"
-            ]
+            ],
+            "dotType": "AK 도브테일 직결",
+            "subCategory": "AK 도브테일 직결"
         },
         {
             "id": "SMPZ_Optics_EKP_1S",
@@ -17652,7 +17702,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "weaponOpticsAK"
-            ]
+            ],
+            "dotType": "AK 도브테일 직결",
+            "subCategory": "AK 도브테일 직결"
         },
         {
             "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
@@ -17677,7 +17729,9 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "dotType": "소총 / 피카티니 규격",
+            "subCategory": "소총 / 피카티니 규격"
         }
     ],
     "레이저 표적기": [

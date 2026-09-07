@@ -599,6 +599,15 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return 'AK 계열'
         return '기타 총기류'
 
+    def classify_dotsight_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        micro_slots = {'pistoloptics', 'nomountrmroptics', 'aimpointacro', 'ffp3'}
+        if any(s in micro_slots for s in inv):
+            return '권총 / 마이크로 도트'
+        if any('weaponopticsak' in s for s in inv) and not any(s == 'weaponoptics' for s in inv):
+            return 'AK 도브테일 직결'
+        return '소총 / 피카티니 규격'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -638,7 +647,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'optics_magnification': 0,
         'mount_types': 0,
         'ironsight_types': 0,
-        'pistolgrip_types': 0
+        'pistolgrip_types': 0,
+        'dotsight_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -792,6 +802,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['gripPlatform'] = classify_pistolgrip_type(item_obj)
                         item_obj['subCategory'] = item_obj['gripPlatform']
                         stats_summary['pistolgrip_types'] += 1
+                    elif target_cat == '도트/홀로그램':
+                        item_obj['dotType'] = classify_dotsight_type(item_obj)
+                        item_obj['subCategory'] = item_obj['dotType']
+                        stats_summary['dotsight_types'] += 1
 
                 if target_cat not in result_data[sec_name]:
                     result_data[sec_name][target_cat] = []
@@ -819,6 +833,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 마운트 하위 분류(mountType) 연동: {stats_summary['mount_types']}개")
     print(f"    - 기계식 조준기 분류(sightType) 연동: {stats_summary['ironsight_types']}개")
     print(f"    - 권총 손잡이 분류(gripPlatform) 연동: {stats_summary['pistolgrip_types']}개")
+    print(f"    - 도트/홀로그램 분류(dotType) 연동:   {stats_summary['dotsight_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 

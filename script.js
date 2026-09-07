@@ -1632,8 +1632,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform, tagClass: 'spec-mount' });
+    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType)) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType, tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -2224,6 +2224,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     if (isPistolGripOnlyView) {
         const gripTypes = ['AR-15 / M4 계열', 'AK 계열', '기타 총기류'];
         container.appendChild(createSubCategoryChipsRow('손잡이 분류', 'grip', gripTypes, itemsToCheck));
+        return;
+    }
+
+    // 7. 도트/홀로그램 전용 탭: 하위 분류 필터 칩 바
+    const isDotSightOnlyView = !isWeaponView && !isMagazineOnlyView && !isGearView && 
+        (categoryKey === '도트/홀로그램' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '도트/홀로그램')));
+
+    if (isDotSightOnlyView) {
+        const dotTypes = ['소총 / 피카티니 규격', '권총 / 마이크로 도트', 'AK 도브테일 직결'];
+        container.appendChild(createSubCategoryChipsRow('도트/홀로그램 분류', 'dot', dotTypes, itemsToCheck));
         return;
     }
 }
