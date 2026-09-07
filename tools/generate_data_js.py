@@ -605,8 +605,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         if any(s in micro_slots for s in inv):
             return '권총 / 마이크로 도트'
         if any('weaponopticsak' in s for s in inv) and not any(s == 'weaponoptics' for s in inv):
-            return 'AK 도브테일 직결'
-        return '소총 / 피카티니 규격'
+            return 'AK 도브테일'
+        return '피카티니 규격'
 
     def classify_helmet_attachment_type(item_obj):
         inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
@@ -617,7 +617,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         if any('helmetplate' in s for s in inv) or 'slaap' in item_id or 'helmetplate' in item_id:
             return '증가 장갑판'
         if any(s in ('mandible', 'afmlokchops') for s in inv) or 'mandible' in item_id or 'chops' in item_id:
-            return '턱/하안부 보호구'
+            return '턱 보호구'
         return '기타'
 
     def classify_foregrip_type(item_obj, all_classes):
@@ -635,12 +635,12 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         item_id_lower = item_id.lower()
 
         if any('mlok' in c.lower() for c in chain) or '_mlok_' in item_id_lower:
-            return 'M-LOK 직결'
+            return 'M-LOK 규격'
         if any('keymod' in c.lower() for c in chain) or '_keymod_' in item_id_lower:
-            return 'KeyMod 직결'
+            return 'KeyMod 규격'
         if any('urxstopper' in s for s in inv) or 'stopper' in item_id_lower:
-            return 'URX 전용 규격'
-        return '피카티니 레일 (20mm)'
+            return 'URX 규격'
+        return '피카티니 규격'
 
     def classify_receiver_type(item_obj):
         inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
@@ -661,7 +661,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         name = item_obj.get('name', '').lower()
 
         if any(s in ('chassis', 'mosinstock', 'sksstock', 'm1achassis', 'cncchassis', 'cncstock') for s in inv) or 'chassis' in name or 'monte carlo' in name or 'mod*x' in name:
-            return '정밀 저격 / 샤시 일체형'
+            return '샤시 일체형'
         if any('ak' in s or 'rpk' in s for s in inv) or ('cqr47' in item_id) or 'akzenit' in item_id:
             return 'AK 계열 규격'
         if any(s in ('arbuttstock', 'arbuttstocksecond', 'weaponbuttstockm4', 'arbuffer', 'prsstock', 'umsbuttstock') for s in inv) or ('cqr' in item_id and 'cqr47' not in item_id) or 'ar-15' in name or 'ar 15' in name:
@@ -695,28 +695,28 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         name = item_obj.get('name', '').lower()
 
         if 'multi-caliber' in name or 'hybrid 46' in name or len(inv) >= 4 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
-            return '멀티 캘리버 (다목적 규격)'
+            return '멀티 캘리버'
 
         big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor'}
         if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name:
-            return '대구경 / 저격총 / 샷건'
+            return '대구경 / 산탄총 규격'
 
         if '5.56' in name or '556' in name or 'weaponmuzzlem4' in inv or 'augmuzzle' in inv:
-            return '5.56mm 소총 전용'
+            return '5.56mm / AR-15 규격'
 
         smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor'}
         if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name:
-            return '권총 / SMG 전용'
+            return '권총 / SMG / 기타'
 
         ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle'}
         if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name:
-            return 'AK 계열 전용'
+            return 'AK 계열 규격'
 
         rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor', 'pkmsuppressor', 'pkpsuppressor'}
         if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'pkm' in name or 'pkp' in name:
-            return '7.62mm / 전투소총 전용'
+            return '7.62mm / AR-10 규격'
 
-        return '5.56mm 소총 전용'
+        return '5.56mm / AR-15 규격'
 
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {

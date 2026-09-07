@@ -2151,7 +2151,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     // 3. 기어 탭: 방탄 / 수납 공간 보유
     if (isGearView) {
         if (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물'))) {
-            const helmTypes = ['안면 바이저', '증가 장갑판', '턱/하안부 보호구', '기타'];
+            const helmTypes = ['안면 바이저', '증가 장갑판', '턱 보호구', '기타'];
             container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
             return;
         }
@@ -2230,7 +2230,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '도트/홀로그램' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '도트/홀로그램')));
 
     if (isDotSightOnlyView) {
-        const dotTypes = ['소총 / 피카티니 규격', '권총 / 마이크로 도트', 'AK 도브테일 직결'];
+        const dotTypes = ['피카티니 규격', '권총 / 마이크로 도트', 'AK 도브테일'];
         container.appendChild(createSubCategoryChipsRow('도트/홀로그램 분류', 'dot', dotTypes, itemsToCheck));
         return;
     }
@@ -2240,7 +2240,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물')));
 
     if (isHelmetAttachmentOnlyView) {
-        const helmTypes = ['안면 바이저', '증가 장갑판', '턱/하안부 보호구', '기타'];
+        const helmTypes = ['안면 바이저', '증가 장갑판', '턱 보호구', '기타'];
         container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
         return;
     }
@@ -2250,7 +2250,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '전방 손잡이' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '전방 손잡이')));
 
     if (isForegripOnlyView) {
-        const foregripTypes = ['피카티니 레일 (20mm)', 'M-LOK 직결', 'KeyMod 직결', 'URX 전용 규격'];
+        const foregripTypes = ['피카티니 규격', 'M-LOK 규격', 'KeyMod 규격', 'URX 규격'];
         container.appendChild(createSubCategoryChipsRow('손잡이 규격', 'fgrip', foregripTypes, itemsToCheck));
         return;
     }
@@ -2270,7 +2270,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '개머리판' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '개머리판')));
 
     if (isStockOnlyView) {
-        const stockTypes = ['AR-15 / 버퍼 튜브 규격', '전용 총기 규격', 'AK 계열 규격', '정밀 저격 / 샤시 일체형'];
+        const stockTypes = ['AR-15 / 버퍼 튜브 규격', '전용 총기 규격', 'AK 계열 규격', '샤시 일체형'];
         container.appendChild(createSubCategoryChipsRow('개머리판 규격', 'stk', stockTypes, itemsToCheck));
         return;
     }
@@ -2290,7 +2290,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '소음기' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '소음기')));
 
     if (isSuppressorOnlyView) {
-        const suppressorTypes = ['대구경 / 저격총 / 샷건', '5.56mm 소총 전용', '7.62mm / 전투소총 전용', '멀티 캘리버 (다목적 규격)', '권총 / SMG 전용', 'AK 계열 전용'];
+        const suppressorTypes = ['5.56mm / AR-15 규격', '7.62mm / AR-10 규격', '대구경 / 산탄총 규격', '멀티 캘리버', '권총 / SMG / 기타', 'AK 계열 규격'];
         container.appendChild(createSubCategoryChipsRow('소음기 규격', 'sup', suppressorTypes, itemsToCheck));
         return;
     }

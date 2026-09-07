@@ -9961,8 +9961,8 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "helmetPartType": "턱/하안부 보호구",
-            "subCategory": "턱/하안부 보호구"
+            "helmetPartType": "턱 보호구",
+            "subCategory": "턱 보호구"
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
@@ -9986,8 +9986,8 @@ const gearData = {
             "inventorySlots": [
                 "AFMLOKChops"
             ],
-            "helmetPartType": "턱/하안부 보호구",
-            "subCategory": "턱/하안부 보호구"
+            "helmetPartType": "턱 보호구",
+            "subCategory": "턱 보호구"
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
@@ -10072,8 +10072,8 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "helmetPartType": "턱/하안부 보호구",
-            "subCategory": "턱/하안부 보호구"
+            "helmetPartType": "턱 보호구",
+            "subCategory": "턱 보호구"
         },
         {
             "id": "SMPZ_Visor_FORT_KiverM",
@@ -10203,8 +10203,8 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "helmetPartType": "턱/하안부 보호구",
-            "subCategory": "턱/하안부 보호구"
+            "helmetPartType": "턱 보호구",
+            "subCategory": "턱 보호구"
         },
         {
             "id": "SMPZ_Visor_Maska_Green",
@@ -10303,8 +10303,8 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "helmetPartType": "턱/하안부 보호구",
-            "subCategory": "턱/하안부 보호구"
+            "helmetPartType": "턱 보호구",
+            "subCategory": "턱 보호구"
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -12872,8 +12872,8 @@ const attachmentData = {
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/",
             "stats": {},
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_Masada_Folding_Buttstock",
@@ -13753,8 +13753,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_SKS_ATI_Monte_Carlo_Stock",
@@ -13776,8 +13776,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SKSStock"
             ],
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_AK_EVO_Buttstock",
@@ -14002,8 +14002,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "Bipod"
             ],
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Stock",
@@ -14048,8 +14048,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CNCChassis"
             ],
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Stock",
@@ -14071,8 +14071,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CNCStock"
             ],
-            "stockType": "정밀 저격 / 샤시 일체형",
-            "subCategory": "정밀 저격 / 샤시 일체형"
+            "stockType": "샤시 일체형",
+            "subCategory": "샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock",
@@ -17187,8 +17187,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo8T",
@@ -17224,8 +17224,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Elcan_Specter_HCO",
@@ -17261,8 +17261,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_CompM4",
@@ -17298,8 +17298,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_OKP7",
@@ -17333,8 +17333,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_OKP7_Dovetail",
@@ -17356,8 +17356,8 @@ const attachmentData = {
                 "weaponOpticsAK",
                 "MK12Optics"
             ],
-            "dotType": "AK 도브테일 직결",
-            "subCategory": "AK 도브테일 직결"
+            "dotType": "AK 도브테일",
+            "subCategory": "AK 도브테일"
         },
         {
             "id": "SMPZ_Optics_MRS",
@@ -17391,8 +17391,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Valday_PK120",
@@ -17426,8 +17426,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_EOTECH_553",
@@ -17461,8 +17461,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Burris_FastFire3_FFP",
@@ -17507,8 +17507,8 @@ const attachmentData = {
                 "weaponOptics",
                 "AimpointT1"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_H2",
@@ -17530,8 +17530,8 @@ const attachmentData = {
                 "weaponOptics",
                 "HydraOptics"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SIG_Romeo4",
@@ -17553,8 +17553,8 @@ const attachmentData = {
                 "weaponOptics",
                 "HydraOptics"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_SwampFox_Justice",
@@ -17622,8 +17622,8 @@ const attachmentData = {
                 "weaponOptics",
                 "OpticsOnAKHndgrd"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
@@ -17645,8 +17645,8 @@ const attachmentData = {
                 "weaponOptics",
                 "OpticsOnAKHndgrd"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_Aimpoint_ACRO_P1",
@@ -17703,8 +17703,8 @@ const attachmentData = {
                 "UNITYTOptics",
                 "G33MagnifierOptics"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_RMR",
@@ -17766,8 +17766,8 @@ const attachmentData = {
                 "G33MagnifierOptics",
                 "MagnifierCompatOptics"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_EOTECH_XPS3",
@@ -17803,8 +17803,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_BOSS",
@@ -17839,8 +17839,8 @@ const attachmentData = {
                 "weaponOpticsKobra",
                 "UNITYTOptics"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Optics_NPZ_Obzor",
@@ -17861,8 +17861,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "dotType": "AK 도브테일 직결",
-            "subCategory": "AK 도브테일 직결"
+            "dotType": "AK 도브테일",
+            "subCategory": "AK 도브테일"
         },
         {
             "id": "SMPZ_Optics_PKAA",
@@ -17883,8 +17883,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "dotType": "AK 도브테일 직결",
-            "subCategory": "AK 도브테일 직결"
+            "dotType": "AK 도브테일",
+            "subCategory": "AK 도브테일"
         },
         {
             "id": "SMPZ_Optics_EKP_1S",
@@ -17905,8 +17905,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "dotType": "AK 도브테일 직결",
-            "subCategory": "AK 도브테일 직결"
+            "dotType": "AK 도브테일",
+            "subCategory": "AK 도브테일"
         },
         {
             "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
@@ -17932,8 +17932,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "dotType": "소총 / 피카티니 규격",
-            "subCategory": "소총 / 피카티니 규격"
+            "dotType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         }
     ],
     "레이저 표적기": [
@@ -22516,8 +22516,8 @@ const attachmentData = {
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor",
@@ -22538,8 +22538,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
@@ -22560,8 +22560,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_CQB_556_Suppressor",
@@ -22582,8 +22582,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Salvo12_12ga_Suppressor",
@@ -22604,8 +22604,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Rotor43_366TKM_Suppressor",
@@ -22626,8 +22626,8 @@ const attachmentData = {
             "inventorySlots": [
                 "366Muzzle"
             ],
-            "suppressorType": "AK 계열 전용",
-            "subCategory": "AK 계열 전용"
+            "suppressorType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_MSR_300Winchester_Suppressor",
@@ -22648,8 +22648,8 @@ const attachmentData = {
             "inventorySlots": [
                 "300WinSuppressor"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_Suppressor",
@@ -22670,8 +22670,8 @@ const attachmentData = {
             "inventorySlots": [
                 "338Muzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -22692,8 +22692,8 @@ const attachmentData = {
             "inventorySlots": [
                 "338Muzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_PRS_QDC_762x51_Suppressor",
@@ -22715,8 +22715,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
@@ -22737,8 +22737,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
@@ -22759,8 +22759,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_Barrett_50BMG_Suppressor",
@@ -22781,8 +22781,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M107A1Muzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_AMF_408_Suppressor",
@@ -22803,8 +22803,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Muzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_AAC_SDN6_Multi_Caliber_Suppressor",
@@ -22828,8 +22828,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
@@ -22852,8 +22852,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_AEM5_556_Suppressor",
@@ -22875,8 +22875,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_Osprey45_Suppressor",
@@ -22898,8 +22898,8 @@ const attachmentData = {
             "inventorySlots": [
                 "45ACPSuppressor"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_PKM_DTKP_Suppressor",
@@ -22921,8 +22921,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKMSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_PKP_DTKP_Suppressor",
@@ -22944,8 +22944,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKPSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
@@ -22968,8 +22968,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
@@ -22993,8 +22993,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_AAC_9x19_Suppressor",
@@ -23017,8 +23017,8 @@ const attachmentData = {
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_AUG_SL7i_Suppressor",
@@ -23040,8 +23040,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AUGMuzzle"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_AWC_Multi_Caliber_Suppressor",
@@ -23065,8 +23065,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_Mosin_Bramit_Suppressor",
@@ -23088,8 +23088,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MosinSuppressor"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_FD917_Suppressor",
@@ -23114,8 +23114,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_Hexagon_12ga_Suppressor",
@@ -23137,8 +23137,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor",
@@ -23171,8 +23171,8 @@ const attachmentData = {
                 "AUGMuzzle",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
@@ -23205,8 +23205,8 @@ const attachmentData = {
                 "AUGMuzzle",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_M4SD_556_Suppressor",
@@ -23228,8 +23228,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SureFire_Monster556_Mini_Suppressor",
@@ -23252,8 +23252,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "MP7SureFireSuppressor"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
@@ -23276,8 +23276,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "MP7SureFireSuppressor"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_MPX_SD_Suppressor",
@@ -23299,8 +23299,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MPXSD"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_Omega_45ACP_Suppressor",
@@ -23322,8 +23322,8 @@ const attachmentData = {
             "inventorySlots": [
                 "45ACPSuppressor"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_Gemtech_ONE_Multi_Caliber_Suppressor",
@@ -23347,8 +23347,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_Osprey9_9x19_Suppressor",
@@ -23371,8 +23371,8 @@ const attachmentData = {
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_P90_Suppressor",
@@ -23394,8 +23394,8 @@ const attachmentData = {
             "inventorySlots": [
                 "P90Suppressor"
             ],
-            "suppressorType": "권총 / SMG 전용",
-            "subCategory": "권총 / SMG 전용"
+            "suppressorType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_AK_PBS1_762x39_Suppressor",
@@ -23417,8 +23417,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAKM"
             ],
-            "suppressorType": "AK 계열 전용",
-            "subCategory": "AK 계열 전용"
+            "suppressorType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_PBS4_545x39_Suppressor",
@@ -23440,8 +23440,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "suppressorType": "AK 계열 전용",
-            "subCategory": "AK 계열 전용"
+            "suppressorType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
@@ -23463,8 +23463,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "suppressorType": "5.56mm 소총 전용",
-            "subCategory": "5.56mm 소총 전용"
+            "suppressorType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SRD762QD",
@@ -23488,8 +23488,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_SRD762TI",
@@ -23513,8 +23513,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "7.62mm / 전투소총 전용",
-            "subCategory": "7.62mm / 전투소총 전용"
+            "suppressorType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_SV98_Suppressor",
@@ -23536,8 +23536,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SV98Suppressor"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_TSM_338_Suppressor",
@@ -23559,8 +23559,8 @@ const attachmentData = {
             "inventorySlots": [
                 "338Muzzle"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Ultra5_Multi_Caliber_556Suppressor",
@@ -23584,8 +23584,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_AK_Hexagon_Waffle_545x39_Suppressor",
@@ -23607,8 +23607,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "suppressorType": "AK 계열 전용",
-            "subCategory": "AK 계열 전용"
+            "suppressorType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_WAVE_Multi_Caliber_Suppressor",
@@ -23632,8 +23632,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "suppressorType": "멀티 캘리버 (다목적 규격)",
-            "subCategory": "멀티 캘리버 (다목적 규격)"
+            "suppressorType": "멀티 캘리버",
+            "subCategory": "멀티 캘리버"
         },
         {
             "id": "SMPZ_Attachments_338Suppressor",
@@ -23656,8 +23656,8 @@ const attachmentData = {
                 "308Suppressor",
                 "338Suppressor"
             ],
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "Slot_338Suppressor",
@@ -23671,8 +23671,8 @@ const attachmentData = {
             "manufacturerUrl": "",
             "stats": {},
             "inventorySlots": "338Suppressor",
-            "suppressorType": "대구경 / 저격총 / 샷건",
-            "subCategory": "대구경 / 저격총 / 샷건"
+            "suppressorType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         }
     ],
     "양각대": [
@@ -24163,8 +24163,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
@@ -24189,8 +24189,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "M-LOK 직결",
-            "subCategory": "M-LOK 직결"
+            "foregripType": "M-LOK 규격",
+            "subCategory": "M-LOK 규격"
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
@@ -24215,8 +24215,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "M-LOK 직결",
-            "subCategory": "M-LOK 직결"
+            "foregripType": "M-LOK 규격",
+            "subCategory": "M-LOK 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
@@ -24238,8 +24238,8 @@ const attachmentData = {
             "inventorySlots": [
                 "URXStopper"
             ],
-            "foregripType": "URX 전용 규격",
-            "subCategory": "URX 전용 규격"
+            "foregripType": "URX 규격",
+            "subCategory": "URX 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_Vertical_Grip",
@@ -24264,8 +24264,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip",
@@ -24290,8 +24290,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
@@ -24316,8 +24316,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_IRBIS_30AL_Grip",
@@ -24342,8 +24342,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_IRBIS_45AL_Grip",
@@ -24368,8 +24368,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
@@ -24394,8 +24394,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
@@ -24420,8 +24420,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip",
@@ -24446,8 +24446,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_SE5_Grip_FDE",
@@ -24472,8 +24472,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -24498,8 +24498,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip_FDE",
@@ -24524,8 +24524,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip",
@@ -24550,8 +24550,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_DD_MLOK_Grip",
@@ -24576,8 +24576,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "M-LOK 직결",
-            "subCategory": "M-LOK 직결"
+            "foregripType": "M-LOK 규격",
+            "subCategory": "M-LOK 규격"
         },
         {
             "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
@@ -24602,8 +24602,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip",
@@ -24628,8 +24628,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip_FDE",
@@ -24654,8 +24654,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Shift_Grip",
@@ -24680,8 +24680,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
@@ -24706,8 +24706,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
@@ -24732,8 +24732,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_Black",
@@ -24758,8 +24758,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FDE",
@@ -24784,8 +24784,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_FG",
@@ -24810,8 +24810,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_OD",
@@ -24836,8 +24836,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
@@ -24862,8 +24862,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_B25U_Grip",
@@ -24888,8 +24888,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK0_Grip",
@@ -24914,8 +24914,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK1_Grip",
@@ -24940,8 +24940,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK2_Grip",
@@ -24966,8 +24966,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK4_Grip",
@@ -24992,8 +24992,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK5_Grip",
@@ -25018,8 +25018,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_RK6_Grip",
@@ -25044,8 +25044,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "피카티니 레일 (20mm)",
-            "subCategory": "피카티니 레일 (20mm)"
+            "foregripType": "피카티니 규격",
+            "subCategory": "피카티니 규격"
         },
         {
             "id": "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip",
@@ -25070,8 +25070,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "foregripType": "KeyMod 직결",
-            "subCategory": "KeyMod 직결"
+            "foregripType": "KeyMod 규격",
+            "subCategory": "KeyMod 규격"
         }
     ],
     "전술 플래시": [
