@@ -14803,7 +14803,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SA58Pistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_SA58_SAW_Style_pistolgrip",
@@ -14824,7 +14826,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SA58Pistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_AK_PUFGUN_SG_M2_pistolgrip",
@@ -14845,7 +14849,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_Orion_pistolgrip",
@@ -14865,7 +14871,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_TD_HEX_pistolgrip",
@@ -14885,7 +14893,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Colt_A1_pistolgrip",
@@ -14905,7 +14915,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_TD_Skeletonzied_pistolgrip",
@@ -14925,7 +14937,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Sierra_Precision_SPR_pistolgrip",
@@ -14945,7 +14959,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
@@ -14965,7 +14981,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip",
@@ -14985,7 +15003,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
@@ -15005,7 +15025,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_SIG_MCX_pistolgrip",
@@ -15025,7 +15047,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_SIG_MPX_pistolgrip",
@@ -15045,7 +15069,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_Gladman_Skeleton_pistolgrip",
@@ -15066,7 +15092,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
@@ -15086,7 +15114,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Yellow",
@@ -15106,7 +15136,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Zenit_RK3_pistolgrip",
@@ -15127,7 +15159,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "VALAdapter"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
@@ -15149,7 +15183,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "M60Pistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip_Group",
@@ -15171,7 +15207,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "M60Pistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip",
@@ -15188,7 +15226,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M60Pistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
@@ -15208,7 +15248,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip_MilSpec",
@@ -15228,7 +15270,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip_UCP",
@@ -15252,7 +15296,9 @@ const attachmentData = {
                 "GripCASV",
                 "GripThird",
                 "GripFourth"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_AGS74_pistolgrip",
@@ -15272,7 +15318,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_Ergo_pistolgrip",
@@ -15292,7 +15340,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY1_pistolgrip",
@@ -15312,7 +15362,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_pistolgrip",
@@ -15332,7 +15384,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_PC_pistolgrip",
@@ -15352,7 +15406,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_MOE_pistolgrip",
@@ -15372,7 +15428,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Naroh_pistolgrip",
@@ -15392,7 +15450,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_RK3_pistolgrip",
@@ -15412,7 +15472,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip",
@@ -15432,7 +15494,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_FDE",
@@ -15452,7 +15516,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GE",
@@ -15472,7 +15538,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GG",
@@ -15492,7 +15560,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_OD",
@@ -15512,7 +15582,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_HG15_pistolgrip",
@@ -15532,7 +15604,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
@@ -15552,7 +15626,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip_FDE",
@@ -15572,7 +15648,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
@@ -15592,7 +15670,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip_FDE",
@@ -15612,7 +15692,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
@@ -15632,7 +15714,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
@@ -15652,7 +15736,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AK 계열",
+            "subCategory": "AK 계열"
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_pistolgrip",
@@ -15672,7 +15758,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "UltimaPistolgrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip",
@@ -15692,7 +15780,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip_FDE",
@@ -15712,7 +15802,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_DLG123_pistolgrip",
@@ -15732,7 +15824,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip",
@@ -15752,7 +15846,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip_Black",
@@ -15772,7 +15868,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip",
@@ -15792,7 +15890,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "gripPlatform": "AR-15 / M4 계열",
+            "subCategory": "AR-15 / M4 계열"
         },
         {
             "id": "SMPZ_Attachments_Glock_GripGlove",
@@ -15812,7 +15912,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "GlockGrip"
-            ]
+            ],
+            "gripPlatform": "기타 총기류",
+            "subCategory": "기타 총기류"
         }
     ],
     "기계식 조준기": [

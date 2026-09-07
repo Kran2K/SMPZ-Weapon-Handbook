@@ -588,6 +588,17 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return '가늠쇠'
         return '가늠자'
 
+    def classify_pistolgrip_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        item_id = item_obj.get('id', '').lower()
+        name = item_obj.get('name', '').lower()
+
+        if any('arpistolgrip' in s for s in inv) or 'ar15_' in item_id or 'm4_' in item_id:
+            return 'AR-15 / M4 계열'
+        if any('akpistolgrip' in s for s in inv) or 'ak_' in item_id or 'akm_' in item_id or 'ak74_' in item_id or 'ak-' in name or 'akm' in name or 'ak ' in name:
+            return 'AK 계열'
+        return '기타 총기류'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -626,7 +637,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'protection_items': 0,
         'optics_magnification': 0,
         'mount_types': 0,
-        'ironsight_types': 0
+        'ironsight_types': 0,
+        'pistolgrip_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -776,6 +788,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['sightType'] = classify_ironsight_type(item_obj)
                         item_obj['subCategory'] = item_obj['sightType']
                         stats_summary['ironsight_types'] += 1
+                    elif target_cat == '권총 손잡이':
+                        item_obj['gripPlatform'] = classify_pistolgrip_type(item_obj)
+                        item_obj['subCategory'] = item_obj['gripPlatform']
+                        stats_summary['pistolgrip_types'] += 1
 
                 if target_cat not in result_data[sec_name]:
                     result_data[sec_name][target_cat] = []
@@ -802,6 +818,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 마운트 하위 분류(mountType) 연동: {stats_summary['mount_types']}개")
     print(f"    - 기계식 조준기 분류(sightType) 연동: {stats_summary['ironsight_types']}개")
+    print(f"    - 권총 손잡이 분류(gripPlatform) 연동: {stats_summary['pistolgrip_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 

@@ -1632,8 +1632,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기') && (item.subCategory || item.mountType || item.sightType)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType, tagClass: 'spec-mount' });
+    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform)) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform, tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -2214,6 +2214,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     if (isIronSightOnlyView) {
         const sightTypes = ['가늠자', '가늠쇠', '캐링 핸들'];
         container.appendChild(createSubCategoryChipsRow('조준기 분류', 'sight', sightTypes, itemsToCheck));
+        return;
+    }
+
+    // 6. 권총 손잡이 전용 탭: 하위 분류 필터 칩 바
+    const isPistolGripOnlyView = !isWeaponView && !isMagazineOnlyView && !isGearView && 
+        (categoryKey === '권총 손잡이' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '권총 손잡이')));
+
+    if (isPistolGripOnlyView) {
+        const gripTypes = ['AR-15 / M4 계열', 'AK 계열', '기타 총기류'];
+        container.appendChild(createSubCategoryChipsRow('손잡이 분류', 'grip', gripTypes, itemsToCheck));
         return;
     }
 }
