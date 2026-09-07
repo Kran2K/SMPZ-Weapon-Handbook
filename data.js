@@ -22515,7 +22515,9 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor",
@@ -22535,7 +22537,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
@@ -22555,7 +22559,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_CQB_556_Suppressor",
@@ -22575,7 +22581,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_Salvo12_12ga_Suppressor",
@@ -22595,7 +22603,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "12gaMuzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_Rotor43_366TKM_Suppressor",
@@ -22615,7 +22625,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "366Muzzle"
-            ]
+            ],
+            "suppressorType": "AK 계열 전용",
+            "subCategory": "AK 계열 전용"
         },
         {
             "id": "SMPZ_Attachments_MSR_300Winchester_Suppressor",
@@ -22635,7 +22647,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "300WinSuppressor"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_Suppressor",
@@ -22655,7 +22669,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -22675,7 +22691,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_KAC_PRS_QDC_762x51_Suppressor",
@@ -22696,7 +22714,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
@@ -22716,7 +22736,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "762Suppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
@@ -22736,7 +22758,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "762Suppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_Barrett_50BMG_Suppressor",
@@ -22756,7 +22780,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "M107A1Muzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_AMF_408_Suppressor",
@@ -22776,7 +22802,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "M200Muzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_AAC_SDN6_Multi_Caliber_Suppressor",
@@ -22799,7 +22827,9 @@ const attachmentData = {
                 "762Suppressor",
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
@@ -22821,7 +22851,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_AEM5_556_Suppressor",
@@ -22842,7 +22874,9 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_Osprey45_Suppressor",
@@ -22863,7 +22897,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "45ACPSuppressor"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_PKM_DTKP_Suppressor",
@@ -22884,7 +22920,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "PKMSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_PKP_DTKP_Suppressor",
@@ -22905,7 +22943,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "PKPSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
@@ -22927,7 +22967,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
@@ -22950,7 +22992,9 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_AAC_9x19_Suppressor",
@@ -22972,7 +23016,9 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_AUG_SL7i_Suppressor",
@@ -22993,7 +23039,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "AUGMuzzle"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_AWC_Multi_Caliber_Suppressor",
@@ -23016,7 +23064,9 @@ const attachmentData = {
                 "762Suppressor",
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_Mosin_Bramit_Suppressor",
@@ -23037,7 +23087,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "MosinSuppressor"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_FD917_Suppressor",
@@ -23061,7 +23113,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponFlashlight"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_Hexagon_12ga_Suppressor",
@@ -23082,7 +23136,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "12gaMuzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor",
@@ -23114,7 +23170,9 @@ const attachmentData = {
                 "GlockSuppressorSecond",
                 "AUGMuzzle",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
@@ -23146,7 +23204,9 @@ const attachmentData = {
                 "GlockSuppressorSecond",
                 "AUGMuzzle",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_M4SD_556_Suppressor",
@@ -23167,7 +23227,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SureFire_Monster556_Mini_Suppressor",
@@ -23189,7 +23251,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4",
                 "MP7SureFireSuppressor"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
@@ -23211,7 +23275,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4",
                 "MP7SureFireSuppressor"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_MPX_SD_Suppressor",
@@ -23232,7 +23298,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "MPXSD"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_Omega_45ACP_Suppressor",
@@ -23253,7 +23321,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "45ACPSuppressor"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_Gemtech_ONE_Multi_Caliber_Suppressor",
@@ -23276,7 +23346,9 @@ const attachmentData = {
                 "762Suppressor",
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_Osprey9_9x19_Suppressor",
@@ -23298,7 +23370,9 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_P90_Suppressor",
@@ -23319,7 +23393,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "P90Suppressor"
-            ]
+            ],
+            "suppressorType": "권총 / SMG 전용",
+            "subCategory": "권총 / SMG 전용"
         },
         {
             "id": "SMPZ_Attachments_AK_PBS1_762x39_Suppressor",
@@ -23340,7 +23416,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleAKM"
-            ]
+            ],
+            "suppressorType": "AK 계열 전용",
+            "subCategory": "AK 계열 전용"
         },
         {
             "id": "SMPZ_Attachments_AK_PBS4_545x39_Suppressor",
@@ -23361,7 +23439,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleAK74"
-            ]
+            ],
+            "suppressorType": "AK 계열 전용",
+            "subCategory": "AK 계열 전용"
         },
         {
             "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
@@ -23382,7 +23462,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "suppressorType": "5.56mm 소총 전용",
+            "subCategory": "5.56mm 소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SRD762QD",
@@ -23405,7 +23487,9 @@ const attachmentData = {
                 "MCXSuppressor",
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SRD762TI",
@@ -23428,7 +23512,9 @@ const attachmentData = {
                 "MCXSuppressor",
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "7.62mm / 전투소총 전용",
+            "subCategory": "7.62mm / 전투소총 전용"
         },
         {
             "id": "SMPZ_Attachments_SV98_Suppressor",
@@ -23449,7 +23535,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SV98Suppressor"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_TSM_338_Suppressor",
@@ -23470,7 +23558,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "SMPZ_Attachments_Ultra5_Multi_Caliber_556Suppressor",
@@ -23493,7 +23583,9 @@ const attachmentData = {
                 "762Suppressor",
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_AK_Hexagon_Waffle_545x39_Suppressor",
@@ -23514,7 +23606,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "weaponMuzzleAK74"
-            ]
+            ],
+            "suppressorType": "AK 계열 전용",
+            "subCategory": "AK 계열 전용"
         },
         {
             "id": "SMPZ_Attachments_WAVE_Multi_Caliber_Suppressor",
@@ -23537,7 +23631,9 @@ const attachmentData = {
                 "762Suppressor",
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
-            ]
+            ],
+            "suppressorType": "멀티 캘리버 (다목적 규격)",
+            "subCategory": "멀티 캘리버 (다목적 규격)"
         },
         {
             "id": "SMPZ_Attachments_338Suppressor",
@@ -23559,7 +23655,9 @@ const attachmentData = {
             "inventorySlots": [
                 "308Suppressor",
                 "338Suppressor"
-            ]
+            ],
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         },
         {
             "id": "Slot_338Suppressor",
@@ -23572,7 +23670,9 @@ const attachmentData = {
             "manufacturerLogo": "",
             "manufacturerUrl": "",
             "stats": {},
-            "inventorySlots": "338Suppressor"
+            "inventorySlots": "338Suppressor",
+            "suppressorType": "대구경 / 저격총 / 샷건",
+            "subCategory": "대구경 / 저격총 / 샷건"
         }
     ],
     "양각대": [

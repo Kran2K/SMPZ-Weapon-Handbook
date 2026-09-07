@@ -686,6 +686,38 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return '7.62mm / AR-10 규격'
         return '5.56mm / AR-15 규격'
 
+    def classify_suppressor_type(item_obj):
+        raw_slots = item_obj.get('inventorySlots', [])
+        if isinstance(raw_slots, str):
+            inv = [raw_slots.lower()]
+        else:
+            inv = [s.lower() for s in raw_slots]
+        name = item_obj.get('name', '').lower()
+
+        if 'multi-caliber' in name or 'hybrid 46' in name or len(inv) >= 4 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
+            return '멀티 캘리버 (다목적 규격)'
+
+        big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor'}
+        if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name:
+            return '대구경 / 저격총 / 샷건'
+
+        if '5.56' in name or '556' in name or 'weaponmuzzlem4' in inv or 'augmuzzle' in inv:
+            return '5.56mm 소총 전용'
+
+        smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor'}
+        if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name:
+            return '권총 / SMG 전용'
+
+        ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle'}
+        if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name:
+            return 'AK 계열 전용'
+
+        rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor', 'pkmsuppressor', 'pkpsuppressor'}
+        if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'pkm' in name or 'pkp' in name:
+            return '7.62mm / 전투소총 전용'
+
+        return '5.56mm 소총 전용'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -731,7 +763,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'foregrip_types': 0,
         'receiver_types': 0,
         'stock_types': 0,
-        'muzzle_types': 0
+        'muzzle_types': 0,
+        'suppressor_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -905,6 +938,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['muzzleType'] = classify_muzzle_type(item_obj)
                         item_obj['subCategory'] = item_obj['muzzleType']
                         stats_summary['muzzle_types'] += 1
+                    elif target_cat == '소음기':
+                        item_obj['suppressorType'] = classify_suppressor_type(item_obj)
+                        item_obj['subCategory'] = item_obj['suppressorType']
+                        stats_summary['suppressor_types'] += 1
                 elif sec_name == 'gearData':
                     if target_cat == '헬멧 부착물':
                         item_obj['helmetPartType'] = classify_helmet_attachment_type(item_obj)
@@ -942,6 +979,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 리시버 분류(receiverType) 연동:     {stats_summary['receiver_types']}개")
     print(f"    - 개머리판 분류(stockType) 연동:      {stats_summary['stock_types']}개")
     print(f"    - 소염기/머즐 분류(muzzleType) 연동:  {stats_summary['muzzle_types']}개")
+    print(f"    - 소음기 분류(suppressorType) 연동:   {stats_summary['suppressor_types']}개")
     print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
