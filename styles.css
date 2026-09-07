@@ -275,6 +275,33 @@ body {
     color: #bbbbbb;
 }
 
+.category-link.active {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.category-link.active .category-icon {
+    filter: brightness(0);
+}
+
+.category-link.active .category-count {
+    background: rgba(0, 0, 0, 0.18);
+    color: #222222;
+}
+
+.category-link.active:hover {
+    background: #f0f0f0;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+.category-link.active:hover .category-count {
+    color: #222222;
+}
+
 /* 아이템 그리드 */
 .grid-view {
     width: 100%;

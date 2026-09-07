@@ -1036,11 +1036,28 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
 }
 
 
+// 카테고리 드롭다운 내 현재 선택된 항목 하이라이트 갱신
+function updateCategoryDropdownActive() {
+    const activePanel = currentGridPanelType || currentPanel;
+    const activeCategory = currentGridCategoryKey || currentCategory || 'all';
+
+    document.querySelectorAll('.category-item').forEach(li => {
+        const itemPanel = li.dataset.panelType;
+        const itemCat = li.dataset.category;
+        const link = li.querySelector('.category-link');
+        if (link) {
+            const isActive = (itemPanel === activePanel && itemCat === activeCategory);
+            link.classList.toggle('active', isActive);
+        }
+    });
+}
+
 // 카테고리 드롭다운 열기/닫기 (상단바 버튼 클릭 시 내려오는 목록)
 function openDropdown(panel) {
     if (panel) {
         showDropdownPanel(panel);
     }
+    updateCategoryDropdownActive();
     const dropdown = document.getElementById('categoryDropdown');
     if (dropdown) dropdown.classList.add('open');
     document.querySelectorAll('.panel-btn').forEach(btn => {
@@ -2617,6 +2634,7 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     document.querySelectorAll('.panel-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.panel === panelType);
     });
+    updateCategoryDropdownActive();
 
     const gridView = document.getElementById('gridView');
     const weaponDetail = document.getElementById('weaponDetail');
