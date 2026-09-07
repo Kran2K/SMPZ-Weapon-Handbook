@@ -12445,7 +12445,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "590A1Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_AK100_Skeleton_Buttstock",
@@ -12469,7 +12471,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "AKButtpad"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_CMMG_RipStock_Buttstock",
@@ -12492,7 +12496,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_Viper_Mod1_Buttstock",
@@ -12515,7 +12521,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
@@ -12536,7 +12544,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARBuffer"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_B5_System_Precision_Buttstock",
@@ -12557,7 +12567,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARButtstock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_N1_Buttstock",
@@ -12580,7 +12592,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_ACS_Stock",
@@ -12603,7 +12617,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Buttstock",
@@ -12624,7 +12640,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "PRSStock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_SASS_Stock",
@@ -12645,7 +12663,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "PRSStock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_Stock",
@@ -12669,7 +12689,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "UCSPad"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_CheekRiser",
@@ -12689,7 +12711,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "UCSPad"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
@@ -12712,7 +12736,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Yellow",
@@ -12735,7 +12761,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
@@ -12758,7 +12786,9 @@ const attachmentData = {
                 "ARButtstock",
                 "UMSButtstock",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Yellow",
@@ -12781,7 +12811,9 @@ const attachmentData = {
                 "ARButtstock",
                 "UMSButtstock",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_AR15_Baskak_Stock",
@@ -12802,7 +12834,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "ARBuffer"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_M60E4_Buttstock",
@@ -12823,7 +12857,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M60Buttstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_M700_MODX_Chassis",
@@ -12835,7 +12871,9 @@ const attachmentData = {
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/",
-            "stats": {}
+            "stats": {},
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_Masada_Folding_Buttstock",
@@ -12856,7 +12894,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MasadaButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_Masada_PDW_Buttstock",
@@ -12877,7 +12917,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MasadaButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_MaximDefense_Buttstock",
@@ -12898,7 +12940,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "MCXButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_SVD_Style_Stock",
@@ -12919,7 +12963,9 @@ const attachmentData = {
             "itemSlots": 8,
             "inventorySlots": [
                 "SVTStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MP7_ARS_Stock",
@@ -12940,7 +12986,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MP7Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Buttstock",
@@ -12961,7 +13009,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "MP133Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Short_Buttstock",
@@ -12982,7 +13032,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MP133Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MP18_Polymer_Buttstock",
@@ -13003,7 +13055,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "MP18Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Att_MP5_A3_Buttstock",
@@ -13024,7 +13078,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MP5Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_RPD_DSARMS_Buttstock",
@@ -13048,7 +13104,9 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer",
                 "SA58Pistolgrip"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SA58_Humpback_Polymer_Stock",
@@ -13069,7 +13127,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SA58Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SA58_BRS_Stock",
@@ -13090,7 +13150,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SA58Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SA58_SPR_Stock",
@@ -13111,7 +13173,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SA58Stock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_CTR_Buttstock",
@@ -13134,7 +13198,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_ECB_Buttstock",
@@ -13157,7 +13223,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_GLCore_Buttstock",
@@ -13180,7 +13248,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_GLCore_Buttstock_Black",
@@ -13203,7 +13273,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_M4_Standard_Buttstock",
@@ -13226,7 +13298,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_MOE_Buttstock",
@@ -13249,7 +13323,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck",
@@ -13273,7 +13349,9 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4",
                 "PRSStock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck_Black",
@@ -13297,7 +13375,9 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4",
                 "PRSStock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_PRS_Gen2_Bttstck",
@@ -13321,7 +13401,9 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4",
                 "PRSStock"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_SLK_Buttstock",
@@ -13344,7 +13426,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_SLM_Buttstock_Black",
@@ -13367,7 +13451,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_TFS_Buttstock",
@@ -13388,7 +13474,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MCXButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_CTS_Buttstock",
@@ -13409,7 +13497,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MCXButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_GLR_Buttstock",
@@ -13430,7 +13520,9 @@ const attachmentData = {
             "itemSlots": 8,
             "inventorySlots": [
                 "GlockButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_PT1_Buttstock",
@@ -13451,7 +13543,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKZenitStock"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_PT3_Buttstock",
@@ -13472,7 +13566,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKZenitStock"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_ACE_SOCOM_Buttstock",
@@ -13493,7 +13589,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARBuffer"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_UBR_Gen2_Buttstock",
@@ -13514,7 +13612,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARBuffer"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_PT2_Buttstock",
@@ -13534,7 +13634,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "PKButtstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_Arcangel_AA47_Buttstock",
@@ -13555,7 +13657,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKButtstock"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_ZhukovS_Buttstock",
@@ -13576,7 +13680,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKButtstock"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_G36_KV_Adjustable_Buttstock",
@@ -13597,7 +13703,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "G36Buttstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_G36_IDZ_Adjustable_Buttstock",
@@ -13618,7 +13726,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "G36Buttstock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_Mosin_ATI_Monte_Carlo_Stock",
@@ -13642,7 +13752,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BipodKeymod"
-            ]
+            ],
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_SKS_ATI_Monte_Carlo_Stock",
@@ -13663,7 +13775,9 @@ const attachmentData = {
             "itemSlots": 8,
             "inventorySlots": [
                 "SKSStock"
-            ]
+            ],
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_AK_EVO_Buttstock",
@@ -13685,7 +13799,9 @@ const attachmentData = {
             "inventorySlots": [
                 "AK74MButtstock",
                 "RPK16Buttstock"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_HK_E1_Buttstock",
@@ -13708,7 +13824,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_HK_Slimline_Buttstock",
@@ -13731,7 +13849,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_HK_Slimline_Buttstock_RAL8000",
@@ -13754,7 +13874,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
@@ -13777,7 +13899,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_SBA3_Buttstock",
@@ -13800,7 +13924,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_DS150_Buttstock",
@@ -13823,7 +13949,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_DS150_Buttstock_FDE",
@@ -13846,7 +13974,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_M1A_Archangel_Chassis",
@@ -13871,7 +14001,9 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight",
                 "Bipod"
-            ]
+            ],
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Stock",
@@ -13892,7 +14024,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "UltimaStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Chassis",
@@ -13913,7 +14047,9 @@ const attachmentData = {
             "itemSlots": 8,
             "inventorySlots": [
                 "CNCChassis"
-            ]
+            ],
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Stock",
@@ -13934,7 +14070,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "CNCStock"
-            ]
+            ],
+            "stockType": "정밀 저격 / 샤시 일체형",
+            "subCategory": "정밀 저격 / 샤시 일체형"
         },
         {
             "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock",
@@ -13957,7 +14095,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock_FDE",
@@ -13980,7 +14120,9 @@ const attachmentData = {
                 "ARButtstock",
                 "ARButtstockSecond",
                 "weaponButtstockM4"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
@@ -14001,7 +14143,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SCARStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock_FDE",
@@ -14022,7 +14166,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SCARStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock",
@@ -14043,7 +14189,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SCARStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock_FDE",
@@ -14064,7 +14212,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SCARStock"
-            ]
+            ],
+            "stockType": "전용 총기 규격",
+            "subCategory": "전용 총기 규격"
         },
         {
             "id": "SMPZ_Attachments_CQR_pistolgrip",
@@ -14085,7 +14235,9 @@ const attachmentData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "ARpistolgrip"
-            ]
+            ],
+            "stockType": "AR-15 / 버퍼 튜브 규격",
+            "subCategory": "AR-15 / 버퍼 튜브 규격"
         },
         {
             "id": "SMPZ_Attachments_CQR47_pistolgrip",
@@ -14106,7 +14258,9 @@ const attachmentData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "AKpistolgrip"
-            ]
+            ],
+            "stockType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         }
     ],
     "광학 조준경": [

@@ -655,6 +655,19 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return 'AK 더스트 커버'
         return '기타 총기 리시버'
 
+    def classify_stock_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        item_id = item_obj.get('id', '').lower()
+        name = item_obj.get('name', '').lower()
+
+        if any(s in ('chassis', 'mosinstock', 'sksstock', 'm1achassis', 'cncchassis', 'cncstock') for s in inv) or 'chassis' in name or 'monte carlo' in name or 'mod*x' in name:
+            return '정밀 저격 / 샤시 일체형'
+        if any('ak' in s or 'rpk' in s for s in inv) or ('cqr47' in item_id) or 'akzenit' in item_id:
+            return 'AK 계열 규격'
+        if any(s in ('arbuttstock', 'arbuttstocksecond', 'weaponbuttstockm4', 'arbuffer', 'prsstock', 'umsbuttstock') for s in inv) or ('cqr' in item_id and 'cqr47' not in item_id) or 'ar-15' in name or 'ar 15' in name:
+            return 'AR-15 / 버퍼 튜브 규격'
+        return '전용 총기 규격'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -698,7 +711,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'dotsight_types': 0,
         'helmet_types': 0,
         'foregrip_types': 0,
-        'receiver_types': 0
+        'receiver_types': 0,
+        'stock_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -864,6 +878,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['receiverType'] = classify_receiver_type(item_obj)
                         item_obj['subCategory'] = item_obj['receiverType']
                         stats_summary['receiver_types'] += 1
+                    elif target_cat == '개머리판':
+                        item_obj['stockType'] = classify_stock_type(item_obj)
+                        item_obj['subCategory'] = item_obj['stockType']
+                        stats_summary['stock_types'] += 1
                 elif sec_name == 'gearData':
                     if target_cat == '헬멧 부착물':
                         item_obj['helmetPartType'] = classify_helmet_attachment_type(item_obj)
@@ -899,6 +917,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 도트/홀로그램 분류(dotType) 연동:   {stats_summary['dotsight_types']}개")
     print(f"    - 전방 손잡이 분류(foregripType) 연동: {stats_summary['foregrip_types']}개")
     print(f"    - 리시버 분류(receiverType) 연동:     {stats_summary['receiver_types']}개")
+    print(f"    - 개머리판 분류(stockType) 연동:      {stats_summary['stock_types']}개")
     print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)

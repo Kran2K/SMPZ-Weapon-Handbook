@@ -1632,8 +1632,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물' || cat === '전방 손잡이' || cat === '리시버') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType, tagClass: 'spec-mount' });
+    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물' || cat === '전방 손잡이' || cat === '리시버' || cat === '개머리판') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType)) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType, tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -1944,7 +1944,7 @@ function createSubCategoryChipsRow(labelTitle, prefix, types, itemsToCheck) {
 
     const counts = { all: itemsToCheck.length };
     types.forEach(t => {
-        counts[t] = itemsToCheck.filter(it => (it.subCategory === t || it.mountType === t || it.sightType === t || it.gripPlatform === t || it.dotType === t || it.helmetPartType === t || it.foregripType === t || it.receiverType === t)).length;
+        counts[t] = itemsToCheck.filter(it => (it.subCategory === t || it.mountType === t || it.sightType === t || it.gripPlatform === t || it.dotType === t || it.helmetPartType === t || it.foregripType === t || it.receiverType === t || it.stockType === t)).length;
     });
 
     const anySpecificActive = Array.from(currentGridActiveChips).some(id => id.startsWith(`${prefix}_`) && id !== `${prefix}_all`);
@@ -2272,6 +2272,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         container.appendChild(createSubCategoryChipsRow('리시버 분류', 'rcv', receiverTypes, itemsToCheck));
         return;
     }
+
+    // 11. 개머리판 전용 탭: 하위 분류 필터 칩 바
+    const isStockOnlyView = !isWeaponView && !isMagazineOnlyView && !isGearView && 
+        (categoryKey === '개머리판' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '개머리판')));
+
+    if (isStockOnlyView) {
+        const stockTypes = ['AR-15 / 버퍼 튜브 규격', '전용 총기 규격', 'AK 계열 규격', '정밀 저격 / 샤시 일체형'];
+        container.appendChild(createSubCategoryChipsRow('개머리판 규격', 'stk', stockTypes, itemsToCheck));
+        return;
+    }
 }
 
 // 그리드 정렬 및 필터 적용 메인 파이프라인
@@ -2290,7 +2300,7 @@ function applyGridSortAndFilters() {
             const name = (item.name || '').toLowerCase();
             const id = (item.id || '').toLowerCase();
             const cat = (item.category || '').toLowerCase();
-            const sub = (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || '').toLowerCase();
+            const sub = (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || '').toLowerCase();
             const cal = (getItemCalibers(item) || []).join(' ').toLowerCase();
             const searchTarget = `${name} ${id} ${cat} ${sub} ${cal}`;
             return terms.every(t => searchTarget.includes(t));
@@ -2356,7 +2366,7 @@ function applyGridSortAndFilters() {
             // 2-4. 하위 분류 필터 (선택된 하위 분류들 중 하나라도 일치하면 통과)
             if (activeSubFilters.size > 0) {
                 for (const [prefix, vals] of activeSubFilters.entries()) {
-                    const itemVal = item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType;
+                    const itemVal = item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType;
                     if (!itemVal || !vals.includes(itemVal)) {
                         return false;
                     }
