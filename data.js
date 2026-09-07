@@ -9859,7 +9859,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
@@ -9881,7 +9883,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "HelmetAventail"
-            ]
+            ],
+            "helmetPartType": "기타",
+            "subCategory": "기타"
         },
         {
             "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
@@ -9906,7 +9910,9 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
-            ]
+            ],
+            "helmetPartType": "증가 장갑판",
+            "subCategory": "증가 장갑판"
         },
         {
             "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
@@ -9929,7 +9935,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
@@ -9952,7 +9960,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mandible"
-            ]
+            ],
+            "helmetPartType": "턱/하안부 보호구",
+            "subCategory": "턱/하안부 보호구"
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
@@ -9975,7 +9985,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "AFMLOKChops"
-            ]
+            ],
+            "helmetPartType": "턱/하안부 보호구",
+            "subCategory": "턱/하안부 보호구"
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
@@ -10006,7 +10018,9 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "weaponFlashlightSecond"
-            ]
+            ],
+            "helmetPartType": "기타",
+            "subCategory": "기타"
         },
         {
             "id": "SMPZ_HelmetPlate_DA_Bastion",
@@ -10032,7 +10046,9 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
-            ]
+            ],
+            "helmetPartType": "증가 장갑판",
+            "subCategory": "증가 장갑판"
         },
         {
             "id": "SMPZ_Mandible_NeoSteel_Black",
@@ -10055,7 +10071,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mandible"
-            ]
+            ],
+            "helmetPartType": "턱/하안부 보호구",
+            "subCategory": "턱/하안부 보호구"
         },
         {
             "id": "SMPZ_Visor_FORT_KiverM",
@@ -10078,7 +10096,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_HelmetPlate_Trooper_Black",
@@ -10104,7 +10124,9 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
-            ]
+            ],
+            "helmetPartType": "증가 장갑판",
+            "subCategory": "증가 장갑판"
         },
         {
             "id": "SMPZ_Visor_Caiman",
@@ -10127,7 +10149,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_HelmetPlate_Caiman_Gray",
@@ -10153,7 +10177,9 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
-            ]
+            ],
+            "helmetPartType": "증가 장갑판",
+            "subCategory": "증가 장갑판"
         },
         {
             "id": "SMPZ_Mandible_Caiman_Black",
@@ -10176,7 +10202,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mandible"
-            ]
+            ],
+            "helmetPartType": "턱/하안부 보호구",
+            "subCategory": "턱/하안부 보호구"
         },
         {
             "id": "SMPZ_Visor_Maska_Green",
@@ -10199,7 +10227,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
@@ -10222,7 +10252,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
@@ -10245,7 +10277,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Mandible_OpsCore_FAST_Black",
@@ -10268,7 +10302,9 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mandible"
-            ]
+            ],
+            "helmetPartType": "턱/하안부 보호구",
+            "subCategory": "턱/하안부 보호구"
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -10291,7 +10327,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
@@ -10316,7 +10354,9 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
-            ]
+            ],
+            "helmetPartType": "증가 장갑판",
+            "subCategory": "증가 장갑판"
         },
         {
             "id": "SMPZ_Visor_RYS_T_Black",
@@ -10339,7 +10379,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
@@ -10362,7 +10404,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Visor_Vulkan",
@@ -10385,7 +10429,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
@@ -10408,7 +10454,9 @@ const gearData = {
             "itemSlots": 9,
             "inventorySlots": [
                 "Visor"
-            ]
+            ],
+            "helmetPartType": "안면 바이저",
+            "subCategory": "안면 바이저"
         }
     ],
     "전신 방탄복": [

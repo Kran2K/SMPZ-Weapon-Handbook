@@ -1632,8 +1632,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType, tagClass: 'spec-mount' });
+    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType)) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType, tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -2158,6 +2158,12 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
 
     // 3. 기어 탭: 방탄 / 수납 공간 보유
     if (isGearView) {
+        if (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물'))) {
+            const helmTypes = ['안면 바이저', '증가 장갑판', '턱/하안부 보호구', '기타'];
+            container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
+            return;
+        }
+
         const wrap = document.createElement('div');
         wrap.className = 'grid-filter-groups';
 
@@ -2234,6 +2240,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     if (isDotSightOnlyView) {
         const dotTypes = ['소총 / 피카티니 규격', '권총 / 마이크로 도트', 'AK 도브테일 직결'];
         container.appendChild(createSubCategoryChipsRow('도트/홀로그램 분류', 'dot', dotTypes, itemsToCheck));
+        return;
+    }
+
+    // 8. 헬멧 부착물 전용 탭: 하위 분류 필터 칩 바
+    const isHelmetAttachmentOnlyView = !isWeaponView && !isMagazineOnlyView && 
+        (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물')));
+
+    if (isHelmetAttachmentOnlyView) {
+        const helmTypes = ['안면 바이저', '증가 장갑판', '턱/하안부 보호구', '기타'];
+        container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
         return;
     }
 }
