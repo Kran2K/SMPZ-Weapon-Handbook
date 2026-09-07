@@ -275,6 +275,33 @@ body {
     color: #bbbbbb;
 }
 
+.category-link.active {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.category-link.active .category-icon {
+    filter: brightness(0);
+}
+
+.category-link.active .category-count {
+    background: rgba(0, 0, 0, 0.18);
+    color: #222222;
+}
+
+.category-link.active:hover {
+    background: #f0f0f0;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+.category-link.active:hover .category-count {
+    color: #222222;
+}
+
 /* 아이템 그리드 */
 .grid-view {
     width: 100%;
@@ -761,6 +788,12 @@ body {
     color: #829f9f;
 }
 
+.core-spec-tag.spec-mount {
+    background: #161b22;
+    border-color: #283648;
+    color: #79a8d7;
+}
+
 .core-spec-tag.spec-capacity {
     background: #191919;
     border-color: #2f2f2f;
@@ -1021,6 +1054,43 @@ body {
 
 .weapon-name-text {
     display: inline-block;
+}
+
+.weapon-name-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-web-search-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    color: #8a99a8;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.item-web-search-btn:hover {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.15);
+    border-color: rgba(96, 165, 250, 0.35);
+    transform: translateY(-1px);
+}
+
+.item-web-search-btn:active {
+    transform: translateY(0);
+}
+
+.item-web-search-icon {
+    display: block;
 }
 
 .weapon-detail-divider {
