@@ -30836,20 +30836,6 @@ const attachmentData = {
                 "338Suppressor"
             ],
             "subCategory": "heavy_shotgun"
-        },
-        {
-            "id": "Slot_338Suppressor",
-            "name": "Suppressor",
-            "category": "suppressor",
-            "image": "",
-            "images": [],
-            "description": "",
-            "manufacturer": "",
-            "manufacturerLogo": "",
-            "manufacturerUrl": "",
-            "stats": {},
-            "inventorySlots": "338Suppressor",
-            "subCategory": "heavy_shotgun"
         }
     ],
     "tactical_flashlight": [

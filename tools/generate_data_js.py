@@ -839,6 +839,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         for cat, items in sec_dict.items():
             for item in items:
                 item_id = item['id']
+                if item_id.startswith('Slot_') or item_id in (
+                    'Inventory_Base', 'ItemSuppressor', 'Clothing_Base', 'Weapon_Base', 'Rifle_Base'
+                ):
+                    continue
                 item_name = item.get('name', '')
                 existing_desc = item.get('description', '')
                 item_obj = dict(item)
