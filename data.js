@@ -17,8 +17,8 @@ const weaponsData = {
                 "sway": "170",
                 "ergonomics": "49",
                 "accuracy": "1.66 MOA",
-                "velocity": "983 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.08
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -181,8 +181,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "64",
                 "accuracy": "1.89 MOA",
-                "velocity": "792 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.9
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -263,8 +263,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "58",
                 "accuracy": "3.44 MOA",
-                "velocity": "295 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -316,8 +316,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "58",
                 "accuracy": "3.44 MOA",
-                "velocity": "295 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -367,8 +367,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "65",
                 "accuracy": "1.63 MOA",
-                "velocity": "862 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.15
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -394,6 +394,9 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "calibers": [
+                "12.7x55mm"
             ]
         },
         {
@@ -413,8 +416,8 @@ const weaponsData = {
                 "sway": "125",
                 "ergonomics": "59",
                 "accuracy": "2.48 MOA",
-                "velocity": "657 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 0.9
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -504,8 +507,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "51",
                 "accuracy": "1.24 MOA",
-                "velocity": "1092 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -667,8 +670,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "47",
                 "accuracy": "1.24 MOA",
-                "velocity": "1092 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -828,8 +831,8 @@ const weaponsData = {
                 "sway": "170",
                 "ergonomics": "40",
                 "accuracy": "1.82 MOA",
-                "velocity": "1092 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -992,8 +995,8 @@ const weaponsData = {
                 "sway": "170",
                 "ergonomics": "47",
                 "accuracy": "1.82 MOA",
-                "velocity": "910 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -1153,8 +1156,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "51",
                 "accuracy": "1.38 MOA",
-                "velocity": "889 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.01
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -1236,8 +1239,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "40",
                 "accuracy": "0.90 MOA",
-                "velocity": "1033 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.23
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -1291,8 +1294,8 @@ const weaponsData = {
                 "sway": "103",
                 "ergonomics": "69",
                 "accuracy": "1.36 MOA",
-                "velocity": "1092 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -1447,8 +1450,8 @@ const weaponsData = {
                 "sway": "103",
                 "ergonomics": "69",
                 "accuracy": "1.36 MOA",
-                "velocity": "1008 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -1537,8 +1540,8 @@ const weaponsData = {
                 "sway": "55",
                 "ergonomics": "65",
                 "accuracy": "1.53 MOA",
-                "velocity": "928 m/s",
-                "rpm": "850"
+                "rpm": "850",
+                "velocityMultiplier": 1.02
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -1600,8 +1603,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "54",
                 "accuracy": "1.65 MOA",
-                "velocity": "899 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.07
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -1710,8 +1713,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "54",
                 "accuracy": "1.97 MOA",
-                "velocity": "910 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -1875,8 +1878,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "66",
                 "accuracy": "2.37 MOA",
-                "velocity": "1104 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 1.213
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -2036,8 +2039,8 @@ const weaponsData = {
                 "sway": "135",
                 "ergonomics": "64",
                 "accuracy": "1.93 MOA",
-                "velocity": "910 m/s",
-                "rpm": "850"
+                "rpm": "850",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2195,8 +2198,8 @@ const weaponsData = {
                 "sway": "105",
                 "ergonomics": "60",
                 "accuracy": "2.00 MOA",
-                "velocity": "892 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 0.98
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2353,8 +2356,8 @@ const weaponsData = {
                 "sway": "55",
                 "ergonomics": "65",
                 "accuracy": "1.53 MOA",
-                "velocity": "928 m/s",
-                "rpm": "850"
+                "rpm": "850",
+                "velocityMultiplier": 1.02
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2516,8 +2519,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "53",
                 "accuracy": "1.72 MOA",
-                "velocity": "910 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2577,8 +2580,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "55",
                 "accuracy": "1.93 MOA",
-                "velocity": "855 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.94
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -2638,8 +2641,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "53",
                 "accuracy": "2.13 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2731,8 +2734,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "55",
                 "accuracy": "2.27 MOA",
-                "velocity": "686 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.94
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -2824,8 +2827,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "55",
                 "accuracy": "2.06 MOA",
-                "velocity": "818 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.93
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -2908,8 +2911,8 @@ const weaponsData = {
                 "sway": "105",
                 "ergonomics": "54",
                 "accuracy": "1.58 MOA",
-                "velocity": "933 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.06
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -2980,8 +2983,8 @@ const weaponsData = {
                 "sway": "105",
                 "ergonomics": "54",
                 "accuracy": "1.58 MOA",
-                "velocity": "730 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3051,8 +3054,8 @@ const weaponsData = {
                 "sway": "85",
                 "ergonomics": "52",
                 "accuracy": "1.64 MOA",
-                "velocity": "924 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.1
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3106,8 +3109,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "49",
                 "accuracy": "1.99 MOA",
-                "velocity": "880 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3191,8 +3194,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "52",
                 "accuracy": "1.89 MOA",
-                "velocity": "880 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3277,8 +3280,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "50",
                 "accuracy": "1.96 MOA",
-                "velocity": "880 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3363,8 +3366,8 @@ const weaponsData = {
                 "sway": "115",
                 "ergonomics": "47",
                 "accuracy": "2.30 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3457,8 +3460,8 @@ const weaponsData = {
                 "sway": "115",
                 "ergonomics": "48",
                 "accuracy": "2.27 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3552,8 +3555,8 @@ const weaponsData = {
                 "sway": "115",
                 "ergonomics": "46",
                 "accuracy": "2.30 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3646,8 +3649,8 @@ const weaponsData = {
                 "sway": "115",
                 "ergonomics": "75",
                 "accuracy": "2.30 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -3739,8 +3742,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "63",
                 "accuracy": "3.44 MOA",
-                "velocity": "748 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 0.85
             },
             "itemSize": "5x3",
             "itemSlots": 15,
@@ -3821,8 +3824,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "63",
                 "accuracy": "3.44 MOA",
-                "velocity": "748 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 0.85
             },
             "itemSize": "5x3",
             "itemSlots": 15,
@@ -3904,8 +3907,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "50",
                 "accuracy": "1.55 MOA",
-                "velocity": "350 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 0.398
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -3985,8 +3988,8 @@ const weaponsData = {
                 "sway": "108",
                 "ergonomics": "68",
                 "accuracy": "2.67 MOA",
-                "velocity": "682 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 0.91
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -4036,8 +4039,8 @@ const weaponsData = {
                 "sway": "170",
                 "ergonomics": "41",
                 "accuracy": "1.41 MOA",
-                "velocity": "1046 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.15
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -4196,8 +4199,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "50",
                 "accuracy": "1.78 MOA",
-                "velocity": "937 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.03
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -4356,8 +4359,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "50",
                 "accuracy": "1.78 MOA",
-                "velocity": "937 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.03
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -4489,8 +4492,8 @@ const weaponsData = {
                 "sway": "60",
                 "ergonomics": "65",
                 "accuracy": "2.23 MOA",
-                "velocity": "756 m/s",
-                "rpm": "450"
+                "rpm": "450",
+                "velocityMultiplier": 0.9
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -4537,8 +4540,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "51",
                 "accuracy": "2.33 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -4628,8 +4631,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "52",
                 "accuracy": "2.23 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -4709,8 +4712,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "50",
                 "accuracy": "2.68 MOA",
-                "velocity": "828 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 0.91
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -4872,8 +4875,8 @@ const weaponsData = {
                 "sway": "185",
                 "ergonomics": "51",
                 "accuracy": "1.66 MOA",
-                "velocity": "983 m/s",
-                "rpm": "850"
+                "rpm": "850",
+                "velocityMultiplier": 1.08
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -5032,8 +5035,8 @@ const weaponsData = {
                 "sway": "185",
                 "ergonomics": "51",
                 "accuracy": "1.66 MOA",
-                "velocity": "983 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.08
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -5193,8 +5196,8 @@ const weaponsData = {
                 "sway": "85",
                 "ergonomics": "52",
                 "accuracy": "2.09 MOA",
-                "velocity": "730 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -5286,8 +5289,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "62",
                 "accuracy": "3.04 MOA",
-                "velocity": "819 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.9
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -5447,8 +5450,8 @@ const weaponsData = {
                 "sway": "113",
                 "ergonomics": "58",
                 "accuracy": "1.43 MOA",
-                "velocity": "924 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.1
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -5546,8 +5549,8 @@ const weaponsData = {
                 "sway": "108",
                 "ergonomics": "68",
                 "accuracy": "5.02 MOA",
-                "velocity": "295 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -5599,8 +5602,8 @@ const weaponsData = {
                 "sway": "40",
                 "ergonomics": "81",
                 "accuracy": "1.58 MOA",
-                "velocity": "910 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -5685,8 +5688,8 @@ const weaponsData = {
                 "sway": "101",
                 "ergonomics": "61",
                 "accuracy": "3.44 MOA",
-                "velocity": "295 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -5736,8 +5739,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "50",
                 "accuracy": "0.85 MOA",
-                "velocity": "941 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.12
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -5796,8 +5799,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "33",
                 "accuracy": "0.37 MOA",
-                "velocity": "784 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.045
             },
             "itemSize": "11x3",
             "itemSlots": 33,
@@ -5843,8 +5846,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "10",
                 "accuracy": "0.80 MOA",
-                "velocity": "758 m/s",
-                "rpm": "300"
+                "rpm": "300",
+                "velocityMultiplier": 1.01
             },
             "itemSize": "12x3",
             "itemSlots": 36,
@@ -5890,8 +5893,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "10",
                 "accuracy": "0.40 MOA",
-                "velocity": "765 m/s",
-                "rpm": "300"
+                "rpm": "300",
+                "velocityMultiplier": 1.02
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -5933,8 +5936,8 @@ const weaponsData = {
                 "sway": "125",
                 "ergonomics": "38",
                 "accuracy": "0.30 MOA",
-                "velocity": "765 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.02
             },
             "itemSize": "12x3",
             "itemSlots": 36,
@@ -5974,8 +5977,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "45",
                 "accuracy": "1.12 MOA",
-                "velocity": "829 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.987
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6031,8 +6034,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "46",
                 "accuracy": "1.10 MOA",
-                "velocity": "829 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 0.987
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6089,8 +6092,8 @@ const weaponsData = {
                 "sway": "98",
                 "ergonomics": "52",
                 "accuracy": "1.12 MOA",
-                "velocity": "856 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.019
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6188,8 +6191,8 @@ const weaponsData = {
                 "sway": "102",
                 "ergonomics": "50",
                 "accuracy": "1.12 MOA",
-                "velocity": "856 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.019
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6285,8 +6288,8 @@ const weaponsData = {
                 "sway": "10",
                 "ergonomics": "75",
                 "accuracy": "0.78 MOA",
-                "velocity": "720 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 0.96
             },
             "itemSize": "11x3",
             "itemSlots": 33,
@@ -6328,8 +6331,8 @@ const weaponsData = {
                 "sway": "175",
                 "ergonomics": "75",
                 "accuracy": "1.50 MOA",
-                "velocity": "550 m/s",
-                "rpm": "40"
+                "rpm": "40",
+                "velocityMultiplier": 1.25
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -6358,8 +6361,8 @@ const weaponsData = {
                 "sway": "107",
                 "ergonomics": "67",
                 "accuracy": "1.55 MOA",
-                "velocity": "975 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.3
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -6400,8 +6403,8 @@ const weaponsData = {
                 "sway": "30",
                 "ergonomics": "61",
                 "accuracy": "1.37 MOA",
-                "velocity": "946 m/s",
-                "rpm": "30"
+                "rpm": "30",
+                "velocityMultiplier": 1.1
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6440,8 +6443,8 @@ const weaponsData = {
                 "sway": "140",
                 "ergonomics": "50",
                 "accuracy": "0.58 MOA",
-                "velocity": "758 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.011
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6490,8 +6493,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "65",
                 "accuracy": "0.79 MOA",
-                "velocity": "895 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.065
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6543,8 +6546,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "55",
                 "accuracy": "0.79 MOA",
-                "velocity": "895 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.065
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6606,8 +6609,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "49",
                 "accuracy": "0.77 MOA",
-                "velocity": "873 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.039
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6702,8 +6705,8 @@ const weaponsData = {
                 "sway": "55",
                 "ergonomics": "45",
                 "accuracy": "0.58 MOA",
-                "velocity": "929 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.08
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -6746,8 +6749,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "40",
                 "accuracy": "1.03 MOA",
-                "velocity": "899 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.045
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6795,8 +6798,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "42",
                 "accuracy": "1.03 MOA",
-                "velocity": "899 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.045
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6843,8 +6846,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "42",
                 "accuracy": "1.03 MOA",
-                "velocity": "899 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.045
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6893,8 +6896,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "45",
                 "accuracy": "0.57 MOA",
-                "velocity": "758 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.011
             },
             "itemSize": "11x3",
             "itemSlots": 33,
@@ -6941,8 +6944,8 @@ const weaponsData = {
                 "sway": "130",
                 "ergonomics": "41",
                 "accuracy": "0.46 MOA",
-                "velocity": "784 m/s",
-                "rpm": "35"
+                "rpm": "35",
+                "velocityMultiplier": 1.045
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -6987,8 +6990,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "61",
                 "accuracy": "16.90 MOA",
-                "velocity": "803 m/s",
-                "rpm": "450"
+                "rpm": "450",
+                "velocityMultiplier": 1.1
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -7036,8 +7039,8 @@ const weaponsData = {
                 "sway": "105",
                 "ergonomics": "44",
                 "accuracy": "1.11 MOA",
-                "velocity": "873 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.039
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -7090,8 +7093,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "40",
                 "accuracy": "0.31 MOA",
-                "velocity": "736 m/s",
-                "rpm": "300"
+                "rpm": "300",
+                "velocityMultiplier": 0.981
             },
             "itemSize": "11x3",
             "itemSlots": 33,
@@ -7130,8 +7133,8 @@ const weaponsData = {
                 "sway": "102",
                 "ergonomics": "58",
                 "accuracy": "6.88 MOA",
-                "velocity": "1058 m/s",
-                "rpm": "750"
+                "rpm": "750",
+                "velocityMultiplier": 1.23
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -7176,8 +7179,8 @@ const weaponsData = {
                 "sway": "102",
                 "ergonomics": "61",
                 "accuracy": "1.72 MOA",
-                "velocity": "1058 m/s",
-                "rpm": "450"
+                "rpm": "450",
+                "velocityMultiplier": 1.23
             },
             "itemSize": "10x3",
             "itemSlots": 30,
@@ -7221,8 +7224,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "90",
                 "accuracy": "7.22 MOA",
-                "velocity": "441 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.16
             },
             "itemSize": "5x3",
             "itemSlots": 15,
@@ -7264,8 +7267,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "78",
                 "accuracy": "3.75 MOA",
-                "velocity": "638 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 0.85
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7313,8 +7316,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "55",
                 "accuracy": "1.50 MOA",
-                "velocity": "418 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.1
             },
             "itemSize": "7x3",
             "itemSlots": 21,
@@ -7363,8 +7366,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "78",
                 "accuracy": "0.83 MOA",
-                "velocity": "788 m/s",
-                "rpm": "950"
+                "rpm": "950",
+                "velocityMultiplier": 1.05
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7416,8 +7419,8 @@ const weaponsData = {
                 "sway": "60",
                 "ergonomics": "78",
                 "accuracy": "0.83 MOA",
-                "velocity": "788 m/s",
-                "rpm": "950"
+                "rpm": "950",
+                "velocityMultiplier": 1.05
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7470,8 +7473,8 @@ const weaponsData = {
                 "sway": "110",
                 "ergonomics": "57",
                 "accuracy": "4.47 MOA",
-                "velocity": "407 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 1.07
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7520,8 +7523,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "70",
                 "accuracy": "0.72 MOA",
-                "velocity": "802 m/s",
-                "rpm": "900"
+                "rpm": "900",
+                "velocityMultiplier": 1.07
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7560,8 +7563,8 @@ const weaponsData = {
                 "sway": "120",
                 "ergonomics": "72",
                 "accuracy": "5.00 MOA",
-                "velocity": "407 m/s",
-                "rpm": "850"
+                "rpm": "850",
+                "velocityMultiplier": 1.07
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7609,8 +7612,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "85",
                 "accuracy": "7.83 MOA",
-                "velocity": "870 m/s",
-                "rpm": "950"
+                "rpm": "950",
+                "velocityMultiplier": 1.16
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7655,8 +7658,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "45",
                 "accuracy": "3.78 MOA",
-                "velocity": "426 m/s",
-                "rpm": "800"
+                "rpm": "800",
+                "velocityMultiplier": 1.12
             },
             "itemSize": "5x3",
             "itemSlots": 15,
@@ -7704,8 +7707,8 @@ const weaponsData = {
                 "sway": "95",
                 "ergonomics": "76",
                 "accuracy": "0.65 MOA",
-                "velocity": "437 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.15
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7759,8 +7762,8 @@ const weaponsData = {
                 "sway": "95",
                 "ergonomics": "76",
                 "accuracy": "0.65 MOA",
-                "velocity": "437 m/s",
-                "rpm": "600"
+                "rpm": "600",
+                "velocityMultiplier": 1.15
             },
             "itemSize": "6x3",
             "itemSlots": 18,
@@ -7814,8 +7817,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "51",
                 "accuracy": "22.35 MOA",
-                "velocity": "519 m/s",
-                "rpm": "300"
+                "rpm": "300",
+                "velocityMultiplier": 1.285
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -7856,8 +7859,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "53",
                 "accuracy": "22.35 MOA",
-                "velocity": "519 m/s",
-                "rpm": "300"
+                "rpm": "300",
+                "velocityMultiplier": 1.285
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -7897,8 +7900,8 @@ const weaponsData = {
                 "sway": "182",
                 "ergonomics": "58",
                 "accuracy": "21.31 MOA",
-                "velocity": "505 m/s",
-                "rpm": "60"
+                "rpm": "60",
+                "velocityMultiplier": 1.25
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -7937,8 +7940,8 @@ const weaponsData = {
                 "sway": "210",
                 "ergonomics": "57",
                 "accuracy": "21.31 MOA",
-                "velocity": "404 m/s",
-                "rpm": "350"
+                "rpm": "350",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -7978,8 +7981,8 @@ const weaponsData = {
                 "sway": "175",
                 "ergonomics": "60",
                 "accuracy": "3.09 MOA",
-                "velocity": "1075 m/s",
-                "rpm": "30"
+                "rpm": "30",
+                "velocityMultiplier": 1.25
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -8017,8 +8020,8 @@ const weaponsData = {
                 "sway": "175",
                 "ergonomics": "54",
                 "accuracy": "13.06 MOA",
-                "velocity": "505 m/s",
-                "rpm": "350"
+                "rpm": "350",
+                "velocityMultiplier": 1.25
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -8053,8 +8056,8 @@ const weaponsData = {
                 "sway": "182",
                 "ergonomics": "59",
                 "accuracy": "34.38 MOA",
-                "velocity": "505 m/s",
-                "rpm": "70"
+                "rpm": "70",
+                "velocityMultiplier": 1.25
             },
             "itemSize": "9x3",
             "itemSlots": 27,
@@ -8092,8 +8095,8 @@ const weaponsData = {
                 "sway": "100",
                 "ergonomics": "55",
                 "accuracy": "20.63 MOA",
-                "velocity": "404 m/s",
-                "rpm": "350"
+                "rpm": "350",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -8147,8 +8150,8 @@ const weaponsData = {
                 "sway": "90",
                 "ergonomics": "80",
                 "accuracy": "10.28 MOA",
-                "velocity": "380 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -8186,8 +8189,8 @@ const weaponsData = {
                 "sway": "90",
                 "ergonomics": "81",
                 "accuracy": "10.28 MOA",
-                "velocity": "380 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -8227,8 +8230,8 @@ const weaponsData = {
                 "sway": "70",
                 "ergonomics": "75",
                 "accuracy": "1.50 MOA",
-                "velocity": "273 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.05
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -8266,8 +8269,8 @@ const weaponsData = {
                 "sway": "70",
                 "ergonomics": "75",
                 "accuracy": "1.50 MOA",
-                "velocity": "273 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.05
             },
             "itemSize": "3x2",
             "itemSlots": 6,
@@ -8305,8 +8308,8 @@ const weaponsData = {
                 "sway": "30",
                 "ergonomics": "89",
                 "accuracy": "7.50 MOA",
-                "velocity": "750 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8356,8 +8359,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "88",
                 "accuracy": "11.69 MOA",
-                "velocity": "380 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8403,8 +8406,8 @@ const weaponsData = {
                 "sway": "50",
                 "ergonomics": "88",
                 "accuracy": "12.03 MOA",
-                "velocity": "380 m/s",
-                "rpm": "1100"
+                "rpm": "1100",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8448,8 +8451,8 @@ const weaponsData = {
                 "sway": "90",
                 "ergonomics": "82",
                 "accuracy": "9.63 MOA",
-                "velocity": "750 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8493,8 +8496,8 @@ const weaponsData = {
                 "sway": "90",
                 "ergonomics": "89",
                 "accuracy": "9.63 MOA",
-                "velocity": "260 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8536,8 +8539,8 @@ const weaponsData = {
                 "sway": "117",
                 "ergonomics": "87",
                 "accuracy": "8.94 MOA",
-                "velocity": "440 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8574,8 +8577,8 @@ const weaponsData = {
                 "sway": "117",
                 "ergonomics": "85",
                 "accuracy": "10.31 MOA",
-                "velocity": "750 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8619,8 +8622,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "85",
                 "accuracy": "7.49 MOA",
-                "velocity": "750 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -8662,8 +8665,8 @@ const weaponsData = {
                 "sway": "90",
                 "ergonomics": "89",
                 "accuracy": "7.60 MOA",
-                "velocity": "380 m/s",
-                "rpm": "400"
+                "rpm": "400",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "4x2",
             "itemSlots": 8,
@@ -8700,8 +8703,8 @@ const weaponsData = {
                 "sway": "80",
                 "ergonomics": "75",
                 "accuracy": "1.50 MOA",
-                "velocity": "750 m/s",
-                "rpm": "375"
+                "rpm": "375",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "2x2",
             "itemSlots": 4,
@@ -8735,8 +8738,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "69",
                 "accuracy": "1.31 MOA",
-                "velocity": "876 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "9x4",
             "itemSlots": 36,
@@ -8786,8 +8789,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "70",
                 "accuracy": "1.31 MOA",
-                "velocity": "876 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.2
             },
             "itemSize": "9x4",
             "itemSlots": 36,
@@ -8840,8 +8843,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "13",
                 "accuracy": "1.08 MOA",
-                "velocity": "1161 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.35
             },
             "itemSize": "10x4",
             "itemSlots": 40,
@@ -8884,8 +8887,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "13",
                 "accuracy": "1.01 MOA",
-                "velocity": "1161 m/s",
-                "rpm": "650"
+                "rpm": "650",
+                "velocityMultiplier": 1.35
             },
             "itemSize": "10x4",
             "itemSlots": 40,
@@ -8929,8 +8932,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "65",
                 "accuracy": "1.65 MOA",
-                "velocity": "835 m/s",
-                "rpm": "700"
+                "rpm": "700",
+                "velocityMultiplier": 0.949
             },
             "itemSize": "8x3",
             "itemSlots": 24,
@@ -9001,8 +9004,8 @@ const weaponsData = {
                 "sway": "150",
                 "ergonomics": "30",
                 "accuracy": "1.21 MOA",
-                "velocity": "966 m/s",
-                "rpm": "550"
+                "rpm": "550",
+                "velocityMultiplier": 1.15
             },
             "itemSize": "10x4",
             "itemSlots": 40,
@@ -9059,8 +9062,8 @@ const weaponsData = {
                 "sway": "200",
                 "ergonomics": "51",
                 "accuracy": "16.50 MOA",
-                "velocity": "750 m/s",
-                "rpm": "60"
+                "rpm": "60",
+                "velocityMultiplier": 1.0
             },
             "itemSize": "7x4",
             "itemSlots": 28,

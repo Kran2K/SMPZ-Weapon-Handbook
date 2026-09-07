@@ -1197,6 +1197,12 @@ function isAttachmentItem(item) {
     return false;
 }
 
+function isWeaponItem(item) {
+    if (!item) return false;
+    if (typeof weaponsData !== 'undefined' && item.category && weaponsData[item.category]) return true;
+    return false;
+}
+
 const DataParsers = {
     weight: (item) => {
         const val = item?.stats?.weight;
@@ -1275,10 +1281,15 @@ const DataParsers = {
         return isNaN(num) ? null : num;
     },
     velocity: (item) => {
-        const val = item?.stats?.velocity;
-        if (!val) return null;
-        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
-        return isNaN(num) ? null : num;
+        if (!isWeaponItem(item)) return null;
+        if (item?.stats?.velocity) {
+            const num = parseFloat(String(item.stats.velocity).replace(/[^0-9.]/g, ''));
+            if (!isNaN(num)) return num;
+        }
+        const cal = item?.calibers?.[0];
+        const baseSpeed = cal ? (CALIBER_BASE_SPEEDS[cal] || (cal === '7.62x51mm' ? CALIBER_BASE_SPEEDS['.308 WIN'] : 0)) : 0;
+        const mult = item?.stats?.velocityMultiplier !== undefined ? item.stats.velocityMultiplier : 1.0;
+        return baseSpeed > 0 ? Math.round(baseSpeed * mult) : null;
     },
     rpm: (item) => {
         const val = item?.stats?.rpm;
@@ -1609,8 +1620,11 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
                     specs.push({ metricKey: 'rpm', label: 'RPM', text: `${item.stats.rpm} RPM`, tagClass: 'spec-rpm' });
                 } else if (activeMetricKey === 'moa' && item.stats?.accuracy) {
                     specs.push({ metricKey: 'moa', label: 'MOA', text: `${item.stats.accuracy}`, tagClass: 'spec-moa' });
-                } else if (activeMetricKey === 'velocity' && item.stats?.velocity) {
-                    specs.push({ metricKey: 'velocity', label: '탄속', text: `${item.stats.velocity}`, tagClass: 'spec-velocity' });
+                } else if (activeMetricKey === 'velocity') {
+                    const vel = DataParsers.velocity(item);
+                    if (vel !== null) {
+                        specs.push({ metricKey: 'velocity', label: '탄속', text: `${vel} m/s`, tagClass: 'spec-velocity' });
+                    }
                 } else if (activeMetricKey === 'weapon_recoil' && item.stats?.recoil) {
                     specs.push({ metricKey: 'weapon_recoil', label: '반동', text: `반동 ${item.stats.recoil}`, tagClass: 'spec-recoil' });
                 } else if (activeMetricKey === 'weapon_sway' && item.stats?.sway) {
@@ -2411,6 +2425,74 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     updateFloatingNav();
 }
 
+const CATEGORY_PLACEHOLDER_FILES = {
+    '백팩': 'assets/placeholders/gear-backpack.png',
+    '헬멧': 'assets/placeholders/gear-helmet.png',
+    '헬멧 부착물': 'assets/placeholders/gear-visor.png',
+    '전신 방탄복': 'assets/placeholders/gear-full-armor.png',
+    '플레이트 캐리어': 'assets/placeholders/gear-plate-carrier.png',
+    '체스트 리그': 'assets/placeholders/gear-chest-rig.png',
+    '마스크': 'assets/placeholders/gear-mask.png',
+
+    '탄창': 'assets/placeholders/att-magazine.png',
+    '광학 조준경': 'assets/placeholders/att-optic.png',
+    '기계식 조준기': 'assets/placeholders/att-iron-sight.png',
+    '소음기': 'assets/placeholders/att-suppressor.png',
+    '소염기 / 머즐': 'assets/placeholders/att-muzzle.png',
+    '개머리판': 'assets/placeholders/att-stock.png',
+    '핸드가드': 'assets/placeholders/att-handguard.png',
+    '총열': 'assets/placeholders/att-barrel.png',
+    '리시버': 'assets/placeholders/att-receiver.png',
+    '권총 손잡이': 'assets/placeholders/att-pistol-grip.png',
+    '전방 손잡이': 'assets/placeholders/att-foregrip.png',
+    '양각대': 'assets/placeholders/att-bipod.png',
+    '레이저 표적기': 'assets/placeholders/att-laser.png',
+    '전술 플래시': 'assets/placeholders/att-flashlight.png',
+    '마운트': 'assets/placeholders/att-mount.png',
+    '버퍼 튜브': 'assets/placeholders/att-buffer-tube.png',
+    '가스 블록': 'assets/placeholders/att-gas-block.png',
+    '장전 손잡이': 'assets/placeholders/att-charging-handle.png',
+    '방아쇠': 'assets/placeholders/att-trigger.png',
+    '해머': 'assets/placeholders/att-hammer.png',
+
+    '돌격 소총': 'assets/ar.png',
+    '저격 소총': 'assets/sr.png',
+    '기관단총': 'assets/smg.png',
+    '산탄총': 'assets/shotgun.png',
+    '권총': 'assets/pistol.png',
+    '경기관총': 'assets/lmg.png',
+    '유탄 발사기': 'assets/gl.png'
+};
+
+const DEFAULT_PLACEHOLDER_FILE = 'assets/placeholders/default.svg';
+
+function getPlaceholderIconHtml(item, categoryKey, panelType, context = 'card') {
+    const rawCategory = (item && item.category) || (categoryKey !== 'all' && categoryKey !== 'search' ? categoryKey : '') || '';
+    const cat = rawCategory.trim();
+
+    let filePath = CATEGORY_PLACEHOLDER_FILES[cat];
+    if (!filePath) {
+        if (panelType === 'gear') {
+            filePath = CATEGORY_PLACEHOLDER_FILES['백팩'];
+        } else if (panelType === 'attachment') {
+            filePath = CATEGORY_PLACEHOLDER_FILES['마운트'];
+        } else {
+            filePath = CATEGORY_PLACEHOLDER_FILES['돌격 소총'];
+        }
+    }
+    if (!filePath) {
+        filePath = DEFAULT_PLACEHOLDER_FILE;
+    }
+
+    const imgClass = context === 'detail' ? 'detail-placeholder-img' : 'grid-card-placeholder-img';
+    const altText = cat || '아이템';
+
+    if (context === 'detail') {
+        return `<img src="${filePath}" alt="${altText}" class="${imgClass}">`;
+    }
+    return `<div class="grid-card-placeholder-wrap"><img src="${filePath}" alt="${altText}" class="${imgClass}"></div>`;
+}
+
 // 그리드 카드 생성 (이미지 + 이름 + 동적 스펙 뱃지)
 function createGridCard(item, categoryKey, panelType) {
     const card = document.createElement('div');
@@ -2426,11 +2508,11 @@ function createGridCard(item, categoryKey, panelType) {
         img.src = images[0];
         img.alt = item.name;
         img.onerror = function() {
-            imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
+            imgWrap.innerHTML = getPlaceholderIconHtml(item, categoryKey, panelType, 'card');
         };
         imgWrap.appendChild(img);
     } else {
-        imgWrap.innerHTML = '<span class="grid-card-placeholder">-</span>';
+        imgWrap.innerHTML = getPlaceholderIconHtml(item, categoryKey, panelType, 'card');
     }
 
     // 3D 모델 보유 뱃지 (좌측 상단)
@@ -2590,24 +2672,13 @@ function createCategoryItem(name, count, key, panelType) {
     link.className = 'category-link';
     link.dataset.category = key;
     
-    // 카테고리별 아이콘 매핑
-    const categoryIcons = {
-        '권총': 'assets/pistol.png',
-        '돌격 소총': 'assets/ar.png',
-        '기관단총': 'assets/smg.png',
-        '저격 소총': 'assets/sr.png',
-        '산탄총': 'assets/shotgun.png',
-        '경기관총': 'assets/lmg.png',
-        '유탄 발사기': 'assets/gl.png'
-    };
-    
-    // 아이콘 추가 (해당 카테고리에 아이콘이 있는 경우)
-    if (categoryIcons[key]) {
+    const iconPath = CATEGORY_PLACEHOLDER_FILES[key];
+    if (iconPath) {
         const iconImg = document.createElement('img');
-        iconImg.src = categoryIcons[key];
+        iconImg.src = iconPath;
         iconImg.alt = name;
         iconImg.className = 'category-icon';
-        if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기') {
+        if (key === '돌격 소총' || key === '기관단총' || key === '저격 소총' || key === '산탄총' || key === '경기관총' || key === '유탄 발사기' || key === '총열' || key === '핸드가드') {
             iconImg.classList.add('category-icon-large');
         }
         link.appendChild(iconImg);
@@ -2887,7 +2958,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     }
     const placeholder = document.createElement('div');
     placeholder.className = 'weapon-image-placeholder';
-    placeholder.textContent = '-';
+    placeholder.innerHTML = getPlaceholderIconHtml(item, item?.category, currentPanel, 'detail');
     placeholder.style.display = images.length === 0 ? 'flex' : 'none';
     imgWrapper.appendChild(placeholder);
     
@@ -3071,6 +3142,35 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     galleryWrapper.appendChild(imageContainer);
     return galleryWrapper;
 }
+
+const CALIBER_BASE_SPEEDS = {
+    '5.56x45mm': 850,
+    '.308 WIN': 770,
+    '7.62x51mm': 770,
+    '5.45x39mm': 880,
+    '7.62x39mm': 640,
+    '7.62x54mmR': 785,
+    '.300 BLK': 442,
+    '9x39mm': 280,
+    '9x19mm': 350,
+    '.45 ACP': 260,
+    '.357 Magnum': 440,
+    '12 Gauge': 340,
+    '.338 Lapua': 900,
+    '.50 BMG': 887,
+    '.408 CheyTac': 998,
+    '.366 TKM': 580,
+    '6.8x51mm': 899,
+    '5.7x28mm': 715,
+    '4.6x30mm': 620,
+    '7.62x25mm': 425,
+    '9x21mm': 410,
+    '.50 AE': 440,
+    '12.7x55mm': 285,
+    '.300 Win': 895,
+    '.22 LR': 320,
+    '40mm': 76
+};
 
 // 무기 상세 정보 표시
 function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
@@ -3277,8 +3377,48 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             const value = document.createElement('span');
             value.className = 'weapon-stat-value';
             const raw = weapon.stats[stat.key];
-            const displayText = raw !== undefined && raw !== null && raw !== "" ? String(raw) : '-';
+            let displayText = raw !== undefined && raw !== null && raw !== "" ? String(raw) : '-';
+            let calcSpeed = 0;
+            let baseSpeed = 0;
+
+            if (stat.key === 'velocity') {
+                const primaryCal = weapon.calibers && weapon.calibers[0];
+                baseSpeed = primaryCal ? (CALIBER_BASE_SPEEDS[primaryCal] || 0) : 0;
+                const mult = (weapon.stats && weapon.stats.velocityMultiplier !== undefined) ? weapon.stats.velocityMultiplier : 1.0;
+                calcSpeed = baseSpeed > 0 ? Math.round(baseSpeed * mult) : (raw ? parseFloat(raw) : 0);
+                if (calcSpeed > 0) {
+                    displayText = `${calcSpeed} m/s`;
+                }
+            }
+
             value.textContent = displayText;
+
+            if (stat.key === 'velocity' && calcSpeed > 0 && weapon.stats && weapon.stats.velocityMultiplier !== undefined && baseSpeed > 0) {
+                const footnote = document.createElement('sup');
+                footnote.className = 'stat-footnote';
+                footnote.textContent = '*';
+                const multStr = Number(weapon.stats.velocityMultiplier).toString();
+                footnote.setAttribute('data-tooltip', `기준 탄속 ${baseSpeed} m/s × 무기 탄속 배율 ${multStr}배`);
+                value.appendChild(footnote);
+            }
+
+            if (stat.key === 'accuracy' && raw) {
+                const match = /([\d.]+)/.exec(String(raw));
+                if (match) {
+                    const moaNum = parseFloat(match[1]);
+                    if (!isNaN(moaNum) && moaNum > 0) {
+                        const footnote = document.createElement('sup');
+                        footnote.className = 'stat-footnote';
+                        footnote.textContent = '*';
+                        const d100 = Number((moaNum * 2.9).toFixed(1));
+                        const d300 = Number((moaNum * 2.9 * 3).toFixed(1));
+                        const d500 = Number((moaNum * 2.9 * 5).toFixed(1));
+                        const tooltipText = `100m 탄착군 지름 약 ${d100}cm\n300m 탄착군 지름 약 ${d300}cm\n500m 탄착군 지름 약 ${d500}cm`;
+                        footnote.setAttribute('data-tooltip', tooltipText);
+                        value.appendChild(footnote);
+                    }
+                }
+            }
 
             row.appendChild(label);
             row.appendChild(value);
@@ -3286,7 +3426,9 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
             // 게이지 바 계산 (기준 무기)
             let numericValue = NaN;
-            if (raw !== undefined && raw !== null && raw !== "") {
+            if (stat.key === 'velocity') {
+                numericValue = calcSpeed > 0 ? calcSpeed : NaN;
+            } else if (raw !== undefined && raw !== null && raw !== "") {
                 if (stat.isMoa) {
                     // "1.24 MOA" 같은 문자열에서 숫자만 추출
                     const match = /([\d.]+)/.exec(String(raw));
@@ -3322,7 +3464,13 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             if (compareWeapon && compareWeapon.stats && compareWeapon.id !== weapon.id) {
                 const rawCompare = compareWeapon.stats[stat.key];
                 let numericCompare = NaN;
-                if (rawCompare !== undefined && rawCompare !== null && rawCompare !== "") {
+                if (stat.key === 'velocity') {
+                    const compCal = compareWeapon.calibers && compareWeapon.calibers[0];
+                    const compBase = compCal ? (CALIBER_BASE_SPEEDS[compCal] || 0) : 0;
+                    const compMult = (compareWeapon.stats && compareWeapon.stats.velocityMultiplier !== undefined) ? compareWeapon.stats.velocityMultiplier : 1.0;
+                    const compSpeed = compBase > 0 ? Math.round(compBase * compMult) : (rawCompare ? parseFloat(rawCompare) : 0);
+                    numericCompare = compSpeed > 0 ? compSpeed : NaN;
+                } else if (rawCompare !== undefined && rawCompare !== null && rawCompare !== "") {
                     if (stat.isMoa) {
                         const match2 = /([\d.]+)/.exec(String(rawCompare));
                         if (match2) numericCompare = parseFloat(match2[1]);

@@ -591,6 +591,11 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_obj = dict(item)
                 item_obj.pop('modesKo', None)
                 item_obj.pop('protectionAreasKo', None)
+                if 'stats' in item_obj and isinstance(item_obj['stats'], dict):
+                    item_obj['stats'].pop('velocityTooltip', None)
+                    item_obj['stats'].pop('baseVelocity', None)
+                    item_obj['stats'].pop('baseAmmo', None)
+                    item_obj['stats'].pop('velocity', None)
                 props = get_inherited_props(item_id)
 
                 # 1. 2D Image Asset mapping
@@ -653,11 +658,16 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 if chamberable:
                     item_obj['chamberableFrom'] = chamberable
 
-                # 4-1. Weapon Designated Primary Caliber
+                # 4-1. Weapon Designated Primary Caliber & Velocity Multiplier
                 if sec_name == 'weaponsData':
                     w_cals = extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props)
                     if w_cals:
                         item_obj['calibers'] = w_cals
+                    
+                    calc_mult = extract_weapon_velocity_multiplier(props)
+                    if calc_mult is not None:
+                        stats = item_obj.setdefault('stats', {})
+                        stats['velocityMultiplier'] = calc_mult
 
                 # 5. Protection Areas metadata
                 prot_areas = props.get('ProtectionAreas')
@@ -733,6 +743,8 @@ def normalize_ammo_caliber(raw_str):
         return '12 Gauge'
     
     # 3. Specific Calibers from C++ config
+    if '127x55' in raw or '12.7x55' in raw_lower or 'sts130' in raw or 'ash12' in raw:
+        return '12.7x55mm'
     if '300blk' in raw or '300aac' in raw or '300blackout' in raw or '300whisper' in raw or '300vmax' in raw or '300bcp' in raw:
         return '.300 BLK'
     if '68x51' in raw or '6.8x51' in raw_lower or '277fury' in raw or '277sig' in raw:
@@ -815,6 +827,15 @@ def extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props):
             return [cals[0]]
             
     return []
+
+def extract_weapon_velocity_multiplier(props):
+    """Extracts initSpeedMultiplier from C++ weapon properties"""
+    mult = props.get('initSpeedMultiplier', 1.0)
+    try:
+        mult = float(mult)
+    except (ValueError, TypeError):
+        mult = 1.0
+    return round(mult, 3)
 
 def enrich_magazine_calibers(weaponsData, attachmentData):
     """Links weapons' chamberableFrom calibers to compatible magazines, populating calibers[]"""
