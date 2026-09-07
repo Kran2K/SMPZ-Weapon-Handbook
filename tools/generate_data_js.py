@@ -668,6 +668,24 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return 'AR-15 / 버퍼 튜브 규격'
         return '전용 총기 규격'
 
+    def classify_muzzle_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        name = item_obj.get('name', '').lower()
+
+        big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor'}
+        ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter'}
+        special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'rpdmuzzle', 'pkmsuppressor'}
+
+        if any(s in big_slots for s in inv) or '.338' in name or 'm82' in name or '12ga' in name or 'xm109' in name:
+            return '대구경 / 산탄총 규격'
+        if any(s in ak_slots for s in inv) or 'akm' in name or 'ak ' in name or 'zenit dtk' in name:
+            return 'AK 계열 규격'
+        if any(s in special_slots for s in inv) or 'glock' in name or '1911' in name or 'mp7' in name or 'as val' in name or 'rpd' in name or 'pkm' in name:
+            return '권총 / SMG / 기타'
+        if any(s in ('762suppressor', 'spearsuppressor') for s in inv) or '7.62' in name or 'ar-10' in name or 'm110' in name:
+            return '7.62mm / AR-10 규격'
+        return '5.56mm / AR-15 규격'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -712,7 +730,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'helmet_types': 0,
         'foregrip_types': 0,
         'receiver_types': 0,
-        'stock_types': 0
+        'stock_types': 0,
+        'muzzle_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -882,6 +901,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['stockType'] = classify_stock_type(item_obj)
                         item_obj['subCategory'] = item_obj['stockType']
                         stats_summary['stock_types'] += 1
+                    elif target_cat == '소염기 / 머즐':
+                        item_obj['muzzleType'] = classify_muzzle_type(item_obj)
+                        item_obj['subCategory'] = item_obj['muzzleType']
+                        stats_summary['muzzle_types'] += 1
                 elif sec_name == 'gearData':
                     if target_cat == '헬멧 부착물':
                         item_obj['helmetPartType'] = classify_helmet_attachment_type(item_obj)
@@ -918,6 +941,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 전방 손잡이 분류(foregripType) 연동: {stats_summary['foregrip_types']}개")
     print(f"    - 리시버 분류(receiverType) 연동:     {stats_summary['receiver_types']}개")
     print(f"    - 개머리판 분류(stockType) 연동:      {stats_summary['stock_types']}개")
+    print(f"    - 소염기/머즐 분류(muzzleType) 연동:  {stats_summary['muzzle_types']}개")
     print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)

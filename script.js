@@ -1632,8 +1632,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물' || cat === '전방 손잡이' || cat === '리시버' || cat === '개머리판') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType, tagClass: 'spec-mount' });
+    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물' || cat === '전방 손잡이' || cat === '리시버' || cat === '개머리판' || cat === '소염기 / 머즐') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType)) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType, tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -1944,7 +1944,7 @@ function createSubCategoryChipsRow(labelTitle, prefix, types, itemsToCheck) {
 
     const counts = { all: itemsToCheck.length };
     types.forEach(t => {
-        counts[t] = itemsToCheck.filter(it => (it.subCategory === t || it.mountType === t || it.sightType === t || it.gripPlatform === t || it.dotType === t || it.helmetPartType === t || it.foregripType === t || it.receiverType === t || it.stockType === t)).length;
+        counts[t] = itemsToCheck.filter(it => (it.subCategory === t || it.mountType === t || it.sightType === t || it.gripPlatform === t || it.dotType === t || it.helmetPartType === t || it.foregripType === t || it.receiverType === t || it.stockType === t || it.muzzleType === t)).length;
     });
 
     const anySpecificActive = Array.from(currentGridActiveChips).some(id => id.startsWith(`${prefix}_`) && id !== `${prefix}_all`);
@@ -2282,6 +2282,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         container.appendChild(createSubCategoryChipsRow('개머리판 규격', 'stk', stockTypes, itemsToCheck));
         return;
     }
+
+    // 12. 소염기 / 머즐 전용 탭: 하위 분류 필터 칩 바
+    const isMuzzleOnlyView = !isWeaponView && !isMagazineOnlyView && !isGearView && 
+        (categoryKey === '소염기 / 머즐' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '소염기 / 머즐')));
+
+    if (isMuzzleOnlyView) {
+        const muzzleTypes = ['5.56mm / AR-15 규격', '7.62mm / AR-10 규격', '대구경 / 산탄총 규격', '권총 / SMG / 기타', 'AK 계열 규격'];
+        container.appendChild(createSubCategoryChipsRow('머즐 규격', 'mzl', muzzleTypes, itemsToCheck));
+        return;
+    }
 }
 
 // 그리드 정렬 및 필터 적용 메인 파이프라인
@@ -2300,7 +2310,7 @@ function applyGridSortAndFilters() {
             const name = (item.name || '').toLowerCase();
             const id = (item.id || '').toLowerCase();
             const cat = (item.category || '').toLowerCase();
-            const sub = (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || '').toLowerCase();
+            const sub = (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType || '').toLowerCase();
             const cal = (getItemCalibers(item) || []).join(' ').toLowerCase();
             const searchTarget = `${name} ${id} ${cat} ${sub} ${cal}`;
             return terms.every(t => searchTarget.includes(t));
@@ -2366,7 +2376,7 @@ function applyGridSortAndFilters() {
             // 2-4. 하위 분류 필터 (선택된 하위 분류들 중 하나라도 일치하면 통과)
             if (activeSubFilters.size > 0) {
                 for (const [prefix, vals] of activeSubFilters.entries()) {
-                    const itemVal = item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType;
+                    const itemVal = item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType;
                     if (!itemVal || !vals.includes(itemVal)) {
                         return false;
                     }

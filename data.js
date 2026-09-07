@@ -20992,7 +20992,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "CNCAdapter"
-            ]
+            ],
+            "muzzleType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_AK_AKM_KibaArms_308_Muzzle_Device_Adapter",
@@ -21012,7 +21014,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "308Adapter"
-            ]
+            ],
+            "muzzleType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_Fortis_RED_762x51_Muzzle",
@@ -21033,7 +21037,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_12ga_GK02_Muzzle",
@@ -21053,7 +21059,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "12gaMuzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_MSR_DualPort_MuzzleBrake",
@@ -21073,7 +21081,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "300WinSuppressor"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Cadex_Defense_MX1_Multi_Caliber_MuzzleBrake",
@@ -21095,7 +21105,9 @@ const attachmentData = {
                 "762Suppressor",
                 "338Muzzle",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_AC858_338_MuzzleBrake",
@@ -21115,7 +21127,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_MuzzleBrake",
@@ -21135,7 +21149,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Noveske_KX3_556_Muzzle",
@@ -21155,7 +21171,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A1_3Prong_556_Muzzle",
@@ -21175,7 +21193,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A2_556_Muzzle",
@@ -21195,7 +21215,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_CQB_556_Muzzle",
@@ -21218,7 +21240,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "CRDMuzzle"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_556_CRD",
@@ -21238,7 +21262,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "CRDMuzzle"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_FSK_762x51_Muzzle",
@@ -21259,7 +21285,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_PotomacArmory_M110_762x51_Muzzle",
@@ -21280,7 +21308,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_M82A1_Muzzle",
@@ -21300,7 +21330,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M107A1Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle",
@@ -21322,7 +21354,9 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor",
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SF3P_556_Muzzle",
@@ -21342,7 +21376,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SureFire_SF4P_556_Muzzle",
@@ -21362,7 +21398,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_L_556_Muzzle",
@@ -21382,7 +21420,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_762x51_Muzzle",
@@ -21403,7 +21443,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_HKG28_762x51_Muzzle",
@@ -21424,7 +21466,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_762x51_Muzzle",
@@ -21445,7 +21489,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_AAC_51T_762x51_Muzzle",
@@ -21466,7 +21512,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_SPR_556_Muzzle",
@@ -21486,7 +21534,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Masada_Muzzle",
@@ -21506,7 +21556,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_JailBreak_Muzzle_Device",
@@ -21526,7 +21578,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ASVALMod4JB"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Suppressor_Cap",
@@ -21546,7 +21600,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ASVALMod4Muzzle"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_M1911_AO_Muzzle",
@@ -21566,7 +21622,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "M1911AO"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_MP7_SureFire_Muzzle",
@@ -21586,7 +21644,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "MP7Suppressor"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_XM109_DualPort_Muzzle",
@@ -21606,7 +21666,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "XM109Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_RPD_Thread_Protector_Muzzle",
@@ -21625,7 +21687,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "RPDMuzzle"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_PKM_Muzzle",
@@ -21645,7 +21709,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "PKMSuppressor"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Muzzle",
@@ -21666,7 +21732,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_Aero556_Muzzle",
@@ -21686,7 +21754,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_Alien556_Muzzle",
@@ -21706,7 +21776,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_ASR556_Muzzle",
@@ -21726,7 +21798,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_blitz556_Muzzle",
@@ -21746,7 +21820,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_bulletec556_Muzzle",
@@ -21766,7 +21842,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_cc450_556_Muzzle",
@@ -21786,7 +21864,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_12ga_Claw_Muzzle",
@@ -21806,7 +21886,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "12gaMuzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_claymore556_Muzzle",
@@ -21826,7 +21908,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_cqb556_Muzzle",
@@ -21846,7 +21930,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_dtk556_Muzzle",
@@ -21866,7 +21952,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_G3P_Muzzle",
@@ -21886,7 +21974,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "GlockSuppressor"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_G4P_Muzzle",
@@ -21906,7 +21996,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "GlockSuppressor"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_Glock_G4_SlideComp_Compensator",
@@ -21926,7 +22018,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "GlockSuppressor"
-            ]
+            ],
+            "muzzleType": "권총 / SMG / 기타",
+            "subCategory": "권총 / SMG / 기타"
         },
         {
             "id": "SMPZ_Attachments_gate556_Muzzle",
@@ -21946,7 +22040,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_jailbreak556_Muzzle",
@@ -21966,7 +22062,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "JailBreakMuzzle"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_nero556_Muzzle",
@@ -21986,7 +22084,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_phantom556_Muzzle",
@@ -22006,7 +22106,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_PSR_Multi_Caliber_Muzzle",
@@ -22029,7 +22131,9 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor",
                 "338Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_pws556_Muzzle",
@@ -22049,7 +22153,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_qdc556_Muzzle",
@@ -22069,7 +22175,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_vette556_Muzzle",
@@ -22089,7 +22197,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_vp09556_Muzzle",
@@ -22109,7 +22219,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_war556_Muzzle",
@@ -22129,7 +22241,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_wave556_Muzzle",
@@ -22149,7 +22263,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "weaponMuzzleM4"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         },
         {
             "id": "SMPZ_Attachments_ZK38_Muzzle",
@@ -22170,7 +22286,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_TMB_338_Muzzle",
@@ -22189,7 +22307,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "338Muzzle"
-            ]
+            ],
+            "muzzleType": "대구경 / 산탄총 규격",
+            "subCategory": "대구경 / 산탄총 규격"
         },
         {
             "id": "SMPZ_Attachments_Venom_762x39_Muzzle",
@@ -22209,7 +22329,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleAKM"
-            ]
+            ],
+            "muzzleType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_Zenit_DTK545_Muzzle",
@@ -22229,7 +22351,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponMuzzleAK74"
-            ]
+            ],
+            "muzzleType": "AK 계열 규격",
+            "subCategory": "AK 계열 규격"
         },
         {
             "id": "SMPZ_Attachments_Lantac_DGN_762x51_Muzzle",
@@ -22250,7 +22374,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_Lantac_BMD_with_DGN_762x51_Muzzle",
@@ -22271,7 +22397,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_Keymount_762x51_Muzzle",
@@ -22292,7 +22420,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_M11_762x51_Muzzle",
@@ -22313,7 +22443,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_MK47_762x51_Muzzle",
@@ -22334,7 +22466,9 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor",
                 "SPEARSuppressor"
-            ]
+            ],
+            "muzzleType": "7.62mm / AR-10 규격",
+            "subCategory": "7.62mm / AR-10 규격"
         },
         {
             "id": "SMPZ_Attachments_Prong_Muzzle",
@@ -22356,7 +22490,9 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4",
                 "ARMuzzle"
-            ]
+            ],
+            "muzzleType": "5.56mm / AR-15 규격",
+            "subCategory": "5.56mm / AR-15 규격"
         }
     ],
     "소음기": [
