@@ -298,6 +298,55 @@ const slotNameMap = {
     'XM109Muzzle': '25x59mm 총구 부착물 / 소음기'
 };
 
+// 하위 분류 식별자 한국어 라벨 매핑 사전 (프레젠테이션 레이어)
+const SUBCATEGORY_LABELS = {
+    'scope_mount': '조준경 마운트',
+    'stock_adapter': '개머리판 어댑터',
+    'flashlight_mount': '플래시라이트 마운트',
+    'bipod_adapter': '바이포드 어댑터',
+    'rail_panel': '기타 레일/패널',
+    'rear_sight': '가늠자',
+    'front_sight': '가늠쇠',
+    'carry_handle': '캐링 핸들',
+    'ar15_m4': 'AR-15 / M4 계열',
+    'ak': 'AK 계열',
+    'picatinny': '피카티니 규격',
+    'micro_dot': '권총 / 마이크로 도트',
+    'dovetail': 'AK 도브테일',
+    'visor': '안면 바이저',
+    'armor_plate': '증가 장갑판',
+    'mandible': '턱 보호구',
+    'mlok': 'M-LOK 규격',
+    'keymod': 'KeyMod 규격',
+    'urx': 'URX 규격',
+    'ar15_upper': 'AR-15 상부 리시버',
+    'ak_dustcover': 'AK 더스트 커버',
+    'pistol_slide': '권총 슬라이드',
+    'buffer_tube': 'AR-15 / 버퍼 튜브 규격',
+    'custom': '전용 총기 규격',
+    'chassis': '샤시 일체형',
+    '556_ar15': '5.56mm / AR-15 규격',
+    '762_ar10': '7.62mm / AR-10 규격',
+    'heavy_shotgun': '대구경 / 산탄총 규격',
+    'pistol_smg_other': '권총 / SMG / 기타',
+    'multi_caliber': '멀티 캘리버',
+    'other': '기타'
+};
+
+function getSubCategoryLabel(item) {
+    if (!item) return '';
+    const sub = typeof item === 'string' ? item : item.subCategory;
+    if (!sub) return '';
+    const cat = typeof item === 'object' ? item.category : '';
+
+    if (cat === '개머리판' && sub === 'ak') return 'AK 계열 규격';
+    if ((cat === '소염기 / 머즐' || cat === '소음기') && sub === 'ak') return 'AK 계열 규격';
+    if (cat === '권총 손잡이' && sub === 'other') return '기타 총기류';
+    if (cat === '리시버' && sub === 'other') return '기타 총기 리시버';
+
+    return SUBCATEGORY_LABELS[sub] || sub;
+}
+
 // 슬롯 그룹 매핑 (동일 규격의 1번/2번/3번 슬롯들을 하나의 대표 그룹으로 묶음)
 const slotGroupMap = {
     // 전방 손잡이 (동일 번호/규격)
@@ -1624,8 +1673,8 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         specs.push({ metricKey: 'capacity', label: '용량', text: capText, tagClass: 'spec-capacity' });
     }
 
-    if ((cat === '마운트' || cat === '기계식 조준기' || cat === '권총 손잡이' || cat === '도트/홀로그램' || cat === '헬멧 부착물' || cat === '전방 손잡이' || cat === '리시버' || cat === '개머리판' || cat === '소염기 / 머즐' || cat === '소음기') && (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType || item.suppressorType)) {
-        specs.push({ metricKey: 'sub_category', label: '분류', text: item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType || item.suppressorType, tagClass: 'spec-mount' });
+    if (item.subCategory) {
+        specs.push({ metricKey: 'sub_category', label: '분류', text: getSubCategoryLabel(item), tagClass: 'spec-mount' });
     }
 
     // 7. 현재 정렬 기준이 기본 스펙 목록에 없는 경우 동적으로 추가
@@ -1936,18 +1985,21 @@ function createSubCategoryChipsRow(labelTitle, prefix, types, itemsToCheck) {
 
     const counts = { all: itemsToCheck.length };
     types.forEach(t => {
-        counts[t] = itemsToCheck.filter(it => (it.subCategory === t || it.mountType === t || it.sightType === t || it.gripPlatform === t || it.dotType === t || it.helmetPartType === t || it.foregripType === t || it.receiverType === t || it.stockType === t || it.muzzleType === t || it.suppressorType === t)).length;
+        counts[t] = itemsToCheck.filter(it => it.subCategory === t).length;
     });
 
     const anySpecificActive = Array.from(currentGridActiveChips).some(id => id.startsWith(`${prefix}_`) && id !== `${prefix}_all`);
 
     const subChips = [
         { id: `${prefix}_all`, label: `전체 (${counts['all']})`, isAll: true },
-        ...types.filter(t => (counts[t] || 0) > 0).map(t => ({
-            id: `${prefix}_${t}`,
-            label: `${t} (${counts[t]})`,
-            type: t
-        }))
+        ...types.filter(t => (counts[t] || 0) > 0).map(t => {
+            const labelText = getSubCategoryLabel({ subCategory: t, category: itemsToCheck[0]?.category });
+            return {
+                id: `${prefix}_${t}`,
+                label: `${labelText} (${counts[t]})`,
+                type: t
+            };
+        })
     ];
 
     subChips.forEach(chip => {
@@ -2151,7 +2203,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     // 3. 기어 탭: 방탄 / 수납 공간 보유
     if (isGearView) {
         if (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물'))) {
-            const helmTypes = ['안면 바이저', '증가 장갑판', '턱 보호구', '기타'];
+            const helmTypes = ['visor', 'armor_plate', 'mandible', 'other'];
             container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
             return;
         }
@@ -2200,7 +2252,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '마운트' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '마운트')));
 
     if (isMountOnlyView) {
-        const mountTypes = ['조준경 마운트', '개머리판 어댑터', '플래시라이트 마운트', '바이포드 어댑터', '기타 레일/패널'];
+        const mountTypes = ['scope_mount', 'stock_adapter', 'flashlight_mount', 'bipod_adapter', 'rail_panel'];
         container.appendChild(createSubCategoryChipsRow('마운트 분류', 'mount', mountTypes, itemsToCheck));
         return;
     }
@@ -2210,7 +2262,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '기계식 조준기' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '기계식 조준기')));
 
     if (isIronSightOnlyView) {
-        const sightTypes = ['가늠자', '가늠쇠', '캐링 핸들'];
+        const sightTypes = ['rear_sight', 'front_sight', 'carry_handle'];
         container.appendChild(createSubCategoryChipsRow('조준기 분류', 'sight', sightTypes, itemsToCheck));
         return;
     }
@@ -2220,7 +2272,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '권총 손잡이' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '권총 손잡이')));
 
     if (isPistolGripOnlyView) {
-        const gripTypes = ['AR-15 / M4 계열', 'AK 계열', '기타 총기류'];
+        const gripTypes = ['ar15_m4', 'ak', 'other'];
         container.appendChild(createSubCategoryChipsRow('손잡이 분류', 'grip', gripTypes, itemsToCheck));
         return;
     }
@@ -2230,7 +2282,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '도트/홀로그램' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '도트/홀로그램')));
 
     if (isDotSightOnlyView) {
-        const dotTypes = ['피카티니 규격', '권총 / 마이크로 도트', 'AK 도브테일'];
+        const dotTypes = ['picatinny', 'micro_dot', 'dovetail'];
         container.appendChild(createSubCategoryChipsRow('도트/홀로그램 분류', 'dot', dotTypes, itemsToCheck));
         return;
     }
@@ -2240,7 +2292,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '헬멧 부착물')));
 
     if (isHelmetAttachmentOnlyView) {
-        const helmTypes = ['안면 바이저', '증가 장갑판', '턱 보호구', '기타'];
+        const helmTypes = ['visor', 'armor_plate', 'mandible', 'other'];
         container.appendChild(createSubCategoryChipsRow('부착물 분류', 'helm', helmTypes, itemsToCheck));
         return;
     }
@@ -2250,7 +2302,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '전방 손잡이' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '전방 손잡이')));
 
     if (isForegripOnlyView) {
-        const foregripTypes = ['피카티니 규격', 'M-LOK 규격', 'KeyMod 규격', 'URX 규격'];
+        const foregripTypes = ['picatinny', 'mlok', 'keymod', 'urx'];
         container.appendChild(createSubCategoryChipsRow('손잡이 규격', 'fgrip', foregripTypes, itemsToCheck));
         return;
     }
@@ -2260,7 +2312,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '리시버' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '리시버')));
 
     if (isReceiverOnlyView) {
-        const receiverTypes = ['AR-15 상부 리시버', 'AK 더스트 커버', '권총 슬라이드', '기타 총기 리시버'];
+        const receiverTypes = ['ar15_upper', 'ak_dustcover', 'pistol_slide', 'other'];
         container.appendChild(createSubCategoryChipsRow('리시버 분류', 'rcv', receiverTypes, itemsToCheck));
         return;
     }
@@ -2270,7 +2322,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '개머리판' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '개머리판')));
 
     if (isStockOnlyView) {
-        const stockTypes = ['AR-15 / 버퍼 튜브 규격', '전용 총기 규격', 'AK 계열 규격', '샤시 일체형'];
+        const stockTypes = ['buffer_tube', 'custom', 'ak', 'chassis'];
         container.appendChild(createSubCategoryChipsRow('개머리판 규격', 'stk', stockTypes, itemsToCheck));
         return;
     }
@@ -2280,7 +2332,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '소염기 / 머즐' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '소염기 / 머즐')));
 
     if (isMuzzleOnlyView) {
-        const muzzleTypes = ['5.56mm / AR-15 규격', '7.62mm / AR-10 규격', '대구경 / 산탄총 규격', '권총 / SMG / 기타', 'AK 계열 규격'];
+        const muzzleTypes = ['556_ar15', '762_ar10', 'heavy_shotgun', 'pistol_smg_other', 'ak'];
         container.appendChild(createSubCategoryChipsRow('머즐 규격', 'mzl', muzzleTypes, itemsToCheck));
         return;
     }
@@ -2290,7 +2342,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === '소음기' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === '소음기')));
 
     if (isSuppressorOnlyView) {
-        const suppressorTypes = ['5.56mm / AR-15 규격', '7.62mm / AR-10 규격', '대구경 / 산탄총 규격', '멀티 캘리버', '권총 / SMG / 기타', 'AK 계열 규격'];
+        const suppressorTypes = ['556_ar15', '762_ar10', 'heavy_shotgun', 'multi_caliber', 'pistol_smg_other', 'ak'];
         container.appendChild(createSubCategoryChipsRow('소음기 규격', 'sup', suppressorTypes, itemsToCheck));
         return;
     }
@@ -2312,9 +2364,10 @@ function applyGridSortAndFilters() {
             const name = (item.name || '').toLowerCase();
             const id = (item.id || '').toLowerCase();
             const cat = (item.category || '').toLowerCase();
-            const sub = (item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType || item.suppressorType || '').toLowerCase();
+            const subKey = (item.subCategory || '').toLowerCase();
+            const subLabel = getSubCategoryLabel(item).toLowerCase();
             const cal = (getItemCalibers(item) || []).join(' ').toLowerCase();
-            const searchTarget = `${name} ${id} ${cat} ${sub} ${cal}`;
+            const searchTarget = `${name} ${id} ${cat} ${subKey} ${subLabel} ${cal}`;
             return terms.every(t => searchTarget.includes(t));
         });
     }
@@ -2378,7 +2431,7 @@ function applyGridSortAndFilters() {
             // 2-4. 하위 분류 필터 (선택된 하위 분류들 중 하나라도 일치하면 통과)
             if (activeSubFilters.size > 0) {
                 for (const [prefix, vals] of activeSubFilters.entries()) {
-                    const itemVal = item.subCategory || item.mountType || item.sightType || item.gripPlatform || item.dotType || item.helmetPartType || item.foregripType || item.receiverType || item.stockType || item.muzzleType || item.suppressorType;
+                    const itemVal = item.subCategory;
                     if (!itemVal || !vals.includes(itemVal)) {
                         return false;
                     }
