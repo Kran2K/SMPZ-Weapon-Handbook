@@ -642,6 +642,19 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             return 'URX 전용 규격'
         return '피카티니 레일 (20mm)'
 
+    def classify_receiver_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        item_id = item_obj.get('id', '').lower()
+        name = item_obj.get('name', '').lower()
+
+        if any('m4receiver' in s for s in inv) or 'ar15_' in item_id:
+            return 'AR-15 상부 리시버'
+        if any('glockslide' in s for s in inv) or 'glock_' in item_id or 'slide' in name:
+            return '권총 슬라이드'
+        if any('akcover' in s or 'aks74u' in s for s in inv) or 'ak_' in item_id or 'dust cover' in name:
+            return 'AK 더스트 커버'
+        return '기타 총기 리시버'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -684,7 +697,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'pistolgrip_types': 0,
         'dotsight_types': 0,
         'helmet_types': 0,
-        'foregrip_types': 0
+        'foregrip_types': 0,
+        'receiver_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -846,6 +860,10 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         item_obj['foregripType'] = classify_foregrip_type(item_obj, all_classes)
                         item_obj['subCategory'] = item_obj['foregripType']
                         stats_summary['foregrip_types'] += 1
+                    elif target_cat == '리시버':
+                        item_obj['receiverType'] = classify_receiver_type(item_obj)
+                        item_obj['subCategory'] = item_obj['receiverType']
+                        stats_summary['receiver_types'] += 1
                 elif sec_name == 'gearData':
                     if target_cat == '헬멧 부착물':
                         item_obj['helmetPartType'] = classify_helmet_attachment_type(item_obj)
@@ -866,8 +884,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     # Save updated translation cache
     save_google_translation_cache(google_cache)
 
-    print("\n" + "-" * 70)
-    print(f"[*] 데이터 생성 및 처리 통계:")
+    print("-" * 70)
+    print("[*] 데이터 생성 및 처리 통계:")
     print(f"    - 기존 설명 보존:               {stats_summary['existing']}개")
     print(f"    - 구글 번역(캐시 및 신규 번역):  {stats_summary['google_translate']}개")
     print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
@@ -880,6 +898,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 권총 손잡이 분류(gripPlatform) 연동: {stats_summary['pistolgrip_types']}개")
     print(f"    - 도트/홀로그램 분류(dotType) 연동:   {stats_summary['dotsight_types']}개")
     print(f"    - 전방 손잡이 분류(foregripType) 연동: {stats_summary['foregrip_types']}개")
+    print(f"    - 리시버 분류(receiverType) 연동:     {stats_summary['receiver_types']}개")
     print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)

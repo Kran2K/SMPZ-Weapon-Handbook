@@ -18062,7 +18062,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_M16A1_Standard_Receiver",
@@ -18085,7 +18087,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "M16Mount"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_M16A2_Standard_Receiver",
@@ -18108,7 +18112,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "M16Mount"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_WOS_Receiver",
@@ -18128,7 +18134,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MK2_Receiver",
@@ -18148,7 +18156,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_ADAR2_Standard_Receiver",
@@ -18168,7 +18178,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_TTI_MUR_Receiver",
@@ -18188,7 +18200,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_Receiver",
@@ -18208,7 +18222,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_Gen3_Receiver",
@@ -18228,7 +18244,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_MUR_Receiver",
@@ -18248,7 +18266,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_Standard_Receiver",
@@ -18268,7 +18288,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B33_Receiver",
@@ -18290,7 +18312,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "receiverType": "AK 더스트 커버",
+            "subCategory": "AK 더스트 커버"
         },
         {
             "id": "SMPZ_Attachments_AK_DogLeg_Receiver",
@@ -18312,7 +18336,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "receiverType": "AK 더스트 커버",
+            "subCategory": "AK 더스트 커버"
         },
         {
             "id": "SMPZ_Attachments_AK_PDC_Receiver",
@@ -18334,7 +18360,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "receiverType": "AK 더스트 커버",
+            "subCategory": "AK 더스트 커버"
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Pilgrim_Receiver",
@@ -18356,7 +18384,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "receiverType": "AK 더스트 커버",
+            "subCategory": "AK 더스트 커버"
         },
         {
             "id": "SMPZ_Attachments_Glock_Moto_Receiver",
@@ -18375,7 +18405,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "GlockSlide"
-            ]
+            ],
+            "receiverType": "권총 슬라이드",
+            "subCategory": "권총 슬라이드"
         },
         {
             "id": "SMPZ_Attachments_Glock_Viper_Receiver",
@@ -18394,7 +18426,9 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "GlockSlide"
-            ]
+            ],
+            "receiverType": "권총 슬라이드",
+            "subCategory": "권총 슬라이드"
         },
         {
             "id": "SMPZ_Attachments_Glock_ZT_RMR_Receiver",
@@ -18416,7 +18450,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "noMountRMROptics"
-            ]
+            ],
+            "receiverType": "권총 슬라이드",
+            "subCategory": "권총 슬라이드"
         },
         {
             "id": "SMPZ_Attachments_Glock_ZT_Spartan_Receiver",
@@ -18438,7 +18474,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "noMountRMROptics"
-            ]
+            ],
+            "receiverType": "권총 슬라이드",
+            "subCategory": "권총 슬라이드"
         },
         {
             "id": "SMPZ_Attachments_P90_Effen90_Upper_Receiver",
@@ -18462,7 +18500,9 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "receiverType": "기타 총기 리시버",
+            "subCategory": "기타 총기 리시버"
         },
         {
             "id": "SMPZ_Attachments_AUG_Vltor_Receiver_with_Rail",
@@ -18488,7 +18528,9 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst",
                 "Frontsight"
-            ]
+            ],
+            "receiverType": "기타 총기 리시버",
+            "subCategory": "기타 총기 리시버"
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_X17_Lower_Receiver",
@@ -18507,7 +18549,9 @@ const attachmentData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "X17Receiver"
-            ]
+            ],
+            "receiverType": "기타 총기 리시버",
+            "subCategory": "기타 총기 리시버"
         },
         {
             "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
@@ -18527,7 +18571,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M4Receiver"
-            ]
+            ],
+            "receiverType": "AR-15 상부 리시버",
+            "subCategory": "AR-15 상부 리시버"
         }
     ],
     "마운트": [
