@@ -492,12 +492,30 @@ function showItemDetailAuto(item, categoryKey, galleryIndex = 0) {
 function pushNavState(viewState) {
     if (isNavigatingHistory) return;
     if (!viewState || viewState.type === 'empty') return;
+    if (!history.state) {
+        history.replaceState(viewState, '', window.location.hash || '');
+    }
     navStack.push(viewState);
+}
+
+// 현재 렌더링된 화면 상태를 브라우저 History에 등록
+function recordCurrentViewHistory(hash = '') {
+    if (isNavigatingHistory) return;
+    const currentView = captureCurrentView();
+    if (!currentView || currentView.type === 'empty') return;
+    if (!history.state) {
+        history.replaceState(currentView, '', hash || window.location.hash || '');
+    } else {
+        history.pushState(currentView, '', hash);
+    }
+    updateFloatingNav();
 }
 
 // 네비게이션 스택 팝 (이전 화면으로 복귀)
 function popNavState() {
-    if (navStack.length === 0) {
+    if (window.history.length > 1 && (navStack.length > 0 || currentWeapon || preSearchView)) {
+        window.history.back();
+    } else {
         if (preSearchView) {
             const view = preSearchView;
             preSearchView = null;
@@ -509,44 +527,20 @@ function popNavState() {
         }
         backToGrid();
         updateFloatingNav();
-        return;
-    }
-    const previousState = navStack.pop();
-    isNavigatingHistory = true;
-    try {
-        restoreView(previousState);
-    } finally {
-        isNavigatingHistory = false;
-        updateFloatingNav();
     }
 }
 
 // 최초 루트 그리드/목록으로 한 번에 복귀
 function resetToRootGrid() {
-    if (navStack.length > 0) {
-        const rootState = navStack[0];
-        navStack = [];
-        preSearchView = null;
-        const searchInput = document.getElementById('itemSearch');
-        if (searchInput) searchInput.value = '';
-        isNavigatingHistory = true;
-        try {
-            restoreView(rootState);
-        } finally {
-            isNavigatingHistory = false;
-            updateFloatingNav();
-        }
-    } else if (preSearchView) {
-        const view = preSearchView;
-        preSearchView = null;
-        const searchInput = document.getElementById('itemSearch');
-        if (searchInput) searchInput.value = '';
-        restoreView(view);
-        updateFloatingNav();
-    } else {
-        backToGrid();
-        updateFloatingNav();
+    navStack = [];
+    preSearchView = null;
+    const searchInput = document.getElementById('itemSearch');
+    if (searchInput) searchInput.value = '';
+    backToGrid();
+    if (history.state) {
+        history.pushState(captureCurrentView(), '', window.location.pathname);
     }
+    updateFloatingNav();
 }
 
 // 호환 아이템 그리드 표시
@@ -556,6 +550,7 @@ function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     const parentName = parentItem && parentItem.name ? parentItem.name : '';
     const fullTitle = parentName ? `${parentName} > ${groupName}` : groupName;
     showGridView(fullTitle, matchedItems, 'slot_group_' + slotKeys[0], 'attachment');
+    recordCurrentViewHistory('');
 }
 
 
@@ -739,6 +734,7 @@ function showParentCategoryItems(sourceItem, categoryName, items, panelType) {
     const sourceName = sourceItem && sourceItem.name ? sourceItem.name : '';
     const fullTitle = sourceName ? `${sourceName} > ${categoryName}` : categoryName;
     showGridView(fullTitle, items, 'parent_cat_' + categoryName, panelType || 'weapon');
+    recordCurrentViewHistory('');
 }
 
 // 이 아이템을 장착할 수 있는 아이템 (상위 아이템) 슬롯 UI 섹션 생성
@@ -1036,6 +1032,7 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
+    recordCurrentViewHistory('#' + attachment.id);
 }
 
 
@@ -2833,12 +2830,32 @@ document.addEventListener('DOMContentLoaded', () => {
     renderGearCategories();
     renderAttachmentCategories();
     setupEventListeners();
-    const restored = restoreAppState();
-    if (!restored) {
-        // 초기 진입 시 바로 무기 전체 그리드를 기본 화면으로 표시
-        renderItemGrid('all', 'weapon');
+
+    const hashHandled = handleInitialUrlHash();
+    if (!hashHandled) {
+        const restored = restoreAppState();
+        if (!restored) {
+            renderItemGrid('all', 'weapon');
+        }
     }
 });
+
+// URL 해시 기반 초기 딥링크 복원
+function handleInitialUrlHash() {
+    const hash = (window.location.hash || '').replace(/^#/, '').trim();
+    if (!hash) return false;
+
+    const allItems = getAllDatabaseItems();
+    const targetItem = allItems.find(it => it.id === hash);
+    if (targetItem) {
+        const info = getItemTypeAndCategory(targetItem);
+        switchPanel(info.panelType);
+        renderItemGrid(info.category, info.panelType);
+        showItemDetailAuto(targetItem, info.category);
+        return true;
+    }
+    return false;
+}
 
 
 
@@ -3818,6 +3835,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
+    recordCurrentViewHistory('#' + weapon.id);
 }
 
 // 기어 상세 정보 표시
@@ -4110,6 +4128,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
+    recordCurrentViewHistory('#' + gear.id);
 }
 
 
@@ -4298,6 +4317,24 @@ function setupEventListeners() {
             if (isDetailView || navStack.length > 0 || isSearchGrid || preSearchView) {
                 popNavState();
             }
+        }
+    });
+
+    // 브라우저 뒤로가기/앞으로가기 표준 이벤트 연동 (마우스 4/5번, 브라우저 화살표, 모바일 제스처)
+    window.addEventListener('popstate', (e) => {
+        isNavigatingHistory = true;
+        try {
+            if (navStack.length > 0) {
+                navStack.pop();
+            }
+            if (e.state && e.state.type !== 'empty') {
+                restoreView(e.state);
+            } else {
+                backToGrid();
+            }
+        } finally {
+            isNavigatingHistory = false;
+            updateFloatingNav();
         }
     });
 }
