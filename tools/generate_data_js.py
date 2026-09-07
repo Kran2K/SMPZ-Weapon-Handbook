@@ -577,6 +577,17 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         # 5. 조준경 마운트: 조준경(Optics, RMR, Dovetail 등) 장착 슬롯을 제공하거나 관련 라이저/레일
         return '조준경 마운트'
 
+    def classify_ironsight_type(item_obj):
+        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+        item_id = item_obj.get('id', '').lower()
+        name = item_obj.get('name', '').lower()
+
+        if 'carry handle' in name or 'carryhandle' in item_id:
+            return '캐링 핸들'
+        if any('front' in s for s in inv) or 'frontsight' in item_id or 'front sight' in name:
+            return '가늠쇠'
+        return '가늠자'
+
     # Korean Translation map for C++ ProtectionAreas
     PROTECTION_AREAS_MAP = {
         'Neck': '목',
@@ -614,7 +625,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'slots_linked': 0,
         'protection_items': 0,
         'optics_magnification': 0,
-        'mount_types': 0
+        'mount_types': 0,
+        'ironsight_types': 0
     }
 
     for sec_name, sec_dict, sec_type in sections:
@@ -758,7 +770,12 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                     item_obj['category'] = target_cat
                     if target_cat == '마운트':
                         item_obj['mountType'] = classify_mount_type(item_obj)
+                        item_obj['subCategory'] = item_obj['mountType']
                         stats_summary['mount_types'] += 1
+                    elif target_cat == '기계식 조준기':
+                        item_obj['sightType'] = classify_ironsight_type(item_obj)
+                        item_obj['subCategory'] = item_obj['sightType']
+                        stats_summary['ironsight_types'] += 1
 
                 if target_cat not in result_data[sec_name]:
                     result_data[sec_name][target_cat] = []
@@ -784,6 +801,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 마운트 하위 분류(mountType) 연동: {stats_summary['mount_types']}개")
+    print(f"    - 기계식 조준기 분류(sightType) 연동: {stats_summary['ironsight_types']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 

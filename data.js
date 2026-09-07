@@ -15834,7 +15834,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponOptics"
-            ]
+            ],
+            "sightType": "캐링 핸들",
+            "subCategory": "캐링 핸들"
         },
         {
             "id": "SMPZ_Attachments_Leapers_UTG_A2_Frontsight",
@@ -15854,7 +15856,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_Colt_A2_Rearsight",
@@ -15874,7 +15878,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_MP7_Frontsight",
@@ -15894,7 +15900,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MP7_Rearsight",
@@ -15914,7 +15922,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_M60E4_Frontsight",
@@ -15933,7 +15943,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "M60Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_M60_Rearsight",
@@ -15953,7 +15965,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_M60E6_Frontsight_Rail",
@@ -15972,7 +15986,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "M60Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight",
@@ -15992,7 +16008,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight_FDE",
@@ -16012,7 +16030,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight",
@@ -16032,7 +16052,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight_FDE",
@@ -16052,7 +16074,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_HK417_Frontsight",
@@ -16072,7 +16096,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_HK417_Rearsight",
@@ -16092,7 +16118,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_ARMS_40_Rearsight",
@@ -16112,7 +16140,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_Matech_BUIS_Rearsight",
@@ -16132,7 +16162,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AK_RD_ERS_Rearsight",
@@ -16151,7 +16183,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AK12_Rearsight",
@@ -16170,7 +16204,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AK74_Rearsight",
@@ -16189,7 +16225,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AKM_Rearsight",
@@ -16208,7 +16246,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight",
@@ -16227,7 +16267,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AK_Enhanced_Rearsight",
@@ -16247,7 +16289,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_Mosin_Rearsight",
@@ -16267,7 +16311,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MosinRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_SKS_Rearsight",
@@ -16287,7 +16333,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SKSRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_AK_Tula_TT01_Rail_Rearsight",
@@ -16311,7 +16359,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Frontsight",
@@ -16331,7 +16381,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "G36Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Rearsight",
@@ -16353,7 +16405,9 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponOptics"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Fixed_Frontsight",
@@ -16373,7 +16427,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Fixed_Rearsight",
@@ -16393,7 +16449,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_Defiance_Frontsight",
@@ -16413,7 +16471,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_Defiance_Rearsight",
@@ -16433,7 +16493,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_KAC_Frontsight",
@@ -16453,7 +16515,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_KAC_Rearsight",
@@ -16473,7 +16537,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_KAC_Micro_Frontsight",
@@ -16493,7 +16559,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_KAC_Micro_Rearsight",
@@ -16513,7 +16581,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Frontsight",
@@ -16533,7 +16603,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Rearsight",
@@ -16553,7 +16625,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_MCX_Frontsight",
@@ -16573,7 +16647,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MCX_Rearsight",
@@ -16593,7 +16669,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_MPX_Frontsight",
@@ -16613,7 +16691,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_MPX_Rearsight",
@@ -16633,7 +16713,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Rearsight",
@@ -16653,7 +16735,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_HK416_Rearsight",
@@ -16673,7 +16757,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_Glock_TFX_Frontsight",
@@ -16692,7 +16778,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "GlockFrontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_Glock_TFX_Rearsight",
@@ -16711,7 +16799,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "GlockRearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Frontsight",
@@ -16731,7 +16821,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Frontsight"
-            ]
+            ],
+            "sightType": "가늠쇠",
+            "subCategory": "가늠쇠"
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Rearsight",
@@ -16751,7 +16843,9 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "Rearsight"
-            ]
+            ],
+            "sightType": "가늠자",
+            "subCategory": "가늠자"
         }
     ],
     "도트/홀로그램": [
@@ -18255,7 +18349,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_TigerShark_SightMount",
@@ -18279,7 +18374,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "OpticsOnAKHndgrd"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_G36_Flip_up_Rail",
@@ -18304,7 +18400,8 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AUG_M1_High_Mount",
@@ -18328,7 +18425,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
@@ -18352,7 +18450,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Leapers_UTG_Universal_Shotgun_Mount",
@@ -18378,7 +18477,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_DeltaTek_Pump_Shotgun_Sprut_Mount",
@@ -18403,7 +18503,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_SVD_CAA_DRG_Mount",
@@ -18427,7 +18528,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "Bipod"
             ],
-            "mountType": "바이포드 어댑터"
+            "mountType": "바이포드 어댑터",
+            "subCategory": "바이포드 어댑터"
         },
         {
             "id": "SMPZ_Attachments_M590A1_Top_Rail_Mount",
@@ -18456,7 +18558,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Frontsight"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
@@ -18479,7 +18582,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
@@ -18503,7 +18607,8 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Unity_FAST_Riser_Mount",
@@ -18526,7 +18631,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
@@ -18549,7 +18655,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Precision_Reflex_GEN3_SPR_Rail",
@@ -18572,7 +18679,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlightFirst"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Long_Panel",
@@ -18593,7 +18701,8 @@ const attachmentData = {
                 "URXPanel",
                 "URXPanel2"
             ],
-            "mountType": "기타 레일/패널"
+            "mountType": "기타 레일/패널",
+            "subCategory": "기타 레일/패널"
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_APS_ScopeMount",
@@ -18617,7 +18726,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
@@ -18640,7 +18750,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Standard_Mount",
@@ -18664,7 +18775,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
@@ -18687,7 +18799,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_RMR_Mount",
@@ -18712,7 +18825,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_FiveSeven_RMR_Mount",
@@ -18735,7 +18849,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_ROF90_RMR_Mount",
@@ -18758,7 +18873,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_MPR45_Backup_Mount",
@@ -18781,7 +18897,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AK_RSA55_Stock_Adapter",
@@ -18805,7 +18922,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "MCXButtstock"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AK_AK74M_Zenit_PT_Lock_Stock_Adapter",
@@ -18829,7 +18947,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKZenitStock"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AK_AKM_Zenit_PT_Lock_Stock_Adapter",
@@ -18852,7 +18971,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKZenitStock"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AK_AKS74U_Zenit_PT_Lock_Stock_Adapter",
@@ -18875,7 +18995,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKZenitStock"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AKM_RD_AKtoM4_Buffer_Adapter",
@@ -18898,7 +19019,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AKM_ME4_Buffer_Adapter",
@@ -18922,7 +19044,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_SIG_Knuckle_Stock_Adapter",
@@ -18945,7 +19068,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_SIG_LSHA_Stock_Adapter",
@@ -18968,7 +19092,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "LPTBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AK12_Rearsight_Base_Mount",
@@ -18991,7 +19116,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight_Base_Mount",
@@ -19014,7 +19140,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_KAC_MWS_Bipod_Adapter",
@@ -19037,7 +19164,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "mountType": "바이포드 어댑터"
+            "mountType": "바이포드 어댑터",
+            "subCategory": "바이포드 어댑터"
         },
         {
             "id": "SMPZ_Attachments_Magpul_MLOK_Bipod_Adapter",
@@ -19060,7 +19188,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "mountType": "바이포드 어댑터"
+            "mountType": "바이포드 어댑터",
+            "subCategory": "바이포드 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AXMC_KeySlot_Bipod_Adapter",
@@ -19083,7 +19212,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "mountType": "바이포드 어댑터"
+            "mountType": "바이포드 어댑터",
+            "subCategory": "바이포드 어댑터"
         },
         {
             "id": "SMPZ_Attachments_OdinWorks_KeyMod_Bipod_Adapter",
@@ -19106,7 +19236,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "mountType": "바이포드 어댑터"
+            "mountType": "바이포드 어댑터",
+            "subCategory": "바이포드 어댑터"
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Zenit_B18_Mount",
@@ -19131,7 +19262,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_SVDS_Stock_Adapter",
@@ -19154,7 +19286,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_Glock_ZEV_Cap",
@@ -19174,7 +19307,8 @@ const attachmentData = {
             "inventorySlots": [
                 "noMountRMROptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Burris_FastFire_Weaver_Mount",
@@ -19199,7 +19333,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
@@ -19223,7 +19358,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1911_NcSTAR_Mount",
@@ -19246,7 +19382,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1911_Weig_SightMount",
@@ -19270,7 +19407,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_B51_Mount",
@@ -19293,7 +19431,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_MP5_MTI_Scope_Mount",
@@ -19317,7 +19456,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_OMM_Riser_Mount",
@@ -19341,7 +19481,8 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_25mm_Ring_Mount",
@@ -19377,7 +19518,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "Flashlight"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_KibaArms_25mm_Ring_Mount",
@@ -19413,7 +19555,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "Flashlight"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_EraTac_Sunshade_Mount",
@@ -19437,7 +19580,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AimpointT1"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_BT_QD_NAR_ACRO_Mount",
@@ -19461,7 +19605,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AimpointACRO"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Geissele_SMR_HK_Rail_Mount",
@@ -19484,7 +19629,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "Grip"
             ],
-            "mountType": "기타 레일/패널"
+            "mountType": "기타 레일/패널",
+            "subCategory": "기타 레일/패널"
         },
         {
             "id": "SMPZ_Attachments_Geissele_SMR_HK_Short_Rail_Mount",
@@ -19509,7 +19655,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_UCP_Mount",
@@ -19532,7 +19679,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_USP_Mount",
@@ -19555,7 +19703,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "FFP3"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M9A3_Mount",
@@ -19578,7 +19727,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zveno_Buffer_Adapter",
@@ -19602,7 +19752,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "mountType": "개머리판 어댑터"
+            "mountType": "개머리판 어댑터",
+            "subCategory": "개머리판 어댑터"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Hndgrd_Cover",
@@ -19623,7 +19774,8 @@ const attachmentData = {
                 "DDCover",
                 "DDCover2"
             ],
-            "mountType": "기타 레일/패널"
+            "mountType": "기타 레일/패널",
+            "subCategory": "기타 레일/패널"
         },
         {
             "id": "SMPZ_Attachments_Zenit_B13V_Sidemount",
@@ -19646,7 +19798,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AK_Axion_Kobra_Sidemount",
@@ -19669,7 +19822,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AK_AK303_Sidemount",
@@ -19692,7 +19846,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AK_SAG_SVD_Low_Sidemount",
@@ -19715,7 +19870,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_AK_SVD_CAA_RGL_Sidemount",
@@ -19738,7 +19894,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_6P29M_Mount",
@@ -19763,7 +19920,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "mountType": "플래시라이트 마운트"
+            "mountType": "플래시라이트 마운트",
+            "subCategory": "플래시라이트 마운트"
         },
         {
             "id": "SMPZ_Attachments_SAG_Sidemount",
@@ -19786,7 +19944,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Zenit_B13_Sidemount",
@@ -19809,7 +19968,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_SR3MP_SideMount",
@@ -19832,7 +19992,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_P90_Top_Rail_Mount",
@@ -19855,7 +20016,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_Mosin_Patriot_Rail_Mount",
@@ -19878,7 +20040,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_SKS_MTU017_Cover_Mount",
@@ -19901,7 +20064,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_SKS_UTG_SOCOM_Mount",
@@ -19928,7 +20092,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1A_DCSB_Mount",
@@ -19951,7 +20116,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1A_Vltor_CASV_Rail_Mount",
@@ -19976,7 +20142,8 @@ const attachmentData = {
                 "weaponOpticsSecond",
                 "weaponFlashlightFirst"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_M1A_Leapers_UTG4_Scope_Mount",
@@ -20000,7 +20167,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Mount",
@@ -20028,7 +20196,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Frontsight"
             ],
-            "mountType": "조준경 마운트"
+            "mountType": "조준경 마운트",
+            "subCategory": "조준경 마운트"
         }
     ],
     "방아쇠": [
