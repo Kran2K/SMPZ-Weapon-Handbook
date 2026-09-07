@@ -1105,51 +1105,29 @@ function updateFloatingNav() {
     dock.innerHTML = '';
 
     const isDetailView = !!currentWeapon;
-    const isSearchGrid = currentGridCategoryKey === 'search' || (lastGridState && lastGridState.categoryKey === 'search');
     const hasNavStack = navStack.length > 0;
     const hasPreSearch = !!preSearchView;
 
-    const showPrev = isDetailView || hasNavStack || isSearchGrid || hasPreSearch;
-    const showRoot = hasNavStack;
+    // "목록으로" 버튼 노출 조건 (상세 화면 또는 서브 네비게이션 시 최상위 목록 복귀)
+    const showRoot = hasNavStack || isDetailView || hasPreSearch;
     
     // 현재 스크롤 위치 (맨 위로 버튼 노출 판단용)
     const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
     const isScrolled = scrollY > 120;
 
     // 네비게이션 액션도 없고 스크롤도 안 된 경우 숨김
-    if (!showPrev && !showRoot && !isScrolled) {
+    if (!showRoot && !isScrolled) {
         dock.classList.remove('visible');
         return;
     }
 
     let hasAnyBtn = false;
 
-    // 1. "← 이전으로" 버튼
-    if (showPrev) {
-        const btnPrev = document.createElement('button');
-        btnPrev.type = 'button';
-        btnPrev.className = 'floating-nav-btn primary';
-        btnPrev.innerHTML = `
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-            <span>이전으로</span>
-        `;
-        btnPrev.title = '이전 화면으로 돌아가기 (ESC)';
-        btnPrev.onclick = (e) => {
-            e.preventDefault();
-            popNavState();
-        };
-        dock.appendChild(btnPrev);
-        hasAnyBtn = true;
-    }
-
-    // 2. "목록으로" 버튼 (깊은 네비게이션 시 최상위 목록 복귀)
+    // 1. "목록으로" 버튼 (최초 목록으로 원클릭 복귀)
     if (showRoot) {
         const btnRoot = document.createElement('button');
         btnRoot.type = 'button';
-        btnRoot.className = 'floating-nav-btn secondary';
+        btnRoot.className = 'floating-nav-btn primary';
         btnRoot.innerHTML = `
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="7" height="7"></rect>
@@ -1168,14 +1146,14 @@ function updateFloatingNav() {
         hasAnyBtn = true;
     }
 
-    // 3. 구분선 및 "맨 위로" 버튼
-    if (hasAnyBtn || isScrolled) {
-        if (hasAnyBtn) {
-            const divider = document.createElement('div');
-            divider.className = 'floating-nav-divider';
-            dock.appendChild(divider);
-        }
+    // 2. 구분선 및 "맨 위로" 버튼
+    if (hasAnyBtn && isScrolled) {
+        const divider = document.createElement('div');
+        divider.className = 'floating-nav-divider';
+        dock.appendChild(divider);
+    }
 
+    if (isScrolled) {
         const btnTop = document.createElement('button');
         btnTop.type = 'button';
         btnTop.className = 'floating-nav-btn floating-top-btn';
