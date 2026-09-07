@@ -24,6 +24,49 @@ DEFAULT_MODELS_DIR = os.path.join(DEFAULT_ASSETS_DIR, 'models')
 CACHE_DIR = os.path.join(SCRIPT_DIR, '.cache')
 CONFIG_FILE = os.path.join(SCRIPT_DIR, '.config.json')
 
+CATEGORY_MAP = {
+    # Weapons
+    '돌격 소총': 'assault_rifle',
+    '저격 소총': 'sniper_rifle',
+    '기관단총': 'submachine_gun',
+    '산탄총': 'shotgun',
+    '권총': 'pistol',
+    '경기관총': 'light_machine_gun',
+    '유탄 발사기': 'grenade_launcher',
+
+    # Attachments
+    '가스 블록': 'gas_block',
+    '개머리판': 'buttstock',
+    '광학 조준경': 'optic_scope',
+    '권총 손잡이': 'pistol_grip',
+    '기계식 조준기': 'iron_sight',
+    '도트/홀로그램': 'reflex_sight',
+    '레이저 표적기': 'laser_pointer',
+    '리시버': 'receiver',
+    '마운트': 'mount',
+    '방아쇠': 'trigger',
+    '버퍼 튜브': 'buffer_tube',
+    '소염기 / 머즐': 'muzzle_device',
+    '소음기': 'suppressor',
+    '양각대': 'bipod',
+    '장전 손잡이': 'charging_handle',
+    '전방 손잡이': 'foregrip',
+    '전술 플래시': 'tactical_flashlight',
+    '총열': 'barrel',
+    '탄창': 'magazine',
+    '해머': 'hammer',
+    '핸드가드': 'handguard',
+
+    # Gears
+    '헬멧': 'helmet',
+    '헬멧 부착물': 'helmet_attachment',
+    '전신 방탄복': 'full_body_armor',
+    '플레이트 캐리어': 'plate_carrier',
+    '체스트 리그': 'chest_rig',
+    '마스크': 'mask',
+    '백팩': 'backpack'
+}
+
 # ---------------------------------------------------------------------------
 # GOOGLE TRANSLATE API
 # ---------------------------------------------------------------------------
@@ -713,26 +756,55 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
         return '556_ar15'
 
-    # Korean Translation map for C++ ProtectionAreas
-    PROTECTION_AREAS_MAP = {
-        'Neck': '목',
-        'Torso': '흉부',
-        'Back': '등',
-        'LeftShoulder': '좌측 어깨',
-        'RightShoulder': '우측 어깨',
-        'Stomach': '복부',
-        'LeftSide': '좌측 옆구리',
-        'RightSide': '우측 옆구리',
-        'Groin': '낭심(사타구니)',
-        'Head': '두부(머리)',
-        'Face': '안면(얼굴)',
-        'Ears': '귀',
-        'Eyes': '눈',
-        'Arms': '팔',
-        'Legs': '다리',
-        'Feet': '발',
-        'Hands': '손'
-    }
+    def clean_item_stats(stats):
+        if not isinstance(stats, dict):
+            return stats
+        cleaned = {}
+        for k, v in stats.items():
+            if v is None:
+                continue
+            if k == 'capacity':
+                m = re.search(r'\d+', str(v))
+                if m:
+                    cleaned[k] = int(m.group(0))
+            elif k == 'accuracy':
+                m = re.search(r'[\d.]+', str(v))
+                if m:
+                    try:
+                        cleaned[k] = float(m.group(0))
+                    except ValueError:
+                        pass
+            elif k == 'weight':
+                m = re.search(r'\d+', str(v))
+                if m:
+                    cleaned[k] = int(m.group(0))
+            elif k == 'lightDistance':
+                m = re.search(r'\d+', str(v))
+                if m:
+                    cleaned[k] = int(m.group(0))
+            elif k in ('recoil', 'sway', 'ergonomics', 'rpm', 'bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection', 'hitpoints'):
+                s_val = str(v).strip()
+                if '%' in s_val:
+                    cleaned[k] = s_val
+                else:
+                    m = re.search(r'-?\d+', s_val)
+                    if m:
+                        try:
+                            cleaned[k] = int(m.group(0))
+                        except ValueError:
+                            cleaned[k] = v
+                    else:
+                        cleaned[k] = v
+            elif k == 'velocityMultiplier':
+                try:
+                    cleaned[k] = float(v)
+                except (ValueError, TypeError):
+                    cleaned[k] = v
+            elif k == 'magnification':
+                cleaned[k] = str(v).strip()
+            else:
+                cleaned[k] = v
+        return cleaned
 
     # Reconstruct datasets
     sections = [
@@ -865,76 +937,81 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                     item_obj['modes'] = modes_arr
 
                 # 7. Tactical Flashlight Light Distance
-                if 'Flashlight' in item_id or item_obj.get('category') == '전술 플래시':
+                if 'Flashlight' in item_id or item_obj.get('category') in ('전술 플래시', 'tactical_flashlight'):
                     desc_short = str(props.get('descriptionShort', ''))
                     m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.IGNORECASE)
                     if m_dist:
-                        item_obj.setdefault('stats', {})['lightDistance'] = f"{m_dist.group(1)}m"
+                        item_obj.setdefault('stats', {})['lightDistance'] = int(m_dist.group(1))
                     elif 'M600' in item_id:
-                        item_obj.setdefault('stats', {})['lightDistance'] = "100m"
+                        item_obj.setdefault('stats', {})['lightDistance'] = 100
                     elif 'XHP35' in item_id:
-                        item_obj.setdefault('stats', {})['lightDistance'] = "300m"
+                        item_obj.setdefault('stats', {})['lightDistance'] = 300
 
                 # 8. Optics Magnification
-                if item_obj.get('category') in ('광학 조준경', '도트/홀로그램') or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
+                if item_obj.get('category') in ('광학 조준경', '도트/홀로그램', 'optic_scope', 'reflex_sight') or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
                     mag = extract_optic_magnification(item_id)
                     if mag:
                         item_obj.setdefault('stats', {})['magnification'] = mag
                         stats_summary['optics_magnification'] += 1
+
+                if 'stats' in item_obj and isinstance(item_obj['stats'], dict):
+                    item_obj['stats'] = clean_item_stats(item_obj['stats'])
 
                 # 9. Description resolution
                 final_desc, src_type = resolve_item_description(item_id, existing_desc)
                 item_obj['description'] = final_desc
                 stats_summary[src_type] += 1
 
-                target_cat = cat
+                target_cat = CATEGORY_MAP.get(cat, cat)
                 if sec_name == 'attachmentData':
                     cls_info = all_classes.get(item_id, {})
                     src_file = cls_info.get('source_file', '').replace('\\', '/').lower()
                     if '/attachments/mount' in src_file or '/attachments/sidemount' in src_file:
-                        target_cat = '마운트'
-                    elif '/attachments/pistolgrip' in src_file and target_cat == '전방 손잡이':
-                        target_cat = '권총 손잡이'
+                        target_cat = 'mount'
+                    elif '/attachments/pistolgrip' in src_file and target_cat == 'foregrip':
+                        target_cat = 'pistol_grip'
                     elif 'carryhandle' in item_id.lower() or '/attachments/ironsights' in src_file:
-                        target_cat = '기계식 조준기'
-                    elif '/attachments/optics' in src_file or target_cat in ('광학 조준경', '도트/홀로그램'):
+                        target_cat = 'iron_sight'
+                    elif '/attachments/optics' in src_file or target_cat in ('optic_scope', 'reflex_sight'):
                         mag_val = item_obj.get('stats', {}).get('magnification', '1x')
                         if mag_val == '1x':
-                            target_cat = '도트/홀로그램'
+                            target_cat = 'reflex_sight'
                         else:
-                            target_cat = '광학 조준경'
-                    item_obj['category'] = target_cat
-                    if target_cat == '마운트':
+                            target_cat = 'optic_scope'
+                    
+                    if target_cat == 'mount':
                         item_obj['subCategory'] = classify_mount_type(item_obj)
                         stats_summary['mount_types'] += 1
-                    elif target_cat == '기계식 조준기':
+                    elif target_cat == 'iron_sight':
                         item_obj['subCategory'] = classify_ironsight_type(item_obj)
                         stats_summary['ironsight_types'] += 1
-                    elif target_cat == '권총 손잡이':
+                    elif target_cat == 'pistol_grip':
                         item_obj['subCategory'] = classify_pistolgrip_type(item_obj)
                         stats_summary['pistolgrip_types'] += 1
-                    elif target_cat == '도트/홀로그램':
+                    elif target_cat == 'reflex_sight':
                         item_obj['subCategory'] = classify_dotsight_type(item_obj)
                         stats_summary['dotsight_types'] += 1
-                    elif target_cat == '전방 손잡이':
+                    elif target_cat == 'foregrip':
                         item_obj['subCategory'] = classify_foregrip_type(item_obj, all_classes)
                         stats_summary['foregrip_types'] += 1
-                    elif target_cat == '리시버':
+                    elif target_cat == 'receiver':
                         item_obj['subCategory'] = classify_receiver_type(item_obj)
                         stats_summary['receiver_types'] += 1
-                    elif target_cat == '개머리판':
+                    elif target_cat == 'buttstock':
                         item_obj['subCategory'] = classify_stock_type(item_obj)
                         stats_summary['stock_types'] += 1
-                    elif target_cat == '소염기 / 머즐':
+                    elif target_cat == 'muzzle_device':
                         item_obj['subCategory'] = classify_muzzle_type(item_obj)
                         stats_summary['muzzle_types'] += 1
-                    elif target_cat == '소음기':
+                    elif target_cat == 'suppressor':
                         item_obj['subCategory'] = classify_suppressor_type(item_obj)
                         stats_summary['suppressor_types'] += 1
                 elif sec_name == 'gearData':
-                    if target_cat == '헬멧 부착물':
+                    if target_cat == 'helmet_attachment':
                         item_obj['subCategory'] = classify_helmet_attachment_type(item_obj)
                         stats_summary['helmet_types'] += 1
+
+                item_obj['category'] = target_cat
 
                 if target_cat not in result_data[sec_name]:
                     result_data[sec_name][target_cat] = []
@@ -1104,8 +1181,8 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
                 for c in w_cals:
                     mag_to_calibers[m_id].add(c)
 
-    # 2. Enrich attachmentData['탄창'] items
-    mag_items = attachmentData.get('탄창', [])
+    # 2. Enrich attachmentData['magazine'] items
+    mag_items = attachmentData.get('magazine') or attachmentData.get('탄창') or []
     for mag in mag_items:
         m_id = mag.get('id', '')
         cals_set = mag_to_calibers.get(m_id, set())
