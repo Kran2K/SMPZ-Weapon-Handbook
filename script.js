@@ -13,6 +13,11 @@ const APP_STATE_KEY = 'smpz_handbook_state';
 let navStack = [];
 let isNavigatingHistory = false;
 
+// 브라우저 기본 스크롤 자동 복원 간섭 방지 (SPA 맞춤 스크롤 복원 제어)
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 // 슬롯명 한국어 매핑 사전
 const slotNameMap = {
     '12gaMuzzle': '소음기',
@@ -541,9 +546,7 @@ function showItemDetailAuto(item, categoryKey, galleryIndex = 0) {
 function pushNavState(viewState) {
     if (isNavigatingHistory) return;
     if (!viewState || viewState.type === 'empty') return;
-    if (!history.state) {
-        history.replaceState(viewState, '', window.location.hash || '');
-    }
+    history.replaceState(viewState, '', window.location.hash || '');
     navStack.push(viewState);
 }
 
@@ -2566,6 +2569,7 @@ function captureCurrentView() {
         return { type: 'detail', panel: currentPanel, category: currentCategory, item: currentWeapon, galleryIndex: lastGalleryImageIndex, scrollY: currentScrollY };
     }
     if (lastGridState) {
+        lastGridScrollY = currentScrollY;
         return {
             type: 'grid',
             title: lastGridState.title,
@@ -2590,8 +2594,11 @@ function restoreView(view) {
     if (view.type === 'detail') {
         showItemDetailAuto(view.item, view.category, view.galleryIndex || 0);
         if (view.scrollY) {
+            const targetY = view.scrollY;
             requestAnimationFrame(() => {
-                window.scrollTo({ top: view.scrollY, left: 0, behavior: 'instant' });
+                requestAnimationFrame(() => {
+                    window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+                });
             });
         }
     } else if (view.type === 'grid') {
@@ -2704,7 +2711,9 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
     if (shouldRestoreScroll && lastGridScrollY > 0) {
         const targetY = lastGridScrollY;
         requestAnimationFrame(() => {
-            window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+            requestAnimationFrame(() => {
+                window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+            });
         });
     } else if (!shouldRestoreScroll) {
         lastGridScrollY = 0;
