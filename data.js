@@ -290,7 +290,7 @@ const weaponsData = {
                 "recoil": 150,
                 "sway": 100,
                 "ergonomics": 55,
-                "accuracy": 13.75,
+                "accuracy": 20.63,
                 "velocityMultiplier": 1.0,
                 "weight": 2690
             },
@@ -507,7 +507,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 80,
                 "ergonomics": 53,
-                "accuracy": 6.88,
+                "accuracy": 1.72,
                 "velocityMultiplier": 1.0,
                 "weight": 2582
             },
@@ -570,7 +570,7 @@ const weaponsData = {
                 "recoil": 115,
                 "sway": 80,
                 "ergonomics": 55,
-                "accuracy": 6.88,
+                "accuracy": 1.93,
                 "velocityMultiplier": 0.94,
                 "weight": 2182
             },
@@ -633,7 +633,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 80,
                 "ergonomics": 53,
-                "accuracy": 6.88,
+                "accuracy": 2.13,
                 "velocityMultiplier": 1.0,
                 "weight": 2182
             },
@@ -728,7 +728,7 @@ const weaponsData = {
                 "recoil": 115,
                 "sway": 80,
                 "ergonomics": 55,
-                "accuracy": 6.88,
+                "accuracy": 2.27,
                 "velocityMultiplier": 0.94,
                 "weight": 2182
             },
@@ -823,7 +823,7 @@ const weaponsData = {
                 "recoil": 110,
                 "sway": 80,
                 "ergonomics": 55,
-                "accuracy": 6.88,
+                "accuracy": 2.06,
                 "velocityMultiplier": 0.93,
                 "weight": 2182
             },
@@ -1200,7 +1200,7 @@ const weaponsData = {
                 "recoil": 110,
                 "sway": 110,
                 "ergonomics": 52,
-                "accuracy": 6.88,
+                "accuracy": 1.89,
                 "velocityMultiplier": 1.0,
                 "weight": 2482
             },
@@ -2260,7 +2260,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 40,
                 "ergonomics": 81,
-                "accuracy": 5.16,
+                "accuracy": 1.58,
                 "velocityMultiplier": 1.0,
                 "weight": 2989
             },
@@ -2415,7 +2415,7 @@ const weaponsData = {
                 "recoil": 105,
                 "sway": 105,
                 "ergonomics": 60,
-                "accuracy": 6.88,
+                "accuracy": 2.0,
                 "velocityMultiplier": 0.98,
                 "weight": 1630
             },
@@ -4224,7 +4224,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 103,
                 "ergonomics": 69,
-                "accuracy": 6.88,
+                "accuracy": 1.36,
                 "velocityMultiplier": 1.2,
                 "weight": 3886
             },
@@ -4393,7 +4393,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 103,
                 "ergonomics": 69,
-                "accuracy": 6.88,
+                "accuracy": 1.36,
                 "velocityMultiplier": 1.2,
                 "weight": 3886
             },
@@ -6992,7 +6992,7 @@ const weaponsData = {
                 "recoil": 150,
                 "sway": 100,
                 "ergonomics": 65,
-                "accuracy": 2.92,
+                "accuracy": 0.79,
                 "velocityMultiplier": 1.065,
                 "weight": 3576
             },
@@ -7047,7 +7047,7 @@ const weaponsData = {
                 "recoil": 145,
                 "sway": 50,
                 "ergonomics": 55,
-                "accuracy": 2.92,
+                "accuracy": 0.79,
                 "velocityMultiplier": 1.065,
                 "weight": 3210
             },
@@ -7130,7 +7130,9 @@ const weaponsData = {
             ],
             "magazines": [
                 "SMPZ_Mag_MK18Mjolnir_10Rnd",
-                "SMPZ_Mag_MK18Mjolnir_AP_10Rnd"
+                "SMPZ_Mag_MK18Mjolnir_10Rnd_Multicam_Tropic",
+                "SMPZ_Mag_MK18Mjolnir_AP_10Rnd",
+                "SMPZ_Mag_MK18Mjolnir_AP_10Rnd_Multicam_Tropic"
             ],
             "chamberableFrom": [
                 "SMPZ_Ammo_338LM_TACX",
@@ -7144,7 +7146,21 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false,
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MK18Mjolnir338",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Weapon_MK18Mjolnir338_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true,
             "manufacturer": "SWORD International",
             "manufacturerLogo": "assets/sword-logo.png",
             "manufacturerUrl": "https://sword-int.com/",
@@ -7213,7 +7229,6 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 175,
-                "accuracy": 3.44,
                 "velocityMultiplier": 1.25,
                 "weight": 2832
             },
@@ -7785,7 +7800,7 @@ const weaponsData = {
                 "recoil": 190,
                 "sway": 130,
                 "ergonomics": 41,
-                "accuracy": 1.72,
+                "accuracy": 0.46,
                 "velocityMultiplier": 1.045,
                 "weight": 5700
             },
@@ -7851,7 +7866,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 107,
                 "ergonomics": 67,
-                "accuracy": 3.44,
+                "accuracy": 1.55,
                 "velocityMultiplier": 1.3,
                 "weight": 3009
             },
@@ -7975,7 +7990,7 @@ const weaponsData = {
                 "recoil": 100,
                 "sway": 90,
                 "ergonomics": 81,
-                "accuracy": 6.88,
+                "accuracy": 10.28,
                 "velocityMultiplier": 1.0,
                 "weight": 726
             },
@@ -8313,7 +8328,6 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 70,
-                "accuracy": 15.47,
                 "velocityMultiplier": 1.05,
                 "weight": 1054
             },
@@ -8353,7 +8367,6 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 70,
-                "accuracy": 15.47,
                 "velocityMultiplier": 1.05,
                 "weight": 1048
             },
@@ -8478,7 +8491,6 @@ const weaponsData = {
             "stats": {
                 "recoil": 80,
                 "sway": 80,
-                "accuracy": 44.69,
                 "velocityMultiplier": 1.0,
                 "weight": 794
             },
@@ -8671,7 +8683,6 @@ const weaponsData = {
                 "recoil": 80,
                 "sway": 100,
                 "ergonomics": 55,
-                "accuracy": 10.31,
                 "velocityMultiplier": 1.1,
                 "weight": 1545
             },
@@ -11933,8 +11944,26 @@ const gearData = {
                     "canBePainted": true
                 },
                 {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_OD",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Multicam",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
                     "name": "MultiCam Alpine",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Alpine",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Multicam_Alpine",
                     "image": "",
                     "canBePainted": true
                 },
@@ -11949,74 +11978,10 @@ const gearData = {
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_M81",
                     "image": "",
                     "canBePainted": true
-                }
-            ],
-            "canBePainted": true,
-            "manufacturer": "Crye Precision",
-            "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/"
-        },
-        {
-            "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-            "name": "Crye Precision AirFrame M-LOK Chops",
-            "category": "helmet_attachment",
-            "description": "",
-            "stats": {
-                "bulletDamageProtection": 30,
-                "bloodDamageProtection": 0,
-                "shockDamageProtection": 15,
-                "hitpoints": 100,
-                "weight": 1
-            },
-            "itemSize": [
-                3,
-                2
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "AFMLOKChops"
-            ],
-            "subCategory": "mandible",
-            "color": [
-                {
-                    "name": "Black",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-                    "image": "",
-                    "canBePainted": true
-                },
-                {
-                    "name": "FDE",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_FDE",
-                    "image": "",
-                    "canBePainted": true
-                },
-                {
-                    "name": "Olive Drab",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_OD",
-                    "image": "",
-                    "canBePainted": true
-                },
-                {
-                    "name": "MultiCam",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam",
-                    "image": "",
-                    "canBePainted": true
-                },
-                {
-                    "name": "MultiCam Tropic",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam_Tropic",
-                    "image": "",
-                    "canBePainted": true
-                },
-                {
-                    "name": "M81",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_M81",
-                    "image": "",
-                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
-                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_AOR2",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_AOR2",
                     "image": "",
                     "canBePainted": true
                 }
@@ -13546,8 +13511,26 @@ const gearData = {
                     "canBePainted": true
                 },
                 {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_OD",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Multicam",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
                     "name": "MultiCam Alpine",
-                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Alpine",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Multicam_Alpine",
                     "image": "",
                     "canBePainted": true
                 },
@@ -13560,6 +13543,12 @@ const gearData = {
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_M81",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_AOR2",
                     "image": "",
                     "canBePainted": true
                 }
@@ -13624,6 +13613,18 @@ const gearData = {
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam_Alpine",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_UCP",
                     "image": "",
                     "canBePainted": true
                 },
@@ -17358,6 +17359,73 @@ const attachmentData = {
             "manufacturerUrl": "https://www.colt.com/"
         },
         {
+            "id": "SMPZ_Attachments_AR15_ERGO_F93_Buttstock",
+            "name": "AR-15 ERGO F93 PRO Stock",
+            "category": "buttstock",
+            "description": "ERGO에서 제조",
+            "stats": {
+                "recoil": -31,
+                "sway": -45,
+                "weight": 590
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARBuffer"
+            ],
+            "subCategory": "buffer_tube",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_GLR16_Buttstock",
+            "name": "AR-15 FAB Defense GLR-16-S Stock",
+            "category": "buttstock",
+            "description": "FAB Defense에서 제조",
+            "stats": {
+                "recoil": -26,
+                "sway": -40,
+                "weight": 276
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_GLShock_Buttstock",
+            "name": "AR-15 FAB Defense GL-Shock Stock",
+            "category": "buttstock",
+            "description": "FAB Defense에서 제조",
+            "stats": {
+                "recoil": -29,
+                "sway": -30,
+                "weight": 308
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
             "name": "AR-15 Lead Star Arms Ravage Stock",
             "category": "buttstock",
@@ -17401,6 +17469,29 @@ const attachmentData = {
             "canBePainted": true
         },
         {
+            "id": "SMPZ_Attachments_AR15_MFT_BUS_Buttstock",
+            "name": "AR-15 MFT BUS Stock",
+            "category": "buttstock",
+            "description": "미션 퍼스트 택티컬(Mission First Tactical)에서 제작",
+            "stats": {
+                "recoil": -32,
+                "sway": -42,
+                "weight": 255
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
             "name": "AR-15 Phase5 Universal Mini Stock",
             "category": "buttstock",
@@ -17441,6 +17532,58 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
+            "canBePainted": true
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_SBS_Buttstock",
+            "name": "AR-15 CAA SBS Stock",
+            "category": "buttstock",
+            "description": "",
+            "stats": {
+                "recoil": -33,
+                "sway": -31,
+                "weight": 276
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_SBS_Buttstock",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_SBS_Buttstock_Khaki",
+            "name": "AR-15 CAA SBS Stock (Khaki Tropen)",
+            "category": "buttstock",
+            "description": "",
+            "stats": {
+                "recoil": -33,
+                "sway": -31,
+                "weight": 276
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
             "canBePainted": true
         },
         {
@@ -17504,7 +17647,21 @@ const attachmentData = {
                 "ARButtstock"
             ],
             "subCategory": "buffer_tube",
-            "canBePainted": false
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_B5_System_Precision_Buttstock",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_B5_System_Precision_Buttstock_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_CMMG_RipStock_Buttstock",
@@ -17697,11 +17854,46 @@ const attachmentData = {
                     "id": "SMPZ_Attachments_ECB_Buttstock_FDE",
                     "image": "",
                     "canBePainted": true
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_ECB_Buttstock_Red",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_ECB_Buttstock_Yellow",
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
             "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
+        },
+        {
+            "id": "SMPZ_Attachments_ECB_Buttstock_Blue",
+            "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock (Blue)",
+            "category": "buttstock",
+            "description": "Manufactured by Daniel Defense",
+            "stats": {
+                "recoil": -22,
+                "sway": -30,
+                "weight": 200
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARButtstock",
+                "ARButtstockSecond",
+                "weaponButtstockM4"
+            ],
+            "subCategory": "buffer_tube",
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_G36_IDZ_Adjustable_Buttstock",
@@ -18284,6 +18476,41 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_MCX_MPX_FSA_Buttstock",
+            "name": "Strike Industries FSA Dual Folder Stock",
+            "category": "buttstock",
+            "description": "Manufactured by Strike Industries",
+            "stats": {
+                "recoil": -35,
+                "sway": -50,
+                "weight": 432
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "MCXButtstock"
+            ],
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MCX_MPX_FSA_Buttstock",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MCX_MPX_FSA_Buttstock_FDE",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
+        },
+        {
             "id": "SMPZ_Attachments_MCX_MPX_MaximDefense_Buttstock",
             "name": "MPX/MCX Maxim Defense CQB Stock",
             "category": "buttstock",
@@ -18629,16 +18856,16 @@ const attachmentData = {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Magpul_UCS_Stock",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Magpul_UCS_Stock_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": true
                 }
             ],
-            "canBePainted": false,
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -18827,7 +19054,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck",
-            "name": "AR 15 stock Magpul PRS GEN3",
+            "name": "AR-15 Magpul PRS GEN3 Stock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -18859,6 +19086,12 @@ const attachmentData = {
                     "id": "SMPZ_Attachments_PRS_Bttstck_Black",
                     "image": "",
                     "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_PRS_Bttstck_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
             "canBePainted": true,
@@ -18867,7 +19100,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_PRS_Gen2_Bttstck",
-            "name": "AR 15 stock Magpul PRS GEN2",
+            "name": "AR-15 stock Magpul PRS GEN2",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -19791,7 +20024,37 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+                "weaponFlashlightThird",
+                "OpticsOnAKHndgrd"
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK12_LAC_Akvlion15_Hndgrd",
+            "name": "AK-12 L.A.C Akvlion-15 M-LOK Handguard",
+            "category": "handguard",
+            "description": "Can be attached on AK-12 only",
+            "stats": {
+                "recoil": -5,
+                "sway": -15,
+                "weight": 620
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AK12Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "OpticsOnAKHndgrd",
+                "BipodKeymodMLOKMount"
             ],
             "canBePainted": false
         },
@@ -19846,7 +20109,36 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
-                "BipodKeymod"
+                "BipodKeymod",
+                "OpticsOnAKHndgrd"
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK12_Zenit_Sport12_Hndgrd",
+            "name": "AK-12 Zenit Sport-12 Handguard",
+            "category": "handguard",
+            "description": "Can be attached on AK-12 only",
+            "stats": {
+                "recoil": -5,
+                "sway": -15,
+                "weight": 430
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "AK12Handguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "OpticsOnAKHndgrd"
             ],
             "canBePainted": false
         },
@@ -20148,7 +20440,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "weaponFlashlightFourth",
-                "weaponFlashlightFifth"
+                "weaponFlashlightFifth",
+                "OpticsOnAKHndgrd"
             ],
             "canBePainted": false
         },
@@ -22648,14 +22941,13 @@ const attachmentData = {
             "canBePainted": false
         },
         {
-            "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
-            "name": "AR-15 Strike Industries GRIDLOK 15 inch handguard",
+            "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Base",
+            "name": "AR-15 Strike Industries GRIDLOK Base",
             "category": "handguard",
-            "description": "스트라이크 인더스트리에서 제작한",
+            "description": "Manufactured by Strike Industries",
             "stats": {
-                "recoil": -8,
-                "sway": -10,
-                "weight": 670
+                "sway": -5,
+                "weight": 126
             },
             "itemSize": [
                 3,
@@ -22666,36 +22958,51 @@ const attachmentData = {
                 "M4Handguard"
             ],
             "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+                "GRIDLOKHandguard"
             ],
             "color": [
                 {
                     "name": "Black",
-                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Base",
                     "image": "",
                     "canBePainted": false
                 },
                 {
                     "name": "Red",
-                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Red",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Base_Red",
                     "image": "",
                     "canBePainted": false
                 },
                 {
                     "name": "Yellow",
-                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Yellow",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Base_Yellow",
                     "image": "",
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false,
-            "manufacturer": "Strike Industries",
-            "manufacturerUrl": "https://www.strikeindustries.com/"
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Base_Blue",
+            "name": "AR-15 Strike Industries GRIDLOK Base (Blue)",
+            "category": "handguard",
+            "description": "Manufactured by Strike Industries",
+            "stats": {
+                "sway": -5,
+                "weight": 126
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "GRIDLOKHandguard"
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_URX_10inch_Hndgrd",
@@ -22758,6 +23065,34 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AR15_Vltor_CASV_M4_Hndgrd",
+            "name": "AR-15 Vltor CASV-EL Handguard",
+            "category": "handguard",
+            "description": "Vltor Weapon Systems에서 제작",
+            "stats": {
+                "recoil": -5,
+                "sway": -12,
+                "weight": 388
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M4Handguard"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "GripCASV",
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird"
             ],
             "canBePainted": false
         },
@@ -24255,7 +24590,21 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MK18Mjolnir_Hndgrd",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_MK18Mjolnir_Hndgrd_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Rail_Hndgrd",
@@ -25443,6 +25792,98 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Custom Guns"
+        },
+        {
+            "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_15inch_Hndgrd",
+            "name": "AR-15 Strike Industries GRIDLOK 15 inch Handguard",
+            "category": "handguard",
+            "description": "Manufactured by Strike Industries",
+            "stats": {
+                "recoil": -5,
+                "sway": -10,
+                "weight": 281
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "GRIDLOKHandguard"
+            ],
+            "attachmentSlots": [
+                "GripCASV",
+                "weaponFlashlightSecond",
+                "weaponFlashlightThird",
+                "GRIDLOKExtension"
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_Ext",
+            "name": "AR-15 Strike Industries GRIDLOK Extension",
+            "category": "handguard",
+            "description": "Manufactured by Strike Industries",
+            "stats": {
+                "weight": 102
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GRIDLOKExtension"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "BipodKeymodMLOKMount"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_Ext",
+                    "image": "",
+                    "canBePainted": false
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_Ext_Red",
+                    "image": "",
+                    "canBePainted": false
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_Ext_Yellow",
+                    "image": "",
+                    "canBePainted": false
+                }
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_StrikeIndustries_GRIDLOK_Ext_Blue",
+            "name": "AR-15 Strike Industries GRIDLOK Extension (Blue)",
+            "category": "handguard",
+            "description": "Manufactured by Strike Industries",
+            "stats": {
+                "weight": 102
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "GRIDLOKExtension"
+            ],
+            "attachmentSlots": [
+                "weaponFlashlightFirst",
+                "weaponFlashlight",
+                "BipodKeymodMLOKMount"
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TRG_M10_Hndgrd",
@@ -26857,6 +27298,26 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_Trijicon_ACOG_Rearsight",
+            "name": "Trijicon ACOG Backup Rear Sight",
+            "category": "iron_sight",
+            "description": "Manufactured by Trijicon",
+            "stats": {
+                "sway": -3,
+                "weight": 40
+            },
+            "itemSize": [
+                1,
+                1
+            ],
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ACOGRearsight"
+            ],
+            "subCategory": "rear_sight",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Optics_M4_CarryHandle",
             "name": "AR-15 rear sight carry handle",
             "category": "iron_sight",
@@ -26871,6 +27332,9 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "M16Mount"
             ],
             "subCategory": "carry_handle",
             "canBePainted": false
@@ -27081,6 +27545,26 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_AK_Arsenal4P_545_Muzzle",
+            "name": "AK Arsenal 4 Piece 5.45 Flash Hider",
+            "category": "muzzle_device",
+            "description": "아스날 Inc에서 제조",
+            "stats": {
+                "recoil": -9,
+                "weight": 190
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ],
+            "subCategory": "ak",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_AK_CNC_Warrior_556_Muzzle_Device_Adapter",
             "name": "AK CNC Warrior 5.56x45 muzzle device adapter",
             "category": "muzzle_device",
@@ -27096,6 +27580,66 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "CNCAdapter"
+            ],
+            "subCategory": "ak",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK_JMAC_LAF24_545_556_Muzzle",
+            "name": "JMac Customs LAF-24 Multi-Caliber Muzzle Brake",
+            "category": "muzzle_device",
+            "description": "JMac Customs LLC에서 제조",
+            "stats": {
+                "recoil": -11,
+                "weight": 130
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ],
+            "subCategory": "multi_caliber",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK_JMAC_RRD4C_545_556_Muzzle",
+            "name": "JMac Customs RRD-4C-M24 Multi-Caliber Muzzle Brake",
+            "category": "muzzle_device",
+            "description": "JMac Customs LLC에서 제조",
+            "stats": {
+                "recoil": -13,
+                "weight": 85
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
+            ],
+            "subCategory": "multi_caliber",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK_SRVV_545_Muzzle",
+            "name": "AK-74 SRVV MBR Jet 5.45 Muzzle Brake",
+            "category": "muzzle_device",
+            "description": "SRVV에서 제조",
+            "stats": {
+                "recoil": -10,
+                "weight": 110
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponMuzzleAK74"
             ],
             "subCategory": "ak",
             "canBePainted": false
@@ -27283,7 +27827,7 @@ const attachmentData = {
                 "338Muzzle",
                 "SPEARSuppressor"
             ],
-            "subCategory": "heavy_shotgun",
+            "subCategory": "multi_caliber",
             "canBePainted": false
         },
         {
@@ -27550,10 +28094,10 @@ const attachmentData = {
             "manufacturerUrl": "https://www.heckler-koch.com/en"
         },
         {
-            "id": "SMPZ_Attachments_HUXWRX_762x51_Muzzle",
-            "name": "AR-10 HUXWRX 7.62x51 Flash Hider-QD",
+            "id": "SMPZ_Attachments_HUXWRX_Multi_Caliber_Muzzle",
+            "name": "HUXWRX Multi-Caliber Flash Hider-QD",
             "category": "muzzle_device",
-            "description": "HUman eXposure WORKShop Safety Co (HUXWRX) 제작",
+            "description": "Manufactured by HUman eXposure WORKShop Safety Co (HUXWRX)",
             "stats": {
                 "recoil": -5,
                 "weight": 140
@@ -27564,10 +28108,11 @@ const attachmentData = {
             ],
             "itemSlots": 2,
             "inventorySlots": [
+                "weaponMuzzleM4",
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "multi_caliber",
             "canBePainted": false
         },
         {
@@ -27870,7 +28415,7 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "multi_caliber",
             "canBePainted": false
         },
         {
@@ -28081,7 +28626,7 @@ const attachmentData = {
                 "SPEARSuppressor",
                 "338Muzzle"
             ],
-            "subCategory": "heavy_shotgun",
+            "subCategory": "multi_caliber",
             "canBePainted": false
         },
         {
@@ -28319,7 +28864,7 @@ const attachmentData = {
                 "SPEARSuppressor",
                 "weaponMuzzleM4"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "multi_caliber",
             "color": [
                 {
                     "name": "Black",
@@ -28340,7 +28885,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_TMB_338_Muzzle",
-            "name": "AI .338 LM Tactical Muzzle Brake",
+            "name": "Accuracy International .338 LM Tactical Muzzle Brake",
             "category": "muzzle_device",
             "description": ".338 LM 소총에만 부착할 수 있습니다.",
             "stats": {
@@ -28355,7 +28900,21 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
-            "canBePainted": false,
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_TMB_338_Muzzle",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_TMB_338_Muzzle_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -29291,10 +29850,10 @@ const attachmentData = {
             "canBePainted": false
         },
         {
-            "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
-            "name": "HUXWRX HX-QD 7.62x51 Suppressor",
+            "id": "SMPZ_Attachments_HUXWRX_Multi_Caliber_Suppressor",
+            "name": "HUXWRX HX-QD Multi-Caliber Suppressor",
             "category": "suppressor",
-            "description": "HUman eXposure WORKShop Safety Co (HUXWRX) 제작",
+            "description": "Manufactured by HUman eXposure WORKShop Safety Co (HUXWRX)",
             "stats": {
                 "recoil": -11,
                 "sway": 15,
@@ -29306,25 +29865,26 @@ const attachmentData = {
             ],
             "itemSlots": 3,
             "inventorySlots": [
+                "weaponMuzzleM4",
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "multi_caliber",
             "color": [
                 {
                     "name": "Black",
-                    "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
+                    "id": "SMPZ_Attachments_HUXWRX_Multi_Caliber_Suppressor",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": false
                 },
                 {
                     "name": "Tan",
-                    "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor_Tan",
+                    "id": "SMPZ_Attachments_HUXWRX_Multi_Caliber_Suppressor_Tan",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": false
                 }
             ],
-            "canBePainted": true
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -30299,7 +30859,21 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
-            "canBePainted": false,
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_TSM_338_Suppressor",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_TSM_338_Suppressor_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -30461,6 +31035,28 @@ const attachmentData = {
                     "canBePainted": false
                 }
             ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_AK_CG101_pistolgrip_Adapter",
+            "name": "AK Custom Guns CG101 AR-Type Pistol Grip Adater",
+            "category": "pistol_grip",
+            "description": "AK형 소총에만 장착 가능",
+            "stats": {
+                "weight": 45
+            },
+            "itemSize": [
+                1,
+                2
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKpistolgrip"
+            ],
+            "attachmentSlots": [
+                "ARpistolgrip"
+            ],
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -30743,7 +31339,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Ergo_pistolgrip",
-            "name": "AR 15 HK Ergo PSG-1 style pistol grip",
+            "name": "AR-15 HK Ergo PSG-1 style pistol grip",
             "category": "pistol_grip",
             "description": "",
             "stats": {
@@ -30759,7 +31355,21 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
-            "canBePainted": false,
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Ergo_pistolgrip",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_Ergo_pistolgrip_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -31551,7 +32161,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
-            "name": "AR-15 Tyrant Designs MOD Chevron pistol grip",
+            "name": "AR-15 Tyrant CNC MOD Chevron pistol grip",
             "category": "pistol_grip",
             "description": "폭군 디자인에 의해 제조",
             "stats": {
@@ -31575,6 +32185,12 @@ const attachmentData = {
                     "canBePainted": true
                 },
                 {
+                    "name": "Grey",
+                    "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Grey",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
                     "name": "Red",
                     "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Red",
                     "image": "",
@@ -31587,6 +32203,26 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
+            "canBePainted": true
+        },
+        {
+            "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Blue",
+            "name": "AR-15 Tyrant CNC MOD Chevron pistol grip (Blue)",
+            "category": "pistol_grip",
+            "description": "폭군 CNC에 의해 제조",
+            "stats": {
+                "sway": -43,
+                "weight": 112
+            },
+            "itemSize": [
+                1,
+                2
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "ARpistolgrip"
+            ],
+            "subCategory": "ar15_m4",
             "canBePainted": true
         },
         {
@@ -32958,6 +33594,28 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_AK_Samson1913_Stock_Adapter",
+            "name": "AK Samson Rear Trunnion Folding Stock Adapter",
+            "category": "mount",
+            "description": "삼손 매뉴팩처링에서 제작",
+            "stats": {
+                "weight": 30
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "AKButtstock"
+            ],
+            "attachmentSlots": [
+                "MCXButtstock"
+            ],
+            "subCategory": "stock_adapter",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_ASVAL_VSS_6P29M_Mount",
             "name": "VSS/VAL TOZ 6P29M mount",
             "category": "mount",
@@ -33603,10 +34261,55 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_KibaArms_Short_Standard_Mount",
+            "name": "Kiba Arms Short Sight Mount",
+            "category": "mount",
+            "description": "제조사: 키바 암즈(Kiba Arms)",
+            "stats": {
+                "weight": 110
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "ShortPrismOptic"
+            ],
+            "subCategory": "scope_mount",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_LaRue_AccA_Riser_Mount",
+            "name": "LaRue AccARizer Tactical Picatinny Mount",
+            "category": "mount",
+            "description": "LaRue Tactical에서 제조",
+            "stats": {
+                "weight": 232
+            },
+            "itemSize": [
+                3,
+                1
+            ],
+            "itemSlots": 3,
+            "inventorySlots": [
+                "M16Mount"
+            ],
+            "attachmentSlots": [
+                "weaponOptics",
+                "weaponFlashlightFirst"
+            ],
+            "subCategory": "scope_mount",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
             "name": "LaRue LT101 QD Tactical Picatinny Riser Mount",
             "category": "mount",
-            "description": "",
+            "description": "LaRue Tactical에서 제조",
             "stats": {
                 "weight": 110
             },
@@ -34643,6 +35346,50 @@ const attachmentData = {
             "manufacturerUrl": "https://us.glock.com/"
         },
         {
+            "id": "SMPZ_Attachments_Trijicon_ACOG_RMR_Mount",
+            "name": "Trijicon ACOG RMR Mount",
+            "category": "mount",
+            "description": "",
+            "stats": {
+                "weight": 20
+            },
+            "itemSize": [
+                1,
+                1
+            ],
+            "itemSlots": 1,
+            "inventorySlots": [
+                "ACOGRearsight"
+            ],
+            "attachmentSlots": [
+                "pistolOptics"
+            ],
+            "subCategory": "scope_mount",
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Attachments_Trijicon_ACOG_TA51_Standard_Mount",
+            "name": "Trijicon TA51 Sight Mount",
+            "category": "mount",
+            "description": "Manufactured by Trijicon",
+            "stats": {
+                "weight": 113
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
+            ],
+            "attachmentSlots": [
+                "ACOGOptic"
+            ],
+            "subCategory": "scope_mount",
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_UCP_Mount",
             "name": "HK UCP Rear Sight Rail Mount",
             "category": "mount",
@@ -34983,7 +35730,21 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
-            "canBePainted": false
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_ATP_TubeBuffer",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_ATP_TubeBuffer_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_CGNL_TubeBuffer",
@@ -34995,10 +35756,10 @@ const attachmentData = {
                 "weight": 132
             },
             "itemSize": [
-                3,
+                2,
                 1
             ],
-            "itemSlots": 3,
+            "itemSlots": 2,
             "inventorySlots": [
                 "ARBuffer"
             ],
@@ -35042,7 +35803,21 @@ const attachmentData = {
             "attachmentSlots": [
                 "PRSStock"
             ],
-            "canBePainted": false,
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Colt_A2_TubeBuffer",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Attachments_Colt_A2_TubeBuffer_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -35118,12 +35893,34 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Attachments_MCX_MPX_JMAC_TubeBuffer",
+            "name": "JMac Customs ST Skeleton Buffer Tube",
+            "category": "buffer_tube",
+            "description": "JMac Customs LLC에서 제조",
+            "stats": {
+                "recoil": -2,
+                "weight": 300
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "MCXButtstock"
+            ],
+            "attachmentSlots": [
+                "ARButtstock"
+            ],
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
             "name": "SIG Sauer Stock Adapter Low Profile Tube",
             "category": "buffer_tube",
             "description": "",
             "stats": {
-                "recoil": -4,
+                "recoil": -1,
                 "weight": 162
             },
             "itemSize": [
@@ -36341,8 +37138,8 @@ const attachmentData = {
                 "weight": 67
             },
             "itemSize": [
-                2,
-                1
+                1,
+                2
             ],
             "itemSlots": 2,
             "inventorySlots": [
@@ -36426,7 +37223,7 @@ const attachmentData = {
             "subCategory": "picatinny",
             "color": [
                 {
-                    "name": "기본형",
+                    "name": "Black",
                     "id": "SMPZ_Attachments_SE5_Grip",
                     "image": "",
                     "canBePainted": true
@@ -36436,8 +37233,44 @@ const attachmentData = {
                     "id": "SMPZ_Attachments_SE5_Grip_FDE",
                     "image": "",
                     "canBePainted": true
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_SE5_Grip_Red",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_SE5_Grip_Yellow",
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true
+        },
+        {
+            "id": "SMPZ_Attachments_SE5_Grip_Blue",
+            "name": "Stark SE-5 Express Forward foregrip (Blue)",
+            "category": "foregrip",
+            "description": "스타크 이큅먼트 코퍼레이션(Stark Equipment Corp)에서 제조",
+            "stats": {
+                "recoil": -12,
+                "sway": -30,
+                "weight": 150
+            },
+            "itemSize": [
+                1,
+                1
+            ],
+            "itemSlots": 1,
+            "inventorySlots": [
+                "Grip",
+                "GripCASV",
+                "GripThird",
+                "GripFourth"
+            ],
+            "subCategory": "picatinny",
             "canBePainted": true
         },
         {
@@ -40244,7 +41077,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "canBePainted": false,
+            "canBePainted": true,
             "calibers": [
                 ".338 Lapua"
             ]
@@ -43005,7 +43838,21 @@ const attachmentData = {
                 "RAPTAR",
                 "RAPTARSecond"
             ],
-            "canBePainted": false
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_HK_PM_II_12x50",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Optics_HK_PM_II_12x50_Multicam_Tropic",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_25x56",
@@ -43111,6 +43958,28 @@ const attachmentData = {
             "canBePainted": false
         },
         {
+            "id": "SMPZ_Optics_KibaArms_Short_Prism",
+            "name": "Kiba Arms Short Prism 2.5x Scope",
+            "category": "optic_scope",
+            "description": "제조사: 키바 암즈(Kiba Arms)",
+            "stats": {
+                "weight": 322,
+                "magnification": [
+                    2.5
+                ]
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M16Mount",
+                "ShortPrismOptic"
+            ],
+            "canBePainted": false
+        },
+        {
             "id": "SMPZ_Optics_Leupold_HAMR",
             "name": "Leupold Mark 4 HAMR 4x24 DeltaPoint hybrid assault scope",
             "category": "optic_scope",
@@ -43200,6 +44069,27 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
+            ],
+            "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Optics_Monstrum_Marksman",
+            "name": "Monstrum Tactical Marksman 3x30 Prism Scope",
+            "category": "optic_scope",
+            "description": "Monstrum Tactical에서 제작한 제품입니다.",
+            "stats": {
+                "weight": 480,
+                "magnification": [
+                    3
+                ]
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "weaponOptics"
             ],
             "canBePainted": false
         },
@@ -43445,6 +44335,46 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "canBePainted": false
+        },
+        {
+            "id": "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+            "name": "Trijicon ACOG TA01NSN 4x32 Scope",
+            "category": "optic_scope",
+            "description": "Manufactured by Trijicon",
+            "stats": {
+                "weight": 400,
+                "magnification": [
+                    4
+                ]
+            },
+            "itemSize": [
+                2,
+                1
+            ],
+            "itemSlots": 2,
+            "inventorySlots": [
+                "M16Mount",
+                "ACOGOptic",
+                "ShortPrismOptic"
+            ],
+            "attachmentSlots": [
+                "ACOGRearsight"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "image": "",
+                    "canBePainted": true
+                },
+                {
+                    "name": "Tan",
+                    "id": "SMPZ_Optics_Trijicon_ACOG_TA01NSN_Tan",
+                    "image": "",
+                    "canBePainted": true
+                }
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Optics_Vortex_Razor",
