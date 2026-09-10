@@ -1367,6 +1367,12 @@ function isWeaponItem(item) {
     return false;
 }
 
+function isGearItem(item) {
+    if (!item) return false;
+    if (typeof gearData !== 'undefined' && item.category && gearData[item.category]) return true;
+    return false;
+}
+
 const DataParsers = {
     weight: (item) => {
         const val = item?.stats?.weight;
@@ -1387,33 +1393,27 @@ const DataParsers = {
     },
     // 부착물 반동 보정율 (-% 값, 없는 부착물은 0%)
     recoilReduction: (item) => {
+        if (!isAttachmentItem(item)) return null;
         const val = item?.stats?.recoil;
         if (val !== undefined && val !== null && val !== '') {
+            if (typeof val === 'number') return val;
             const str = String(val).trim();
-            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
-                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
-                return isNaN(num) ? null : num;
-            }
+            const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+            return isNaN(num) ? null : num;
         }
-        if (isAttachmentItem(item)) {
-            return 0; // 보정치 없음 = 0%
-        }
-        return null;
+        return 0;
     },
     // 부착물 흔들림 보정율 (음수일수록 우수, 없는 부착물은 0%, 양수는 페널티)
     swayReduction: (item) => {
+        if (!isAttachmentItem(item)) return null;
         const val = item?.stats?.sway;
         if (val !== undefined && val !== null && val !== '') {
+            if (typeof val === 'number') return val;
             const str = String(val).trim();
-            if (str.includes('%') || str.startsWith('-') || str.startsWith('+')) {
-                const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
-                return isNaN(num) ? null : num;
-            }
+            const num = parseFloat(str.replace(/[^0-9.-]/g, ''));
+            return isNaN(num) ? null : num;
         }
-        if (isAttachmentItem(item)) {
-            return 0; // 페널티 없음 = 0%
-        }
-        return null;
+        return 0;
     },
     // 전술 플래시 조사 거리 (m 단위)
     lightDistance: (item) => {
@@ -1425,6 +1425,7 @@ const DataParsers = {
     },
     // 총기 기본 반동 (퍼센트 없는 수치)
     weaponRecoil: (item) => {
+        if (!isWeaponItem(item)) return null;
         const val = item?.stats?.recoil;
         if (val === undefined || val === null || val === '') return null;
         const str = String(val).trim();
@@ -1434,6 +1435,7 @@ const DataParsers = {
     },
     // 총기 기본 흔들림 (퍼센트 없는 수치)
     weaponSway: (item) => {
+        if (!isWeaponItem(item)) return null;
         const val = item?.stats?.sway;
         if (val === undefined || val === null || val === '') return null;
         const str = String(val).trim();
@@ -1442,6 +1444,7 @@ const DataParsers = {
         return isNaN(num) ? null : num;
     },
     accuracy: (item) => {
+        if (!isWeaponItem(item)) return null;
         const val = item?.stats?.accuracy;
         if (typeof val === 'number') return val;
         if (!val) return null;
@@ -1460,6 +1463,7 @@ const DataParsers = {
         return baseSpeed > 0 ? Math.round(baseSpeed * mult) : null;
     },
     ergonomics: (item) => {
+        if (!isWeaponItem(item)) return null;
         const val = item?.stats?.ergonomics;
         if (!val) return null;
         const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
@@ -1950,17 +1954,23 @@ function hasAnyValidValueForMetric(items, metric) {
     if (metric.compare) return true; // 이름순은 항상 유효
     if (!items || items.length === 0) return false;
 
+    if (metric.group === 'weapon' && !items.some(isWeaponItem)) return false;
+    if (metric.group === 'attachment' && !items.some(isAttachmentItem)) return false;
+    if (metric.group === 'gear' && !items.some(isGearItem)) return false;
+
     // 부착물 반동/흔들림의 경우, 실제로 stats에 관련 보정치/페널티 데이터가 1개라도 존재하는지 확인
     if (metric.id === 'recoil_reduction') {
         return items.some(item => {
+            if (!isAttachmentItem(item)) return false;
             const str = String(item?.stats?.recoil || '').trim();
-            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+') || (typeof item?.stats?.recoil === 'number' && item.stats.recoil !== 0);
         });
     }
     if (metric.id === 'sway_reduction') {
         return items.some(item => {
+            if (!isAttachmentItem(item)) return false;
             const str = String(item?.stats?.sway || '').trim();
-            return str.includes('%') || str.startsWith('-') || str.startsWith('+');
+            return str.includes('%') || str.startsWith('-') || str.startsWith('+') || (typeof item?.stats?.sway === 'number' && item.stats.sway !== 0);
         });
     }
     if (metric.id === 'magnification') {
