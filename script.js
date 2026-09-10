@@ -768,16 +768,58 @@ function popNavState() {
     }
 }
 
+function isSubGridCategory(categoryKey) {
+    if (!categoryKey || typeof categoryKey !== 'string') return false;
+    return categoryKey.startsWith('slot_group_') ||
+           categoryKey.startsWith('weapon_magazines_') ||
+           categoryKey.startsWith('parent_cat_');
+}
+
 // 최초 루트 그리드/목록으로 한 번에 복귀
 function resetToRootGrid() {
+    let targetView = null;
+    if (Array.isArray(navStack) && navStack.length > 0) {
+        const rootInStack = navStack.find(s => s && s.type === 'grid' && !isSubGridCategory(s.categoryKey));
+        if (rootInStack) {
+            targetView = rootInStack;
+        }
+    }
+    if (!targetView && rootGridState) {
+        targetView = rootGridState;
+    }
+    if (!targetView && Array.isArray(navStack) && navStack.length > 0 && navStack[0]?.type === 'grid') {
+        targetView = navStack[0];
+    }
+
     navStack = [];
     preSearchView = null;
+    compareTarget = null;
+
     const searchInput = document.getElementById('itemSearch');
-    if (searchInput) searchInput.value = '';
-    backToGrid();
-    if (history.state) {
-        history.pushState(captureCurrentView(), '', window.location.pathname);
+    if (searchInput && targetView?.categoryKey !== 'search') {
+        searchInput.value = '';
     }
+
+    if (targetView) {
+        restoreView(targetView);
+        lastGridState = {
+            title: targetView.title,
+            items: targetView.items,
+            categoryKey: targetView.categoryKey,
+            panelType: targetView.panelType,
+            searchQuery: targetView.searchQuery || '',
+            sortMetric: targetView.sortMetric,
+            sortOrder: targetView.sortOrder,
+            activeChips: targetView.activeChips
+        };
+    } else {
+        renderItemGrid('all', 'weapon');
+    }
+
+    try {
+        history.pushState(captureCurrentView(), '', window.location.pathname);
+    } catch (e) {}
+
     updateFloatingNav();
 }
 
@@ -1493,6 +1535,7 @@ function updateFloatingNav() {
 
 // 마지막으로 표시된 그리드 상태 (상세 화면에서 "목록으로" 이동 시 사용)
 let lastGridState = null;
+let rootGridState = null;
 
 // 검색 시작 직전의 화면 상태 (검색창을 비우면 이 화면으로 복귀)
 let preSearchView = null;
@@ -3014,6 +3057,9 @@ function showGridView(title, items, categoryKey, panelType, shouldRestoreScroll 
         sortOrder: savedSortOrder,
         activeChips: savedActiveChips
     };
+    if (!isSubGridCategory(categoryKey)) {
+        rootGridState = { ...lastGridState };
+    }
     currentPanel = panelType;
     currentCategory = categoryKey;
     currentWeapon = null;
