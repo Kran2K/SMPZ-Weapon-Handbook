@@ -1,31 +1,29 @@
-#SMPZ Modpack -> data.js Automated Data Generator
+# SMPZ Modpack -> data.js Automated Data Generator
 
 import os
 import glob
 import re
 import csv
 import json
+import math
 import argparse
 import urllib.request
 import urllib.parse
 import sys
 
-# Ensure UTF-8 console output
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Default project paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
 DEFAULT_DATA_JS_PATH = os.path.join(PROJECT_ROOT, 'data.js')
-DEFAULT_BACKUP_JS_PATH = os.path.join(PROJECT_ROOT, 'data.backup.js')
+DEFAULT_METADATA_JS_PATH = os.path.join(PROJECT_ROOT, 'metadata.js')
 DEFAULT_ASSETS_DIR = os.path.join(PROJECT_ROOT, 'assets')
 DEFAULT_MODELS_DIR = os.path.join(DEFAULT_ASSETS_DIR, 'models')
 CACHE_DIR = os.path.join(SCRIPT_DIR, '.cache')
 CONFIG_FILE = os.path.join(SCRIPT_DIR, '.config.json')
 
 CATEGORY_MAP = {
-    # Weapons
     '돌격 소총': 'assault_rifle',
     '저격 소총': 'sniper_rifle',
     '기관단총': 'submachine_gun',
@@ -33,8 +31,6 @@ CATEGORY_MAP = {
     '권총': 'pistol',
     '경기관총': 'light_machine_gun',
     '유탄 발사기': 'grenade_launcher',
-
-    # Attachments
     '가스 블록': 'gas_block',
     '개머리판': 'buttstock',
     '광학 조준경': 'optic_scope',
@@ -56,8 +52,6 @@ CATEGORY_MAP = {
     '탄창': 'magazine',
     '해머': 'hammer',
     '핸드가드': 'handguard',
-
-    # Gears
     '헬멧': 'helmet',
     '헬멧 부착물': 'helmet_attachment',
     '전신 방탄복': 'full_body_armor',
@@ -67,11 +61,24 @@ CATEGORY_MAP = {
     '백팩': 'backpack'
 }
 
+ATTACHMENT_PREFIXES = (
+    'SMPZ_Mag_', 'SMPZ_Bipod', 'SMPZ_Optic', 'SMPZ_Scope', 'SMPZ_Sight',
+    'SMPZ_Suppressor', 'SMPZ_Muzzle', 'SMPZ_Handguard', 'SMPZ_Stock',
+    'SMPZ_Grip', 'SMPZ_Trigger', 'SMPZ_Buffer', 'SMPZ_Charging',
+    'SMPZ_GasBlock', 'SMPZ_Foregrip', 'SMPZ_Flashlight', 'SMPZ_Laser',
+    'SMPZ_Lasers_', 'SMPZ_Mount', 'SMPZ_Hammer', 'SMPZ_Barrel',
+    'SMPZ_Receiver', 'SMPZ_Buttstock', 'SMPZ_Attachments_', 'SMPZ_Att_', 'SMPZ_Misc_'
+)
+
+_WEAPON_VARIANT_RE = re.compile(
+    r'(_\d+mm(?:_RAL8000|_Black|_FDE)?|_FDE|_Black|_RAL8000|_Red|_Mountain_Flora|_SURPAT|_Alpine|_UCP|_NoFS(?:_RAL8000)?|_Short|_Long|_Sawedoff|_A2)$',
+    re.IGNORECASE
+)
+
 # ---------------------------------------------------------------------------
-# GOOGLE TRANSLATE API
+# TRANSLATION & UTILITIES
 # ---------------------------------------------------------------------------
 def google_translate(text, target_lang='ko', source_lang='auto'):
-    """Translates text to Korean using Google Translate API"""
     if not text or not text.strip():
         return ""
     clean_text = text.replace('\r\n', ' ').replace('\n', ' ').strip()
@@ -91,10 +98,9 @@ def google_translate(text, target_lang='ko', source_lang='auto'):
         return clean_text
 
 # ---------------------------------------------------------------------------
-# CPP & STRINGTABLE PARSER ENGINE
+# C++ PARSING ENGINE
 # ---------------------------------------------------------------------------
 def parse_cpp_file(filepath):
-    """Parses a DayZ config.cpp/config_decompiled.cpp into class objects"""
     try:
         with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
             text = f.read()
@@ -103,7 +109,7 @@ def parse_cpp_file(filepath):
 
     text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
     text = re.sub(r'//.*', '', text)
-    
+
     classes = {}
     pos = 0
     while True:
@@ -113,7 +119,7 @@ def parse_cpp_file(filepath):
         class_name = m.group(1)
         parent_name = m.group(2)
         start_idx = pos + m.end() - 1
-        
+
         brace_count = 1
         i = start_idx + 1
         while i < len(text) and brace_count > 0:
@@ -122,7 +128,7 @@ def parse_cpp_file(filepath):
             elif text[i] == '}':
                 brace_count -= 1
             i += 1
-        
+
         if brace_count == 0:
             body = text[start_idx+1:i-1]
             classes[class_name] = {
@@ -134,11 +140,10 @@ def parse_cpp_file(filepath):
             pos = pos + m.start() + len(m.group(0))
         else:
             pos = pos + m.end()
-            
+
     return classes
 
 def parse_array_value(raw_val):
-    """Parses a DayZ C++ array value like {10, 15} or {"Vest", "Body"} into a Python list"""
     raw = raw_val.strip().strip('{}')
     if not raw:
         return []
@@ -159,15 +164,10 @@ def parse_array_value(raw_val):
     return items
 
 def extract_properties(body):
-    """Extracts property dictionary from raw class body, including arrays"""
     props = {}
-    
-    # 1. First extract array properties (e.g., itemsCargoSize[], itemSize[], inventorySlot[], attachments[], itemInfo[])
     for m in re.finditer(r'([A-Za-z0-9_]+)\[\]\s*=\s*\{([^}]*)\};', body):
-        k = m.group(1)
-        props[k] = parse_array_value(m.group(2))
-        
-    # 2. Clean out arrays and nested classes to parse scalar key = value;
+        props[m.group(1)] = parse_array_value(m.group(2))
+
     clean_body = re.sub(r'[A-Za-z0-9_]+\[\]\s*=\s*\{[^}]*\};', '', body)
     clean_body = re.sub(r'class\s+[A-Za-z0-9_]+(?:\s*:\s*[A-Za-z0-9_]+)?\s*\{[^}]*\}', '', clean_body)
     for m in re.finditer(r'([A-Za-z0-9_]+)\s*=\s*([^;]+);', clean_body):
@@ -180,13 +180,12 @@ def extract_properties(body):
         else:
             try:
                 v = float(v)
-            except:
+            except Exception:
                 pass
         props[k] = v
     return props
 
 def load_stringtables(smpz_dir):
-    """Loads all translation stringtables from SMPZ folders"""
     strings = {}
     csv_files = glob.glob(os.path.join(smpz_dir, '**', '*.csv'), recursive=True)
     for cf in csv_files:
@@ -204,7 +203,6 @@ def load_stringtables(smpz_dir):
     return strings
 
 def load_asset_files(assets_dir):
-    """Builds lowercase filename map for automatic image asset linking"""
     file_map = {}
     if os.path.exists(assets_dir):
         for f in os.listdir(assets_dir):
@@ -214,7 +212,6 @@ def load_asset_files(assets_dir):
     return file_map
 
 def load_model_files(models_dir):
-    """Builds filename map for 3D model files (.glb, .gltf) in assets/models"""
     model_map = {}
     if os.path.exists(models_dir):
         for root, _, files in os.walk(models_dir):
@@ -229,16 +226,13 @@ def load_model_files(models_dir):
     return model_map
 
 def match_model_for_item(item_id, item_name, model_map, sec_type='weapon'):
-    """Finds best matching 3D model file for an item according to section type"""
     if not model_map:
         return None
 
-    # 1. Exact match with item_id (lowercase)
     id_lower = item_id.lower()
     if id_lower in model_map:
         return model_map[id_lower]
 
-    # 2. Cleaned ID without prefixes (e.g. "SMPZ_Weapon_M4A1" -> "m4a1", "m4")
     id_cleaned = re.sub(r'^(smpz_weapon_|smpz_gear_|smpz_optics_|smpz_attachments_|smpz_)', '', id_lower)
     if id_cleaned in model_map:
         return model_map[id_cleaned]
@@ -247,7 +241,6 @@ def match_model_for_item(item_id, item_name, model_map, sec_type='weapon'):
     if clean_alphanum in model_map:
         return model_map[clean_alphanum]
 
-    # 3. For weapons: match base weapon model (e.g. key="m4" matches "SMPZ_Weapon_M4A1", "m4a1", but NOT attachments/gear)
     if sec_type == 'weapon':
         for key, path in model_map.items():
             if len(key) >= 2:
@@ -259,7 +252,6 @@ def match_model_for_item(item_id, item_name, model_map, sec_type='weapon'):
                             continue
                     return path
 
-        # Word match in Weapon Name (e.g. "Colt M4A1" -> "m4a1" matching "m4")
         if item_name:
             name_lower = item_name.lower()
             name_words = re.findall(r'[a-z0-9]+', name_lower)
@@ -277,10 +269,9 @@ def match_model_for_item(item_id, item_name, model_map, sec_type='weapon'):
     return None
 
 # ---------------------------------------------------------------------------
-# LOCAL CONFIG & TRANSLATION CACHES
+# CONFIG, CACHE & METADATA
 # ---------------------------------------------------------------------------
 def load_config():
-    """Loads local config file"""
     if os.path.exists(CONFIG_FILE):
         try:
             with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
@@ -290,7 +281,6 @@ def load_config():
     return {}
 
 def save_config(cfg):
-    """Saves local config file"""
     try:
         with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
             json.dump(cfg, f, indent=2, ensure_ascii=False)
@@ -298,7 +288,6 @@ def save_config(cfg):
         print(f"[설정] 저장 실패: {e}")
 
 def load_google_translation_cache():
-    """Loads cached Google Translations"""
     cache_path = os.path.join(CACHE_DIR, 'google_translation_cache.json')
     if os.path.exists(cache_path):
         try:
@@ -309,7 +298,6 @@ def load_google_translation_cache():
     return {}
 
 def save_google_translation_cache(cache):
-    """Saves Google Translations cache"""
     os.makedirs(CACHE_DIR, exist_ok=True)
     cache_path = os.path.join(CACHE_DIR, 'google_translation_cache.json')
     try:
@@ -318,8 +306,32 @@ def save_google_translation_cache(cache):
     except Exception as e:
         print(f"[캐시] 저장 실패: {e}")
 
+def load_metadata(filepath):
+    if not os.path.exists(filepath):
+        return {}
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            text = f.read()
+        m = re.search(r'(?:const\s+metadata\s*=\s*|export\s+default\s+)(\{.*?\});', text, re.DOTALL)
+        if m:
+            return json.loads(m.group(1))
+        return json.loads(text)
+    except Exception as e:
+        print(f"[메타데이터] 로드 실패: {e}")
+        return {}
+
+def _merge_manual_fields(item_obj, meta_dict):
+    iid = item_obj.get('id')
+    if not iid or iid not in meta_dict:
+        return
+    meta = meta_dict[iid]
+    for fld in ('description', 'manufacturer', 'manufacturerLogo', 'manufacturerUrl', 'image', 'images'):
+        if fld in meta and meta[fld]:
+            item_obj[fld] = meta[fld]
+    if 'stats' in meta and isinstance(meta['stats'], dict):
+        item_obj.setdefault('stats', {}).update(meta['stats'])
+
 def is_valid_smpz_dir(path):
-    """Checks if the given directory contains SMPZ mod packages or cpp files"""
     if not path or not os.path.isdir(path):
         return False
     has_subpkg = any(os.path.exists(os.path.join(path, pkg)) for pkg in ['SMPZ_Weapons', 'SMPZ_More_Weapons', 'SMPZ_More_Attachment', 'SMPZ_Gears'])
@@ -329,11 +341,9 @@ def is_valid_smpz_dir(path):
     return len(cpp_files) > 0
 
 def prompt_folder_dialog(title="SMPZ 모드팩 루트 디렉토리를 선택해주세요", initial_dir=None):
-    """Opens a GUI folder picker dialog using Tkinter"""
     try:
         import tkinter as tk
         from tkinter import filedialog
-        
         root = tk.Tk()
         root.withdraw()
         root.attributes('-topmost', True)
@@ -345,10 +355,8 @@ def prompt_folder_dialog(title="SMPZ 모드팩 루트 디렉토리를 선택해�
         return None
 
 def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
-    """Resolves the SMPZ root directory via CLI, Config, Auto-discovery, or GUI dialog"""
     config = load_config()
 
-    # 1. CLI argument directly specified
     if cli_dir:
         if is_valid_smpz_dir(cli_dir):
             config['smpz_dir'] = os.path.abspath(cli_dir)
@@ -357,7 +365,6 @@ def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
         else:
             print(f"[경고] 지정된 경로가 유효한 SMPZ 모드팩 디렉토리가 아닙니다: {cli_dir}")
 
-    # 2. If force selection requested, open GUI directly
     if force_select and not no_gui:
         print("[*] SMPZ 모드팩 폴더 선택 창을 엽니다...")
         selected = prompt_folder_dialog(initial_dir=config.get('smpz_dir'))
@@ -370,19 +377,16 @@ def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
         else:
             print("[*] 폴더 선택이 취소되었습니다.")
 
-    # 3. Check previously saved config
     saved_dir = config.get('smpz_dir')
     if saved_dir and is_valid_smpz_dir(saved_dir):
         return saved_dir
 
-    # 4. Check environment variable
     env_dir = os.environ.get('SMPZ_DIR') or os.environ.get('SMPZ_MOD_PATH')
     if env_dir and is_valid_smpz_dir(env_dir):
         config['smpz_dir'] = os.path.abspath(env_dir)
         save_config(config)
         return os.path.abspath(env_dir)
 
-    # 5. Auto-discovery in relative paths
     candidates = [
         os.path.join(PROJECT_ROOT, 'SMPZ'),
         os.path.join(PROJECT_ROOT, '..', 'SMPZ'),
@@ -394,7 +398,6 @@ def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
             save_config(config)
             return os.path.abspath(cand)
 
-    # 6. Fallback to GUI prompt if available
     if not no_gui:
         print("[*] SMPZ 모드팩 경로를 찾을 수 없어 폴더 선택 창을 엽니다...")
         selected = prompt_folder_dialog()
@@ -408,671 +411,679 @@ def resolve_smpz_dir(cli_dir=None, force_select=False, no_gui=False):
     return None
 
 # ---------------------------------------------------------------------------
-# DATASET GENERATION PIPELINE
+# INHERITANCE & SCOPE RESOLUTION
 # ---------------------------------------------------------------------------
-def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MODELS_DIR, data_js_path=DEFAULT_DATA_JS_PATH, backup_js_path=DEFAULT_BACKUP_JS_PATH):
-    """
-    Main conversion pipeline:
-    1. Parses SMPZ mod packages and extracts properties (including arrays: itemsCargoSize, itemSize, inventorySlot, attachments, itemInfo).
-    2. Resolves descriptions (preserves existing, translates missing via Google Translate).
-    3. Links 2D image assets and 3D .glb models.
-    4. Computes backpack grid size & slot capacity, preserves raw C++ slots & attachment info.
-    5. Outputs data.js.
-    """
-    print("=" * 70)
-    print("  SMPZ 모드팩: data.js 자동 생성기")
-    print("  (가방 수납 크기 + 슬롯 메타데이터 + 3D 모델 + 설명 번역 자동 연동)")
-    print("=" * 70)
-
-    # 1. Load Stringtables, Assets, Models, and Caches
-    str_table = load_stringtables(smpz_dir)
-    file_map = load_asset_files(assets_dir)
-    model_map = load_model_files(models_dir)
-    google_cache = load_google_translation_cache()
-
-    print(f"[*] 로컬라이제이션 스트링테이블 {len(str_table)}개 항목 로드 완료.")
-    print(f"[*] 에셋 이미지 인덱싱 완료 ({len(file_map)}개 파일): {assets_dir}")
-    print(f"[*] 3D 모델 인덱싱 완료 ({len(model_map)}개 키): {models_dir}")
-    print(f"[*] 캐시된 구글 번역 {len(google_cache)}개 로드 완료.")
-
-    # 2. Parse C++ Classes across SMPZ packages
-    target_dirs = ['SMPZ_Weapons', 'SMPZ_More_Weapons', 'SMPZ_More_Attachment', 'SMPZ_Gears']
-    all_classes = {}
-    for td in target_dirs:
-        p = os.path.join(smpz_dir, td)
-        cpp_files = glob.glob(os.path.join(p, '**', '*.cpp'), recursive=True)
-        print(f"[*] {td} 파싱 중 ({len(cpp_files)}개 cpp 파일)...")
-        for cf in cpp_files:
-            cls_map = parse_cpp_file(cf)
-            for cname, cinfo in cls_map.items():
-                if cname not in all_classes:
-                    all_classes[cname] = cinfo
-                    all_classes[cname]['props'] = extract_properties(cinfo['body'])
-
-    print(f"[*] 파싱된 고유 클래스 총 {len(all_classes)}개")
-
-    def get_inherited_props(cname):
-        curr = cname
-        visited = set()
-        chain = []
-        while curr and curr not in visited and curr in all_classes:
-            visited.add(curr)
-            chain.append(curr)
-            curr = all_classes[curr].get('parent')
-        merged = {}
-        for c in reversed(chain):
-            merged.update(all_classes[c].get('props', {}))
-        return merged
-
-    # 3. Load Canonical Reference Items
-    if os.path.exists(backup_js_path):
-        ref_file = backup_js_path
-    elif os.path.exists(data_js_path):
-        ref_file = data_js_path
-    else:
-        ref_file = DEFAULT_DATA_JS_PATH
-    with open(ref_file, 'r', encoding='utf-8') as f:
-        text = f.read()
-
-    w_match = re.search(r'const weaponsData = (\{.*?\});\s*(?=//|const gearData)', text, re.DOTALL)
-    g_match = re.search(r'const gearData = (\{.*?\});\s*(?=//|const attachmentData)', text, re.DOTALL)
-    a_match = re.search(r'const attachmentData = (\{.*?\});', text, re.DOTALL)
-
-    target_w = json.loads(w_match.group(1)) if w_match else {}
-    target_g = json.loads(g_match.group(1)) if g_match else {}
-    target_a = json.loads(a_match.group(1)) if a_match else {}
-
-    # Helper: Resolve description
-    def resolve_item_description(item_id, existing_desc=""):
-        # 1. Preserve existing description if already present
-        if existing_desc and str(existing_desc).strip():
-            return str(existing_desc).strip(), 'existing'
-
-        # 2. For items with missing descriptions: Google Translate from raw config
-        props = get_inherited_props(item_id)
-        raw_desc_key = str(props.get('descriptionShort', '')).strip()
-        raw_desc = str_table.get(raw_desc_key.lstrip('$'), raw_desc_key)
-        if not raw_desc or raw_desc.startswith('$STR_') or raw_desc == 'None':
-            return "", 'empty'
-
-        clean_raw = raw_desc.replace('\r\n', ' ').replace('\n', ' ').strip()
-        # Live Google Translate API fallback
-        translated = google_translate(clean_raw)
-        google_cache[clean_raw] = translated
-        return translated, 'google_translate'
-
-    # Helper: Extract C++ OpticsInfo Magnification
-    def get_class_optics_info_body(cname):
-        curr = cname
-        visited = set()
-        while curr and curr not in visited and curr in all_classes:
-            visited.add(curr)
-            body = all_classes[curr].get('body', '')
-            if 'class OpticsInfo' in body:
-                m = re.search(r'\bclass\s+OpticsInfo\b[^{]*\{', body)
-                if m:
-                    start_idx = m.end() - 1
-                    depth = 1
-                    i = start_idx + 1
-                    n = len(body)
-                    while i < n and depth > 0:
-                        if body[i] == '{': depth += 1
-                        elif body[i] == '}': depth -= 1
-                        i += 1
-                    return body[start_idx+1:i-1]
-            curr = all_classes[curr].get('parent')
-        return None
-
-    def eval_safe_expr(expr_str):
-        cleaned = re.sub(r'[^0-9+\-*/.()]', '', expr_str)
-        if not cleaned: return None
-        try:
-            return eval(cleaned, {"__builtins__": None}, {})
-        except:
-            return None
-
-    def extract_optic_magnification(item_id):
-        props = get_inherited_props(item_id)
-        mag_mult_raw = props.get('magnifierMultiplier')
-        if mag_mult_raw:
-            val = eval_safe_expr(str(mag_mult_raw))
-            if val and val > 0:
-                calc_mag = round(1.0 / val)
-                return f"{calc_mag}x"
-
-        oi_body = get_class_optics_info_body(item_id)
-        if not oi_body:
-            return None
-        
-        # 1. discretefov[]
-        dfov_m = re.search(r'discretefov\[\]\s*=\s*\{([^}]+)\};', oi_body, re.IGNORECASE)
-        if dfov_m:
-            raw_list = [x.strip().strip('"\'') for x in dfov_m.group(1).split(',')]
-            zooms = []
-            for r in raw_list:
-                if '/' in r:
-                    parts = r.split('/')
-                    val = eval_safe_expr(parts[1])
-                    if val is not None:
-                        zooms.append(val)
-                else:
-                    val = eval_safe_expr(r)
-                    if val is not None and val > 0:
-                        mag = 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
-                        zooms.append(mag)
-            if zooms:
-                min_z = min(zooms)
-                max_z = max(zooms)
-                min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
-                max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
-                return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
-        
-        # 2. opticsZoomMin / Max
-        min_m = re.search(r'opticsZoomMin\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
-        max_m = re.search(r'opticsZoomMax\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
-        if min_m and max_m:
-            min_raw = min_m.group(1).strip()
-            max_raw = max_m.group(1).strip()
-            def calc_mag(s):
-                if '/' in s:
-                    parts = s.split('/')
-                    val = eval_safe_expr(parts[1])
-                    return val if val is not None else 1.0
-                val = eval_safe_expr(s)
-                if val is not None and val > 0:
-                    return 1.0 if abs(val - 0.5236) < 0.01 else round(0.5236 / val, 1)
-                return 1.0
-            mag1 = calc_mag(min_raw)
-            mag2 = calc_mag(max_raw)
-            min_z = min(mag1, mag2)
-            max_z = max(mag1, mag2)
-            min_fmt = f"{int(min_z)}" if min_z.is_integer() else f"{min_z}"
-            max_fmt = f"{int(max_z)}" if max_z.is_integer() else f"{max_z}"
-            return f"{min_fmt}x" if min_fmt == max_fmt else f"{min_fmt}-{max_fmt}x"
-            
-        return '1x'
-
-    def classify_mount_type(item_obj):
-        att = [s.lower() for s in item_obj.get('attachmentSlots', [])]
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-        name = item_obj.get('name', '').lower()
-
-        if any('buffer' in s or 'stock' in s for s in att) or \
-           any('buttstock' in s for s in inv) or \
-           'stock_adapter' in item_id or 'buffer_adapter' in item_id:
-            return 'stock_adapter'
-
-        if any('bipod' in s for s in att) or 'bipod_adapter' in item_id or 'bipod' in name:
-            return 'bipod_adapter'
-
-        has_optic_slot = any('optic' in s or 'aimpoint' in s or 'ffp3' in s for s in att)
-        if not has_optic_slot and (any('flashlight' in s or 'wf501b' in s for s in att) or 'ring_mount' in item_id or 'ring mount' in name or 'sprut' in name):
-            return 'flashlight_mount'
-
-        if not has_optic_slot and ('cover' in item_id or 'panel' in item_id or 'panel' in name or 'grip' in att):
-            return 'rail_panel'
-
-        return 'scope_mount'
-
-    def classify_ironsight_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-        name = item_obj.get('name', '').lower()
-
-        if 'carry handle' in name or 'carryhandle' in item_id:
-            return 'carry_handle'
-        if any('front' in s for s in inv) or 'frontsight' in item_id or 'front sight' in name:
-            return 'front_sight'
-        return 'rear_sight'
-
-    def classify_pistolgrip_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-        name = item_obj.get('name', '').lower()
-
-        if any('arpistolgrip' in s for s in inv) or 'ar15_' in item_id or 'm4_' in item_id:
-            return 'ar15_m4'
-        if any('akpistolgrip' in s for s in inv) or 'ak_' in item_id or 'akm_' in item_id or 'ak74_' in item_id or 'ak-' in name or 'akm' in name or 'ak ' in name:
-            return 'ak'
-        return 'other'
-
-    def classify_dotsight_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        micro_slots = {'pistoloptics', 'nomountrmroptics', 'aimpointacro', 'ffp3'}
-        if any(s in micro_slots for s in inv):
-            return 'micro_dot'
-        if any('weaponopticsak' in s for s in inv) and not any(s == 'weaponoptics' for s in inv):
-            return 'dovetail'
-        return 'picatinny'
-
-    def classify_helmet_attachment_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-
-        if any('visor' in s for s in inv) or 'visor' in item_id:
-            return 'visor'
-        if any('helmetplate' in s for s in inv) or 'slaap' in item_id or 'helmetplate' in item_id:
-            return 'armor_plate'
-        if any(s in ('mandible', 'afmlokchops') for s in inv) or 'mandible' in item_id or 'chops' in item_id:
-            return 'mandible'
-        return 'other'
-
-    def classify_foregrip_type(item_obj, all_classes):
-        item_id = item_obj.get('id', '')
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-
-        curr = item_id
-        chain = []
-        visited = set()
-        while curr and curr not in visited and curr in all_classes:
-            visited.add(curr)
-            chain.append(curr)
-            curr = all_classes[curr].get('parent')
-
-        item_id_lower = item_id.lower()
-
-        if any('mlok' in c.lower() for c in chain) or '_mlok_' in item_id_lower:
-            return 'mlok'
-        if any('keymod' in c.lower() for c in chain) or '_keymod_' in item_id_lower:
-            return 'keymod'
-        if any('urxstopper' in s for s in inv) or 'stopper' in item_id_lower:
-            return 'urx'
-        return 'picatinny'
-
-    def classify_receiver_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-        name = item_obj.get('name', '').lower()
-
-        if any('m4receiver' in s for s in inv) or 'ar15_' in item_id:
-            return 'ar15_upper'
-        if any('glockslide' in s for s in inv) or 'glock_' in item_id or 'slide' in name:
-            return 'pistol_slide'
-        if any('akcover' in s or 'aks74u' in s for s in inv) or 'ak_' in item_id or 'dust cover' in name:
-            return 'ak_dustcover'
-        return 'other'
-
-    def classify_stock_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        item_id = item_obj.get('id', '').lower()
-        name = item_obj.get('name', '').lower()
-
-        if any(s in ('chassis', 'mosinstock', 'sksstock', 'm1achassis', 'cncchassis', 'cncstock') for s in inv) or 'chassis' in name or 'monte carlo' in name or 'mod*x' in name:
-            return 'chassis'
-        if any('ak' in s or 'rpk' in s for s in inv) or ('cqr47' in item_id) or 'akzenit' in item_id:
-            return 'ak'
-        if any(s in ('arbuttstock', 'arbuttstocksecond', 'weaponbuttstockm4', 'arbuffer', 'prsstock', 'umsbuttstock') for s in inv) or ('cqr' in item_id and 'cqr47' not in item_id) or 'ar-15' in name or 'ar 15' in name:
-            return 'buffer_tube'
-        return 'custom'
-
-    def classify_muzzle_type(item_obj):
-        inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
-        name = item_obj.get('name', '').lower()
-
-        big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor'}
-        ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter'}
-        special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'rpdmuzzle', 'pkmsuppressor'}
-
-        if any(s in big_slots for s in inv) or '.338' in name or 'm82' in name or '12ga' in name or 'xm109' in name:
-            return 'heavy_shotgun'
-        if any(s in ak_slots for s in inv) or 'akm' in name or 'ak ' in name or 'zenit dtk' in name:
-            return 'ak'
-        if any(s in special_slots for s in inv) or 'glock' in name or '1911' in name or 'mp7' in name or 'as val' in name or 'rpd' in name or 'pkm' in name:
-            return 'pistol_smg_other'
-        if any(s in ('762suppressor', 'spearsuppressor') for s in inv) or '7.62' in name or 'ar-10' in name or 'm110' in name:
-            return '762_ar10'
-        return '556_ar15'
-
-    def classify_suppressor_type(item_obj):
-        raw_slots = item_obj.get('inventorySlots', [])
-        if isinstance(raw_slots, str):
-            inv = [raw_slots.lower()]
-        else:
-            inv = [s.lower() for s in raw_slots]
-        name = item_obj.get('name', '').lower()
-
-        if 'multi-caliber' in name or 'hybrid 46' in name or len(inv) >= 4 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
-            return 'multi_caliber'
-
-        big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor'}
-        if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name:
-            return 'heavy_shotgun'
-
-        if '5.56' in name or '556' in name or 'weaponmuzzlem4' in inv or 'augmuzzle' in inv:
-            return '556_ar15'
-
-        smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor'}
-        if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name:
-            return 'pistol_smg_other'
-
-        ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle'}
-        if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name:
-            return 'ak'
-
-        rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor', 'pkmsuppressor', 'pkpsuppressor'}
-        if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'pkm' in name or 'pkp' in name:
-            return '762_ar10'
-
-        return '556_ar15'
-
-    def clean_item_stats(stats):
-        if not isinstance(stats, dict):
-            return stats
-        cleaned = {}
-        for k, v in stats.items():
-            if v is None:
-                continue
-            if k == 'capacity':
-                m = re.search(r'\d+', str(v))
-                if m:
-                    cleaned[k] = int(m.group(0))
-            elif k == 'accuracy':
-                m = re.search(r'[\d.]+', str(v))
-                if m:
-                    try:
-                        cleaned[k] = float(m.group(0))
-                    except ValueError:
-                        pass
-            elif k == 'weight':
-                m = re.search(r'\d+', str(v))
-                if m:
-                    cleaned[k] = int(m.group(0))
-            elif k == 'lightDistance':
-                m = re.search(r'\d+', str(v))
-                if m:
-                    cleaned[k] = int(m.group(0))
-            elif k in ('recoil', 'sway', 'ergonomics', 'rpm', 'bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection', 'hitpoints'):
-                s_val = str(v).strip()
-                if '%' in s_val:
-                    cleaned[k] = s_val
-                else:
-                    m = re.search(r'-?\d+', s_val)
-                    if m:
-                        try:
-                            cleaned[k] = int(m.group(0))
-                        except ValueError:
-                            cleaned[k] = v
-                    else:
-                        cleaned[k] = v
-            elif k == 'velocityMultiplier':
+def get_scope(cname, all_classes):
+    curr = cname
+    visited = set()
+    while curr and curr not in visited:
+        visited.add(curr)
+        if curr in all_classes:
+            props = all_classes[curr].get('props', {})
+            if 'scope' in props:
                 try:
-                    cleaned[k] = float(v)
+                    return int(props['scope'])
                 except (ValueError, TypeError):
+                    pass
+            curr = all_classes[curr].get('parent')
+        else:
+            break
+    return 0
+
+def get_inherited_props(cname, all_classes):
+    curr = cname
+    visited = set()
+    chain = []
+    while curr and curr not in visited and curr in all_classes:
+        visited.add(curr)
+        chain.append(curr)
+        curr = all_classes[curr].get('parent')
+    merged = {}
+    for c in reversed(chain):
+        merged.update(all_classes[c].get('props', {}))
+    return merged
+
+# ---------------------------------------------------------------------------
+# CATEGORY CLASSIFIERS
+# ---------------------------------------------------------------------------
+def classify_weapon(wid, props, src_file):
+    wt = (props.get('weaponType') or '').lower()
+    src = src_file.lower().replace('\\', '/')
+    if wt == 'assaultrifle' or '/assaultrifle/' in src:
+        return 'assault_rifle'
+    if wt == 'sniperrifle' or '/sniperrifle/' in src:
+        return 'sniper_rifle'
+    if wt == 'smg' or '/smg/' in src:
+        return 'submachine_gun'
+    if wt == 'shotgun' or '/shotgun/' in src:
+        return 'shotgun'
+    if wt == 'pistol' or '/pistol/' in src:
+        return 'pistol'
+    if wt == 'lmg' or '/lmg/' in src:
+        return 'light_machine_gun'
+    if wt == 'grenadelauncher' or '/launcher/' in src or 'm32' in src:
+        return 'grenade_launcher'
+    return None
+
+def is_excluded_weapon_variant(cid, all_classes):
+    if cid == 'SMPZ_Weapon_Tagilla_Hammer':
+        return True
+    m = _WEAPON_VARIANT_RE.search(cid)
+    if not m:
+        return False
+    base_name = cid[:m.start()]
+    parent = all_classes[cid].get('parent')
+    parent_is_scope2 = (get_scope(parent, all_classes) == 2) if parent else False
+    base_exists_scope2 = (get_scope(base_name, all_classes) == 2)
+    if parent_is_scope2 or base_exists_scope2:
+        return True
+    return False
+
+def classify_gear(cid):
+    cid_lower = cid.lower()
+    if cid_lower.startswith(('smpz_backpack_', 'smpz_pack_')) or any(k in cid_lower for k in ['backpack', 'pack_', 'rush100', 'rush24', 'rush72', 'bag_']):
+        return 'backpack'
+    if cid_lower.startswith(('smpz_chestrig_', 'smpz_cr_')):
+        return 'chest_rig'
+    if cid_lower.startswith('smpz_mask_'):
+        return 'mask'
+    if any(k in cid_lower for k in ['visor', 'helmetplate', 'helmetaventail', 'helmetstrap', 'helmetmandible', 'helmetvisor', 'mandible']) or 'respirator' in cid_lower:
+        return 'helmet_attachment'
+    if any(k in cid_lower for k in ['helmet', 'altyn', 'maska', 'kiver']):
+        return 'helmet'
+    if any(k in cid_lower for k in ['mask', 'gasmask', 'balaclava']):
+        return 'mask'
+    if any(k in cid_lower for k in ['chestrig', 'cr_']):
+        return 'chest_rig'
+    if 'vest' in cid_lower or 'armor' in cid_lower:
+        full_body_keywords = ['6b13', '6b2', '6b23', '6b43', '6b45', 'zhuk', 'gladiators', 'redutm', 'redutt5', 'iotv', 'thor', 'sieger', 'mmac', 'tasmanian_tiger', 'lbt6094a']
+        if any(k in cid_lower for k in full_body_keywords):
+            return 'full_body_armor'
+        return 'plate_carrier'
+    return None
+
+def is_preset_magazine(cname, all_classes):
+    if not cname.startswith('SMPZ_Mag_'):
+        return False
+    direct_props = all_classes.get(cname, {}).get('props', {})
+    direct_scope = direct_props.get('scope')
+    if direct_scope is None or str(direct_scope) != '2':
+        return True
+    parent = all_classes.get(cname, {}).get('parent')
+    parent_direct_scope = all_classes.get(parent, {}).get('props', {}).get('scope')
+    if parent_direct_scope in (2, '2') and 'displayName' not in direct_props:
+        return True
+    return False
+
+def is_magnified_optic(mag_val):
+    if not mag_val:
+        return False
+    if isinstance(mag_val, (int, float)):
+        return mag_val > 1.05
+    if isinstance(mag_val, list):
+        return any(isinstance(x, (int, float)) and x > 1.05 for x in mag_val)
+    if isinstance(mag_val, str):
+        nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', mag_val)]
+        return any(x > 1.05 for x in nums)
+    return False
+
+def classify_attachment(aid, props, src_file, mag_val=None):
+    aid_lower = aid.lower()
+    src_lower = src_file.lower().replace('\\', '/')
+    inv = [str(s).lower() for s in (props.get('inventorySlot') or [])]
+    inv_str = ' '.join(inv)
+
+    if aid.startswith('SMPZ_Mag_') or '/magazine/' in src_lower or 'magazine' in inv:
+        return 'magazine'
+
+    if aid.startswith(('SMPZ_Optic', 'SMPZ_Scope', 'SMPZ_Sight')) or '/optics/' in src_lower:
+        if 'carryhandle' in aid_lower:
+            return 'iron_sight'
+        if is_magnified_optic(mag_val):
+            return 'optic_scope'
+        return 'reflex_sight'
+
+    if aid.startswith('SMPZ_Flashlight') or '/flashlights/' in src_lower:
+        return 'tactical_flashlight'
+
+    if aid_lower.startswith(('smpz_lasers_', 'smpz_laser_')) or '/laser/' in src_lower:
+        return 'laser_pointer'
+
+    if any(k in aid_lower for k in ['_tubebuffer', '_tubebuff', 'smpz_buffer']) or 'tubebuffer' in inv_str or '/attachments/buffer/' in src_lower:
+        return 'buffer_tube'
+
+    if '/pistolgrip/' in src_lower or any(k in aid_lower for k in ['_pistolgrip', 'pistol_grip']) or any('pistolgrip' in s for s in inv):
+        if 'cqr_pistolgrip' not in aid_lower and 'cqr47_pistolgrip' not in aid_lower:
+            return 'pistol_grip'
+
+    if ('suppressor' in aid_lower or '/suppressor/' in src_lower) and not aid_lower.endswith('_cap'):
+        return 'suppressor'
+
+    if any(k in aid_lower for k in ['_muzzlebrake', '_muzzle_device', '_muzzle', '_choke', 'compensator']) or '/muzzle/' in src_lower:
+        return 'muzzle_device'
+
+    if any('suppressor' in s for s in inv) and not aid_lower.endswith('_cap'):
+        return 'suppressor'
+
+    if any('muzzle' in s or 'adapter' in s for s in inv):
+        return 'muzzle_device'
+
+    if (aid.startswith('SMPZ_Bipod') or '/bipod/' in src_lower) and '/mount/' not in src_lower and '/mounts/' not in src_lower:
+        return 'bipod'
+
+    if ('/gasblock/' in src_lower or '/gasblocks/' in src_lower or 'gasblock' in aid_lower or any('gasblock' in s for s in inv)) and 'hndgrd' not in aid_lower:
+        return 'gas_block'
+
+    if aid.startswith('SMPZ_Charging') or '/charginghandle/' in src_lower or 'charginghandle' in aid_lower or any('charginghandle' in s for s in inv):
+        return 'charging_handle'
+
+    if aid.startswith('SMPZ_Trigger') or '/trigger/' in src_lower or 'trigger' in aid_lower or any('trigger' in s for s in inv):
+        return 'trigger'
+
+    if aid.startswith('SMPZ_Hammer') or '/hammer/' in src_lower or 'hammer' in aid_lower or any('hammer' in s for s in inv):
+        return 'hammer'
+
+    if aid.startswith('SMPZ_Barrel') or '/barrel/' in src_lower or 'barrel' in aid_lower or 'm203' in aid_lower or any('barrel' in s or 'm203' in s for s in inv):
+        return 'barrel'
+
+    if '/mounts/' in src_lower or '/mount/' in src_lower or '/sidemount/' in src_lower or 'mount' in aid_lower or '_riser' in aid_lower or 'rail_panel' in aid_lower:
+        return 'mount'
+
+    if '/receiver/' in src_lower or any(k in aid_lower for k in ['_receiver', '_dustcover', '_cover', '_slide']) or any('receiver' in s or 'dustcover' in s or 'glockslide' in s for s in inv):
+        return 'receiver'
+
+    if '/hndgrd/' in src_lower or any(k in aid_lower for k in ['_hndgrd', '_handguard', 'smpz_handguard']) or any('handguard' in s for s in inv):
+        return 'handguard'
+
+    if 'cqr_pistolgrip' in aid_lower or 'cqr47_pistolgrip' in aid_lower:
+        return 'buttstock'
+
+    if '/grips/' in src_lower or 'foregrip' in aid_lower or any('grip' in s for s in inv):
+        return 'foregrip'
+
+    if '/buttstock/' in src_lower or any(k in aid_lower for k in ['_buttstock', '_stock', 'smpz_stock', 'smpz_buttstock']) or any('stock' in s or 'chassis' in s for s in inv):
+        return 'buttstock'
+
+    if 'carryhandle' in aid_lower or '/ironsights/' in src_lower or any(k in aid_lower for k in ['_frontsight', '_rearsight', 'front_sight', 'rear_sight']) or any('frontsight' in s or 'rearsight' in s for s in inv):
+        return 'iron_sight'
+
+    if 'optic' in aid_lower or 'sight' in aid_lower or any('optic' in s for s in inv):
+        if is_magnified_optic(mag_val):
+            return 'optic_scope'
+        return 'reflex_sight'
+
+    return None
+
+# ---------------------------------------------------------------------------
+# SUB-CATEGORY CLASSIFIERS
+# ---------------------------------------------------------------------------
+def classify_mount_type(item_obj):
+    att = [s.lower() for s in item_obj.get('attachmentSlots', [])]
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+    name = item_obj.get('name', '').lower()
+
+    if any('buffer' in s or 'stock' in s for s in att) or \
+       any('buttstock' in s for s in inv) or \
+       'stock_adapter' in item_id or 'buffer_adapter' in item_id:
+        return 'stock_adapter'
+
+    if any('bipod' in s for s in att) or 'bipod_adapter' in item_id or 'bipod' in name:
+        return 'bipod_adapter'
+
+    has_optic_slot = any('optic' in s or 'aimpoint' in s or 'ffp3' in s for s in att)
+    if not has_optic_slot and (any('flashlight' in s or 'wf501b' in s for s in att) or 'ring_mount' in item_id or 'ring mount' in name or 'sprut' in name):
+        return 'flashlight_mount'
+
+    if not has_optic_slot and ('cover' in item_id or 'panel' in item_id or 'panel' in name or 'grip' in att):
+        return 'rail_panel'
+
+    return 'scope_mount'
+
+def classify_ironsight_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+    name = item_obj.get('name', '').lower()
+
+    if 'carry handle' in name or 'carryhandle' in item_id:
+        return 'carry_handle'
+    if any('front' in s for s in inv) or 'frontsight' in item_id or 'front sight' in name:
+        return 'front_sight'
+    return 'rear_sight'
+
+def classify_pistolgrip_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+    name = item_obj.get('name', '').lower()
+
+    if any('arpistolgrip' in s for s in inv) or 'ar15_' in item_id or 'm4_' in item_id:
+        return 'ar15_m4'
+    if any('akpistolgrip' in s for s in inv) or 'ak_' in item_id or 'akm_' in item_id or 'ak74_' in item_id or 'ak-' in name or 'akm' in name or 'ak ' in name:
+        return 'ak'
+    return 'other'
+
+def classify_dotsight_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    micro_slots = {'pistoloptics', 'nomountrmroptics', 'aimpointacro', 'ffp3'}
+    if any(s in micro_slots for s in inv):
+        return 'micro_dot'
+    if any('weaponopticsak' in s for s in inv) and not any(s == 'weaponoptics' for s in inv):
+        return 'dovetail'
+    return 'picatinny'
+
+def classify_helmet_attachment_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+
+    if any('visor' in s for s in inv) or 'visor' in item_id:
+        return 'visor'
+    if any('helmetplate' in s for s in inv) or 'slaap' in item_id or 'helmetplate' in item_id:
+        return 'armor_plate'
+    if any(s in ('mandible', 'afmlokchops') for s in inv) or 'mandible' in item_id or 'chops' in item_id:
+        return 'mandible'
+    return 'other'
+
+def classify_foregrip_type(item_obj, all_classes):
+    item_id = item_obj.get('id', '')
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+
+    curr = item_id
+    chain = []
+    visited = set()
+    while curr and curr not in visited and curr in all_classes:
+        visited.add(curr)
+        chain.append(curr)
+        curr = all_classes[curr].get('parent')
+
+    item_id_lower = item_id.lower()
+
+    if any('mlok' in c.lower() for c in chain) or '_mlok_' in item_id_lower:
+        return 'mlok'
+    if any('keymod' in c.lower() for c in chain) or '_keymod_' in item_id_lower:
+        return 'keymod'
+    if any('urxstopper' in s for s in inv) or 'stopper' in item_id_lower:
+        return 'urx'
+    return 'picatinny'
+
+def classify_receiver_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+    name = item_obj.get('name', '').lower()
+
+    if any('m4receiver' in s for s in inv) or 'ar15_' in item_id:
+        return 'ar15_upper'
+    if any('glockslide' in s for s in inv) or 'glock_' in item_id or 'slide' in name:
+        return 'pistol_slide'
+    if any('akcover' in s or 'aks74u' in s for s in inv) or 'ak_' in item_id or 'dust cover' in name:
+        return 'ak_dustcover'
+    return 'other'
+
+def classify_stock_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    item_id = item_obj.get('id', '').lower()
+    name = item_obj.get('name', '').lower()
+
+    if any(s in ('chassis', 'mosinstock', 'sksstock', 'm1achassis', 'cncchassis', 'cncstock') for s in inv) or 'chassis' in name or 'monte carlo' in name or 'mod*x' in name:
+        return 'chassis'
+    if any('ak' in s or 'rpk' in s for s in inv) or ('cqr47' in item_id) or 'akzenit' in item_id:
+        return 'ak'
+    if any(s in ('arbuttstock', 'arbuttstocksecond', 'weaponbuttstockm4', 'arbuffer', 'prsstock', 'umsbuttstock') for s in inv) or ('cqr' in item_id and 'cqr47' not in item_id) or 'ar-15' in name or 'ar 15' in name:
+        return 'buffer_tube'
+    return 'custom'
+
+def classify_muzzle_type(item_obj):
+    inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
+    name = item_obj.get('name', '').lower()
+
+    big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor'}
+    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter'}
+    special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'rpdmuzzle', 'pkmsuppressor'}
+
+    if any(s in big_slots for s in inv) or '.338' in name or 'm82' in name or '12ga' in name or 'xm109' in name:
+        return 'heavy_shotgun'
+    if any(s in ak_slots for s in inv) or 'akm' in name or 'ak ' in name or 'zenit dtk' in name:
+        return 'ak'
+    if any(s in special_slots for s in inv) or 'glock' in name or '1911' in name or 'mp7' in name or 'as val' in name or 'rpd' in name or 'pkm' in name:
+        return 'pistol_smg_other'
+    if any(s in ('762suppressor', 'spearsuppressor') for s in inv) or '7.62' in name or 'ar-10' in name or 'm110' in name:
+        return '762_ar10'
+    return '556_ar15'
+
+def classify_suppressor_type(item_obj):
+    raw_slots = item_obj.get('inventorySlots', [])
+    if isinstance(raw_slots, str):
+        inv = [raw_slots.lower()]
+    else:
+        inv = [s.lower() for s in raw_slots]
+    name = item_obj.get('name', '').lower()
+
+    if 'multi-caliber' in name or 'hybrid 46' in name or len(inv) >= 4 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
+        return 'multi_caliber'
+
+    big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor'}
+    if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name:
+        return 'heavy_shotgun'
+
+    if '5.56' in name or '556' in name or 'weaponmuzzlem4' in inv or 'augmuzzle' in inv:
+        return '556_ar15'
+
+    smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor'}
+    if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name:
+        return 'pistol_smg_other'
+
+    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle'}
+    if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name:
+        return 'ak'
+
+    rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor', 'pkmsuppressor', 'pkpsuppressor'}
+    if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'pkm' in name or 'pkp' in name:
+        return '762_ar10'
+
+    return '556_ar15'
+
+def extract_weapon_stats(cname, props, all_classes):
+    stats = {}
+    rec = props.get('recoilModifier')
+    if rec and isinstance(rec, list) and len(rec) > 0:
+        try:
+            stats['recoil'] = round(float(rec[0]) * 100)
+        except (ValueError, TypeError):
+            pass
+
+    sway = props.get('swayModifier')
+    if sway and isinstance(sway, list) and len(sway) > 0:
+        try:
+            stats['sway'] = round(sum(float(x) for x in sway) / len(sway) * 100)
+        except (ValueError, TypeError):
+            pass
+
+    aim = props.get('aimSpeedModifier')
+    if aim and isinstance(aim, list) and len(aim) > 0:
+        try:
+            stats['ergonomics'] = round((1.0 - float(aim[0])) * 100)
+        except (ValueError, TypeError):
+            pass
+
+    disp = props.get('dispersion')
+    if disp is not None:
+        try:
+            stats['accuracy'] = round(float(disp) * (180.0 / math.pi) * 60.0, 2)
+        except (ValueError, TypeError):
+            pass
+
+    spd = props.get('initSpeedMultiplier', 1.0)
+    try:
+        stats['velocityMultiplier'] = round(float(spd), 3)
+    except (ValueError, TypeError):
+        stats['velocityMultiplier'] = 1.0
+
+    return stats
+
+def extract_gear_stats(cname, props, all_classes, cat):
+    stats = {}
+    curr = cname
+    visited = set()
+    hitpoints = None
+    bullet_prot = None
+    shock_prot = None
+
+    while curr and curr not in visited and curr in all_classes:
+        visited.add(curr)
+        c_info = all_classes[curr]
+        body = c_info.get('body', '')
+
+        if hitpoints is None:
+            m_hp = re.search(r'class\s+Health\b[^{]*\{[^}]*hitpoints\s*=\s*([^;]+);', body)
+            if m_hp:
+                try:
+                    hitpoints = int(float(m_hp.group(1)))
+                except (ValueError, TypeError):
+                    pass
+
+        if bullet_prot is None or shock_prot is None:
+            m_proj = re.search(r'class\s+Projectile\b[^{]*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}', body)
+            if m_proj:
+                proj_body = m_proj.group(1)
+                if bullet_prot is None:
+                    m_h = re.search(r'class\s+Health\b[^{]*\{[^}]*damage\s*=\s*([^;]+);', proj_body)
+                    if m_h:
+                        try:
+                            bullet_prot = round((1.0 - float(m_h.group(1))) * 100)
+                        except (ValueError, TypeError):
+                            pass
+                if shock_prot is None:
+                    m_s = re.search(r'class\s+Shock\b[^{]*\{[^}]*damage\s*=\s*([^;]+);', proj_body)
+                    if m_s:
+                        try:
+                            shock_prot = round((1.0 - float(m_s.group(1))) * 100)
+                        except (ValueError, TypeError):
+                            pass
+
+        curr = c_info.get('parent')
+
+    if bullet_prot is not None:
+        stats['bulletDamageProtection'] = bullet_prot
+        stats['bloodDamageProtection'] = 0
+        stats['shockDamageProtection'] = shock_prot if shock_prot is not None else 0
+    elif cat in ('chest_rig', 'mask'):
+        stats['bulletDamageProtection'] = 0
+        stats['bloodDamageProtection'] = 0
+        stats['shockDamageProtection'] = 0
+
+    if hitpoints is not None:
+        stats['hitpoints'] = hitpoints
+
+    w_val = props.get('weight')
+    if w_val is not None:
+        try:
+            stats['weight'] = int(float(w_val) / 1000)
+        except (ValueError, TypeError):
+            pass
+
+    return stats
+
+def extract_attachment_stats(cname, props, all_classes, cat, mag_val=None):
+    stats = {}
+    rec = props.get('recoilModifier')
+    if rec and isinstance(rec, list) and len(rec) > 0:
+        try:
+            val = round((float(rec[0]) - 1.0) * 100)
+            if val != 0:
+                stats['recoil'] = int(val)
+        except (ValueError, TypeError):
+            pass
+
+    sway = props.get('swayModifier')
+    if sway and isinstance(sway, list) and len(sway) > 0:
+        try:
+            val = round((sum(float(x) for x in sway) / len(sway) - 1.0) * 100)
+            if val != 0:
+                stats['sway'] = int(val)
+        except (ValueError, TypeError):
+            pass
+
+    if cat == 'magazine' or cname.startswith('SMPZ_Mag_'):
+        cnt = props.get('count')
+        if cnt is not None:
+            try:
+                stats['capacity'] = int(cnt)
+            except (ValueError, TypeError):
+                pass
+
+    w_val = props.get('weight')
+    if w_val is not None:
+        try:
+            stats['weight'] = int(float(w_val))
+        except (ValueError, TypeError):
+            pass
+
+    if 'Flashlight' in cname or cat == 'tactical_flashlight':
+        desc_short = str(props.get('descriptionShort', ''))
+        m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.I)
+        if m_dist:
+            stats['lightDistance'] = int(m_dist.group(1))
+
+    if cat in ('optic_scope', 'reflex_sight') and mag_val:
+        stats['magnification'] = mag_val
+
+    return stats
+
+def clean_item_stats(stats):
+    if not isinstance(stats, dict):
+        return stats
+    cleaned = {}
+    for k, v in stats.items():
+        if v is None:
+            continue
+        if k == 'capacity':
+            m = re.search(r'\d+', str(v))
+            if m:
+                cleaned[k] = int(m.group(0))
+        elif k == 'accuracy':
+            m = re.search(r'[\d.]+', str(v))
+            if m:
+                try:
+                    cleaned[k] = float(m.group(0))
+                except ValueError:
+                    pass
+        elif k == 'weight':
+            m = re.search(r'\d+', str(v))
+            if m:
+                cleaned[k] = int(m.group(0))
+        elif k == 'lightDistance':
+            m = re.search(r'\d+', str(v))
+            if m:
+                cleaned[k] = int(m.group(0))
+        elif k in ('recoil', 'sway', 'ergonomics', 'bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection', 'hitpoints'):
+            m = re.search(r'-?\d+', str(v).strip())
+            if m:
+                try:
+                    cleaned[k] = int(m.group(0))
+                except ValueError:
                     cleaned[k] = v
-            elif k == 'magnification':
-                cleaned[k] = str(v).strip()
             else:
                 cleaned[k] = v
-        return cleaned
+        elif k == 'velocityMultiplier':
+            try:
+                cleaned[k] = float(v)
+            except (ValueError, TypeError):
+                cleaned[k] = v
+        elif k == 'magnification':
+            if isinstance(v, list):
+                cleaned[k] = [int(x) if isinstance(x, (int, float)) and float(x).is_integer() else (float(x) if isinstance(x, (int, float)) else x) for x in v]
+            elif isinstance(v, (int, float)):
+                cleaned[k] = [int(v) if float(v).is_integer() else float(v)]
+            elif isinstance(v, str):
+                nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', v)]
+                if len(nums) == 1:
+                    cleaned[k] = [int(nums[0]) if nums[0].is_integer() else nums[0]]
+                elif len(nums) >= 2:
+                    cleaned[k] = [int(nums[0]) if nums[0].is_integer() else nums[0], int(nums[1]) if nums[1].is_integer() else nums[1]]
+                else:
+                    cleaned[k] = v
+            else:
+                cleaned[k] = v
+        else:
+            cleaned[k] = v
+    return cleaned
 
-    # Reconstruct datasets
-    sections = [
-        ('weaponsData', target_w, 'weapon'),
-        ('gearData', target_g, 'gear'),
-        ('attachmentData', target_a, 'attachment')
-    ]
-    result_data = {}
-    stats_summary = {
-        'existing': 0,
-        'google_translate': 0,
-        'empty': 0,
-        'cargo_items': 0,
-        'models_linked': 0,
-        'slots_linked': 0,
-        'protection_items': 0,
-        'optics_magnification': 0,
-        'mount_types': 0,
-        'ironsight_types': 0,
-        'pistolgrip_types': 0,
-        'dotsight_types': 0,
-        'helmet_types': 0,
-        'foregrip_types': 0,
-        'receiver_types': 0,
-        'stock_types': 0,
-        'muzzle_types': 0,
-        'suppressor_types': 0
-    }
+def extract_optic_magnification(item_id, all_classes):
+    props = get_inherited_props(item_id, all_classes)
+    mag_mult_raw = props.get('magnifierMultiplier')
+    if mag_mult_raw:
+        try:
+            val = float(mag_mult_raw)
+            if val > 0:
+                mag_val = round(1.0 / val)
+                return [int(mag_val)]
+        except Exception:
+            pass
 
-    for sec_name, sec_dict, sec_type in sections:
-        result_data[sec_name] = {}
-        for cat, items in sec_dict.items():
-            for item in items:
-                item_id = item['id']
-                if item_id.startswith('Slot_') or item_id in (
-                    'Inventory_Base', 'ItemSuppressor', 'Clothing_Base', 'Weapon_Base', 'Rifle_Base'
-                ):
-                    continue
-                item_name = item.get('name', '')
-                existing_desc = item.get('description', '')
-                item_obj = dict(item)
-                item_obj.pop('modesKo', None)
-                item_obj.pop('protectionAreasKo', None)
-                for legacy_key in ('mountType', 'sightType', 'gripPlatform', 'dotType', 'foregripType',
-                                  'receiverType', 'stockType', 'muzzleType', 'suppressorType', 'helmetPartType'):
-                    item_obj.pop(legacy_key, None)
-                if 'stats' in item_obj and isinstance(item_obj['stats'], dict):
-                    item_obj['stats'].pop('velocityTooltip', None)
-                    item_obj['stats'].pop('baseVelocity', None)
-                    item_obj['stats'].pop('baseAmmo', None)
-                    item_obj['stats'].pop('velocity', None)
-                props = get_inherited_props(item_id)
+    curr = item_id
+    visited = set()
+    oi_body = None
+    while curr and curr not in visited and curr in all_classes:
+        visited.add(curr)
+        body = all_classes[curr].get('body', '')
+        if 'class OpticsInfo' in body:
+            m = re.search(r'\bclass\s+OpticsInfo\b[^{]*\{', body)
+            if m:
+                start_idx = m.end() - 1
+                depth = 1
+                i = start_idx + 1
+                n = len(body)
+                while i < n and depth > 0:
+                    if body[i] == '{': depth += 1
+                    elif body[i] == '}': depth -= 1
+                    i += 1
+                oi_body = body[start_idx+1:i-1]
+                break
+        curr = all_classes[curr].get('parent')
 
-                # 1. 2D Image Asset mapping
-                matched_img = file_map.get(item_id.lower())
-                if matched_img:
-                    item_obj['image'] = matched_img
-                    item_obj['images'] = [matched_img]
+    if not oi_body:
+        return None
 
-                # 2. 3D Model Asset mapping (.glb)
-                matched_model = match_model_for_item(
-                    item_id=item_id,
-                    item_name=item_name,
-                    model_map=model_map,
-                    sec_type=sec_type
-                )
-                if matched_model:
-                    item_obj['model'] = matched_model
-                    stats_summary['models_linked'] += 1
-                elif 'model' in item_obj:
-                    del item_obj['model']
+    def eval_safe(s):
+        cleaned = re.sub(r'[^0-9+\-*/.()]', '', s)
+        if not cleaned: return None
+        try: return eval(cleaned, {"__builtins__": None}, {})
+        except: return None
 
-                # 3. Cargo Size & Item Size parsing (raw dimensions & slot counts)
-                cargo_size_arr = props.get('itemsCargoSize') or props.get('itemCargoSize')
-                if cargo_size_arr and len(cargo_size_arr) >= 2:
-                    try:
-                        cw = int(cargo_size_arr[0])
-                        ch = int(cargo_size_arr[1])
-                        item_obj['cargoSize'] = f"{cw}x{ch}"
-                        item_obj['cargoSlots'] = cw * ch
-                        stats_summary['cargo_items'] += 1
-                    except (ValueError, TypeError):
-                        pass
+    def parse_zoom_val(s):
+        s = s.strip().strip('"\'')
+        if '/' in s:
+            parts = s.split('/')
+            denom = eval_safe(parts[1])
+            if denom and denom > 0:
+                return float(denom)
+        val = eval_safe(s)
+        if val is not None and val > 0:
+            if abs(val - 0.5236) < 0.01 or abs(val - 0.3926) < 0.01:
+                return 1.0
+            if val <= 0.6:
+                return round(0.3926 / val, 1) if abs(0.3926 / val - round(0.3926 / val)) < 0.2 else round(0.5236 / val, 1)
+            return float(val)
+        return 1.0
 
-                item_size_arr = props.get('itemSize')
-                if item_size_arr and len(item_size_arr) >= 2:
-                    try:
-                        iw = int(item_size_arr[0])
-                        ih = int(item_size_arr[1])
-                        item_obj['itemSize'] = f"{iw}x{ih}"
-                        item_obj['itemSlots'] = iw * ih
-                    except (ValueError, TypeError):
-                        pass
+    dfov_m = re.search(r'discretefov\[\]\s*=\s*\{([^}]+)\};', oi_body, re.IGNORECASE)
+    if dfov_m:
+        raw_list = [x.strip().strip('"\'') for x in dfov_m.group(1).split(',')]
+        zooms = []
+        for r in raw_list:
+            z = parse_zoom_val(r)
+            if z: zooms.append(z)
+        if zooms:
+            min_z = min(zooms)
+            max_z = max(zooms)
+            min_num = int(min_z) if min_z.is_integer() else min_z
+            max_num = int(max_z) if max_z.is_integer() else max_z
+            return [min_num] if min_num == max_num else [min_num, max_num]
 
-                # 4. Raw C++ Slots & Attachments metadata
-                inv_slots = props.get('inventorySlot')
-                item_info = props.get('itemInfo')
-                att_slots = props.get('attachments')
-                magazines = props.get('magazines')
-                chamberable = props.get('chamberableFrom')
+    min_m = re.search(r'opticsZoomMin\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+    max_m = re.search(r'opticsZoomMax\s*=\s*["\']?([^;"\']+)["\']?;', oi_body)
+    if min_m and max_m:
+        z1 = parse_zoom_val(min_m.group(1))
+        z2 = parse_zoom_val(max_m.group(1))
+        min_z = min(z1, z2)
+        max_z = max(z1, z2)
+        min_num = int(min_z) if min_z.is_integer() else min_z
+        max_num = int(max_z) if max_z.is_integer() else max_z
+        return [min_num] if min_num == max_num else [min_num, max_num]
 
-                if inv_slots:
-                    item_obj['inventorySlots'] = inv_slots
-                    stats_summary['slots_linked'] += 1
-                if item_info:
-                    item_obj['itemInfo'] = item_info
-                if att_slots:
-                    item_obj['attachmentSlots'] = att_slots
-                if magazines:
-                    item_obj['magazines'] = magazines
-                if chamberable:
-                    item_obj['chamberableFrom'] = chamberable
-
-                # 4-1. Weapon Designated Primary Caliber & Velocity Multiplier
-                if sec_name == 'weaponsData':
-                    w_cals = extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props)
-                    if w_cals:
-                        item_obj['calibers'] = w_cals
-                    
-                    calc_mult = extract_weapon_velocity_multiplier(props)
-                    if calc_mult is not None:
-                        stats = item_obj.setdefault('stats', {})
-                        stats['velocityMultiplier'] = calc_mult
-
-                # 5. Protection Areas metadata
-                prot_areas = props.get('ProtectionAreas')
-                if prot_areas and isinstance(prot_areas, list) and len(prot_areas) > 0:
-                    item_obj['protectionAreas'] = prot_areas
-                    stats_summary['protection_items'] += 1
-
-                # 6. Weapon Fire Modes metadata
-                modes_arr = props.get('modes')
-                if modes_arr and isinstance(modes_arr, list) and len(modes_arr) > 0:
-                    item_obj['modes'] = modes_arr
-
-                # 7. Tactical Flashlight Light Distance
-                if 'Flashlight' in item_id or item_obj.get('category') in ('전술 플래시', 'tactical_flashlight'):
-                    desc_short = str(props.get('descriptionShort', ''))
-                    m_dist = re.search(r'(?:Max light distance|distance)[:\s]*(\d+)\s*m', desc_short, re.IGNORECASE)
-                    if m_dist:
-                        item_obj.setdefault('stats', {})['lightDistance'] = int(m_dist.group(1))
-                    elif 'M600' in item_id:
-                        item_obj.setdefault('stats', {})['lightDistance'] = 100
-                    elif 'XHP35' in item_id:
-                        item_obj.setdefault('stats', {})['lightDistance'] = 300
-
-                # 8. Optics Magnification
-                if item_obj.get('category') in ('광학 조준경', '도트/홀로그램', 'optic_scope', 'reflex_sight') or 'Optic' in item_id or 'Scope' in item_id or 'Sight' in item_id:
-                    mag = extract_optic_magnification(item_id)
-                    if mag:
-                        item_obj.setdefault('stats', {})['magnification'] = mag
-                        stats_summary['optics_magnification'] += 1
-
-                if 'stats' in item_obj and isinstance(item_obj['stats'], dict):
-                    item_obj['stats'] = clean_item_stats(item_obj['stats'])
-
-                # 9. Description resolution
-                final_desc, src_type = resolve_item_description(item_id, existing_desc)
-                item_obj['description'] = final_desc
-                stats_summary[src_type] += 1
-
-                target_cat = CATEGORY_MAP.get(cat, cat)
-                if sec_name == 'attachmentData':
-                    cls_info = all_classes.get(item_id, {})
-                    src_file = cls_info.get('source_file', '').replace('\\', '/').lower()
-                    if '/attachments/mount' in src_file or '/attachments/sidemount' in src_file:
-                        target_cat = 'mount'
-                    elif '/attachments/pistolgrip' in src_file and target_cat == 'foregrip':
-                        target_cat = 'pistol_grip'
-                    elif 'carryhandle' in item_id.lower() or '/attachments/ironsights' in src_file:
-                        target_cat = 'iron_sight'
-                    elif '/attachments/optics' in src_file or target_cat in ('optic_scope', 'reflex_sight'):
-                        mag_val = item_obj.get('stats', {}).get('magnification', '1x')
-                        if mag_val == '1x':
-                            target_cat = 'reflex_sight'
-                        else:
-                            target_cat = 'optic_scope'
-                    
-                    if target_cat == 'mount':
-                        item_obj['subCategory'] = classify_mount_type(item_obj)
-                        stats_summary['mount_types'] += 1
-                    elif target_cat == 'iron_sight':
-                        item_obj['subCategory'] = classify_ironsight_type(item_obj)
-                        stats_summary['ironsight_types'] += 1
-                    elif target_cat == 'pistol_grip':
-                        item_obj['subCategory'] = classify_pistolgrip_type(item_obj)
-                        stats_summary['pistolgrip_types'] += 1
-                    elif target_cat == 'reflex_sight':
-                        item_obj['subCategory'] = classify_dotsight_type(item_obj)
-                        stats_summary['dotsight_types'] += 1
-                    elif target_cat == 'foregrip':
-                        item_obj['subCategory'] = classify_foregrip_type(item_obj, all_classes)
-                        stats_summary['foregrip_types'] += 1
-                    elif target_cat == 'receiver':
-                        item_obj['subCategory'] = classify_receiver_type(item_obj)
-                        stats_summary['receiver_types'] += 1
-                    elif target_cat == 'buttstock':
-                        item_obj['subCategory'] = classify_stock_type(item_obj)
-                        stats_summary['stock_types'] += 1
-                    elif target_cat == 'muzzle_device':
-                        item_obj['subCategory'] = classify_muzzle_type(item_obj)
-                        stats_summary['muzzle_types'] += 1
-                    elif target_cat == 'suppressor':
-                        item_obj['subCategory'] = classify_suppressor_type(item_obj)
-                        stats_summary['suppressor_types'] += 1
-                elif sec_name == 'gearData':
-                    if target_cat == 'helmet_attachment':
-                        item_obj['subCategory'] = classify_helmet_attachment_type(item_obj)
-                        stats_summary['helmet_types'] += 1
-
-                item_obj['category'] = target_cat
-
-                if target_cat not in result_data[sec_name]:
-                    result_data[sec_name][target_cat] = []
-                result_data[sec_name][target_cat].append(item_obj)
-
-        if sec_name == 'attachmentData':
-            result_data[sec_name] = {k: v for k, v in result_data[sec_name].items() if len(v) > 0}
-            result_data[sec_name] = dict(sorted(result_data[sec_name].items()))
-
-    # 10. Enrich magazine and weapon compatible calibers
-    enrich_magazine_calibers(result_data['weaponsData'], result_data['attachmentData'])
-
-    # Save updated translation cache
-    save_google_translation_cache(google_cache)
-
-    print("-" * 70)
-    print("[*] 데이터 생성 및 처리 통계:")
-    print(f"    - 기존 설명 보존:               {stats_summary['existing']}개")
-    print(f"    - 구글 번역(캐시 및 신규 번역):  {stats_summary['google_translate']}개")
-    print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
-    print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
-    print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
-    print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
-    print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
-    print(f"    - 마운트 하위 분류(mountType) 연동: {stats_summary['mount_types']}개")
-    print(f"    - 기계식 조준기 분류(sightType) 연동: {stats_summary['ironsight_types']}개")
-    print(f"    - 권총 손잡이 분류(gripPlatform) 연동: {stats_summary['pistolgrip_types']}개")
-    print(f"    - 도트/홀로그램 분류(dotType) 연동:   {stats_summary['dotsight_types']}개")
-    print(f"    - 전방 손잡이 분류(foregripType) 연동: {stats_summary['foregrip_types']}개")
-    print(f"    - 리시버 분류(receiverType) 연동:     {stats_summary['receiver_types']}개")
-    print(f"    - 개머리판 분류(stockType) 연동:      {stats_summary['stock_types']}개")
-    print(f"    - 소염기/머즐 분류(muzzleType) 연동:  {stats_summary['muzzle_types']}개")
-    print(f"    - 소음기 분류(suppressorType) 연동:   {stats_summary['suppressor_types']}개")
-    print(f"    - 헬멧 부착물 분류(helmetPartType) 연동: {stats_summary['helmet_types']}개")
-    print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
-    print("-" * 70)
-
-    return result_data['weaponsData'], result_data['gearData'], result_data['attachmentData']
+    return [1]
 
 def normalize_ammo_caliber(raw_str):
-    """Normalizes an ammo/caliber string from C++ config (caliberName, bulletType, chamberableFrom) into standard name"""
     if not raw_str:
         return None
     raw = str(raw_str).lower().replace(' ', '').replace('_', '').replace('-', '')
     raw_lower = str(raw_str).lower()
-    
-    # 1. .50 AE vs .50 BMG
+
     if '50ae' in raw or 'actionexpress' in raw:
         return '.50 AE'
     if '50bmg' in raw or '12.7x99' in raw or '12.7x108' in raw or (('50cal' in raw or '.50' in raw_lower) and 'bmg' in raw_lower):
         return '.50 BMG'
-    
-    # 2. Shotgun 12ga
     if '12ga' in raw or '12gauge' in raw or '12x70' in raw or '12/70' in raw:
         return '12 Gauge'
-    
-    # 3. Specific Calibers from C++ config
     if '127x55' in raw or '12.7x55' in raw_lower or 'sts130' in raw or 'ash12' in raw:
         return '12.7x55mm'
     if '300blk' in raw or '300aac' in raw or '300blackout' in raw or '300whisper' in raw or '300vmax' in raw or '300bcp' in raw:
@@ -1119,31 +1130,22 @@ def normalize_ammo_caliber(raw_str):
         return '.22 LR'
     if '40mm' in raw or 'grenade' in raw:
         return '40mm'
-    
+
     return None
 
 def extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props):
-    """
-    Pure C++ driven primary caliber resolution:
-    1. Reads C++ `caliberName` property from inherited class chain.
-    2. Reads C++ `bulletType` property from inherited class chain.
-    3. Analyzes C++ `chamberableFrom[]` array.
-    """
-    # 1. C++ caliberName
     c_name = props.get('caliberName')
     if c_name:
         cal = normalize_ammo_caliber(c_name)
         if cal:
             return [cal]
-            
-    # 2. C++ bulletType
+
     b_type = props.get('bulletType')
     if b_type:
         cal = normalize_ammo_caliber(b_type)
         if cal:
             return [cal]
-            
-    # 3. C++ chamberableFrom (single caliber or first primary)
+
     chamber = props.get('chamberableFrom') or item_obj.get('chamberableFrom', [])
     if chamber:
         cals = []
@@ -1155,11 +1157,10 @@ def extract_weapon_primary_caliber_from_cpp(item_id, item_obj, props):
             return cals
         elif len(cals) > 1:
             return [cals[0]]
-            
+
     return []
 
 def extract_weapon_velocity_multiplier(props):
-    """Extracts initSpeedMultiplier from C++ weapon properties"""
     mult = props.get('initSpeedMultiplier', 1.0)
     try:
         mult = float(mult)
@@ -1168,10 +1169,7 @@ def extract_weapon_velocity_multiplier(props):
     return round(mult, 3)
 
 def enrich_magazine_calibers(weaponsData, attachmentData):
-    """Links weapons' chamberableFrom calibers to compatible magazines, populating calibers[]"""
     mag_to_calibers = {}
-
-    # 1. Cross-reference weapons to magazines
     for cat, weapons in weaponsData.items():
         for weapon in weapons:
             w_mags = weapon.get('magazines') or []
@@ -1185,13 +1183,11 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
                 for c in w_cals:
                     mag_to_calibers[m_id].add(c)
 
-    # 2. Enrich attachmentData['magazine'] items
     mag_items = attachmentData.get('magazine') or attachmentData.get('탄창') or []
     for mag in mag_items:
         m_id = mag.get('id', '')
         cals_set = mag_to_calibers.get(m_id, set())
 
-        # Fallback heuristics for standalone/custom magazines
         if not cals_set:
             id_lower = m_id.lower()
             name_lower = str(mag.get('name', '')).lower()
@@ -1208,12 +1204,384 @@ def enrich_magazine_calibers(weaponsData, attachmentData):
                 if single_cal:
                     cals_set = {single_cal}
 
-        # Sort calibers deterministically
         if cals_set:
             mag['calibers'] = sorted(list(cals_set))
 
+# ---------------------------------------------------------------------------
+# DATASET GENERATION PIPELINE
+# ---------------------------------------------------------------------------
+def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MODELS_DIR, metadata_js_path=DEFAULT_METADATA_JS_PATH):
+    print("=" * 70)
+    print("  SMPZ 모드팩: data.js 독립 클린 빌더")
+    print("  (C++ scope=2 기준 단독 빌드 + metadata.js 자동 병합)")
+    print("=" * 70)
+
+    # 1. Load Stringtables, Assets, Models, Metadata, and Translation Cache
+    str_table = load_stringtables(smpz_dir)
+    file_map = load_asset_files(assets_dir)
+    model_map = load_model_files(models_dir)
+    metadata = load_metadata(metadata_js_path)
+    google_cache = load_google_translation_cache()
+
+    print(f"[*] 로컬라이제이션 스트링테이블 {len(str_table)}개 항목 로드 완료.")
+    print(f"[*] 에셋 이미지 인덱싱 완료 ({len(file_map)}개 파일): {assets_dir}")
+    print(f"[*] 3D 모델 인덱싱 완료 ({len(model_map)}개 키): {models_dir}")
+    print(f"[*] 메타데이터 항목 {len(metadata)}개 로드 완료: {metadata_js_path}")
+    print(f"[*] 캐시된 구글 번역 {len(google_cache)}개 로드 완료.")
+
+    # 2. Parse C++ Classes across SMPZ packages
+    target_dirs = ['SMPZ_Weapons', 'SMPZ_More_Weapons', 'SMPZ_More_Attachment', 'SMPZ_Gears']
+    all_classes = {}
+    for td in target_dirs:
+        p = os.path.join(smpz_dir, td)
+        cpp_files = glob.glob(os.path.join(p, '**', '*.cpp'), recursive=True)
+        print(f"[*] {td} 파싱 중 ({len(cpp_files)}개 cpp 파일)...")
+        for cf in cpp_files:
+            cls_map = parse_cpp_file(cf)
+            for cname, cinfo in cls_map.items():
+                if cname not in all_classes:
+                    all_classes[cname] = cinfo
+                    all_classes[cname]['props'] = extract_properties(cinfo['body'])
+                else:
+                    new_props = extract_properties(cinfo['body'])
+                    all_classes[cname]['props'].update(new_props)
+                    if cinfo.get('parent') and not all_classes[cname].get('parent'):
+                        all_classes[cname]['parent'] = cinfo['parent']
+                    if len(cinfo['body']) > len(all_classes[cname].get('body', '')):
+                        all_classes[cname]['body'] = cinfo['body']
+                        all_classes[cname]['source_file'] = cinfo['source_file']
+
+    print(f"[*] 파싱된 고유 클래스 총 {len(all_classes)}개")
+
+    stats_summary = {
+        'existing': 0,
+        'google_translate': 0,
+        'empty': 0,
+        'cargo_items': 0,
+        'models_linked': 0,
+        'slots_linked': 0,
+        'protection_items': 0,
+        'optics_magnification': 0,
+        'mount_types': 0,
+        'ironsight_types': 0,
+        'pistolgrip_types': 0,
+        'dotsight_types': 0,
+        'helmet_types': 0,
+        'foregrip_types': 0,
+        'receiver_types': 0,
+        'stock_types': 0,
+        'muzzle_types': 0,
+        'suppressor_types': 0
+    }
+
+    def resolve_desc(item_obj, props):
+        if item_obj.get('description'):
+            stats_summary['existing'] += 1
+            return
+        raw_desc_key = str(props.get('descriptionShort', '')).lstrip('$')
+        raw_desc = str_table.get(raw_desc_key, raw_desc_key)
+        if not raw_desc or raw_desc.startswith('$STR_') or raw_desc == 'None' or not raw_desc.strip():
+            stats_summary['empty'] += 1
+            return
+        clean_raw = raw_desc.replace('\r\n', ' ').replace('\n', ' ').strip()
+        if clean_raw in google_cache:
+            item_obj['description'] = google_cache[clean_raw]
+            stats_summary['google_translate'] += 1
+        else:
+            tr = google_translate(clean_raw)
+            google_cache[clean_raw] = tr
+            item_obj['description'] = tr
+            stats_summary['google_translate'] += 1
+
+    # 3. BUILD WEAPONS
+    weapons_data = {}
+    weapon_scope2 = [c for c in all_classes if c.startswith('SMPZ_Weapon_') and get_scope(c, all_classes) == 2]
+    for cname in sorted(weapon_scope2):
+        if is_excluded_weapon_variant(cname, all_classes):
+            continue
+        props = get_inherited_props(cname, all_classes)
+        src_file = all_classes[cname].get('source_file', '')
+        cat = classify_weapon(cname, props, src_file)
+        if not cat:
+            continue
+
+        disp_key = str(props.get('displayName', '')).lstrip('$')
+        disp_name = str_table.get(disp_key, props.get('displayName', cname))
+
+        item_obj = {
+            'id': cname,
+            'name': disp_name,
+            'category': cat,
+            'description': '',
+        }
+
+        w_stats = extract_weapon_stats(cname, props, all_classes)
+        w_val = props.get('weight')
+        if w_val is not None:
+            try:
+                w_stats['weight'] = int(float(w_val))
+            except Exception:
+                pass
+        if w_stats:
+            item_obj['stats'] = w_stats
+
+        cs = props.get('itemsCargoSize') or props.get('itemCargoSize')
+        if cs and len(cs) >= 2:
+            try:
+                item_obj['cargoSize'] = [int(cs[0]), int(cs[1])]
+                item_obj['cargoSlots'] = int(cs[0]) * int(cs[1])
+                stats_summary['cargo_items'] += 1
+            except Exception: pass
+
+        isz = props.get('itemSize')
+        if isz and len(isz) >= 2:
+            try:
+                item_obj['itemSize'] = [int(isz[0]), int(isz[1])]
+                item_obj['itemSlots'] = int(isz[0]) * int(isz[1])
+            except Exception: pass
+
+        for prop_key, obj_key in [('inventorySlot', 'inventorySlots'), ('attachments', 'attachmentSlots'),
+                                  ('magazines', 'magazines'), ('chamberableFrom', 'chamberableFrom')]:
+            v = props.get(prop_key)
+            if v:
+                item_obj[obj_key] = v
+                if prop_key == 'inventorySlot': stats_summary['slots_linked'] += 1
+
+        w_cals = extract_weapon_primary_caliber_from_cpp(cname, item_obj, props)
+        if w_cals: item_obj['calibers'] = w_cals
+
+        modes_arr = props.get('modes')
+        if modes_arr and isinstance(modes_arr, list):
+            item_obj['modes'] = modes_arr
+
+        m_img = file_map.get(cname.lower())
+        if m_img:
+            item_obj['image'] = m_img
+            item_obj['images'] = [m_img]
+        m_mdl = match_model_for_item(cname, disp_name, model_map, sec_type='weapon')
+        if m_mdl:
+            item_obj['model'] = m_mdl
+            stats_summary['models_linked'] += 1
+
+        _merge_manual_fields(item_obj, metadata)
+        resolve_desc(item_obj, props)
+
+        if 'stats' in item_obj:
+            item_obj['stats'] = clean_item_stats(item_obj['stats'])
+
+        weapons_data.setdefault(cat, []).append(item_obj)
+
+    # 4. BUILD GEARS
+    gear_data = {}
+    gear_scope2 = [c for c in all_classes if c.startswith('SMPZ_') and 'SMPZ_Gears' in all_classes[c].get('source_file', '') and get_scope(c, all_classes) == 2]
+    by_parent = {}
+    for c in gear_scope2:
+        p = all_classes[c].get('parent')
+        by_parent.setdefault(p, []).append(c)
+
+    for p, kids in by_parent.items():
+        chosen_id = kids[0]
+        cat = classify_gear(chosen_id)
+        if not cat:
+            continue
+
+        props = get_inherited_props(chosen_id, all_classes)
+        disp_key = str(props.get('displayName', '')).lstrip('$')
+        disp_name = str_table.get(disp_key, props.get('displayName', chosen_id))
+
+        item_obj = {
+            'id': chosen_id,
+            'name': disp_name,
+            'category': cat,
+            'description': '',
+        }
+
+        g_stats = extract_gear_stats(chosen_id, props, all_classes, cat)
+        if g_stats:
+            item_obj['stats'] = g_stats
+
+        cs = props.get('itemsCargoSize') or props.get('itemCargoSize')
+        if cs and len(cs) >= 2:
+            try:
+                item_obj['cargoSize'] = [int(cs[0]), int(cs[1])]
+                item_obj['cargoSlots'] = int(cs[0]) * int(cs[1])
+                stats_summary['cargo_items'] += 1
+            except Exception: pass
+
+        isz = props.get('itemSize')
+        if isz and len(isz) >= 2:
+            try:
+                item_obj['itemSize'] = [int(isz[0]), int(isz[1])]
+                item_obj['itemSlots'] = int(isz[0]) * int(isz[1])
+            except Exception: pass
+
+        for prop_key, obj_key in [('inventorySlot', 'inventorySlots'), ('attachments', 'attachmentSlots')]:
+            v = props.get(prop_key)
+            if v:
+                item_obj[obj_key] = v
+                if prop_key == 'inventorySlot': stats_summary['slots_linked'] += 1
+
+        prot_areas = props.get('ProtectionAreas')
+        if prot_areas and isinstance(prot_areas, list):
+            item_obj['protectionAreas'] = prot_areas
+            stats_summary['protection_items'] += 1
+
+        if cat == 'helmet_attachment':
+            item_obj['subCategory'] = classify_helmet_attachment_type(item_obj)
+            stats_summary['helmet_types'] += 1
+
+        m_img = file_map.get(chosen_id.lower())
+        if m_img:
+            item_obj['image'] = m_img
+            item_obj['images'] = [m_img]
+        m_mdl = match_model_for_item(chosen_id, disp_name, model_map, sec_type='gear')
+        if m_mdl:
+            item_obj['model'] = m_mdl
+            stats_summary['models_linked'] += 1
+
+        _merge_manual_fields(item_obj, metadata)
+        resolve_desc(item_obj, props)
+
+        if 'stats' in item_obj:
+            item_obj['stats'] = clean_item_stats(item_obj['stats'])
+
+        gear_data.setdefault(cat, []).append(item_obj)
+
+    # 5. BUILD ATTACHMENTS
+    attachment_data = {}
+    for cname in sorted(all_classes.keys()):
+        if not any(cname.startswith(pfx) for pfx in ATTACHMENT_PREFIXES):
+            continue
+        if get_scope(cname, all_classes) != 2:
+            continue
+        if cname.startswith('Slot_') or cname in ('Inventory_Base', 'ItemSuppressor', 'Clothing_Base', 'Weapon_Base', 'Rifle_Base'):
+            continue
+        if is_preset_magazine(cname, all_classes):
+            continue
+        props = get_inherited_props(cname, all_classes)
+        inv = props.get('inventorySlot')
+        if not inv and not cname.startswith('SMPZ_Mag_'):
+            continue
+
+        src_file = all_classes[cname].get('source_file', '')
+        mag_val = extract_optic_magnification(cname, all_classes)
+        cat = classify_attachment(cname, props, src_file, mag_val)
+        if not cat:
+            continue
+
+        disp_key = str(props.get('displayName', '')).lstrip('$')
+        disp_name = str_table.get(disp_key, props.get('displayName', cname))
+
+        item_obj = {
+            'id': cname,
+            'name': disp_name,
+            'category': cat,
+            'description': '',
+        }
+
+        a_stats = extract_attachment_stats(cname, props, all_classes, cat, mag_val)
+        if a_stats:
+            item_obj['stats'] = a_stats
+            if 'magnification' in a_stats:
+                stats_summary['optics_magnification'] += 1
+
+        cs = props.get('itemsCargoSize') or props.get('itemCargoSize')
+        if cs and len(cs) >= 2:
+            try:
+                item_obj['cargoSize'] = [int(cs[0]), int(cs[1])]
+                item_obj['cargoSlots'] = int(cs[0]) * int(cs[1])
+                stats_summary['cargo_items'] += 1
+            except Exception: pass
+
+        isz = props.get('itemSize')
+        if isz and len(isz) >= 2:
+            try:
+                item_obj['itemSize'] = [int(isz[0]), int(isz[1])]
+                item_obj['itemSlots'] = int(isz[0]) * int(isz[1])
+            except Exception: pass
+
+        for prop_key, obj_key in [('inventorySlot', 'inventorySlots'), ('attachments', 'attachmentSlots'),
+                                  ('magazines', 'magazines'), ('chamberableFrom', 'chamberableFrom')]:
+            v = props.get(prop_key)
+            if v:
+                item_obj[obj_key] = v
+                if prop_key == 'inventorySlot': stats_summary['slots_linked'] += 1
+
+        if cat == 'mount':
+            item_obj['subCategory'] = classify_mount_type(item_obj)
+            stats_summary['mount_types'] += 1
+        elif cat == 'iron_sight':
+            item_obj['subCategory'] = classify_ironsight_type(item_obj)
+            stats_summary['ironsight_types'] += 1
+        elif cat == 'pistol_grip':
+            item_obj['subCategory'] = classify_pistolgrip_type(item_obj)
+            stats_summary['pistolgrip_types'] += 1
+        elif cat == 'reflex_sight':
+            item_obj['subCategory'] = classify_dotsight_type(item_obj)
+            stats_summary['dotsight_types'] += 1
+        elif cat == 'foregrip':
+            item_obj['subCategory'] = classify_foregrip_type(item_obj, all_classes)
+            stats_summary['foregrip_types'] += 1
+        elif cat == 'receiver':
+            item_obj['subCategory'] = classify_receiver_type(item_obj)
+            stats_summary['receiver_types'] += 1
+        elif cat == 'buttstock':
+            item_obj['subCategory'] = classify_stock_type(item_obj)
+            stats_summary['stock_types'] += 1
+        elif cat == 'muzzle_device':
+            item_obj['subCategory'] = classify_muzzle_type(item_obj)
+            stats_summary['muzzle_types'] += 1
+        elif cat == 'suppressor':
+            item_obj['subCategory'] = classify_suppressor_type(item_obj)
+            stats_summary['suppressor_types'] += 1
+
+        m_img = file_map.get(cname.lower())
+        if m_img:
+            item_obj['image'] = m_img
+            item_obj['images'] = [m_img]
+        m_mdl = match_model_for_item(cname, disp_name, model_map, sec_type='attachment')
+        if m_mdl:
+            item_obj['model'] = m_mdl
+            stats_summary['models_linked'] += 1
+
+        _merge_manual_fields(item_obj, metadata)
+        resolve_desc(item_obj, props)
+
+        if 'stats' in item_obj:
+            item_obj['stats'] = clean_item_stats(item_obj['stats'])
+
+        attachment_data.setdefault(cat, []).append(item_obj)
+
+    # 6. ENRICH MAGAZINES
+    enrich_magazine_calibers(weapons_data, attachment_data)
+
+    save_google_translation_cache(google_cache)
+
+    print("-" * 70)
+    print("[*] 데이터 생성 및 처리 통계:")
+    print(f"    - 기존/메타데이터 설명 보존:     {stats_summary['existing']}개")
+    print(f"    - 구글 번역(캐시 및 신규 번역):  {stats_summary['google_translate']}개")
+    print(f"    - 설명 없음 / 비어있음:          {stats_summary['empty']}개")
+    print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
+    print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
+    print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
+    print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
+    print(f"    - 마운트 하위 분류(mountType):   {stats_summary['mount_types']}개")
+    print(f"    - 기계식 조준기 분류(sightType): {stats_summary['ironsight_types']}개")
+    print(f"    - 권총 손잡이 분류(gripPlatform): {stats_summary['pistolgrip_types']}개")
+    print(f"    - 도트/홀로그램 분류(dotType):   {stats_summary['dotsight_types']}개")
+    print(f"    - 전방 손잡이 분류(foregripType): {stats_summary['foregrip_types']}개")
+    print(f"    - 리시버 분류(receiverType):     {stats_summary['receiver_types']}개")
+    print(f"    - 개머리판 분류(stockType):      {stats_summary['stock_types']}개")
+    print(f"    - 소염기/머즐 분류(muzzleType):  {stats_summary['muzzle_types']}개")
+    print(f"    - 소음기 분류(suppressorType):   {stats_summary['suppressor_types']}개")
+    print(f"    - 헬멧 부착물 분류:              {stats_summary['helmet_types']}개")
+    print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
+    print("-" * 70)
+
+    return weapons_data, gear_data, attachment_data
+
 def save_data_js(weaponsData, gearData, attachmentData, output_file=DEFAULT_DATA_JS_PATH):
-    """Outputs data.js with formatting"""
     output_content = f"""// 무기 데이터 (자동 동기화 빌드)
 // 이제 데이터는 이 파일에 저장됩니다
 const weaponsData = {json.dumps(weaponsData, indent=4, ensure_ascii=False)};
@@ -1228,16 +1596,14 @@ const attachmentData = {json.dumps(attachmentData, indent=4, ensure_ascii=False)
         f.write(output_content)
     print(f"\n[✓] data.js 파일 생성 완료: {output_file}")
 
-# ---------------------------------------------------------------------------
-# MAIN CLI
-# ---------------------------------------------------------------------------
 def main():
-    parser = argparse.ArgumentParser(description="SMPZ 모드팩 data.js 자동 생성 도구")
+    parser = argparse.ArgumentParser(description="SMPZ 모드팩 data.js 자동 생성 도구 (독립 클린 빌더)")
     parser.add_argument('--smpz-dir', help="SMPZ 모드팩 루트 디렉토리 경로 (직접 지정 시 저장됨)")
     parser.add_argument('--select-dir', action='store_true', help="GUI 폴더 선택 창을 띄워 SMPZ 모드팩 경로를 새로 지정합니다")
     parser.add_argument('--no-gui', action='store_true', help="GUI 다이얼로그를 띄우지 않고 콘솔만 사용합니다")
     parser.add_argument('--assets-dir', default=DEFAULT_ASSETS_DIR, help="assets 디렉토리 경로")
     parser.add_argument('--models-dir', default=DEFAULT_MODELS_DIR, help="assets/models 디렉토리 경로")
+    parser.add_argument('--metadata', default=DEFAULT_METADATA_JS_PATH, help="수동 큐레이션 메타데이터 파일 (metadata.js)")
     parser.add_argument('--output', default=DEFAULT_DATA_JS_PATH, help="출력할 data.js 파일 경로")
     args = parser.parse_args()
 
@@ -1255,8 +1621,7 @@ def main():
         smpz_dir=smpz_dir,
         assets_dir=args.assets_dir,
         models_dir=args.models_dir,
-        data_js_path=args.output,
-        backup_js_path=DEFAULT_BACKUP_JS_PATH
+        metadata_js_path=args.metadata
     )
 
     save_data_js(weapons, gear, attachments, output_file=args.output)
@@ -1264,4 +1629,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

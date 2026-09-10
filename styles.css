@@ -800,11 +800,6 @@ body {
     color: #999999;
 }
 
-.core-spec-tag.spec-rpm {
-    background: #1d181c;
-    border-color: #332630;
-    color: #a8829d;
-}
 
 .core-spec-tag.spec-moa {
     background: #171c1b;

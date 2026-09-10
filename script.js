@@ -67,6 +67,25 @@ function getCategoryLabel(categoryKey) {
     return CATEGORY_LABELS[categoryKey] || categoryKey;
 }
 
+function formatSize(size) {
+    if (!size) return '';
+    if (Array.isArray(size)) return size.join('x');
+    return String(size);
+}
+
+function formatMagnification(mag) {
+    if (!mag && mag !== 0) return '';
+    if (typeof mag === 'number') return `${mag}x`;
+    if (Array.isArray(mag)) {
+        if (mag.length === 0) return '';
+        if (mag.length === 1) return `${mag[0]}x`;
+        return mag[0] === mag[1] ? `${mag[0]}x` : `${mag[0]}-${mag[1]}x`;
+    }
+    const s = String(mag).trim();
+    if (!s) return '';
+    return s.endsWith('x') ? s : `${s}x`;
+}
+
 // 슬롯명 한국어 매핑 사전
 const slotNameMap = {
     '12gaMuzzle': '소음기',
@@ -1115,6 +1134,10 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
                         displayVal = `${raw}발`;
                     } else if (key === 'weight') {
                         displayVal = `${raw}g`;
+                    } else if (key === 'recoil' || key === 'sway') {
+                        displayVal = typeof raw === 'number' ? `${raw > 0 ? '+' : ''}${raw}%` : String(raw);
+                    } else if (key === 'magnification') {
+                        displayVal = formatMagnification(raw);
                     } else {
                         displayVal = String(raw);
                     }
@@ -1429,12 +1452,6 @@ const DataParsers = {
         const mult = item?.stats?.velocityMultiplier !== undefined ? item.stats.velocityMultiplier : 1.0;
         return baseSpeed > 0 ? Math.round(baseSpeed * mult) : null;
     },
-    rpm: (item) => {
-        const val = item?.stats?.rpm;
-        if (!val) return null;
-        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
-        return isNaN(num) ? null : num;
-    },
     ergonomics: (item) => {
         const val = item?.stats?.ergonomics;
         if (!val) return null;
@@ -1467,7 +1484,11 @@ const DataParsers = {
     },
     magnification: (item) => {
         const mag = item?.stats?.magnification;
-        if (!mag) return null;
+        if (!mag && mag !== 0) return null;
+        if (typeof mag === 'number') return mag;
+        if (Array.isArray(mag)) {
+            return mag.length > 0 ? Math.max(...mag) : null;
+        }
         const m = /(\d+(?:\.\d+)?)/g;
         const matches = [...String(mag).matchAll(m)].map(x => parseFloat(x[0]));
         return matches.length > 0 ? Math.max(...matches) : null;
@@ -1550,7 +1571,7 @@ const SORT_METRICS = {
         group: 'attachment',
         parser: DataParsers.recoilReduction,
         defaultOrder: 'asc',
-        badge: (item) => item?.stats?.recoil ? `반동 ${item.stats.recoil}` : (isAttachmentItem(item) ? '반동 0%' : null)
+        badge: (item) => item?.stats?.recoil !== undefined ? `반동 ${typeof item.stats.recoil === 'number' ? `${item.stats.recoil > 0 ? '+' : ''}${item.stats.recoil}%` : item.stats.recoil}` : (isAttachmentItem(item) ? '반동 0%' : null)
     },
     sway_reduction: {
         id: 'sway_reduction',
@@ -1558,7 +1579,7 @@ const SORT_METRICS = {
         group: 'attachment',
         parser: DataParsers.swayReduction,
         defaultOrder: 'asc',
-        badge: (item) => item?.stats?.sway ? `흔들림 ${item.stats.sway}` : (isAttachmentItem(item) ? '흔들림 0%' : null)
+        badge: (item) => item?.stats?.sway !== undefined ? `흔들림 ${typeof item.stats.sway === 'number' ? `${item.stats.sway > 0 ? '+' : ''}${item.stats.sway}%` : item.stats.sway}` : (isAttachmentItem(item) ? '흔들림 0%' : null)
     },
     light_distance: {
         id: 'light_distance',
@@ -1574,7 +1595,7 @@ const SORT_METRICS = {
         group: 'attachment',
         parser: DataParsers.magnification,
         defaultOrder: 'desc',
-        badge: (item) => item?.stats?.magnification ? `배율 ${item.stats.magnification}` : null
+        badge: (item) => item?.stats?.magnification ? `배율 ${formatMagnification(item.stats.magnification)}` : null
     },
 
     // 방어구 성능
@@ -1604,14 +1625,6 @@ const SORT_METRICS = {
     },
 
     // 총기 성능
-    rpm: {
-        id: 'rpm',
-        label: 'RPM',
-        group: 'weapon',
-        parser: DataParsers.rpm,
-        defaultOrder: 'desc',
-        badge: (item, val) => val ? `${val} RPM` : null
-    },
     moa: {
         id: 'moa',
         label: 'MOA',
@@ -1668,7 +1681,7 @@ function getItemCaliber(item) {
 
 // 광학 조준경 배율 추출 (data.js의 stats.magnification 직결)
 function getOpticMagnification(item) {
-    return item?.stats?.magnification || null;
+    return formatMagnification(item?.stats?.magnification);
 }
 
 // 대표 스펙 추출
@@ -1718,7 +1731,7 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
             specs.push({ metricKey: 'shock_protection', label: '쇼크', text: `쇼크 ${sProt}%`, tagClass: 'spec-shock' });
         }
         if (cargo && cargo > 0) {
-            const cargoText = item.cargoSize ? `수납 ${item.cargoSize} (${cargo}칸)` : `수납 ${cargo}칸`;
+            const cargoText = item.cargoSize ? `수납 ${formatSize(item.cargoSize)} (${cargo}칸)` : `수납 ${cargo}칸`;
             specs.push({ metricKey: 'cargo_slots', label: '수납', text: cargoText, tagClass: 'spec-cargo' });
         }
     }
@@ -1738,11 +1751,13 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
     const swy = item.stats?.sway;
     const cap = item.stats?.capacity;
 
-    if (!isWeapon && rec && (String(rec).includes('%') || String(rec).startsWith('-') || String(rec).startsWith('+'))) {
-        specs.push({ metricKey: 'recoil_reduction', label: '반동', text: `반동 ${rec}`, tagClass: 'spec-recoil' });
+    if (!isWeapon && rec !== undefined && rec !== null && rec !== 0) {
+        const recText = typeof rec === 'number' ? `${rec > 0 ? '+' : ''}${rec}%` : String(rec);
+        specs.push({ metricKey: 'recoil_reduction', label: '반동', text: `반동 ${recText}`, tagClass: 'spec-recoil' });
     }
-    if (!isWeapon && swy && (String(swy).includes('%') || String(swy).startsWith('-') || String(swy).startsWith('+'))) {
-        specs.push({ metricKey: 'sway_reduction', label: '흔들림', text: `흔들림 ${swy}`, tagClass: 'spec-sway' });
+    if (!isWeapon && swy !== undefined && swy !== null && swy !== 0) {
+        const swyText = typeof swy === 'number' ? `${swy > 0 ? '+' : ''}${swy}%` : String(swy);
+        specs.push({ metricKey: 'sway_reduction', label: '흔들림', text: `흔들림 ${swyText}`, tagClass: 'spec-sway' });
     }
     if (cap && !specs.some(s => s.metricKey === 'capacity')) {
         const capText = `${cap}발`;
@@ -1758,9 +1773,7 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
         const alreadyHasMetric = specs.some(s => s.metricKey === activeMetricKey);
         if (!alreadyHasMetric) {
             if (isWeapon) {
-                if (activeMetricKey === 'rpm' && item.stats?.rpm) {
-                    specs.push({ metricKey: 'rpm', label: 'RPM', text: `${item.stats.rpm} RPM`, tagClass: 'spec-rpm' });
-                } else if (activeMetricKey === 'moa' && item.stats?.accuracy) {
+                if (activeMetricKey === 'moa' && item.stats?.accuracy) {
                     specs.push({ metricKey: 'moa', label: 'MOA', text: `${item.stats.accuracy} MOA`, tagClass: 'spec-moa' });
                 } else if (activeMetricKey === 'velocity') {
                     const vel = DataParsers.velocity(item);
@@ -1778,7 +1791,7 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
             if (activeMetricKey === 'weight' && item.stats?.weight) {
                 specs.push({ metricKey: 'weight', label: '무게', text: `${item.stats.weight}g`, tagClass: 'spec-weight' });
             } else if (activeMetricKey === 'item_slots' && (item.itemSlots !== undefined && item.itemSlots !== null)) {
-                const slotText = item.itemSize ? `${item.itemSize} (${item.itemSlots}칸)` : `${item.itemSlots}칸`;
+                const slotText = item.itemSize ? `${formatSize(item.itemSize)} (${item.itemSlots}칸)` : `${item.itemSlots}칸`;
                 specs.push({ metricKey: 'item_slots', label: '크기', text: slotText, tagClass: 'spec-size' });
             } else if (activeMetricKey === 'hitpoints') {
                 const hp = DataParsers.hitpoints(item);
@@ -1788,7 +1801,7 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
             } else if (activeMetricKey === 'cargo_slots') {
                 const cargo = DataParsers.cargoSlots(item);
                 if (cargo !== null && cargo > 0) {
-                    const cargoText = item.cargoSize ? `수납 ${item.cargoSize} (${cargo}칸)` : `수납 ${cargo}칸`;
+                    const cargoText = item.cargoSize ? `수납 ${formatSize(item.cargoSize)} (${cargo}칸)` : `수납 ${cargo}칸`;
                     specs.push({ metricKey: 'cargo_slots', label: '수납', text: cargoText, tagClass: 'spec-cargo' });
                 }
             }
@@ -1969,9 +1982,6 @@ function getCategoryDefaultSort(panelType, categoryKey) {
     if (['backpack', 'chest_rig', '백팩', '체스트 리그'].includes(categoryKey)) {
         return { metric: 'cargo_slots', order: 'desc' };
     }
-    if (panelType === 'weapon' && categoryKey !== 'all') {
-        return { metric: 'rpm', order: 'desc' };
-    }
     return { metric: 'name', order: 'asc' };
 }
 
@@ -2008,7 +2018,7 @@ function updateSortOptionsDropdown(panelType, categoryKey, preferredMetric, pref
         metricSelect.appendChild(optgroup);
     });
 
-    // 레거시 키 호환 지원 (예: 'rpm_desc' -> metric='rpm', order='desc')
+    // 레거시 키 호환 지원 (예: 'name_desc' -> metric='name', order='desc')
     let reqMetric = preferredMetric;
     let reqOrder = preferredOrder;
     if (typeof reqMetric === 'string' && reqMetric.includes('_') && !SORT_METRICS[reqMetric]) {
@@ -3227,7 +3237,7 @@ function appendItemSpecRows(statsList, item) {
 
         const value = document.createElement('span');
         value.className = 'weapon-stat-value';
-        const sizeStr = item.itemSize || '';
+        const sizeStr = item.itemSize ? formatSize(item.itemSize) : '';
         const slotStr = (item.itemSlots !== undefined && item.itemSlots !== null) ? `${item.itemSlots}칸` : '';
         value.textContent = sizeStr ? (slotStr ? `${sizeStr} (${slotStr})` : sizeStr) : slotStr;
 
@@ -3247,7 +3257,7 @@ function appendItemSpecRows(statsList, item) {
 
         const value = document.createElement('span');
         value.className = 'weapon-stat-value';
-        const cargoSizeStr = item.cargoSize || '';
+        const cargoSizeStr = item.cargoSize ? formatSize(item.cargoSize) : '';
         const cargoSlotStr = (item.cargoSlots !== undefined && item.cargoSlots !== null) ? `${item.cargoSlots}칸` : '';
         value.textContent = cargoSizeStr ? (cargoSlotStr ? `${cargoSizeStr} (${cargoSlotStr})` : cargoSizeStr) : cargoSlotStr;
 
@@ -3803,8 +3813,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             { key: 'ergonomics',  label: '인체공학', max: 100,  invert: false },
             // DayZ 소스코드 기준: 일반 무기는 maxMOA = 25.0
             { key: 'accuracy',    label: '명중률',   max: 25.0, invert: true, isMoa: true },
-            { key: 'velocity',    label: '탄속',     max: 1200, invert: false },
-            { key: 'rpm',         label: 'RPM',      max: 1200, invert: false }
+            { key: 'velocity',    label: '탄속',     max: 1200, invert: false }
         ];
 
         statsDefs.forEach(stat => {
@@ -3943,7 +3952,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
                         better = numericCompare < numericValue;  // 비교값이 기준값보다 낮으면 좋음
                         worse = numericCompare > numericValue;   // 비교값이 기준값보다 높으면 나쁨
                     } else {
-                        // 나머지(인체공학, 탄속, RPM)는 값이 높을수록 좋음
+                        // 나머지(인체공학, 탄속)는 값이 높을수록 좋음
                         better = numericCompare > numericValue;  // 비교값이 기준값보다 높으면 좋음
                         worse = numericCompare < numericValue;   // 비교값이 기준값보다 낮으면 나쁨
                     }
