@@ -87,7 +87,34 @@ const weaponsData = {
             "image": "assets/aa12gen2.png",
             "images": [
                 "assets/aa12gen2.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_M590A1",
@@ -559,7 +586,14 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
-            "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
+            "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
+            "deniedAttachmentsBySlot": {
+                "weaponMuzzleAK74": [
+                    "SMPZ_Attachments_AK_Hexagon_Waffle_545x39_Suppressor",
+                    "SMPZ_Attachments_AK_PBS4_545x39_Suppressor",
+                    "SMPZ_Attachments_Zenit_DTK545_Muzzle"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AK102",
@@ -622,7 +656,16 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
-            "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
+            "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
+            "deniedAttachmentsBySlot": {
+                "AKGasblock": [
+                    "SMPZ_Attachments_AK_Troy_Hndgrd_with_Gastube"
+                ],
+                "AKHandguard": [
+                    "SMPZ_Attachments_AK_UFM_Keymod_Hndgrd",
+                    "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AK103",
@@ -812,7 +855,16 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
-            "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
+            "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
+            "deniedAttachmentsBySlot": {
+                "AKGasblock": [
+                    "SMPZ_Attachments_AK_Troy_Hndgrd_with_Gastube"
+                ],
+                "AKHandguard": [
+                    "SMPZ_Attachments_AK_UFM_Keymod_Hndgrd",
+                    "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AK105",
@@ -898,7 +950,16 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
-            "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
+            "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
+            "deniedAttachmentsBySlot": {
+                "AKGasblock": [
+                    "SMPZ_Attachments_AK_Troy_Hndgrd_with_Gastube"
+                ],
+                "AKHandguard": [
+                    "SMPZ_Attachments_AK_UFM_Keymod_Hndgrd",
+                    "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AK12",
@@ -1664,7 +1725,12 @@ const weaponsData = {
             "image": "assets/akm.png",
             "images": [
                 "assets/akm.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "weaponMuzzleAK": [
+                    "SMPZ_Attachments_Zenit_DTK545_Muzzle"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AKMSN",
@@ -1762,7 +1828,12 @@ const weaponsData = {
             "image": "assets/akm.png",
             "images": [
                 "assets/akm.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "weaponMuzzleAK": [
+                    "SMPZ_Attachments_Zenit_DTK545_Muzzle"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AKS74U",
@@ -2010,7 +2081,12 @@ const weaponsData = {
                 "Burst",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "AKpistolgrip": [
+                    "SMPZ_Attachments_CQR47_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_AS1",
@@ -2564,7 +2640,115 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "conditionalAttachmentsBySlot": {
+                "magazine": [
+                    {
+                        "conditions": [
+                            {
+                                "type": "attachment",
+                                "slot": "G36Magwell",
+                                "operator": "isKindOf",
+                                "items": [
+                                    "SMPZ_Attachments_G36_STANAG_Magwell"
+                                ],
+                                "present": false
+                            }
+                        ],
+                        "mode": "replace",
+                        "allowed": [
+                            "SMPZ_Mag_G36_30Rnd"
+                        ],
+                        "denied": [
+                            "SMPZ_Mag_Beta_CMAG_300BLK_100Rnd",
+                            "SMPZ_Mag_Beta_CMAG_556_100Rnd",
+                            "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd",
+                            "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
+                            "SMPZ_Mag_DrumPMAG300_AP_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd",
+                            "SMPZ_Mag_DrumPMAG556_60Rnd",
+                            "SMPZ_Mag_HK_MR556_STANAG_556_30Rnd",
+                            "SMPZ_Mag_HK_Steel_STANAG_30Rnd",
+                            "SMPZ_Mag_L5AWM_556_30Rnd",
+                            "SMPZ_Mag_PM2_300_AP_30Rnd",
+                            "SMPZ_Mag_PM2_300_BCP_FMJ_30Rnd",
+                            "SMPZ_Mag_PM2_300_CBJ_30Rnd",
+                            "SMPZ_Mag_PM2_300_M62_Tracer_30Rnd",
+                            "SMPZ_Mag_PM2_300_VMAX_30Rnd",
+                            "SMPZ_Mag_PM2_300_Whisper_30Rnd",
+                            "SMPZ_Mag_PM2_30Rnd",
+                            "SMPZ_Mag_PMAG_40Rnd",
+                            "SMPZ_Mag_PMAG_556x45_W_30Rnd",
+                            "SMPZ_Mag_SCAR_L_30Rnd",
+                            "SMPZ_Mag_STANAG_100Rnd",
+                            "SMPZ_Mag_STANAG_20Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_100Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_30Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_60Rnd",
+                            "SMPZ_Mag_STANAG_30Rnd",
+                            "SMPZ_Mag_STANAG_60Rnd",
+                            "SMPZ_Mag_TROY_BattleMag_STANAG_30Rnd",
+                            "SMPZ_Mag_TROY_BattleMag_STANAG_M62_Tracer_30Rnd"
+                        ]
+                    },
+                    {
+                        "conditions": [
+                            {
+                                "type": "attachment",
+                                "slot": "G36Magwell",
+                                "operator": "isKindOf",
+                                "items": [
+                                    "SMPZ_Attachments_G36_STANAG_Magwell"
+                                ],
+                                "present": true
+                            }
+                        ],
+                        "mode": "replace",
+                        "allowed": [
+                            "SMPZ_Mag_Beta_CMAG_300BLK_100Rnd",
+                            "SMPZ_Mag_Beta_CMAG_556_100Rnd",
+                            "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd",
+                            "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
+                            "SMPZ_Mag_DrumPMAG300_AP_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd",
+                            "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd",
+                            "SMPZ_Mag_DrumPMAG556_60Rnd",
+                            "SMPZ_Mag_HK_MR556_STANAG_556_30Rnd",
+                            "SMPZ_Mag_HK_Steel_STANAG_30Rnd",
+                            "SMPZ_Mag_L5AWM_556_30Rnd",
+                            "SMPZ_Mag_PM2_300_AP_30Rnd",
+                            "SMPZ_Mag_PM2_300_BCP_FMJ_30Rnd",
+                            "SMPZ_Mag_PM2_300_CBJ_30Rnd",
+                            "SMPZ_Mag_PM2_300_M62_Tracer_30Rnd",
+                            "SMPZ_Mag_PM2_300_VMAX_30Rnd",
+                            "SMPZ_Mag_PM2_300_Whisper_30Rnd",
+                            "SMPZ_Mag_PM2_30Rnd",
+                            "SMPZ_Mag_PMAG_40Rnd",
+                            "SMPZ_Mag_PMAG_556x45_W_30Rnd",
+                            "SMPZ_Mag_SCAR_L_30Rnd",
+                            "SMPZ_Mag_STANAG_100Rnd",
+                            "SMPZ_Mag_STANAG_20Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_100Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_30Rnd",
+                            "SMPZ_Mag_STANAG_300BLK_60Rnd",
+                            "SMPZ_Mag_STANAG_30Rnd",
+                            "SMPZ_Mag_STANAG_60Rnd",
+                            "SMPZ_Mag_TROY_BattleMag_STANAG_30Rnd",
+                            "SMPZ_Mag_TROY_BattleMag_STANAG_M62_Tracer_30Rnd"
+                        ],
+                        "denied": [
+                            "SMPZ_Mag_G36_30Rnd"
+                        ]
+                    }
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_HK337",
@@ -2725,7 +2909,15 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedAttachmentsBySlot": {
+                "HK416Handguard": [
+                    "SMPZ_Attachments_HK416_CRUX_Hndgrd",
+                    "SMPZ_Attachments_HK416_Extended_Hndgrd",
+                    "SMPZ_Attachments_HK416_Midwest_13inch_Hndgrd",
+                    "SMPZ_Attachments_HK416_Troy_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_HK416A5",
@@ -2904,7 +3096,15 @@ const weaponsData = {
             "image": "assets/hk416a5.png",
             "images": [
                 "assets/hk416a5.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "HK416Handguard": [
+                    "SMPZ_Attachments_HK416_CRUX_Hndgrd",
+                    "SMPZ_Attachments_HK416_Extended_Hndgrd",
+                    "SMPZ_Attachments_HK416_Midwest_13inch_Hndgrd",
+                    "SMPZ_Attachments_HK416_Troy_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_IWI_TavorX95",
@@ -4084,7 +4284,36 @@ const weaponsData = {
             "image": "assets/mcx.png",
             "images": [
                 "assets/mcx.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "762Suppressor": [
+                    "SMPZ_Attachments_AAC_51T_762x51_Muzzle",
+                    "SMPZ_Attachments_ASR556_Muzzle",
+                    "SMPZ_Attachments_AUG_A3_Muzzle",
+                    "SMPZ_Attachments_blitz556_Muzzle",
+                    "SMPZ_Attachments_cc450_556_Muzzle",
+                    "SMPZ_Attachments_F2000_Muzzle",
+                    "SMPZ_Attachments_G36_4Prong_Muzzle",
+                    "SMPZ_Attachments_gate556_Muzzle",
+                    "SMPZ_Attachments_HK417_762_Muzzle",
+                    "SMPZ_Attachments_HKG28_762x51_Muzzle",
+                    "SMPZ_Attachments_HUXWRX_Multi_Caliber_Muzzle",
+                    "SMPZ_Attachments_Masada_Muzzle",
+                    "SMPZ_Attachments_Noveske_KX3_556_Muzzle",
+                    "SMPZ_Attachments_phantom556_Muzzle",
+                    "SMPZ_Attachments_PotomacArmory_M110_762x51_Muzzle",
+                    "SMPZ_Attachments_Prong_Muzzle",
+                    "SMPZ_Attachments_qdc556_Muzzle",
+                    "SMPZ_Attachments_SCAR_H_762x51_Muzzle",
+                    "SMPZ_Attachments_SCAR_L_556_Muzzle",
+                    "SMPZ_Attachments_SureFire_SF3P_556_Muzzle",
+                    "SMPZ_Attachments_SureFire_SF4P_556_Muzzle",
+                    "SMPZ_Attachments_TMB_338_Muzzle",
+                    "SMPZ_Attachments_vette556_Muzzle",
+                    "SMPZ_Attachments_vp09556_Muzzle",
+                    "SMPZ_Attachments_war556_Muzzle"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_MCX_SPEAR",
@@ -4580,7 +4809,15 @@ const weaponsData = {
             "image": "assets/mk47.png",
             "images": [
                 "assets/mk47.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "AR10Handguard": [
+                    "SMPZ_Attachments_AR10_CMMG_MK3_RML_15inch_Hndgrd",
+                    "SMPZ_Attachments_AR10_RSASS_Hndgrd",
+                    "SMPZ_Attachments_AR10_SWS_Hndgrd",
+                    "SMPZ_Attachments_AR10_URX_14inch_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_Masada",
@@ -5663,7 +5900,73 @@ const weaponsData = {
             "canBePainted": true,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
-            "manufacturerUrl": "https://fnherstal.com/"
+            "manufacturerUrl": "https://fnherstal.com/",
+            "conditionalAttachmentsBySlot": {
+                "magazine": [
+                    {
+                        "conditions": [
+                            {
+                                "type": "attachment",
+                                "slot": "X17Receiver",
+                                "operator": "isKindOf",
+                                "items": [
+                                    "SMPZ_Attachments_SCAR_H_X17_Lower_Receiver"
+                                ],
+                                "present": false
+                            }
+                        ],
+                        "mode": "replace",
+                        "allowed": [
+                            "SMPZ_Mag_SCAR_H_20Rnd_Black"
+                        ],
+                        "denied": [
+                            "SMPZ_Mag_Drum_X25_68x51_50Rnd",
+                            "SMPZ_Mag_Drum_X25_762x51_50Rnd",
+                            "SMPZ_Mag_KAC_Steel_68x51_20Rnd",
+                            "SMPZ_Mag_KAC_Steel_762x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_68x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_68x51_25Rnd",
+                            "SMPZ_Mag_L7AWM_762x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_762x51_25Rnd",
+                            "SMPZ_Mag_PMAG_68x51_20Rnd",
+                            "SMPZ_Mag_PMAG_68x51_25Rnd_Alpine",
+                            "SMPZ_Mag_PMAG_762x51_20Rnd",
+                            "SMPZ_Mag_PMAG_762x51_25Rnd"
+                        ]
+                    },
+                    {
+                        "conditions": [
+                            {
+                                "type": "attachment",
+                                "slot": "X17Receiver",
+                                "operator": "isKindOf",
+                                "items": [
+                                    "SMPZ_Attachments_SCAR_H_X17_Lower_Receiver"
+                                ],
+                                "present": true
+                            }
+                        ],
+                        "mode": "replace",
+                        "allowed": [
+                            "SMPZ_Mag_Drum_X25_68x51_50Rnd",
+                            "SMPZ_Mag_Drum_X25_762x51_50Rnd",
+                            "SMPZ_Mag_KAC_Steel_68x51_20Rnd",
+                            "SMPZ_Mag_KAC_Steel_762x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_68x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_68x51_25Rnd",
+                            "SMPZ_Mag_L7AWM_762x51_20Rnd",
+                            "SMPZ_Mag_L7AWM_762x51_25Rnd",
+                            "SMPZ_Mag_PMAG_68x51_20Rnd",
+                            "SMPZ_Mag_PMAG_68x51_25Rnd_Alpine",
+                            "SMPZ_Mag_PMAG_762x51_20Rnd",
+                            "SMPZ_Mag_PMAG_762x51_25Rnd"
+                        ],
+                        "denied": [
+                            "SMPZ_Mag_SCAR_H_20Rnd_Black"
+                        ]
+                    }
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_SCAR_L",
@@ -6374,7 +6677,12 @@ const weaponsData = {
             "image": "assets/ak50.png",
             "images": [
                 "assets/ak50.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "AKpistolgrip": [
+                    "SMPZ_Attachments_CQR47_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_ATXC",
@@ -6610,7 +6918,16 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip",
+                    "SMPZ_Attachments_Hogue_pistolgrip",
+                    "SMPZ_Attachments_MOE_pistolgrip",
+                    "SMPZ_Attachments_Naroh_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_HK417",
@@ -6669,7 +6986,13 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_HKG28",
@@ -6727,7 +7050,13 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_M107A1",
@@ -6883,7 +7212,13 @@ const weaponsData = {
             "image": "assets/m110.png",
             "images": [
                 "assets/m110.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_M1A",
@@ -7387,7 +7722,13 @@ const weaponsData = {
             "image": "assets/rsass.png",
             "images": [
                 "assets/rsass.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_SKS",
@@ -7538,7 +7879,13 @@ const weaponsData = {
             "image": "assets/sr25.png",
             "images": [
                 "assets/sr25.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_SV98",
@@ -7581,7 +7928,12 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "AKpistolgrip": [
+                    "SMPZ_Attachments_CQR47_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_SVD",
@@ -7936,7 +8288,12 @@ const weaponsData = {
             "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
-            "manufacturerUrl": "https://barrett.net/"
+            "manufacturerUrl": "https://barrett.net/",
+            "allowedAttachmentsBySlot": {
+                "BipodKeymodMount": [
+                    "SMPZ_Attachments_Magpul_MLOK_Bipod_Adapter"
+                ]
+            }
         }
     ],
     "pistol": [
@@ -8945,7 +9302,15 @@ const weaponsData = {
             "image": "assets/mpx.png",
             "images": [
                 "assets/mpx.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "GlockSuppressor": [
+                    "SMPZ_Attachments_FD917_Suppressor"
+                ],
+                "MPXHandguard": [
+                    "SMPZ_Attachments_MPX_Midwest_14inch_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_P90",
@@ -9047,7 +9412,14 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "AKHandguard": [
+                    "SMPZ_Attachments_AK_Agressor_Hndgrd",
+                    "SMPZ_Attachments_AK_ASPID_Hndgrd",
+                    "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Black"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_PPSH41",
@@ -9236,7 +9608,15 @@ const weaponsData = {
             "image": "assets/m32.png",
             "images": [
                 "assets/m32.png"
-            ]
+            ],
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_ADAR_pistolgrip",
+                    "SMPZ_Attachments_CQR_pistolgrip",
+                    "SMPZ_Attachments_MOE_pistolgrip",
+                    "SMPZ_Attachments_Naroh_pistolgrip"
+                ]
+            }
         }
     ],
     "light_machine_gun": [
@@ -17784,7 +18164,16 @@ const attachmentData = {
                 "AKpistolgrip"
             ],
             "subCategory": "ak",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_AK74",
+                "SMPZ_Weapon_AK74N",
+                "SMPZ_Weapon_AKM",
+                "SMPZ_Weapon_AKMN",
+                "SMPZ_Weapon_RD704",
+                "SMPZ_Weapon_VPO136",
+                "SMPZ_Weapon_VPO209"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CQR_pistolgrip",
@@ -17819,7 +18208,12 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5",
+                "SMPZ_Weapon_STM9"
+            ]
         },
         {
             "id": "SMPZ_Attachments_CTR_Buttstock",
@@ -20519,7 +20913,12 @@ const attachmentData = {
                 "weaponFlashlightFifth",
                 "OpticsOnAKHndgrd"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_CNC_OV_Hndgrd",
@@ -20611,7 +21010,12 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
+            "manufacturerUrl": "https://magpul.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Black",
@@ -20656,7 +21060,12 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_X47_Hndgrd",
@@ -20739,7 +21148,12 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_AK102",
+                "SMPZ_Weapon_AK104",
+                "SMPZ_Weapon_AK105"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_Black",
@@ -20809,7 +21223,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
-            "manufacturerUrl": "https://www.vltor.com/"
+            "manufacturerUrl": "https://www.vltor.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_AK102",
+                "SMPZ_Weapon_AK104",
+                "SMPZ_Weapon_AK105"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B10_B19_Hndgrd",
@@ -20912,7 +21331,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
+            "manufacturerUrl": "https://magpul.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR10_CMMG_MK3_RML_15inch_Hndgrd",
@@ -20943,7 +21367,12 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
-            "manufacturerUrl": "https://cmmg.com/"
+            "manufacturerUrl": "https://cmmg.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR10_CMMG_MK3_RML_9inch_Hndgrd",
@@ -20973,7 +21402,12 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
-            "manufacturerUrl": "https://cmmg.com/"
+            "manufacturerUrl": "https://cmmg.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
@@ -21092,7 +21526,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR10_Midwest_308_CombatRail_15inch_Hndgrd",
@@ -21151,7 +21590,12 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR10_SWS_Hndgrd",
@@ -21255,7 +21699,12 @@ const attachmentData = {
             "canBePainted": true,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
+            "manufacturerUrl": "https://www.knightarmco.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_ADAR_Hndgrd",
@@ -21331,7 +21780,12 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_AeroPrecision_Gen2_Enhanced_12inch_Hndgrd",
@@ -21387,7 +21841,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_AlexanderArms_MK10_Hndgrd",
@@ -21635,7 +22094,12 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Bravo Company MFG",
-            "manufacturerUrl": "https://bravocompanyusa.com/"
+            "manufacturerUrl": "https://bravocompanyusa.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_CAR15_Skinny_Hndgrd",
@@ -21994,7 +22458,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12_FSP",
@@ -22158,7 +22627,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
+            "manufacturerUrl": "https://geissele.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_12inch_Hndgrd",
@@ -22394,7 +22868,12 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
@@ -22443,7 +22922,12 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Lonestar_Ion_Hndgrd",
@@ -22472,7 +22956,12 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_Carbine_Hndgrd",
@@ -22552,7 +23041,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
+            "manufacturerUrl": "https://magpul.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd",
@@ -22593,7 +23087,12 @@ const attachmentData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
@@ -22706,7 +23205,12 @@ const attachmentData = {
             "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
-            "manufacturerUrl": "https://www.radianweapons.com/"
+            "manufacturerUrl": "https://www.radianweapons.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd",
@@ -22903,7 +23407,12 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
+            "manufacturerUrl": "https://geissele.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd",
@@ -22946,7 +23455,12 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
+            "manufacturerUrl": "https://geissele.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AR15_STM9_15inch_Hndgrd",
@@ -23498,7 +24012,11 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416A7_G95K_13inch_Hndgrd",
@@ -23557,7 +24075,11 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_CRUX_Hndgrd",
@@ -23587,7 +24109,15 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Strike Industries",
-            "manufacturerUrl": "https://www.strikeindustries.com/"
+            "manufacturerUrl": "https://www.strikeindustries.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_HK416A5"
+            ],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_HK416_Extended_Hndgrd",
@@ -23619,7 +24149,10 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedParents": [
+                "SMPZ_Weapon_HK416A5"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd",
@@ -23779,7 +24312,8 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_HK416_Midwest_13inch_Hndgrd",
@@ -23810,7 +24344,13 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Midwest Industries",
-            "manufacturerUrl": "https://midwestindustriesinc.com/"
+            "manufacturerUrl": "https://midwestindustriesinc.com/",
+            "deniedParents": [],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_HK416_Midwest_9inch_Hndgrd",
@@ -23839,7 +24379,16 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Midwest Industries",
-            "manufacturerUrl": "https://midwestindustriesinc.com/"
+            "manufacturerUrl": "https://midwestindustriesinc.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5"
+            ],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_HK416_Troy_Hndgrd",
@@ -23870,7 +24419,13 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Troy Industries",
-            "manufacturerUrl": "https://worldoftroy.com/"
+            "manufacturerUrl": "https://worldoftroy.com/",
+            "deniedParents": [],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_HK417_Hndgrd",
@@ -24053,7 +24608,12 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Handguard"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M200_Hndgrd",
@@ -24777,7 +25337,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen1_8inch_Hndgrd",
@@ -24803,7 +25368,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_6inch_Hndgrd",
@@ -24829,7 +25399,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_8inch_Hndgrd",
@@ -24855,7 +25430,12 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_10inch_Hndgrd",
@@ -24886,7 +25466,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Midwest Industries",
-            "manufacturerUrl": "https://midwestindustriesinc.com/"
+            "manufacturerUrl": "https://midwestindustriesinc.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_14inch_Hndgrd",
@@ -24917,7 +25502,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Midwest Industries",
-            "manufacturerUrl": "https://midwestindustriesinc.com/"
+            "manufacturerUrl": "https://midwestindustriesinc.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_6inch_Hndgrd",
@@ -24945,7 +25535,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Midwest Industries",
-            "manufacturerUrl": "https://midwestindustriesinc.com/"
+            "manufacturerUrl": "https://midwestindustriesinc.com/",
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd",
@@ -25192,7 +25787,15 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_PP19"
+            ],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_PP19_Vector_VR_LPS_Hndgrd",
@@ -25216,7 +25819,15 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_PP19"
+            ],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_RD704_Hndgrd",
@@ -25345,7 +25956,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SA58_AIM_Sports_MLOK_Hndgrd",
@@ -25373,7 +25985,13 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_SA58_Belgian_Style_Hndgrd",
@@ -25393,7 +26011,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Handguard"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SA58_Original_Hndgrd",
@@ -25413,7 +26032,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Handguard"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SA58_Quad_Rail_Full_Length_Hndgrd",
@@ -25468,7 +26088,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SA58_Vltor_CASV_Hndgrd",
@@ -25497,7 +26118,8 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
-            "manufacturerUrl": "https://www.vltor.com/"
+            "manufacturerUrl": "https://www.vltor.com/",
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SA58_Vltor_CASV_Short_Hndgrd",
@@ -25525,7 +26147,8 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
-            "manufacturerUrl": "https://www.vltor.com/"
+            "manufacturerUrl": "https://www.vltor.com/",
+            "deniedParents": []
         },
         {
             "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd",
@@ -25566,7 +26189,13 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "deniedParents": [],
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_SCAR_SRX_Hndgrd",
@@ -26235,9 +26864,11 @@ const attachmentData = {
                     "SMPZ_Optics_HK_PM_II_12x50",
                     "SMPZ_Optics_HK_PM_II_25x56",
                     "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
                     "SMPZ_Optics_Leupold_HAMR",
                     "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
                     "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
                     "SMPZ_Optics_Nightforce_ATACR_35x56",
                     "SMPZ_Optics_SIG_Bravo4",
                     "SMPZ_Optics_SIG_Bravo5",
@@ -26655,7 +27286,10 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_IWI_TavorX95"
+            ]
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Rearsight",
@@ -26675,7 +27309,10 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_IWI_TavorX95"
+            ]
         },
         {
             "id": "SMPZ_Attachments_KAC_Frontsight",
@@ -26806,7 +27443,10 @@ const attachmentData = {
                 "M107A1Frontsight"
             ],
             "subCategory": "front_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M107A1"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M107A1_Rearsight",
@@ -26825,7 +27465,10 @@ const attachmentData = {
                 "M107A1Rearsight"
             ],
             "subCategory": "rear_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M107A1"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M200_CarryHandle",
@@ -26904,7 +27547,10 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M60E6"
+            ]
         },
         {
             "id": "SMPZ_Attachments_MBUS_Frontsight",
@@ -27505,7 +28151,11 @@ const attachmentData = {
                 "AA12Choke"
             ],
             "subCategory": "556_ar15",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_AA12_Gen1",
+                "SMPZ_Weapon_AA12_Gen2"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AAC_51T_762x51_Muzzle",
@@ -27933,7 +28583,11 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "multi_caliber",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_MCX",
+                "SMPZ_Weapon_MK47"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A1_3Prong_556_Muzzle",
@@ -28416,7 +29070,10 @@ const attachmentData = {
                 "762Suppressor"
             ],
             "subCategory": "762_ar10",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_M1A"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M200_Muzzle",
@@ -29892,7 +30549,11 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
-            "manufacturerUrl": "https://us.glock.com/"
+            "manufacturerUrl": "https://us.glock.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_Glock17",
+                "SMPZ_Weapon_Glock18C"
+            ]
         },
         {
             "id": "SMPZ_Attachments_FiveSeven_Suppressor",
@@ -30577,7 +31238,10 @@ const attachmentData = {
                 "GlockSuppressorSecond"
             ],
             "subCategory": "pistol_smg_other",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_PP19"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Rotor43_366TKM_Suppressor",
@@ -30752,7 +31416,11 @@ const attachmentData = {
                 "762x54Suppressor"
             ],
             "subCategory": "ak",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_SVDS",
+                "SMPZ_Weapon_SVDS_Zryachiy"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
@@ -31095,7 +31763,12 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5",
+                "SMPZ_Weapon_STM9"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AGS74_pistolgrip",
@@ -31387,7 +32060,11 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
-            "manufacturerUrl": "https://www.colt.com/"
+            "manufacturerUrl": "https://www.colt.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2"
+            ]
         },
         {
             "id": "SMPZ_Attachments_DLG123_pistolgrip",
@@ -33066,7 +33743,10 @@ const attachmentData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_IWI_TavorX95"
+            ]
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left",
@@ -33100,7 +33780,10 @@ const attachmentData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_IWI_TavorX95"
+            ]
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right",
@@ -33134,7 +33817,10 @@ const attachmentData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_IWI_TavorX95"
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_M45A1_Slide",
@@ -33529,9 +34215,11 @@ const attachmentData = {
                     "SMPZ_Optics_HK_PM_II_12x50",
                     "SMPZ_Optics_HK_PM_II_25x56",
                     "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
                     "SMPZ_Optics_Leupold_HAMR",
                     "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
                     "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
                     "SMPZ_Optics_Nightforce_ATACR_35x56",
                     "SMPZ_Optics_SIG_Bravo4",
                     "SMPZ_Optics_SIG_Bravo5",
@@ -33769,7 +34457,12 @@ const attachmentData = {
                 "weaponFlashlightThird"
             ],
             "subCategory": "flashlight_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "GripCASV": [
+                    "SMPZ_Attachments_CQR_Grip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_SR3MP_SideMount",
@@ -33887,7 +34580,8 @@ const attachmentData = {
             "subCategory": "scope_mount",
             "canBePainted": false,
             "manufacturer": "Aimpoint",
-            "manufacturerUrl": "https://www.aimpoint.com/"
+            "manufacturerUrl": "https://www.aimpoint.com/",
+            "allowedParents": []
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Standard_Mount",
@@ -35453,9 +36147,11 @@ const attachmentData = {
                     "SMPZ_Optics_HK_PM_II_12x50",
                     "SMPZ_Optics_HK_PM_II_25x56",
                     "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
                     "SMPZ_Optics_Leupold_HAMR",
                     "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
                     "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
                     "SMPZ_Optics_Nightforce_ATACR_35x56",
                     "SMPZ_Optics_SIG_Bravo4",
                     "SMPZ_Optics_SIG_Bravo5",
@@ -36046,7 +36742,12 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_HK337",
+                "SMPZ_Weapon_HK416A5",
+                "SMPZ_Weapon_RSASS"
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_TubeBuffer",
@@ -43752,9 +44453,11 @@ const attachmentData = {
                     "SMPZ_Optics_HK_PM_II_12x50",
                     "SMPZ_Optics_HK_PM_II_25x56",
                     "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
                     "SMPZ_Optics_Leupold_HAMR",
                     "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
                     "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
                     "SMPZ_Optics_Nightforce_ATACR_35x56",
                     "SMPZ_Optics_SIG_Bravo4",
                     "SMPZ_Optics_SIG_Bravo5",

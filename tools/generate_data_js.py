@@ -514,14 +514,16 @@ def _direct_return_outcome(branch_body, method_name):
 
 
 def _extract_type_checks(condition, variable):
-    """Return positive/negative IsInherited roots for a pure type guard."""
+    """Return positive/negative IsInherited/IsKindOf roots for a pure type guard."""
     call_re = re.compile(
-        rf'(!\s*)?\b{re.escape(variable)}\s*\.\s*IsInherited\s*\(\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)'
+        rf'(!\s*)?\b{re.escape(variable)}\s*\.\s*'
+        rf'(?:IsInherited|IsKindOf)\s*\(\s*'
+        rf'(?:(?:"([A-Za-z_][A-Za-z0-9_]*)")|([A-Za-z_][A-Za-z0-9_]*))\s*\)'
     )
     positive = []
     negative = []
     for match in call_re.finditer(condition):
-        target = match.group(2)
+        target = match.group(2) or match.group(3)
         (negative if match.group(1) else positive).append(target)
     if not positive and not negative:
         return None
@@ -532,6 +534,171 @@ def _extract_type_checks(condition, variable):
     if remainder:
         return None
     return positive, negative
+
+
+def _extract_top_level_if_branches(segment):
+    """Return top-level if branches with source offsets inside a code segment."""
+    branches = []
+    i = 0
+    depth = 0
+    quote = None
+    while i < len(segment):
+        ch = segment[i]
+        if quote:
+            if ch == '\\':
+                i += 2
+                continue
+            if ch == quote:
+                quote = None
+            i += 1
+            continue
+        if ch in ('"', "'"):
+            quote = ch
+            i += 1
+            continue
+        if ch == '{':
+            depth += 1
+            i += 1
+            continue
+        if ch == '}':
+            depth = max(0, depth - 1)
+            i += 1
+            continue
+        if depth != 0 or not segment.startswith('if', i):
+            i += 1
+            continue
+        before = segment[i - 1] if i else ' '
+        after = segment[i + 2] if i + 2 < len(segment) else ' '
+        if (before.isalnum() or before == '_') or (after.isalnum() or after == '_'):
+            i += 2
+            continue
+        cond_start = i + 2
+        while cond_start < len(segment) and segment[cond_start].isspace():
+            cond_start += 1
+        if cond_start >= len(segment) or segment[cond_start] != '(':
+            i += 2
+            continue
+        cond_end = _find_balanced_end(segment, cond_start, '(', ')')
+        if cond_end is None:
+            break
+        stmt_start = cond_end
+        while stmt_start < len(segment) and segment[stmt_start].isspace():
+            stmt_start += 1
+        if stmt_start < len(segment) and segment[stmt_start] == '{':
+            stmt_end = _find_balanced_end(segment, stmt_start)
+            if stmt_end is None:
+                break
+            body = segment[stmt_start + 1:stmt_end - 1]
+        else:
+            semi = segment.find(';', stmt_start)
+            if semi < 0:
+                i = cond_end
+                continue
+            stmt_end = semi + 1
+            body = segment[stmt_start:stmt_end]
+        branches.append({
+            'condition': segment[cond_start + 1:cond_end - 1],
+            'body': body,
+            'start': i,
+            'end': stmt_end
+        })
+        i = stmt_end
+    return branches
+
+
+def _extract_attachment_lookups(method_body):
+    """Map local variables populated by FindAttachmentBySlotName to slot names."""
+    return {
+        variable: slot
+        for variable, slot in re.findall(
+            r'\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*'
+            r'(?:this\s*\.\s*)?FindAttachmentBySlotName\s*\(\s*"([^"]+)"\s*\)',
+            method_body
+        )
+    }
+
+
+def _extract_attachment_state_condition(condition, lookups):
+    """Parse a pure attached-kind presence/absence condition for a looked-up slot."""
+    for variable, slot in lookups.items():
+        call_re = re.compile(
+            rf'(!\s*)?\b{re.escape(variable)}\s*\.\s*IsKindOf\s*\(\s*'
+            rf'"([A-Za-z_][A-Za-z0-9_]*)"\s*\)'
+        )
+        matches = list(call_re.finditer(condition))
+        if len(matches) != 1:
+            continue
+        root = matches[0].group(2)
+        negated_kind = bool(matches[0].group(1))
+        remainder = call_re.sub(' true ', condition)
+        variable_negated = bool(re.search(rf'!\s*\b{re.escape(variable)}\b', remainder))
+        remainder = re.sub(rf'!\s*\b{re.escape(variable)}\b|\b{re.escape(variable)}\b', ' true ', remainder)
+        remainder = re.sub(r'\b(?:true|false)\b|&&|\|\||!|\(|\)|\s+', '', remainder)
+        if remainder:
+            continue
+        return {
+            'slot': slot,
+            'roots': [root],
+            'present': not (negated_kind or variable_negated)
+        }
+    return None
+
+
+def _parse_candidate_policy(segment, method_name, variable):
+    """Parse a candidate kind guard plus a terminal boolean fallback."""
+    terminal = re.search(r'return\s+(true|false)\s*;\s*$', segment.strip())
+    if not terminal:
+        return None
+    fallback = 'allow' if terminal.group(1) == 'true' else 'deny'
+    allowed = set()
+    denied = set()
+    for branch in _extract_top_level_if_branches(segment):
+        outcome = _direct_return_outcome(branch['body'], method_name)
+        checks = _extract_type_checks(branch['condition'], variable)
+        if not outcome or not checks:
+            continue
+        positive, negative = checks
+        if negative:
+            continue
+        if outcome == 'allow' and fallback == 'deny':
+            allowed.update(positive)
+        elif outcome == 'deny' and fallback == 'allow':
+            denied.update(positive)
+    if not allowed and not denied:
+        return None
+    return {
+        'fallback': fallback,
+        'allowed': sorted(allowed, key=str.lower),
+        'denied': sorted(denied, key=str.lower)
+    }
+
+
+def _parse_stateful_attachment_rules(method_body, method_name, variable):
+    """Extract slot compatibility conditioned on another attachment."""
+    conditional_by_slot = {}
+    for condition, slot_body, ancestors in _extract_if_branches(method_body):
+        target_slots = _extract_slot_checks(condition, method_body)
+        if not target_slots or ancestors:
+            continue
+        lookups = _extract_attachment_lookups(slot_body)
+        if not lookups:
+            continue
+        for state_branch in _extract_top_level_if_branches(slot_body):
+            state = _extract_attachment_state_condition(state_branch['condition'], lookups)
+            if not state:
+                continue
+            active_policy = _parse_candidate_policy(state_branch['body'], method_name, variable)
+            inverse_policy = _parse_candidate_policy(slot_body[state_branch['end']:], method_name, variable)
+            if not active_policy or not inverse_policy:
+                continue
+            inverse_state = dict(state)
+            inverse_state['present'] = not state['present']
+            for target_slot in target_slots:
+                rules = conditional_by_slot.setdefault(target_slot, [])
+                rules.append({'conditions': [state], **active_policy})
+                rules.append({'conditions': [inverse_state], **inverse_policy})
+            break
+    return conditional_by_slot
 
 
 def _extract_slot_checks(condition, method_body):
@@ -635,6 +802,17 @@ def _parse_attachment_method_rule(method_body, method_name, variable):
             slot: sorted(roots, key=str.lower)
             for slot, roots in sorted(denied_by_slot.items()) if roots
         }
+    conditional_by_slot = _parse_stateful_attachment_rules(method_body, method_name, variable)
+    if conditional_by_slot:
+        # The trailing branch applies only when the state branch did not return.
+        for slot in conditional_by_slot:
+            rule.get('allowedBySlot', {}).pop(slot, None)
+            rule.get('deniedBySlot', {}).pop(slot, None)
+        if not rule.get('allowedBySlot'):
+            rule.pop('allowedBySlot', None)
+        if not rule.get('deniedBySlot'):
+            rule.pop('deniedBySlot', None)
+        rule['conditionalBySlot'] = conditional_by_slot
     return rule
 
 
@@ -659,7 +837,8 @@ def extract_runtime_attachment_rules(runtime_classes):
                     'allowed': set(),
                     'denied': set(),
                     'allowedBySlot': {},
-                    'deniedBySlot': {}
+                    'deniedBySlot': {},
+                    'conditionalBySlot': {}
                 }
                 for method_rule in method_rules:
                     merged['allowed'].update(method_rule.get('allowed', []))
@@ -667,6 +846,8 @@ def extract_runtime_attachment_rules(runtime_classes):
                     for map_key in ('allowedBySlot', 'deniedBySlot'):
                         for slot, roots in method_rule.get(map_key, {}).items():
                             merged[map_key].setdefault(slot, set()).update(roots)
+                    for slot, conditional_rules in method_rule.get('conditionalBySlot', {}).items():
+                        merged['conditionalBySlot'].setdefault(slot, []).extend(conditional_rules)
                 class_rule[rule_key] = {}
                 for key in ('allowed', 'denied'):
                     if merged[key]:
@@ -677,6 +858,11 @@ def extract_runtime_attachment_rules(runtime_classes):
                             slot: sorted(roots, key=str.lower)
                             for slot, roots in sorted(merged[map_key].items())
                         }
+                if merged['conditionalBySlot']:
+                    class_rule[rule_key]['conditionalBySlot'] = {
+                        slot: conditional_rules
+                        for slot, conditional_rules in sorted(merged['conditionalBySlot'].items())
+                    }
         if class_rule:
             rules[class_name] = class_rule
     return rules
@@ -702,6 +888,30 @@ def _class_lineage(class_name, runtime_classes, cpp_classes=None):
     return lineage
 
 
+def _class_ancestor_names(class_name, runtime_classes, cpp_classes=None):
+    """Return all ancestors across both runtime and config inheritance graphs."""
+    runtime_lookup = {name.lower(): name for name in runtime_classes}
+    cpp_lookup = {name.lower(): name for name in (cpp_classes or {})}
+    result = []
+    visited = set()
+    pending = [class_name]
+    while pending:
+        current = pending.pop(0)
+        key = current.lower()
+        if key in visited:
+            continue
+        visited.add(key)
+        runtime_name = runtime_lookup.get(key)
+        cpp_name = cpp_lookup.get(key)
+        canonical = runtime_name or cpp_name or current
+        result.append(canonical)
+        if runtime_name and runtime_classes[runtime_name].get('parent'):
+            pending.append(runtime_classes[runtime_name]['parent'])
+        if cpp_name and cpp_classes and cpp_classes[cpp_name].get('parent'):
+            pending.append(cpp_classes[cpp_name]['parent'])
+    return result
+
+
 def _nearest_runtime_rule(class_name, rule_key, runtime_classes, runtime_rules, cpp_classes):
     for ancestor in _class_lineage(class_name, runtime_classes, cpp_classes):
         class_rule = runtime_rules.get(ancestor, {}).get(rule_key)
@@ -718,6 +928,7 @@ def apply_runtime_attachment_constraints(data_groups, runtime_classes, runtime_r
             items.extend(group_items)
 
     item_info = []
+    representative_by_alias = {}
     for item in items:
         aliases = [item.get('id')]
         aliases.extend(
@@ -727,7 +938,8 @@ def apply_runtime_attachment_constraints(data_groups, runtime_classes, runtime_r
         aliases = list(dict.fromkeys(alias for alias in aliases if alias))
         lineage = set()
         for alias in aliases:
-            lineage.update(name.lower() for name in _class_lineage(alias, runtime_classes, cpp_classes))
+            lineage.update(name.lower() for name in _class_ancestor_names(alias, runtime_classes, cpp_classes))
+            representative_by_alias[alias.lower()] = item['id']
         item_info.append({'item': item, 'aliases': aliases, 'lineage': lineage})
 
     def matching_item_ids(class_roots):
@@ -736,6 +948,35 @@ def apply_runtime_attachment_constraints(data_groups, runtime_classes, runtime_r
             info['item']['id'] for info in item_info
             if roots.intersection(info['lineage'])
         }, key=str.lower)
+
+    item_info_by_id = {info['item']['id']: info for info in item_info}
+
+    def representative_for_class(class_name):
+        for ancestor in _class_ancestor_names(class_name, runtime_classes, cpp_classes):
+            representative = representative_by_alias.get(ancestor.lower())
+            if representative:
+                return representative
+        return None
+
+    def slot_candidate_ids(item, slot):
+        if slot.lower() == 'magazine':
+            candidates = {
+                representative_for_class(class_name)
+                for class_name in item.get('magazines', [])
+            }
+            return sorted((candidate for candidate in candidates if candidate), key=str.lower)
+        return sorted({
+            candidate_info['item']['id']
+            for candidate_info in item_info
+            if slot in (candidate_info['item'].get('inventorySlots') or [])
+        }, key=str.lower)
+
+    def roots_match_candidates(class_roots, candidate_ids):
+        roots = {root.lower() for root in class_roots}
+        return {
+            candidate_id for candidate_id in candidate_ids
+            if roots.intersection(item_info_by_id[candidate_id]['lineage'])
+        }
 
     constrained_items = 0
     for info in item_info:
@@ -781,9 +1022,62 @@ def apply_runtime_attachment_constraints(data_groups, runtime_classes, runtime_r
                         for slot, roots in sorted(roots_by_slot.items())
                     }
 
+
+            conditional_by_slot = {}
+            for receive_rule in receive_rules:
+                for slot, conditional_rules in receive_rule.get('conditionalBySlot', {}).items():
+                    explicit_roots = set()
+                    for conditional_rule in conditional_rules:
+                        explicit_roots.update(conditional_rule.get('allowed', []))
+                        explicit_roots.update(conditional_rule.get('denied', []))
+                    universe = sorted(set(slot_candidate_ids(item, slot)).union(
+                        matching_item_ids(explicit_roots)
+                    ), key=str.lower)
+                    if not universe:
+                        continue
+                    universe_set = set(universe)
+                    for conditional_rule in conditional_rules:
+                        resolved_conditions = []
+                        for condition in conditional_rule.get('conditions', []):
+                            condition_items = matching_item_ids(condition.get('roots', []))
+                            if not condition_items:
+                                resolved_conditions = []
+                                break
+                            resolved_conditions.append({
+                                'type': 'attachment',
+                                'slot': condition['slot'],
+                                'operator': 'isKindOf',
+                                'items': condition_items,
+                                'present': bool(condition.get('present'))
+                            })
+                        if not resolved_conditions:
+                            continue
+                        allowed = set(universe) if conditional_rule.get('fallback') == 'allow' else set()
+                        allowed.update(roots_match_candidates(conditional_rule.get('allowed', []), universe))
+                        allowed.difference_update(roots_match_candidates(conditional_rule.get('denied', []), universe))
+                        conditional_by_slot.setdefault(slot, []).append({
+                            'conditions': resolved_conditions,
+                            'mode': 'replace',
+                            'allowed': sorted(allowed, key=str.lower),
+                            'denied': sorted(universe_set - allowed, key=str.lower)
+                        })
+            if conditional_by_slot:
+                deduplicated_by_slot = {}
+                for slot, rules in sorted(conditional_by_slot.items()):
+                    seen_rules = set()
+                    unique_rules = []
+                    for resolved_rule in rules:
+                        rule_key = json.dumps(resolved_rule, sort_keys=True, ensure_ascii=True)
+                        if rule_key in seen_rules:
+                            continue
+                        seen_rules.add(rule_key)
+                        unique_rules.append(resolved_rule)
+                    deduplicated_by_slot[slot] = unique_rules
+                item['conditionalAttachmentsBySlot'] = deduplicated_by_slot
+
         if any(key in item for key in (
             'allowedParents', 'deniedParents', 'allowedAttachments', 'deniedAttachments',
-            'allowedAttachmentsBySlot', 'deniedAttachmentsBySlot'
+            'allowedAttachmentsBySlot', 'deniedAttachmentsBySlot', 'conditionalAttachmentsBySlot'
         )):
             constrained_items += 1
 
@@ -2435,8 +2729,6 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     # 6. ENRICH MAGAZINES
     enrich_magazine_calibers(weapons_data, attachment_data)
 
-    # 7. Resolve runtime IsInherited restrictions to the representative item
-    # IDs used by the color-grouped frontend dataset.
     stats_summary['runtime_constrained_items'] = apply_runtime_attachment_constraints(
         (weapons_data, gear_data, attachment_data),
         runtime_classes,

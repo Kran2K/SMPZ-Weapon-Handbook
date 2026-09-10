@@ -528,9 +528,57 @@ function constraintContainsItem(constraintIds, item) {
     return itemIds.some(id => constraintIds.includes(id));
 }
 
+function getDatabaseItemByConstraintId(id) {
+    return getAllDatabaseItems().find(item => getItemClassIds(item).includes(id)) || null;
+}
+
+function getItemsByConstraintIds(ids) {
+    if (!Array.isArray(ids)) return [];
+    const idSet = new Set(ids);
+    const seen = new Set();
+    return getAllDatabaseItems().filter(item => {
+        if (!item || seen.has(item.id) || !getItemClassIds(item).some(id => idSet.has(id))) return false;
+        seen.add(item.id);
+        return true;
+    });
+}
+
+function getConditionalRulesForSlot(parentItem, slot) {
+    const bySlot = parentItem?.conditionalAttachmentsBySlot;
+    return bySlot && Array.isArray(bySlot[slot]) ? bySlot[slot] : [];
+}
+
+// 장착 상태가 조건을 만족하는지 확인한다.
+function isConditionalCompatibilityRuleActive(rule, equippedBySlot = {}) {
+    if (!rule || !Array.isArray(rule.conditions)) return false;
+    return rule.conditions.every(condition => {
+        if (condition.type !== 'attachment' || condition.operator !== 'isKindOf') return false;
+        const rawEquipped = equippedBySlot[condition.slot];
+        const equipped = Array.isArray(rawEquipped) ? rawEquipped : (rawEquipped ? [rawEquipped] : []);
+        const hasMatchingKind = equipped.some(item => constraintContainsItem(condition.items, item));
+        return condition.present ? hasMatchingKind : !hasMatchingKind;
+    });
+}
+
+function getActiveConditionalRule(parentItem, slot, equippedBySlot = {}) {
+    return getConditionalRulesForSlot(parentItem, slot)
+        .find(rule => isConditionalCompatibilityRuleActive(rule, equippedBySlot)) || null;
+}
+
+function getConditionLabel(rule) {
+    if (!rule || !Array.isArray(rule.conditions)) return '';
+    return rule.conditions.map(condition => {
+        const conditionItem = Array.isArray(condition.items)
+            ? getDatabaseItemByConstraintId(condition.items[0])
+            : null;
+        const itemName = conditionItem?.name || getSlotDisplayName(condition.slot);
+        return condition.present ? `${itemName} 장착 시` : '기본 장착';
+    }).filter(Boolean).join(' + ');
+}
+
 // config.cpp 슬롯 매칭 후 런타임 CanPutAsAttachment / CanReceiveAttachment
 // 클래스 제약까지 양방향으로 확인한다. 빈 allow 목록은 명시적인 호환 대상 없음이다.
-function isRuntimeAttachmentCompatible(parentItem, attachmentItem, candidateSlots = null) {
+function isRuntimeAttachmentCompatible(parentItem, attachmentItem, candidateSlots = null, equippedBySlot = {}) {
     if (!parentItem || !attachmentItem) return false;
 
     if (Array.isArray(attachmentItem.allowedParents) &&
@@ -564,6 +612,16 @@ function isRuntimeAttachmentCompatible(parentItem, attachmentItem, candidateSlot
         if (deniedBySlot && Object.prototype.hasOwnProperty.call(deniedBySlot, slot) &&
             constraintContainsItem(deniedBySlot[slot], attachmentItem)) {
             return false;
+        }
+        const activeConditionalRule = getActiveConditionalRule(parentItem, slot, equippedBySlot);
+        if (activeConditionalRule) {
+            if (Array.isArray(activeConditionalRule.allowed) &&
+                !constraintContainsItem(activeConditionalRule.allowed, attachmentItem)) {
+                return false;
+            }
+            if (constraintContainsItem(activeConditionalRule.denied, attachmentItem)) {
+                return false;
+            }
         }
         return true;
     });
@@ -738,9 +796,9 @@ function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
 function createAttachmentSlotsSection(item) {
     const rawSlots = Array.isArray(item?.attachmentSlots) ? item.attachmentSlots : [];
     const groupedSlots = getGroupedAttachmentSlots(rawSlots);
-    const matchedMags = getCompatibleMagazinesForWeapon(item);
+    const magazineGroups = getMagazineCompatibilityGroups(item);
 
-    if (groupedSlots.length === 0 && matchedMags.length === 0) {
+    if (groupedSlots.length === 0 && magazineGroups.length === 0) {
         return null;
     }
 
@@ -787,14 +845,16 @@ function createAttachmentSlotsSection(item) {
         slotsGrid.appendChild(btn);
     });
 
-    if (matchedMags.length > 0) {
+    magazineGroups.forEach((magazineGroup, groupIndex) => {
+        const matchedMags = magazineGroup.items;
         const magBtn = document.createElement('button');
         magBtn.type = 'button';
         magBtn.className = 'attachment-slot-btn weapon-mag-btn';
+        if (magazineGroup.conditional) magBtn.classList.add('conditional-slot-btn');
 
         const magLabel = document.createElement('span');
         magLabel.className = 'slot-label';
-        magLabel.textContent = '탄창';
+        magLabel.textContent = magazineGroup.label;
 
         const magCount = document.createElement('span');
         magCount.className = 'slot-count';
@@ -805,12 +865,12 @@ function createAttachmentSlotsSection(item) {
 
         magBtn.onclick = () => {
             pushNavState(captureCurrentView());
-            const fullTitle = item.name ? `${item.name} > 탄창` : '탄창';
-            showGridView(fullTitle, matchedMags, 'weapon_magazines_' + item.id, 'attachment');
+            const fullTitle = item.name ? `${item.name} > ${magazineGroup.label}` : magazineGroup.label;
+            showGridView(fullTitle, matchedMags, `weapon_magazines_${item.id}_${groupIndex}`, 'attachment');
         };
 
         slotsGrid.appendChild(magBtn);
-    }
+    });
 
     container.appendChild(slotsGrid);
     return container;
@@ -821,7 +881,8 @@ function getCompatibleMagazinesForWeapon(weapon) {
     if (!weapon || !Array.isArray(weapon.magazines) || weapon.magazines.length === 0) {
         return [];
     }
-    const magIdSet = new Set(weapon.magazines);
+    const activeRule = getActiveConditionalRule(weapon, 'magazine', {});
+    const magIdSet = new Set(activeRule?.allowed || weapon.magazines);
     const allItems = getAllDatabaseItems();
     const matchedMags = [];
     const seen = new Set();
@@ -837,6 +898,51 @@ function getCompatibleMagazinesForWeapon(weapon) {
         }
     }
     return matchedMags;
+}
+
+function getMagazineCompatibilityGroups(weapon) {
+    if (!weapon || !Array.isArray(weapon.magazines) || weapon.magazines.length === 0) return [];
+    const rules = getConditionalRulesForSlot(weapon, 'magazine');
+    if (rules.length === 0) {
+        const items = getCompatibleMagazinesForWeapon(weapon);
+        return items.length ? [{ label: '탄창', items, conditional: false, rule: null }] : [];
+    }
+
+    const groups = [];
+    const seen = new Set();
+    rules.forEach(rule => {
+        const items = getItemsByConstraintIds(rule.allowed);
+        const label = getConditionLabel(rule) || '조건부 장착';
+        const key = `${label}:${items.map(item => item.id).sort().join(',')}`;
+        if (items.length === 0 || seen.has(key)) return;
+        seen.add(key);
+        groups.push({
+            label: label === '기본 장착' ? '탄창 (기본)' : `탄창 (${label})`,
+            items,
+            conditional: label !== '기본 장착',
+            rule
+        });
+    });
+    return groups;
+}
+
+function getWeaponMagazineCompatibility(weapon, targetItem) {
+    const rules = getConditionalRulesForSlot(weapon, 'magazine');
+    if (rules.length === 0) {
+        const targetIds = getItemClassIds(targetItem);
+        return {
+            compatible: Array.isArray(weapon.magazines) && weapon.magazines.some(id => targetIds.includes(id)),
+            note: ''
+        };
+    }
+    const matchingRules = rules.filter(rule => constraintContainsItem(rule.allowed, targetItem));
+    if (matchingRules.length === 0) return { compatible: false, note: '' };
+    const defaultRule = getActiveConditionalRule(weapon, 'magazine', {});
+    if (defaultRule && matchingRules.includes(defaultRule)) return { compatible: true, note: '' };
+    return {
+        compatible: true,
+        note: matchingRules.map(getConditionLabel).filter(Boolean).join(' / ')
+    };
 }
 
 // 특정 아이템을 장착할 수 있는 상위 부모 아이템 목록 필터링 (슬롯 및 탄창 양방향 지원)
@@ -865,18 +971,15 @@ function getCompatibleParentItems(targetItem) {
     // 2. 탄창 전용 매칭 (targetItem.id ↔ weapon.magazines)
     if (typeof weaponsData !== 'undefined' && weaponsData) {
         const allWeapons = Object.values(weaponsData).flat();
-        const targetIds = [targetItem.id];
-        if (Array.isArray(targetItem.color)) {
-            targetItem.color.forEach(c => {
-                if (c && c.id) targetIds.push(c.id);
-            });
-        }
         for (const weapon of allWeapons) {
             if (!weapon || weapon.id === targetItem.id) continue;
-            if (Array.isArray(weapon.magazines) && weapon.magazines.some(mId => targetIds.includes(mId))) {
+            const compatibility = getWeaponMagazineCompatibility(weapon, targetItem);
+            if (compatibility.compatible) {
                 if (!seen.has(weapon.id)) {
                     seen.add(weapon.id);
-                    parentMatches.push(weapon);
+                    parentMatches.push(compatibility.note
+                        ? { ...weapon, compatibilityNote: compatibility.note }
+                        : weapon);
                 }
             }
         }
@@ -3136,6 +3239,14 @@ function createGridCard(item, categoryKey, panelType) {
     nameEl.className = 'grid-card-name';
     nameEl.textContent = item.name;
     card.appendChild(nameEl);
+
+    if (item.compatibilityNote) {
+        const compatibilityNote = document.createElement('div');
+        compatibilityNote.className = 'grid-card-compatibility-note';
+        compatibilityNote.textContent = item.compatibilityNote;
+        compatibilityNote.title = `조건부 호환: ${item.compatibilityNote}`;
+        card.appendChild(compatibilityNote);
+    }
 
     // 대표 스펙 태그 표시
     const coreSpecs = getItemCoreSpecs(item, categoryKey, panelType, currentGridSortMetric);
