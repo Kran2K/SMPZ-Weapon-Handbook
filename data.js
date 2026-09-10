@@ -7564,6 +7564,7 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 175,
+                "accuracy": 6.88,
                 "velocityMultiplier": 1.25,
                 "weight": 2832
             },
@@ -8685,6 +8686,7 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 70,
+                "accuracy": 6.88,
                 "velocityMultiplier": 1.05,
                 "weight": 1054
             },
@@ -8724,6 +8726,7 @@ const weaponsData = {
             "stats": {
                 "recoil": 100,
                 "sway": 70,
+                "accuracy": 6.88,
                 "velocityMultiplier": 1.05,
                 "weight": 1048
             },
@@ -8848,6 +8851,7 @@ const weaponsData = {
             "stats": {
                 "recoil": 80,
                 "sway": 80,
+                "accuracy": 6.88,
                 "velocityMultiplier": 1.0,
                 "weight": 794
             },
@@ -9040,6 +9044,7 @@ const weaponsData = {
                 "recoil": 80,
                 "sway": 100,
                 "ergonomics": 55,
+                "accuracy": 6.88,
                 "velocityMultiplier": 1.1,
                 "weight": 1545
             },

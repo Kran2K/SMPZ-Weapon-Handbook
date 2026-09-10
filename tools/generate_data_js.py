@@ -1757,7 +1757,9 @@ def extract_weapon_stats(cname, props, all_classes):
         try:
             stats['accuracy'] = round(float(disp) * (180.0 / math.pi) * 60.0, 2)
         except (ValueError, TypeError):
-            pass
+            stats['accuracy'] = 6.88
+    else:
+        stats['accuracy'] = 6.88
 
     spd = props.get('initSpeedMultiplier', 1.0)
     try:
