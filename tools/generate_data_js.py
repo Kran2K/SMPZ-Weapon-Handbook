@@ -329,6 +329,466 @@ def parse_cpp_file(filepath):
 
     return classes
 
+
+# ---------------------------------------------------------------------------
+# DAYZ RUNTIME SCRIPT ATTACHMENT RULE PARSING
+# ---------------------------------------------------------------------------
+def _strip_c_comments(text):
+    """Remove comments without changing quoted strings."""
+    result = []
+    i = 0
+    quote = None
+    while i < len(text):
+        ch = text[i]
+        nxt = text[i + 1] if i + 1 < len(text) else ''
+        if quote:
+            result.append(ch)
+            if ch == '\\' and i + 1 < len(text):
+                result.append(text[i + 1])
+                i += 2
+                continue
+            if ch == quote:
+                quote = None
+            i += 1
+            continue
+        if ch in ('"', "'"):
+            quote = ch
+            result.append(ch)
+            i += 1
+            continue
+        if ch == '/' and nxt == '/':
+            i += 2
+            while i < len(text) and text[i] not in '\r\n':
+                i += 1
+            continue
+        if ch == '/' and nxt == '*':
+            i += 2
+            while i + 1 < len(text) and not (text[i] == '*' and text[i + 1] == '/'):
+                i += 1
+            i += 2
+            continue
+        result.append(ch)
+        i += 1
+    return ''.join(result)
+
+
+def _find_balanced_end(text, start, opening='{', closing='}'):
+    """Return the index just after a balanced block beginning at start."""
+    if start >= len(text) or text[start] != opening:
+        return None
+    depth = 1
+    quote = None
+    i = start + 1
+    while i < len(text):
+        ch = text[i]
+        if quote:
+            if ch == '\\':
+                i += 2
+                continue
+            if ch == quote:
+                quote = None
+        elif ch in ('"', "'"):
+            quote = ch
+        elif ch == opening:
+            depth += 1
+        elif ch == closing:
+            depth -= 1
+            if depth == 0:
+                return i + 1
+        i += 1
+    return None
+
+
+def parse_dayz_script_classes(smpz_dir):
+    """Parse Enforce Script class inheritance and relevant method bodies."""
+    classes = {}
+    script_files = glob.glob(os.path.join(smpz_dir, '**', '*.c'), recursive=True)
+    class_re = re.compile(
+        r'\b(?:(?:modded|sealed)\s+)*class\s+([A-Za-z_][A-Za-z0-9_]*)'
+        r'(?:\s*(?::|extends)\s*([A-Za-z_][A-Za-z0-9_]*))?\s*\{'
+    )
+
+    for filepath in script_files:
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                text = _strip_c_comments(f.read())
+        except Exception:
+            continue
+
+        pos = 0
+        while True:
+            match = class_re.search(text, pos)
+            if not match:
+                break
+            block_start = match.end() - 1
+            block_end = _find_balanced_end(text, block_start)
+            if block_end is None:
+                pos = match.end()
+                continue
+            class_name, parent_name = match.group(1), match.group(2)
+            info = classes.setdefault(class_name, {
+                'name': class_name,
+                'parent': parent_name,
+                'bodies': [],
+                'source_files': []
+            })
+            if parent_name and not info.get('parent'):
+                info['parent'] = parent_name
+            info['bodies'].append(text[block_start + 1:block_end - 1])
+            info['source_files'].append(filepath)
+            pos = block_end
+
+    return classes, len(script_files)
+
+
+def _extract_method_bodies(class_body, method_name):
+    method_re = re.compile(
+        rf'\b(?:override\s+)?bool\s+{re.escape(method_name)}\s*\([^)]*\)\s*\{{'
+    )
+    methods = []
+    pos = 0
+    while True:
+        match = method_re.search(class_body, pos)
+        if not match:
+            break
+        block_start = match.end() - 1
+        block_end = _find_balanced_end(class_body, block_start)
+        if block_end is None:
+            break
+        methods.append(class_body[block_start + 1:block_end - 1])
+        pos = block_end
+    return methods
+
+
+def _extract_if_branches(method_body):
+    """Yield if branches together with their enclosing if conditions."""
+    branches = []
+    if_re = re.compile(r'\bif\s*\(')
+
+    def scan(segment, ancestors):
+        pos = 0
+        while True:
+            match = if_re.search(segment, pos)
+            if not match:
+                break
+            cond_start = segment.find('(', match.start())
+            cond_end = _find_balanced_end(segment, cond_start, '(', ')')
+            if cond_end is None:
+                break
+            condition = segment[cond_start + 1:cond_end - 1]
+            stmt_start = cond_end
+            while stmt_start < len(segment) and segment[stmt_start].isspace():
+                stmt_start += 1
+            if stmt_start < len(segment) and segment[stmt_start] == '{':
+                stmt_end = _find_balanced_end(segment, stmt_start)
+                if stmt_end is None:
+                    break
+                branch_body = segment[stmt_start + 1:stmt_end - 1]
+                scan(branch_body, ancestors + [condition])
+            else:
+                semi = segment.find(';', stmt_start)
+                if semi < 0:
+                    pos = cond_end
+                    continue
+                stmt_end = semi + 1
+                branch_body = segment[stmt_start:stmt_end]
+            branches.append((condition, branch_body, ancestors))
+            pos = stmt_end
+
+    scan(method_body, [])
+    return branches
+
+
+def _direct_return_outcome(branch_body, method_name):
+    """Classify a simple guarded return, ignoring branches with other logic."""
+    compact = re.sub(r'\s+', ' ', branch_body).strip()
+    match = re.fullmatch(r'return\s+(.+?)\s*;', compact)
+    if not match:
+        return None
+    expr = match.group(1).strip()
+    if expr == 'false':
+        return 'deny'
+    if expr == 'true' or re.fullmatch(rf'super\.{re.escape(method_name)}\s*\([^;]*\)', expr):
+        return 'allow'
+    return None
+
+
+def _extract_type_checks(condition, variable):
+    """Return positive/negative IsInherited roots for a pure type guard."""
+    call_re = re.compile(
+        rf'(!\s*)?\b{re.escape(variable)}\s*\.\s*IsInherited\s*\(\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)'
+    )
+    positive = []
+    negative = []
+    for match in call_re.finditer(condition):
+        target = match.group(2)
+        (negative if match.group(1) else positive).append(target)
+    if not positive and not negative:
+        return None
+
+    remainder = call_re.sub(' true ', condition)
+    remainder = re.sub(rf'!\s*\b{re.escape(variable)}\b|\b{re.escape(variable)}\b', ' true ', remainder)
+    remainder = re.sub(r'\b(?:true|false)\b|&&|\|\||!|\(|\)|\s+', '', remainder)
+    if remainder:
+        return None
+    return positive, negative
+
+
+def _extract_slot_checks(condition, method_body):
+    """Return slot names when a condition is composed only of slot checks."""
+    slots = []
+    slot_patterns = (
+        re.compile(r'\b(?:slotName|attachSlotName)\s*==\s*"([^"]+)"'),
+        re.compile(r'"([^"]+)"\s*==\s*\b(?:slotName|attachSlotName)\b'),
+        re.compile(r'\bslotId\s*==\s*InventorySlots\.GetSlotIdFromString\s*\(\s*"([^"]+)"\s*\)'),
+        re.compile(r'InventorySlots\.GetSlotIdFromString\s*\(\s*"([^"]+)"\s*\)\s*==\s*\bslotId\b'),
+    )
+    remainder = condition
+    for pattern in slot_patterns:
+        slots.extend(pattern.findall(remainder))
+        remainder = pattern.sub(' true ', remainder)
+
+    local_slot_ids = {
+        var_name: slot_name
+        for var_name, slot_name in re.findall(
+            r'\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*InventorySlots\.GetSlotIdFromString\s*\(\s*"([^"]+)"\s*\)',
+            method_body
+        )
+    }
+    for var_name, slot_name in local_slot_ids.items():
+        pattern = re.compile(
+            rf'(?:\bslotId\s*==\s*\b{re.escape(var_name)}\b|'
+            rf'\b{re.escape(var_name)}\b\s*==\s*\bslotId\b)'
+        )
+        if pattern.search(remainder):
+            slots.append(slot_name)
+            remainder = pattern.sub(' true ', remainder)
+
+    remainder = re.sub(r'\b(?:true|false)\b|&&|\|\||!|\(|\)|\s+', '', remainder)
+    if not slots or remainder:
+        return None
+    return sorted(set(slots), key=str.lower)
+
+
+def _parse_attachment_method_rule(method_body, method_name, variable):
+    """Extract unconditional class allow/deny constraints from one method."""
+    allowed = set()
+    denied = set()
+    allowed_by_slot = {}
+    denied_by_slot = {}
+    fallback_false = bool(re.search(r'return\s+false\s*;\s*$', method_body.strip()))
+
+    for condition, branch_body, ancestors in _extract_if_branches(method_body):
+        outcome = _direct_return_outcome(branch_body, method_name)
+        checks = _extract_type_checks(condition, variable)
+        if not outcome or not checks:
+            continue
+        positive, negative = checks
+
+        slots = None
+        if ancestors:
+            ancestor_slots = []
+            valid_slot_context = True
+            for ancestor in ancestors:
+                parsed_slots = _extract_slot_checks(ancestor, method_body)
+                if not parsed_slots:
+                    valid_slot_context = False
+                    break
+                ancestor_slots.extend(parsed_slots)
+            if not valid_slot_context:
+                # A type check nested under runtime state cannot be promoted to
+                # an unconditional item-pair restriction.
+                continue
+            slots = sorted(set(ancestor_slots), key=str.lower)
+
+        target_allowed = allowed
+        target_denied = denied
+        if slots:
+            target_allowed = set()
+            target_denied = set()
+        if outcome == 'allow' and fallback_false:
+            target_allowed.update(positive)
+        elif outcome == 'deny':
+            # A pure `if (!x.IsInherited(A)) return false` is a whitelist.
+            target_allowed.update(negative)
+            # Positive type checks are unconditional denials only when the
+            # condition contains no alternative negative type requirement.
+            if not negative:
+                target_denied.update(positive)
+
+        for slot in slots or []:
+            allowed_by_slot.setdefault(slot, set()).update(target_allowed)
+            denied_by_slot.setdefault(slot, set()).update(target_denied)
+
+    rule = {}
+    if allowed:
+        rule['allowed'] = sorted(allowed, key=str.lower)
+    if denied:
+        rule['denied'] = sorted(denied, key=str.lower)
+    if allowed_by_slot:
+        rule['allowedBySlot'] = {
+            slot: sorted(roots, key=str.lower)
+            for slot, roots in sorted(allowed_by_slot.items()) if roots
+        }
+    if denied_by_slot:
+        rule['deniedBySlot'] = {
+            slot: sorted(roots, key=str.lower)
+            for slot, roots in sorted(denied_by_slot.items()) if roots
+        }
+    return rule
+
+
+def extract_runtime_attachment_rules(runtime_classes):
+    """Collect the nearest CanPut/CanReceive class rules for runtime classes."""
+    rules = {}
+    method_specs = (
+        ('CanPutAsAttachment', 'parent', 'parents'),
+        ('CanReceiveAttachment', 'attachment', 'attachments'),
+    )
+    for class_name, info in runtime_classes.items():
+        class_rule = {}
+        for method_name, variable, rule_key in method_specs:
+            method_rules = []
+            for body in info.get('bodies', []):
+                for method_body in _extract_method_bodies(body, method_name):
+                    parsed = _parse_attachment_method_rule(method_body, method_name, variable)
+                    if parsed:
+                        method_rules.append(parsed)
+            if method_rules:
+                merged = {
+                    'allowed': set(),
+                    'denied': set(),
+                    'allowedBySlot': {},
+                    'deniedBySlot': {}
+                }
+                for method_rule in method_rules:
+                    merged['allowed'].update(method_rule.get('allowed', []))
+                    merged['denied'].update(method_rule.get('denied', []))
+                    for map_key in ('allowedBySlot', 'deniedBySlot'):
+                        for slot, roots in method_rule.get(map_key, {}).items():
+                            merged[map_key].setdefault(slot, set()).update(roots)
+                class_rule[rule_key] = {}
+                for key in ('allowed', 'denied'):
+                    if merged[key]:
+                        class_rule[rule_key][key] = sorted(merged[key], key=str.lower)
+                for map_key in ('allowedBySlot', 'deniedBySlot'):
+                    if merged[map_key]:
+                        class_rule[rule_key][map_key] = {
+                            slot: sorted(roots, key=str.lower)
+                            for slot, roots in sorted(merged[map_key].items())
+                        }
+        if class_rule:
+            rules[class_name] = class_rule
+    return rules
+
+
+def _class_lineage(class_name, runtime_classes, cpp_classes=None):
+    """Return a class plus ancestors, preferring the runtime script graph."""
+    lineage = []
+    visited = set()
+    current = class_name
+    runtime_lookup = {name.lower(): name for name in runtime_classes}
+    cpp_lookup = {name.lower(): name for name in (cpp_classes or {})}
+    while current and current.lower() not in visited:
+        visited.add(current.lower())
+        canonical = runtime_lookup.get(current.lower()) or cpp_lookup.get(current.lower()) or current
+        lineage.append(canonical)
+        if canonical in runtime_classes and runtime_classes[canonical].get('parent'):
+            current = runtime_classes[canonical].get('parent')
+        elif cpp_classes and canonical in cpp_classes:
+            current = cpp_classes[canonical].get('parent')
+        else:
+            current = None
+    return lineage
+
+
+def _nearest_runtime_rule(class_name, rule_key, runtime_classes, runtime_rules, cpp_classes):
+    for ancestor in _class_lineage(class_name, runtime_classes, cpp_classes):
+        class_rule = runtime_rules.get(ancestor, {}).get(rule_key)
+        if class_rule:
+            return class_rule
+    return None
+
+
+def apply_runtime_attachment_constraints(data_groups, runtime_classes, runtime_rules, cpp_classes):
+    """Resolve script class roots to concrete IDs used by the generated site."""
+    items = []
+    for groups in data_groups:
+        for group_items in groups.values():
+            items.extend(group_items)
+
+    item_info = []
+    for item in items:
+        aliases = [item.get('id')]
+        aliases.extend(
+            variant.get('id') for variant in item.get('color', [])
+            if isinstance(variant, dict) and variant.get('id')
+        )
+        aliases = list(dict.fromkeys(alias for alias in aliases if alias))
+        lineage = set()
+        for alias in aliases:
+            lineage.update(name.lower() for name in _class_lineage(alias, runtime_classes, cpp_classes))
+        item_info.append({'item': item, 'aliases': aliases, 'lineage': lineage})
+
+    def matching_item_ids(class_roots):
+        roots = {root.lower() for root in class_roots}
+        return sorted({
+            info['item']['id'] for info in item_info
+            if roots.intersection(info['lineage'])
+        }, key=str.lower)
+
+    constrained_items = 0
+    for info in item_info:
+        item = info['item']
+
+        put_rules = [
+            rule for alias in info['aliases']
+            if (rule := _nearest_runtime_rule(alias, 'parents', runtime_classes, runtime_rules, cpp_classes))
+        ]
+        if put_rules:
+            allowed_rule_sets = [set(rule['allowed']) for rule in put_rules if rule.get('allowed')]
+            if allowed_rule_sets and len(allowed_rule_sets) == len(put_rules):
+                allowed_roots = set().union(*allowed_rule_sets)
+                item['allowedParents'] = matching_item_ids(allowed_roots)
+            denied_roots = set().union(*(set(rule.get('denied', [])) for rule in put_rules))
+            if denied_roots:
+                item['deniedParents'] = matching_item_ids(denied_roots)
+
+        receive_rules = [
+            rule for alias in info['aliases']
+            if (rule := _nearest_runtime_rule(alias, 'attachments', runtime_classes, runtime_rules, cpp_classes))
+        ]
+        if receive_rules:
+            allowed_rule_sets = [set(rule['allowed']) for rule in receive_rules if rule.get('allowed')]
+            if allowed_rule_sets and len(allowed_rule_sets) == len(receive_rules):
+                allowed_roots = set().union(*allowed_rule_sets)
+                item['allowedAttachments'] = matching_item_ids(allowed_roots)
+            denied_roots = set().union(*(set(rule.get('denied', [])) for rule in receive_rules))
+            if denied_roots:
+                item['deniedAttachments'] = matching_item_ids(denied_roots)
+
+            for rule_key, item_key in (
+                ('allowedBySlot', 'allowedAttachmentsBySlot'),
+                ('deniedBySlot', 'deniedAttachmentsBySlot')
+            ):
+                roots_by_slot = {}
+                for rule in receive_rules:
+                    for slot, roots in rule.get(rule_key, {}).items():
+                        roots_by_slot.setdefault(slot, set()).update(roots)
+                if roots_by_slot:
+                    item[item_key] = {
+                        slot: matching_item_ids(roots)
+                        for slot, roots in sorted(roots_by_slot.items())
+                    }
+
+        if any(key in item for key in (
+            'allowedParents', 'deniedParents', 'allowedAttachments', 'deniedAttachments',
+            'allowedAttachmentsBySlot', 'deniedAttachmentsBySlot'
+        )):
+            constrained_items += 1
+
+    return constrained_items
+
 def parse_array_value(raw_val):
     raw = raw_val.strip().strip('{}')
     if not raw:
@@ -1449,6 +1909,15 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
     print(f"[*] 파싱된 고유 클래스 총 {len(all_classes)}개")
 
+    # Runtime Enforce Script classes carry the attachment restrictions that
+    # config.cpp inventory slot names cannot express.
+    runtime_classes, runtime_file_count = parse_dayz_script_classes(smpz_dir)
+    runtime_rules = extract_runtime_attachment_rules(runtime_classes)
+    print(
+        f"[*] 런타임 스크립트 {runtime_file_count}개 파싱 완료: "
+        f"클래스 {len(runtime_classes)}개, 장착 제약 클래스 {len(runtime_rules)}개"
+    )
+
     stats_summary = {
         'existing': 0,
         'google_translate': 0,
@@ -1469,7 +1938,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'muzzle_types': 0,
         'suppressor_types': 0,
         'colors_linked': 0,
-        'paintable_items': 0
+        'paintable_items': 0,
+        'runtime_constrained_items': 0
     }
 
     def resolve_desc(item_obj, props):
@@ -1965,6 +2435,15 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     # 6. ENRICH MAGAZINES
     enrich_magazine_calibers(weapons_data, attachment_data)
 
+    # 7. Resolve runtime IsInherited restrictions to the representative item
+    # IDs used by the color-grouped frontend dataset.
+    stats_summary['runtime_constrained_items'] = apply_runtime_attachment_constraints(
+        (weapons_data, gear_data, attachment_data),
+        runtime_classes,
+        runtime_rules,
+        all_classes
+    )
+
     save_google_translation_cache(google_cache)
 
     print("-" * 70)
@@ -1988,6 +2467,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 소염기/머즐 분류(muzzleType):  {stats_summary['muzzle_types']}개")
     print(f"    - 소음기 분류(suppressorType):   {stats_summary['suppressor_types']}개")
     print(f"    - 헬멧 부착물 분류:              {stats_summary['helmet_types']}개")
+    print(f"    - 런타임 장착 제약 연동:         {stats_summary['runtime_constrained_items']}개")
     print(f"    - 3D 모델(.glb) 자동 연결:       {stats_summary['models_linked']}개")
     print("-" * 70)
 

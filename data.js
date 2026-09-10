@@ -11434,7 +11434,11 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_LShZ_Green",
+                "SMPZ_Helmet_OpsCore_FASTMT_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_Altyn_Green",
@@ -11549,7 +11553,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_Altyn_Green"
+            ]
         },
         {
             "id": "SMPZ_Visor_RYS_T_Black",
@@ -11580,7 +11587,10 @@ const gearData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_RYS_T_Black"
+            ]
         },
         {
             "id": "SMPZ_Mandible_Caiman_Black",
@@ -11676,7 +11686,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_Caiman_Gray"
+            ]
         },
         {
             "id": "SMPZ_Mandible_NeoSteel_Black",
@@ -11778,7 +11791,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_DA_NeoSteel_Black"
+            ]
         },
         {
             "id": "SMPZ_Mandible_OpsCore_FAST_Black",
@@ -11860,7 +11876,11 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/"
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "allowedParents": [
+                "SMPZ_Helmet_LShZ_Green",
+                "SMPZ_Helmet_OpsCore_FASTMT_Black"
+            ]
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
@@ -11942,7 +11962,10 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/"
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "allowedParents": [
+                "SMPZ_Helmet_CryePrecision_AirFrame_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_Maska_Green",
@@ -12051,7 +12074,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_Maska_Green"
+            ]
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
@@ -12147,7 +12173,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_ZSH12M_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_Vulkan",
@@ -12183,7 +12212,10 @@ const gearData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_Vulkan_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -12209,7 +12241,12 @@ const gearData = {
             "canBePainted": false,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/"
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "allowedParents": [
+                "SMPZ_Helmet_CryePrecision_AirFrame_Black",
+                "SMPZ_Helmet_LShZ_Green",
+                "SMPZ_Helmet_OpsCore_FASTMT_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_BNTI_LShZ_2DTM",
@@ -12232,7 +12269,10 @@ const gearData = {
                 "Visor"
             ],
             "subCategory": "visor",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_BNTI_LShZ_2DTM_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_FORT_KiverM",
@@ -12255,7 +12295,10 @@ const gearData = {
                 "Visor"
             ],
             "subCategory": "visor",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_FORT_KiverM"
+            ]
         },
         {
             "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
@@ -12328,7 +12371,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_TeamWendy_Exfil_Black"
+            ]
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
@@ -12407,7 +12453,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_NPP_KIASS_Tor2_OD"
+            ]
         },
         {
             "id": "SMPZ_Visor_Caiman",
@@ -12430,7 +12479,10 @@ const gearData = {
                 "Visor"
             ],
             "subCategory": "visor",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_Caiman_Gray"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
@@ -12520,7 +12572,11 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/"
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "allowedParents": [
+                "SMPZ_Helmet_LShZ_Green",
+                "SMPZ_Helmet_OpsCore_FASTMT_Black"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_BNTI_LShZ_2DTM",
@@ -12545,7 +12601,10 @@ const gearData = {
                 "NVG"
             ],
             "subCategory": "armor_plate",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_BNTI_LShZ_2DTM_Black"
+            ]
         },
         {
             "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
@@ -12593,7 +12652,10 @@ const gearData = {
                 "NVG"
             ],
             "subCategory": "armor_plate",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Helmet_DA_Bastion_Black"
+            ]
         },
         {
             "id": "SMPZ_HelmetPlate_Caiman_Gray",
@@ -12693,7 +12755,10 @@ const gearData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Helmet_Caiman_Gray"
+            ]
         }
     ],
     "helmet": [
@@ -13421,7 +13486,10 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
-            "manufacturerUrl": "https://gentexcorp.com/"
+            "manufacturerUrl": "https://gentexcorp.com/",
+            "deniedAttachments": [
+                "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black"
+            ]
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
@@ -13509,7 +13577,10 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/"
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "deniedAttachments": [
+                "SMPZ_Mandible_OpsCore_FAST_Black"
+            ]
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Black",
@@ -13597,7 +13668,10 @@ const gearData = {
             "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
-            "manufacturerUrl": "https://www.cryeprecision.com/"
+            "manufacturerUrl": "https://www.cryeprecision.com/",
+            "deniedAttachments": [
+                "SMPZ_Mandible_OpsCore_FAST_Black"
+            ]
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
@@ -13812,7 +13886,10 @@ const gearData = {
                     "canBePainted": false
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachments": [
+                "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black"
+            ]
         },
         {
             "id": "SMPZ_Helmet_6B47_EMR",
@@ -20470,7 +20547,12 @@ const attachmentData = {
                 "Grip",
                 "OpticsOnAKHndgrd"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedAttachmentsBySlot": {
+                "Grip": [
+                    "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
@@ -26139,7 +26221,31 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "rear_sight",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_ARMS_40_Rearsight",
@@ -28936,7 +29042,10 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_TRG_M10"
+            ]
         },
         {
             "id": "SMPZ_Attachments_VPO136_Muzzle",
@@ -33406,7 +33515,31 @@ const attachmentData = {
             "subCategory": "scope_mount",
             "canBePainted": false,
             "manufacturer": "Zenitco",
-            "manufacturerUrl": "https://zenitco.ru/"
+            "manufacturerUrl": "https://zenitco.ru/",
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_AK303_Sidemount",
@@ -34558,7 +34691,18 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Attachments_Burris_FastFire_Weaver_Mount",
+                    "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
+                    "SMPZ_Attachments_FiveSeven_RMR_Mount",
+                    "SMPZ_Attachments_RMR_Mount",
+                    "SMPZ_Attachments_ROF90_RMR_Mount",
+                    "SMPZ_Attachments_Trijicon_ACOG_RMR_Mount",
+                    "SMPZ_Attachments_USP_Mount"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_MLOK_25_Rail",
@@ -35295,7 +35439,31 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
@@ -35411,7 +35579,18 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "allowedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Attachments_Burris_FastFire_Weaver_Mount",
+                    "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
+                    "SMPZ_Attachments_FiveSeven_RMR_Mount",
+                    "SMPZ_Attachments_RMR_Mount",
+                    "SMPZ_Attachments_ROF90_RMR_Mount",
+                    "SMPZ_Attachments_Trijicon_ACOG_RMR_Mount",
+                    "SMPZ_Attachments_USP_Mount"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_UM3_Sidemount",
@@ -43559,7 +43738,31 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Optics_Burris_FullField_TAC30",

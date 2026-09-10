@@ -510,15 +510,75 @@ function getAllDatabaseItems() {
     return items;
 }
 
-// 복수 슬롯 키 중 하나라도 만족하는 아이템 목록 필터링 (inventorySlots 기준 중복 제거)
-function getItemsForSlotKeys(slotKeys) {
+function getItemClassIds(item) {
+    if (!item) return [];
+    const ids = [];
+    if (item.id) ids.push(item.id);
+    if (Array.isArray(item.color)) {
+        item.color.forEach(variant => {
+            if (variant && variant.id) ids.push(variant.id);
+        });
+    }
+    return [...new Set(ids)];
+}
+
+function constraintContainsItem(constraintIds, item) {
+    if (!Array.isArray(constraintIds)) return false;
+    const itemIds = getItemClassIds(item);
+    return itemIds.some(id => constraintIds.includes(id));
+}
+
+// config.cpp 슬롯 매칭 후 런타임 CanPutAsAttachment / CanReceiveAttachment
+// 클래스 제약까지 양방향으로 확인한다. 빈 allow 목록은 명시적인 호환 대상 없음이다.
+function isRuntimeAttachmentCompatible(parentItem, attachmentItem, candidateSlots = null) {
+    if (!parentItem || !attachmentItem) return false;
+
+    if (Array.isArray(attachmentItem.allowedParents) &&
+        !constraintContainsItem(attachmentItem.allowedParents, parentItem)) {
+        return false;
+    }
+    if (constraintContainsItem(attachmentItem.deniedParents, parentItem)) {
+        return false;
+    }
+    if (Array.isArray(parentItem.allowedAttachments) &&
+        !constraintContainsItem(parentItem.allowedAttachments, attachmentItem)) {
+        return false;
+    }
+    if (constraintContainsItem(parentItem.deniedAttachments, attachmentItem)) {
+        return false;
+    }
+
+    const parentSlots = new Set(Array.isArray(parentItem.attachmentSlots) ? parentItem.attachmentSlots : []);
+    const requestedSlots = candidateSlots ? new Set(candidateSlots) : null;
+    const sharedSlots = (Array.isArray(attachmentItem.inventorySlots) ? attachmentItem.inventorySlots : [])
+        .filter(slot => parentSlots.has(slot) && (!requestedSlots || requestedSlots.has(slot)));
+    if (sharedSlots.length === 0) return false;
+
+    return sharedSlots.some(slot => {
+        const allowedBySlot = parentItem.allowedAttachmentsBySlot;
+        if (allowedBySlot && Object.prototype.hasOwnProperty.call(allowedBySlot, slot) &&
+            !constraintContainsItem(allowedBySlot[slot], attachmentItem)) {
+            return false;
+        }
+        const deniedBySlot = parentItem.deniedAttachmentsBySlot;
+        if (deniedBySlot && Object.prototype.hasOwnProperty.call(deniedBySlot, slot) &&
+            constraintContainsItem(deniedBySlot[slot], attachmentItem)) {
+            return false;
+        }
+        return true;
+    });
+}
+
+// 복수 슬롯 키 중 하나라도 만족하고 런타임 제약도 통과하는 아이템 목록
+function getItemsForSlotKeys(slotKeys, parentItem = null) {
     const all = getAllDatabaseItems();
     const results = [];
     const seen = new Set();
     const keysSet = new Set(slotKeys);
     for (const item of all) {
         if (item && Array.isArray(item.inventorySlots)) {
-            if (item.inventorySlots.some(s => keysSet.has(s))) {
+            if (item.inventorySlots.some(s => keysSet.has(s)) &&
+                (!parentItem || isRuntimeAttachmentCompatible(parentItem, item, slotKeys))) {
                 if (!seen.has(item.id)) {
                     seen.add(item.id);
                     results.push(item);
@@ -666,7 +726,7 @@ function resetToRootGrid() {
 // 호환 아이템 그리드 표시
 function showSlotGroupAttachments(parentItem, groupName, slotKeys) {
     pushNavState(captureCurrentView());
-    const matchedItems = getItemsForSlotKeys(slotKeys);
+    const matchedItems = getItemsForSlotKeys(slotKeys, parentItem);
     const parentName = parentItem && parentItem.name ? parentItem.name : '';
     const fullTitle = parentName ? `${parentName} > ${groupName}` : groupName;
     showGridView(fullTitle, matchedItems, 'slot_group_' + slotKeys[0], 'attachment');
@@ -699,7 +759,7 @@ function createAttachmentSlotsSection(item) {
     slotsGrid.className = 'attachment-slots-grid';
 
     groupedSlots.forEach(group => {
-        const matchedItems = getItemsForSlotKeys(group.slotKeys);
+        const matchedItems = getItemsForSlotKeys(group.slotKeys, item);
         const count = matchedItems.length;
 
         const btn = document.createElement('button');
@@ -791,7 +851,9 @@ function getCompatibleParentItems(targetItem) {
         const targetSlotsSet = new Set(targetItem.inventorySlots);
         for (const item of allItems) {
             if (!item || item.id === targetItem.id) continue;
-            if (Array.isArray(item.attachmentSlots) && item.attachmentSlots.some(s => targetSlotsSet.has(s))) {
+            if (Array.isArray(item.attachmentSlots) &&
+                item.attachmentSlots.some(s => targetSlotsSet.has(s)) &&
+                isRuntimeAttachmentCompatible(item, targetItem)) {
                 if (!seen.has(item.id)) {
                     seen.add(item.id);
                     parentMatches.push(item);
