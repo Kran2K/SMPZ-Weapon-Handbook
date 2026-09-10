@@ -29097,7 +29097,7 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Muzzle"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "heavy_shotgun",
             "canBePainted": false
         },
         {
@@ -29350,7 +29350,7 @@ const attachmentData = {
             "inventorySlots": [
                 "P90Suppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -29370,7 +29370,7 @@ const attachmentData = {
             "inventorySlots": [
                 "PKMSuppressor"
             ],
-            "subCategory": "pistol_smg_other",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -29457,7 +29457,7 @@ const attachmentData = {
             "inventorySlots": [
                 "RPDMuzzle"
             ],
-            "subCategory": "pistol_smg_other",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -29746,7 +29746,7 @@ const attachmentData = {
             "inventorySlots": [
                 "366Muzzle"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -30302,7 +30302,7 @@ const attachmentData = {
             "inventorySlots": [
                 "AK12Muzzle"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -30323,7 +30323,7 @@ const attachmentData = {
             "inventorySlots": [
                 "AK308Muzzle"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -30435,7 +30435,7 @@ const attachmentData = {
             "inventorySlots": [
                 "ASH12Suppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "heavy_shotgun",
             "canBePainted": false
         },
         {
@@ -30577,7 +30577,7 @@ const attachmentData = {
             "inventorySlots": [
                 "FSSuppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -31046,7 +31046,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -31200,7 +31200,7 @@ const attachmentData = {
             "inventorySlots": [
                 "PKMSuppressor"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -31221,7 +31221,7 @@ const attachmentData = {
             "inventorySlots": [
                 "PKPSuppressor"
             ],
-            "subCategory": "762_ar10",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -31287,7 +31287,7 @@ const attachmentData = {
             "inventorySlots": [
                 "SR1MPSuppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -31307,7 +31307,7 @@ const attachmentData = {
             "inventorySlots": [
                 "SR2MSuppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -31327,7 +31327,7 @@ const attachmentData = {
             "inventorySlots": [
                 "SR3MSuppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "ak",
             "canBePainted": false
         },
         {
@@ -31676,7 +31676,7 @@ const attachmentData = {
             "inventorySlots": [
                 "UCPSuppressor"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "pistol_smg_other",
             "canBePainted": false
         },
         {
@@ -31744,7 +31744,7 @@ const attachmentData = {
             "inventorySlots": [
                 "XM109Muzzle"
             ],
-            "subCategory": "556_ar15",
+            "subCategory": "heavy_shotgun",
             "canBePainted": false
         }
     ],

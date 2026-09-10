@@ -1683,15 +1683,15 @@ def classify_muzzle_type(item_obj):
     if 'multi-caliber' in name or 'multi_caliber' in name or len(inv) >= 3 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
         return 'multi_caliber'
 
-    big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor'}
-    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter'}
-    special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'rpdmuzzle', 'pkmsuppressor'}
+    big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor', 'm200muzzle'}
+    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter', '366muzzle', 'pkmsuppressor', 'rpdmuzzle'}
+    special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'p90suppressor'}
 
-    if any(s in big_slots for s in inv) or '.338' in name or 'm82' in name or '12ga' in name or 'xm109' in name:
+    if any(s in big_slots for s in inv) or '.338' in name or 'm82' in name or '12ga' in name or 'xm109' in name or 'm200' in name:
         return 'heavy_shotgun'
-    if any(s in ak_slots for s in inv) or 'akm' in name or 'ak ' in name or 'zenit dtk' in name:
+    if any(s in ak_slots for s in inv) or 'akm' in name or 'ak ' in name or 'zenit dtk' in name or 'pkm' in name or 'rpd' in name or 'vpo' in name:
         return 'ak'
-    if any(s in special_slots for s in inv) or 'glock' in name or '1911' in name or 'mp7' in name or 'as val' in name or 'rpd' in name or 'pkm' in name:
+    if any(s in special_slots for s in inv) or 'glock' in name or '1911' in name or 'mp7' in name or 'as val' in name or 'p90' in name:
         return 'pistol_smg_other'
     if any(s in ('762suppressor', 'spearsuppressor') for s in inv) or '7.62' in name or 'ar-10' in name or 'm110' in name:
         return '762_ar10'
@@ -1708,23 +1708,23 @@ def classify_suppressor_type(item_obj):
     if 'multi-caliber' in name or 'hybrid 46' in name or len(inv) >= 4 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
         return 'multi_caliber'
 
-    big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor'}
-    if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name:
+    big_slots = {'338muzzle', '338suppressor', 'm107a1muzzle', 'm200muzzle', '12gamuzzle', '300winsuppressor', 'mosinsuppressor', 'sv98suppressor', '308suppressor', 'xm109muzzle', 'ash12suppressor'}
+    if any(s in big_slots for s in inv) or '12ga' in name or '.338' in name or '.50' in name or '.408' in name or 'mosin' in name or 'sv-98' in name or 'msr' in name or 'xm109' in name or 'ash-12' in name or 'ash12' in name:
         return 'heavy_shotgun'
+
+    smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor', 'fssuppressor', 'mp9suppressor', 'sr1mpsuppressor', 'sr2msuppressor', 'ucpsuppressor'}
+    if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name or 'five-seven' in name or 'five seven' in name or 'sfn-57' in name or 'mp9' in name or 'sr-1mp' in name or 'sr1mp' in name or 'sr-2m' in name or 'sr2m' in name or 'ucp' in name:
+        return 'pistol_smg_other'
+
+    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle', 'pkmsuppressor', 'pkpsuppressor', 'ak12muzzle', 'ak308muzzle', '762x54suppressor', 'sr3msuppressor'}
+    if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name or 'ak-12' in name or 'ak12' in name or 'ak-308' in name or 'ak308' in name or 'pkm' in name or 'pkp' in name or 'sr-3m' in name or 'sr3m' in name or '7.62x54' in name:
+        return 'ak'
 
     if '5.56' in name or '556' in name or 'weaponmuzzlem4' in inv or 'augmuzzle' in inv:
         return '556_ar15'
 
-    smg_slots = {'glocksuppressor', 'glocksuppressorsecond', '45acpsuppressor', 'mp7suppressor', 'p90suppressor', 'mpxsd', 'smgsuppressor'}
-    if any(s in smg_slots for s in inv) or 'vityaz' in name or 'glock' in name or 'osprey' in name or 'p90' in name or 'mp7' in name or 'mpx' in name or 'illusion' in name:
-        return 'pistol_smg_other'
-
-    ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'weaponmuzzleak', 'aksuppressor', '366muzzle'}
-    if any(s in ak_slots for s in inv) or 'pbs-' in name or 'wafflemaker' in name or 'rotor 43' in name or 'akm' in name or 'ak-74' in name:
-        return 'ak'
-
-    rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor', 'pkmsuppressor', 'pkpsuppressor'}
-    if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'pkm' in name or 'pkp' in name:
+    rifle_762_slots = {'762suppressor', 'spearsuppressor', 'mcxsuppressor'}
+    if any(s in rifle_762_slots for s in inv) or '7.62' in name or 'sr-25' in name or 'huxwrx' in name or 'srd762' in name or 'm110' in name or 'ar-10' in name:
         return '762_ar10'
 
     return '556_ar15'
