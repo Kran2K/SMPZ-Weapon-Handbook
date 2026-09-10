@@ -678,7 +678,7 @@ def classify_gear(cid):
         return 'chest_rig'
     if cid_lower.startswith('smpz_mask_'):
         return 'mask'
-    if any(k in cid_lower for k in ['visor', 'helmetplate', 'helmetaventail', 'helmetstrap', 'helmetmandible', 'helmetvisor', 'mandible']) or 'respirator' in cid_lower:
+    if any(k in cid_lower for k in ['visor', 'helmetplate', 'helmetaventail', 'helmetstrap', 'helmetmandible', 'helmetvisor', 'mandible']):
         return 'helmet_attachment'
     if any(k in cid_lower for k in ['helmet', 'altyn', 'maska', 'kiver']):
         return 'helmet'

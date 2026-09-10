@@ -11583,53 +11583,6 @@ const gearData = {
             "canBePainted": false
         },
         {
-            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-            "name": "DevTac Ronin Respirator",
-            "category": "helmet_attachment",
-            "description": "",
-            "stats": {
-                "bulletDamageProtection": 85,
-                "bloodDamageProtection": 0,
-                "shockDamageProtection": 80,
-                "hitpoints": 160,
-                "weight": 2
-            },
-            "itemSize": [
-                4,
-                4
-            ],
-            "itemSlots": 16,
-            "inventorySlots": [
-                "Headgear"
-            ],
-            "attachmentSlots": [
-                "NVG",
-                "weaponFlashlightSecond"
-            ],
-            "subCategory": "other",
-            "color": [
-                {
-                    "name": "Black",
-                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-                    "image": "",
-                    "canBePainted": false
-                },
-                {
-                    "name": "Venom",
-                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venom",
-                    "image": "",
-                    "canBePainted": false
-                },
-                {
-                    "name": "White",
-                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venon_White",
-                    "image": "",
-                    "canBePainted": false
-                }
-            ],
-            "canBePainted": false
-        },
-        {
             "id": "SMPZ_Mandible_Caiman_Black",
             "name": "Galvion Caiman Hybrid Ballistic Mandible",
             "category": "helmet_attachment",
@@ -13645,6 +13598,52 @@ const gearData = {
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
+        },
+        {
+            "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
+            "name": "DevTac Ronin Respirator",
+            "category": "helmet",
+            "description": "",
+            "stats": {
+                "bulletDamageProtection": 85,
+                "bloodDamageProtection": 0,
+                "shockDamageProtection": 80,
+                "hitpoints": 160,
+                "weight": 2
+            },
+            "itemSize": [
+                4,
+                4
+            ],
+            "itemSlots": 16,
+            "inventorySlots": [
+                "Headgear"
+            ],
+            "attachmentSlots": [
+                "NVG",
+                "weaponFlashlightSecond"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
+                    "image": "",
+                    "canBePainted": false
+                },
+                {
+                    "name": "Venom",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venom",
+                    "image": "",
+                    "canBePainted": false
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venon_White",
+                    "image": "",
+                    "canBePainted": false
+                }
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin",
