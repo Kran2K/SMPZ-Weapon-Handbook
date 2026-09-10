@@ -926,6 +926,9 @@ def classify_muzzle_type(item_obj):
     inv = [s.lower() for s in item_obj.get('inventorySlots', [])]
     name = item_obj.get('name', '').lower()
 
+    if 'multi-caliber' in name or 'multi_caliber' in name or len(inv) >= 3 or (('762suppressor' in inv or 'spearsuppressor' in inv) and 'weaponmuzzlem4' in inv):
+        return 'multi_caliber'
+
     big_slots = {'338muzzle', 'm107a1muzzle', 'xm109muzzle', '12gamuzzle', '300winsuppressor'}
     ak_slots = {'weaponmuzzleakm', 'weaponmuzzleak74', 'cncadapter', '308adapter'}
     special_slots = {'glocksuppressor', 'm1911ao', 'mp7suppressor', 'asvalmod4jb', 'asvalmod4muzzle', 'rpdmuzzle', 'pkmsuppressor'}

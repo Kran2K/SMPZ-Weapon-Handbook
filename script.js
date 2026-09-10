@@ -2501,7 +2501,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         (categoryKey === 'muzzle_device' || categoryKey === '소염기 / 머즐' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === 'muzzle_device' || it.category === '소염기 / 머즐')));
 
     if (isMuzzleOnlyView) {
-        const muzzleTypes = ['556_ar15', '762_ar10', 'heavy_shotgun', 'pistol_smg_other', 'ak'];
+        const muzzleTypes = ['556_ar15', '762_ar10', 'heavy_shotgun', 'multi_caliber', 'pistol_smg_other', 'ak'];
         container.appendChild(createSubCategoryChipsRow('머즐 규격', 'mzl', muzzleTypes, itemsToCheck));
         return;
     }
