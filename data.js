@@ -2848,6 +2848,18 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_HK416A5",
+                    "image": ""
+                },
+                {
+                    "name": "RAL 8000",
+                    "id": "SMPZ_Weapon_HK416A5_RAL8000",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -3015,6 +3027,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_IWI_TavorX95",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_IWI_TavorX95_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -3174,6 +3198,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_JAKL",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_JAKL_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -4095,6 +4131,28 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MCX_SPEAR",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Weapon_MCX_SPEAR_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Weapon_MCX_SPEAR_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Weapon_MCX_SPEAR_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -4255,6 +4313,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MDR_556",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_MDR_556_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -4343,6 +4413,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MDR_762",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_MDR_762_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -4596,6 +4678,18 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_Masada",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_Masada_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -4728,6 +4822,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_Masada_300BLK",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_Masada_300BLK_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
@@ -5122,165 +5228,6 @@ const weaponsData = {
             "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
             "name": "Radian Weapons Model 1",
             "category": "assault_rifle",
-            "description": "Radian Weapons에서 제조한 Radian Model 1은 5.56x45 NATO 탄약을 수용할 수 있는 AR-15 플랫폼 돌격소총입니다. 이 소총은 전문가용 및 스포츠용으로 신뢰할 수 있고 고품질이며 정확한 시스템으로 자리매김했습니다. 또한, 볼트 홀드-오픈 조작을 보다 빠르고 직관적으로 작동할 수 있도록 설계된 Radian의 ADAC 시스템이 특징입니다. 이 모델에는 완전 자동 기능을 갖춘 Talon 셀렉터가 장착되어 있습니다.",
-            "stats": {
-                "recoil": 102,
-                "sway": 185,
-                "ergonomics": 51,
-                "accuracy": 1.66,
-                "velocityMultiplier": 1.08,
-                "weight": 1801
-            },
-            "itemSize": [
-                9,
-                3
-            ],
-            "itemSlots": 27,
-            "attachmentSlots": [
-                "ARBuffer",
-                "ARChargingHandle",
-                "Rearsight",
-                "weaponOptics",
-                "M4Receiver",
-                "ARpistolgrip",
-                "M4Handguard",
-                "ARGasblock",
-                "weaponWrap",
-                "weaponMuzzleM4"
-            ],
-            "magazines": [
-                "Mag_STANAG_30Rnd",
-                "Mag_STANAGCoupled_30Rnd",
-                "Mag_STANAG_60Rnd",
-                "Mag_CMAG_10Rnd",
-                "Mag_CMAG_20Rnd",
-                "Mag_CMAG_30Rnd",
-                "Mag_CMAG_40Rnd",
-                "SMPZ_Mag_PMAG_556x45_W_30Rnd",
-                "SMPZ_Mag_PMAG_556x45_W_30Rnd_FDE",
-                "SMPZ_Mag_PMAG_556x45_W_30Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG556_60Rnd",
-                "SMPZ_Mag_DrumPMAG556_60Rnd_UCP",
-                "SMPZ_Mag_SCAR_L_30Rnd",
-                "SMPZ_Mag_SCAR_L_30Rnd_Black",
-                "SMPZ_Mag_PM2_30Rnd",
-                "SMPZ_Mag_STANAG_30Rnd",
-                "SMPZ_Mag_STANAG_20Rnd",
-                "SMPZ_Mag_STANAG_60Rnd",
-                "SMPZ_Mag_STANAG_M855A1_60Rnd",
-                "SMPZ_Mag_STANAG_M995_60Rnd",
-                "SMPZ_Mag_STANAG_SSAAP_60Rnd",
-                "SMPZ_Mag_STANAG_AP45_60Rnd",
-                "SMPZ_Mag_STANAG_100Rnd",
-                "SMPZ_Mag_Beta_CMAG_556_100Rnd",
-                "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
-                "SMPZ_Mag_Daniel_Defense_X_556_37Rnd_FDE",
-                "SMPZ_Mag_TROY_BattleMag_STANAG_30Rnd",
-                "SMPZ_Mag_HK_Steel_STANAG_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_556_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_M855A1_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_M995_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_SSAAP_30Rnd",
-                "SMPZ_Mag_L5AWM_556_30Rnd",
-                "SMPZ_Mag_L5AWM_556_M855A1_30Rnd",
-                "SMPZ_Mag_L5AWM_556_M995_30Rnd",
-                "SMPZ_Mag_L5AWM_556_SSAAP_30Rnd",
-                "SMPZ_Mag_PMAG_40Rnd",
-                "SMPZ_Mag_PMAG_M855A1_40Rnd",
-                "SMPZ_Mag_PMAG_M995_40Rnd",
-                "SMPZ_Mag_PMAG_300BLK_M62_Tracer_40Rnd",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_40Rnd",
-                "SMPZ_Mag_PMAG_300BLK_AP_40Rnd",
-                "SMPZ_Mag_PMAG_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_M855A1_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_M995_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_M62_Tracer_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_AP_40Rnd_FDE",
-                "SMPZ_Mag_TROY_BattleMag_STANAG_M62_Tracer_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_300BLK_M62_Tracer_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_300BLK_CBJ_30Rnd",
-                "SMPZ_Mag_HK_MR556_STANAG_300BLK_AP_30Rnd",
-                "SMPZ_Mag_PM2_300_Whisper_30Rnd",
-                "SMPZ_Mag_PM2_300_VMAX_30Rnd",
-                "SMPZ_Mag_PM2_300_BCP_FMJ_30Rnd",
-                "SMPZ_Mag_PM2_300_M62_Tracer_30Rnd",
-                "SMPZ_Mag_PM2_300_CBJ_30Rnd",
-                "SMPZ_Mag_PM2_300_AP_30Rnd",
-                "SMPZ_Mag_PMAG_300BLK_30Rnd",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_30Rnd",
-                "SMPZ_Mag_PMAG_300BLK_AP_30Rnd",
-                "SMPZ_Mag_PMAG_300BLK_30Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_30RndFDE",
-                "SMPZ_Mag_PMAG_300BLK_AP_30RndFDE",
-                "SMPZ_Mag_PMAG_300BLK_30Rnd_UCP",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_30Rnd_UCP",
-                "SMPZ_Mag_PMAG_300BLK_AP_30Rnd_UCP",
-                "SMPZ_Mag_PMAG_300BLK_M62_Tracer_40Rnd",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_40Rnd",
-                "SMPZ_Mag_PMAG_300BLK_AP_40Rnd",
-                "SMPZ_Mag_PMAG_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_M62_Tracer_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_CBJ_40Rnd_FDE",
-                "SMPZ_Mag_PMAG_300BLK_AP_40Rnd_FDE",
-                "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd_UCP",
-                "SMPZ_Mag_DrumPMAG300_AP_60Rnd",
-                "SMPZ_Mag_DrumPMAG300_AP_60Rnd_UCP",
-                "SMPZ_Mag_STANAG_300BLK_30Rnd",
-                "SMPZ_Mag_STANAG_300BLK_60Rnd",
-                "SMPZ_Mag_STANAG_300BLK_CBJ_60Rnd",
-                "SMPZ_Mag_STANAG_300BLK_AP_60Rnd",
-                "SMPZ_Mag_STANAG_300BLK_100Rnd",
-                "SMPZ_Mag_Beta_CMAG_300BLK_100Rnd",
-                "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd",
-                "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd_FDE",
-                "SMPZ_Mag_L5AWM_300BLK_M62_Tracer_30Rnd",
-                "SMPZ_Mag_L5AWM_300BLK_CBJ_30Rnd",
-                "SMPZ_Mag_L5AWM_300BLK_AP_30Rnd"
-            ],
-            "chamberableFrom": [
-                "Ammo_556x45",
-                "Ammo_556x45Tracer",
-                "SMPZ_Ammo_556x45_Warmageddon",
-                "SMPZ_Ammo_556x45_HP",
-                "SMPZ_Ammo_556x45_MK255",
-                "SMPZ_Ammo_556x45_M856",
-                "SMPZ_Ammo_556x45_FMJ",
-                "SMPZ_Ammo_556x45_M855",
-                "SMPZ_Ammo_556x45_MK318",
-                "SMPZ_Ammo_556x45_M856A1",
-                "SMPZ_Ammo_556x45_M855A1",
-                "SMPZ_Ammo_556x45_M995",
-                "SMPZ_Ammo_556x45_SSAAP",
-                "SMPZ_Ammo_556x45_AP45",
-                "SMPZ_Ammo_300BLK_Whisper",
-                "SMPZ_Ammo_300BLK_VMAX",
-                "SMPZ_Ammo_300BLK_BCP_FMJ",
-                "SMPZ_Ammo_300BLK_M62_Tracer",
-                "SMPZ_Ammo_300BLK_CBJ",
-                "SMPZ_Ammo_300BLK_AP"
-            ],
-            "calibers": [
-                "5.56x45mm"
-            ],
-            "modes": [
-                "SemiAuto",
-                "FullAuto"
-            ]
-        },
-        {
-            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_Multicam",
-            "name": "Radian Weapons Model 1 (Multicam)",
-            "category": "assault_rifle",
             "description": "Radian Weapons에서 제작한 Radian Model 1은 5.56x45 NATO탄을 사용하는 AR-15 플랫폼 돌격 소총입니다. 이 라이플은 전문가 및 스포츠 용도를 위한 신뢰성이 높고 고품질의 정확한 시스템으로 평가됩니다. 또한 Radian의 ADAC 시스템이 채택되어 있어 노리쇠 후퇴 고정 조작을 보다 신속하고 직관적으로 수행할 수 있도록 설계되었습니다. 이 시스템의 핵심은 오른손 검지 만으로 탄창 멈치와 노리쇠 멈치를 동시에 조작할 수 있다는 점입니다. 특히 탄 걸림(기능 고장) 발생 시, 사격 자세를 유지한 채 최소한의 움직임으로 안전하게 약실을 개방할 수 있어 극한의 전술 상황에서 진가가 발휘됩니다. 또한, 완전한 양손잡이(Ambidextrous) 설계로 왼손잡이 유저도 불편함 없이 모든 조작이 가능합니다. 이 모델은 풀 오토 기능을 갖춘 Talon 조정간이 탑재되어 있습니다.",
             "stats": {
                 "recoil": 102,
@@ -5435,6 +5382,23 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -5501,7 +5465,7 @@ const weaponsData = {
         },
         {
             "id": "SMPZ_Weapon_SCAR_H",
-            "name": "FN SCAR-H (FDE)",
+            "name": "FN SCAR-H",
             "category": "assault_rifle",
             "description": "미국 특수작전사령부가 Mk 17이라는 이름으로 채택한 7.62x51 NATO 구경의 FN SCAR-H(특수작전부대 전투돌격소총 - 중)입니다. 이 소총에는 접이식 폴리머 개머리판과 경질 크롬 도금 보어가 있는 자유 부동 냉간 해머 단조 배럴이 장착되어 있습니다. 완전 양손잡이 제어 기능을 통해 사수는 소총을 어떤 발사 위치에도 맞출 수 있습니다. 통합된 수신기 레일과 3개의 보조 레일을 통해 다양한 광학 조준경, 시준기, 전술 조명 및 레이저를 설치할 수 있습니다. Fabrique Nationale Herstal이 제작했습니다.",
             "stats": {
@@ -5606,13 +5570,25 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_SCAR_H",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Weapon_SCAR_H_Black",
+                    "image": ""
+                }
+            ],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
         },
         {
             "id": "SMPZ_Weapon_SCAR_L",
-            "name": "FN SCAR-L (FDE)",
+            "name": "FN SCAR-L",
             "category": "assault_rifle",
             "description": "5.56x45 NATO 구경의 FN SCAR-L(특수 작전 부대 전투 돌격 소총 - 경)은 미국 특수 작전 사령부가 Mk 16이라는 이름으로 채택했습니다. 이 소총에는 접이식 폴리머 개머리판과 경질 크롬 도금 보어가 있는 자유 부동 냉간 해머 단조 배럴이 장착되어 있습니다. 완전 양손잡이 제어 기능을 통해 사수는 소총을 어떤 발사 위치에도 맞출 수 있습니다. 통합된 수신기 레일과 3개의 보조 레일을 통해 다양한 광학 조준경, 시준기, 전술 조명 및 레이저를 설치할 수 있습니다. Fabrique Nationale Herstal이 제작했습니다.",
             "stats": {
@@ -5771,6 +5747,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_SCAR_L",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Weapon_SCAR_L_Black",
+                    "image": ""
+                }
             ],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
@@ -6301,7 +6289,7 @@ const weaponsData = {
         },
         {
             "id": "SMPZ_Weapon_ATXC",
-            "name": "Accuracy International AT-XC (Black)",
+            "name": "Accuracy International AT-XC",
             "category": "sniper_rifle",
             "description": "7.62x51mm 크기의 챔버",
             "stats": {
@@ -6354,6 +6342,23 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Weapon_ATXC",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_ATXC_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Weapon_ATXC_Red",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -6398,6 +6403,23 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_AVT40",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Weapon_AVT40_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Weapon_AVT40_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
@@ -7610,6 +7632,23 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_SVT40",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Weapon_SVT40_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Weapon_SVT40_SURPAT",
+                    "image": ""
+                }
+            ],
             "image": "assets/svt.png",
             "images": [
                 "assets/svt.png"
@@ -7657,6 +7696,18 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_TRG_M10",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Weapon_TRG_M10_UCP",
+                    "image": ""
+                }
             ],
             "manufacturer": "Sako",
             "manufacturerLogo": "assets/sako-logo.png",
@@ -8006,6 +8057,18 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_FiveSevenMK2",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_FiveSevenMK2_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
@@ -8389,7 +8452,7 @@ const weaponsData = {
     "submachine_gun": [
         {
             "id": "SMPZ_Weapon_KRISS_Vector_Black",
-            "name": "TDI KRISS Vector Gen 2 Black",
+            "name": "TDI KRISS Vector Gen 2",
             "category": "submachine_gun",
             "description": "9x19mm 크기의 챔버",
             "stats": {
@@ -8438,55 +8501,18 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
-            ]
-        },
-        {
-            "id": "SMPZ_Weapon_KRISS_Vector_FDE",
-            "name": "TDI KRISS Vector Gen 2 FDE",
-            "category": "submachine_gun",
-            "description": "9x19mm 크기의 챔버",
-            "stats": {
-                "recoil": 55,
-                "sway": 95,
-                "ergonomics": 76,
-                "accuracy": 0.65,
-                "velocityMultiplier": 1.15,
-                "weight": 1620
-            },
-            "itemSize": [
-                6,
-                3
             ],
-            "itemSlots": 18,
-            "attachmentSlots": [
-                "ARBuffer",
-                "VectorStock",
-                "Rearsight",
-                "weaponOptics",
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "GlockSuppressor",
-                "weaponWrap"
-            ],
-            "magazines": [
-                "SMPZ_Mag_Glock_17Rnd",
-                "SMPZ_Mag_Glock_33Rnd",
-                "SMPZ_Mag_Glock_Drum_50Rnd"
-            ],
-            "chamberableFrom": [
-                "Ammo_9x19",
-                "SMPZ_Ammo_9x19_AP63"
-            ],
-            "calibers": [
-                "9x19mm"
-            ],
-            "modes": [
-                "SemiAuto",
-                "Burst",
-                "FullAuto"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Weapon_KRISS_Vector_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_KRISS_Vector_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -8646,6 +8672,18 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MP7A2",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_MP7A2_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
@@ -9081,6 +9119,18 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_M60E6",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Weapon_M60E6_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -9358,7 +9408,7 @@ const gearData = {
     "backpack": [
         {
             "id": "SMPZ_Backpack_511_Tactical_RUSH100_Black",
-            "name": "5.11 Tactical RUSH 100 Backpack (Black)",
+            "name": "5.11 Tactical RUSH 100 Backpack",
             "category": "backpack",
             "description": "미국의 유명 전술 장비 제조사 5.11 Tactical에서 제작한 대용량 군용 백팩입니다. 견고한 500D 나일론 소재와 알루미늄 프레임을 채택하여 최대 60리터의 짐을 안정적으로 지탱하며, 전신에 배치된 몰리(MOLLE) 시스템으로 높은 확장성을 자랑합니다. 특히 하단의 침낭 보관함과 탈부착 가능한 측면 파우치는 장기 생존 임무에 최적화된 설계를 보여줍니다. 거친 환경에서도 형태가 무너지지 않는 이 배낭은,\n어떠한 위기 속에서도 사용자의 생존을 끝까지 책임질 든든한 동반자입니다.",
             "stats": {
@@ -9378,6 +9428,53 @@ const gearData = {
             "inventorySlots": [
                 "Back"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_511_Tactical_RUSH100_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "5.11 Tactical",
             "manufacturerLogo": "assets/511tac-logo.png",
             "manufacturerUrl": "https://www.511tactical.com/",
@@ -9388,7 +9485,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Backpack_6Sh118_Black",
-            "name": "6Sh118 Raid Backpack (Black)",
+            "name": "6Sh118 Raid Backpack",
             "category": "backpack",
             "description": "러시아군 차세대 보병 체계인 '라트니크(Ratnik)'의 제식 대형 배낭입니다. 최대 120리터에 달하는 압도적인 용량을 자랑하며, 장거리 정찰 및 대규모 물자 수송 임무에 최적화되어 있습니다. 내구성이 뛰어난 강철 프레임과 하중 분산 설계 덕분에 무거운 짐을 메고도 안정적인\n기동이 가능합니다.",
             "stats": {
@@ -9408,6 +9505,63 @@ const gearData = {
             "inventorySlots": [
                 "Back"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_6Sh118_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Backpack_6Sh118_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Backpack_6Sh118_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_6Sh118_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_6Sh118_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_6Sh118_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_6Sh118_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_6Sh118_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_6Sh118_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_6Sh118_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Backpack_6Sh118_ISB",
+                    "image": ""
+                }
+            ],
             "image": "assets/6sh118.png",
             "images": [
                 "assets/6sh118.png",
@@ -9421,7 +9575,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Backpack_F4_Terminator_Black",
-            "name": "Eberlestock F4 Terminator Load Bearing Backpack - Black",
+            "name": "Eberlestock F4 Terminator Load Bearing Backpack",
             "category": "backpack",
             "description": "미국의 전술 장비 제조사인 Eberlestock에서 개발한 장거리 정찰 및 저격 작전용 초대형 백팩입니다. '터미네이터(Terminator)'라는\n이름처럼 단독으로 장기간 생존하며 임무를 수행하는 저격수와 정찰병에게 최적화된 장비입니다. 최대 100리터 이상의 압도적인\n수납 용량을 자랑하며, 모든 보급품과 저격 소총까지 안전하게 운반할 수 있습니다.",
             "stats": {
@@ -9441,6 +9595,23 @@ const gearData = {
             "inventorySlots": [
                 "Back"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_F4_Terminator_Black",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Backpack_F4_Terminator_HUNCAM",
+                    "image": ""
+                },
+                {
+                    "name": "Vz95",
+                    "id": "SMPZ_Backpack_F4_Terminator_Vz95",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Eberlestock",
             "manufacturerLogo": "assets/eberlestock-logo.png",
             "manufacturerUrl": "https://eberlestock.com/",
@@ -9453,7 +9624,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Backpack_F5_SwitchBlade_DryEarth",
-            "name": "F5 SwitchBlade Backpack - DryEarth",
+            "name": "F5 SwitchBlade Backpack",
             "category": "backpack",
             "description": "미국의 아웃도어 및 전술 장비 전문 제조사인 Eberlestock에서 개발한 컴팩트 전술 배낭입니다.\n이름인 '스위치블레이드(Switchblade)'처럼 민첩성과 빠른 접근성에 중점을 두고 설계되었습니다.\n군용이나 장거리 레이드용 대형 배낭보다는, 은밀한 정찰, 저격 임무 또는 단기 생존 작전에 최적화된 모델입니다.",
             "stats": {
@@ -9475,11 +9646,38 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "PatchLarge"
+            ],
+            "color": [
+                {
+                    "name": "Dry Earth",
+                    "id": "SMPZ_Backpack_F5_SwitchBlade_DryEarth",
+                    "image": ""
+                },
+                {
+                    "name": "Lizard",
+                    "id": "SMPZ_Backpack_F5_SwitchBlade_Lizard",
+                    "image": ""
+                },
+                {
+                    "name": "MultiTarn",
+                    "id": "SMPZ_Backpack_F5_SwitchBlade_Multitarn",
+                    "image": ""
+                },
+                {
+                    "name": "Centre Europe",
+                    "id": "SMPZ_Backpack_F5_SwitchBlade_CetreEurope",
+                    "image": ""
+                },
+                {
+                    "name": "Badlands",
+                    "id": "SMPZ_Backpack_F5_SwitchBlade_Badlands",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Backpack_Blackjack50_Black",
-            "name": "Mystery Ranch Blackjack 50 Backpack (Black)",
+            "name": "Mystery Ranch Blackjack 50 Backpack",
             "category": "backpack",
             "description": "미국 미군 특수부대(USSOCOM)의 요구 사항에 맞춰 개발된 대용량 전술 배낭입니다. 매우 튼튼한 소재와 하중 분산 기술로 유명하며, 거친 환경에서도 장비를 안정적으로 운반할 수 있습니다. 메인 수납공간은 지퍼를 통해 빠르게 열 수 있어 물품 접근성이 뛰어납니다.",
             "stats": {
@@ -9503,6 +9701,53 @@ const gearData = {
                 "Shoulder",
                 "PatchLarge"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_Blackjack50_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_Blackjack50_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Backpack_Blackjack50_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_Blackjack50_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_Blackjack50_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_Blackjack50_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_Blackjack50_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_Blackjack50_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_Blackjack50_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/",
@@ -9517,7 +9762,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Backpack_SATL_Foliage",
-            "name": "Mystery Ranch SATL Bridger Assault Pack - Foliage",
+            "name": "Mystery Ranch SATL Bridger Assault Pack",
             "category": "backpack",
             "description": "미국 특수작전사령부(USSOCOM)의 표준 장비로 채택되어 오랜 기간 전장에서 검증된 전설적인 공격용 배낭입니다.\n특수부대원들이 공수 작전과 장거리 정찰 시 필요한 탄약과 보급품을 효율적으로 운반할 수 있도록 설계되었습니다.",
             "stats": {
@@ -9541,13 +9786,40 @@ const gearData = {
                 "Shoulder",
                 "PatchLarge"
             ],
+            "color": [
+                {
+                    "name": "Foliage",
+                    "id": "SMPZ_Backpack_SATL_Foliage",
+                    "image": ""
+                },
+                {
+                    "name": "Coyote",
+                    "id": "SMPZ_Backpack_SATL_Coyote",
+                    "image": ""
+                },
+                {
+                    "name": "ESTDCU",
+                    "id": "SMPZ_Backpack_SATL_ESTDCU",
+                    "image": ""
+                },
+                {
+                    "name": "GreenZone",
+                    "id": "SMPZ_Backpack_SATL_GreenZone",
+                    "image": ""
+                },
+                {
+                    "name": "M05",
+                    "id": "SMPZ_Backpack_SATL_M05",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/"
         },
         {
             "id": "SMPZ_Backpack_2Day_AssaultPack_Black",
-            "name": "Mystery Ranch 2 Day Assault Pack (Black)",
+            "name": "Mystery Ranch 2 Day Assault Pack",
             "category": "backpack",
             "description": "",
             "stats": {
@@ -9570,13 +9842,60 @@ const gearData = {
             "attachmentSlots": [
                 "Pouch_IFAK"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_2Day_AssaultPack_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/"
         },
         {
             "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Black",
-            "name": "Hazard 4 Takedown Sling Backpack (Black)",
+            "name": "Hazard 4 Takedown Sling Backpack",
             "category": "backpack",
             "description": "",
             "stats": {
@@ -9602,11 +9921,53 @@ const gearData = {
                 "PatchLarge",
                 "WalkieTalkie",
                 "Chemlight"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Black",
-            "name": "Tasmanian Tiger Trooper 35 Backpack (Black)",
+            "name": "Tasmanian Tiger Trooper 35 Backpack",
             "category": "backpack",
             "description": "",
             "stats": {
@@ -9632,13 +9993,70 @@ const gearData = {
                 "PatchLarge",
                 "WalkieTalkie",
                 "Chemlight"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Black",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Khaki",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "Flecktarn",
+                    "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Flecktarn",
+                    "image": ""
+                }
             ]
         }
     ],
     "chest_rig": [
         {
             "id": "SMPZ_ChestRig_LBT1961A_Gray",
-            "name": "LBT-1961A Load Bearing Chest Rig (MAS Gray)",
+            "name": "LBT-1961A Load Bearing Chest Rig",
             "category": "chest_rig",
             "description": "런던 브리지 트레이딩(London Bridge Trading)에서 제조",
             "stats": {
@@ -9660,11 +10078,78 @@ const gearData = {
             "itemSlots": 20,
             "inventorySlots": [
                 "ChestRig"
+            ],
+            "color": [
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_ChestRig_LBT1961A_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_ChestRig_LBT1961A_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_ChestRig_LBT1961A_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_ChestRig_LBT1961A_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_ChestRig_LBT1961A_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_ChestRig_LBT1961A_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_ChestRig_LBT1961A_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_ChestRig_LBT1961A_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_ChestRig_LBT1961A_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_ChestRig_LBT1961A_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_ChestRig_LBT1961A_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_ChestRig_LBT1961A_ISB",
+                    "image": ""
+                },
+                {
+                    "name": "ISB V2",
+                    "id": "SMPZ_ChestRig_LBT1961A_ISB_V2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_ChestRig_Triton_M43A_Black",
-            "name": "Dynaforce Triton M43-A Chest Harness (Black)",
+            "name": "Dynaforce Triton M43-A Chest Harness",
             "category": "chest_rig",
             "description": "다이나포스에서 제조",
             "stats": {
@@ -9686,11 +10171,73 @@ const gearData = {
             "itemSlots": 20,
             "inventorySlots": [
                 "ChestRig"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_ChestRig_Triton_M43A_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_ChestRig_Triton_M43A_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_ChestRig_Triton_M43A_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_ChestRig_Triton_M43A_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_ChestRig_Triton_M43A_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_ChestRig_Triton_M43A_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_ChestRig_Triton_M43A_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
-            "name": "ANA Tactical Alpha Chest Rig (Olive Drab)",
+            "name": "ANA Tactical Alpha Chest Rig",
             "category": "chest_rig",
             "description": "ANA Tactical에서 제조",
             "stats": {
@@ -9712,11 +10259,58 @@ const gearData = {
             "itemSlots": 30,
             "inventorySlots": [
                 "ChestRig"
+            ],
+            "color": [
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "A-TACS AU",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_ATACS_AU",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_UCP",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
-            "name": "WARTECH MK3 TV-104 Chest Rig - Multicam",
+            "name": "WARTECH MK3 TV-104 Chest Rig",
             "category": "chest_rig",
             "description": "제조사: WARTECH",
             "stats": {
@@ -9738,11 +10332,23 @@ const gearData = {
             "itemSlots": 20,
             "inventorySlots": [
                 "ChestRig"
+            ],
+            "color": [
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "Moss",
+                    "id": "SMPZ_ChestRig_WARTECH_MK3_Moss",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_ChestRig_PoyasAB_Green",
-            "name": "Poyas-A + Poyas-B Gear Chest Rig (Green)",
+            "name": "Poyas-A + Poyas-B Gear Chest Rig",
             "category": "chest_rig",
             "description": "",
             "stats": {
@@ -9764,6 +10370,68 @@ const gearData = {
             "itemSlots": 30,
             "inventorySlots": [
                 "ChestRig"
+            ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_ChestRig_PoyasAB_Green",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_ChestRig_PoyasAB_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_ChestRig_PoyasAB_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_ChestRig_PoyasAB_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_ChestRig_PoyasAB_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_ChestRig_PoyasAB_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_ChestRig_PoyasAB_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_ChestRig_PoyasAB_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_ChestRig_PoyasAB_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_ChestRig_PoyasAB_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_ChestRig_PoyasAB_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_ChestRig_PoyasAB_AOR2",
+                    "image": ""
+                }
             ]
         }
     ],
@@ -9829,11 +10497,28 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_CQCM",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Mask_CQCM_White",
+                    "image": ""
+                },
+                {
+                    "name": "Skull",
+                    "id": "SMPZ_Mask_CQCM_Skull",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Mask_DeathShadow_Black",
-            "name": "Death Shadow Airsoft Mask (Black)",
+            "name": "Death Shadow Airsoft Mask",
             "category": "mask",
             "description": "",
             "stats": {
@@ -9850,11 +10535,43 @@ const gearData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mask_DeathShadow_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Mask_DeathShadow_White",
+                    "image": ""
+                },
+                {
+                    "name": "Gold",
+                    "id": "SMPZ_Mask_DeathShadow_Gold",
+                    "image": ""
+                },
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_Mask_DeathShadow_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_DeathShadow_Cultist",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Mask_DeathShadow_ISB",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Mask_HalfMask_Black",
-            "name": "Half-Mask (Black)",
+            "name": "Half-Mask",
             "category": "mask",
             "description": "",
             "stats": {
@@ -9871,6 +10588,63 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mask_HalfMask_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mask_HalfMask_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mask_HalfMask_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mask_HalfMask_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mask_HalfMask_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mask_HalfMask_M81",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Mask_HalfMask_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Mask_HalfMask_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Mask_HalfMask_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Mask_HalfMask_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mask_HalfMask_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
@@ -9892,11 +10666,28 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_Ghost_Half",
+                    "image": ""
+                },
+                {
+                    "name": "Skull",
+                    "id": "SMPZ_Mask_Ghost_Half_Skull",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_Ghost_Half_Skull2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Mask_M53A1_GasMask",
-            "name": "Avon M53A1 Gas Mask (Black)",
+            "name": "Avon M53A1 Gas Mask",
             "category": "mask",
             "description": "Avon Protection 사의 M53A1 방독면은 JSGPM(Joint Service General Purpose Mask, 통합 서비스 범용 마스크) 프로그램에 따라 개발되었습니다. 이 제품은 다양한 환경에서 가볍고 편안한 디자인을 유지하면서도, 특수 작전 부대원들에게 CBRN(화학·생물·방사능·핵) 위협으로부터 최대한의 보호를 제공하기 위해 제작되었습니다.",
             "stats": {
@@ -9908,6 +10699,48 @@ const gearData = {
             },
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_M53A1_GasMask",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mask_M53A1_GasMask_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mask_M53A1_GasMask_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mask_M53A1_GasMask_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mask_M53A1_GasMask_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mask_M53A1_GasMask_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mask_M53A1_GasMask_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mask_M53A1_GasMask_AOR2",
+                    "image": ""
+                }
             ],
             "manufacturer": "Avon Protection",
             "manufacturerLogo": "assets/avon-logo.png",
@@ -9938,6 +10771,98 @@ const gearData = {
             "inventorySlots": [
                 "Mask"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_Momex_Balaclava",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_Momex_Balaclava_ATACS_Arid",
+                    "image": ""
+                },
+                {
+                    "name": "Forest Green",
+                    "id": "SMPZ_Mask_Momex_Balaclava_ATACS_FG",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Mask_Momex_Balaclava_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Mask_Momex_Balaclava_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mask_Momex_Balaclava_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mask_Momex_Balaclava_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Mask_Momex_Balaclava_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Mask_Momex_Balaclava_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Mask_Momex_Balaclava_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "Skull",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Skull",
+                    "image": ""
+                },
+                {
+                    "name": "Venom Tooth",
+                    "id": "SMPZ_Mask_Momex_Balaclava_Venom_Tooth",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mask_Momex_Balaclava_AOR2",
+                    "image": ""
+                }
+            ],
             "image": "assets/momex.png",
             "images": [
                 "assets/momex.png",
@@ -9946,7 +10871,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Mask_Samurai_Half_Black",
-            "name": "DevTac Samurai Menpo Half-Mask - Black",
+            "name": "DevTac Samurai Menpo Half-Mask",
             "category": "mask",
             "description": "",
             "stats": {
@@ -9963,11 +10888,33 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mask_Samurai_Half_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Mask_Samurai_Half_White",
+                    "image": ""
+                },
+                {
+                    "name": "Gold",
+                    "id": "SMPZ_Mask_Samurai_Half_Gold",
+                    "image": ""
+                },
+                {
+                    "name": "Violet",
+                    "id": "SMPZ_Mask_Samurai_Half_Violet",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator",
-            "name": "Gentex Ops-Core SOTR Respirator (Black)",
+            "name": "Gentex Ops-Core SOTR Respirator",
             "category": "mask",
             "description": "Gentex에서 제작한 SOTR 호흡기는 지상 작전 전용으로 개발되었으며, 위험한 공중 유해 화합물 및 입자로부터 작업자를 보호하기 위해\n설계되었습니다. 이 제품은 납, 석면, 윤활유, 가연성 물질의 연기 등 대부분의 유해 입자에 대해 신뢰할 수 있는 여과 기능을 제공합니다.",
             "stats": {
@@ -9984,6 +10931,48 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_AOR2",
+                    "image": ""
+                }
             ],
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
@@ -10014,7 +11003,7 @@ const gearData = {
     "helmet_attachment": [
         {
             "id": "SMPZ_HelmetPlate_Trooper_Black",
-            "name": "Galac-Tac Armor Mandalorian Helmet Mask (Black)",
+            "name": "Galac-Tac Armor Mandalorian Helmet Mask",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10035,11 +11024,33 @@ const gearData = {
             "attachmentSlots": [
                 "NVG"
             ],
-            "subCategory": "armor_plate"
+            "subCategory": "armor_plate",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_HelmetPlate_Trooper_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_HelmetPlate_Trooper_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_HelmetPlate_Trooper_OD",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_HelmetPlate_Trooper_LoneWolf",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_Altyn_Green",
-            "name": "Altyn Helmet Face Shield (Green)",
+            "name": "Altyn Helmet Face Shield",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10057,11 +11068,88 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Visor_Altyn_Green",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Visor_Altyn_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Visor_Altyn_White",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Visor_Altyn_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Visor_Altyn_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Visor_Altyn_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Visor_Altyn_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Visor_Altyn_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Visor_Altyn_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Visor_Altyn_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Visor_Altyn_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Visor_Altyn_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Visor_Altyn_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Visor_Altyn_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Visor_Altyn_AOR2",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_RYS_T_Black",
-            "name": "Rys-T Helmet Face Shield (Black)",
+            "name": "Rys-T Helmet Face Shield",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10079,11 +11167,18 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Visor_RYS_T_Black",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-            "name": "DevTac Ronin Respirator (Black)",
+            "name": "DevTac Ronin Respirator",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10105,11 +11200,28 @@ const gearData = {
                 "NVG",
                 "weaponFlashlightSecond"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Venom",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venom",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venon_White",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Mandible_Caiman_Black",
-            "name": "Galvion Caiman Hybrid Ballistic Mandible (Black)",
+            "name": "Galvion Caiman Hybrid Ballistic Mandible",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10126,11 +11238,73 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "subCategory": "mandible"
+            "subCategory": "mandible",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mandible_Caiman_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Mandible_Caiman_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Mandible_Caiman_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Mandible_Caiman_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mandible_Caiman_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mandible_Caiman_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mandible_Caiman_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mandible_Caiman_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mandible_Caiman_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mandible_Caiman_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Mandible_Caiman_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mandible_Caiman_AOR2",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Mandible_NeoSteel_Black",
-            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible (Black)",
+            "name": "Diamond Age NeoSteel Helmet Ballistic Mandible",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10147,11 +11321,78 @@ const gearData = {
             "inventorySlots": [
                 "Mandible"
             ],
-            "subCategory": "mandible"
+            "subCategory": "mandible",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mandible_NeoSteel_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Shark",
+                    "id": "SMPZ_Mandible_NeoSteel_Shark",
+                    "image": ""
+                },
+                {
+                    "name": "Skull",
+                    "id": "SMPZ_Mandible_NeoSteel_Skull",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mandible_NeoSteel_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mandible_NeoSteel_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mandible_NeoSteel_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mandible_NeoSteel_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mandible_NeoSteel_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Mandible_NeoSteel_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Mandible_NeoSteel_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mandible_NeoSteel_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Mandible_NeoSteel_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Mandible_NeoSteel_MARPAT_Desert",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Mandible_OpsCore_FAST_Black",
-            "name": "Ops-Core FAST Gunsight Mandible (Black)",
+            "name": "Ops-Core FAST Gunsight Mandible",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10170,13 +11411,60 @@ const gearData = {
                 "Mandible"
             ],
             "subCategory": "mandible",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mandible_OpsCore_FAST_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
-            "name": "Crye Precision AirFrame Chops (Black)",
+            "name": "Crye Precision AirFrame Chops",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10195,13 +11483,40 @@ const gearData = {
                 "Mandible"
             ],
             "subCategory": "mandible",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_M81",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
         },
         {
             "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-            "name": "Crye Precision AirFrame M-LOK Chops (Black)",
+            "name": "Crye Precision AirFrame M-LOK Chops",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10220,6 +11535,43 @@ const gearData = {
                 "AFMLOKChops"
             ],
             "subCategory": "mandible",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_OD",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
@@ -10244,11 +11596,83 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Visor_Maska_Green",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Visor_Maska_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Visor_Maska_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Visor_Maska_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Visor_Maska_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Visor_Maska_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Visor_Maska_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Visor_Maska_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Visor_Maska_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Visor_Maska_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Visor_Maska_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Visor_Maska_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "Killa",
+                    "id": "SMPZ_Visor_Maska_Killa",
+                    "image": ""
+                },
+                {
+                    "name": "Killa White",
+                    "id": "SMPZ_Visor_Maska_Killa_White",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
-            "name": "ZSh-1-2M Face Shield (Black)",
+            "name": "ZSh-1-2M Face Shield",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10265,7 +11689,69 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Visor_ZSH12M_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_Visor_ZSH12M_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Visor_ZSH12M_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Visor_ZSH12M_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Visor_ZSH12M_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Visor_ZSH12M_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Visor_ZSH12M_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Visor_ZSH12M_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Visor_ZSH12M_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Visor_ZSH12M_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Visor_ZSH12M_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Visor_ZSH12M_SURPAT",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_Vulkan",
@@ -10286,7 +11772,19 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Visor_Vulkan",
+                    "image": ""
+                },
+                {
+                    "name": "Winter Camo",
+                    "id": "SMPZ_Visor_Vulkan_WinterCamo",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -10359,7 +11857,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
-            "name": "Team Wendy Exfil Face Shield (Black)",
+            "name": "Team Wendy Exfil Face Shield",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10377,11 +11875,53 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Coyote",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Coyote",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Visor_TeamWendy_Exfil_AOR2",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
-            "name": "NPP KIASS Tor2 Face Shield (Olive Drab)",
+            "name": "NPP KIASS Tor2 Face Shield",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10399,7 +11939,54 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "color": [
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Visor_NPP_KIASS_Tor2_M81",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Visor_Caiman",
@@ -10425,7 +12012,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
-            "name": "Ops-Core SLAAP Armor Helmet Plate (FDE)",
+            "name": "Ops-Core SLAAP Armor Helmet Plate",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10446,6 +12033,58 @@ const gearData = {
                 "NVG"
             ],
             "subCategory": "armor_plate",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Green",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Green",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -10522,7 +12161,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_HelmetPlate_Caiman_Gray",
-            "name": "Galvion Caiman Hybrid Ballistic Applique (Gray)",
+            "name": "Galvion Caiman Hybrid Ballistic Applique",
             "category": "helmet_attachment",
             "description": "",
             "stats": {
@@ -10543,13 +12182,75 @@ const gearData = {
             "attachmentSlots": [
                 "NVG"
             ],
-            "subCategory": "armor_plate"
+            "subCategory": "armor_plate",
+            "color": [
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_HelmetPlate_Caiman_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_HelmetPlate_Caiman_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_HelmetPlate_Caiman_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_HelmetPlate_Caiman_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_HelmetPlate_Caiman_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_HelmetPlate_Caiman_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_HelmetPlate_Caiman_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_HelmetPlate_Caiman_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_HelmetPlate_Caiman_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_HelmetPlate_Caiman_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_HelmetPlate_Caiman_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_HelmetPlate_Caiman_AOR2",
+                    "image": ""
+                }
+            ]
         }
     ],
     "helmet": [
         {
             "id": "SMPZ_Helmet_Altyn_Green",
-            "name": "Altyn (Green)",
+            "name": "Altyn",
             "category": "helmet",
             "description": "알틴 헬멧은 1980년대 초반 소련 KGB(국가보안위원회)의 요청에 따라 NII Stali(강철 과학 연구소)에서 개발된 특수 작전용 티타늄\n헬멧입니다. 스위스의 TIG PSH-77 헬멧을 모체로 하여 러시아의 작전 환경에 맞춰 독자적으로 개량되었으며, 1980년대 아프가니스탄\n전쟁부터 2000년대 초반까지 알파(Alfa) 및 빔펠(Vympel) 등 최정예 스페츠나츠 부대의 상징적인 장비로 운용되었습니다.",
             "stats": {
@@ -10570,6 +12271,83 @@ const gearData = {
             "attachmentSlots": [
                 "Visor"
             ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Helmet_Altyn_Green",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_Altyn_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Helmet_Altyn_White",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_Altyn_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_Altyn_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_Altyn_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_Altyn_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_Altyn_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_Altyn_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_Altyn_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_Altyn_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_Altyn_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Helmet_Altyn_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Helmet_Altyn_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_Altyn_AOR2",
+                    "image": ""
+                }
+            ],
             "image": "assets/altyn.png",
             "images": [
                 "assets/altyn.png",
@@ -10578,7 +12356,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Helmet_RYS_T_Black",
-            "name": "Rys-T (Black)",
+            "name": "Rys-T",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10598,6 +12376,13 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_RYS_T_Black",
+                    "image": ""
+                }
             ]
         },
         {
@@ -10623,6 +12408,78 @@ const gearData = {
             "attachmentSlots": [
                 "Visor"
             ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Helmet_Maska_Green",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_Maska_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_Maska_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_Maska_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_Maska_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_Maska_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_Maska_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_Maska_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_Maska_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_Maska_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Helmet_Maska_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Helmet_Maska_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "Killa",
+                    "id": "SMPZ_Helmet_Maska_Killa",
+                    "image": ""
+                },
+                {
+                    "name": "Killa White",
+                    "id": "SMPZ_Helmet_Maska_Killa_White",
+                    "image": ""
+                }
+            ],
             "image": "assets/maska.png",
             "images": [
                 "assets/maska.png",
@@ -10633,7 +12490,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Helmet_Tagilla_WeldingMask_Gorilla",
-            "name": "Tagilla's Welding Mask - Gorilla",
+            "name": "Tagilla's Welding Mask",
             "category": "helmet",
             "description": "타길라가 사용하던 용접면입니다.\n해당 모델은 타길라의 전투 방식에서 드러나는 난폭함과 압박감을 상징하는 듯한 고릴라로 도색되어있습니다.\n현재까지도 그의 포효가 끊임없이 울리는 것 같습니다.",
             "stats": {
@@ -10651,6 +12508,18 @@ const gearData = {
             "inventorySlots": [
                 "Mask"
             ],
+            "color": [
+                {
+                    "name": "Gorilla",
+                    "id": "SMPZ_Helmet_Tagilla_WeldingMask_Gorilla",
+                    "image": ""
+                },
+                {
+                    "name": "UBEY",
+                    "id": "SMPZ_Helmet_Tagilla_WeldingMask_UBEY",
+                    "image": ""
+                }
+            ],
             "image": "assets/tagillahelmet_gorilla.png",
             "images": [
                 "assets/tagillahelmet_gorilla.png",
@@ -10661,7 +12530,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Helmet_ZSH12M_Black",
-            "name": "ZSh-1-2M (Black)",
+            "name": "ZSh-1-2M",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10681,6 +12550,68 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_ZSH12M_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_Helmet_ZSH12M_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_ZSH12M_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_ZSH12M_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_ZSH12M_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_ZSH12M_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_ZSH12M_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_ZSH12M_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_ZSH12M_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_ZSH12M_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_ZSH12M_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_ZSH12M_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
@@ -10705,11 +12636,23 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_Vulkan_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Winter Camo",
+                    "id": "SMPZ_Helmet_Vulkan_WinterCamo",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_DA_NeoSteel_Black",
-            "name": "Diamond Age NeoSteel High Cut Helmet (Black)",
+            "name": "Diamond Age NeoSteel High Cut Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10730,11 +12673,68 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "Mandible"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Helmet_DA_NeoSteel_MARPAT_Desert",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_DA_Bastion_Black",
-            "name": "Diamond Age Bastion Helmet (Black)",
+            "name": "Diamond Age Bastion Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10755,11 +12755,63 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "HelmetPlate"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_DA_Bastion_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_DA_Bastion_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_DA_Bastion_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_DA_Bastion_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_DA_Bastion_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_DA_Bastion_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_DA_Bastion_M81",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Helmet_DA_Bastion_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Helmet_DA_Bastion_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Helmet_DA_Bastion_ISB",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_OpsCore_FASTMT_Black",
-            "name": "Ops-Core FAST MT Super High Cut Helmet (Black)",
+            "name": "Ops-Core FAST MT Super High Cut Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10786,13 +12838,60 @@ const gearData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_OpsCore_FASTMT_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
-            "name": "Crye Precision AirFrame Helmet (Black)",
+            "name": "Crye Precision AirFrame Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10817,13 +12916,40 @@ const gearData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_M81",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
         },
         {
             "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Black",
-            "name": "Crye Precision AirFrame M-LOK Helmet (Black)",
+            "name": "Crye Precision AirFrame M-LOK Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10848,13 +12974,50 @@ const gearData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_OD",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin",
-            "name": "DevTac Ronin Ballistic Helmet (Black)",
+            "name": "DevTac Ronin Ballistic Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10874,11 +13037,18 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_DevTac_Ronin",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
-            "name": "BNTI LShZ-2DTM Helmet - Black",
+            "name": "BNTI LShZ-2DTM Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10902,11 +13072,18 @@ const gearData = {
                 "HelmetPlate",
                 "HelmetAventail",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_LShZ_Green",
-            "name": "LShZ Lightweight Helmet (Green)",
+            "name": "LShZ Lightweight Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10932,11 +13109,68 @@ const gearData = {
                 "HelmetHeadset",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Helmet_LShZ_Green",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_LShZ_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_LShZ_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_LShZ_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_LShZ_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_LShZ_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_LShZ_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_LShZ_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_LShZ_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_LShZ_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_LShZ_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_6B47_EMR",
-            "name": "6B47 Helmet - EMR",
+            "name": "6B47 Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -10957,6 +13191,43 @@ const gearData = {
             "attachmentSlots": [
                 "NVG",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_6B47_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_6B47_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Spring",
+                    "id": "SMPZ_Helmet_6B47_EMR_Spring",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Arctic",
+                    "id": "SMPZ_Helmet_6B47_EMR_Artic",
+                    "image": ""
+                },
+                {
+                    "name": "A-TACS",
+                    "id": "SMPZ_Helmet_6B47_ATACS",
+                    "image": ""
+                },
+                {
+                    "name": "Russian Flora",
+                    "id": "SMPZ_Helmet_6B47_RUSS",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_6B47_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
@@ -10981,11 +13252,73 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "Visor"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Helmet_FORT_KiverM",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_FORT_KiverM_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_FORT_KiverM_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_FORT_KiverM_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_FORT_KiverM_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_FORT_KiverM_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_FORT_KiverM_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_FORT_KiverM_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_FORT_KiverM_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_FORT_KiverM_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Helmet_FORT_KiverM_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Helmet_FORT_KiverM_MARPAT_Desert",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_TeamWendy_Exfil_Black",
-            "name": "Team Wendy EXFIL Ballistic Helmet (Black)",
+            "name": "Team Wendy EXFIL Ballistic Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11007,11 +13340,53 @@ const gearData = {
                 "NVG",
                 "Visor",
                 "HelmetHeadset"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Coyote",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Coyote",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_TeamWendy_Exfil_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
-            "name": "NPP KIASS Tor-2 Ballistic Helmet (Olive Drab)",
+            "name": "NPP KIASS Tor-2 Ballistic Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11034,11 +13409,58 @@ const gearData = {
                 "Visor",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_NPP_KIASS_Tor2_M81",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_SSSh94_Sfera_Green",
-            "name": "SSSh-94 Sfera-S Helmet (Green)",
+            "name": "SSSh-94 Sfera-S Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11055,11 +13477,63 @@ const gearData = {
             "itemSlots": 16,
             "inventorySlots": [
                 "Headgear"
+            ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_Green",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_SSSh94_Sfera_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_Caiman_Gray",
-            "name": "Galvion Caiman Hybrid Helmet (Gray)",
+            "name": "Galvion Caiman Hybrid Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11084,11 +13558,73 @@ const gearData = {
                 "Mandible",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Gray",
+                    "id": "SMPZ_Helmet_Caiman_Gray",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Helmet_Caiman_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Helmet_Caiman_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Helmet_Caiman_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_Caiman_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_Caiman_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_Caiman_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_Caiman_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_Caiman_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Helmet_Caiman_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_Caiman_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_Caiman_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Black",
-            "name": "HighCom Striker ULACH IIIA Helmet (Black)",
+            "name": "HighCom Striker ULACH IIIA Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11108,11 +13644,58 @@ const gearData = {
             ],
             "attachmentSlots": [
                 "NVG"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_AOR2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Helmet_MTEK_FLUX_Black",
-            "name": "MTEK FLUX Helmet (Black)",
+            "name": "MTEK FLUX Helmet",
             "category": "helmet",
             "description": "",
             "stats": {
@@ -11134,13 +13717,60 @@ const gearData = {
                 "NVG",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_OD",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Helmet_MTEK_FLUX_AOR2",
+                    "image": ""
+                }
             ]
         }
     ],
     "full_body_armor": [
         {
             "id": "SMPZ_Vest_6B13_Black",
-            "name": "6B13 Assault Armor (Black)",
+            "name": "6B13 Assault Armor",
             "category": "full_body_armor",
             "description": "2000년대 초반 도입된 러시아군 표준 돌격용 방탄복입니다. 높은 목 보호대와 어깨 패드가 특징이며, 전·후면에 방탄판을 삽입하여 소총탄을 방어합니다. 몰리(MOLLE) 시스템이 없는 구형 설계지만, 특유의 견고함으로 오랜 기간 주력 장비로 사용되었습니다.",
             "stats": {
@@ -11169,6 +13799,68 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_6B13_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_6B13_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_6B13_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Vest_6B13_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_6B13_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_6B13_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_6B13_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_6B13_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_6B13_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_6B13_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_6B13_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "Killa",
+                    "id": "SMPZ_Vest_6B13_Killa",
+                    "image": ""
+                }
+            ],
             "image": "assets/6b13.png",
             "images": [
                 "assets/6b13.png",
@@ -11179,7 +13871,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_6B2_EMR",
-            "name": "6B2 Body Armor (EMR)",
+            "name": "6B2 Body Armor",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11204,11 +13896,58 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_6B2_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_6B2_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_6B2_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_6B2_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_6B2_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_6B2_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_6B2_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_6B2_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_6B2_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_6B23_EMR",
-            "name": "6B23-1 Body Armor (EMR)",
+            "name": "6B23-1 Body Armor",
             "category": "full_body_armor",
             "description": "6B13을 개선하여 2000년대 중반부터 보급된 러시아군 제식 방탄복입니다. 착용감과 기동성을 대폭 향상했으며, 가슴 부위에 방탄판을 넣고 나머지 부분은 파편 보호용 소프트 아머로 구성했습니다. 몰리가 여전히 없어 별도의 전술 조끼(6Sh112 등)를 위에 겹쳐 입는 것이 일반적입니다.",
             "stats": {
@@ -11234,6 +13973,53 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_6B23_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_6B23_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_6B23_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_6B23_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_6B23_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_6B23_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_6B23_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_6B23_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_6B23_SURPAT",
+                    "image": ""
+                }
+            ],
             "image": "assets/6b23.png",
             "images": [
                 "assets/6b23.png",
@@ -11242,7 +14028,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_6B43_EMR",
-            "name": "6B43 Zabralo-Sh Body Armor (EMR)",
+            "name": "6B43 Zabralo-Sh Body Armor",
             "category": "full_body_armor",
             "description": "6B43 자브랄로 전신 방탄복은 러시아의 Techinkom사에서 개발한 러시아군 표준 6B4 시리즈의 중전투용 방탄복입니다.\n'라트니크(Ratnik)' 차세대 전투 시스템의 일환으로 도입되었으며, 전면과 후면에 Granit(그라닛) 세라믹 플레이트를 삽입하여\n러시아 방호 규격 GOST 6A 등급을 충족, 소총탄 및 철갑탄에 대한 강력한 방어력을 제공합니다. 특히 전신 방호를 목적으로 설계되어\n목, 어깨, 사타구니를 보호하는 추가 방호 패널이 기본 적용되었으며, 습기와 열 방출을 돕는 내부 패드 시스템을 통해 장시간 전투 시 편의성을 높였습니다. 훗날 개량형인 6B45의 모태가 된 모델로, 러시아 보병 중장갑 체계의 표준을 제시한 장비입니다.",
             "stats": {
@@ -11273,6 +14059,58 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_6B43_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_6B43_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_6B43_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_6B43_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_6B43_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_6B43_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_6B43_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_6B43_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_6B43_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_6B43_SURPAT",
+                    "image": ""
+                }
             ],
             "image": "assets/6b43.png",
             "images": [
@@ -11313,6 +14151,33 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Vest_6B45",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_6B45_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_6B45_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_6B45_M81",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_6B45_ISB",
+                    "image": ""
+                }
+            ],
             "image": "assets/6b45.png",
             "images": [
                 "assets/6b45.png"
@@ -11320,7 +14185,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_IOTV_Gen4_Multicam",
-            "name": "IOTV Gen4 Full Protection Body Armor (MultiCam)",
+            "name": "IOTV Gen4 Full Protection Body Armor",
             "category": "full_body_armor",
             "description": "미 육군의 주력 표준 방탄복으로, 이전 세대 대비 무게를 획기적으로 줄이고 기동성을 개선한 4세대 개량형 모델입니다. 단일 케이블 방식의 퀵 릴리즈(신속 해제) 시스템을 적용하여 비상시 단 한 번의 조작으로 신속한 탈거가 가능합니다. 측면 방탄판 포켓이 통합된 설계와 더불어 목, 어깨, 사타구니 등 전신 방호 파츠를 자유롭게 결합할 수 있어 최상의 방어력을 제공합니다. 하중 분산을 최적화한 내부 커머번드 설계를 통해 중량급 장비임에도 장시간 작전 시 사용자의 피로도를 최소화한 핵심 전술 플랫폼입니다.",
             "stats": {
@@ -11352,6 +14217,13 @@ const gearData = {
                 "RightSide",
                 "Groin"
             ],
+            "color": [
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_IOTV_Gen4_Multicam",
+                    "image": ""
+                }
+            ],
             "image": "assets/iotv.png",
             "images": [
                 "assets/iotv.png"
@@ -11359,7 +14231,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_FORT_RedutT5_Smog",
-            "name": "FORT Redut-T5 Body Armor (Smog)",
+            "name": "FORT Redut-T5 Body Armor",
             "category": "full_body_armor",
             "description": "FORT Redut-T5는 Redut-M을 기반으로 방호 면적을 극대화한 중장갑 돌격용 모델입니다.\n기존 레두트 구조에 어깨 보호대와 확장된 하부 방호 패널을 추가하여 사수의 전신을 파편과 총탄으로부터 보호합니다.\n무게가 16kg 이상으로 매우 무거워 기동성은 낮으나, 시가전이나 건물 진입 작전에서 대원을 완벽하게 보호하는 '움직이는 요새' 역할을\n수행하기 위해 최적화된 장비입니다.",
             "stats": {
@@ -11391,6 +14263,73 @@ const gearData = {
                 "RightSide",
                 "Groin"
             ],
+            "color": [
+                {
+                    "name": "Smog",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Smog",
+                    "image": ""
+                },
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Green",
+                    "image": ""
+                },
+                {
+                    "name": "SK Woodland",
+                    "id": "SMPZ_Vest_FORT_RedutT5_SKWoodland",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_FORT_RedutT5_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_FORT_RedutT5_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_FORT_RedutT5_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_FORT_RedutT5_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_FORT_RedutT5_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_FORT_RedutT5_SURPAT",
+                    "image": ""
+                }
+            ],
             "image": "assets/redut_t5.png",
             "images": [
                 "assets/redut_t5.png",
@@ -11399,7 +14338,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_FORT_RedutM_Green",
-            "name": "FORT Redut-M Body Armor (Green)",
+            "name": "FORT Redut-M Body Armor",
             "category": "full_body_armor",
             "description": "FORT Redut-M은 러시아 FORT Technology사가 FSB(연방보안국) 특수부대를 위해 개발한 전면 방호형 방탄복입니다.\n90년대 중반부터 현대까지 러시아 대테러 부대의 상징적인 장비로 사용되었으며, 흉부와 등뿐만 아니라 측면(옆구리)까지 빈틈없이 감싸는 풀 커버리지 설계가 특징입니다. 티타늄 또는 세라믹 플레이트를 결합하여 강력한 소총탄 방호력을 제공하며\n실전에서 검증된 신뢰성 덕분에 러시아 중갑 방탄복의 표준으로 자리 잡았습니다.",
             "stats": {
@@ -11426,6 +14365,73 @@ const gearData = {
                 "RightSide",
                 "Groin"
             ],
+            "color": [
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Vest_FORT_RedutM_Green",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_FORT_RedutM_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Smog",
+                    "id": "SMPZ_Vest_FORT_RedutM_Smog",
+                    "image": ""
+                },
+                {
+                    "name": "SK Woodland",
+                    "id": "SMPZ_Vest_FORT_RedutM_SKWoodland",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_FORT_RedutM_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_FORT_RedutM_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_FORT_RedutM_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_FORT_RedutM_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FORT_RedutM_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_FORT_RedutM_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_FORT_RedutM_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_FORT_RedutM_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_FORT_RedutM_SURPAT",
+                    "image": ""
+                }
+            ],
             "image": "assets/redut_m.png",
             "images": [
                 "assets/redut_m.png",
@@ -11435,7 +14441,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_FORT_GladiatorS_Multicam",
-            "name": "FORT Gladiator-S Plate Carrier (MultiCam)",
+            "name": "FORT Gladiator-S Plate Carrier",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11473,11 +14479,53 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_FORT_GladiatorS_EMR",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
-            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black)",
+            "name": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier",
             "category": "full_body_armor",
             "description": "First Spear Siege-R Optimized M.A.S.S. 플레이트 캐리어는 미국의 전술 장비 제조사인 First Spear에서 개발한 혁신적인 중량급 플레이트 캐리어입니다. 이 제품은 기존의 무거운 웨빙 대신 레이저 커팅 기술인 6/12™ 시스템을 적용하여 전체 무게를 획기적으로 줄였으며\n독자적인 Tubes™ 퀵 릴리즈 시스템을 통해 단 한 번의 조작으로 신속한 착용과 탈거가 가능합니다. 특히 M.A.S.S. 옵션을 선택할 경우\n목, 어깨, 사타구니 등 전신 방호 파츠를 추가로 결합할 수 있어, 경량화와 최대 수준의 방호력을 동시에 요구하는 특수부대 및 법 집행 기관의 중갑 대원들에게 최적화된 장비입니다.",
             "stats": {
@@ -11516,6 +14564,38 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_ISB",
+                    "image": ""
+                },
+                {
+                    "name": "ISB V2",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_ISB_V2",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_UCP",
+                    "image": ""
+                }
             ],
             "manufacturer": "FirstSpear",
             "manufacturerLogo": "assets/firstspear-logo.png",
@@ -11562,6 +14642,58 @@ const gearData = {
                 "RightSide",
                 "Groin"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Vest_NFM_Thor",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_NFM_Thor_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_NFM_Thor_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_NFM_Thor_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_NFM_Thor_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_NFM_Thor_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_NFM_Thor_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Woodland",
+                    "id": "SMPZ_Vest_NFM_Thor_MARPAT_Woodland",
+                    "image": ""
+                },
+                {
+                    "name": "MARPAT Desert",
+                    "id": "SMPZ_Vest_NFM_Thor_MARPAT_Desert",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_NFM_Thor_ISB",
+                    "image": ""
+                }
+            ],
             "manufacturer": "NFM Group",
             "manufacturerLogo": "assets/nfm-logo.png",
             "manufacturerUrl": "https://nfm.no/",
@@ -11573,7 +14705,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_BNTI_Zhuk_EMR",
-            "name": "BNTI Zhuk Body Armor (EMR)",
+            "name": "BNTI Zhuk Body Armor",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11597,11 +14729,53 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_BNTI_Zhuk_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
-            "name": "Tasmanian Tiger MKIII Plate Carrier (Coyote)",
+            "name": "Tasmanian Tiger MKIII Plate Carrier",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11640,11 +14814,68 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "Coyote",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "Flecktarn",
+                    "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Flecktarn",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
-            "name": "LBT-6094A Slick (Intelligence Support Bureau)",
+            "name": "LBT-6094A Slick",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11672,11 +14903,23 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
+                    "image": ""
+                },
+                {
+                    "name": "ISB V2",
+                    "id": "SMPZ_Vest_LBT6094A_Slick_ISB_V2",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
-            "name": "Eagle Industries MMAC Plate Carrier (Ranger Green)",
+            "name": "Eagle Industries MMAC Plate Carrier",
             "category": "full_body_armor",
             "description": "",
             "stats": {
@@ -11716,6 +14959,48 @@ const gearData = {
                 "LeftSide",
                 "RightSide",
                 "Groin"
+            ],
+            "color": [
+                {
+                    "name": "Ranger Green",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_M81",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_EagleIndustries_MMAC_AOR2",
+                    "image": ""
+                }
             ]
         }
     ],
@@ -11792,6 +15077,23 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Vest_AVS",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_AVS_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Vest_AVS_White",
+                    "image": ""
+                }
             ]
         },
         {
@@ -11828,6 +15130,13 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_JPC_Multicam",
+                    "image": ""
+                }
             ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
@@ -11872,6 +15181,13 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_JPC_Maritime_Multicam",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/",
@@ -11882,7 +15198,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_ArsArma_A18_Skanda_Black",
-            "name": "Ars Arma A-18 Skanda Plate Carrier (Black)",
+            "name": "Ars Arma A-18 Skanda Plate Carrier",
             "category": "plate_carrier",
             "description": "러시아의 전술 장비 제조사인 Ars Arma에서 독자 설계한 A-18 Skanda는 높은 범용성을 갖춘 경·중량급 모듈러 플레이트 캐리어입니다.\n기존 장비 대비 방호 면적을 약 25% 확장하여 생존성을 높였으며, 전면 패널과 커머번드를 자유롭게 교체할 수 있는 설계를 통해 임무에\n최적화된 장비 구성이 가능합니다. 러시아의 그라니트(Granit) 판부터 서방의 SAPI 방탄판까지 폭넓은 호환성을 자랑하며, 양방향 퀵 릴리즈 시스템과 인체공학적 어깨 스트랩을 적용해 실전에서의 신속한 탈착과 하중 분산 능력을 동시에 확보한 러시아 특수부대의 핵심 장비입니다.",
             "stats": {
@@ -11912,6 +15228,23 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_ArsArma_A18_Skanda_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_ArsArma_A18_Skanda_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_ArsArma_A18_Skanda_EMR",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Ars Arma",
             "manufacturerLogo": "assets/arsarma-logo.png",
             "manufacturerUrl": "https://arsarma.ru/",
@@ -11922,7 +15255,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_RangerGreen",
-            "name": "First Spear StrandhÃ¶gg Plate Carrier (Ranger Green)",
+            "name": "First Spear Strandhögg Plate Carrier",
             "category": "plate_carrier",
             "description": "First Spear Strandhögg(스트랜드호그)는 미국의 전술 장비 제조사인 First Spear의 주력 경량 플레이트 캐리어입니다.\n이 모델은 중량급인 Siege-R과 달리, 방탄 플레이트 최소화 및 기동성에 중점을 둔 설계가 특징입니다.\n핵심 기술인 6/12™ 레이저 커팅 시스템과 Tubes™ 퀵 릴리즈 시스템을 모두 채택하여, 기존 몰리(MOLLE) 방식보다 무게는\n가볍고 탈착은 훨씬 신속합니다. 불필요한 면적을 줄인 스켈레톤 스타일의 커머번드(옆구리 스트랩)는 통기성을 극대화하며\n플레이트를 감싸는 특유의 신축성 있는 소재는 장비 착용 시 사용자의 움직임을 방해하지 않고 완벽하게 밀착되도록 설계되었습니다.\n뛰어난 착용감과 기동성으로 인해 미군 특수부대 및 다양한 법 집행 기관에서 광범위하게 사용되는 현대적인 방탄복입니다.",
             "stats": {
@@ -11955,13 +15288,45 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "Ranger Green",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_RangerGreen",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_AOR2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "FirstSpear",
             "manufacturerLogo": "assets/firstspear-logo.png",
             "manufacturerUrl": "https://www.first-spear.com/"
         },
         {
             "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE",
-            "name": "Ferro Concepts FCPC V5 Plate Carrier (FDE)",
+            "name": "Ferro Concepts FCPC V5 Plate Carrier",
             "category": "plate_carrier",
             "description": "경량 라미네이트 소재와 인체공학적 설계를 결합한 5세대 플레이트 캐리어로, ADAPT 시스템을 통해 극대화된 모듈성과 기동성을 제공하는 현대적 전술 장비의 정점입니다.",
             "stats": {
@@ -11995,6 +15360,68 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad (Alpine)",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Alpine_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_M81",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_ISB",
+                    "image": ""
+                },
+                {
+                    "name": "ISB V2",
+                    "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_ISB_V2",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Ferro Concepts",
             "manufacturerLogo": "assets/ferro-logo.png",
             "manufacturerUrl": "https://ferroconcepts.com/",
@@ -12005,7 +15432,7 @@ const gearData = {
         },
         {
             "id": "SMPZ_Vest_SpiritusSystems_LV119_Black",
-            "name": "Spiritus Systems LV-119 Plate Carrier (Black)",
+            "name": "Spiritus Systems LV-119 Plate Carrier",
             "category": "plate_carrier",
             "description": "",
             "stats": {
@@ -12040,11 +15467,73 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad (Black)",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Black_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad (Alpine)",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Alpine_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "Hound Wolf Squad",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_HoundWolfSquad",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_M81",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_AOR2",
+                    "image": ""
+                },
+                {
+                    "name": "ISB",
+                    "id": "SMPZ_Vest_SpiritusSystems_LV119_ISB",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
-            "name": "NPP KIASS Bagariy Plate Carrier (Black)",
+            "name": "NPP KIASS Bagariy Plate Carrier",
             "category": "plate_carrier",
             "description": "",
             "stats": {
@@ -12077,11 +15566,58 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_OD",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Black",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_NPP_KIASS_Bagariy_M81",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
-            "name": "NPP KIASS Kora-Kulon Body Armor (Black)",
+            "name": "NPP KIASS Kora-Kulon Body Armor",
             "category": "plate_carrier",
             "description": "",
             "stats": {
@@ -12105,11 +15641,63 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Black",
-            "name": "NPP KIASS KorundVM Plate Carrier (Black)",
+            "name": "NPP KIASS KorundVM Plate Carrier",
             "category": "plate_carrier",
             "description": "",
             "stats": {
@@ -12133,11 +15721,63 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_NPP_KIASS_KorundVM_SURPAT",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Vest_511_Tactical_Hexgrid_Black",
-            "name": "5.11 Tactical Hexgrid Plate Carrier (Black)",
+            "name": "5.11 Tactical Hexgrid Plate Carrier",
             "category": "plate_carrier",
             "description": "",
             "stats": {
@@ -12161,6 +15801,63 @@ const gearData = {
                 "Stomach",
                 "LeftSide",
                 "RightSide"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_Black",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_UCP",
+                    "image": ""
+                },
+                {
+                    "name": "M81",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_M81",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_SURPAT",
+                    "image": ""
+                },
+                {
+                    "name": "AOR 2",
+                    "id": "SMPZ_Vest_511_Tactical_Hexgrid_AOR2",
+                    "image": ""
+                }
             ],
             "manufacturer": "5.11 Tactical",
             "manufacturerLogo": "assets/511tac-logo.png",
@@ -12679,7 +16376,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
-            "name": "AR-15 Lead Star Arms Ravage Stock (Black)",
+            "name": "AR-15 Lead Star Arms Ravage Stock",
             "category": "buttstock",
             "description": "AR-15형 소총에 장착 가능.",
             "stats": {
@@ -12697,55 +16394,28 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Red",
-            "name": "AR-15 Lead Star Arms Ravage Stock (Red)",
-            "category": "buttstock",
-            "description": "Can be attached on AR-15 type rifles.",
-            "stats": {
-                "recoil": -29,
-                "sway": -40,
-                "weight": 170
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Yellow",
-            "name": "AR-15 Lead Star Arms Ravage Stock (Yellow)",
-            "category": "buttstock",
-            "description": "AR-15형 소총에 장착 가능.",
-            "stats": {
-                "recoil": -29,
-                "sway": -40,
-                "weight": 170
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Red",
+                    "image": ""
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Yellow",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
-            "name": "AR-15 Phase5 Universal Mini Stock (Black)",
+            "name": "AR-15 Phase5 Universal Mini Stock",
             "category": "buttstock",
             "description": "",
             "stats": {
@@ -12763,51 +16433,24 @@ const attachmentData = {
                 "UMSButtstock",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Red",
-            "name": "AR-15 Phase5 Universal Mini Stock (Red)",
-            "category": "buttstock",
-            "description": "",
-            "stats": {
-                "recoil": -28,
-                "sway": -45,
-                "weight": 170
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "UMSButtstock",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Yellow",
-            "name": "AR-15 Phase5 Universal Mini Stock (Yellow)",
-            "category": "buttstock",
-            "description": "",
-            "stats": {
-                "recoil": -28,
-                "sway": -45,
-                "weight": 170
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "UMSButtstock",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Red",
+                    "image": ""
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Yellow",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Buttstock",
@@ -12916,7 +16559,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_CQR_pistolgrip",
-            "name": "AR-15 Hera Arms CQR pistol grip/buttstock (Black)",
+            "name": "AR-15 Hera Arms CQR pistol grip/buttstock",
             "category": "buttstock",
             "description": "헤라암즈에서 제작한",
             "stats": {
@@ -12932,31 +16575,23 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_CQR_pistolgrip_UCP",
-            "name": "AR-15 Hera Arms CQR pistol grip/buttstock (UCP)",
-            "category": "buttstock",
-            "description": "Manufactured by Hera Arms",
-            "stats": {
-                "recoil": -35,
-                "sway": -45,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                2
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CQR_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_CQR_pistolgrip_UCP",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_CTR_Buttstock",
-            "name": "AR-15 Magpul CTR Carbine stock (Black)",
+            "name": "AR-15 Magpul CTR Carbine stock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -12975,30 +16610,20 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CTR_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_CTR_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_CTR_Buttstock_FDE",
-            "name": "AR-15 Magpul CTR Carbine stock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -33,
-                "sway": -30,
-                "weight": 700
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_DS150_Buttstock",
@@ -13020,33 +16645,23 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_DS150_Buttstock_FDE",
-            "name": "AR-15 KRISS Defiance DS150 stock FDE",
-            "category": "buttstock",
-            "description": "AR-15형 소총에 장착 가능.",
-            "stats": {
-                "recoil": -26,
-                "sway": -30,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_DS150_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_DS150_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_ECB_Buttstock",
-            "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock (Black)",
+            "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock",
             "category": "buttstock",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -13065,30 +16680,20 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_ECB_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_ECB_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_ECB_Buttstock_FDE",
-            "name": "AR-15 Daniel Defense Enhanced Collapsible Buttstock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -22,
-                "sway": -30,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_G36_IDZ_Adjustable_Buttstock",
@@ -13176,29 +16781,19 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_GLCore_Buttstock_Black",
-            "name": "AR-15 FAB Defense GL-CORE buttstock Black",
-            "category": "buttstock",
-            "description": "FAB Defense에서 제조",
-            "stats": {
-                "recoil": -20,
-                "sway": -22,
-                "weight": 271
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_GLCore_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_GLCore_Buttstock_Black",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_GLR_Buttstock",
@@ -13225,7 +16820,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_HK417_Adjustable_Buttstock_FDE",
-            "name": "HK417 Adjustable buttstock FDE",
+            "name": "HK417 Adjustable buttstock",
             "category": "buttstock",
             "description": "Can be attached on HK417 & HK G28 rifles only",
             "stats": {
@@ -13241,11 +16836,18 @@ const attachmentData = {
             "inventorySlots": [
                 "417Buttstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_HK417_Adjustable_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK417_Buttstock",
-            "name": "HK417 E2 buttstock Black",
+            "name": "HK417 E2 buttstock",
             "category": "buttstock",
             "description": "Can be attached on HK417 & HK G28 rifles only",
             "stats": {
@@ -13261,27 +16863,19 @@ const attachmentData = {
             "inventorySlots": [
                 "417Buttstock"
             ],
-            "subCategory": "custom"
-        },
-        {
-            "id": "SMPZ_Attachments_HK417_Buttstock_FDE",
-            "name": "HK417 E2 buttstock FDE",
-            "category": "buttstock",
-            "description": "Can be attached on HK417 & HK G28 rifles only",
-            "stats": {
-                "recoil": -20,
-                "sway": -40,
-                "weight": 390
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "417Buttstock"
-            ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HK417_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_HK417_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_HK_E1_Buttstock",
@@ -13310,7 +16904,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_HK_Slimline_Buttstock",
-            "name": "AR-15 HK Slim Line Buttstock (Black)",
+            "name": "AR-15 HK Slim Line Buttstock",
             "category": "buttstock",
             "description": "AR-15형 소총에 장착 가능.",
             "stats": {
@@ -13329,31 +16923,18 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
-            "manufacturer": "Heckler & Koch",
-            "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
-        },
-        {
-            "id": "SMPZ_Attachments_HK_Slimline_Buttstock_RAL8000",
-            "name": "AR-15 HK Slim Line buttstock (RAL 8000)",
-            "category": "buttstock",
-            "description": "AR-15형 소총에 장착 가능.",
-            "stats": {
-                "recoil": -27,
-                "sway": -25,
-                "weight": 700
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HK_Slimline_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "RAL 8000",
+                    "id": "SMPZ_Attachments_HK_Slimline_Buttstock_RAL8000",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube",
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -13403,7 +16984,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
-            "name": "AR-15 LMT Defense SOPMOD stock (Black)",
+            "name": "AR-15 LMT Defense SOPMOD stock",
             "category": "buttstock",
             "description": "AR-15형 소총에 장착 가능.",
             "stats": {
@@ -13421,29 +17002,19 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock_FDE",
-            "name": "AR-15 LMT Defense SOPMOD stock (FDE)",
-            "category": "buttstock",
-            "description": "Can be attached on AR-15 type rifles.",
-            "stats": {
-                "recoil": -25,
-                "sway": -25,
-                "weight": 140
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_M16_Buttstock",
@@ -13594,7 +17165,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_M60E4_Buttstock",
-            "name": "M60E6 Buttstock (Black)",
+            "name": "M60E6 Buttstock",
             "category": "buttstock",
             "description": "M60 경기관총에만 부착 가능",
             "stats": {
@@ -13610,11 +17181,18 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Buttstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_M60E4_Buttstock",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E6_Buttstock",
-            "name": "M60E6 Buttstock (Black)",
+            "name": "M60E6 Buttstock",
             "category": "buttstock",
             "description": "Can be attached on M60 LMGs only",
             "stats": {
@@ -13630,27 +17208,19 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Buttstock"
             ],
-            "subCategory": "custom"
-        },
-        {
-            "id": "SMPZ_Attachments_M60E6_Buttstock_FDE",
-            "name": "M60E6 Buttstock (FDE)",
-            "category": "buttstock",
-            "description": "Can be attached on M60 LMGs only",
-            "stats": {
-                "recoil": -20,
-                "sway": -20,
-                "weight": 239
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M60Buttstock"
-            ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_M60E6_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_M60E6_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_CTS_Buttstock",
@@ -13734,7 +17304,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_MOE_Buttstock",
-            "name": "AR-15 Magpul MOE Carbine stock (Black)",
+            "name": "AR-15 Magpul MOE Carbine stock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -13753,140 +17323,45 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MOE_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Green",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_Green",
+                    "image": ""
+                },
+                {
+                    "name": "Grey",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_Grey",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_Olive",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_MOE_Buttstock_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_Alpine",
-            "name": "AR-15 Magpul MOE Carbine stock (Multicam - Alpine)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_FDE",
-            "name": "AR-15 Magpul MOE Carbine stock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_Green",
-            "name": "AR-15 Magpul MOE Carbine stock (Green)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_Grey",
-            "name": "AR-15 Magpul MOE Carbine stock (Grey)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_Olive",
-            "name": "AR-15 Magpul MOE Carbine stock (Olive Drab)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_Buttstock_UCP",
-            "name": "AR-15 Magpul MOE Carbine stock (UCP)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -32,
-                "sway": -30,
-                "weight": 500
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Buttstock",
@@ -14010,7 +17485,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Magpul_ACS_Stock",
-            "name": "AR-15 Magpul ACS Carbine Stock - Black",
+            "name": "AR-15 Magpul ACS Carbine Stock",
             "category": "buttstock",
             "description": "AR-15형 소총에 장착 가능.",
             "stats": {
@@ -14029,30 +17504,20 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Magpul_ACS_Stock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Magpul_ACS_Stock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_ACS_Stock_FDE",
-            "name": "AR-15 Magpul ACS Carbine Stock - FDE",
-            "category": "buttstock",
-            "description": "Can be attached on AR-15 type rifles.",
-            "stats": {
-                "recoil": -34,
-                "sway": -30,
-                "weight": 327
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_CheekRiser",
@@ -14077,7 +17542,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Magpul_UCS_Stock",
-            "name": "Magpul UCS Buttstock (Black)",
+            "name": "Magpul UCS Buttstock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -14097,35 +17562,24 @@ const attachmentData = {
                 "UCSPad"
             ],
             "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Magpul_UCS_Stock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Magpul_UCS_Stock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_UCS_Stock_FDE",
-            "name": "Magpul UCS Buttstock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -35,
-                "sway": -30,
-                "weight": 467
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MCXButtstock"
-            ],
-            "attachmentSlots": [
-                "UCSPad"
-            ],
-            "subCategory": "custom"
         },
         {
             "id": "SMPZ_Attachments_Masada_Folding_Buttstock",
-            "name": "Magpul Masada Polymer Folding Stock (Black)",
+            "name": "Magpul Masada Polymer Folding Stock",
             "category": "buttstock",
             "description": "",
             "stats": {
@@ -14142,32 +17596,24 @@ const attachmentData = {
                 "MasadaButtstock"
             ],
             "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_Folding_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_Folding_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Masada_Folding_Buttstock_FDE",
-            "name": "Magpul Masada Polymer Folding Stock (FDE)",
-            "category": "buttstock",
-            "description": "",
-            "stats": {
-                "recoil": -20,
-                "sway": -30,
-                "weight": 511
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MasadaButtstock"
-            ],
-            "subCategory": "custom"
         },
         {
             "id": "SMPZ_Attachments_Masada_PDW_Buttstock",
-            "name": "Magpul Masada PDW Collapsing Stock (Black)",
+            "name": "Magpul Masada PDW Collapsing Stock",
             "category": "buttstock",
             "description": "",
             "stats": {
@@ -14184,28 +17630,20 @@ const attachmentData = {
                 "MasadaButtstock"
             ],
             "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_PDW_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_PDW_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Masada_PDW_Buttstock_FDE",
-            "name": "Magpul Masada PDW Collapsing Stock (FDE)",
-            "category": "buttstock",
-            "description": "",
-            "stats": {
-                "recoil": -17,
-                "sway": -25,
-                "weight": 557
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MasadaButtstock"
-            ],
-            "subCategory": "custom"
         },
         {
             "id": "SMPZ_Attachments_Mosin_ATI_Monte_Carlo_Stock",
@@ -14333,31 +17771,18 @@ const attachmentData = {
                 "PRSStock"
             ],
             "subCategory": "buffer_tube",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_PRS_Bttstck_Black",
-            "name": "AR 15 stock Magpul PRS GEN3 Black",
-            "category": "buttstock",
-            "description": "제조사 맥풀",
-            "stats": {
-                "recoil": -45,
-                "sway": -45,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_PRS_Bttstck",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_PRS_Bttstck_Black",
+                    "image": ""
+                }
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4",
-                "PRSStock"
-            ],
-            "subCategory": "buffer_tube",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -14557,7 +17982,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_SCAR_Cheek",
-            "name": "FN SCAR cheek rest Black",
+            "name": "FN SCAR cheek rest",
             "category": "buttstock",
             "description": "Can be attached on FN SCAR L & H",
             "stats": {
@@ -14572,30 +17997,23 @@ const attachmentData = {
             "inventorySlots": [
                 "SCARCheek"
             ],
-            "subCategory": "custom"
-        },
-        {
-            "id": "SMPZ_Attachments_SCAR_Cheek_FDE",
-            "name": "FN SCAR cheek rest FDE",
-            "category": "buttstock",
-            "description": "Can be attached on FN SCAR L & H",
-            "stats": {
-                "sway": -30,
-                "weight": 60
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "SCARCheek"
-            ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SCAR_Cheek",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SCAR_Cheek_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock",
-            "name": "FN SCAR folding polymer stock (Black)",
+            "name": "FN SCAR folding polymer stock",
             "category": "buttstock",
             "description": "Can be attached on FN SCAR only",
             "stats": {
@@ -14614,34 +18032,23 @@ const attachmentData = {
                 "SCARCheek",
                 "SCARStock"
             ],
-            "subCategory": "custom"
-        },
-        {
-            "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock_FDE",
-            "name": "FN SCAR folding polymer stock (FDE)",
-            "category": "buttstock",
-            "description": "Can be attached on FN SCAR only",
-            "stats": {
-                "recoil": -10,
-                "weight": 300
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "SCARButtstock"
-            ],
-            "attachmentSlots": [
-                "SCARCheek",
-                "SCARStock"
-            ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
-            "name": "FN SCAR retractable polymer stock black",
+            "name": "FN SCAR retractable polymer stock",
             "category": "buttstock",
             "description": "FN SCAR L & H에 부착 가능",
             "stats": {
@@ -14658,36 +18065,25 @@ const attachmentData = {
                 "SCARStock"
             ],
             "subCategory": "custom",
-            "manufacturer": "FN Herstal",
-            "manufacturerLogo": "assets/fnherstal-logo.png",
-            "manufacturerUrl": "https://fnherstal.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock_FDE",
-            "name": "FN SCAR retractable polymer stock FDE",
-            "category": "buttstock",
-            "description": "FN SCAR L & H에 부착 가능",
-            "stats": {
-                "recoil": -30,
-                "sway": -30,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "black",
+                    "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "SCARStock"
-            ],
-            "subCategory": "custom",
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
         },
         {
             "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock",
-            "name": "FN SCAR Vltor VSS-11 polymer stock black",
+            "name": "FN SCAR Vltor VSS-11 polymer stock",
             "category": "buttstock",
             "description": "FN SCAR L & H에 부착 가능",
             "stats": {
@@ -14704,28 +18100,18 @@ const attachmentData = {
                 "SCARStock"
             ],
             "subCategory": "custom",
-            "manufacturer": "VLTOR Weapon Systems",
-            "manufacturerUrl": "https://www.vltor.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock_FDE",
-            "name": "FN SCAR Vltor VSS-11 polymer stock FDE",
-            "category": "buttstock",
-            "description": "FN SCAR L & H에 부착 가능",
-            "stats": {
-                "recoil": -32,
-                "sway": -25,
-                "weight": 220
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "black",
+                    "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "SCARStock"
-            ],
-            "subCategory": "custom",
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -14751,7 +18137,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_SLK_Buttstock",
-            "name": "AR-15 Magpul MOE SL-K buttstock (Coyote Tan)",
+            "name": "AR-15 Magpul MOE SL-K buttstock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -14770,78 +18156,34 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Coyote Tan",
+                    "id": "SMPZ_Attachments_SLK_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_SLK_Buttstock_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SLK_Buttstock_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_SLK_Buttstock_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SLK_Buttstock_Alpine",
-            "name": "AR-15 Magpul MOE SL-K buttstock (Multicam - Alpine)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -27,
-                "sway": -30,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_SLK_Buttstock_Black",
-            "name": "AR-15 Magpul MOE SL-K buttstock (Black)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -27,
-                "sway": -30,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
-            "id": "SMPZ_Attachments_SLK_Buttstock_UCP",
-            "name": "AR-15 Magpul MOE SL-K buttstock (UCP)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -27,
-                "sway": -30,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_SLM_Buttstock_Black",
-            "name": "AR-15 Magpul MOE SL-M buttstock (Black)",
+            "name": "AR-15 Magpul MOE SL-M buttstock",
             "category": "buttstock",
             "description": "제조사 맥풀",
             "stats": {
@@ -14860,30 +18202,20 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SLM_Buttstock_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SLM_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SLM_Buttstock_FDE",
-            "name": "AR-15 Magpul MOE SL-M buttstock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "recoil": -20,
-                "sway": -22,
-                "weight": 148
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Chassis",
@@ -15084,7 +18416,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
-            "name": "AR-15 TROY M7A1 PDW stock (Black)",
+            "name": "AR-15 TROY M7A1 PDW stock",
             "category": "buttstock",
             "description": "트로이 인더스트리에서 제조",
             "stats": {
@@ -15101,32 +18433,24 @@ const attachmentData = {
                 "ARBuffer"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/"
         },
         {
-            "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock_FDE",
-            "name": "AR-15 TROY M7A1 PDW stock (FDE)",
-            "category": "buttstock",
-            "description": "Manufactured by Troy Industries",
-            "stats": {
-                "recoil": -37,
-                "sway": -45,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARBuffer"
-            ],
-            "subCategory": "buffer_tube"
-        },
-        {
             "id": "SMPZ_Attachments_UBR_Gen2_Buttstock",
-            "name": "AR-15 Magpul UBR GEN2 stock (Black)",
+            "name": "AR-15 Magpul UBR GEN2 stock",
             "category": "buttstock",
             "description": "검은색",
             "stats": {
@@ -15143,28 +18467,20 @@ const attachmentData = {
                 "ARBuffer"
             ],
             "subCategory": "buffer_tube",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_UBR_Gen2_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_UBR_Gen2_Buttstock_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_UBR_Gen2_Buttstock_FDE",
-            "name": "AR-15 Magpul UBR GEN2 stock (FDE)",
-            "category": "buttstock",
-            "description": "Black",
-            "stats": {
-                "recoil": -34,
-                "sway": -40,
-                "weight": 610
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARBuffer"
-            ],
-            "subCategory": "buffer_tube"
         },
         {
             "id": "SMPZ_Attachments_VPO136_Wooden_Bttstck",
@@ -15257,30 +18573,18 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
-            "manufacturer": "VLTOR Weapon Systems",
-            "manufacturerUrl": "https://www.vltor.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock_FDE",
-            "name": "AR-15 Vltor EMOD Buttstock FDE",
-            "category": "buttstock",
-            "description": "Vltor Weapon Systems에서 제작",
-            "stats": {
-                "recoil": -29,
-                "sway": -30,
-                "weight": 390
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARButtstock",
-                "ARButtstockSecond",
-                "weaponButtstockM4"
-            ],
-            "subCategory": "buffer_tube",
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         }
@@ -15730,7 +19034,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
-            "name": "AK Magpul MOE AKM handguard (Black)",
+            "name": "AK Magpul MOE AKM handguard",
             "category": "handguard",
             "description": "제조사 MAGPUL",
             "stats": {
@@ -15751,110 +19055,39 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_MOE_Hndgrd_FDE",
-            "name": "AK Magpul MOE AKM handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": -7,
-                "sway": -12,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AK_MOE_Hndgrd_OD",
-            "name": "AK Magpul MOE AKM handguard (Olive Drab)",
-            "category": "handguard",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": -7,
-                "sway": -12,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Plum",
-            "name": "AK Magpul MOE AKM handguard (Plum)",
-            "category": "handguard",
-            "description": "제조사 MAGPUL",
-            "stats": {
-                "recoil": -7,
-                "sway": -12,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AK_MOE_Hndgrd_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Attachments_AK_MOE_Hndgrd_OD",
+                    "image": ""
+                },
+                {
+                    "name": "Plum",
+                    "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Plum",
+                    "image": ""
+                },
+                {
+                    "name": "Stealth Grey",
+                    "id": "SMPZ_Attachments_AK_MOE_Hndgrd_SG",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_MOE_Hndgrd_SG",
-            "name": "AK Magpul MOE AKM handguard (Stealth Grey)",
-            "category": "handguard",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": -7,
-                "sway": -12,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Black",
-            "name": "AK TDI AKM-L handguard Black",
+            "name": "AK TDI AKM-L handguard",
             "category": "handguard",
             "description": "AK 시리즈 소총에만 장착 가능",
             "stats": {
@@ -15874,54 +19107,23 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Gold",
-            "name": "AK TDI AKM-L handguard Gold",
-            "category": "handguard",
-            "description": "AK 시리즈 소총에만 장착 가능",
-            "stats": {
-                "recoil": -5,
-                "sway": -13,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Red",
-            "name": "AK TDI AKM-L handguard Red",
-            "category": "handguard",
-            "description": "AK 시리즈 소총에만 장착 가능",
-            "stats": {
-                "recoil": -5,
-                "sway": -13,
-                "weight": 221
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Gold",
+                    "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Gold",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Red",
+                    "image": ""
+                }
             ]
         },
         {
@@ -16006,32 +19208,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_Black",
-            "name": "AK Vezhlivyy Strelok VS-24 + VS-33c handguard with gas tube (Black)",
-            "category": "handguard",
-            "description": "Manufactured by Vezhlivyy Strelok",
-            "stats": {
-                "recoil": -3,
-                "sway": -17,
-                "weight": 590
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AKGasblock"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_White",
-            "name": "AK Vezhlivyy Strelok VS-24 + VS-33c handguard with gas tube (White)",
+            "name": "AK Vezhlivyy Strelok VS-24 + VS-33c handguard with gas tube",
             "category": "handguard",
             "description": "Vezhlivyy Strelok 제조",
             "stats": {
@@ -16052,6 +19229,18 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_Black",
+                    "image": ""
+                },
+                {
+                    "name": "White",
+                    "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_White",
+                    "image": ""
+                }
             ]
         },
         {
@@ -16139,7 +19328,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Black",
-            "name": "AK Magpul Zhukov-U handguard Black",
+            "name": "AK Magpul Zhukov-U handguard",
             "category": "handguard",
             "description": "AK 시리즈 소총에만 장착 가능",
             "stats": {
@@ -16160,57 +19349,22 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_FDE",
-            "name": "AK Magpul Zhukov-U handguard FDE",
-            "category": "handguard",
-            "description": "AK 시리즈 소총에만 장착 가능",
-            "stats": {
-                "recoil": -5,
-                "sway": -12,
-                "weight": 310
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Plum",
-            "name": "AK Magpul Zhukov-U handguard Plum",
-            "category": "handguard",
-            "description": "AK 시리즈 소총에만 장착 가능",
-            "stats": {
-                "recoil": -5,
-                "sway": -12,
-                "weight": 310
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Plum",
+                    "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Plum",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
@@ -16276,7 +19430,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
-            "name": "AR-10 KAC URX 2 12.5 inch handguard (Black)",
+            "name": "AR-10 KAC URX 2 12.5 inch handguard",
             "category": "handguard",
             "description": "Can be attached on AR-10 type rifles only",
             "stats": {
@@ -16300,35 +19454,17 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "manufacturer": "Knight's Armament Company",
-            "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd_Taupe",
-            "name": "AR-10 KAC URX 2 12.5 inch handguard (Taupe)",
-            "category": "handguard",
-            "description": "Can be attached on AR-10 type rifles only",
-            "stats": {
-                "recoil": -6,
-                "sway": -10,
-                "weight": 431
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AR10Handguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Taupe",
+                    "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd_Taupe",
+                    "image": ""
+                }
             ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
@@ -16336,7 +19472,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd",
-            "name": "AR-10 KAC URX 3.1 13.5 inch handguard (Black)",
+            "name": "AR-10 KAC URX 3.1 13.5 inch handguard",
             "category": "handguard",
             "description": "Can be attached on AR-10 type rifles only",
             "stats": {
@@ -16364,39 +19500,17 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "manufacturer": "Knight's Armament Company",
-            "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd_Taupe",
-            "name": "AR-10 KAC URX 3.1 13.5 inch handguard (Taupe)",
-            "category": "handguard",
-            "description": "Can be attached on AR-10 type rifles only",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 431
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AR10Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "URXStopper",
-                "URXPanel",
-                "URXPanel2",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Taupe",
+                    "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd_Taupe",
+                    "image": ""
+                }
             ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
@@ -16541,7 +19655,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd",
-            "name": "AR-10 KAC URX 4 14.5 inch handguard (Black)",
+            "name": "AR-10 KAC URX 4 14.5 inch handguard",
             "category": "handguard",
             "description": "AR-10형 소총에만 장착 가능합니다.",
             "stats": {
@@ -16566,37 +19680,21 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd_FDE",
-            "name": "AR-10 KAC URX 4 14.5 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Can be attached on AR-10 type rifles only.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 420
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "AR10Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_ADAR_Hndgrd",
@@ -16753,7 +19851,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd",
-            "name": "AR-15 BCM KMR Alpha KeyMod 13 inch handguard (Black)",
+            "name": "AR-15 BCM KMR Alpha KeyMod 13 inch handguard",
             "category": "handguard",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -16778,40 +19876,24 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd_FDE",
-            "name": "AR-15 BCM KMR Alpha KeyMod 13 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Bravo Company Manufacturing",
-            "stats": {
-                "recoil": -8,
-                "sway": -8,
-                "weight": 480
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd",
-            "name": "AR-15 BCM KMR Alpha KeyMod 15 inch handguard (Black)",
+            "name": "AR-15 BCM KMR Alpha KeyMod 15 inch handguard",
             "category": "handguard",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -16836,40 +19918,24 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd_FDE",
-            "name": "AR-15 BCM KMR Alpha KeyMod 15 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Bravo Company Manufacturing",
-            "stats": {
-                "recoil": -8,
-                "sway": -8,
-                "weight": 540
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd",
-            "name": "AR-15 BCM KMR Alpha KeyMod 7 inch handguard (Black)",
+            "name": "AR-15 BCM KMR Alpha KeyMod 7 inch handguard",
             "category": "handguard",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -16892,38 +19958,24 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd_FDE",
-            "name": "AR-15 BCM KMR Alpha KeyMod 7 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Bravo Company Manufacturing",
-            "stats": {
-                "recoil": -8,
-                "sway": -8,
-                "weight": 410
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd",
-            "name": "AR-15 BCM KMR Alpha KeyMod 9 inch handguard (Black)",
+            "name": "AR-15 BCM KMR Alpha KeyMod 9 inch handguard",
             "category": "handguard",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -16946,38 +19998,24 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd_FDE",
-            "name": "AR-15 BCM KMR Alpha KeyMod 9 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Bravo Company Manufacturing",
-            "stats": {
-                "recoil": -8,
-                "sway": -8,
-                "weight": 410
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd",
-            "name": "AR-15 BCM MCMR-10 inch handguard (Black)",
+            "name": "AR-15 BCM MCMR-10 inch handguard",
             "category": "handguard",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -17002,36 +20040,20 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd_FDE",
-            "name": "AR-15 BCM MCMR-10 inch handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Bravo Company Manufacturing",
-            "stats": {
-                "recoil": -5,
-                "sway": -15,
-                "weight": 279
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "Frontsight",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_CAR15_Skinny_Hndgrd",
@@ -17101,7 +20123,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS III 12.5 Handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS III 12.5 Handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17124,38 +20146,24 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "DD12LowerHandguard"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd_FDE",
-            "name": "AR-15 Daniel Defense RIS III 12.5 Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -1,
-                "sway": -5,
-                "weight": 300
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "DD12LowerHandguard"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS III 12.5 Lower Handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS III 12.5 Lower Handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17176,36 +20184,24 @@ const attachmentData = {
                 "weaponFlashlight",
                 "BipodKeymodMLOKMount"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd_FDE",
-            "name": "AR-15 Daniel Defense RIS III 12.5 Lower Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -1,
-                "sway": -5,
-                "weight": 170
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DD12LowerHandguard"
-            ],
-            "attachmentSlots": [
-                "Grip",
-                "weaponFlashlight",
-                "BipodKeymodMLOKMount"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS III 9.5 Handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS III 9.5 Handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17228,38 +20224,24 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "DD9LowerHandguard"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd_FDE",
-            "name": "AR-15 Daniel Defense RIS III 9.5 Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -1,
-                "sway": -5,
-                "weight": 250
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "DD9LowerHandguard"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS III 9.5 Lower Handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS III 9.5 Lower Handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17280,36 +20262,24 @@ const attachmentData = {
                 "weaponFlashlight",
                 "BipodKeymodMLOKMount"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd_FDE",
-            "name": "AR-15 Daniel Defense RIS III 9.5 Lower Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -1,
-                "sway": -5,
-                "weight": 116
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DD9LowerHandguard"
-            ],
-            "attachmentSlots": [
-                "Grip",
-                "weaponFlashlight",
-                "BipodKeymodMLOKMount"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd",
-            "name": "AR-15 Daniel Defense MFR 15 inch M-LOK handguard (Black)",
+            "name": "AR-15 Daniel Defense MFR 15 inch M-LOK handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17334,36 +20304,20 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd_FDE",
-            "name": "AR-15 Daniel Defense MFR 15 inch M-LOK handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -7,
-                "sway": -15,
-                "weight": 286
-            },
-            "itemSize": [
-                5,
-                1
-            ],
-            "itemSlots": 5,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_FSP_Hndgrd",
@@ -17397,7 +20351,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP",
-            "name": "AR-15 Daniel Defense RIS III FSP 13 handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS III FSP 13 handguard",
             "category": "handguard",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -17423,37 +20377,20 @@ const attachmentData = {
                 "Bipod",
                 "M203"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP_FDE",
-            "name": "AR-15 Daniel Defense RIS III FSP 13 handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -7,
-                "sway": -5,
-                "weight": 450
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod",
-                "M203"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12_FSP",
@@ -17487,7 +20424,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS II 12.25 handguard (Coyote Brown)",
+            "name": "AR-15 Daniel Defense RIS II 12.25 handguard",
             "category": "handguard",
             "description": "제조사 데니엘 디펜스",
             "stats": {
@@ -17514,12 +20451,19 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "Coyote Brown",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
-            "name": "AR-15 Daniel Defense RIS II 9.5 handguard (Black)",
+            "name": "AR-15 Daniel Defense RIS II 9.5 handguard",
             "category": "handguard",
             "description": "제조사 데니엘 디펜스",
             "stats": {
@@ -17546,38 +20490,20 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Coyote Brown",
+                    "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd_CB",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd_CB",
-            "name": "AR-15 Daniel Defense RIS II 9.5 handguard (Coyote Brown)",
-            "category": "handguard",
-            "description": "Manufactured by Deniel Defense",
-            "stats": {
-                "recoil": -6,
-                "sway": -14,
-                "weight": 400
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "DDCover",
-                "DDCover2",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd",
@@ -17606,36 +20532,20 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd_FDE",
-            "name": "AR-15 Geissele SMR MK4 13.5 inch M-LOK handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Geissele Automatics",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 450
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_12inch_Hndgrd",
@@ -17820,7 +20730,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd",
-            "name": "AR-15 War Sport LVOA-C handguard (Black)",
+            "name": "AR-15 War Sport LVOA-C handguard",
             "category": "handguard",
             "description": "War Sport Industries에서 제조",
             "stats": {
@@ -17844,67 +20754,28 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymodMount"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_FDE",
-            "name": "AR-15 War Sport LVOA-C handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by War Sport Industries",
-            "stats": {
-                "recoil": -9,
-                "sway": -14,
-                "weight": 580
-            },
-            "itemSize": [
-                4,
-                1
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymodMount"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_UCP",
-            "name": "AR-15 War Sport LVOA-C handguard (UCP)",
-            "category": "handguard",
-            "description": "Manufactured by War Sport Industries",
-            "stats": {
-                "recoil": -9,
-                "sway": -14,
-                "weight": 580
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymodMount"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_UCP",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
-            "name": "AR-15 War Sport LVOA-S handguard (Black)",
+            "name": "AR-15 War Sport LVOA-S handguard",
             "category": "handguard",
             "description": "War Sport Industries에서 제조",
             "stats": {
@@ -17928,62 +20799,23 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymodMount"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_FDE",
-            "name": "AR-15 War Sport LVOA-S handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by War Sport Industries",
-            "stats": {
-                "recoil": -5,
-                "sway": -14,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymodMount"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_UCP",
-            "name": "AR-15 War Sport LVOA-S handguard (UCP)",
-            "category": "handguard",
-            "description": "Manufactured by War Sport Industries",
-            "stats": {
-                "recoil": -5,
-                "sway": -14,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymodMount"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_UCP",
+                    "image": ""
+                }
             ]
         },
         {
@@ -18115,32 +20947,18 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd_FDE",
-            "name": "AR-15 Precision Reflex GEN III Delta Carbon handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Precision Reflex",
-            "stats": {
-                "recoil": -7,
-                "sway": -11,
-                "weight": 450
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -18169,34 +20987,18 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd_FDE",
-            "name": "AR-15 Precision Reflex GEN III Round Carbon 12inch Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by Precision Reflex",
-            "stats": {
-                "recoil": -6,
-                "sway": -12,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "weaponOptics",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -18226,152 +21028,41 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "manufacturer": "Radian Weapons",
-            "manufacturerLogo": "assets/radian-logo.png",
-            "manufacturerUrl": "https://www.radianweapons.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Alpine",
-            "name": "AR-15 Radian Model 1 14 inch handguard (Alpine)",
-            "category": "handguard",
-            "description": "A precision CNC machined 14 inch handguard, equipped with an M-LOK interface for installation of additional equipment. Manufactured by Radian Weapons.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 470
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR",
-            "name": "AR-15 Radian Model 1 14 inch handguard (EMR)",
-            "category": "handguard",
-            "description": "A precision CNC machined 14 inch handguard, equipped with an M-LOK interface for installation of additional equipment. Manufactured by Radian Weapons.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 470
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR_Syria",
-            "name": "AR-15 Radian Model 1 14 inch handguard (EMR - Syria)",
-            "category": "handguard",
-            "description": "A precision CNC machined 14 inch handguard, equipped with an M-LOK interface for installation of additional equipment. Manufactured by Radian Weapons.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 470
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Multicam",
-            "name": "AR-15 Radian Model 1 14 inch handguard (Multicam)",
-            "category": "handguard",
-            "description": "추가 장비 설치를 위한 M-LOK 인터페이스가 장착된 정밀 CNC 가공 14인치 핸드가드입니다. Radian Weapons에서 제작한 제품입니다.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 470
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "EMR",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR",
+                    "image": ""
+                },
+                {
+                    "name": "EMR Syria",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR_Syria",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Multicam",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_UCP",
+                    "image": ""
+                }
             ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_UCP",
-            "name": "AR-15 Radian Model 1 14 inch handguard (UCP)",
-            "category": "handguard",
-            "description": "A precision CNC machined 14 inch handguard, equipped with an M-LOK interface for installation of additional equipment. Manufactured by Radian Weapons.",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 470
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd",
@@ -18400,37 +21091,21 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd_FDE",
-            "name": "AR-15 Remington Defense 14 inch Handguard (FDE)",
-            "category": "handguard",
-            "description": "SUCKS",
-            "stats": {
-                "recoil": -5,
-                "sway": -20,
-                "weight": 333
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd",
@@ -18459,37 +21134,21 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd_FDE",
-            "name": "AR-15 Remington Defense 16 inch Handguard (FDE)",
-            "category": "handguard",
-            "description": "SUCKS",
-            "stats": {
-                "recoil": -5,
-                "sway": -20,
-                "weight": 410
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_SAI_145_Hndgrd",
@@ -18576,35 +21235,17 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd_Silver",
-            "name": "AR-15 Geissele SMR MK16 13.5 inch M-LOK handguard (Silver)",
-            "category": "handguard",
-            "description": "AR-15형 소총에만 장착 가능합니다.",
-            "stats": {
-                "recoil": -6,
-                "sway": -15,
-                "weight": 480
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Silver",
+                    "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd_Silver",
+                    "image": ""
+                }
             ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
@@ -18634,33 +21275,17 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd_Silver",
-            "name": "AR-15 Geissele SMR MK16 9.5 inch M-LOK handguard (Silver)",
-            "category": "handguard",
-            "description": "AR-15형 소총에만 장착 가능합니다.",
-            "stats": {
-                "recoil": -5,
-                "sway": -13,
-                "weight": 335
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Silver",
+                    "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd_Silver",
+                    "image": ""
+                }
             ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
@@ -18737,7 +21362,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
-            "name": "AR-15 Strike Industries GRIDLOK 15 inch handguard (Black)",
+            "name": "AR-15 Strike Industries GRIDLOK 15 inch handguard",
             "category": "handguard",
             "description": "스트라이크 인더스트리에서 제작한",
             "stats": {
@@ -18761,61 +21386,22 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
-            "manufacturer": "Strike Industries",
-            "manufacturerUrl": "https://www.strikeindustries.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Red",
-            "name": "AR-15 Strike Industries GRIDLOK 15 inch handguard (Red)",
-            "category": "handguard",
-            "description": "Manufactured by Strike Industries",
-            "stats": {
-                "recoil": -8,
-                "sway": -10,
-                "weight": 670
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Yellow",
-            "name": "AR-15 Strike Industries GRIDLOK 15 inch handguard (Yellow)",
-            "category": "handguard",
-            "description": "스트라이크 인더스트리에서 제작한",
-            "stats": {
-                "recoil": -8,
-                "sway": -10,
-                "weight": 670
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "M4Handguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Red",
+                    "image": ""
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Yellow",
+                    "image": ""
+                }
             ],
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
@@ -18915,7 +21501,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd",
-            "name": "VSS/VAL polymer handguard Plum",
+            "name": "VSS/VAL polymer handguard",
             "category": "handguard",
             "description": "Can be attached on VSS/VAL only",
             "stats": {
@@ -18930,25 +21516,18 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "VSSHandguard"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd_Black",
-            "name": "VSS/VAL polymer handguard Black",
-            "category": "handguard",
-            "description": "Can be attached on VSS/VAL only",
-            "stats": {
-                "recoil": -10,
-                "sway": -10,
-                "weight": 70
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "VSSHandguard"
+            "color": [
+                {
+                    "name": "Plum",
+                    "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd_Black",
+                    "image": ""
+                }
             ]
         },
         {
@@ -18980,7 +21559,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Black",
-            "name": "FN SCAR Vltor CASV-SCAR handguard (Black)",
+            "name": "FN SCAR Vltor CASV-SCAR handguard",
             "category": "handguard",
             "description": "Can be attached on FN SCAR only",
             "stats": {
@@ -19000,11 +21579,23 @@ const attachmentData = {
                 "GripCASV",
                 "SCARHandguardExtender",
                 "weaponFlashlight"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Patriot Brown",
+                    "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_PB",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_Black",
-            "name": "FN SCAR Vltor CASV-SCAR Handguard Extender (Black)",
+            "name": "FN SCAR Vltor CASV-SCAR Handguard Extender",
             "category": "handguard",
             "description": "Can be attached on FN SCAR only",
             "stats": {
@@ -19018,48 +21609,18 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "SCARHandguardExtender"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_PB",
-            "name": "FN SCAR Vltor CASV-SCAR Handguard Extender (Patriot Brown)",
-            "category": "handguard",
-            "description": "Can be attached on FN SCAR only",
-            "stats": {
-                "recoil": -10,
-                "weight": 110
-            },
-            "itemSize": [
-                2,
-                2
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "SCARHandguardExtender"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_PB",
-            "name": "FN SCAR Vltor CASV-SCAR handguard (Patriot Brown)",
-            "category": "handguard",
-            "description": "Can be attached on FN SCAR only",
-            "stats": {
-                "recoil": -20,
-                "sway": -20,
-                "weight": 400
-            },
-            "itemSize": [
-                3,
-                2
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "SCARHandguardCASV"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "SCARHandguardExtender",
-                "weaponFlashlight"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_Black",
+                    "image": ""
+                },
+                {
+                    "name": "Patriot Brown",
+                    "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_PB",
+                    "image": ""
+                }
             ]
         },
         {
@@ -19332,7 +21893,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd",
-            "name": "HK 416 Geissele SMR HK 10.5 inch Handguard (Black)",
+            "name": "HK 416 Geissele SMR HK 10.5 inch Handguard",
             "category": "handguard",
             "description": "Geissele Automats에서 제조",
             "stats": {
@@ -19355,40 +21916,24 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "Frontsight"
             ],
-            "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd_DDC",
-            "name": "HK 416 Geissele SMR HK 10.5 inch Handguard (DDC)",
-            "category": "handguard",
-            "description": "Geissele Automats에서 제조",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 367
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "HK416Handguard"
-            ],
-            "attachmentSlots": [
-                "SMRShortRailMountLeft",
-                "SMRShortRailMountRight",
-                "SMRRailMountUnder",
-                "weaponFlashlightFirst",
-                "Frontsight"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "DDC",
+                    "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd_DDC",
+                    "image": ""
+                }
             ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
         {
             "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd",
-            "name": "HK 416 Geissele SMR HK 14.5 inch Handguard (Black)",
+            "name": "HK 416 Geissele SMR HK 14.5 inch Handguard",
             "category": "handguard",
             "description": "Geissele Automats에서 제조",
             "stats": {
@@ -19412,41 +21957,24 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "Frontsight"
             ],
-            "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd_DDC",
-            "name": "HK 416 Geissele SMR HK 14.5 inch Handguard (DDC)",
-            "category": "handguard",
-            "description": "Geissele Automats에서 제조",
-            "stats": {
-                "recoil": -5,
-                "sway": -10,
-                "weight": 462
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "HK416Handguard"
-            ],
-            "attachmentSlots": [
-                "SMRShortRailMountLeft",
-                "SMRShortRailMountRight",
-                "SMRRailMountUnder",
-                "SMRShortRailMountUnder",
-                "weaponFlashlightFirst",
-                "Frontsight"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "DDC",
+                    "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd_DDC",
+                    "image": ""
+                }
             ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
         {
             "id": "SMPZ_Attachments_HK416_Hndgrd",
-            "name": "HK 416A5 Quad Rail handguard (Black)",
+            "name": "HK 416A5 Quad Rail handguard",
             "category": "handguard",
             "description": "Can be attached on HK 416A5 only",
             "stats": {
@@ -19468,32 +21996,18 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_HK416_Hndgrd_RAL8000",
-            "name": "HK 416A5 Quad Rail handguard (RAL 8000)",
-            "category": "handguard",
-            "description": "Can be attached on HK 416A5 only",
-            "stats": {
-                "sway": -10,
-                "weight": 100
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "HK416Handguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "Grip",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HK416_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "RAL 8000",
+                    "id": "SMPZ_Attachments_HK416_Hndgrd_RAL8000",
+                    "image": ""
+                }
             ]
         },
         {
@@ -19645,7 +22159,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_HK417_Hndgrd_EXT_FDE",
-            "name": "HK417 Extended Free Float handguard with front sight FDE",
+            "name": "HK417 Extended Free Float handguard with front sight",
             "category": "handguard",
             "description": "Can be attached on HK417 & HK G28 rifles only",
             "stats": {
@@ -19668,11 +22182,18 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
+            ],
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_HK417_Hndgrd_EXT_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_HK417_Hndgrd_Patrol_FDE",
-            "name": "HK417 Patrol handguard with flip-up front sight FDE",
+            "name": "HK417 Patrol handguard with flip-up front sight",
             "category": "handguard",
             "description": "Can be attached on HK417 & HK G28 rifles only",
             "stats": {
@@ -19695,6 +22216,13 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
+            ],
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_HK417_Hndgrd_Patrol_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -19827,7 +22355,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_M60E4_Hndgrd",
-            "name": "M60E4 Handguard (Black)",
+            "name": "M60E4 Handguard",
             "category": "handguard",
             "description": "M60 경기관총에만 부착 가능",
             "stats": {
@@ -19847,35 +22375,23 @@ const attachmentData = {
                 "Grip",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_M60E4_Hndgrd_FDE",
-            "name": "M60E4 Handguard (FDE)",
-            "category": "handguard",
-            "description": "Can be attached on M60 LMGs only",
-            "stats": {
-                "recoil": -9,
-                "sway": -10,
-                "weight": 479
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M60Handguard"
-            ],
-            "attachmentSlots": [
-                "Grip",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_M60E4_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_M60E4_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_M60E6_Hndgrd",
-            "name": "M60E6 Handguard (Black)",
+            "name": "M60E6 Handguard",
             "category": "handguard",
             "description": "Can be attached on M60 LMGs only",
             "stats": {
@@ -19895,6 +22411,13 @@ const attachmentData = {
                 "Grip",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_M60E6_Hndgrd",
+                    "image": ""
+                }
             ]
         },
         {
@@ -20083,95 +22606,33 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Alpine",
-            "name": "MCX-SPEAR 11 inch M-LOK handguard (Multicam - Alpine)",
-            "category": "handguard",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "recoil": -5,
-                "sway": -11,
-                "weight": 550
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Black",
-            "name": "MCX-SPEAR 11 inch M-LOK handguard (Black)",
-            "category": "handguard",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "recoil": -5,
-                "sway": -11,
-                "weight": 550
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_UCP",
-            "name": "MCX-SPEAR 11 inch M-LOK handguard (UCP)",
-            "category": "handguard",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "recoil": -5,
-                "sway": -11,
-                "weight": 550
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_UCP",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_Hndgrd",
-            "name": "MDR handguard (Black)",
+            "name": "MDR handguard",
             "category": "handguard",
             "description": "Can be attached on MDR only",
             "stats": {
@@ -20193,37 +22654,23 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_Hndgrd_FDE",
-            "name": "MDR handguard (FDE)",
-            "category": "handguard",
-            "description": "Can be attached on MDR only",
-            "stats": {
-                "recoil": -30,
-                "sway": -17,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_Black",
-            "name": "MDR BLK LBL ALX Bipod 16inch Handguard - Black",
+            "name": "MDR BLK LBL ALX Bipod 16inch Handguard",
             "category": "handguard",
             "description": "양각대는 어디에 있나요!?",
             "stats": {
@@ -20245,37 +22692,23 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_FDE",
-            "name": "MDR BLK LBL ALX Bipod 16inch Handguard - FDE",
-            "category": "handguard",
-            "description": "Where is the bipod!?",
-            "stats": {
-                "recoil": -6,
-                "sway": -10,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_Black",
-            "name": "MDR BLK LBL ALX Bipod 20inch Handguard - Black",
+            "name": "MDR BLK LBL ALX Bipod 20inch Handguard",
             "category": "handguard",
             "description": "양각대는 어디에 있나요!?",
             "stats": {
@@ -20297,37 +22730,23 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_FDE",
-            "name": "MDR BLK LBL ALX Bipod 20inch Handguard - FDE",
-            "category": "handguard",
-            "description": "Where is the bipod!?",
-            "stats": {
-                "recoil": -7,
-                "sway": -11,
-                "weight": 400
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_Black",
-            "name": "MDR BLK LBL ALX 16inch Handguard - Black",
+            "name": "MDR BLK LBL ALX 16inch Handguard",
             "category": "handguard",
             "description": "MDR에만 부착 가능",
             "stats": {
@@ -20349,37 +22768,23 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_FDE",
-            "name": "MDR BLK LBL ALX 16inch Handguard - FDE",
-            "category": "handguard",
-            "description": "Can be attached on MDR only",
-            "stats": {
-                "recoil": -5,
-                "sway": -11,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_Black",
-            "name": "MDR BLK LBL ALX 20inch Handguard - Black",
+            "name": "MDR BLK LBL ALX 20inch Handguard",
             "category": "handguard",
             "description": "MDR에만 부착 가능",
             "stats": {
@@ -20403,39 +22808,23 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_FDE",
-            "name": "MDR BLK LBL ALX 20inch Handguard - FDE",
-            "category": "handguard",
-            "description": "Can be attached on MDR only",
-            "stats": {
-                "recoil": -7,
-                "sway": -11,
-                "weight": 400
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_Black",
-            "name": "MDR Micron M-LOK Handguard - Black",
+            "name": "MDR Micron M-LOK Handguard",
             "category": "handguard",
             "description": "데저트 테크(Desert Tech)에서 제조",
             "stats": {
@@ -20454,29 +22843,18 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_FDE",
-            "name": "MDR Micron M-LOK Handguard - FDE",
-            "category": "handguard",
-            "description": "Manufactured by Desert Tech",
-            "stats": {
-                "recoil": -5,
-                "sway": -30,
-                "weight": 400
-            },
-            "itemSize": [
-                2,
-                2
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "MDRHandguard"
-            ],
-            "attachmentSlots": [
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -20759,7 +23137,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd",
-            "name": "Remington ACR-E Extended Handguard (Black)",
+            "name": "Remington ACR-E Extended Handguard",
             "category": "handguard",
             "description": "",
             "stats": {
@@ -20782,41 +23160,26 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
+            ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
         },
         {
-            "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd_FDE",
-            "name": "Remington ACR-E Extended Handguard (FDE)",
-            "category": "handguard",
-            "description": "",
-            "stats": {
-                "recoil": -4,
-                "sway": -17,
-                "weight": 682
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "MasadaHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
-            ]
-        },
-        {
             "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd",
-            "name": "ACR Extended Square-Drop keyMod Handguard (Black)",
+            "name": "ACR Extended Square-Drop keyMod Handguard",
             "category": "handguard",
             "description": "",
             "stats": {
@@ -20838,37 +23201,23 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd_FDE",
-            "name": "ACR Extended Square-Drop keyMod Handguard (FDE)",
-            "category": "handguard",
-            "description": "",
-            "stats": {
-                "recoil": -5,
-                "sway": -15,
-                "weight": 663
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "MasadaHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
-            "name": "Masada Custom Extended Quad Rail Handguard (Black)",
+            "name": "Masada Custom Extended Quad Rail Handguard",
             "category": "handguard",
             "description": "",
             "stats": {
@@ -20891,38 +23240,23 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd_FDE",
-            "name": "Masada Custom Extended Quad Rail Handguard (FDE)",
-            "category": "handguard",
-            "description": "",
-            "stats": {
-                "recoil": -5,
-                "sway": -20,
-                "weight": 682
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "MasadaHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "BipodKeymod"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
             "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd",
-            "name": "Magpul Masada Polymer Handguard (Black)",
+            "name": "Magpul Masada Polymer Handguard",
             "category": "handguard",
             "description": "제조사 MAGPUL",
             "stats": {
@@ -20943,32 +23277,20 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd_FDE",
-            "name": "Magpul Masada Polymer Handguard (FDE)",
-            "category": "handguard",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": -2,
-                "sway": -10,
-                "weight": 380
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "MasadaHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
-            ]
         },
         {
             "id": "SMPZ_Attachments_NL545_14inch_Hndgrd",
@@ -21389,32 +23711,18 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd_FDE",
-            "name": "FN SCAR Kinetic MREX 6.5 M-LOK rail FDE",
-            "category": "handguard",
-            "description": "Can be attached on FN SCAR only",
-            "stats": {
-                "recoil": -23,
-                "sway": -20,
-                "weight": 226
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SCARHandguard"
-            ],
-            "attachmentSlots": [
-                "GripCASV",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -21737,34 +24045,18 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
-        },
-        {
-            "id": "SMPZ_Attachments_TRG_M10_Hndgrd_UCP",
-            "name": "Sako TRG M10 15 inch handguard (UCP)",
-            "category": "handguard",
-            "description": "Fits on Sako TRG M10",
-            "stats": {
-                "recoil": -5,
-                "sway": -20,
-                "weight": 500
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "TRGHandguard"
-            ],
-            "attachmentSlots": [
-                "Frontsight",
-                "TRGPad",
-                "weaponFlashlightFirst",
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "Bipod"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_TRG_M10_Hndgrd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_TRG_M10_Hndgrd_UCP",
+                    "image": ""
+                }
             ]
         },
         {
@@ -22617,27 +24909,20 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MBUS_Frontsight",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MBUS_Frontsight_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MBUS_Frontsight_FDE",
-            "name": "Magpul MBUS Gen2 flip-up front sight (FDE)",
-            "category": "iron_sight",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "sway": -3,
-                "weight": 10
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "Frontsight"
-            ],
-            "subCategory": "front_sight"
         },
         {
             "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight",
@@ -22657,27 +24942,18 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight_FDE",
-            "name": "Magpul MBUS Gen3 flip-up front sight FDE",
-            "category": "iron_sight",
-            "description": "제조사 MAGPUL",
-            "stats": {
-                "sway": -3,
-                "weight": 34
-            },
-            "itemSize": [
-                1,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "Frontsight"
-            ],
-            "subCategory": "front_sight",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -22699,27 +24975,18 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight_FDE",
-            "name": "Magpul MBUS Gen3 flip-up rear sight FDE",
-            "category": "iron_sight",
-            "description": "제조사 MAGPUL",
-            "stats": {
-                "sway": -3,
-                "weight": 34
-            },
-            "itemSize": [
-                1,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "Rearsight"
-            ],
-            "subCategory": "rear_sight",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -22741,27 +25008,20 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MBUS_Rearsight",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MBUS_Rearsight_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MBUS_Rearsight_FDE",
-            "name": "Magpul MBUS Gen2 flip-up rear sight (FDE)",
-            "category": "iron_sight",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "sway": -3,
-                "weight": 10
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "Rearsight"
-            ],
-            "subCategory": "rear_sight"
         },
         {
             "id": "SMPZ_Attachments_MCX_Frontsight",
@@ -24476,7 +26736,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle",
-            "name": "SureFire Warden Fast-Attach Blast Regulator (Black)",
+            "name": "SureFire Warden Fast-Attach Blast Regulator",
             "category": "muzzle_device",
             "description": "5.56x45 및 7.62x51 소총에 적합",
             "stats": {
@@ -24494,29 +26754,20 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "762_ar10",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle_FDE",
-            "name": "SureFire Warden Fast-Attach Blast Regulator (FDE)",
-            "category": "muzzle_device",
-            "description": "Fits on 5.56x45 & 7.62x51 rifles",
-            "stats": {
-                "recoil": -10,
-                "weight": 281
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "762Suppressor",
-                "SPEARSuppressor",
-                "weaponMuzzleM4"
-            ],
-            "subCategory": "762_ar10"
         },
         {
             "id": "SMPZ_Attachments_TMB_338_Muzzle",
@@ -25208,7 +27459,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AMF_408_Suppressor",
-            "name": "Elite Iron Windtalker AMF .408 Suppressor - Black",
+            "name": "Elite Iron Windtalker AMF .408 Suppressor",
             "category": "suppressor",
             "description": "엘리트 아이언(Elite Iron)에서 제조",
             "stats": {
@@ -25223,7 +27474,14 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AMF_408_Suppressor",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASH12_Suppressor",
@@ -25420,7 +27678,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
-            "name": "HUXWRX HX-QD 7.62x51 Suppressor (Black)",
+            "name": "HUXWRX HX-QD 7.62x51 Suppressor",
             "category": "suppressor",
             "description": "HUman eXposure WORKShop Safety Co (HUXWRX) 제작",
             "stats": {
@@ -25437,28 +27695,19 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor_Tan",
-            "name": "HUXWRX HX-QD 7.62x51 Suppressor (Tan)",
-            "category": "suppressor",
-            "description": "Manufactured by HUman eXposure WORKShop Safety Co (HUXWRX)",
-            "stats": {
-                "recoil": -11,
-                "sway": 15,
-                "weight": 690
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "762Suppressor",
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "Tan",
+                    "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor_Tan",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -25520,7 +27769,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor",
-            "name": "SilencerCo Hybrid 46 Black",
+            "name": "SilencerCo Hybrid 46",
             "category": "suppressor",
             "description": "범용 억제기",
             "stats": {
@@ -25548,45 +27797,24 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "multi_caliber",
-            "manufacturer": "SilencerCo",
-            "manufacturerUrl": "https://silencerco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
-            "name": "SilencerCo Hybrid 46 FDE",
-            "category": "suppressor",
-            "description": "범용 억제기",
-            "stats": {
-                "recoil": -10,
-                "sway": 10,
-                "weight": 1500
-            },
-            "itemSize": [
-                3,
-                1
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Hybrid46Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponMuzzleM4",
-                "weaponMuzzleAK",
-                "weaponMuzzleAK74",
-                "weaponMuzzleAKM",
-                "MP7Suppressor",
-                "SMGSuppressor",
-                "762Suppressor",
-                "AKSuppressor",
-                "GlockSuppressor",
-                "GlockSuppressorSecond",
-                "AUGMuzzle",
-                "SPEARSuppressor"
-            ],
-            "subCategory": "multi_caliber",
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
         {
             "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
-            "name": "KAC SR-25/Mk.11 7.62x51 Suppressor - Black",
+            "name": "KAC SR-25/Mk.11 7.62x51 Suppressor",
             "category": "suppressor",
             "description": "Knight's Armament Company에서 제작",
             "stats": {
@@ -25602,28 +27830,18 @@ const attachmentData = {
                 "762Suppressor"
             ],
             "subCategory": "762_ar10",
-            "manufacturer": "Knight's Armament Company",
-            "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
-            "name": "KAC SR-25/Mk.11 7.62x51 Suppressor - Taupe",
-            "category": "suppressor",
-            "description": "Knight's Armament Company에서 제작",
-            "stats": {
-                "recoil": -17,
-                "weight": 848
-            },
-            "itemSize": [
-                4,
-                1
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "Taupe",
+                    "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
+                    "image": ""
+                }
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "762Suppressor"
-            ],
-            "subCategory": "762_ar10",
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -25675,7 +27893,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
-            "name": "KAC QDC Multi-Caliber suppressor FDE",
+            "name": "KAC QDC Multi-Caliber suppressor",
             "category": "suppressor",
             "description": "5.56x45 및 7.62x51 소총에 부착 가능",
             "stats": {
@@ -25694,6 +27912,13 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "multi_caliber",
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -25716,28 +27941,18 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
-            "manufacturer": "Knight's Armament Company",
-            "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
-            "name": "KAC QDSS NT4 5.56x45 suppressor FDE",
-            "category": "suppressor",
-            "description": "5.56x45 소총에 부착 가능",
-            "stats": {
-                "recoil": -13,
-                "weight": 743
-            },
-            "itemSize": [
-                3,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponMuzzleM4"
-            ],
-            "subCategory": "556_ar15",
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -25760,27 +27975,19 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
-        },
-        {
-            "id": "SMPZ_Attachments_M4SD_556_Suppressor_FDE",
-            "name": "AR-15 Griffin Armament M4SD-K 5.56x45 Suppressor (FDE)",
-            "category": "suppressor",
-            "description": "Can be attached on 5.56x45 rifles only",
-            "stats": {
-                "recoil": -18,
-                "sway": 10,
-                "weight": 397
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponMuzzleM4"
-            ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_M4SD_556_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_M4SD_556_Suppressor_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor",
@@ -25800,67 +28007,29 @@ const attachmentData = {
             "inventorySlots": [
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Alpine",
-            "name": "MCX-SPEAR SLX68-MG-QD 6.8x51 Suppressor (Multicam - Alpine)",
-            "category": "suppressor",
-            "description": "Can be attached on SIG MCX-SPEAR only",
-            "stats": {
-                "recoil": -17,
-                "sway": 10,
-                "weight": 600
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Black",
-            "name": "MCX-SPEAR SLX68-MG-QD 6.8x51 Suppressor (Black)",
-            "category": "suppressor",
-            "description": "Can be attached on SIG MCX-SPEAR only",
-            "stats": {
-                "recoil": -17,
-                "sway": 10,
-                "weight": 600
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_UCP",
-            "name": "MCX-SPEAR SLX68-MG-QD 6.8x51 Suppressor (UCP)",
-            "category": "suppressor",
-            "description": "Can be attached on SIG MCX-SPEAR only",
-            "stats": {
-                "recoil": -17,
-                "sway": 10,
-                "weight": 600
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_UCP",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_MP7_Suppressor",
@@ -26276,28 +28445,20 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Saker_ASR556_Suppressor_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Saker_ASR556_Suppressor_FDE",
-            "name": "SilencerCo Saker ASR 5.56 Suppressor (FDE)",
-            "category": "suppressor",
-            "description": "Can be attached on 5.56x45 rifles",
-            "stats": {
-                "recoil": -16,
-                "sway": 10,
-                "weight": 510
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponMuzzleM4"
-            ],
-            "subCategory": "556_ar15"
         },
         {
             "id": "SMPZ_Attachments_Salvo12_12ga_Suppressor",
@@ -26367,7 +28528,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
-            "name": "SureFire SOCOM556-RC2 5.56x45 Suppressor (Black)",
+            "name": "SureFire SOCOM556-RC2 5.56x45 Suppressor",
             "category": "suppressor",
             "description": "SureFire에서 제조",
             "stats": {
@@ -26385,33 +28546,24 @@ const attachmentData = {
                 "MP7SureFireSuppressor"
             ],
             "subCategory": "556_ar15",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
         {
-            "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor_FDE",
-            "name": "SureFire SOCOM556-RC2 5.56x45 Suppressor (FDE)",
-            "category": "suppressor",
-            "description": "Manufactured by SureFire",
-            "stats": {
-                "recoil": -13,
-                "sway": 10,
-                "weight": 546
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponMuzzleM4",
-                "MP7SureFireSuppressor"
-            ],
-            "subCategory": "556_ar15"
-        },
-        {
             "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
-            "name": "SureFire SOCOM762-RC2 7.62x51 Suppressor (Black)",
+            "name": "SureFire SOCOM762-RC2 7.62x51 Suppressor",
             "category": "suppressor",
             "description": "7.62x51에 부착 가능",
             "stats": {
@@ -26429,71 +28581,30 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_Alpine",
-            "name": "SureFire SOCOM762-RC2 7.62x51 Suppressor (MultiCam - Alpine)",
-            "category": "suppressor",
-            "description": "Can be attached on 7.62x51",
-            "stats": {
-                "recoil": -14,
-                "sway": 13,
-                "weight": 659
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "762Suppressor",
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_FDE",
-            "name": "SureFire SOCOM762-RC2 7.62x51 Suppressor (FDE)",
-            "category": "suppressor",
-            "description": "Can be attached on 7.62x51",
-            "stats": {
-                "recoil": -14,
-                "sway": 13,
-                "weight": 659
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "762Suppressor",
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
-        },
-        {
-            "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_UCP",
-            "name": "SureFire SOCOM762-RC2 7.62x51 Suppressor (UCP)",
-            "category": "suppressor",
-            "description": "Can be attached on 7.62x51",
-            "stats": {
-                "recoil": -14,
-                "sway": 13,
-                "weight": 659
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "762Suppressor",
-                "SPEARSuppressor"
-            ],
-            "subCategory": "762_ar10"
         },
         {
             "id": "SMPZ_Attachments_TSM_338_Suppressor",
@@ -26645,7 +28756,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
-            "name": "AK FAB Defense AGR-47 pistol grip FDE",
+            "name": "AK FAB Defense AGR-47 pistol grip",
             "category": "pistol_grip",
             "description": "AK형 소총에만 장착 가능",
             "stats": {
@@ -26660,11 +28771,18 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
-            "name": "AK Strike Industries Enhanced Pistol Grip Black",
+            "name": "AK Strike Industries Enhanced Pistol Grip",
             "category": "pistol_grip",
             "description": "AK형 소총에만 장착 가능",
             "stats": {
@@ -26680,27 +28798,18 @@ const attachmentData = {
                 "AKpistolgrip"
             ],
             "subCategory": "ak",
-            "manufacturer": "Strike Industries",
-            "manufacturerUrl": "https://www.strikeindustries.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_EPG_pistolgrip_FDE",
-            "name": "AK Strike Industries Enhanced Pistol Grip FDE",
-            "category": "pistol_grip",
-            "description": "AK형 소총에만 장착 가능",
-            "stats": {
-                "sway": -18,
-                "weight": 91
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AK_EPG_pistolgrip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKpistolgrip"
-            ],
-            "subCategory": "ak",
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -26726,7 +28835,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
-            "name": "AK Magpul MOE pistol grip Black",
+            "name": "AK Magpul MOE pistol grip",
             "category": "pistol_grip",
             "description": "AK형 소총에만 장착 가능",
             "stats": {
@@ -26742,6 +28851,13 @@ const attachmentData = {
                 "AKpistolgrip"
             ],
             "subCategory": "ak",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -26767,7 +28883,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
-            "name": "AK TAPCO SAW-Style pistol grip Black",
+            "name": "AK TAPCO SAW-Style pistol grip",
             "category": "pistol_grip",
             "description": "AK형 소총에만 장착 가능",
             "stats": {
@@ -26782,26 +28898,19 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
-        },
-        {
-            "id": "SMPZ_Attachments_AK_SAW_pistolgrip_FDE",
-            "name": "AK TAPCO SAW-Style pistol grip FDE",
-            "category": "pistol_grip",
-            "description": "AK형 소총에만 장착 가능",
-            "stats": {
-                "sway": -21,
-                "weight": 130
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "AKpistolgrip"
-            ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AK_SAW_pistolgrip_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Zenit_RK3_pistolgrip",
@@ -26827,7 +28936,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip",
-            "name": "AR-15 B5 Systems P-Grip 23 pistol grip - Black",
+            "name": "AR-15 B5 Systems P-Grip 23 pistol grip",
             "category": "pistol_grip",
             "description": "B5 시스템에서 제조",
             "stats": {
@@ -26842,26 +28951,19 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip_FDE",
-            "name": "AR-15 B5 Systems P-Grip 23 pistol grip - FDE",
-            "category": "pistol_grip",
-            "description": "Manufactured by B5 Systems",
-            "stats": {
-                "sway": -9,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_A1_pistolgrip",
@@ -26906,7 +29008,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
-            "name": "AR-15 Daniel Defense Enhanced pistol grip (Black)",
+            "name": "AR-15 Daniel Defense Enhanced pistol grip",
             "category": "pistol_grip",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -26922,27 +29024,18 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
-            "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip_MilSpec",
-            "name": "AR-15 Daniel Defense Enhanced pistol grip (Mil Spec+)",
-            "category": "pistol_grip",
-            "description": "다니엘 디펜스(Daniel Defense)가 제작한",
-            "stats": {
-                "sway": -40,
-                "weight": 90
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "Mil Spec+",
+                    "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip_MilSpec",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4",
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -27084,32 +29177,25 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
         },
         {
-            "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip_FDE",
-            "name": "AR-15 HK Battle Grip Beavertail pistol grip - FDE",
-            "category": "pistol_grip",
-            "description": "Manufactured by Heckler & Koch",
-            "stats": {
-                "sway": -10,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
             "id": "SMPZ_Attachments_Hogue_pistolgrip",
-            "name": "Hogue OverMolded Rubber Grip Black",
+            "name": "Hogue OverMolded Rubber Grip",
             "category": "pistol_grip",
             "description": "",
             "stats": {
@@ -27124,68 +29210,33 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Hogue_pistolgrip_FDE",
-            "name": "Hogue OverMolded Rubber Grip FDE",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -19,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Hogue_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Hogue_pistolgrip_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Ghillie Green",
+                    "id": "SMPZ_Attachments_Hogue_pistolgrip_GG",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Attachments_Hogue_pistolgrip_OD",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GE",
             "name": "Hogue OverMolded Rubber Grip Ghillie Earth",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -19,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Hogue_pistolgrip_GG",
-            "name": "Hogue OverMolded Rubber Grip Ghillie Green",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -19,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Hogue_pistolgrip_OD",
-            "name": "Hogue OverMolded Rubber Grip Olive Drab",
             "category": "pistol_grip",
             "description": "",
             "stats": {
@@ -27251,22 +29302,19 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Pistolgrip"
             ],
-            "subCategory": "other"
-        },
-        {
-            "id": "SMPZ_Attachments_M60E6_Pistolgrip_FDE",
-            "name": "M60E6 Pistol Grip (FDE)",
-            "category": "pistol_grip",
-            "description": "Can be attached on M60 LMGs only",
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M60Pistolgrip"
-            ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_M60E6_Pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_M60E6_Pistolgrip_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
@@ -27287,32 +29335,23 @@ const attachmentData = {
             "attachmentSlots": [
                 "M60Pistolgrip"
             ],
-            "subCategory": "other"
-        },
-        {
-            "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group_FDE",
-            "name": "M60E6 Trigger Group (FDE)",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "weight": 100
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "M60PistolgripGroup"
-            ],
-            "attachmentSlots": [
-                "M60Pistolgrip"
-            ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip",
-            "name": "AR-15 Magpul MIAD pistol grip FDE",
+            "name": "AR-15 Magpul MIAD pistol grip",
             "category": "pistol_grip",
             "description": "제조사 맥풀",
             "stats": {
@@ -27328,33 +29367,24 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MIAD_pistolgrip_Black",
-            "name": "AR-15 Magpul MIAD pistol grip Black",
-            "category": "pistol_grip",
-            "description": "제조사 맥풀",
-            "stats": {
-                "sway": -18,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MIAD_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MIAD_pistolgrip_Black",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
         {
             "id": "SMPZ_Attachments_MOE_pistolgrip",
-            "name": "AR-15 Magpul MOE pistol grip (Black)",
+            "name": "AR-15 Magpul MOE pistol grip",
             "category": "pistol_grip",
             "description": "",
             "stats": {
@@ -27370,65 +29400,30 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_MOE_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_MOE_pistolgrip_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_MOE_pistolgrip_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_MOE_pistolgrip_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_pistolgrip_Alpine",
-            "name": "AR-15 Magpul MOE pistol grip (Multicam - Alpine)",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -20,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_pistolgrip_FDE",
-            "name": "AR-15 Magpul MOE pistol grip (FDE)",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -20,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_MOE_pistolgrip_UCP",
-            "name": "AR-15 Magpul MOE pistol grip (UCP)",
-            "category": "pistol_grip",
-            "description": "",
-            "stats": {
-                "sway": -20,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_pistolgrip",
@@ -27451,7 +29446,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
-            "name": "AR-15 Magpul MOE-K2 pistol grip - Black",
+            "name": "AR-15 Magpul MOE-K2 pistol grip",
             "category": "pistol_grip",
             "description": "제조사 맥풀",
             "stats": {
@@ -27467,27 +29462,20 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip_FDE",
-            "name": "AR-15 Magpul MOE-K2 pistol grip - FDE",
-            "category": "pistol_grip",
-            "description": "Manufactured by Magpul",
-            "stats": {
-                "sway": -21,
-                "weight": 50
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
         },
         {
             "id": "SMPZ_Attachments_Naroh_pistolgrip",
@@ -27506,45 +29494,24 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Naroh_pistolgrip_Red",
-            "name": "AR-15 Naroh Arms GRAL-S pistol grip (Red)",
-            "category": "pistol_grip",
-            "description": "Manufactured by Naroh Arms",
-            "stats": {
-                "sway": -25,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Naroh_pistolgrip_UCP",
-            "name": "AR-15 Naroh Arms GRAL-S pistol grip (UCP)",
-            "category": "pistol_grip",
-            "description": "Manufactured by Naroh Arms",
-            "stats": {
-                "sway": -25,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Naroh_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_Naroh_pistolgrip_Red",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_Naroh_pistolgrip_UCP",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_Orion_pistolgrip",
@@ -27688,66 +29655,31 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Alpine",
-            "name": "AR-15 SIG Sauer Reduced Angle Pistol Grip (Multicam - Alpine)",
-            "category": "pistol_grip",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "sway": -26,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Black",
-            "name": "AR-15 SIG Sauer Reduced Angle Pistol Grip (Black)",
-            "category": "pistol_grip",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "sway": -26,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_UCP",
-            "name": "AR-15 SIG Sauer Reduced Angle Pistol Grip (UCP)",
-            "category": "pistol_grip",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "sway": -26,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
         },
         {
             "id": "SMPZ_Attachments_SVD_Pistolgrip_Adapter",
@@ -27791,7 +29723,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip",
-            "name": "AR-15 Stark AR Rifle Grip Black",
+            "name": "AR-15 Stark AR Rifle Grip",
             "category": "pistol_grip",
             "description": "스타크 이큅먼트 코퍼레이션(Stark Equipment Corp)에서 제조",
             "stats": {
@@ -27806,26 +29738,19 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_Stark_pistolgrip_FDE",
-            "name": "AR-15 Stark AR Rifle Grip FDE",
-            "category": "pistol_grip",
-            "description": "스타크 이큅먼트 코퍼레이션(Stark Equipment Corp)에서 제조",
-            "stats": {
-                "sway": -21,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Stark_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Stark_pistolgrip_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_TD_HEX_pistolgrip",
@@ -27867,7 +29792,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
-            "name": "AR-15 Tyrant Designs MOD Chevron pistol grip (Black)",
+            "name": "AR-15 Tyrant Designs MOD Chevron pistol grip",
             "category": "pistol_grip",
             "description": "폭군 디자인에 의해 제조",
             "stats": {
@@ -27882,45 +29807,24 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Red",
-            "name": "AR-15 Tyrant Designs MOD Chevron pistol grip (Red)",
-            "category": "pistol_grip",
-            "description": "Manufactured by Tyrant Designs",
-            "stats": {
-                "sway": -43,
-                "weight": 112
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
-        },
-        {
-            "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Yellow",
-            "name": "AR-15 Tyrant Designs MOD Chevron pistol grip (Yellow)",
-            "category": "pistol_grip",
-            "description": "폭군 디자인에 의해 제조",
-            "stats": {
-                "sway": -43,
-                "weight": 112
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARpistolgrip"
-            ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Red",
+                    "image": ""
+                },
+                {
+                    "name": "Yellow",
+                    "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Yellow",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_UCP_Rubber_Grip_Glove",
@@ -28376,28 +30280,21 @@ const attachmentData = {
                 "M4Receiver"
             ],
             "subCategory": "ar15_upper",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Receiver",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Receiver_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Receiver_UCP",
-            "name": "AR-15 Radian Weapons Model 1 Upper Receiver (UCP)",
-            "category": "receiver",
-            "description": "A precision CNC machined upper receiver for the AR-15 platform. Manufactured by Radian Weapons. Note: This receiver cannot be installed on the Radian Model 1.",
-            "stats": {
-                "recoil": -5,
-                "weight": 300
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "M4Receiver"
-            ],
-            "subCategory": "ar15_upper"
         },
         {
             "id": "SMPZ_Attachments_AR15_TTI_MUR_Receiver",
@@ -28614,26 +30511,19 @@ const attachmentData = {
             "inventorySlots": [
                 "BottomRailCover"
             ],
-            "subCategory": "other"
-        },
-        {
-            "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Bottom_FDE",
-            "name": "IWI Tavor X95 Bottom Rail Cover (FDE)",
-            "category": "receiver",
-            "description": "",
-            "stats": {
-                "sway": -10,
-                "weight": 10
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "BottomRailCover"
-            ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Bottom",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Bottom_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left",
@@ -28652,26 +30542,19 @@ const attachmentData = {
             "inventorySlots": [
                 "LeftRailCover"
             ],
-            "subCategory": "other"
-        },
-        {
-            "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left_FDE",
-            "name": "IWI Tavor X95 Left Rail Cover (FDE)",
-            "category": "receiver",
-            "description": "",
-            "stats": {
-                "sway": -10,
-                "weight": 10
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "LeftRailCover"
-            ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right",
@@ -28690,26 +30573,19 @@ const attachmentData = {
             "inventorySlots": [
                 "RightRailCover"
             ],
-            "subCategory": "other"
-        },
-        {
-            "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right_FDE",
-            "name": "IWI Tavor X95 Right Rail Cover (FDE)",
-            "category": "receiver",
-            "description": "",
-            "stats": {
-                "sway": -10,
-                "weight": 10
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "RightRailCover"
-            ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_M1911_M45A1_Slide",
@@ -29690,30 +31566,20 @@ const attachmentData = {
                 "weaponFlashlightFirst"
             ],
             "subCategory": "scope_mount",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount_FDE",
-            "name": "GBRS Aimpoint Hydra Mount (FDE)",
-            "category": "mount",
-            "description": "",
-            "stats": {
-                "weight": 140
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "weaponOptics"
-            ],
-            "attachmentSlots": [
-                "weaponOptics",
-                "weaponFlashlightFirst"
-            ],
-            "subCategory": "scope_mount"
         },
         {
             "id": "SMPZ_Attachments_Geissele_SMR_HK_Rail_Mount",
@@ -29810,7 +31676,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Long_Panel",
-            "name": "KAC URX 3/3.1 Long Panel - Black",
+            "name": "KAC URX 3/3.1 Long Panel",
             "category": "mount",
             "description": "Knight's Armament Company에서 제작",
             "stats": {
@@ -29826,28 +31692,21 @@ const attachmentData = {
                 "URXPanel2"
             ],
             "subCategory": "rail_panel",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_KAC_URX_Long_Panel",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_KAC_URX_Long_Panel_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_KAC_URX_Long_Panel_FDE",
-            "name": "KAC URX 3/3.1 Long Panel - FDE",
-            "category": "mount",
-            "description": "Manufactured by Knight's Armament Company",
-            "stats": {
-                "weight": 5
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "URXPanel",
-                "URXPanel2"
-            ],
-            "subCategory": "rail_panel"
         },
         {
             "id": "SMPZ_Attachments_KibaArms_25mm_Ring_Mount",
@@ -30281,7 +32140,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_OMM_Riser_Mount",
-            "name": "Irregular Defense OMM Picatinny Mount (Black)",
+            "name": "Irregular Defense OMM Picatinny Mount",
             "category": "mount",
             "description": "이레귤러 디펜스사에서 제작한",
             "stats": {
@@ -30299,29 +32158,19 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst"
             ],
-            "subCategory": "scope_mount"
-        },
-        {
-            "id": "SMPZ_Attachments_OMM_Riser_Mount_FDE",
-            "name": "Irregular Defense OMM Picatinny Mount (FDE)",
-            "category": "mount",
-            "description": "Manufactured by Irregular Defense",
-            "stats": {
-                "weight": 110
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics"
-            ],
-            "attachmentSlots": [
-                "weaponOptics",
-                "weaponFlashlightFirst"
-            ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_OMM_Riser_Mount",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_OMM_Riser_Mount_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_OdinWorks_KeyMod_Bipod_Adapter",
@@ -30522,29 +32371,20 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_ROF90_RMR_Mount",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_ROF90_RMR_Mount_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_ROF90_RMR_Mount_FDE",
-            "name": "Reptilia ROF-90 RMR mount for Geissele scope mounts",
-            "category": "mount",
-            "description": "",
-            "stats": {
-                "weight": 20
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "ROF90Mount"
-            ],
-            "attachmentSlots": [
-                "pistolOptics"
-            ],
-            "subCategory": "scope_mount"
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight_Base_Mount",
@@ -31122,7 +32962,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_ARE_TubeBuffer",
-            "name": "AR-15 Strike Industries Advanced Receiver Extension Buffer Tube (Black)",
+            "name": "AR-15 Strike Industries Advanced Receiver Extension Buffer Tube",
             "category": "buffer_tube",
             "description": "AR형 소총에만 장착 가능",
             "stats": {
@@ -31140,29 +32980,20 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_ARE_TubeBuffer",
+                    "image": ""
+                },
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_ARE_TubeBuffer_Red",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_ARE_TubeBuffer_Red",
-            "name": "AR-15 Strike Industries Advanced Receiver Extension Buffer Tube (Red)",
-            "category": "buffer_tube",
-            "description": "Can be attached on AR type rifles only",
-            "stats": {
-                "recoil": -8,
-                "weight": 110
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARBuffer"
-            ],
-            "attachmentSlots": [
-                "ARButtstock"
-            ]
         },
         {
             "id": "SMPZ_Attachments_ASVAL_NB_TubeBuffer",
@@ -31232,7 +33063,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_CGNL_TubeBuffer",
-            "name": "AR-15 Custom Guns Buffer Tube - Black",
+            "name": "AR-15 Custom Guns Buffer Tube",
             "category": "buffer_tube",
             "description": "AR형 소총에만 장착 가능",
             "stats": {
@@ -31250,28 +33081,19 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CGNL_TubeBuffer",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_CGNL_TubeBuffer_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Custom Guns"
-        },
-        {
-            "id": "SMPZ_Attachments_CGNL_TubeBuffer_FDE",
-            "name": "AR-15 Custom Guns Buffer Tube - FDE",
-            "category": "buffer_tube",
-            "description": "Can be attached on AR type rifles only",
-            "stats": {
-                "recoil": -6,
-                "weight": 132
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "ARBuffer"
-            ],
-            "attachmentSlots": [
-                "ARButtstock"
-            ]
         },
         {
             "id": "SMPZ_Attachments_Colt_A2_TubeBuffer",
@@ -31366,7 +33188,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
-            "name": "SIG Sauer Stock Adapter Low Profile Tube (Coyote Tan)",
+            "name": "SIG Sauer Stock Adapter Low Profile Tube",
             "category": "buffer_tube",
             "description": "",
             "stats": {
@@ -31383,6 +33205,13 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
+            ],
+            "color": [
+                {
+                    "name": "Coyote Tan",
+                    "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
+                    "image": ""
+                }
             ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
@@ -31433,7 +33262,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_SCAR_TubeBuffer",
-            "name": "FN SCAR Vltor RE-SCAR Stock Adapter (Patriot Brown)",
+            "name": "FN SCAR Vltor RE-SCAR Stock Adapter",
             "category": "buffer_tube",
             "description": "Can be attached on FN SCAR only",
             "stats": {
@@ -31450,6 +33279,13 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
+            ],
+            "color": [
+                {
+                    "name": "Patriot Brown",
+                    "id": "SMPZ_Attachments_SCAR_TubeBuffer",
+                    "image": ""
+                }
             ]
         }
     ],
@@ -31551,26 +33387,17 @@ const attachmentData = {
             "inventorySlots": [
                 "AR10Gasblock"
             ],
-            "manufacturer": "Knight's Armament Company",
-            "manufacturerLogo": "assets/kac-logo.png",
-            "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock_Taupe",
-            "name": "AR-10 KAC M110 Double High Picatinny Gas Block - Taupe",
-            "category": "gas_block",
-            "description": "SR-25에만 장착 가능합니다.",
-            "stats": {
-                "recoil": -2,
-                "weight": 116
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "AR10Gasblock"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock",
+                    "image": ""
+                },
+                {
+                    "name": "Taupe",
+                    "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock_Taupe",
+                    "image": ""
+                }
             ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
@@ -31751,7 +33578,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_AR15_ACH_ChargingHandle",
-            "name": "AR-15 Geissele ACH charging handle DDC",
+            "name": "AR-15 Geissele ACH charging handle",
             "category": "charging_handle",
             "description": "AR15형 소총에만 장착 가능합니다.",
             "stats": {
@@ -31766,6 +33593,13 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARChargingHandle"
+            ],
+            "color": [
+                {
+                    "name": "DDC",
+                    "id": "SMPZ_Attachments_AR15_ACH_ChargingHandle",
+                    "image": ""
+                }
             ],
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
@@ -31868,28 +33702,21 @@ const attachmentData = {
             "inventorySlots": [
                 "ARChargingHandle"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle",
+                    "image": ""
+                },
+                {
+                    "name": "RAL 8000",
+                    "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle_RAL8000",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle_RAL8000",
-            "name": "AR-15 HK Extended Latch Charging Handle (RAL 8000)",
-            "category": "charging_handle",
-            "description": "Can be attached on AR15 type Rifles only.",
-            "stats": {
-                "recoil": -1,
-                "sway": -10,
-                "weight": 64
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARChargingHandle"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_MASP_Battle_ChargingHandle",
@@ -31947,32 +33774,25 @@ const attachmentData = {
             "inventorySlots": [
                 "ARChargingHandle"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle_UCP",
-            "name": "AR-15 Radian Weapons Raptor SD charging handle (UCP)",
-            "category": "charging_handle",
-            "description": "Can be attached on AR15 type Rifles only.",
-            "stats": {
-                "recoil": -3,
-                "sway": -15,
-                "weight": 40
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARChargingHandle"
-            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle",
-            "name": "AR-15 Radian Weapons Raptor charging handle Tungsten Grey",
+            "name": "AR-15 Radian Weapons Raptor charging handle Tungsten",
             "category": "charging_handle",
             "description": "AR15형 소총에만 장착 가능합니다.",
             "stats": {
@@ -31988,27 +33808,17 @@ const attachmentData = {
             "inventorySlots": [
                 "ARChargingHandle"
             ],
-            "manufacturer": "Radian Weapons",
-            "manufacturerLogo": "assets/radian-logo.png",
-            "manufacturerUrl": "https://www.radianweapons.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle_FDE",
-            "name": "AR-15 Radian Weapons Raptor charging handle FDE",
-            "category": "charging_handle",
-            "description": "AR15형 소총에만 장착 가능합니다.",
-            "stats": {
-                "recoil": -3,
-                "sway": -12,
-                "weight": 50
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "ARChargingHandle"
+            "color": [
+                {
+                    "name": "Grey",
+                    "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
@@ -32099,7 +33909,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
-            "name": "BCM GUNFIGHTER MOD 3 M-LOK foregrip Black",
+            "name": "BCM GUNFIGHTER MOD 3 M-LOK foregrip",
             "category": "foregrip",
             "description": "브라보컴퍼니 제조회사",
             "stats": {
@@ -32119,83 +33929,24 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "mlok",
-            "manufacturer": "Bravo Company MFG",
-            "manufacturerUrl": "https://bravocompanyusa.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
-            "name": "BCM GUNFIGHTER MOD 3 M-LOK foregrip FDE",
-            "category": "foregrip",
-            "description": "브라보컴퍼니 제조회사",
-            "stats": {
-                "recoil": -35,
-                "sway": -55,
-                "weight": 28
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "mlok",
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
         {
             "id": "SMPZ_Attachments_BGV_MK46K_Grip",
-            "name": "TangoDown Stubby BGV-MK46K foregrip Black",
-            "category": "foregrip",
-            "description": "Manufactured by TangoDown",
-            "stats": {
-                "recoil": -30,
-                "sway": -30,
-                "weight": 82
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny"
-        },
-        {
-            "id": "SMPZ_Attachments_BGV_MK46K_Grip_FDE",
-            "name": "TangoDown Stubby BGV-MK46K foregrip FDE",
-            "category": "foregrip",
-            "description": "Manufactured by TangoDown",
-            "stats": {
-                "recoil": -30,
-                "sway": -30,
-                "weight": 82
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny"
-        },
-        {
-            "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
-            "name": "TangoDown Stubby BGV-MK46K foregrip Stealth Grey",
+            "name": "TangoDown Stubby BGV-MK46K foregrip",
             "category": "foregrip",
             "description": "제조: TangoDown",
             "stats": {
@@ -32215,12 +33966,29 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_BGV_MK46K_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_BGV_MK46K_Grip_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Stealth Grey",
+                    "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
+                    "image": ""
+                }
+            ],
             "manufacturer": "TangoDown",
             "manufacturerUrl": "https://tangodown.com/"
         },
         {
             "id": "SMPZ_Attachments_BGV_QDITI_Grip",
-            "name": "TangoDown Stubby BGV-MK46K foregrip Black",
+            "name": "TangoDown Stubby BGV-MK46K foregrip",
             "category": "foregrip",
             "description": "제조: TangoDown",
             "stats": {
@@ -32240,37 +34008,24 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "TangoDown",
-            "manufacturerUrl": "https://tangodown.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
-            "name": "TangoDown Stubby BGV-MK46K foregrip FDE",
-            "category": "foregrip",
-            "description": "제조: TangoDown",
-            "stats": {
-                "recoil": -31,
-                "sway": -30,
-                "weight": 136
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_BGV_QDITI_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "TangoDown",
             "manufacturerUrl": "https://tangodown.com/"
         },
         {
             "id": "SMPZ_Attachments_CQR_Grip",
-            "name": "Hera Arms CQR tactical foregrip (Black)",
+            "name": "Hera Arms CQR tactical foregrip",
             "category": "foregrip",
             "description": "헤라암즈에서 제작한",
             "stats": {
@@ -32289,30 +34044,19 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "subCategory": "picatinny"
-        },
-        {
-            "id": "SMPZ_Attachments_CQR_Grip_UCP",
-            "name": "AR-15 Hera Arms CQR pistol grip/buttstock (UCP)",
-            "category": "foregrip",
-            "description": "헤라암즈에서 제작한",
-            "stats": {
-                "recoil": -45,
-                "sway": -55,
-                "weight": 167
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_CQR_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Attachments_CQR_Grip_UCP",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -32336,37 +34080,24 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "Strike Industries",
-            "manufacturerUrl": "https://www.strikeindustries.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Cobra_Grip_FDE",
-            "name": "Strike Industries Cobra Tactical foregrip FDE",
-            "category": "foregrip",
-            "description": "스트라이크 인더스트리에서 제작한",
-            "stats": {
-                "recoil": -11,
-                "sway": -30,
-                "weight": 80
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_Cobra_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Cobra_Grip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
         {
             "id": "SMPZ_Attachments_DD_MLOK_Grip",
-            "name": "Daniel Defense Enhanced M-LOK Vertical Foregrip (Black)",
+            "name": "Daniel Defense Enhanced M-LOK Vertical Foregrip",
             "category": "foregrip",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -32386,35 +34117,24 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "mlok",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_DD_MLOK_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_DD_MLOK_Grip_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_DD_MLOK_Grip_FDE",
-            "name": "Daniel Defense Enhanced M-LOK Vertical Foregrip (FDE)",
-            "category": "foregrip",
-            "description": "Manufactured by Daniel Defense",
-            "stats": {
-                "recoil": -25,
-                "sway": -30,
-                "weight": 28
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "mlok"
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
-            "name": "Daniel Defense Vertical ForeGrip (Black)",
+            "name": "Daniel Defense Vertical ForeGrip",
             "category": "foregrip",
             "description": "다니엘 디펜스(Daniel Defense)가 제작한",
             "stats": {
@@ -32434,31 +34154,18 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
-            "name": "Daniel Defense Vertical ForeGrip (Mil Spec+)",
-            "category": "foregrip",
-            "description": "다니엘 디펜스(Daniel Defense)가 제작한",
-            "stats": {
-                "recoil": -35,
-                "sway": -50,
-                "weight": 50
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "Mil Spec+",
+                    "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -32510,7 +34217,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
-            "name": "KAC URX 3/3.1 Stopper Panel - Black",
+            "name": "KAC URX 3/3.1 Stopper Panel",
             "category": "foregrip",
             "description": "Knight's Armament Company에서 제작",
             "stats": {
@@ -32527,29 +34234,21 @@ const attachmentData = {
                 "URXStopper"
             ],
             "subCategory": "urx",
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel_FDE",
-            "name": "KAC URX 3/3.1 Stopper Panel - FDE",
-            "category": "foregrip",
-            "description": "Manufactured by Knight's Armament Company",
-            "stats": {
-                "recoil": -10,
-                "sway": -18,
-                "weight": 5
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "URXStopper"
-            ],
-            "subCategory": "urx"
         },
         {
             "id": "SMPZ_Attachments_KAC_Vertical_Grip",
@@ -32579,7 +34278,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Magpul_AFG_Black",
-            "name": "Magpul AFG tactical foregrip Black",
+            "name": "Magpul AFG tactical foregrip",
             "category": "foregrip",
             "description": "제조사 맥풀",
             "stats": {
@@ -32599,87 +34298,34 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_AFG_FDE",
-            "name": "Magpul AFG tactical foregrip FDE",
-            "category": "foregrip",
-            "description": "제조사 맥풀",
-            "stats": {
-                "recoil": -22,
-                "sway": -30,
-                "weight": 82
-            },
-            "itemSize": [
-                2,
-                1
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Magpul_AFG_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Magpul_AFG_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Forest Green",
+                    "id": "SMPZ_Attachments_Magpul_AFG_FG",
+                    "image": ""
+                },
+                {
+                    "name": "Olive Drab",
+                    "id": "SMPZ_Attachments_Magpul_AFG_OD",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_AFG_FG",
-            "name": "Magpul AFG tactical foregrip Forest Green",
-            "category": "foregrip",
-            "description": "제조사 맥풀",
-            "stats": {
-                "recoil": -22,
-                "sway": -30,
-                "weight": 82
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_Magpul_AFG_OD",
-            "name": "Magpul AFG tactical foregrip Olive Drab",
-            "category": "foregrip",
-            "description": "제조사 맥풀",
-            "stats": {
-                "recoil": -22,
-                "sway": -30,
-                "weight": 82
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
         {
             "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
-            "name": "RTM Pillau P-2 tactical foregrip Red",
+            "name": "RTM Pillau P-2 tactical foregrip",
             "category": "foregrip",
             "description": "RTM에서 제조",
             "stats": {
@@ -32698,7 +34344,14 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "Red",
+                    "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip",
@@ -32722,31 +34375,18 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
-        },
-        {
-            "id": "SMPZ_Attachments_RVG_Grip_FDE",
-            "name": "Magpul RVG foregrip FDE",
-            "category": "foregrip",
-            "description": "제조사 맥풀",
-            "stats": {
-                "recoil": -16,
-                "sway": -32,
-                "weight": 82
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_RVG_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_RVG_Grip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -32771,30 +34411,19 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "subCategory": "picatinny"
-        },
-        {
-            "id": "SMPZ_Attachments_SE5_Grip_FDE",
-            "name": "Stark SE-5 Express Forward foregrip FDE",
-            "category": "foregrip",
-            "description": "스타크 이큅먼트 코퍼레이션(Stark Equipment Corp)에서 제조",
-            "stats": {
-                "recoil": -12,
-                "sway": -30,
-                "weight": 150
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Attachments_SE5_Grip",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_SE5_Grip_FDE",
+                    "image": ""
+                }
+            ]
         },
         {
             "id": "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip",
@@ -32849,7 +34478,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
-            "name": "HK Sturmgriff foregrip Black",
+            "name": "HK Sturmgriff foregrip",
             "category": "foregrip",
             "description": "Hekler & Koch에서 제조",
             "stats": {
@@ -32869,32 +34498,18 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
-            "manufacturer": "Heckler & Koch",
-            "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
-        },
-        {
-            "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
-            "name": "HK Sturmgriff foregrip FDE",
-            "category": "foregrip",
-            "description": "Hekler & Koch에서 제조",
-            "stats": {
-                "recoil": -34,
-                "sway": -35,
-                "weight": 80
-            },
-            "itemSize": [
-                1,
-                2
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
+                    "image": ""
+                }
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "Grip",
-                "GripCASV",
-                "GripThird",
-                "GripFourth"
-            ],
-            "subCategory": "picatinny",
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -33503,7 +35118,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Flashlights_Olight_Baldr_Pro",
-            "name": "Olight Baldr Pro tactical flashlight (Black)",
+            "name": "Olight Baldr Pro tactical flashlight",
             "category": "tactical_flashlight",
             "description": "최대 빛 거리: 100m",
             "stats": {
@@ -33533,40 +35148,18 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Flashlights_Olight_Baldr_Pro_FDE",
-            "name": "Olight Baldr Pro tactical flashlight (FDE)",
-            "category": "tactical_flashlight",
-            "description": "Max light distance: 100m",
-            "stats": {
-                "weight": 130,
-                "lightDistance": 100
-            },
-            "itemSize": [
-                2,
-                1
             ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponFlashlight",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven",
-                "pistolFlashlight",
-                "pistolFlashlightSecond",
-                "helmetFlashlight"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Flashlights_Olight_Baldr_Pro",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Flashlights_Olight_Baldr_Pro_FDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -33771,7 +35364,7 @@ const attachmentData = {
     "laser_pointer": [
         {
             "id": "SMPZ_Lasers_Anpeq15",
-            "name": "L3Harris AN/PEQ-15 tactical device (FDE)",
+            "name": "L3Harris AN/PEQ-15 tactical device",
             "category": "laser_pointer",
             "description": "",
             "stats": {
@@ -33802,146 +35395,33 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Lasers_Anpeq15_Alpine",
-            "name": "L3Harris AN/PEQ-15 tactical device (MultiCam - Alpine)",
-            "category": "laser_pointer",
-            "description": "",
-            "stats": {
-                "recoil": -3,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                2
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "DecoLazerFirst",
-                "DecoLazerSCARSecond",
-                "DecoLazerThird",
-                "weaponFlashlight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Lasers_Anpeq15_Black",
-            "name": "L3Harris AN/PEQ-15 tactical device (Black)",
-            "category": "laser_pointer",
-            "description": "",
-            "stats": {
-                "recoil": -3,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "DecoLazerFirst",
-                "DecoLazerSCARSecond",
-                "DecoLazerThird",
-                "weaponFlashlight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Lasers_Anpeq15_Multicam_Tropic",
-            "name": "L3Harris AN/PEQ-15 tactical device (MultiCam - Tropic)",
-            "category": "laser_pointer",
-            "description": "",
-            "stats": {
-                "recoil": -3,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "DecoLazerFirst",
-                "DecoLazerSCARSecond",
-                "DecoLazerThird",
-                "weaponFlashlight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Lasers_Anpeq15_UCP",
-            "name": "L3Harris AN/PEQ-15 tactical device (UCP)",
-            "category": "laser_pointer",
-            "description": "",
-            "stats": {
-                "recoil": -3,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "DecoLazerFirst",
-                "DecoLazerSCARSecond",
-                "DecoLazerThird",
-                "weaponFlashlight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Lasers_Anpeq15",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Lasers_Anpeq15_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Lasers_Anpeq15_Black",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Tropic",
+                    "id": "SMPZ_Lasers_Anpeq15_Multicam_Tropic",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Lasers_Anpeq15_UCP",
+                    "image": ""
+                }
             ]
         },
         {
@@ -34125,7 +35605,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Lasers_Wilcox_RAID_XE_Black",
-            "name": "Wilcox RAID XE Tactical Laser (Black)",
+            "name": "Wilcox RAID XE Tactical Laser",
             "category": "laser_pointer",
             "description": "빨간색 레이저 빔",
             "stats": {
@@ -34156,41 +35636,18 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
-        },
-        {
-            "id": "SMPZ_Lasers_Wilcox_RAID_XE_FDE",
-            "name": "Wilcox RAID XE Tactical Laser (FDE)",
-            "category": "laser_pointer",
-            "description": "Red laser beam",
-            "stats": {
-                "recoil": -3,
-                "weight": 200
-            },
-            "itemSize": [
-                2,
-                2
             ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "DecoLazerFirst",
-                "DecoLazerSCARSecond",
-                "DecoLazerThird",
-                "weaponFlashlight",
-                "weaponFlashlightFirst",
-                "weaponFlashlightSecond",
-                "weaponFlashlightThird",
-                "weaponFlashlightFourth",
-                "weaponFlashlightFifth",
-                "weaponFlashlightSix",
-                "weaponFlashlightSeven",
-                "weaponFlashlightEight",
-                "weaponFlashlightNine",
-                "weaponFlashlightTen",
-                "weaponFlashlightEleven"
-            ],
-            "attachmentSlots": [
-                "BatteryD"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Lasers_Wilcox_RAID_XE_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Lasers_Wilcox_RAID_XE_FDE",
+                    "image": ""
+                }
             ]
         }
     ],
@@ -34270,31 +35727,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "5.45x39mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_6L23_545_30Rnd_Plum",
-            "name": "AK-74 5.45x39 6L23 30-round magazine Plum",
-            "category": "magazine",
-            "description": "5.45x39mm 크기의 챔버",
-            "stats": {
-                "capacity": 30,
-                "weight": 215
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_6L23_545_30Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "Plum",
+                    "id": "SMPZ_Mag_6L23_545_30Rnd_Plum",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "5.45x39mm"
@@ -35089,32 +36532,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd_FDE",
-            "name": "Daniel Defense TTI Base Pad 37-round magazine FDE",
-            "category": "magazine",
-            "description": "",
-            "stats": {
-                "capacity": 37,
-                "weight": 138
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd_FDE",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35143,34 +36571,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/",
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd_FDE",
-            "name": "Daniel Defense TTI Base Pad 37-round magazine FDE",
-            "category": "magazine",
-            "description": "",
-            "stats": {
-                "capacity": 37,
-                "weight": 138
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/",
@@ -35254,33 +36665,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_AP_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_AP_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_AP_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35310,33 +36705,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35366,33 +36745,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35422,33 +36785,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35478,33 +36825,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35534,33 +36865,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -35569,7 +36884,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Mag_DrumPMAG556_60Rnd",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (Black)",
+            "name": "Magpul PMAG D-60 STANAG 60-round magazine",
             "category": "magazine",
             "description": "제조사 MAGPUL",
             "stats": {
@@ -35590,36 +36905,20 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_DrumPMAG556_60Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_DrumPMAG556_60Rnd_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_DrumPMAG556_60Rnd_UCP",
-            "name": "Magpul PMAG D-60 STANAG 60-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "recoil": 20,
-                "capacity": 60,
-                "weight": 580
-            },
-            "itemSize": [
-                2,
-                3
-            ],
-            "itemSlots": 6,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36271,86 +37570,27 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Alpine",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Black",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (Black)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_UCP",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_L7AWM_68x51_20Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -36379,86 +37619,27 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Alpine",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Black",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (Black)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_UCP",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_L7AWM_68x51_25Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -36487,86 +37668,27 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Alpine",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Black",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (Black)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_UCP",
-            "name": "AR-10 Lancer L7AWM 20-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 20,
-                "weight": 300
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_L7AWM_762x51_20Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -36595,86 +37717,27 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Alpine",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Black",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (Black)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_UCP",
-            "name": "AR-10 Lancer L7AWM 25-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by Lancer Systems",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_L7AWM_762x51_25Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -37642,34 +38705,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_40Rnd_FDE",
-            "name": "Magpul PMAG 40 GEN M3 STANAG 40-round magazine FDE",
-            "category": "magazine",
-            "description": "제조사 MAGPUL",
-            "stats": {
-                "capacity": 40,
-                "weight": 200
-            },
-            "itemSize": [
-                1,
-                4
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_40Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_PMAG_40Rnd_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
@@ -37680,7 +38726,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd",
-            "name": "Magpul PMAG 30 GEN M3 W STANAG 30-round magazine (Black)",
+            "name": "Magpul PMAG 30 GEN M3 W STANAG 30-round magazine",
             "category": "magazine",
             "description": "제조사 MAGPUL",
             "stats": {
@@ -37700,62 +38746,25 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_FDE",
-            "name": "Magpul PMAG 30 GEN M3 W STANAG 30-round magazine (FDE)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 30,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_UCP",
-            "name": "Magpul PMAG 30 GEN M3 W STANAG 30-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 30,
-                "weight": 100
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -37783,62 +38792,25 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_68x51_20Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_PMAG_68x51_20Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_PMAG_68x51_20Rnd_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_68x51_20Rnd_Alpine",
-            "name": "20rd Magpul PMAG Gen M3 (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 20,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_68x51_20Rnd_UCP",
-            "name": "20rd Magpul PMAG Gen M3 (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 20,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37866,32 +38838,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_68x51_25Rnd_UCP",
-            "name": "Magpul PMAG 25 SR-LR Gen M3 25-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_68x51_25Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_PMAG_68x51_25Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -37920,62 +38877,25 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_762x51_20Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_PMAG_762x51_20Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_PMAG_762x51_20Rnd_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_762x51_20Rnd_Alpine",
-            "name": "Magpul PMAG 20 SR-LR Gen M3 20-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 20,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_762x51_20Rnd_UCP",
-            "name": "Magpul PMAG 20 SR-LR Gen M3 20-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 20,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -38003,62 +38923,25 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_762x51_25Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Mag_PMAG_762x51_25Rnd_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_PMAG_762x51_25Rnd_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_762x51_25Rnd_Alpine",
-            "name": "Magpul PMAG 25 SR-LR Gen M3 25-round magazine (Multicam - Alpine)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_762x51_25Rnd_UCP",
-            "name": "Magpul PMAG 25 SR-LR Gen M3 25-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Manufactured by MAGPUL",
-            "stats": {
-                "capacity": 25,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -38086,33 +38969,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                "5.45x39mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd_FDE",
-            "name": "AK-74 5.45x39 Magpul PMAG 30 GEN M3 30-round magazine FDE",
-            "category": "magazine",
-            "description": "5.45x39mm 크기의 챔버",
-            "stats": {
-                "capacity": 30,
-                "weight": 200
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
@@ -38142,34 +39009,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/",
-            "calibers": [
-                ".366 TKM",
-                "7.62x39mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd_FDE",
-            "name": "AK Magpul PMAG 30 GEN M3 30-round magazine FDE",
-            "category": "magazine",
-            "description": "",
-            "stats": {
-                "capacity": 30,
-                "weight": 200
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd_FDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
@@ -38495,7 +39345,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Mag_SCAR_H_20Rnd_Black",
-            "name": "FN SCAR-H 20-round magazine (Black)",
+            "name": "FN SCAR-H 20-round magazine",
             "category": "magazine",
             "description": "Chambered in 7.62x51mm",
             "stats": {
@@ -38515,32 +39365,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "6.8x51mm",
-                "7.62x51mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SCAR_H_20Rnd_FDE",
-            "name": "FN SCAR-H 20-round magazine (FDE)",
-            "category": "magazine",
-            "description": "Chambered in 7.62x51mm",
-            "stats": {
-                "capacity": 20,
-                "weight": 350
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_SCAR_H_20Rnd_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_SCAR_H_20Rnd_FDE",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "6.8x51mm",
@@ -38549,7 +39384,7 @@ const attachmentData = {
         },
         {
             "id": "SMPZ_Mag_SCAR_L_30Rnd",
-            "name": "FN SCAR-L 30-round magazine (FDE)",
+            "name": "FN SCAR-L 30-round magazine",
             "category": "magazine",
             "description": "Manufactured by FN Firearms",
             "stats": {
@@ -38569,32 +39404,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".300 BLK",
-                "5.56x45mm"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SCAR_L_30Rnd_Black",
-            "name": "FN SCAR-L 30-round magazine (Black)",
-            "category": "magazine",
-            "description": "Manufactured by FN Firearms",
-            "stats": {
-                "capacity": 30,
-                "weight": 110
-            },
-            "itemSize": [
-                1,
-                3
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Mag_SCAR_L_30Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Mag_SCAR_L_30Rnd_Black",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".300 BLK",
@@ -39057,57 +39877,22 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                "7.62x54mmR"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SVT_AVT_10Rnd_Mountain_Flora",
-            "name": "SVT-40 10-round magazine (Mountain Flora)",
-            "category": "magazine",
-            "description": "Chambered in 7.62x54mm R",
-            "stats": {
-                "capacity": 10,
-                "weight": 112
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ],
-            "calibers": [
-                "7.62x54mmR"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SVT_AVT_10Rnd_SURPAT",
-            "name": "SVT-40 10-round magazine (SURPAT)",
-            "category": "magazine",
-            "description": "Chambered in 7.62x54mm R",
-            "stats": {
-                "capacity": 10,
-                "weight": 112
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_SVT_AVT_10Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Mag_SVT_AVT_10Rnd_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Mag_SVT_AVT_10Rnd_SURPAT",
+                    "image": ""
+                }
             ],
             "calibers": [
                 "7.62x54mmR"
@@ -39135,54 +39920,25 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_SVT_AVT_15Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "Mountain Flora",
+                    "id": "SMPZ_Mag_SVT_AVT_15Rnd_Mountain_Flora",
+                    "image": ""
+                },
+                {
+                    "name": "SURPAT",
+                    "id": "SMPZ_Mag_SVT_AVT_15Rnd_SURPAT",
+                    "image": ""
+                }
+            ],
             "calibers": [
                 "7.62x54mmR"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SVT_AVT_15Rnd_Mountain_Flora",
-            "name": "SVT-40 15-round magazine (Mountain Flora)",
-            "category": "magazine",
-            "description": "Chambered in 7.62x54mm R",
-            "stats": {
-                "capacity": 15,
-                "weight": 130
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_SVT_AVT_15Rnd_SURPAT",
-            "name": "SVT-40 15-round magazine (SURPAT)",
-            "category": "magazine",
-            "description": "Chambered in 7.62x54mm R",
-            "stats": {
-                "capacity": 15,
-                "weight": 130
-            },
-            "itemSize": [
-                1,
-                2
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
             ]
         },
         {
@@ -39337,31 +40093,17 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
-            "calibers": [
-                ".338 Lapua"
-            ]
-        },
-        {
-            "id": "SMPZ_Mag_TRG_M10_8Rnd_UCP",
-            "name": "Sako TRG M10 8-round magazine (UCP)",
-            "category": "magazine",
-            "description": "Chambered in .338 Lapua Magnum",
-            "stats": {
-                "capacity": 8,
-                "weight": 190
-            },
-            "itemSize": [
-                2,
-                2
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "magazine",
-                "magazine2",
-                "magazine3",
-                "MagPouch1",
-                "MagPouch2",
-                "MagPouch3"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Mag_TRG_M10_8Rnd",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Mag_TRG_M10_8Rnd_UCP",
+                    "image": ""
+                }
             ],
             "calibers": [
                 ".338 Lapua"
@@ -39735,31 +40477,20 @@ const attachmentData = {
             "attachmentSlots": [
                 "MagnifierCompatOptics"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_EOTECH_G33_Magnifier",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_EOTECH_G33_Magnifier_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_G33_Magnifier_FDE",
-            "name": "EOTech G33 Magnifier",
-            "category": "optic_scope",
-            "description": "Manufactured by EOTech",
-            "stats": {
-                "weight": 200,
-                "magnification": [
-                    3
-                ]
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics"
-            ],
-            "attachmentSlots": [
-                "MagnifierCompatOptics"
-            ]
         },
         {
             "id": "SMPZ_Optics_EOTECH_HHS",
@@ -39821,39 +40552,17 @@ const attachmentData = {
             "attachmentSlots": [
                 "ROF90Mount"
             ],
-            "manufacturer": "EOTech",
-            "manufacturerUrl": "https://www.eotechinc.com/"
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_Vudu_MountFDE",
-            "name": "EOTech Vudu 1-6x24 30mm riflescope Mount FDE",
-            "category": "optic_scope",
-            "description": "EOTech에서 제조",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK1Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ],
-            "attachmentSlots": [
-                "ROF90Mount"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_EOTECH_Vudu",
+                    "image": ""
+                },
+                {
+                    "name": "FDE Mount",
+                    "id": "SMPZ_Optics_EOTECH_Vudu_MountFDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
@@ -39887,68 +40596,23 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "pistolOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Elcan_Specter_FDE",
-            "name": "ELCAN SpecterDR 1x/4x scope FDE",
-            "category": "optic_scope",
-            "description": "제조사 ELCAN",
-            "stats": {
-                "weight": 640,
-                "magnification": [
-                    1,
-                    4
-                ]
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK1Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ],
-            "attachmentSlots": [
-                "pistolOptics"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_Elcan_Specter_Tan",
-            "name": "ELCAN SpecterDR 1x/4x scope Tan",
-            "category": "optic_scope",
-            "description": "제조사 ELCAN",
-            "stats": {
-                "weight": 640,
-                "magnification": [
-                    1,
-                    4
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK1Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ],
-            "attachmentSlots": [
-                "pistolOptics"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_Elcan_Specter",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_Elcan_Specter_FDE",
+                    "image": ""
+                },
+                {
+                    "name": "Tan",
+                    "id": "SMPZ_Optics_Elcan_Specter_Tan",
+                    "image": ""
+                }
             ]
         },
         {
@@ -40080,34 +40744,18 @@ const attachmentData = {
                 "weaponOpticsHunting",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_HK_PM_II_8x24_MountFDE",
-            "name": "Schmidt & Bender PM II 1-8x24 30mm riflescope Mount FDE",
-            "category": "optic_scope",
-            "description": "슈미트 앤 벤더(Schmidt & Bender)에서 제조",
-            "stats": {
-                "weight": 1114,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
             ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_HK_PM_II_8x24",
+                    "image": ""
+                },
+                {
+                    "name": "FDE Mount",
+                    "id": "SMPZ_Optics_HK_PM_II_8x24_MountFDE",
+                    "image": ""
+                }
             ]
         },
         {
@@ -40257,37 +40905,20 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Optics_Nightforce_ATACR_35x56_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Nightforce Optics",
             "manufacturerUrl": "https://www.nightforceoptics.com/"
-        },
-        {
-            "id": "SMPZ_Optics_Nightforce_ATACR_35x56_UCP",
-            "name": "Nightforce ATACR 7-35x56 riflescope (UCP)",
-            "category": "optic_scope",
-            "description": "Manufactured by Nightforce",
-            "stats": {
-                "weight": 1339,
-                "magnification": [
-                    6,
-                    25
-                ]
-            },
-            "itemSize": [
-                4,
-                1
-            ],
-            "itemSlots": 4,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK1Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
         },
         {
             "id": "SMPZ_Optics_PSO_1M2_Optic",
@@ -40399,93 +41030,31 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_SIG_Tango6T",
+                    "image": ""
+                },
+                {
+                    "name": "MultiCam Alpine",
+                    "id": "SMPZ_Optics_SIG_Tango6T_Alpine",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Optics_SIG_Tango6T_Black",
+                    "image": ""
+                },
+                {
+                    "name": "UCP",
+                    "id": "SMPZ_Optics_SIG_Tango6T_UCP",
+                    "image": ""
+                }
+            ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
-        },
-        {
-            "id": "SMPZ_Optics_SIG_Tango6T_Alpine",
-            "name": "SIG TANGO6T 1-6x24 30mm riflescope (Multicam - Alpine)",
-            "category": "optic_scope",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_SIG_Tango6T_Black",
-            "name": "SIG TANGO6T 1-6x24 30mm riflescope (Black)",
-            "category": "optic_scope",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
-        },
-        {
-            "id": "SMPZ_Optics_SIG_Tango6T_UCP",
-            "name": "SIG TANGO6T 1-6x24 30mm riflescope (UCP)",
-            "category": "optic_scope",
-            "description": "Manufactured by SIG Sauer",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ]
         },
         {
             "id": "SMPZ_Optics_SVT_AVT_PUScope",
@@ -40565,65 +41134,22 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "manufacturer": "Vortex Optics",
-            "manufacturerUrl": "https://vortexoptics.com/"
-        },
-        {
-            "id": "SMPZ_Optics_Vortex_Razor_Black",
-            "name": "Vortex Razor HD Gen.2 1-6x24 30mm riflescope Black",
-            "category": "optic_scope",
-            "description": "제조사: Vortex",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ],
-            "manufacturer": "Vortex Optics",
-            "manufacturerUrl": "https://vortexoptics.com/"
-        },
-        {
-            "id": "SMPZ_Optics_Vortex_Razor_MountFDE",
-            "name": "Vortex Razor HD Gen.2 1-6x24 30mm riflescope Mount FDE",
-            "category": "optic_scope",
-            "description": "제조사: Vortex",
-            "stats": {
-                "weight": 570,
-                "magnification": [
-                    2,
-                    6
-                ]
-            },
-            "itemSize": [
-                3,
-                1
-            ],
-            "itemSlots": 3,
-            "inventorySlots": [
-                "AROptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "weaponOpticsHunting",
-                "MK12Optics",
-                "weaponOpticsKobra"
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_Vortex_Razor",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Optics_Vortex_Razor_Black",
+                    "image": ""
+                },
+                {
+                    "name": "FDE Mount",
+                    "id": "SMPZ_Optics_Vortex_Razor_MountFDE",
+                    "image": ""
+                }
             ],
             "manufacturer": "Vortex Optics",
             "manufacturerUrl": "https://vortexoptics.com/"
@@ -40850,46 +41376,24 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_EOTECH_553",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_EOTECH_553_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
         {
-            "id": "SMPZ_Optics_EOTECH_553_FDE",
-            "name": "EOTech 553 holographic sight (FDE)",
-            "category": "reflex_sight",
-            "description": "",
-            "stats": {
-                "weight": 349,
-                "magnification": [
-                    1
-                ]
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra"
-            ],
-            "subCategory": "picatinny"
-        },
-        {
             "id": "SMPZ_Optics_EOTECH_EXPS3",
-            "name": "EOTech EXPS3 holographic sight (FDE)",
+            "name": "EOTech EXPS3 holographic sight",
             "category": "reflex_sight",
             "description": "EOTech에서 제조",
             "stats": {
@@ -40925,47 +41429,20 @@ const attachmentData = {
                 "MagnifierCompatOptics"
             ],
             "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_EOTECH_EXPS3",
+                    "image": ""
+                },
+                {
+                    "name": "Black",
+                    "id": "SMPZ_Optics_EOTECH_EXPS3_Black",
+                    "image": ""
+                }
+            ],
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
-        },
-        {
-            "id": "SMPZ_Optics_EOTECH_EXPS3_Black",
-            "name": "EOTech EXPS3 holographic sight (Black)",
-            "category": "reflex_sight",
-            "description": "Manufactured by EOTech",
-            "stats": {
-                "weight": 400,
-                "magnification": [
-                    1
-                ]
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "DeagleOptics",
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "FSOptics",
-                "GlockOptics",
-                "CSSOptics",
-                "SR3MPOptics",
-                "M32Optics",
-                "MK12Optics",
-                "weaponOpticsKobra",
-                "UNITYTOptics",
-                "G33MagnifierOptics",
-                "MagnifierCompatOptics"
-            ],
-            "subCategory": "picatinny"
         },
         {
             "id": "SMPZ_Optics_EOTECH_XPS3",
@@ -41417,30 +41894,20 @@ const attachmentData = {
                 "noMountRMROptics"
             ],
             "subCategory": "micro_dot",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_Trijicon_SRO",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_Trijicon_SRO_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Trijicon",
             "manufacturerUrl": "https://www.trijicon.com/"
-        },
-        {
-            "id": "SMPZ_Optics_Trijicon_SRO_FDE",
-            "name": "Trijicon SRO Reflex Sight (FDE)",
-            "category": "reflex_sight",
-            "description": "Manufactured by Trijicon",
-            "stats": {
-                "weight": 25,
-                "magnification": [
-                    1
-                ]
-            },
-            "itemSize": [
-                1,
-                1
-            ],
-            "itemSlots": 1,
-            "inventorySlots": [
-                "pistolOptics",
-                "noMountRMROptics"
-            ],
-            "subCategory": "micro_dot"
         },
         {
             "id": "SMPZ_Optics_VOMZ_Pilad_P1x42",
@@ -41532,43 +41999,20 @@ const attachmentData = {
                 "G33MagnifierOptics"
             ],
             "subCategory": "picatinny",
+            "color": [
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Optics_Vortex_UH1",
+                    "image": ""
+                },
+                {
+                    "name": "FDE",
+                    "id": "SMPZ_Optics_Vortex_UH1_FDE",
+                    "image": ""
+                }
+            ],
             "manufacturer": "Vortex Optics",
             "manufacturerUrl": "https://vortexoptics.com/"
-        },
-        {
-            "id": "SMPZ_Optics_Vortex_UH1_FDE",
-            "name": "Vortex Razor AMG UH-1 holographic sight (FDE)",
-            "category": "reflex_sight",
-            "description": "Manufactured by Vortex",
-            "stats": {
-                "weight": 330,
-                "magnification": [
-                    1
-                ]
-            },
-            "itemSize": [
-                2,
-                1
-            ],
-            "itemSlots": 2,
-            "inventorySlots": [
-                "weaponOptics",
-                "weaponOpticsSecond",
-                "weaponOpticsThird",
-                "weaponOpticsFourth",
-                "OpticsOnAKHndgrd",
-                "OpticsOnAKHndgrdSecond",
-                "OpticsOnAKHndgrdThird",
-                "weaponOpticsHunting",
-                "CSSOptics",
-                "M32Optics",
-                "GlockOptics",
-                "MK12Optics",
-                "weaponOpticsKobra",
-                "UNITYTOptics",
-                "G33MagnifierOptics"
-            ],
-            "subCategory": "picatinny"
         }
     ]
 };

@@ -768,7 +768,8 @@ function getCompatibleMagazinesForWeapon(weapon) {
 
     for (const item of allItems) {
         if (!item || item.id === weapon.id) continue;
-        if (magIdSet.has(item.id)) {
+        const isMatch = magIdSet.has(item.id) || (Array.isArray(item.color) && item.color.some(c => magIdSet.has(c.id)));
+        if (isMatch) {
             if (!seen.has(item.id)) {
                 seen.add(item.id);
                 matchedMags.push(item);
@@ -802,9 +803,15 @@ function getCompatibleParentItems(targetItem) {
     // 2. 탄창 전용 매칭 (targetItem.id ↔ weapon.magazines)
     if (typeof weaponsData !== 'undefined' && weaponsData) {
         const allWeapons = Object.values(weaponsData).flat();
+        const targetIds = [targetItem.id];
+        if (Array.isArray(targetItem.color)) {
+            targetItem.color.forEach(c => {
+                if (c && c.id) targetIds.push(c.id);
+            });
+        }
         for (const weapon of allWeapons) {
             if (!weapon || weapon.id === targetItem.id) continue;
-            if (Array.isArray(weapon.magazines) && weapon.magazines.includes(targetItem.id)) {
+            if (Array.isArray(weapon.magazines) && weapon.magazines.some(mId => targetIds.includes(mId))) {
                 if (!seen.has(weapon.id)) {
                     seen.add(weapon.id);
                     parentMatches.push(weapon);
@@ -3327,6 +3334,47 @@ function appendItemSpecRows(statsList, item) {
             const chip = document.createElement('span');
             chip.className = 'protection-area-chip';
             chip.textContent = koLabel;
+            chipsWrap.appendChild(chip);
+        });
+
+        row.appendChild(label);
+        row.appendChild(chipsWrap);
+        statsList.appendChild(row);
+    }
+
+    // 지원 색상 (Color Variants)
+    const colors = item.color;
+    if (colors && Array.isArray(colors) && colors.length > 0) {
+        const row = document.createElement('div');
+        row.className = 'weapon-stat-row weapon-stat-row-areas';
+
+        const label = document.createElement('span');
+        label.className = 'weapon-stat-label';
+        label.textContent = '지원 색상:';
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'protection-chips-wrapper';
+
+        colors.forEach((c, idx) => {
+            const chip = document.createElement('span');
+            chip.className = 'protection-area-chip color-variant-chip';
+            if (idx === 0) chip.classList.add('active');
+            chip.textContent = c.name;
+            chip.setAttribute('title', c.id || c.name);
+
+            chip.onclick = (e) => {
+                e.stopPropagation();
+                chipsWrap.querySelectorAll('.color-variant-chip').forEach(ch => ch.classList.remove('active'));
+                chip.classList.add('active');
+
+                if (c.image) {
+                    const detailCard = statsList.closest('.weapon-detail-card') || document.querySelector('.weapon-detail-card');
+                    const mainImg = detailCard ? detailCard.querySelector('.weapon-detail-image') : null;
+                    if (mainImg) {
+                        mainImg.src = c.image;
+                    }
+                }
+            };
             chipsWrap.appendChild(chip);
         });
 

@@ -71,9 +71,155 @@ ATTACHMENT_PREFIXES = (
 )
 
 _WEAPON_VARIANT_RE = re.compile(
-    r'(_\d+mm(?:_RAL8000|_Black|_FDE)?|_FDE|_Black|_RAL8000|_Red|_Mountain_Flora|_SURPAT|_Alpine|_UCP|_NoFS(?:_RAL8000)?|_Short|_Long|_Sawedoff|_A2)$',
+    r'(_\d+mm(?:_RAL8000|_Black|_FDE)?|_FDE|_Black|_RAL8000|_Red|_Mountain_Flora|_SURPAT|_Alpine|_UCP|_Multicam|_NoFS(?:_RAL8000)?|_Short|_Long|_Sawedoff|_A2)$',
     re.IGNORECASE
 )
+
+COLOR_SUFFIXES = [
+    ('_Mountain_Flora', 'Mountain Flora'),
+    ('_Digital_Flora', 'Digital Flora'),
+    ('_Multicam_Alpine', 'MultiCam Alpine'),
+    ('_Multicam_Black', 'MultiCam Black'),
+    ('_Multicam_Tropic', 'MultiCam Tropic'),
+    ('_Multicam_HoundWolfSquad', 'Hound Wolf Squad'),
+    ('_Black_HoundWolfSquad', 'Hound Wolf Squad (Black)'),
+    ('_Alpine_HoundWolfSquad', 'Hound Wolf Squad (Alpine)'),
+    ('_HoundWolfSquad', 'Hound Wolf Squad'),
+    ('_MARPAT_Woodland', 'MARPAT Woodland'),
+    ('_MARPAT_Desert', 'MARPAT Desert'),
+    ('_Killa_White', 'Killa White'),
+    ('_EMR_Syria', 'EMR Syria'),
+    ('_EMR_Spring', 'EMR Spring'),
+    ('_EMR_Artic', 'EMR Arctic'),
+    ('_EMR_Arctic', 'EMR Arctic'),
+    ('_WinterCamo', 'Winter Camo'),
+    ('_Flecktarn', 'Flecktarn'),
+    ('_SURPAT', 'SURPAT'),
+    ('_RAL8000', 'RAL 8000'),
+    ('_Multicam', 'MultiCam'),
+    ('_Alpine', 'MultiCam Alpine'),
+    ('_Black', 'Black'),
+    ('_FDE', 'FDE'),
+    ('_Red', 'Red'),
+    ('_UCP', 'UCP'),
+    ('_Gold', 'Gold'),
+    ('_Tan', 'Tan'),
+    ('_OliveDrab', 'Olive Drab'),
+    ('_Olive_Drab', 'Olive Drab'),
+    ('_OD', 'Olive Drab'),
+    ('_Olive', 'Olive Drab'),
+    ('_MAS_Gray', 'MAS Gray'),
+    ('_Grey', 'Grey'),
+    ('_Gray', 'Gray'),
+    ('_AOR2', 'AOR 2'),
+    ('_EMR', 'EMR'),
+    ('_ISB_V2', 'ISB V2'),
+    ('_ISB', 'ISB'),
+    ('_M81', 'M81'),
+    ('_Coyote', 'Coyote'),
+    ('_Killa', 'Killa'),
+    ('_Green', 'Green'),
+    ('_White', 'White'),
+    ('_DryEarth', 'Dry Earth'),
+    ('_Dry_Earth', 'Dry Earth'),
+    ('_Lizard', 'Lizard'),
+    ('_Multitarn', 'MultiTarn'),
+    ('_CetreEurope', 'Centre Europe'),
+    ('_Badlands', 'Badlands'),
+    ('_MilSpec', 'Mil Spec+'),
+    ('_Mil_Spec', 'Mil Spec+'),
+    ('_Moss', 'Moss'),
+    ('_ATACS_AU', 'A-TACS AU'),
+    ('_ATACS', 'A-TACS'),
+    ('_RUSS', 'Russian Flora'),
+    ('_Taupe', 'Taupe'),
+    ('_CB', 'Coyote Brown'),
+    ('_PB', 'Patriot Brown'),
+    ('_DDC', 'DDC'),
+    ('_Silver', 'Silver'),
+    ('_Yellow', 'Yellow'),
+    ('_Plum', 'Plum'),
+    ('_SG', 'Stealth Grey'),
+    ('_MountFDE', 'FDE Mount'),
+    ('_FG', 'Forest Green'),
+    ('_GG', 'Ghillie Green'),
+    ('_RangerGreen', 'Ranger Green'),
+    ('_Ranger_Green', 'Ranger Green'),
+    ('_Smog', 'Smog'),
+    ('_SKWoodland', 'SK Woodland'),
+    ('_SK_Woodland', 'SK Woodland'),
+    ('_Foliage', 'Foliage'),
+    ('_ESTDCU', 'ESTDCU'),
+    ('_GreenZone', 'GreenZone'),
+    ('_M05', 'M05'),
+    ('_Vz95', 'Vz95'),
+    ('_Violet', 'Violet'),
+    ('_Skull', 'Skull'),
+    ('_Shark', 'Shark'),
+    ('_Venom', 'Venom'),
+    ('_Venom_Tooth', 'Venom Tooth'),
+    ('_Venon_White', 'Venom White'),
+    ('_Gorilla', 'Gorilla'),
+    ('_UBEY', 'UBEY'),
+    ('_VSR98_Mountain_Flora', 'VSR-98 Mountain Flora'),
+    ('_Speaki_2', 'Trickcal Speaki v2'),
+    ('_Speaki_3', 'Trickcal Speaki v3'),
+    ('_Speaki', 'Trickcal Speaki'),
+]
+
+COLOR_KEYWORDS = [
+    r'Mountain\s*Flora', r'Digital\s*Flora', r'MultiCam(?:\s*Alpine|\s*Black|\s*Tropic|\s*HoundWolfSquad)?',
+    r'Alpine(?:\s*HoundWolfSquad)?', r'Black(?:\s*HoundWolfSquad)?', r'Hound\s*Wolf\s*Squad',
+    r'MARPAT\s*(?:Woodland|Desert)', r'Killa(?:\s*White)?', r'EMR(?:\s*Syria|\s*Spring|\s*Artic|\s*Arctic)?',
+    r'Winter\s*Camo', r'Flecktarn', r'SURPAT', r'RAL\s*8000', r'Black', r'FDE', r'Red', r'UCP',
+    r'Gold', r'Tan', r'Olive\s*Drab', r'OD', r'MAS\s*Gray', r'Grey', r'Gray', r'AOR\s*2', r'AOR2',
+    r'ISB(?:\s*V2)?', r'Intelligence\s*Support\s*Bureau(?:\s*V2)?',
+    r'M81(?:\s*-\s*Woodland)?', r'Coyote\s*Brown', r'Coyote\s*Tan', r'Coyote', r'Forest\s*Green', r'Ghillie\s*Green', r'Green', r'White', r'Dry\s*Earth', r'DryEarth', r'Lizard',
+    r'MultiTarn', r'Centre\s*Europe', r'CetreEurope', r'Badlands', r'Mil\s*Spec\+?', r'MilSpec\+?',
+    r'Moss', r'ATACS(?:\s*AU)?', r'RUSS',
+    r'Taupe', r'Patriot\s*Brown', r'DDC', r'Silver', r'Yellow',
+    r'Plum', r'Stealth\s*Grey', r'Mount\s*FDE',
+    r'Ranger\s*Green', r'Smog', r'SK\s*Woodland', r'Foliage', r'ESTDCU', r'GreenZone', r'M05',
+    r'VSR-?98\s*Mountain(?:\s*-\s*|\s*)Flora', r'Vz95', r'Violet',
+    r'Skull', r'Shark', r'Venom(?:\s*Tooth|\s*White\s*Ver\.?)?', r'Gorilla', r'UBEY',
+    r'Trickcal\s*-\s*Speaki(?:\s*ver\.\d+)?'
+]
+_COLOR_PATTERNS_COMBINED = '|'.join(COLOR_KEYWORDS)
+
+def sanitize_display_name(disp_name):
+    if not disp_name:
+        return ""
+    return re.sub(r'Strandh[^\s]+gg', 'Strandhögg', disp_name)
+
+def extract_color_from_name(disp_name):
+    disp_name = sanitize_display_name(disp_name)
+    m = re.search(rf'\(\s*({_COLOR_PATTERNS_COMBINED})\s*\)$', disp_name, re.I)
+    if m:
+        return m.group(1).strip()
+    m2 = re.search(rf'[-–—:]\s*({_COLOR_PATTERNS_COMBINED})\s*$', disp_name, re.I)
+    if m2:
+        return m2.group(1).strip()
+    m3 = re.search(rf'\s+({_COLOR_PATTERNS_COMBINED})\s*$', disp_name, re.I)
+    if m3:
+        return m3.group(1).strip()
+    return None
+
+def extract_color_for_item(cid, raw_disp_name):
+    col = extract_color_from_name(raw_disp_name)
+    if col:
+        return col
+    if cid != 'SMPZ_Weapon_UCP':
+        for sfx, clabel in COLOR_SUFFIXES:
+            if cid.endswith(sfx):
+                return clabel
+    return None
+
+def clean_display_name(disp_name):
+    disp_name = sanitize_display_name(disp_name)
+    pattern = rf'(?:\s*[-–—:]\s*|\s+)?(?:\((?:{_COLOR_PATTERNS_COMBINED})\)|(?:{_COLOR_PATTERNS_COMBINED}))\s*$'
+    cleaned = re.sub(pattern, '', disp_name, flags=re.I)
+    cleaned = re.sub(r'[\s\-–—:]+$', '', cleaned).strip()
+    return cleaned
 
 # ---------------------------------------------------------------------------
 # TRANSLATION & UTILITIES
@@ -320,16 +466,21 @@ def load_metadata(filepath):
         print(f"[메타데이터] 로드 실패: {e}")
         return {}
 
-def _merge_manual_fields(item_obj, meta_dict):
+def _merge_manual_fields(item_obj, meta_dict, fallback_ids=None):
     iid = item_obj.get('id')
-    if not iid or iid not in meta_dict:
-        return
-    meta = meta_dict[iid]
-    for fld in ('description', 'manufacturer', 'manufacturerLogo', 'manufacturerUrl', 'image', 'images'):
-        if fld in meta and meta[fld]:
-            item_obj[fld] = meta[fld]
-    if 'stats' in meta and isinstance(meta['stats'], dict):
-        item_obj.setdefault('stats', {}).update(meta['stats'])
+    keys_to_check = [iid] if iid else []
+    if fallback_ids:
+        keys_to_check.extend([fid for fid in fallback_ids if fid and fid != iid])
+
+    for kid in keys_to_check:
+        if kid not in meta_dict:
+            continue
+        meta = meta_dict[kid]
+        for fld in ('description', 'manufacturer', 'manufacturerLogo', 'manufacturerUrl', 'image', 'images'):
+            if fld in meta and meta[fld] and not item_obj.get(fld):
+                item_obj[fld] = meta[fld]
+        if 'stats' in meta and isinstance(meta['stats'], dict):
+            item_obj.setdefault('stats', {}).update(meta['stats'])
 
 def is_valid_smpz_dir(path):
     if not path or not os.path.isdir(path):
@@ -466,7 +617,7 @@ def classify_weapon(wid, props, src_file):
     return None
 
 def is_excluded_weapon_variant(cid, all_classes):
-    if cid == 'SMPZ_Weapon_Tagilla_Hammer':
+    if cid == 'SMPZ_Weapon_Tagilla_Hammer' or cid == 'SMPZ_Weapon_KRISS_Vector_FDE':
         return True
     m = _WEAPON_VARIANT_RE.search(cid)
     if not m:
@@ -1271,7 +1422,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'receiver_types': 0,
         'stock_types': 0,
         'muzzle_types': 0,
-        'suppressor_types': 0
+        'suppressor_types': 0,
+        'colors_linked': 0
     }
 
     def resolve_desc(item_obj, props):
@@ -1296,8 +1448,53 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     # 3. BUILD WEAPONS
     weapons_data = {}
     weapon_scope2 = [c for c in all_classes if c.startswith('SMPZ_Weapon_') and get_scope(c, all_classes) == 2]
+
+    weapon_color_map = {}
+    weapon_variant_ids = set()
+    for cid in sorted(weapon_scope2):
+        if cid == 'SMPZ_Weapon_UCP' or cid == 'SMPZ_Weapon_Tagilla_Hammer':
+            continue
+        matched = None
+        for sfx, color_label in COLOR_SUFFIXES:
+            if cid.endswith(sfx):
+                matched = (sfx, color_label)
+                break
+        if not matched:
+            continue
+        sfx, color_label = matched
+        base_cand = cid[:-len(sfx)]
+        if base_cand == 'SMPZ_Weapon_KRISS_Vector':
+            base_id = 'SMPZ_Weapon_KRISS_Vector_Black'
+            if cid == 'SMPZ_Weapon_KRISS_Vector_Black':
+                continue
+        elif base_cand in all_classes and get_scope(base_cand, all_classes) == 2:
+            base_id = base_cand
+        else:
+            parent = all_classes[cid].get('parent')
+            if parent and get_scope(parent, all_classes) == 2 and not any(parent.endswith(s[0]) for s in COLOR_SUFFIXES):
+                base_id = parent
+            elif base_cand in all_classes:
+                base_id = base_cand
+            else:
+                continue
+
+        if _WEAPON_VARIANT_RE.search(base_id) and ('mm' in base_id or 'Sawedoff' in base_id or 'NoFS' in base_id):
+            continue
+
+        if base_id and base_id != cid:
+            weapon_variant_ids.add(cid)
+            v_props = get_inherited_props(cid, all_classes)
+            v_disp_key = str(v_props.get('displayName', '')).lstrip('$')
+            v_disp = str_table.get(v_disp_key, cid)
+            v_col = extract_color_from_name(v_disp) or color_label
+            weapon_color_map.setdefault(base_id, []).append({
+                'name': v_col,
+                'id': cid,
+                'image': file_map.get(cid.lower(), '')
+            })
+
     for cname in sorted(weapon_scope2):
-        if is_excluded_weapon_variant(cname, all_classes):
+        if is_excluded_weapon_variant(cname, all_classes) or cname in weapon_variant_ids:
             continue
         props = get_inherited_props(cname, all_classes)
         src_file = all_classes[cname].get('source_file', '')
@@ -1306,7 +1503,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             continue
 
         disp_key = str(props.get('displayName', '')).lstrip('$')
-        disp_name = str_table.get(disp_key, props.get('displayName', cname))
+        raw_disp_name = str_table.get(disp_key, props.get('displayName', cname))
+        disp_name = clean_display_name(raw_disp_name) if cname in weapon_color_map else raw_disp_name
 
         item_obj = {
             'id': cname,
@@ -1363,7 +1561,31 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
-        _merge_manual_fields(item_obj, metadata)
+        if cname in weapon_color_map:
+            variants = weapon_color_map[cname]
+            base_col = extract_color_from_name(raw_disp_name) or '기본형'
+            base_img = file_map.get(cname.lower(), '')
+            item_obj['color'] = [{
+                'name': base_col,
+                'id': cname,
+                'image': base_img
+            }] + variants
+            stats_summary['colors_linked'] += 1
+        elif cname != 'SMPZ_Weapon_UCP':
+            single_col = extract_color_for_item(cname, raw_disp_name)
+            cleaned_n = clean_display_name(raw_disp_name)
+            if single_col and (cleaned_n != raw_disp_name or any(cname.endswith(s[0]) for s in COLOR_SUFFIXES)):
+                base_img = file_map.get(cname.lower(), '')
+                item_obj['color'] = [{
+                    'name': single_col,
+                    'id': cname,
+                    'image': base_img
+                }]
+                item_obj['name'] = cleaned_n
+                stats_summary['colors_linked'] += 1
+
+        fallback_ids = [v['id'] for v in weapon_color_map.get(cname, [])]
+        _merge_manual_fields(item_obj, metadata, fallback_ids=fallback_ids)
         resolve_desc(item_obj, props)
 
         if 'stats' in item_obj:
@@ -1387,7 +1609,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
         props = get_inherited_props(chosen_id, all_classes)
         disp_key = str(props.get('displayName', '')).lstrip('$')
-        disp_name = str_table.get(disp_key, props.get('displayName', chosen_id))
+        raw_disp_name = str_table.get(disp_key, props.get('displayName', chosen_id))
+        disp_name = clean_display_name(raw_disp_name) if len(kids) > 1 else raw_disp_name
 
         item_obj = {
             'id': chosen_id,
@@ -1439,7 +1662,33 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
-        _merge_manual_fields(item_obj, metadata)
+        if len(kids) > 1:
+            gear_colors = []
+            for k in kids:
+                k_props = get_inherited_props(k, all_classes)
+                k_disp_key = str(k_props.get('displayName', '')).lstrip('$')
+                k_disp = str_table.get(k_disp_key, k)
+                k_col = extract_color_for_item(k, k_disp) or '기본형'
+                gear_colors.append({
+                    'name': k_col,
+                    'id': k,
+                    'image': file_map.get(k.lower(), '')
+                })
+            item_obj['color'] = gear_colors
+            stats_summary['colors_linked'] += 1
+        else:
+            single_col = extract_color_for_item(chosen_id, raw_disp_name)
+            cleaned_n = clean_display_name(raw_disp_name)
+            if single_col and (cleaned_n != raw_disp_name or any(chosen_id.endswith(s[0]) for s in COLOR_SUFFIXES)):
+                item_obj['color'] = [{
+                    'name': single_col,
+                    'id': chosen_id,
+                    'image': file_map.get(chosen_id.lower(), '')
+                }]
+                item_obj['name'] = cleaned_n
+                stats_summary['colors_linked'] += 1
+
+        _merge_manual_fields(item_obj, metadata, fallback_ids=kids)
         resolve_desc(item_obj, props)
 
         if 'stats' in item_obj:
@@ -1449,6 +1698,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
 
     # 5. BUILD ATTACHMENTS
     attachment_data = {}
+    valid_att_classes = []
     for cname in sorted(all_classes.keys()):
         if not any(cname.startswith(pfx) for pfx in ATTACHMENT_PREFIXES):
             continue
@@ -1462,7 +1712,56 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         inv = props.get('inventorySlot')
         if not inv and not cname.startswith('SMPZ_Mag_'):
             continue
+        valid_att_classes.append(cname)
 
+    att_scope2_set = set(valid_att_classes)
+    att_color_map = {}
+    att_variant_set = set()
+
+    for cid in valid_att_classes:
+        matched = None
+        for sfx, color_label in COLOR_SUFFIXES:
+            if cid.endswith(sfx):
+                matched = (sfx, color_label)
+                break
+        if not matched:
+            continue
+        sfx, color_label = matched
+        base_cand = cid[:-len(sfx)]
+        parent = all_classes[cid].get('parent')
+
+        base_id = None
+        if base_cand in att_scope2_set:
+            base_id = base_cand
+        elif parent in att_scope2_set and not any(parent.endswith(s[0]) for s in COLOR_SUFFIXES):
+            base_id = parent
+        else:
+            cand_black = base_cand + '_Black'
+            if cand_black in att_scope2_set:
+                base_id = cand_black
+            else:
+                for s2, _ in COLOR_SUFFIXES:
+                    cand_sib = base_cand + s2
+                    if cand_sib in att_scope2_set:
+                        base_id = cand_sib
+                        break
+
+        if base_id and base_id != cid:
+            att_variant_set.add(cid)
+            v_props = get_inherited_props(cid, all_classes)
+            v_disp_key = str(v_props.get('displayName', '')).lstrip('$')
+            v_disp = str_table.get(v_disp_key, cid)
+            v_col = extract_color_from_name(v_disp) or color_label
+            att_color_map.setdefault(base_id, []).append({
+                'name': v_col,
+                'id': cid,
+                'image': file_map.get(cid.lower(), '')
+            })
+
+    for cname in valid_att_classes:
+        if cname in att_variant_set:
+            continue
+        props = get_inherited_props(cname, all_classes)
         src_file = all_classes[cname].get('source_file', '')
         mag_val = extract_optic_magnification(cname, all_classes)
         cat = classify_attachment(cname, props, src_file, mag_val)
@@ -1470,7 +1769,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             continue
 
         disp_key = str(props.get('displayName', '')).lstrip('$')
-        disp_name = str_table.get(disp_key, props.get('displayName', cname))
+        raw_disp_name = str_table.get(disp_key, props.get('displayName', cname))
+        disp_name = clean_display_name(raw_disp_name) if cname in att_color_map else raw_disp_name
 
         item_obj = {
             'id': cname,
@@ -1544,7 +1844,31 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
-        _merge_manual_fields(item_obj, metadata)
+        if cname in att_color_map:
+            variants = att_color_map[cname]
+            base_col = extract_color_from_name(raw_disp_name) or '기본형'
+            base_img = file_map.get(cname.lower(), '')
+            item_obj['color'] = [{
+                'name': base_col,
+                'id': cname,
+                'image': base_img
+            }] + variants
+            stats_summary['colors_linked'] += 1
+        else:
+            single_col = extract_color_for_item(cname, raw_disp_name)
+            cleaned_n = clean_display_name(raw_disp_name)
+            if single_col and (cleaned_n != raw_disp_name or any(cname.endswith(s[0]) for s in COLOR_SUFFIXES)):
+                base_img = file_map.get(cname.lower(), '')
+                item_obj['color'] = [{
+                    'name': single_col,
+                    'id': cname,
+                    'image': base_img
+                }]
+                item_obj['name'] = cleaned_n
+                stats_summary['colors_linked'] += 1
+
+        fallback_ids = [v['id'] for v in att_color_map.get(cname, [])]
+        _merge_manual_fields(item_obj, metadata, fallback_ids=fallback_ids)
         resolve_desc(item_obj, props)
 
         if 'stats' in item_obj:
@@ -1566,6 +1890,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
+    print(f"    - 지원 색상(color) 그룹화 연동:  {stats_summary['colors_linked']}개")
     print(f"    - 마운트 하위 분류(mountType):   {stats_summary['mount_types']}개")
     print(f"    - 기계식 조준기 분류(sightType): {stats_summary['ironsight_types']}개")
     print(f"    - 권총 손잡이 분류(gripPlatform): {stats_summary['pistolgrip_types']}개")
