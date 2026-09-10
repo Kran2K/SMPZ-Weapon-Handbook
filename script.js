@@ -2107,6 +2107,15 @@ const STATIC_FILTER_CHIPS = [
         group: 'paint',
         panels: ['weapon', 'gear', 'attachment'],
         filter: (item) => Boolean(item?.canBePainted || (Array.isArray(item?.color) && item.color.some(c => c.canBePainted)))
+    },
+
+    // 4. 무기 탭: 총열 조절 가능 필터
+    {
+        id: 'can_adjust_barrel',
+        label: '총열 조절 가능',
+        group: 'barrel',
+        panels: ['weapon'],
+        filter: (item) => Boolean(item?.canAdjustBarrel || (Array.isArray(item?.color) && item.color.some(c => c.canAdjustBarrel)))
     }
 ];
 
@@ -2376,17 +2385,19 @@ function createSubCategoryChipsRow(labelTitle, prefix, types, itemsToCheck) {
     row.appendChild(chipsWrap);
     wrap.appendChild(row);
 
-    const paintRow = createPaintFilterRow(itemsToCheck);
-    if (paintRow) {
-        wrap.appendChild(paintRow);
+    const traitRow = createTraitFilterRow(itemsToCheck);
+    if (traitRow) {
+        wrap.appendChild(traitRow);
     }
 
     return wrap;
 }
 
-function createPaintFilterRow(itemsToCheck) {
-    const paintChip = STATIC_FILTER_CHIPS.find(c => c.id === 'can_be_painted');
-    if (!paintChip || !itemsToCheck.some(it => paintChip.filter(it))) return null;
+function createTraitFilterRow(itemsToCheck) {
+    const traitChips = STATIC_FILTER_CHIPS.filter(chip =>
+        ['can_be_painted', 'can_adjust_barrel'].includes(chip.id) && itemsToCheck.some(item => chip.filter(item))
+    );
+    if (traitChips.length === 0) return null;
 
     const row = document.createElement('div');
     row.className = 'grid-filter-row';
@@ -2399,24 +2410,27 @@ function createPaintFilterRow(itemsToCheck) {
     const chipsWrap = document.createElement('div');
     chipsWrap.className = 'grid-filter-chips-list';
 
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = `grid-filter-chip ${currentGridActiveChips.has(paintChip.id) ? 'active' : ''}`;
-    btn.dataset.chipId = paintChip.id;
-    btn.innerHTML = `<span>${paintChip.label}</span>`;
+    traitChips.forEach(chip => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `grid-filter-chip ${currentGridActiveChips.has(chip.id) ? 'active' : ''}`;
+        btn.dataset.chipId = chip.id;
+        btn.innerHTML = `<span>${chip.label}</span>`;
 
-    btn.addEventListener('click', () => {
-        if (currentGridActiveChips.has(paintChip.id)) {
-            currentGridActiveChips.delete(paintChip.id);
-            btn.classList.remove('active');
-        } else {
-            currentGridActiveChips.add(paintChip.id);
-            btn.classList.add('active');
-        }
-        applyGridSortAndFilters();
+        btn.addEventListener('click', () => {
+            if (currentGridActiveChips.has(chip.id)) {
+                currentGridActiveChips.delete(chip.id);
+                btn.classList.remove('active');
+            } else {
+                currentGridActiveChips.add(chip.id);
+                btn.classList.add('active');
+            }
+            applyGridSortAndFilters();
+        });
+
+        chipsWrap.appendChild(btn);
     });
 
-    chipsWrap.appendChild(btn);
     row.appendChild(chipsWrap);
     return row;
 }
@@ -2522,9 +2536,9 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
             wrap.appendChild(modeRow);
         }
 
-        const paintRow = createPaintFilterRow(itemsToCheck);
-        if (paintRow) {
-            wrap.appendChild(paintRow);
+        const traitRow = createTraitFilterRow(itemsToCheck);
+        if (traitRow) {
+            wrap.appendChild(traitRow);
         }
 
         container.appendChild(wrap);
@@ -2578,9 +2592,9 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
             wrap.appendChild(calRow);
         }
 
-        const paintRow = createPaintFilterRow(itemsToCheck);
-        if (paintRow) {
-            wrap.appendChild(paintRow);
+        const traitRow = createTraitFilterRow(itemsToCheck);
+        if (traitRow) {
+            wrap.appendChild(traitRow);
         }
 
         container.appendChild(wrap);
@@ -2735,11 +2749,11 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
     }
 
     // 14. 일반 카테고리 및 검색 뷰 기본 처리
-    const paintRow = createPaintFilterRow(itemsToCheck);
-    if (paintRow) {
+    const traitRow = createTraitFilterRow(itemsToCheck);
+    if (traitRow) {
         const wrap = document.createElement('div');
         wrap.className = 'grid-filter-groups';
-        wrap.appendChild(paintRow);
+        wrap.appendChild(traitRow);
         container.appendChild(wrap);
     }
 }
@@ -2775,6 +2789,7 @@ function applyGridSortAndFilters() {
         const activeModes = [];
         const activeGear = [];
         let activePaint = false;
+        let activeBarrelAdjustment = false;
         const activeSubFilters = new Map();
 
         currentGridActiveChips.forEach(chipId => {
@@ -2786,6 +2801,8 @@ function applyGridSortAndFilters() {
                 activeGear.push(chipId);
             } else if (chipId === 'can_be_painted') {
                 activePaint = true;
+            } else if (chipId === 'can_adjust_barrel') {
+                activeBarrelAdjustment = true;
             } else {
                 const underscoreIdx = chipId.indexOf('_');
                 if (underscoreIdx > 0) {
@@ -2842,6 +2859,12 @@ function applyGridSortAndFilters() {
             if (activePaint) {
                 const passPaint = Boolean(item.canBePainted || (Array.isArray(item.color) && item.color.some(c => c.canBePainted)));
                 if (!passPaint) return false;
+            }
+
+            // 2-6. 총열 조절 가능 필터
+            if (activeBarrelAdjustment) {
+                const passBarrelAdjustment = Boolean(item.canAdjustBarrel || (Array.isArray(item.color) && item.color.some(c => c.canAdjustBarrel)));
+                if (!passBarrelAdjustment) return false;
             }
 
             return true;
@@ -3523,7 +3546,7 @@ const FIRE_MODES_KO_MAP = {
 };
 
 // 아이템 크기 및 수납 공간 행 추가
-function appendItemSpecRows(statsList, item) {
+function appendItemSpecRows(statsList, item, options = {}) {
     if (!item || !statsList) return;
 
     // 사용 탄종 / 삽탄가능 탄종
@@ -3567,6 +3590,7 @@ function appendItemSpecRows(statsList, item) {
 
         const value = document.createElement('span');
         value.className = 'weapon-stat-value';
+        value.dataset.itemSizeValue = 'true';
         const sizeStr = item.itemSize ? formatSize(item.itemSize) : '';
         const slotStr = (item.itemSlots !== undefined && item.itemSlots !== null) ? `${item.itemSlots}칸` : '';
         value.textContent = sizeStr ? (slotStr ? `${sizeStr} (${slotStr})` : sizeStr) : slotStr;
@@ -3695,6 +3719,60 @@ function appendItemSpecRows(statsList, item) {
     paintRow.appendChild(paintChipsWrap);
     statsList.appendChild(paintRow);
 
+    let updateBarrelAdjustment = null;
+    if (isWeaponItem(item)) {
+        const barrelRow = document.createElement('div');
+        barrelRow.className = 'weapon-stat-row weapon-stat-row-areas';
+
+        const barrelLabel = document.createElement('span');
+        barrelLabel.className = 'weapon-stat-label';
+        barrelLabel.textContent = '총열 조절:';
+
+        const barrelChipsWrap = document.createElement('div');
+        barrelChipsWrap.className = 'protection-chips-wrapper';
+
+        const barrelStatusChip = document.createElement('span');
+        barrelStatusChip.className = 'protection-area-chip barrel-status-chip';
+
+        updateBarrelAdjustment = (canAdjust, variants) => {
+            barrelChipsWrap.innerHTML = '';
+            barrelStatusChip.className = `protection-area-chip barrel-status-chip ${canAdjust ? 'barrel-status-yes' : 'barrel-status-no'}`;
+            barrelStatusChip.textContent = canAdjust ? '가능' : '불가능';
+            barrelChipsWrap.appendChild(barrelStatusChip);
+
+            if (canAdjust && Array.isArray(variants)) {
+                variants.forEach(variant => {
+                    const chip = document.createElement('button');
+                    chip.type = 'button';
+                    chip.className = 'protection-area-chip barrel-adjustment-chip';
+                    chip.textContent = variant.name;
+                    chip.setAttribute('title', variant.isDefault ? `${variant.name} (기본 스폰)` : variant.name);
+                    if (variant.isDefault) chip.classList.add('active');
+
+                    chip.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        barrelChipsWrap.querySelectorAll('.barrel-adjustment-chip').forEach(button => button.classList.remove('active'));
+                        chip.classList.add('active');
+                        if (typeof options.onBarrelVariantChange === 'function') {
+                            options.onBarrelVariantChange(variant);
+                        }
+                    });
+                    barrelChipsWrap.appendChild(chip);
+                });
+            }
+        };
+
+        const initialBarrelVariant = colors && colors.length > 0 ? colors[0] : item;
+        updateBarrelAdjustment(
+            Boolean(initialBarrelVariant.canAdjustBarrel),
+            initialBarrelVariant.barrelVariants
+        );
+
+        barrelRow.appendChild(barrelLabel);
+        barrelRow.appendChild(barrelChipsWrap);
+        statsList.appendChild(barrelRow);
+    }
+
     // 지원 색상 (Color Variants)
     if (colors && Array.isArray(colors) && colors.length > 0) {
         const row = document.createElement('div');
@@ -3729,6 +3807,16 @@ function appendItemSpecRows(statsList, item) {
 
                 if (c.canBePainted !== undefined) {
                     updatePaintBadge(Boolean(c.canBePainted));
+                }
+
+                if (updateBarrelAdjustment) {
+                    updateBarrelAdjustment(Boolean(c.canAdjustBarrel), c.barrelVariants);
+                    const defaultBarrelVariant = Array.isArray(c.barrelVariants)
+                        ? c.barrelVariants.find(variant => variant.isDefault)
+                        : null;
+                    if (defaultBarrelVariant && typeof options.onBarrelVariantChange === 'function') {
+                        options.onBarrelVariantChange(defaultBarrelVariant);
+                    }
                 }
             };
             chipsWrap.appendChild(chip);
@@ -4024,6 +4112,105 @@ const CALIBER_BASE_SPEEDS = {
 };
 
 // 무기 상세 정보 표시
+function getWeaponDetailStatState(weapon, stat) {
+    const raw = weapon?.stats?.[stat.key];
+    let displayText = raw !== undefined && raw !== null && raw !== '' ? String(raw) : '-';
+    let numericValue = NaN;
+    let footnoteTooltip = '';
+
+    if (stat.key === 'velocity') {
+        const primaryCaliber = weapon?.calibers?.[0];
+        const baseSpeed = primaryCaliber ? (CALIBER_BASE_SPEEDS[primaryCaliber] || 0) : 0;
+        const multiplier = weapon?.stats?.velocityMultiplier !== undefined ? weapon.stats.velocityMultiplier : 1.0;
+        const calculatedSpeed = baseSpeed > 0 ? Math.round(baseSpeed * multiplier) : (raw ? parseFloat(raw) : 0);
+        if (calculatedSpeed > 0) {
+            displayText = `${calculatedSpeed} m/s`;
+            numericValue = calculatedSpeed;
+            if (baseSpeed > 0 && weapon?.stats?.velocityMultiplier !== undefined) {
+                footnoteTooltip = `기준 탄속 ${baseSpeed} m/s × 무기 탄속 배율 ${Number(multiplier)}배`;
+            }
+        }
+    } else if (raw !== undefined && raw !== null && raw !== '') {
+        numericValue = parseFloat(String(raw).replace(/[^0-9.-]/g, ''));
+        if (stat.isMoa) {
+            displayText = `${raw} MOA`;
+            if (!isNaN(numericValue) && numericValue > 0) {
+                const d100 = Number((numericValue * 2.9).toFixed(1));
+                const d300 = Number((numericValue * 2.9 * 3).toFixed(1));
+                const d500 = Number((numericValue * 2.9 * 5).toFixed(1));
+                footnoteTooltip = `100m 탄착군 지름 약 ${d100}cm\n300m 탄착군 지름 약 ${d300}cm\n500m 탄착군 지름 약 ${d500}cm`;
+            }
+        }
+    }
+
+    let percent = 0;
+    if (!isNaN(numericValue) && stat.max > 0) {
+        percent = stat.invert
+            ? 100 - (numericValue / stat.max * 100)
+            : (numericValue / stat.max) * 100;
+        percent = Math.max(0, Math.min(100, percent));
+    }
+
+    return { displayText, numericValue, percent, footnoteTooltip };
+}
+
+function updateWeaponDetailStats(statsList, baseWeapon, barrelVariant, statsDefs) {
+    if (!statsList || !barrelVariant) return;
+
+    const selectedWeapon = {
+        ...baseWeapon,
+        id: barrelVariant.id || baseWeapon.id,
+        stats: barrelVariant.stats || baseWeapon.stats,
+        itemSize: barrelVariant.itemSize || baseWeapon.itemSize,
+        itemSlots: barrelVariant.itemSlots ?? baseWeapon.itemSlots
+    };
+
+    statsDefs.forEach(stat => {
+        const state = getWeaponDetailStatState(selectedWeapon, stat);
+        const value = statsList.querySelector(`[data-weapon-stat-value="${stat.key}"]`);
+        const barFill = statsList.querySelector(`[data-weapon-stat-fill="${stat.key}"]`);
+
+        if (value) {
+            value.textContent = state.displayText;
+            if (state.footnoteTooltip) {
+                const footnote = document.createElement('sup');
+                footnote.className = 'stat-footnote';
+                footnote.textContent = '*';
+                footnote.setAttribute('data-tooltip', state.footnoteTooltip);
+                value.appendChild(footnote);
+            }
+        }
+        if (barFill) {
+            barFill.style.width = `${state.percent}%`;
+        }
+
+        const compareFill = statsList.querySelector(`[data-weapon-compare-fill="${stat.key}"]`);
+        if (compareFill && compareTarget?.weapon) {
+            const compareState = getWeaponDetailStatState(compareTarget.weapon, stat);
+            compareFill.classList.remove('stat-better', 'stat-worse', 'stat-equal');
+            if (!isNaN(state.numericValue) && !isNaN(compareState.numericValue)) {
+                const lowerIsBetter = stat.key === 'recoil' || stat.key === 'sway' || stat.isMoa;
+                const isBetter = lowerIsBetter
+                    ? compareState.numericValue < state.numericValue
+                    : compareState.numericValue > state.numericValue;
+                const isWorse = lowerIsBetter
+                    ? compareState.numericValue > state.numericValue
+                    : compareState.numericValue < state.numericValue;
+                compareFill.classList.add(isBetter ? 'stat-better' : (isWorse ? 'stat-worse' : 'stat-equal'));
+            }
+        }
+    });
+
+    const itemSizeValue = statsList.querySelector('[data-item-size-value="true"]');
+    if (itemSizeValue) {
+        const sizeText = selectedWeapon.itemSize ? formatSize(selectedWeapon.itemSize) : '';
+        const slotText = selectedWeapon.itemSlots !== undefined && selectedWeapon.itemSlots !== null
+            ? `${selectedWeapon.itemSlots}칸`
+            : '';
+        itemSizeValue.textContent = sizeText ? (slotText ? `${sizeText} (${slotText})` : sizeText) : slotText;
+    }
+}
+
 function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     const weaponDetail = showDetailContainer();
 
@@ -4230,6 +4417,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
             const value = document.createElement('span');
             value.className = 'weapon-stat-value';
+            value.dataset.weaponStatValue = stat.key;
             const raw = weapon.stats[stat.key];
             let displayText = raw !== undefined && raw !== null && raw !== "" ? String(raw) : '-';
             let calcSpeed = 0;
@@ -4310,6 +4498,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
             const barFill = document.createElement('div');
             barFill.className = 'weapon-stat-bar-fill';
+            barFill.dataset.weaponStatFill = stat.key;
             barFill.style.width = `${percent}%`;
 
             bar.appendChild(barFill);
@@ -4375,6 +4564,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
                 const compareFill = document.createElement('div');
                 compareFill.className = 'weapon-stat-bar-fill';
+                compareFill.dataset.weaponCompareFill = stat.key;
                 if (diffClass) {
                     compareFill.classList.add(`stat-${diffClass}`);
                 }
@@ -4385,7 +4575,11 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             }
         });
 
-        appendItemSpecRows(statsList, weapon);
+        appendItemSpecRows(statsList, weapon, {
+            onBarrelVariantChange: (barrelVariant) => {
+                updateWeaponDetailStats(statsList, weapon, barrelVariant, statsDefs);
+            }
+        });
 
         statsContainer.appendChild(statsList);
 

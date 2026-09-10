@@ -40,6 +40,48 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "417mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "330mm",
+                    "id": "SMPZ_Weapon_AA12_Gen1",
+                    "stats": {
+                        "recoil": 95,
+                        "sway": 100,
+                        "ergonomics": 51,
+                        "accuracy": 22.35,
+                        "velocityMultiplier": 1.285,
+                        "weight": 4075
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "417mm",
+                    "id": "SMPZ_Weapon_AA12_Gen1_417mm",
+                    "stats": {
+                        "recoil": 90,
+                        "sway": 100,
+                        "ergonomics": 48,
+                        "accuracy": 22.31,
+                        "velocityMultiplier": 1.306,
+                        "weight": 4075
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                }
+            ],
             "image": "assets/aa12.png",
             "images": [
                 "assets/aa12.png"
@@ -84,6 +126,48 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "417mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "330mm",
+                    "id": "SMPZ_Weapon_AA12_Gen2",
+                    "stats": {
+                        "recoil": 90,
+                        "sway": 100,
+                        "ergonomics": 53,
+                        "accuracy": 22.35,
+                        "velocityMultiplier": 1.285,
+                        "weight": 4075
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "417mm",
+                    "id": "SMPZ_Weapon_AA12_Gen2_417mm",
+                    "stats": {
+                        "recoil": 85,
+                        "sway": 100,
+                        "ergonomics": 51,
+                        "accuracy": 22.31,
+                        "velocityMultiplier": 1.306,
+                        "weight": 4075
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                }
+            ],
             "image": "assets/aa12gen2.png",
             "images": [
                 "assets/aa12gen2.png"
@@ -152,7 +236,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MP133",
@@ -191,7 +278,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MP155",
@@ -231,7 +321,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MP18",
@@ -267,7 +360,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MP43",
@@ -303,6 +399,48 @@ const weaponsData = {
                 "Double"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "Sawed off"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "Sawed off",
+                    "id": "SMPZ_Weapon_MP43_Sawedoff",
+                    "stats": {
+                        "recoil": 200,
+                        "sway": 123,
+                        "ergonomics": 54,
+                        "accuracy": 6.88,
+                        "velocityMultiplier": 0.9,
+                        "weight": 2100
+                    },
+                    "itemSize": [
+                        5,
+                        2
+                    ],
+                    "itemSlots": 10,
+                    "isDefault": false
+                },
+                {
+                    "name": "기본형",
+                    "id": "SMPZ_Weapon_MP43",
+                    "stats": {
+                        "recoil": 100,
+                        "sway": 175,
+                        "ergonomics": 54,
+                        "accuracy": 13.06,
+                        "velocityMultiplier": 1.25,
+                        "weight": 3600
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": true
+                }
+            ],
             "image": "assets/mp43.png",
             "images": [
                 "assets/mp43.png"
@@ -358,7 +496,10 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         }
     ],
     "assault_rifle": [
@@ -523,7 +664,87 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "370mm",
+                "457mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_ADAR2_260mm",
+                    "stats": {
+                        "recoil": 111,
+                        "sway": 170,
+                        "ergonomics": 52,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1673
+                    },
+                    "itemSize": [
+                        7,
+                        3
+                    ],
+                    "itemSlots": 21,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_ADAR2_370mm",
+                    "stats": {
+                        "recoil": 110,
+                        "sway": 170,
+                        "ergonomics": 47,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1673
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_ADAR2",
+                    "stats": {
+                        "recoil": 108,
+                        "sway": 170,
+                        "ergonomics": 49,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1673
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": true
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_ADAR2_457mm",
+                    "stats": {
+                        "recoil": 107,
+                        "sway": 170,
+                        "ergonomics": 41,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1673
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ]
         },
         {
             "id": "SMPZ_Weapon_AK101",
@@ -584,6 +805,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -654,6 +878,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -758,6 +985,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -853,6 +1083,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -948,6 +1181,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1031,6 +1267,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1104,6 +1343,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1159,6 +1401,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1244,6 +1489,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1334,6 +1582,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1424,6 +1675,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1522,6 +1776,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1621,6 +1878,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1719,6 +1979,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1822,6 +2085,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1915,6 +2181,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -2000,6 +2269,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -2082,6 +2354,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "deniedAttachmentsBySlot": {
                 "AKpistolgrip": [
                     "SMPZ_Attachments_CQR47_pistolgrip"
@@ -2167,6 +2442,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -2216,6 +2494,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/ash12.png",
             "images": [
                 "assets/ash12.png"
@@ -2270,6 +2551,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/asval.png",
             "images": [
                 "assets/asval.png"
@@ -2322,6 +2606,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/asval.png",
             "images": [
                 "assets/asval.png"
@@ -2409,6 +2696,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Steyr Mannlicher",
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/",
@@ -2478,6 +2768,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -2638,6 +2931,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -2907,6 +3203,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -3080,16 +3379,103 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_HK416A5",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "505mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "368mm",
+                            "id": "SMPZ_Weapon_HK416A5",
+                            "stats": {
+                                "recoil": 113,
+                                "sway": 135,
+                                "ergonomics": 64,
+                                "accuracy": 1.93,
+                                "velocityMultiplier": 1.0,
+                                "weight": 2405
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "505mm",
+                            "id": "SMPZ_Weapon_HK416A5_505mm",
+                            "stats": {
+                                "recoil": 111,
+                                "sway": 135,
+                                "ergonomics": 59,
+                                "accuracy": 1.12,
+                                "velocityMultiplier": 1.19,
+                                "weight": 2436
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        }
+                    ]
                 },
                 {
                     "name": "RAL 8000",
                     "id": "SMPZ_Weapon_HK416A5_RAL8000",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "505mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "368mm",
+                    "id": "SMPZ_Weapon_HK416A5",
+                    "stats": {
+                        "recoil": 113,
+                        "sway": 135,
+                        "ergonomics": 64,
+                        "accuracy": 1.93,
+                        "velocityMultiplier": 1.0,
+                        "weight": 2405
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "505mm",
+                    "id": "SMPZ_Weapon_HK416A5_505mm",
+                    "stats": {
+                        "recoil": 111,
+                        "sway": 135,
+                        "ergonomics": 59,
+                        "accuracy": 1.12,
+                        "velocityMultiplier": 1.19,
+                        "weight": 2436
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -3271,16 +3657,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_IWI_TavorX95",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_IWI_TavorX95_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_JAKL",
@@ -3445,16 +3840,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_JAKL",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_JAKL_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_M16A1",
@@ -3615,6 +4019,124 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "370mm",
+                "406mm",
+                "457mm",
+                "508mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_M16A1_260mm",
+                    "stats": {
+                        "recoil": 128,
+                        "sway": 200,
+                        "ergonomics": 55,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_M16A1_370mm",
+                    "stats": {
+                        "recoil": 126,
+                        "sway": 200,
+                        "ergonomics": 53,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_M16A1_406mm",
+                    "stats": {
+                        "recoil": 124,
+                        "sway": 200,
+                        "ergonomics": 51,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_M16A1_457mm",
+                    "stats": {
+                        "recoil": 123,
+                        "sway": 200,
+                        "ergonomics": 49,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_M16A1_508mm",
+                    "stats": {
+                        "recoil": 121,
+                        "sway": 200,
+                        "ergonomics": 51,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm A2",
+                    "id": "SMPZ_Weapon_M16A1",
+                    "stats": {
+                        "recoil": 120,
+                        "sway": 200,
+                        "ergonomics": 51,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1621
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": true
+                }
+            ],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -3782,6 +4304,9 @@ const weaponsData = {
                 "Burst"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -3949,6 +4474,9 @@ const weaponsData = {
                 "Burst"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -4113,6 +4641,86 @@ const weaponsData = {
             ],
             "model": "assets/models/m4.glb",
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "406mm",
+                "457mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_M4A1_260mm",
+                    "stats": {
+                        "recoil": 118,
+                        "sway": 170,
+                        "ergonomics": 52,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1347
+                    },
+                    "itemSize": [
+                        7,
+                        3
+                    ],
+                    "itemSlots": 21,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_M4A1",
+                    "stats": {
+                        "recoil": 115,
+                        "sway": 170,
+                        "ergonomics": 47,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1447
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_M4A1_406mm",
+                    "stats": {
+                        "recoil": 114,
+                        "sway": 170,
+                        "ergonomics": 49,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1680
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_M4A1_457mm",
+                    "stats": {
+                        "recoil": 113,
+                        "sway": 170,
+                        "ergonomics": 41,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1680
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -4278,6 +4886,67 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "171mm",
+                "406mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "171mm",
+                    "id": "SMPZ_Weapon_MCX_Short",
+                    "stats": {
+                        "recoil": 114,
+                        "sway": 120,
+                        "ergonomics": 64,
+                        "accuracy": 3.62,
+                        "velocityMultiplier": 0.82,
+                        "weight": 2700
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "228mm",
+                    "id": "SMPZ_Weapon_MCX",
+                    "stats": {
+                        "recoil": 114,
+                        "sway": 120,
+                        "ergonomics": 62,
+                        "accuracy": 3.04,
+                        "velocityMultiplier": 0.9,
+                        "weight": 2700
+                    },
+                    "itemSize": [
+                        7,
+                        3
+                    ],
+                    "itemSlots": 21,
+                    "isDefault": true
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_MCX_406mm",
+                    "stats": {
+                        "recoil": 114,
+                        "sway": 120,
+                        "ergonomics": 59,
+                        "accuracy": 2.19,
+                        "velocityMultiplier": 0.95,
+                        "weight": 2700
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -4414,28 +5083,43 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MCX_SPEAR",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Weapon_MCX_SPEAR_Alpine",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_MCX_SPEAR_Black",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_MCX_SPEAR_UCP",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -4602,16 +5286,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MDR_556",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MDR_556_FDE",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MDR_762",
@@ -4705,16 +5398,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MDR_762",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MDR_762_FDE",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MK47",
@@ -4803,6 +5505,48 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "409mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "254mm",
+                    "id": "SMPZ_Weapon_MK47",
+                    "stats": {
+                        "recoil": 150,
+                        "sway": 125,
+                        "ergonomics": 59,
+                        "accuracy": 2.48,
+                        "velocityMultiplier": 0.9,
+                        "weight": 1586
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": true
+                },
+                {
+                    "name": "409mm",
+                    "id": "SMPZ_Weapon_MK47_409mm",
+                    "stats": {
+                        "recoil": 148,
+                        "sway": 125,
+                        "ergonomics": 58,
+                        "accuracy": 1.69,
+                        "velocityMultiplier": 1.1,
+                        "weight": 2290
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/",
@@ -4981,16 +5725,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Masada",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_Masada_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -5129,16 +5882,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Masada_300BLK",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_Masada_300BLK_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -5221,6 +5983,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Custom Guns"
         },
         {
@@ -5272,6 +6037,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -5364,7 +6132,10 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_Radian_Weapons_Model1",
@@ -5524,6 +6295,124 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "370mm",
+                "457mm",
+                "508mm",
+                "508mm A2"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_260mm",
+                    "stats": {
+                        "recoil": 106,
+                        "sway": 185,
+                        "ergonomics": 55,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_370mm",
+                    "stats": {
+                        "recoil": 104,
+                        "sway": 185,
+                        "ergonomics": 53,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1",
+                    "stats": {
+                        "recoil": 102,
+                        "sway": 185,
+                        "ergonomics": 51,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": true
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_457mm",
+                    "stats": {
+                        "recoil": 100,
+                        "sway": 185,
+                        "ergonomics": 49,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_508mm",
+                    "stats": {
+                        "recoil": 97,
+                        "sway": 185,
+                        "ergonomics": 47,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm A2",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_A2",
+                    "stats": {
+                        "recoil": 97,
+                        "sway": 185,
+                        "ergonomics": 47,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/",
@@ -5695,22 +6584,264 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "260mm",
+                        "370mm",
+                        "457mm",
+                        "508mm",
+                        "508mm A2"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "260mm",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_260mm",
+                            "stats": {
+                                "recoil": 106,
+                                "sway": 185,
+                                "ergonomics": 55,
+                                "accuracy": 2.41,
+                                "velocityMultiplier": 0.945,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                6,
+                                3
+                            ],
+                            "itemSlots": 18,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "370mm",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_370mm",
+                            "stats": {
+                                "recoil": 104,
+                                "sway": 185,
+                                "ergonomics": 53,
+                                "accuracy": 1.82,
+                                "velocityMultiplier": 1.0,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "406mm",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                            "stats": {
+                                "recoil": 102,
+                                "sway": 185,
+                                "ergonomics": 51,
+                                "accuracy": 1.66,
+                                "velocityMultiplier": 1.08,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                9,
+                                3
+                            ],
+                            "itemSlots": 27,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "457mm",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_457mm",
+                            "stats": {
+                                "recoil": 100,
+                                "sway": 185,
+                                "ergonomics": 49,
+                                "accuracy": 1.41,
+                                "velocityMultiplier": 1.15,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "508mm",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_508mm",
+                            "stats": {
+                                "recoil": 97,
+                                "sway": 185,
+                                "ergonomics": 47,
+                                "accuracy": 1.24,
+                                "velocityMultiplier": 1.2,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "508mm A2",
+                            "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_A2",
+                            "stats": {
+                                "recoil": 97,
+                                "sway": 185,
+                                "ergonomics": 47,
+                                "accuracy": 1.24,
+                                "velocityMultiplier": 1.2,
+                                "weight": 1801
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        }
+                    ]
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_Multicam",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_UCP",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "370mm",
+                "457mm",
+                "508mm",
+                "508mm A2"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_260mm",
+                    "stats": {
+                        "recoil": 106,
+                        "sway": 185,
+                        "ergonomics": 55,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_370mm",
+                    "stats": {
+                        "recoil": 104,
+                        "sway": 185,
+                        "ergonomics": 53,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                    "stats": {
+                        "recoil": 102,
+                        "sway": 185,
+                        "ergonomics": 51,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": true
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_457mm",
+                    "stats": {
+                        "recoil": 100,
+                        "sway": 185,
+                        "ergonomics": 49,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_508mm",
+                    "stats": {
+                        "recoil": 97,
+                        "sway": 185,
+                        "ergonomics": 47,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "508mm A2",
+                    "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_A2",
+                    "stats": {
+                        "recoil": 97,
+                        "sway": 185,
+                        "ergonomics": 47,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.2,
+                        "weight": 1801
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -5768,6 +6899,48 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_SA58_280mm",
+                    "stats": {
+                        "recoil": 182,
+                        "sway": 150,
+                        "ergonomics": 55,
+                        "accuracy": 2.61,
+                        "velocityMultiplier": 1.05,
+                        "weight": 2554
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "533mm",
+                    "id": "SMPZ_Weapon_SA58",
+                    "stats": {
+                        "recoil": 180,
+                        "sway": 150,
+                        "ergonomics": 40,
+                        "accuracy": 0.9,
+                        "velocityMultiplier": 1.23,
+                        "weight": 2554
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": true
+                }
+            ],
             "manufacturer": "DS Arms",
             "manufacturerLogo": "assets/dsarms-logo.png",
             "manufacturerUrl": "https://dsarms.com/",
@@ -5888,16 +7061,199 @@ const weaponsData = {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_SCAR_H",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "330mm",
+                        "508mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "330mm",
+                            "id": "SMPZ_Weapon_SCAR_H_330mm",
+                            "stats": {
+                                "recoil": 141,
+                                "sway": 120,
+                                "ergonomics": 57,
+                                "accuracy": 2.23,
+                                "velocityMultiplier": 1.0,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                6,
+                                3
+                            ],
+                            "itemSlots": 18,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "406mm",
+                            "id": "SMPZ_Weapon_SCAR_H",
+                            "stats": {
+                                "recoil": 140,
+                                "sway": 120,
+                                "ergonomics": 54,
+                                "accuracy": 1.65,
+                                "velocityMultiplier": 1.07,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "508mm",
+                            "id": "SMPZ_Weapon_SCAR_H_508mm",
+                            "stats": {
+                                "recoil": 139,
+                                "sway": 120,
+                                "ergonomics": 51,
+                                "accuracy": 1.24,
+                                "velocityMultiplier": 1.22,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                11,
+                                3
+                            ],
+                            "itemSlots": 33,
+                            "isDefault": false
+                        }
+                    ]
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_SCAR_H_Black",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "330mm",
+                        "508mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "330mm",
+                            "id": "SMPZ_Weapon_SCAR_H_330mm_Black",
+                            "stats": {
+                                "recoil": 141,
+                                "sway": 120,
+                                "ergonomics": 57,
+                                "accuracy": 2.23,
+                                "velocityMultiplier": 1.0,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                6,
+                                3
+                            ],
+                            "itemSlots": 18,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "406mm",
+                            "id": "SMPZ_Weapon_SCAR_H_Black",
+                            "stats": {
+                                "recoil": 140,
+                                "sway": 120,
+                                "ergonomics": 54,
+                                "accuracy": 1.65,
+                                "velocityMultiplier": 1.07,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "508mm",
+                            "id": "SMPZ_Weapon_SCAR_H_508mm_Black",
+                            "stats": {
+                                "recoil": 139,
+                                "sway": 120,
+                                "ergonomics": 51,
+                                "accuracy": 1.24,
+                                "velocityMultiplier": 1.22,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                11,
+                                3
+                            ],
+                            "itemSlots": 33,
+                            "isDefault": false
+                        }
+                    ]
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "330mm",
+                "508mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "330mm",
+                    "id": "SMPZ_Weapon_SCAR_H_330mm",
+                    "stats": {
+                        "recoil": 141,
+                        "sway": 120,
+                        "ergonomics": 57,
+                        "accuracy": 2.23,
+                        "velocityMultiplier": 1.0,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_SCAR_H",
+                    "stats": {
+                        "recoil": 140,
+                        "sway": 120,
+                        "ergonomics": 54,
+                        "accuracy": 1.65,
+                        "velocityMultiplier": 1.07,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_SCAR_H_508mm",
+                    "stats": {
+                        "recoil": 139,
+                        "sway": 120,
+                        "ergonomics": 51,
+                        "accuracy": 1.24,
+                        "velocityMultiplier": 1.22,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        11,
+                        3
+                    ],
+                    "itemSlots": 33,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/",
@@ -6135,16 +7491,199 @@ const weaponsData = {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_SCAR_L",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "254mm",
+                        "457mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "254mm",
+                            "id": "SMPZ_Weapon_SCAR_L_254mm",
+                            "stats": {
+                                "recoil": 117,
+                                "sway": 120,
+                                "ergonomics": 57,
+                                "accuracy": 2.68,
+                                "velocityMultiplier": 0.945,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                6,
+                                3
+                            ],
+                            "itemSlots": 18,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "355mm",
+                            "id": "SMPZ_Weapon_SCAR_L",
+                            "stats": {
+                                "recoil": 115,
+                                "sway": 120,
+                                "ergonomics": 54,
+                                "accuracy": 1.97,
+                                "velocityMultiplier": 1.0,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "457mm",
+                            "id": "SMPZ_Weapon_SCAR_L_457mm",
+                            "stats": {
+                                "recoil": 110,
+                                "sway": 120,
+                                "ergonomics": 51,
+                                "accuracy": 1.55,
+                                "velocityMultiplier": 1.15,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        }
+                    ]
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_SCAR_L_Black",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "254mm",
+                        "457mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "254mm",
+                            "id": "SMPZ_Weapon_SCAR_L_254mm_Black",
+                            "stats": {
+                                "recoil": 117,
+                                "sway": 120,
+                                "ergonomics": 57,
+                                "accuracy": 2.68,
+                                "velocityMultiplier": 0.945,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                6,
+                                3
+                            ],
+                            "itemSlots": 18,
+                            "isDefault": false
+                        },
+                        {
+                            "name": "355mm",
+                            "id": "SMPZ_Weapon_SCAR_L_Black",
+                            "stats": {
+                                "recoil": 115,
+                                "sway": 120,
+                                "ergonomics": 54,
+                                "accuracy": 1.97,
+                                "velocityMultiplier": 1.0,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                8,
+                                3
+                            ],
+                            "itemSlots": 24,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "457mm",
+                            "id": "SMPZ_Weapon_SCAR_L_457mm_Black",
+                            "stats": {
+                                "recoil": 110,
+                                "sway": 120,
+                                "ergonomics": 51,
+                                "accuracy": 1.55,
+                                "velocityMultiplier": 1.15,
+                                "weight": 3200
+                            },
+                            "itemSize": [
+                                10,
+                                3
+                            ],
+                            "itemSlots": 30,
+                            "isDefault": false
+                        }
+                    ]
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "254mm",
+                "457mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "254mm",
+                    "id": "SMPZ_Weapon_SCAR_L_254mm",
+                    "stats": {
+                        "recoil": 117,
+                        "sway": 120,
+                        "ergonomics": 57,
+                        "accuracy": 2.68,
+                        "velocityMultiplier": 0.945,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "355mm",
+                    "id": "SMPZ_Weapon_SCAR_L",
+                    "stats": {
+                        "recoil": 115,
+                        "sway": 120,
+                        "ergonomics": 54,
+                        "accuracy": 1.97,
+                        "velocityMultiplier": 1.0,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": true
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_SCAR_L_457mm",
+                    "stats": {
+                        "recoil": 110,
+                        "sway": 120,
+                        "ergonomics": 51,
+                        "accuracy": 1.55,
+                        "velocityMultiplier": 1.15,
+                        "weight": 3200
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -6198,6 +7737,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/sr3m.png",
             "images": [
                 "assets/sr3m.png"
@@ -6360,7 +7902,87 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "260mm",
+                "370mm",
+                "406mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "260mm",
+                    "id": "SMPZ_Weapon_TX15_260mm",
+                    "stats": {
+                        "recoil": 100,
+                        "sway": 170,
+                        "ergonomics": 52,
+                        "accuracy": 2.41,
+                        "velocityMultiplier": 0.945,
+                        "weight": 1196
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": false
+                },
+                {
+                    "name": "370mm",
+                    "id": "SMPZ_Weapon_TX15_370mm",
+                    "stats": {
+                        "recoil": 98,
+                        "sway": 170,
+                        "ergonomics": 47,
+                        "accuracy": 1.82,
+                        "velocityMultiplier": 1.0,
+                        "weight": 1196
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "406mm",
+                    "id": "SMPZ_Weapon_TX15_406mm",
+                    "stats": {
+                        "recoil": 95,
+                        "sway": 170,
+                        "ergonomics": 49,
+                        "accuracy": 1.66,
+                        "velocityMultiplier": 1.08,
+                        "weight": 1574
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                },
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_TX15",
+                    "stats": {
+                        "recoil": 93,
+                        "sway": 170,
+                        "ergonomics": 41,
+                        "accuracy": 1.41,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1574
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": true
+                }
+            ]
         },
         {
             "id": "SMPZ_Weapon_VPO101",
@@ -6407,7 +8029,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_VPO136",
@@ -6497,7 +8122,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_VPO209",
@@ -6577,7 +8205,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_VSS",
@@ -6626,6 +8257,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/vss.png",
             "images": [
                 "assets/vss.png"
@@ -6671,6 +8305,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "The AK Guy",
             "manufacturerLogo": "assets/akguy-logo.png",
             "manufacturerUrl": "https://theakguy.com/",
@@ -6744,22 +8381,34 @@ const weaponsData = {
                     "name": "Black",
                     "id": "SMPZ_Weapon_ATXC",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_ATXC_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Weapon_ATXC_Red",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -6810,22 +8459,34 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_AVT40",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Weapon_AVT40_Mountain_Flora",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Weapon_AVT40_SURPAT",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_AXMC338",
@@ -6870,6 +8531,48 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "508mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_AXMC338_508mm",
+                    "stats": {
+                        "recoil": 225,
+                        "sway": 150,
+                        "ergonomics": 53,
+                        "accuracy": 0.4,
+                        "velocityMultiplier": 0.972,
+                        "weight": 5700
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                },
+                {
+                    "name": "686mm",
+                    "id": "SMPZ_Weapon_AXMC338",
+                    "stats": {
+                        "recoil": 220,
+                        "sway": 150,
+                        "ergonomics": 33,
+                        "accuracy": 0.37,
+                        "velocityMultiplier": 1.045,
+                        "weight": 5700
+                    },
+                    "itemSize": [
+                        11,
+                        3
+                    ],
+                    "itemSlots": 33,
+                    "isDefault": true
+                }
+            ],
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/",
@@ -6919,6 +8622,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "deniedAttachmentsBySlot": {
                 "ARpistolgrip": [
                     "SMPZ_Attachments_ADAR_pistolgrip",
@@ -6984,6 +8690,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -7048,6 +8757,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -7103,6 +8815,48 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "508mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "508mm",
+                    "id": "SMPZ_Weapon_M107A1_508mm",
+                    "stats": {
+                        "recoil": 240,
+                        "sway": 120,
+                        "ergonomics": 13,
+                        "accuracy": 1.05,
+                        "velocityMultiplier": 0.941,
+                        "weight": 9930
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                },
+                {
+                    "name": "736.6mm",
+                    "id": "SMPZ_Weapon_M107A1",
+                    "stats": {
+                        "recoil": 212,
+                        "sway": 120,
+                        "ergonomics": 10,
+                        "accuracy": 0.8,
+                        "velocityMultiplier": 1.01,
+                        "weight": 11240
+                    },
+                    "itemSize": [
+                        12,
+                        3
+                    ],
+                    "itemSlots": 36,
+                    "isDefault": true
+                }
+            ],
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/",
@@ -7206,6 +8960,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/",
@@ -7269,7 +9026,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_M200",
@@ -7310,6 +9070,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "CheyTac USA",
             "manufacturerLogo": "assets/cheytac-logo.png",
             "manufacturerUrl": "https://cheytac.com/",
@@ -7369,6 +9132,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -7432,6 +9198,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -7486,16 +9255,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MK18Mjolnir338",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Weapon_MK18Mjolnir338_Multicam_Tropic",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "SWORD International",
             "manufacturerLogo": "assets/sword-logo.png",
             "manufacturerUrl": "https://sword-int.com/",
@@ -7552,6 +9330,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -7582,7 +9363,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_Mosin",
@@ -7621,7 +9405,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_RSASS",
@@ -7717,6 +9504,48 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "457mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "457mm",
+                    "id": "SMPZ_Weapon_RSASS_457mm",
+                    "stats": {
+                        "recoil": 132,
+                        "sway": 120,
+                        "ergonomics": 51,
+                        "accuracy": 0.94,
+                        "velocityMultiplier": 1.0,
+                        "weight": 2920
+                    },
+                    "itemSize": [
+                        9,
+                        3
+                    ],
+                    "itemSlots": 27,
+                    "isDefault": false
+                },
+                {
+                    "name": "558mm",
+                    "id": "SMPZ_Weapon_RSASS",
+                    "stats": {
+                        "recoil": 130,
+                        "sway": 120,
+                        "ergonomics": 49,
+                        "accuracy": 0.77,
+                        "velocityMultiplier": 1.039,
+                        "weight": 3000
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": true
+                }
+            ],
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/",
@@ -7777,7 +9606,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_SR25",
@@ -7874,6 +9706,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/",
@@ -7930,6 +9765,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "deniedAttachmentsBySlot": {
                 "AKpistolgrip": [
                     "SMPZ_Attachments_CQR47_pistolgrip"
@@ -7982,7 +9820,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_SVDS",
@@ -8029,7 +9870,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_SVDS_Zryachiy",
@@ -8076,7 +9920,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_SVT40",
@@ -8123,22 +9970,34 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_SVT40",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Weapon_SVT40_Mountain_Flora",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Weapon_SVT40_SURPAT",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/svt.png",
             "images": [
                 "assets/svt.png"
@@ -8192,16 +10051,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_TRG_M10",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_TRG_M10_UCP",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Sako",
             "manufacturerLogo": "assets/sako-logo.png",
             "manufacturerUrl": "https://www.sako.global/",
@@ -8249,7 +10117,10 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_XM109",
@@ -8287,6 +10158,48 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "635mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "448mm",
+                    "id": "SMPZ_Weapon_XM109",
+                    "stats": {
+                        "recoil": 270,
+                        "sway": 120,
+                        "ergonomics": 10,
+                        "accuracy": 0.4,
+                        "velocityMultiplier": 1.02,
+                        "weight": 12743
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": true
+                },
+                {
+                    "name": "635mm",
+                    "id": "SMPZ_Weapon_XM109_635mm",
+                    "stats": {
+                        "recoil": 263,
+                        "sway": 120,
+                        "ergonomics": 7,
+                        "accuracy": 0.4,
+                        "velocityMultiplier": 1.06,
+                        "weight": 13863
+                    },
+                    "itemSize": [
+                        10,
+                        3
+                    ],
+                    "itemSlots": 30,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/",
@@ -8335,6 +10248,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Beretta",
             "manufacturerLogo": "assets/beretta-logo.png",
             "manufacturerUrl": "https://www.beretta.com/"
@@ -8378,6 +10294,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Beretta",
             "manufacturerLogo": "assets/beretta-logo.png",
             "manufacturerUrl": "https://www.beretta.com/"
@@ -8416,6 +10335,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Magnum Research",
             "manufacturerLogo": "assets/magnumresearch-logo.png",
             "manufacturerUrl": "https://www.magnumresearch.com/",
@@ -8464,7 +10386,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_DeagleL6_50AE",
@@ -8507,6 +10432,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Magnum Research",
             "manufacturerLogo": "assets/magnumresearch-logo.png",
             "manufacturerUrl": "https://www.magnumresearch.com/",
@@ -8568,16 +10496,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_FiveSevenMK2",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_FiveSevenMK2_FDE",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -8627,6 +10564,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -8674,6 +10614,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -8714,6 +10657,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -8754,6 +10700,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -8799,6 +10748,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "TsNIITochMash",
             "manufacturerLogo": "assets/TsNIITochMash-logo.png",
             "image": "assets/sr1mp.png",
@@ -8841,7 +10793,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_TT33",
@@ -8872,7 +10827,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_UCP",
@@ -8915,6 +10873,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -8957,6 +10918,9 @@ const weaponsData = {
                 "SemiAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -9024,16 +10988,25 @@ const weaponsData = {
                     "name": "Black",
                     "id": "SMPZ_Weapon_KRISS_Vector_Black",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_KRISS_Vector_FDE",
                     "image": "",
-                    "canBePainted": false
+                    "canBePainted": false,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MP5",
@@ -9081,6 +11054,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -9136,6 +11112,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -9200,16 +11179,25 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MP7A2",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MP7A2_FDE",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": false,
+                    "barrelAdjustments": [],
+                    "barrelVariants": []
                 }
             ],
             "canBePainted": true,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -9252,7 +11240,10 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_MPX",
@@ -9301,6 +11292,48 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "355mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "203mm",
+                    "id": "SMPZ_Weapon_MPX",
+                    "stats": {
+                        "recoil": 95,
+                        "sway": 120,
+                        "ergonomics": 72,
+                        "accuracy": 5.0,
+                        "velocityMultiplier": 1.07,
+                        "weight": 1684
+                    },
+                    "itemSize": [
+                        6,
+                        3
+                    ],
+                    "itemSlots": 18,
+                    "isDefault": true
+                },
+                {
+                    "name": "355mm",
+                    "id": "SMPZ_Weapon_MPX_Long",
+                    "stats": {
+                        "recoil": 95,
+                        "sway": 120,
+                        "ergonomics": 64,
+                        "accuracy": 1.33,
+                        "velocityMultiplier": 1.15,
+                        "weight": 1684
+                    },
+                    "itemSize": [
+                        8,
+                        3
+                    ],
+                    "itemSlots": 24,
+                    "isDefault": false
+                }
+            ],
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -9364,6 +11397,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/",
@@ -9418,6 +11454,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "deniedAttachmentsBySlot": {
                 "AKHandguard": [
                     "SMPZ_Attachments_AK_Agressor_Hndgrd",
@@ -9462,6 +11501,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "image": "assets/ppsh41.png",
             "images": [
                 "assets/ppsh41.png"
@@ -9510,7 +11552,10 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_STM9",
@@ -9558,7 +11603,10 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         }
     ],
     "grenade_launcher": [
@@ -9607,6 +11655,9 @@ const weaponsData = {
                 "Single"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Milkor USA",
             "manufacturerLogo": "assets/milkor-logo.png",
             "manufacturerUrl": "https://milkorusa.com/",
@@ -9681,16 +11732,142 @@ const weaponsData = {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_M60E6",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "584mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "458mm",
+                            "id": "SMPZ_Weapon_M60E6",
+                            "stats": {
+                                "recoil": 195,
+                                "sway": 150,
+                                "ergonomics": 30,
+                                "accuracy": 1.21,
+                                "velocityMultiplier": 1.15,
+                                "weight": 7821
+                            },
+                            "itemSize": [
+                                10,
+                                4
+                            ],
+                            "itemSlots": 40,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "584mm",
+                            "id": "SMPZ_Weapon_M60E6_584mm",
+                            "stats": {
+                                "recoil": 193,
+                                "sway": 150,
+                                "ergonomics": 23,
+                                "accuracy": 1.21,
+                                "velocityMultiplier": 1.17,
+                                "weight": 7798
+                            },
+                            "itemSize": [
+                                11,
+                                4
+                            ],
+                            "itemSlots": 44,
+                            "isDefault": false
+                        }
+                    ]
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_M60E6_FDE",
                     "image": "",
-                    "canBePainted": true
+                    "canBePainted": true,
+                    "canAdjustBarrel": true,
+                    "barrelAdjustments": [
+                        "584mm"
+                    ],
+                    "barrelVariants": [
+                        {
+                            "name": "458mm",
+                            "id": "SMPZ_Weapon_M60E6_FDE",
+                            "stats": {
+                                "recoil": 195,
+                                "sway": 150,
+                                "ergonomics": 30,
+                                "accuracy": 1.21,
+                                "velocityMultiplier": 1.15,
+                                "weight": 7821
+                            },
+                            "itemSize": [
+                                10,
+                                4
+                            ],
+                            "itemSlots": 40,
+                            "isDefault": true
+                        },
+                        {
+                            "name": "584mm",
+                            "id": "SMPZ_Weapon_M60E6_584mm_FDE",
+                            "stats": {
+                                "recoil": 193,
+                                "sway": 150,
+                                "ergonomics": 23,
+                                "accuracy": 1.21,
+                                "velocityMultiplier": 1.17,
+                                "weight": 7798
+                            },
+                            "itemSize": [
+                                11,
+                                4
+                            ],
+                            "itemSlots": 44,
+                            "isDefault": false
+                        }
+                    ]
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "canAdjustBarrel": true,
+            "barrelAdjustments": [
+                "584mm"
+            ],
+            "barrelVariants": [
+                {
+                    "name": "458mm",
+                    "id": "SMPZ_Weapon_M60E6",
+                    "stats": {
+                        "recoil": 195,
+                        "sway": 150,
+                        "ergonomics": 30,
+                        "accuracy": 1.21,
+                        "velocityMultiplier": 1.15,
+                        "weight": 7821
+                    },
+                    "itemSize": [
+                        10,
+                        4
+                    ],
+                    "itemSlots": 40,
+                    "isDefault": true
+                },
+                {
+                    "name": "584mm",
+                    "id": "SMPZ_Weapon_M60E6_584mm",
+                    "stats": {
+                        "recoil": 193,
+                        "sway": 150,
+                        "ergonomics": 23,
+                        "accuracy": 1.21,
+                        "velocityMultiplier": 1.17,
+                        "weight": 7798
+                    },
+                    "itemSize": [
+                        11,
+                        4
+                    ],
+                    "itemSlots": 44,
+                    "isDefault": false
+                }
+            ]
         },
         {
             "id": "SMPZ_Weapon_PKM",
@@ -9734,6 +11911,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -9785,6 +11965,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -9837,7 +12020,10 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_RPDN",
@@ -9888,7 +12074,10 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": []
         },
         {
             "id": "SMPZ_Weapon_RPK16",
@@ -9960,6 +12149,9 @@ const weaponsData = {
                 "FullAuto"
             ],
             "canBePainted": false,
+            "canAdjustBarrel": false,
+            "barrelAdjustments": [],
+            "barrelVariants": [],
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"

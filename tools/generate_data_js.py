@@ -283,6 +283,241 @@ def parse_paint_recipes(smpz_dir):
     print(f"[*] 도색 레시피({paint_files_count}개 스크립트 파일) 파싱 완료: 도색 가능 클래스 {len(paintable_classes)}개 추출")
     return paintable_classes
 
+def barrel_adjustment_sort_key(label):
+    match = re.search(r'(\d+(?:\.\d+)?)\s*(mm|inch)', label, re.I)
+    if not match:
+        return (1, math.inf, label.lower())
+    length = float(match.group(1))
+    if match.group(2).lower() == 'inch':
+        length *= 25.4
+    return (0, length, label.lower())
+
+def sort_barrel_adjustments(adjustments):
+    return sorted(set(adjustments), key=barrel_adjustment_sort_key)
+
+def normalize_barrel_spec(label):
+    match = re.search(r'(\d+(?:\.\d+)?)\s*(mm|inch)', label, re.I)
+    if not match:
+        return ('label', label.lower()), label
+
+    millimeters = float(match.group(1))
+    if match.group(2).lower() == 'inch':
+        millimeters *= 25.4
+
+    rounded = round(millimeters)
+    display_value = str(rounded) if abs(millimeters - rounded) < 0.05 else f"{millimeters:g}"
+    is_a2 = bool(re.search(r'\bA2\b', label, re.I))
+    suffix = ' A2' if is_a2 else ''
+    return ('length_mm', round(millimeters, 3), is_a2), f"{display_value}mm{suffix}"
+
+def parse_barrel_adjustment_recipes(smpz_dir):
+    adjustments_by_class = {}
+    barrel_recipes = []
+    barrel_files = []
+
+    for filepath in glob.glob(os.path.join(smpz_dir, '**', '*.c'), recursive=True):
+        path_parts = filepath.lower().replace('\\', '/').split('/')
+        if 'recipes' in path_parts and any(part in ('barrel_short', 'barrel_long') for part in path_parts):
+            barrel_files.append(filepath)
+
+    class_re = re.compile(r'\bclass\s+[A-Za-z0-9_]+\s+extends\s+RecipeBase\s*\{', re.I)
+    name_re = re.compile(r'\bm_Name\s*=\s*"([^"]+)"', re.I)
+    ingredient_re = re.compile(r'\bInsertIngredient\s*\(\s*0\s*,\s*"([^"]+)"\s*\)', re.I)
+    result_re = re.compile(r'\bTurnItemIntoItemLambda\s*\(\s*ingredients\s*\[\s*0\s*\]\s*,\s*"([^"]+)"', re.I)
+
+    for filepath in barrel_files:
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as fp:
+                content = fp.read()
+        except Exception:
+            continue
+
+        content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
+        content = re.sub(r'//.*', '', content)
+        pos = 0
+
+        while True:
+            class_match = class_re.search(content, pos)
+            if not class_match:
+                break
+
+            body_start = class_match.end() - 1
+            brace_count = 1
+            cursor = body_start + 1
+            while cursor < len(content) and brace_count > 0:
+                if content[cursor] == '{':
+                    brace_count += 1
+                elif content[cursor] == '}':
+                    brace_count -= 1
+                cursor += 1
+
+            if brace_count != 0:
+                break
+
+            body = content[body_start + 1:cursor - 1]
+            pos = cursor
+            name_match = name_re.search(body)
+            if not name_match or 'barrel' not in name_match.group(1).lower():
+                continue
+
+            recipe_name = name_match.group(1).strip()
+            adjustment = re.sub(r'^Make\s+', '', recipe_name, flags=re.I)
+            adjustment = re.sub(r'\s+Barrel$', '', adjustment, flags=re.I).strip()
+            if not adjustment:
+                continue
+
+            weapon_classes = [
+                weapon_class for weapon_class in ingredient_re.findall(body)
+                if weapon_class.startswith('SMPZ_Weapon_')
+            ]
+            result_match = result_re.search(body)
+            result_class = result_match.group(1) if result_match else None
+
+            for weapon_class in weapon_classes:
+                if weapon_class.startswith('SMPZ_Weapon_'):
+                    adjustments_by_class.setdefault(weapon_class, set()).add(adjustment)
+
+            if result_class and result_class.startswith('SMPZ_Weapon_'):
+                barrel_recipes.append({
+                    'sources': weapon_classes,
+                    'target': result_class,
+                    'adjustment': adjustment
+                })
+
+    result = {
+        weapon_class: sort_barrel_adjustments(adjustments)
+        for weapon_class, adjustments in adjustments_by_class.items()
+    }
+    print(
+        f"[*] 총열 레시피({len(barrel_files)}개 스크립트 파일) 파싱 완료: "
+        f"조절 가능 클래스 {len(result)}개 추출"
+    )
+    return result, barrel_recipes
+
+def build_barrel_variant_data(barrel_recipes, all_classes):
+    graph = {}
+    labels_by_class = {}
+
+    for recipe in barrel_recipes:
+        target = recipe['target']
+        labels_by_class.setdefault(target, recipe['adjustment'])
+        graph.setdefault(target, set())
+        for source in recipe['sources']:
+            graph.setdefault(source, set()).add(target)
+            graph[target].add(source)
+
+    def class_color(class_id):
+        props = get_inherited_props(class_id, all_classes)
+        configured_color = props.get('color')
+        if configured_color:
+            return str(configured_color).strip().lower()
+
+        class_id_lower = class_id.lower()
+        for suffix, color_label in COLOR_SUFFIXES:
+            if class_id_lower.endswith(suffix.lower()):
+                return color_label.lower()
+        return ''
+
+    def class_family(class_id):
+        family_id = class_id
+        while True:
+            normalized = _WEAPON_VARIANT_RE.sub('', family_id)
+            if normalized == family_id:
+                return normalized.lower()
+            family_id = normalized
+
+    def label_for_class(class_id):
+        if class_id in labels_by_class:
+            return labels_by_class[class_id]
+
+        props = get_inherited_props(class_id, all_classes)
+        barrel_length = props.get('barrelLengthMm')
+        if barrel_length is not None:
+            try:
+                length_label = f"{int(float(barrel_length))}mm"
+            except (ValueError, TypeError):
+                length_label = f"{barrel_length}mm"
+            if str(props.get('IsA2Barrel', '0')) in ('1', '1.0'):
+                return f"{length_label} A2"
+            return length_label
+
+        configured_length = props.get('barrelLength')
+        if configured_length:
+            mm_match = re.search(r'(\d+(?:\.\d+)?)\s*mm', str(configured_length), re.I)
+            if mm_match:
+                millimeters = float(mm_match.group(1))
+                length_label = f"{millimeters:g}mm"
+                if str(props.get('IsA2Barrel', '0')) in ('1', '1.0'):
+                    return f"{length_label} A2"
+                return length_label
+
+        return '기본형'
+
+    variants_by_class = {}
+    for start_class in graph:
+        component = set()
+        pending = [start_class]
+        while pending:
+            class_id = pending.pop()
+            if class_id in component:
+                continue
+            component.add(class_id)
+            pending.extend(graph.get(class_id, []))
+
+        start_color = class_color(start_class)
+        start_family = class_family(start_class)
+        variants_by_spec = {}
+        for class_id in component:
+            if class_id not in all_classes:
+                continue
+
+            props = get_inherited_props(class_id, all_classes)
+            stats = extract_weapon_stats(class_id, props, all_classes)
+            weight = props.get('weight')
+            if weight is not None:
+                try:
+                    stats['weight'] = int(float(weight))
+                except (ValueError, TypeError):
+                    pass
+
+            variant = {
+                'name': label_for_class(class_id),
+                'id': class_id,
+                'stats': clean_item_stats(stats),
+                '_color': class_color(class_id)
+            }
+
+            item_size = props.get('itemSize')
+            if item_size and len(item_size) >= 2:
+                try:
+                    variant['itemSize'] = [int(item_size[0]), int(item_size[1])]
+                    variant['itemSlots'] = int(item_size[0]) * int(item_size[1])
+                except (ValueError, TypeError):
+                    pass
+
+            candidate_priority = (
+                0 if class_id == start_class else 1,
+                0 if class_family(class_id) == start_family else 1,
+                0 if start_color and variant['_color'] == start_color else
+                1 if not start_color and not variant['_color'] else
+                2,
+                1 if str(props.get('IsA2Barrel', '0')) in ('1', '1.0') else 0,
+                class_id.lower()
+            )
+            spec_key, display_name = normalize_barrel_spec(variant['name'])
+            variant['name'] = display_name
+            existing = variants_by_spec.get(spec_key)
+            if existing is None or candidate_priority < existing[0]:
+                variants_by_spec[spec_key] = (candidate_priority, variant)
+
+        variants = [entry[1] for entry in variants_by_spec.values()]
+        for variant in variants:
+            variant.pop('_color', None)
+        variants.sort(key=lambda variant: barrel_adjustment_sort_key(variant['name']))
+        variants_by_class[start_class] = variants
+
+    return variants_by_class
+
 # ---------------------------------------------------------------------------
 # C++ PARSING ENGINE
 # ---------------------------------------------------------------------------
@@ -2180,6 +2415,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"[*] 캐시된 구글 번역 {len(google_cache)}개 로드 완료.")
 
     paintable_classes = parse_paint_recipes(smpz_dir)
+    barrel_adjustments_by_class, barrel_recipes = parse_barrel_adjustment_recipes(smpz_dir)
 
     # 2. Parse C++ Classes across SMPZ packages
     target_dirs = ['SMPZ_Weapons', 'SMPZ_More_Weapons', 'SMPZ_More_Attachment', 'SMPZ_Gears']
@@ -2204,6 +2440,22 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                         all_classes[cname]['source_file'] = cinfo['source_file']
 
     print(f"[*] 파싱된 고유 클래스 총 {len(all_classes)}개")
+
+    barrel_variants_by_class = build_barrel_variant_data(barrel_recipes, all_classes)
+
+    def get_barrel_fields(class_id):
+        variants = []
+        for source_variant in barrel_variants_by_class.get(class_id, []):
+            variant = dict(source_variant)
+            variant['isDefault'] = source_variant['id'] == class_id
+            variants.append(variant)
+
+        adjustments = [variant['name'] for variant in variants if not variant['isDefault']]
+        return {
+            'canAdjustBarrel': class_id in barrel_adjustments_by_class,
+            'barrelAdjustments': sort_barrel_adjustments(adjustments),
+            'barrelVariants': variants
+        }
 
     # Runtime Enforce Script classes carry the attachment restrictions that
     # config.cpp inventory slot names cannot express.
@@ -2235,6 +2487,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'suppressor_types': 0,
         'colors_linked': 0,
         'paintable_items': 0,
+        'barrel_adjustable_items': 0,
         'runtime_constrained_items': 0
     }
 
@@ -2374,23 +2627,27 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             stats_summary['models_linked'] += 1
 
         is_base_paintable = cname in paintable_classes
+        base_barrel_fields = get_barrel_fields(cname)
         if cname in weapon_color_map:
             variants = weapon_color_map[cname]
             base_col = extract_color_from_name(raw_disp_name) or '기본형'
             base_img = file_map.get(cname.lower(), '')
             formatted_vars = []
             for v in variants:
+                variant_barrel_fields = get_barrel_fields(v['id'])
                 formatted_vars.append({
                     'name': v['name'],
                     'id': v['id'],
                     'image': v['image'],
-                    'canBePainted': v['id'] in paintable_classes
+                    'canBePainted': v['id'] in paintable_classes,
+                    **variant_barrel_fields
                 })
             item_obj['color'] = [{
                 'name': base_col,
                 'id': cname,
                 'image': base_img,
-                'canBePainted': is_base_paintable
+                'canBePainted': is_base_paintable,
+                **base_barrel_fields
             }] + formatted_vars
             stats_summary['colors_linked'] += 1
         elif cname != 'SMPZ_Weapon_UCP':
@@ -2402,7 +2659,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                     'name': single_col,
                     'id': cname,
                     'image': base_img,
-                    'canBePainted': is_base_paintable
+                    'canBePainted': is_base_paintable,
+                    **base_barrel_fields
                 }]
                 item_obj['name'] = cleaned_n
                 stats_summary['colors_linked'] += 1
@@ -2411,6 +2669,18 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         item_obj['canBePainted'] = has_paint
         if has_paint:
             stats_summary['paintable_items'] += 1
+
+        item_obj.update(base_barrel_fields)
+        barrel_adjustments = list(item_obj['barrelAdjustments'])
+        has_adjustable_variant = item_obj['canAdjustBarrel']
+        if isinstance(item_obj.get('color'), list):
+            for color_variant in item_obj['color']:
+                barrel_adjustments.extend(color_variant.get('barrelAdjustments', []))
+                has_adjustable_variant = has_adjustable_variant or color_variant.get('canAdjustBarrel', False)
+        item_obj['barrelAdjustments'] = sort_barrel_adjustments(barrel_adjustments)
+        item_obj['canAdjustBarrel'] = bool(has_adjustable_variant)
+        if item_obj['canAdjustBarrel']:
+            stats_summary['barrel_adjustable_items'] += 1
 
         fallback_ids = [v['id'] for v in weapon_color_map.get(cname, [])]
         _merge_manual_fields(item_obj, metadata, fallback_ids=fallback_ids)
@@ -2751,6 +3021,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 지원 색상(color) 그룹화 연동:  {stats_summary['colors_linked']}개")
     print(f"    - 도색 가능(canBePainted) 연동:   {stats_summary['paintable_items']}개")
+    print(f"    - 총열 조절(canAdjustBarrel) 연동: {stats_summary['barrel_adjustable_items']}개")
     print(f"    - 마운트 하위 분류(mountType):   {stats_summary['mount_types']}개")
     print(f"    - 기계식 조준기 분류(sightType): {stats_summary['ironsight_types']}개")
     print(f"    - 권총 손잡이 분류(gripPlatform): {stats_summary['pistolgrip_types']}개")

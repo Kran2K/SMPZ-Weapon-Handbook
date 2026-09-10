@@ -1475,18 +1475,40 @@ body {
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
 }
 
-.paint-status-chip.paint-status-yes {
+.paint-status-chip.paint-status-yes,
+.barrel-status-chip.barrel-status-yes {
     background: rgba(46, 204, 113, 0.15);
     border-color: rgba(46, 204, 113, 0.45);
     color: #2ecc71;
     font-weight: 600;
 }
 
-.paint-status-chip.paint-status-no {
+.paint-status-chip.paint-status-no,
+.barrel-status-chip.barrel-status-no {
     background: rgba(231, 76, 60, 0.12);
     border-color: rgba(231, 76, 60, 0.35);
     color: #e74c3c;
     font-weight: 500;
+}
+
+.barrel-adjustment-chip {
+    color: #e6e6e6;
+    font: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.barrel-adjustment-chip:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.barrel-adjustment-chip.active {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #ffffff;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
 }
 
 /* 기어 필터 충전 패널 */
