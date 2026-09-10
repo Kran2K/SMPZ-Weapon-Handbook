@@ -39,6 +39,7 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/aa12.png",
             "images": [
                 "assets/aa12.png"
@@ -82,6 +83,7 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/aa12gen2.png",
             "images": [
                 "assets/aa12gen2.png"
@@ -122,7 +124,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MP133",
@@ -160,7 +163,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MP155",
@@ -199,7 +203,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MP18",
@@ -234,7 +239,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MP43",
@@ -269,6 +275,7 @@ const weaponsData = {
                 "Single",
                 "Double"
             ],
+            "canBePainted": false,
             "image": "assets/mp43.png",
             "images": [
                 "assets/mp43.png"
@@ -323,7 +330,8 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "assault_rifle": [
@@ -487,7 +495,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_AK101",
@@ -547,6 +556,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -609,6 +619,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -703,6 +714,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -797,6 +809,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -882,6 +895,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -955,6 +969,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1027,6 +1042,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1081,6 +1097,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1165,6 +1182,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1254,6 +1272,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1343,6 +1362,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1440,6 +1460,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1538,6 +1559,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1635,6 +1657,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1732,6 +1755,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -1819,6 +1843,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1903,6 +1928,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -1983,7 +2009,8 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_AS1",
@@ -2063,6 +2090,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -2111,6 +2139,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/ash12.png",
             "images": [
                 "assets/ash12.png"
@@ -2164,6 +2193,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/asval.png",
             "images": [
                 "assets/asval.png"
@@ -2215,6 +2245,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/asval.png",
             "images": [
                 "assets/asval.png"
@@ -2301,6 +2332,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Steyr Mannlicher",
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/",
@@ -2369,6 +2401,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -2528,6 +2561,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -2688,6 +2722,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -2852,14 +2887,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_HK416A5",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "RAL 8000",
                     "id": "SMPZ_Weapon_HK416A5_RAL8000",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -3032,14 +3070,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_IWI_TavorX95",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_IWI_TavorX95_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_JAKL",
@@ -3203,14 +3244,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_JAKL",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_JAKL_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_M16A1",
@@ -3370,6 +3414,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -3536,6 +3581,7 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -3702,6 +3748,7 @@ const weaponsData = {
                 "SemiAuto",
                 "Burst"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -3865,6 +3912,7 @@ const weaponsData = {
                 "FullAuto"
             ],
             "model": "assets/models/m4.glb",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -4029,6 +4077,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -4135,24 +4184,29 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MCX_SPEAR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Weapon_MCX_SPEAR_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_MCX_SPEAR_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_MCX_SPEAR_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -4318,14 +4372,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MDR_556",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MDR_556_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Weapon_MDR_762",
@@ -4418,14 +4475,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MDR_762",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MDR_762_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Weapon_MK47",
@@ -4513,6 +4573,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/",
@@ -4682,14 +4743,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Masada",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_Masada_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -4827,14 +4891,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Masada_300BLK",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_Masada_300BLK_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -4916,6 +4983,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Custom Guns"
         },
         {
@@ -4966,6 +5034,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -5057,7 +5126,8 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_Radian_Weapons_Model1",
@@ -5216,6 +5286,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/",
@@ -5386,19 +5457,23 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_Radian_Weapons_Model1_FA_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -5455,6 +5530,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "DS Arms",
             "manufacturerLogo": "assets/dsarms-logo.png",
             "manufacturerUrl": "https://dsarms.com/",
@@ -5574,14 +5650,17 @@ const weaponsData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_SCAR_H",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_SCAR_H_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -5752,14 +5831,17 @@ const weaponsData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_SCAR_L",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_SCAR_L_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -5812,6 +5894,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/sr3m.png",
             "images": [
                 "assets/sr3m.png"
@@ -5973,7 +6056,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_VPO101",
@@ -6019,7 +6103,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_VPO136",
@@ -6108,7 +6193,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_VPO209",
@@ -6187,7 +6273,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_VSS",
@@ -6235,6 +6322,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/vss.png",
             "images": [
                 "assets/vss.png"
@@ -6279,6 +6367,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "The AK Guy",
             "manufacturerLogo": "assets/akguy-logo.png",
             "manufacturerUrl": "https://theakguy.com/",
@@ -6346,19 +6435,23 @@ const weaponsData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_ATXC",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_ATXC_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Weapon_ATXC_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -6408,19 +6501,23 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_AVT40",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Weapon_AVT40_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Weapon_AVT40_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_AXMC338",
@@ -6464,6 +6561,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/",
@@ -6511,7 +6609,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_HK417",
@@ -6567,6 +6666,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -6624,6 +6724,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -6672,6 +6773,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/",
@@ -6774,6 +6876,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/",
@@ -6830,7 +6933,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_M200",
@@ -6870,6 +6974,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "CheyTac USA",
             "manufacturerLogo": "assets/cheytac-logo.png",
             "manufacturerUrl": "https://cheytac.com/",
@@ -6928,6 +7033,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -6990,6 +7096,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -7037,6 +7144,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "SWORD International",
             "manufacturerLogo": "assets/sword-logo.png",
             "manufacturerUrl": "https://sword-int.com/",
@@ -7092,6 +7200,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -7121,7 +7230,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_Mosin",
@@ -7159,7 +7269,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_RSASS",
@@ -7254,6 +7365,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/",
@@ -7307,7 +7419,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_SR25",
@@ -7403,6 +7516,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/",
@@ -7451,7 +7565,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_SVD",
@@ -7498,7 +7613,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_SVDS",
@@ -7544,7 +7660,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_SVDS_Zryachiy",
@@ -7590,7 +7707,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_SVT40",
@@ -7636,19 +7754,23 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_SVT40",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Weapon_SVT40_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Weapon_SVT40_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "image": "assets/svt.png",
             "images": [
                 "assets/svt.png"
@@ -7701,14 +7823,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_TRG_M10",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Weapon_TRG_M10_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Sako",
             "manufacturerLogo": "assets/sako-logo.png",
             "manufacturerUrl": "https://www.sako.global/",
@@ -7755,7 +7880,8 @@ const weaponsData = {
             ],
             "modes": [
                 "Single"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_XM109",
@@ -7792,6 +7918,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/"
@@ -7834,6 +7961,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Beretta",
             "manufacturerLogo": "assets/beretta-logo.png",
             "manufacturerUrl": "https://www.beretta.com/"
@@ -7876,6 +8004,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Beretta",
             "manufacturerLogo": "assets/beretta-logo.png",
             "manufacturerUrl": "https://www.beretta.com/"
@@ -7913,6 +8042,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Magnum Research",
             "manufacturerLogo": "assets/magnumresearch-logo.png",
             "manufacturerUrl": "https://www.magnumresearch.com/",
@@ -7960,7 +8090,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_DeagleL6_50AE",
@@ -8002,6 +8133,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Magnum Research",
             "manufacturerLogo": "assets/magnumresearch-logo.png",
             "manufacturerUrl": "https://www.magnumresearch.com/",
@@ -8062,14 +8194,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_FiveSevenMK2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_FiveSevenMK2_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -8118,6 +8253,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -8164,6 +8300,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -8203,6 +8340,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -8242,6 +8380,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -8286,6 +8425,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "TsNIITochMash",
             "manufacturerLogo": "assets/TsNIITochMash-logo.png",
             "image": "assets/sr1mp.png",
@@ -8327,7 +8467,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_TT33",
@@ -8357,7 +8498,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_UCP",
@@ -8399,6 +8541,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -8440,6 +8583,7 @@ const weaponsData = {
             "modes": [
                 "SemiAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -8506,14 +8650,17 @@ const weaponsData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Weapon_KRISS_Vector_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_KRISS_Vector_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MP5",
@@ -8560,6 +8707,7 @@ const weaponsData = {
                 "Burst",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -8614,6 +8762,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -8677,14 +8826,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_MP7A2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_MP7A2_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -8726,7 +8878,8 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_MPX",
@@ -8774,6 +8927,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/",
@@ -8828,6 +8982,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/",
@@ -8880,7 +9035,8 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_PPSH41",
@@ -8917,6 +9073,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "image": "assets/ppsh41.png",
             "images": [
                 "assets/ppsh41.png"
@@ -8964,7 +9121,8 @@ const weaponsData = {
             "modes": [
                 "SemiAuto",
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_STM9",
@@ -9011,7 +9169,8 @@ const weaponsData = {
             ],
             "modes": [
                 "SemiAuto"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "grenade_launcher": [
@@ -9059,6 +9218,7 @@ const weaponsData = {
             "modes": [
                 "Single"
             ],
+            "canBePainted": false,
             "manufacturer": "Milkor USA",
             "manufacturerLogo": "assets/milkor-logo.png",
             "manufacturerUrl": "https://milkorusa.com/",
@@ -9124,14 +9284,17 @@ const weaponsData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Weapon_M60E6",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Weapon_M60E6_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Weapon_PKM",
@@ -9174,6 +9337,7 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/",
@@ -9224,6 +9388,7 @@ const weaponsData = {
             "modes": [
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -9275,7 +9440,8 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_RPDN",
@@ -9325,7 +9491,8 @@ const weaponsData = {
             ],
             "modes": [
                 "FullAuto"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Weapon_RPK16",
@@ -9396,6 +9563,7 @@ const weaponsData = {
                 "SemiAuto",
                 "FullAuto"
             ],
+            "canBePainted": false,
             "manufacturer": "Kalashnikov Concern",
             "manufacturerLogo": "assets/kalashnikov-logo.png",
             "manufacturerUrl": "https://kalashnikovgroup.ru/en/"
@@ -9432,49 +9600,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_511_Tactical_RUSH100_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "5.11 Tactical",
             "manufacturerLogo": "assets/511tac-logo.png",
             "manufacturerUrl": "https://www.511tactical.com/",
@@ -9509,59 +9687,71 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_6Sh118_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Backpack_6Sh118_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Backpack_6Sh118_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_6Sh118_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_6Sh118_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_6Sh118_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_6Sh118_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_6Sh118_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_6Sh118_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_6Sh118_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Backpack_6Sh118_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": true,
             "image": "assets/6sh118.png",
             "images": [
                 "assets/6sh118.png",
@@ -9599,19 +9789,23 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_F4_Terminator_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Backpack_F4_Terminator_HUNCAM",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Vz95",
                     "id": "SMPZ_Backpack_F4_Terminator_Vz95",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Eberlestock",
             "manufacturerLogo": "assets/eberlestock-logo.png",
             "manufacturerUrl": "https://eberlestock.com/",
@@ -9651,29 +9845,35 @@ const gearData = {
                 {
                     "name": "Dry Earth",
                     "id": "SMPZ_Backpack_F5_SwitchBlade_DryEarth",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Lizard",
                     "id": "SMPZ_Backpack_F5_SwitchBlade_Lizard",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiTarn",
                     "id": "SMPZ_Backpack_F5_SwitchBlade_Multitarn",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Centre Europe",
                     "id": "SMPZ_Backpack_F5_SwitchBlade_CetreEurope",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Badlands",
                     "id": "SMPZ_Backpack_F5_SwitchBlade_Badlands",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Backpack_Blackjack50_Black",
@@ -9705,49 +9905,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_Blackjack50_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_Blackjack50_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Backpack_Blackjack50_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_Blackjack50_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_Blackjack50_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_Blackjack50_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_Blackjack50_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_Blackjack50_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_Blackjack50_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/",
@@ -9790,29 +10000,35 @@ const gearData = {
                 {
                     "name": "Foliage",
                     "id": "SMPZ_Backpack_SATL_Foliage",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Coyote",
                     "id": "SMPZ_Backpack_SATL_Coyote",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ESTDCU",
                     "id": "SMPZ_Backpack_SATL_ESTDCU",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "GreenZone",
                     "id": "SMPZ_Backpack_SATL_GreenZone",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "M05",
                     "id": "SMPZ_Backpack_SATL_M05",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/"
@@ -9846,49 +10062,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_2Day_AssaultPack_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Mystery Ranch",
             "manufacturerLogo": "assets/mystery-logo.png",
             "manufacturerUrl": "https://www.mysteryranch.com/"
@@ -9926,44 +10152,53 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_Hazard4_Takedown_Sling_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Black",
@@ -9998,59 +10233,71 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Khaki",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Flecktarn",
                     "id": "SMPZ_Backpack_Tasmanian_Tiger_Trooper35_Flecktarn",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "chest_rig": [
@@ -10083,69 +10330,83 @@ const gearData = {
                 {
                     "name": "Gray",
                     "id": "SMPZ_ChestRig_LBT1961A_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_ChestRig_LBT1961A_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_ChestRig_LBT1961A_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_ChestRig_LBT1961A_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_ChestRig_LBT1961A_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_ChestRig_LBT1961A_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_ChestRig_LBT1961A_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_ChestRig_LBT1961A_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_ChestRig_LBT1961A_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_ChestRig_LBT1961A_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_ChestRig_LBT1961A_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_ChestRig_LBT1961A_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB V2",
                     "id": "SMPZ_ChestRig_LBT1961A_ISB_V2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_ChestRig_Triton_M43A_Black",
@@ -10176,64 +10437,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_ChestRig_Triton_M43A_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_ChestRig_Triton_M43A_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_ChestRig_Triton_M43A_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_ChestRig_Triton_M43A_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_ChestRig_Triton_M43A_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_ChestRig_Triton_M43A_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_ChestRig_Triton_M43A_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_ChestRig_Triton_M43A_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_ChestRig_Triton_M43A_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_ChestRig_Triton_M43A_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_ChestRig_Triton_M43A_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_ChestRig_Triton_M43A_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
@@ -10264,49 +10538,59 @@ const gearData = {
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "A-TACS AU",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_ATACS_AU",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_ChestRig_ANA_Tactical_Alpha_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
@@ -10337,14 +10621,17 @@ const gearData = {
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_ChestRig_WARTECH_MK3_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Moss",
                     "id": "SMPZ_ChestRig_WARTECH_MK3_Moss",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_ChestRig_PoyasAB_Green",
@@ -10375,64 +10662,77 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_ChestRig_PoyasAB_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_ChestRig_PoyasAB_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_ChestRig_PoyasAB_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_ChestRig_PoyasAB_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_ChestRig_PoyasAB_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_ChestRig_PoyasAB_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_ChestRig_PoyasAB_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_ChestRig_PoyasAB_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_ChestRig_PoyasAB_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_ChestRig_PoyasAB_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_ChestRig_PoyasAB_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_ChestRig_PoyasAB_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "mask": [
@@ -10455,7 +10755,8 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mask_ColdFear_Balaclava",
@@ -10476,7 +10777,8 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mask_CQCM",
@@ -10502,19 +10804,23 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_CQCM",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Mask_CQCM_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Skull",
                     "id": "SMPZ_Mask_CQCM_Skull",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mask_DeathShadow_Black",
@@ -10540,34 +10846,41 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mask_DeathShadow_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Mask_DeathShadow_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Gold",
                     "id": "SMPZ_Mask_DeathShadow_Gold",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Gray",
                     "id": "SMPZ_Mask_DeathShadow_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_DeathShadow_Cultist",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Mask_DeathShadow_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mask_HalfMask_Black",
@@ -10593,59 +10906,71 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mask_HalfMask_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mask_HalfMask_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mask_HalfMask_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mask_HalfMask_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mask_HalfMask_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mask_HalfMask_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Mask_HalfMask_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Mask_HalfMask_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Mask_HalfMask_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Mask_HalfMask_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mask_HalfMask_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Mask_Ghost_Half",
@@ -10671,19 +10996,23 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_Ghost_Half",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Skull",
                     "id": "SMPZ_Mask_Ghost_Half_Skull",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_Ghost_Half_Skull2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mask_M53A1_GasMask",
@@ -10704,44 +11033,53 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_M53A1_GasMask",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mask_M53A1_GasMask_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mask_M53A1_GasMask_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mask_M53A1_GasMask_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mask_M53A1_GasMask_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mask_M53A1_GasMask_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mask_M53A1_GasMask_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mask_M53A1_GasMask_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Avon Protection",
             "manufacturerLogo": "assets/avon-logo.png",
             "manufacturerUrl": "https://www.avon-protection.com/",
@@ -10775,94 +11113,113 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_Momex_Balaclava",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_Momex_Balaclava_ATACS_Arid",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Forest Green",
                     "id": "SMPZ_Mask_Momex_Balaclava_ATACS_FG",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mask_Momex_Balaclava_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mask_Momex_Balaclava_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mask_Momex_Balaclava_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mask_Momex_Balaclava_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Mask_Momex_Balaclava_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Mask_Momex_Balaclava_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Mask_Momex_Balaclava_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mask_Momex_Balaclava_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mask_Momex_Balaclava_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Mask_Momex_Balaclava_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Mask_Momex_Balaclava_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Mask_Momex_Balaclava_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Skull",
                     "id": "SMPZ_Mask_Momex_Balaclava_Skull",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Venom Tooth",
                     "id": "SMPZ_Mask_Momex_Balaclava_Venom_Tooth",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mask_Momex_Balaclava_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/momex.png",
             "images": [
                 "assets/momex.png",
@@ -10893,24 +11250,29 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mask_Samurai_Half_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Mask_Samurai_Half_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Gold",
                     "id": "SMPZ_Mask_Samurai_Half_Gold",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Violet",
                     "id": "SMPZ_Mask_Samurai_Half_Violet",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator",
@@ -10936,44 +11298,53 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mask_Gentex_OpsCore_SOTR_Respirator_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -10997,7 +11368,8 @@ const gearData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "Mask"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "helmet_attachment": [
@@ -11029,24 +11401,29 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_HelmetPlate_Trooper_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_HelmetPlate_Trooper_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_HelmetPlate_Trooper_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_HelmetPlate_Trooper_LoneWolf",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_Altyn_Green",
@@ -11073,79 +11450,95 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Visor_Altyn_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Visor_Altyn_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Visor_Altyn_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Visor_Altyn_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Visor_Altyn_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Visor_Altyn_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Visor_Altyn_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Visor_Altyn_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Visor_Altyn_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Visor_Altyn_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Visor_Altyn_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Visor_Altyn_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Visor_Altyn_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Visor_Altyn_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Visor_Altyn_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_RYS_T_Black",
@@ -11172,9 +11565,11 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Visor_RYS_T_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
@@ -11205,19 +11600,23 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Venom",
                     "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venom",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Helmet_DevTac_Ronin_Respirator_Venon_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mandible_Caiman_Black",
@@ -11243,64 +11642,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mandible_Caiman_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Mandible_Caiman_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Mandible_Caiman_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Mandible_Caiman_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mandible_Caiman_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mandible_Caiman_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mandible_Caiman_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mandible_Caiman_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mandible_Caiman_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mandible_Caiman_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Mandible_Caiman_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mandible_Caiman_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Mandible_NeoSteel_Black",
@@ -11326,69 +11738,83 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mandible_NeoSteel_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Shark",
                     "id": "SMPZ_Mandible_NeoSteel_Shark",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Skull",
                     "id": "SMPZ_Mandible_NeoSteel_Skull",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mandible_NeoSteel_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mandible_NeoSteel_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mandible_NeoSteel_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mandible_NeoSteel_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mandible_NeoSteel_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Mandible_NeoSteel_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Mandible_NeoSteel_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mandible_NeoSteel_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Mandible_NeoSteel_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Mandible_NeoSteel_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Mandible_OpsCore_FAST_Black",
@@ -11415,49 +11841,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mandible_OpsCore_FAST_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mandible_OpsCore_FAST_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mandible_OpsCore_FAST_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mandible_OpsCore_FAST_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Mandible_OpsCore_FAST_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mandible_OpsCore_FAST_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mandible_OpsCore_FAST_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mandible_OpsCore_FAST_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mandible_OpsCore_FAST_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -11487,29 +11923,35 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_Chops_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
@@ -11539,39 +11981,47 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Mandible_CryePrecision_AirFrame_MLOK_Chops_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
@@ -11601,74 +12051,89 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Visor_Maska_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Visor_Maska_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Visor_Maska_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Visor_Maska_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Visor_Maska_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Visor_Maska_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Visor_Maska_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Visor_Maska_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Visor_Maska_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Visor_Maska_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Visor_Maska_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Visor_Maska_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Killa",
                     "id": "SMPZ_Visor_Maska_Killa",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Killa White",
                     "id": "SMPZ_Visor_Maska_Killa_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_ZSH12M_Black",
@@ -11694,64 +12159,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Visor_ZSH12M_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Gray",
                     "id": "SMPZ_Visor_ZSH12M_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Visor_ZSH12M_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Visor_ZSH12M_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Visor_ZSH12M_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Visor_ZSH12M_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Visor_ZSH12M_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Visor_ZSH12M_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Visor_ZSH12M_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Visor_ZSH12M_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Visor_ZSH12M_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Visor_ZSH12M_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_Vulkan",
@@ -11777,14 +12255,17 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Visor_Vulkan",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Winter Camo",
                     "id": "SMPZ_Visor_Vulkan_WinterCamo",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Visor_OpsCore_FAST_MultiHit",
@@ -11807,6 +12288,7 @@ const gearData = {
                 "Visor"
             ],
             "subCategory": "visor",
+            "canBePainted": false,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -11831,7 +12313,8 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Visor_FORT_KiverM",
@@ -11853,7 +12336,8 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
@@ -11880,44 +12364,53 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Coyote",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Coyote",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Visor_TeamWendy_Exfil_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
@@ -11944,49 +12437,59 @@ const gearData = {
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Visor_NPP_KIASS_Tor2_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Visor_Caiman",
@@ -12008,7 +12511,8 @@ const gearData = {
             "inventorySlots": [
                 "Visor"
             ],
-            "subCategory": "visor"
+            "subCategory": "visor",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
@@ -12037,54 +12541,65 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Green",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_HelmetPlate_OpsCore_SLAAP_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -12111,7 +12626,8 @@ const gearData = {
             "attachmentSlots": [
                 "NVG"
             ],
-            "subCategory": "armor_plate"
+            "subCategory": "armor_plate",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_HelmetAventail_BNTI_LShZ_2DTM",
@@ -12132,7 +12648,8 @@ const gearData = {
             "inventorySlots": [
                 "HelmetAventail"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_HelmetPlate_DA_Bastion",
@@ -12157,7 +12674,8 @@ const gearData = {
             "attachmentSlots": [
                 "NVG"
             ],
-            "subCategory": "armor_plate"
+            "subCategory": "armor_plate",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_HelmetPlate_Caiman_Gray",
@@ -12187,64 +12705,77 @@ const gearData = {
                 {
                     "name": "Gray",
                     "id": "SMPZ_HelmetPlate_Caiman_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_HelmetPlate_Caiman_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_HelmetPlate_Caiman_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_HelmetPlate_Caiman_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_HelmetPlate_Caiman_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_HelmetPlate_Caiman_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_HelmetPlate_Caiman_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_HelmetPlate_Caiman_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_HelmetPlate_Caiman_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_HelmetPlate_Caiman_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_HelmetPlate_Caiman_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_HelmetPlate_Caiman_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "helmet": [
@@ -12275,79 +12806,95 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Helmet_Altyn_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_Altyn_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Helmet_Altyn_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_Altyn_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_Altyn_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_Altyn_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_Altyn_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_Altyn_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_Altyn_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_Altyn_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_Altyn_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_Altyn_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Helmet_Altyn_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Helmet_Altyn_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_Altyn_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/altyn.png",
             "images": [
                 "assets/altyn.png",
@@ -12381,9 +12928,11 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_RYS_T_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_Maska_Green",
@@ -12412,74 +12961,89 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Helmet_Maska_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_Maska_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_Maska_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_Maska_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_Maska_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_Maska_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_Maska_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_Maska_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_Maska_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_Maska_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Helmet_Maska_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Helmet_Maska_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Killa",
                     "id": "SMPZ_Helmet_Maska_Killa",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Killa White",
                     "id": "SMPZ_Helmet_Maska_Killa_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/maska.png",
             "images": [
                 "assets/maska.png",
@@ -12512,14 +13076,17 @@ const gearData = {
                 {
                     "name": "Gorilla",
                     "id": "SMPZ_Helmet_Tagilla_WeldingMask_Gorilla",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UBEY",
                     "id": "SMPZ_Helmet_Tagilla_WeldingMask_UBEY",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "image": "assets/tagillahelmet_gorilla.png",
             "images": [
                 "assets/tagillahelmet_gorilla.png",
@@ -12555,64 +13122,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_ZSH12M_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Gray",
                     "id": "SMPZ_Helmet_ZSH12M_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_ZSH12M_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_ZSH12M_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_ZSH12M_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_ZSH12M_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_ZSH12M_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_ZSH12M_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_ZSH12M_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_ZSH12M_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_ZSH12M_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_ZSH12M_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_Vulkan_Black",
@@ -12641,14 +13221,17 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_Vulkan_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Winter Camo",
                     "id": "SMPZ_Helmet_Vulkan_WinterCamo",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_DA_NeoSteel_Black",
@@ -12678,59 +13261,71 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_DA_NeoSteel_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Helmet_DA_NeoSteel_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_DA_NeoSteel_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_DA_NeoSteel_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_DA_NeoSteel_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_DA_NeoSteel_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_DA_NeoSteel_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_DA_NeoSteel_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_DA_NeoSteel_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Helmet_DA_NeoSteel_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Helmet_DA_NeoSteel_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_DA_Bastion_Black",
@@ -12760,54 +13355,65 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_DA_Bastion_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_DA_Bastion_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_DA_Bastion_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_DA_Bastion_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_DA_Bastion_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_DA_Bastion_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_DA_Bastion_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Helmet_DA_Bastion_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Helmet_DA_Bastion_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Helmet_DA_Bastion_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_OpsCore_FASTMT_Black",
@@ -12842,49 +13448,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_OpsCore_FASTMT_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Gentex Corporation",
             "manufacturerLogo": "assets/gentex-logo.png",
             "manufacturerUrl": "https://gentexcorp.com/"
@@ -12920,29 +13536,35 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
@@ -12978,39 +13600,47 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_CryePrecision_AirFrame_MLOK_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/"
@@ -13042,9 +13672,11 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_DevTac_Ronin",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
@@ -13077,9 +13709,11 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_BNTI_LShZ_2DTM_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_LShZ_Green",
@@ -13114,59 +13748,71 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Helmet_LShZ_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_LShZ_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_LShZ_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_LShZ_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_LShZ_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_LShZ_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_LShZ_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_LShZ_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_LShZ_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_LShZ_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_LShZ_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Helmet_6B47_EMR",
@@ -13196,39 +13842,47 @@ const gearData = {
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_6B47_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_6B47_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Spring",
                     "id": "SMPZ_Helmet_6B47_EMR_Spring",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Arctic",
                     "id": "SMPZ_Helmet_6B47_EMR_Artic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "A-TACS",
                     "id": "SMPZ_Helmet_6B47_ATACS",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Russian Flora",
                     "id": "SMPZ_Helmet_6B47_RUSS",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_6B47_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_FORT_KiverM",
@@ -13257,64 +13911,77 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Helmet_FORT_KiverM",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_FORT_KiverM_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_FORT_KiverM_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_FORT_KiverM_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_FORT_KiverM_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_FORT_KiverM_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_FORT_KiverM_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_FORT_KiverM_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_FORT_KiverM_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_FORT_KiverM_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Helmet_FORT_KiverM_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Helmet_FORT_KiverM_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_TeamWendy_Exfil_Black",
@@ -13345,44 +14012,53 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Coyote",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Coyote",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_TeamWendy_Exfil_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
@@ -13414,49 +14090,59 @@ const gearData = {
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_NPP_KIASS_Tor2_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_SSSh94_Sfera_Green",
@@ -13482,54 +14168,65 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_SSSh94_Sfera_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_Caiman_Gray",
@@ -13563,64 +14260,77 @@ const gearData = {
                 {
                     "name": "Gray",
                     "id": "SMPZ_Helmet_Caiman_Gray",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Helmet_Caiman_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Helmet_Caiman_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Helmet_Caiman_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_Caiman_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_Caiman_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_Caiman_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_Caiman_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_Caiman_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Helmet_Caiman_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_Caiman_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_Caiman_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Black",
@@ -13649,49 +14359,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_HighCom_ULACH_IIIA_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Helmet_MTEK_FLUX_Black",
@@ -13722,49 +14442,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Helmet_MTEK_FLUX_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Helmet_MTEK_FLUX_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Helmet_MTEK_FLUX_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Helmet_MTEK_FLUX_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Helmet_MTEK_FLUX_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Helmet_MTEK_FLUX_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Helmet_MTEK_FLUX_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "full_body_armor": [
@@ -13803,64 +14533,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_6B13_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_6B13_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_6B13_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "기본형",
                     "id": "SMPZ_Vest_6B13_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_6B13_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_6B13_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_6B13_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_6B13_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_6B13_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_6B13_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_6B13_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Killa",
                     "id": "SMPZ_Vest_6B13_Killa",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": true,
             "image": "assets/6b13.png",
             "images": [
                 "assets/6b13.png",
@@ -13901,49 +14644,59 @@ const gearData = {
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_6B2_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_6B2_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_6B2_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_6B2_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_6B2_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_6B2_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_6B2_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_6B2_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_6B2_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_6B23_EMR",
@@ -13977,49 +14730,59 @@ const gearData = {
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_6B23_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_6B23_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_6B23_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_6B23_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_6B23_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_6B23_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_6B23_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_6B23_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_6B23_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/6b23.png",
             "images": [
                 "assets/6b23.png",
@@ -14064,54 +14827,65 @@ const gearData = {
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_6B43_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_6B43_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_6B43_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_6B43_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_6B43_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_6B43_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_6B43_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_6B43_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_6B43_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_6B43_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/6b43.png",
             "images": [
                 "assets/6b43.png",
@@ -14155,29 +14929,35 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Vest_6B45",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_6B45_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_6B45_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_6B45_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_6B45_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": true,
             "image": "assets/6b45.png",
             "images": [
                 "assets/6b45.png"
@@ -14221,9 +15001,11 @@ const gearData = {
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_IOTV_Gen4_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "image": "assets/iotv.png",
             "images": [
                 "assets/iotv.png"
@@ -14267,69 +15049,83 @@ const gearData = {
                 {
                     "name": "Smog",
                     "id": "SMPZ_Vest_FORT_RedutT5_Smog",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Green",
                     "id": "SMPZ_Vest_FORT_RedutT5_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SK Woodland",
                     "id": "SMPZ_Vest_FORT_RedutT5_SKWoodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_FORT_RedutT5_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_FORT_RedutT5_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_FORT_RedutT5_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_FORT_RedutT5_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_FORT_RedutT5_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FORT_RedutT5_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_FORT_RedutT5_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_FORT_RedutT5_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_FORT_RedutT5_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_FORT_RedutT5_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/redut_t5.png",
             "images": [
                 "assets/redut_t5.png",
@@ -14369,69 +15165,83 @@ const gearData = {
                 {
                     "name": "Green",
                     "id": "SMPZ_Vest_FORT_RedutM_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_FORT_RedutM_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Smog",
                     "id": "SMPZ_Vest_FORT_RedutM_Smog",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SK Woodland",
                     "id": "SMPZ_Vest_FORT_RedutM_SKWoodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_FORT_RedutM_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_FORT_RedutM_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_FORT_RedutM_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_FORT_RedutM_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FORT_RedutM_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_FORT_RedutM_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_FORT_RedutM_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_FORT_RedutM_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_FORT_RedutM_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "image": "assets/redut_m.png",
             "images": [
                 "assets/redut_m.png",
@@ -14484,44 +15294,53 @@ const gearData = {
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FORT_GladiatorS_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_FORT_GladiatorS_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_FORT_GladiatorS_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_FORT_GladiatorS_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_FORT_GladiatorS_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_FORT_GladiatorS_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_FORT_GladiatorS_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_FORT_GladiatorS_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
@@ -14569,34 +15388,41 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB V2",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_ISB_V2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_FirstSPEAR_SiegeR_MASS_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "FirstSpear",
             "manufacturerLogo": "assets/firstspear-logo.png",
             "manufacturerUrl": "https://www.first-spear.com/",
@@ -14646,54 +15472,65 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Vest_NFM_Thor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_NFM_Thor_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_NFM_Thor_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_NFM_Thor_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_NFM_Thor_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_NFM_Thor_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_NFM_Thor_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MARPAT Woodland",
                     "id": "SMPZ_Vest_NFM_Thor_MARPAT_Woodland",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MARPAT Desert",
                     "id": "SMPZ_Vest_NFM_Thor_MARPAT_Desert",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_NFM_Thor_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "NFM Group",
             "manufacturerLogo": "assets/nfm-logo.png",
             "manufacturerUrl": "https://nfm.no/",
@@ -14734,44 +15571,53 @@ const gearData = {
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_BNTI_Zhuk_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_BNTI_Zhuk_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_BNTI_Zhuk_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_BNTI_Zhuk_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_BNTI_Zhuk_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_BNTI_Zhuk_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_BNTI_Zhuk_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_BNTI_Zhuk_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
@@ -14819,59 +15665,71 @@ const gearData = {
                 {
                     "name": "Coyote",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Coyote",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Flecktarn",
                     "id": "SMPZ_Vest_Tasmanian_Tiger_MK3_Flecktarn",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
@@ -14908,14 +15766,17 @@ const gearData = {
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_LBT6094A_Slick_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB V2",
                     "id": "SMPZ_Vest_LBT6094A_Slick_ISB_V2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
@@ -14964,44 +15825,53 @@ const gearData = {
                 {
                     "name": "Ranger Green",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_RangerGreen",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_Multicam_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_EagleIndustries_MMAC_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "plate_carrier": [
@@ -15037,6 +15907,7 @@ const gearData = {
                 "LeftSide",
                 "RightSide"
             ],
+            "canBePainted": false,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/",
@@ -15082,19 +15953,23 @@ const gearData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Vest_AVS",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_AVS_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Vest_AVS_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Vest_JPC_Multicam",
@@ -15135,9 +16010,11 @@ const gearData = {
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_JPC_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/",
@@ -15185,9 +16062,11 @@ const gearData = {
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_JPC_Maritime_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Crye Precision",
             "manufacturerLogo": "assets/crye-logo.png",
             "manufacturerUrl": "https://www.cryeprecision.com/",
@@ -15232,19 +16111,23 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_ArsArma_A18_Skanda_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_ArsArma_A18_Skanda_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_ArsArma_A18_Skanda_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Ars Arma",
             "manufacturerLogo": "assets/arsarma-logo.png",
             "manufacturerUrl": "https://arsarma.ru/",
@@ -15292,34 +16175,41 @@ const gearData = {
                 {
                     "name": "Ranger Green",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_RangerGreen",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_FirstSPEAR_Strandhogg_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "FirstSpear",
             "manufacturerLogo": "assets/firstspear-logo.png",
             "manufacturerUrl": "https://www.first-spear.com/"
@@ -15364,64 +16254,77 @@ const gearData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Hound Wolf Squad",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_FDE_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Hound Wolf Squad (Alpine)",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Alpine_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Hound Wolf Squad",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB V2",
                     "id": "SMPZ_Vest_FerroConcepts_FCPC_V5_ISB_V2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Ferro Concepts",
             "manufacturerLogo": "assets/ferro-logo.png",
             "manufacturerUrl": "https://ferroconcepts.com/",
@@ -15472,64 +16375,77 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Hound Wolf Squad (Black)",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Black_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Hound Wolf Squad (Alpine)",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Alpine_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Hound Wolf Squad",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_HoundWolfSquad",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "ISB",
                     "id": "SMPZ_Vest_SpiritusSystems_LV119_ISB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
@@ -15571,49 +16487,59 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Black",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_NPP_KIASS_Bagariy_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
@@ -15646,54 +16572,65 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_NPP_KIASS_KoraKulon_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Black",
@@ -15726,54 +16663,65 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_NPP_KIASS_KorundVM_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Vest_511_Tactical_Hexgrid_Black",
@@ -15806,59 +16754,71 @@ const gearData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "M81",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_M81",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "AOR 2",
                     "id": "SMPZ_Vest_511_Tactical_Hexgrid_AOR2",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "5.11 Tactical",
             "manufacturerLogo": "assets/511tac-logo.png",
             "manufacturerUrl": "https://www.511tactical.com/"
@@ -15887,7 +16847,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP5Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Att_MP5_A3_Buttstock",
@@ -15908,6 +16869,7 @@ const attachmentData = {
                 "MP5Stock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -15931,6 +16893,7 @@ const attachmentData = {
                 "590A1Stock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -15952,7 +16915,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARBuffer"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_Buttstock",
@@ -15975,7 +16939,8 @@ const attachmentData = {
                 "weaponButtstockM4",
                 "AKButtstock"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74M_Polymer_Bttstck",
@@ -15999,7 +16964,8 @@ const attachmentData = {
                 "AKButtpad",
                 "weaponWrap"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74_Wooden_Bttstck",
@@ -16022,7 +16988,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKMSN_Folding_Stock",
@@ -16045,7 +17012,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKMS_Folding_Stock",
@@ -16068,7 +17036,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Wooden_Bttstck",
@@ -16091,7 +17060,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Bttstck",
@@ -16114,7 +17084,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_AK100_Skeleton_Buttstock",
@@ -16137,7 +17108,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Arcangel_AA47_Buttstock",
@@ -16157,7 +17129,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKButtstock"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_EVO_Buttstock",
@@ -16178,7 +17151,8 @@ const attachmentData = {
                 "AK74MButtstock",
                 "RPK16Buttstock"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_GP25_Recoil_Pad",
@@ -16198,7 +17172,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_PT1_Buttstock",
@@ -16219,6 +17194,7 @@ const attachmentData = {
                 "AKZenitStock"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -16241,6 +17217,7 @@ const attachmentData = {
                 "AKZenitStock"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -16263,6 +17240,7 @@ const attachmentData = {
                 "AKButtstock"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -16284,7 +17262,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AN94Buttstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Baskak_Stock",
@@ -16304,7 +17283,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARBuffer"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A1_Type7_Stock",
@@ -16324,7 +17304,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PRSStock"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Buttstock",
@@ -16345,6 +17326,7 @@ const attachmentData = {
                 "PRSStock"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -16370,6 +17352,7 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -16399,19 +17382,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Yellow",
                     "id": "SMPZ_Attachments_AR15_LeadStarArms_Ravage_Stock_Yellow",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
@@ -16438,19 +17425,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Yellow",
                     "id": "SMPZ_Attachments_AR15_Phase5_Universal_Mini_Stock_Yellow",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Buttstock",
@@ -16470,7 +17461,8 @@ const attachmentData = {
             "inventorySlots": [
                 "VALButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AXMC_Buttstock",
@@ -16490,7 +17482,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AXMCButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_B5_System_Precision_Buttstock",
@@ -16510,7 +17503,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARButtstock"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_CMMG_RipStock_Buttstock",
@@ -16533,6 +17527,7 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/"
@@ -16555,7 +17550,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_CQR_pistolgrip",
@@ -16580,14 +17576,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CQR_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_CQR_pistolgrip_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_CTR_Buttstock",
@@ -16614,14 +17613,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CTR_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_CTR_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -16650,14 +17652,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_DS150_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_DS150_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_ECB_Buttstock",
@@ -16684,14 +17689,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_ECB_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_ECB_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -16714,6 +17722,7 @@ const attachmentData = {
                 "G36Buttstock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -16737,6 +17746,7 @@ const attachmentData = {
                 "G36Buttstock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -16759,7 +17769,8 @@ const attachmentData = {
             "inventorySlots": [
                 "G36Buttstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_GLCore_Buttstock",
@@ -16786,14 +17797,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_GLCore_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_GLCore_Buttstock_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_GLR_Buttstock",
@@ -16814,6 +17828,7 @@ const attachmentData = {
                 "GlockButtstock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -16841,9 +17856,11 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_HK417_Adjustable_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK417_Buttstock",
@@ -16868,14 +17885,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HK417_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_HK417_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_HK_E1_Buttstock",
@@ -16898,6 +17918,7 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -16927,14 +17948,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HK_Slimline_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "RAL 8000",
                     "id": "SMPZ_Attachments_HK_Slimline_Buttstock_RAL8000",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -16958,6 +17982,7 @@ const attachmentData = {
                 "PRSStock"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -16980,7 +18005,8 @@ const attachmentData = {
             "inventorySlots": [
                 "VectorStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
@@ -17007,14 +18033,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_LMT_Sopmod_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_M16_Buttstock",
@@ -17034,7 +18063,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M16Buttstock"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_Archangel_Chassis",
@@ -17058,7 +18088,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "Bipod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_M14_EBR_Chassis",
@@ -17086,7 +18117,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_SASS_Chassis",
@@ -17119,7 +18151,8 @@ const attachmentData = {
                 "Frontsight",
                 "Bipod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M200_Buttstock",
@@ -17139,7 +18172,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M4_Standard_Buttstock",
@@ -17161,7 +18195,8 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E4_Buttstock",
@@ -17186,9 +18221,11 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_M60E4_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E6_Buttstock",
@@ -17213,14 +18250,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_M60E6_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_M60E6_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_CTS_Buttstock",
@@ -17240,7 +18280,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MCXButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_MaximDefense_Buttstock",
@@ -17260,7 +18301,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MCXButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_TFS_Buttstock",
@@ -17280,7 +18322,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MCXButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_TSFS_Buttstock",
@@ -17300,7 +18343,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MCXButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MOE_Buttstock",
@@ -17327,39 +18371,47 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MOE_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_MOE_Buttstock_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MOE_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Green",
                     "id": "SMPZ_Attachments_MOE_Buttstock_Green",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Grey",
                     "id": "SMPZ_Attachments_MOE_Buttstock_Grey",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Attachments_MOE_Buttstock_Olive",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_MOE_Buttstock_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17381,7 +18433,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP133Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Short_Buttstock",
@@ -17401,7 +18454,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP133Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Stock",
@@ -17421,7 +18475,8 @@ const attachmentData = {
             "inventorySlots": [
                 "UltimaStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP18_Polymer_Buttstock",
@@ -17441,7 +18496,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP18Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP7_ARS_Stock",
@@ -17461,7 +18517,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP7Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MSR_Stock",
@@ -17481,7 +18538,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MSRStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Magpul_ACS_Stock",
@@ -17508,14 +18566,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Magpul_ACS_Stock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Magpul_ACS_Stock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17537,6 +18598,7 @@ const attachmentData = {
                 "UCSPad"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17566,14 +18628,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Magpul_UCS_Stock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Magpul_UCS_Stock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17600,14 +18665,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_Folding_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_Folding_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17634,14 +18702,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_PDW_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_PDW_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17666,7 +18737,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_PT2_Buttstock",
@@ -17686,6 +18758,7 @@ const attachmentData = {
                 "PKButtstock"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -17707,7 +18780,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKP_Polymer_Buttstock",
@@ -17727,7 +18801,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PP19_Buttstock",
@@ -17747,7 +18822,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PP19Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PRS_Bttstck",
@@ -17775,14 +18851,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_PRS_Bttstck",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_PRS_Bttstck_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17808,6 +18887,7 @@ const attachmentData = {
                 "PRSStock"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -17829,7 +18909,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RPDStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPD_DSARMS_Buttstock",
@@ -17853,6 +18934,7 @@ const attachmentData = {
                 "SA58Pistolgrip"
             ],
             "subCategory": "custom",
+            "canBePainted": false,
             "manufacturer": "DS Arms",
             "manufacturerLogo": "assets/dsarms-logo.png",
             "manufacturerUrl": "https://dsarms.com/"
@@ -17875,7 +18957,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Humpback_Polymer_Stock",
@@ -17895,7 +18978,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_SPR_Stock",
@@ -17915,7 +18999,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Standard_Folding_Stock",
@@ -17935,7 +19020,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Stock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Stock_Adapter",
@@ -17956,7 +19042,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SBA3_Buttstock",
@@ -17978,7 +19065,8 @@ const attachmentData = {
                 "ARButtstockSecond",
                 "weaponButtstockM4"
             ],
-            "subCategory": "buffer_tube"
+            "subCategory": "buffer_tube",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SCAR_Cheek",
@@ -18002,14 +19090,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SCAR_Cheek",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SCAR_Cheek_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock",
@@ -18037,14 +19128,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SCAR_Polymer_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
@@ -18069,14 +19163,17 @@ const attachmentData = {
                 {
                     "name": "black",
                     "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SCAR_Retractable_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -18104,14 +19201,17 @@ const attachmentData = {
                 {
                     "name": "black",
                     "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SCAR_Vltor_VSS11_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -18133,7 +19233,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SKSStock"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SLK_Buttstock",
@@ -18160,24 +19261,29 @@ const attachmentData = {
                 {
                     "name": "Coyote Tan",
                     "id": "SMPZ_Attachments_SLK_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_SLK_Buttstock_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SLK_Buttstock_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_SLK_Buttstock_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -18206,14 +19312,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SLM_Buttstock_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SLM_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -18235,7 +19344,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CNCChassis"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Stock",
@@ -18255,7 +19365,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CNCStock"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVDS_Buttstock",
@@ -18275,7 +19386,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SVDButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Polymer_Buttstock",
@@ -18293,7 +19405,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SVDStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_SAG_MK1_Chassis",
@@ -18322,7 +19435,8 @@ const attachmentData = {
                 "GripCASV",
                 "BipodKeymod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_SAG_MK1_Chassis_Zryachiy",
@@ -18351,7 +19465,8 @@ const attachmentData = {
                 "GripCASV",
                 "BipodKeymod"
             ],
-            "subCategory": "chassis"
+            "subCategory": "chassis",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Upper_Band",
@@ -18372,7 +19487,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_SVD_Style_Stock",
@@ -18392,7 +19508,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SVTStock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Bttstck",
@@ -18412,7 +19529,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SaigaButtstock"
             ],
-            "subCategory": "custom"
+            "subCategory": "custom",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
@@ -18437,14 +19555,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_TROY_M7A1_PDW_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/"
         },
@@ -18471,14 +19592,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_UBR_Gen2_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_UBR_Gen2_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -18503,7 +19627,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO209_Wooden_Bttstck",
@@ -18526,7 +19651,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKButtpad"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Viper_Mod1_Buttstock",
@@ -18549,6 +19675,7 @@ const attachmentData = {
                 "weaponButtstockM4"
             ],
             "subCategory": "buffer_tube",
+            "canBePainted": false,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -18577,14 +19704,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Vltor_EMOD_Buttstock_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         }
@@ -18614,6 +19744,7 @@ const attachmentData = {
                 "weaponFlashlightFourth",
                 "weaponFlashlightFifth"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -18635,7 +19766,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MP5Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_Hndgrd",
@@ -18660,7 +19792,8 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_N4_Hndgrd",
@@ -18686,7 +19819,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_Rotor43_Hndgrd",
@@ -18713,7 +19847,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK308_Hndgrd",
@@ -18739,7 +19874,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "GripCASV"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK50_Gasblock_with_Hndgrd",
@@ -18766,7 +19902,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74M_Polymer_Hndgrd",
@@ -18785,7 +19922,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74_Wooden_Hndgrd",
@@ -18804,7 +19942,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Wooden_Hndgrd",
@@ -18823,7 +19962,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_B11_B12_Hndgrd",
@@ -18850,6 +19990,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -18878,7 +20019,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Goliaf_Mlok_Hndgrd",
@@ -18902,7 +20044,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Wooden_Hndgrd",
@@ -18921,7 +20064,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKS74UHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_XRSU47_Hndgrd",
@@ -18948,7 +20092,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Grip",
                 "OpticsOnAKHndgrd"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_ASPID_Hndgrd",
@@ -18976,7 +20121,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "weaponOptics",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Agressor_Hndgrd",
@@ -19003,7 +20149,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "weaponFlashlightFourth",
                 "weaponFlashlightFifth"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_CNC_OV_Hndgrd",
@@ -19030,7 +20177,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Grip",
                 "OpticsOnAKHndgrd"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
@@ -19059,29 +20207,35 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AK_MOE_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Attachments_AK_MOE_Hndgrd_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Plum",
                     "id": "SMPZ_Attachments_AK_MOE_Hndgrd_Plum",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Stealth Grey",
                     "id": "SMPZ_Attachments_AK_MOE_Hndgrd_SG",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -19112,19 +20266,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Gold",
                     "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Gold",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_AK_TDI_AKML_Hndgrd_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_AK_TDI_X47_Hndgrd",
@@ -19151,7 +20309,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Grip",
                 "OpticsOnAKHndgrd"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Troy_Hndgrd_with_Gastube",
@@ -19176,6 +20335,7 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlight"
             ],
+            "canBePainted": false,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/"
         },
@@ -19204,7 +20364,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_Black",
@@ -19234,14 +20395,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "White",
                     "id": "SMPZ_Attachments_AK_VS_Combo_Hndgrd_with_Gastube_White",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd",
@@ -19269,6 +20433,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymodMount"
             ],
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -19295,6 +20460,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -19323,6 +20489,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -19353,19 +20520,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Plum",
                     "id": "SMPZ_Attachments_AK_Zhukov_U_Hndgrd_Plum",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -19395,6 +20566,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/"
@@ -19424,6 +20596,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/"
@@ -19458,14 +20631,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Taupe",
                     "id": "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd_Taupe",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -19504,14 +20680,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Taupe",
                     "id": "SMPZ_Attachments_AR10_KAC_URX_3_13inch_Hndgrd_Taupe",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -19538,7 +20717,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_Midwest_308_CombatRail_15inch_Hndgrd",
@@ -19567,6 +20747,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -19595,7 +20776,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_SWS_Hndgrd",
@@ -19623,7 +20805,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_SWS_Split_Hndgrd",
@@ -19651,7 +20834,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd",
@@ -19684,14 +20868,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR10_URX_14inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -19713,7 +20900,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "M4Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_10inch_Hndgrd",
@@ -19739,7 +20927,8 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_15inch_Hndgrd",
@@ -19767,7 +20956,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AeroPrecision_Gen2_Enhanced_12inch_Hndgrd",
@@ -19795,7 +20985,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AeroPrecision_Gen2_Enhanced_9inch_Hndgrd",
@@ -19821,7 +21012,8 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AlexanderArms_MK10_Hndgrd",
@@ -19847,7 +21039,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd",
@@ -19880,14 +21073,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_13inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -19922,14 +21118,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_15inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -19962,14 +21161,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -20002,14 +21204,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -20044,14 +21249,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -20075,7 +21283,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "M203"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A1_Hndgrd",
@@ -20094,7 +21303,8 @@ const attachmentData = {
             "itemSlots": 4,
             "inventorySlots": [
                 "M4Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Hndgrd",
@@ -20117,6 +21327,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "M203"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -20150,14 +21361,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20188,14 +21402,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Lower_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20228,14 +21445,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20266,14 +21486,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_9_Lower_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20308,14 +21531,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_MFR_15inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20346,6 +21572,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20381,14 +21608,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20419,6 +21649,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20455,9 +21686,11 @@ const attachmentData = {
                 {
                     "name": "Coyote Brown",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20494,14 +21727,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Coyote Brown",
                     "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd_CB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -20536,14 +21772,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -20573,7 +21812,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_14inch_Hndgrd",
@@ -20601,7 +21841,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_16inch_Hndgrd",
@@ -20629,7 +21870,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_KAC_FF_RAS_Hndgrd",
@@ -20658,6 +21900,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -20690,6 +21933,7 @@ const attachmentData = {
                 "Bipod",
                 "M203"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -20724,6 +21968,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -20759,19 +22004,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_AR15_LVOA_C_Hndgrd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
@@ -20804,19 +22053,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_AR15_LVOA_S_Hndgrd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_AR15_Lonestar_Ion_Hndgrd",
@@ -20844,7 +22097,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_M4_Carbine_Hndgrd",
@@ -20864,6 +22118,7 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Handguard"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -20893,6 +22148,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "M203"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -20920,6 +22176,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -20952,14 +22209,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Delta_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
@@ -20992,14 +22252,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd",
@@ -21032,34 +22295,41 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "EMR Syria",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_EMR_Syria",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_Multicam",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Hndgrd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -21095,14 +22365,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Remington_14inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -21138,14 +22411,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Remington_16inch_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -21177,7 +22453,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_SAI_Hndgrd",
@@ -21206,7 +22483,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd",
@@ -21239,14 +22517,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Silver",
                     "id": "SMPZ_Attachments_AR15_SMR_13inch_Hndgrd_Silver",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -21279,14 +22560,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Silver",
                     "id": "SMPZ_Attachments_AR15_SMR_9inch_Hndgrd_Silver",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -21314,7 +22598,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_STM9_9inch_Hndgrd",
@@ -21339,7 +22624,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Skull_Hndgrd",
@@ -21358,7 +22644,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "M4Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
@@ -21390,19 +22677,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Yellow",
                     "id": "SMPZ_Attachments_AR15_StrikeIndustries_GRIDLOK_Hndgrd_Yellow",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -21436,6 +22727,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -21466,7 +22758,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Hndgrd",
@@ -21497,7 +22790,8 @@ const attachmentData = {
                 "Grip",
                 "Bipod",
                 "ASVALMod4JB"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd",
@@ -21521,14 +22815,17 @@ const attachmentData = {
                 {
                     "name": "Plum",
                     "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_ASVAL_VSS_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AXMC_Hndgrd",
@@ -21555,7 +22852,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeySlot"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Black",
@@ -21584,14 +22882,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Patriot Brown",
                     "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_PB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_Black",
@@ -21614,14 +22915,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Patriot Brown",
                     "id": "SMPZ_Attachments_CASV_SCAR_Hndgrd_Extender_PB",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_F2000_Hndgrd",
@@ -21639,7 +22943,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "F2000Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_F2000_Tri_Rail_Hndgrd",
@@ -21664,6 +22969,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -21685,7 +22991,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "G36Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Quadrail_Hndgrd",
@@ -21713,6 +23020,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -21741,6 +23049,7 @@ const attachmentData = {
                 "weaponFlashlight",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -21770,6 +23079,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -21801,6 +23111,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "CantedMount"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -21829,7 +23140,8 @@ const attachmentData = {
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK416_CRUX_Hndgrd",
@@ -21857,6 +23169,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -21887,6 +23200,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -21920,14 +23234,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "DDC",
                     "id": "SMPZ_Attachments_HK416_Geissele_SMR_10inch_Hndgrd_DDC",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -21961,14 +23278,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "DDC",
                     "id": "SMPZ_Attachments_HK416_Geissele_SMR_14inch_Hndgrd_DDC",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -22001,14 +23321,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HK416_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "RAL 8000",
                     "id": "SMPZ_Attachments_HK416_Hndgrd_RAL8000",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_HK416_MRS_KeyMod_Hndgrd",
@@ -22037,6 +23360,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymodMount"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -22068,6 +23392,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -22096,6 +23421,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -22126,6 +23452,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/"
         },
@@ -22155,7 +23482,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK417_Hndgrd_EXT_FDE",
@@ -22187,9 +23515,11 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_HK417_Hndgrd_EXT_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK417_Hndgrd_Patrol_FDE",
@@ -22221,9 +23551,11 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_HK417_Hndgrd_Patrol_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK417_M110A1_14inch_MLOK_Hndgrd",
@@ -22252,6 +23584,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymodMLOKMount"
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -22282,6 +23615,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -22302,7 +23636,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "M4Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M200_Hndgrd",
@@ -22325,7 +23660,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "M200CarryHandle",
                 "M200Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M590A1_MOE_Hndgrd",
@@ -22350,6 +23686,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -22380,14 +23717,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_M60E4_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_M60E4_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_M60E6_Hndgrd",
@@ -22416,9 +23756,11 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_M60E6_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_12_KeyMod_Hndgrd",
@@ -22445,7 +23787,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_8_KeyMod_Hndgrd",
@@ -22470,7 +23813,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_LVAW_Hndgrd",
@@ -22497,7 +23841,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_105_Hndgrd",
@@ -22524,7 +23869,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_12_Hndgrd",
@@ -22551,7 +23897,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_Lancer_CarbonFiber_18_Hndgrd",
@@ -22578,7 +23925,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd",
@@ -22611,24 +23959,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Hndgrd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_MDR_Hndgrd",
@@ -22659,14 +24012,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_Black",
@@ -22697,14 +24053,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_16_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_Black",
@@ -22735,14 +24094,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_Bipod_20_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_Black",
@@ -22773,14 +24135,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_16_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_Black",
@@ -22813,14 +24178,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_LBL_ALX_MLOK_20_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_Black",
@@ -22848,14 +24216,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MDR_Micron_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MK18Mjolnir_Hndgrd",
@@ -22883,7 +24254,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP133_Plastic_Rail_Hndgrd",
@@ -22907,7 +24279,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Hndgrd",
@@ -22927,7 +24300,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "weaponFlashlight"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP18_Polymer_Hndgrd",
@@ -22946,7 +24320,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MP18Hndgrd"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen1_6inch_Hndgrd",
@@ -22971,7 +24346,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen1_8inch_Hndgrd",
@@ -22996,7 +24372,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_6inch_Hndgrd",
@@ -23021,7 +24398,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Gen2_8inch_Hndgrd",
@@ -23046,7 +24424,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Midwest_10inch_Hndgrd",
@@ -23075,6 +24454,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -23105,6 +24485,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -23132,6 +24513,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Midwest Industries",
             "manufacturerUrl": "https://midwestindustriesinc.com/"
         },
@@ -23165,14 +24547,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_Extended_ACR_Enhanced_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/"
@@ -23206,14 +24591,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
@@ -23245,14 +24633,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd",
@@ -23281,14 +24672,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Masada_Polymer_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -23318,7 +24712,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_B50_Hndgrd",
@@ -23341,7 +24736,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PP19_SAG_MK1_MLOK_Hndgrd",
@@ -23365,7 +24761,8 @@ const attachmentData = {
                 "GripCASV",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PP19_Vector_VR_LPS_Hndgrd",
@@ -23388,7 +24785,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "GripCASV",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RD704_Hndgrd",
@@ -23414,7 +24812,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "GripCASV"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPD_DSARMS_Hndgrd",
@@ -23440,6 +24839,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "GripCASV"
             ],
+            "canBePainted": false,
             "manufacturer": "DS Arms",
             "manufacturerLogo": "assets/dsarms-logo.png",
             "manufacturerUrl": "https://dsarms.com/"
@@ -23460,7 +24860,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "RPDHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPK16_Hndgrd",
@@ -23486,7 +24887,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_AIM_Sports_KeyMod_Hndgrd",
@@ -23512,7 +24914,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_AIM_Sports_MLOK_Hndgrd",
@@ -23539,7 +24942,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Belgian_Style_Hndgrd",
@@ -23558,7 +24962,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SA58Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Original_Hndgrd",
@@ -23577,7 +24982,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SA58Handguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Quad_Rail_Full_Length_Hndgrd",
@@ -23604,7 +25010,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Quad_Rail_Short_Length_Hndgrd",
@@ -23630,7 +25037,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Vltor_CASV_Hndgrd",
@@ -23657,6 +25065,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -23684,6 +25093,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -23716,14 +25126,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SCAR_MREX_Hndgrd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_SCAR_SRX_Hndgrd",
@@ -23748,7 +25161,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SKS_ATI_Monte_Carlo_Hndgrd",
@@ -23765,7 +25179,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SKSHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SV98_CNC_OV_Hndgrd",
@@ -23791,7 +25206,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "BipodKeymodMount"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Handguard",
@@ -23810,7 +25226,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SVDHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Handguard_Wood",
@@ -23829,7 +25246,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SVDHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Modernization_Kit_Hndgrd",
@@ -23857,7 +25275,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_XRS_Hndgrd",
@@ -23885,7 +25304,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Bravo_Hndgrd",
@@ -23914,7 +25334,8 @@ const attachmentData = {
                 "weaponFlashlightFourth",
                 "weaponFlashlightFifth",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Hndgrd",
@@ -23945,7 +25366,8 @@ const attachmentData = {
                 "OpticsOnAKHndgrd",
                 "Frontsight",
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_HedonS_Hndgrd",
@@ -23973,6 +25395,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "BipodKeymod"
             ],
+            "canBePainted": false,
             "manufacturer": "Custom Guns"
         },
         {
@@ -23992,7 +25415,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "SaigaHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Type340_Hndgrd",
@@ -24017,6 +25441,7 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
+            "canBePainted": false,
             "manufacturer": "Custom Guns"
         },
         {
@@ -24050,14 +25475,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_TRG_M10_Hndgrd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_TRG_M10_Hndgrd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_TRG_M10_MLOK_Hndgrd",
@@ -24086,6 +25514,7 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Sako",
             "manufacturerLogo": "assets/sako-logo.png",
             "manufacturerUrl": "https://www.sako.global/"
@@ -24107,7 +25536,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO209_Wooden_Hndgrd",
@@ -24126,7 +25556,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "iron_sight": [
@@ -24147,7 +25578,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP5Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_Rearsight",
@@ -24165,7 +25597,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74_Rearsight",
@@ -24183,7 +25616,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Rearsight",
@@ -24201,7 +25635,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Enhanced_Rearsight",
@@ -24220,7 +25655,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_RD_ERS_Rearsight",
@@ -24238,7 +25674,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Tula_TT01_Rail_Rearsight",
@@ -24261,7 +25698,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ARMS_40_Rearsight",
@@ -24280,7 +25718,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASH12_Frontsight",
@@ -24299,7 +25738,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASH12_Rearsight_CarryHandle",
@@ -24320,7 +25760,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "carry_handle"
+            "subCategory": "carry_handle",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_Rearsight",
@@ -24339,7 +25780,8 @@ const attachmentData = {
             "inventorySlots": [
                 "VSSRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Colt_A2_Rearsight",
@@ -24359,6 +25801,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -24381,6 +25824,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -24402,6 +25846,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -24422,7 +25867,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Defiance_Rearsight",
@@ -24441,7 +25887,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_F2000_Frontsight",
@@ -24460,7 +25907,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_F2000_Rearsight",
@@ -24479,7 +25927,8 @@ const attachmentData = {
             "inventorySlots": [
                 "F2000Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_G36_KAC_Frontsight",
@@ -24499,6 +25948,7 @@ const attachmentData = {
                 "G36Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24523,6 +25973,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24544,6 +25995,7 @@ const attachmentData = {
                 "GlockFrontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -24565,6 +26017,7 @@ const attachmentData = {
                 "GlockRearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -24587,6 +26040,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -24609,6 +26063,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -24631,6 +26086,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -24652,7 +26108,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Rearsight",
@@ -24671,7 +26128,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_KAC_Frontsight",
@@ -24691,6 +26149,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24713,6 +26172,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24735,6 +26195,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24757,6 +26218,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -24778,7 +26240,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M107A1_Frontsight",
@@ -24796,7 +26259,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M107A1Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M107A1_Rearsight",
@@ -24814,7 +26278,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M107A1Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M200_CarryHandle",
@@ -24834,7 +26299,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M200CarryHandle"
             ],
-            "subCategory": "carry_handle"
+            "subCategory": "carry_handle",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E4_Frontsight",
@@ -24852,7 +26318,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E6_Frontsight_Rail",
@@ -24870,7 +26337,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60_Rearsight",
@@ -24889,7 +26357,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MBUS_Frontsight",
@@ -24913,14 +26382,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MBUS_Frontsight",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MBUS_Frontsight_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -24946,14 +26418,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MBUS_Gen3_Frontsight_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -24979,14 +26454,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MBUS_Gen3_Rearsight_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -25012,14 +26490,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MBUS_Rearsight",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MBUS_Rearsight_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -25040,7 +26521,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_Rearsight",
@@ -25059,7 +26541,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP7_Frontsight",
@@ -25079,6 +26562,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -25101,6 +26585,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -25122,7 +26607,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Frontsight"
             ],
-            "subCategory": "front_sight"
+            "subCategory": "front_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Rearsight",
@@ -25141,7 +26627,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Matech_BUIS_Rearsight",
@@ -25160,7 +26647,8 @@ const attachmentData = {
             "inventorySlots": [
                 "Rearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Mosin_Rearsight",
@@ -25179,7 +26667,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MosinRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Rearsight",
@@ -25197,7 +26686,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPD_Rearsight",
@@ -25215,7 +26705,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RPDRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight",
@@ -25233,7 +26724,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SCAR_Rearsight",
@@ -25253,6 +26745,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -25274,7 +26767,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SKSRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Rearsight",
@@ -25293,7 +26787,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Chaos_Frontsight",
@@ -25313,6 +26808,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "front_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -25335,6 +26831,7 @@ const attachmentData = {
                 "Rearsight"
             ],
             "subCategory": "rear_sight",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -25356,7 +26853,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SaigaRearsight"
             ],
-            "subCategory": "rear_sight"
+            "subCategory": "rear_sight",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_M4_CarryHandle",
@@ -25374,7 +26872,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics"
             ],
-            "subCategory": "carry_handle"
+            "subCategory": "carry_handle",
+            "canBePainted": false
         }
     ],
     "muzzle_device": [
@@ -25395,7 +26894,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_12ga_GK02_Muzzle",
@@ -25414,7 +26914,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AA12_Choke",
@@ -25434,7 +26935,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AA12Choke"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AAC_51T_762x51_Muzzle",
@@ -25455,6 +26957,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Advanced Armament Corporation",
             "manufacturerUrl": "https://advanced-armament.com/"
         },
@@ -25474,7 +26977,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AK12Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK308_Muzzle",
@@ -25493,7 +26997,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AK308Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74_Muzzle",
@@ -25512,7 +27017,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Muzzle",
@@ -25531,7 +27037,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAKM"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Muzzle",
@@ -25550,7 +27057,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_AKM_KibaArms_308_Muzzle_Device_Adapter",
@@ -25569,7 +27077,8 @@ const attachmentData = {
             "inventorySlots": [
                 "308Adapter"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_CNC_Warrior_556_Muzzle_Device_Adapter",
@@ -25588,7 +27097,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CNCAdapter"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASR556_Muzzle",
@@ -25608,6 +27118,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -25628,7 +27139,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ASVALMod4JB"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Muzzle_Brake",
@@ -25647,7 +27159,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ASVALMod4Muzzle"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Suppressor_Cap",
@@ -25666,7 +27179,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ASVALMod4Muzzle"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AUG_A3_Muzzle",
@@ -25685,7 +27199,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AUGMuzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Aero556_Muzzle",
@@ -25704,7 +27219,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Alien556_Muzzle",
@@ -25723,7 +27239,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_MuzzleBrake",
@@ -25743,6 +27260,7 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Ase Utra",
             "manufacturerUrl": "https://www.aseutra.fi/"
         },
@@ -25765,7 +27283,8 @@ const attachmentData = {
                 "338Muzzle",
                 "SPEARSuppressor"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Colt_USGI_A1_3Prong_556_Muzzle",
@@ -25785,6 +27304,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -25807,6 +27327,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -25828,7 +27349,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_556_CRD",
@@ -25847,7 +27369,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CRDMuzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Ferfrans_CQB_556_Muzzle",
@@ -25869,7 +27392,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "CRDMuzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Fortis_RED_762x51_Muzzle",
@@ -25890,6 +27414,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Fortis Manufacturing",
             "manufacturerUrl": "https://fortismfg.com/"
         },
@@ -25910,7 +27435,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_G3P_Muzzle",
@@ -25930,6 +27456,7 @@ const attachmentData = {
                 "GlockSuppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -25952,6 +27479,7 @@ const attachmentData = {
                 "GlockSuppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -25974,6 +27502,7 @@ const attachmentData = {
                 "GlockSuppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -25993,7 +27522,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HKG28_762x51_Muzzle",
@@ -26014,6 +27544,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -26036,7 +27567,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_KAC_FSK_762x51_Muzzle",
@@ -26057,6 +27589,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -26080,6 +27613,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -26103,6 +27637,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Dead Air Silencers",
             "manufacturerUrl": "https://deadairsilencers.com/"
         },
@@ -26125,6 +27660,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "LANTAC USA",
             "manufacturerUrl": "https://www.lantac-usa.com/"
         },
@@ -26147,6 +27683,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "LANTAC USA",
             "manufacturerUrl": "https://www.lantac-usa.com/"
         },
@@ -26167,7 +27704,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M107A1Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M11_762x51_Muzzle",
@@ -26187,7 +27725,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_AO_Muzzle",
@@ -26206,7 +27745,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M1911AO"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_Muzzle",
@@ -26225,7 +27765,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M200_Muzzle",
@@ -26244,7 +27785,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E6_Muzzle",
@@ -26263,7 +27805,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M82A1_Muzzle",
@@ -26283,6 +27826,7 @@ const attachmentData = {
                 "M107A1Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/"
@@ -26304,7 +27848,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MDR_Muzzle",
@@ -26325,7 +27870,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MK47_762x51_Muzzle",
@@ -26346,6 +27892,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "CMMG",
             "manufacturerLogo": "assets/cmmg-logo.png",
             "manufacturerUrl": "https://cmmg.com/"
@@ -26367,7 +27914,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP7Suppressor"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP7_SureFire_Muzzle",
@@ -26387,6 +27935,7 @@ const attachmentData = {
                 "MP7Suppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -26407,7 +27956,8 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockSuppressor"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MSR_DualPort_MuzzleBrake",
@@ -26426,7 +27976,8 @@ const attachmentData = {
             "inventorySlots": [
                 "300WinSuppressor"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Masada_Muzzle",
@@ -26446,6 +27997,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -26466,7 +28018,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_P90_Muzzle",
@@ -26485,7 +28038,8 @@ const attachmentData = {
             "inventorySlots": [
                 "P90Suppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKM_Muzzle",
@@ -26504,7 +28058,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKMSuppressor"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PSR_Multi_Caliber_Muzzle",
@@ -26526,7 +28081,8 @@ const attachmentData = {
                 "SPEARSuppressor",
                 "338Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PotomacArmory_M110_762x51_Muzzle",
@@ -26546,7 +28102,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Prong_Muzzle",
@@ -26568,6 +28125,7 @@ const attachmentData = {
                 "ARMuzzle"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -26587,7 +28145,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RPDMuzzle"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_762x51_Muzzle",
@@ -26608,6 +28167,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Advanced Armament Corporation",
             "manufacturerUrl": "https://advanced-armament.com/"
         },
@@ -26629,6 +28189,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -26650,7 +28211,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_12ga_Muzzle",
@@ -26669,7 +28231,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SilencerCo_AC858_338_MuzzleBrake",
@@ -26689,6 +28252,7 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -26710,6 +28274,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -26731,6 +28296,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -26758,14 +28324,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SureFire_Warden_FastAttach_Multi_Caliber_Muzzle_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -26786,6 +28355,7 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -26807,7 +28377,8 @@ const attachmentData = {
             "inventorySlots": [
                 "338Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO136_Muzzle",
@@ -26826,7 +28397,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAKM"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO209_Muzzle",
@@ -26845,7 +28417,8 @@ const attachmentData = {
             "inventorySlots": [
                 "366Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Venom_762x39_Muzzle",
@@ -26864,7 +28437,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAKM"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_XM109_DualPort_Muzzle",
@@ -26884,6 +28458,7 @@ const attachmentData = {
                 "XM109Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/"
@@ -26905,7 +28480,8 @@ const attachmentData = {
             "inventorySlots": [
                 "XM109Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ZK38_Muzzle",
@@ -26925,7 +28501,8 @@ const attachmentData = {
                 "762Suppressor",
                 "SPEARSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Zenit_DTK545_Muzzle",
@@ -26945,6 +28522,7 @@ const attachmentData = {
                 "weaponMuzzleAK74"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -26966,6 +28544,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -26987,7 +28566,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_cc450_556_Muzzle",
@@ -27006,7 +28586,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_claymore556_Muzzle",
@@ -27026,6 +28607,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/"
         },
@@ -27046,7 +28628,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_dtk556_Muzzle",
@@ -27065,7 +28648,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_gate556_Muzzle",
@@ -27084,7 +28668,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_jailbreak556_Muzzle",
@@ -27103,7 +28688,8 @@ const attachmentData = {
             "inventorySlots": [
                 "JailBreakMuzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_nero556_Muzzle",
@@ -27122,7 +28708,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_phantom556_Muzzle",
@@ -27141,7 +28728,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_pws556_Muzzle",
@@ -27160,7 +28748,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_qdc556_Muzzle",
@@ -27180,6 +28769,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27201,7 +28791,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_vp09556_Muzzle",
@@ -27220,7 +28811,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_war556_Muzzle",
@@ -27240,6 +28832,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -27261,6 +28854,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         }
@@ -27286,6 +28880,7 @@ const attachmentData = {
                 "338Suppressor"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -27310,6 +28905,7 @@ const attachmentData = {
                 "GlockSuppressorSecond"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "Advanced Armament Corporation",
             "manufacturerUrl": "https://advanced-armament.com/"
         },
@@ -27334,6 +28930,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "multi_caliber",
+            "canBePainted": false,
             "manufacturer": "Advanced Armament Corporation",
             "manufacturerUrl": "https://advanced-armament.com/"
         },
@@ -27355,7 +28952,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleM4"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK12_Suppressor",
@@ -27375,7 +28973,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AK12Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK308_Suppressor",
@@ -27395,7 +28994,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AK308Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Hexagon_Waffle_545x39_Suppressor",
@@ -27415,7 +29015,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_PBS1_762x39_Suppressor",
@@ -27435,7 +29036,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAKM"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_PBS4_545x39_Suppressor",
@@ -27455,7 +29057,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponMuzzleAK74"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AMF_408_Suppressor",
@@ -27479,9 +29082,11 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AMF_408_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASH12_Suppressor",
@@ -27501,7 +29106,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ASH12Suppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AUG_SL7i_Suppressor",
@@ -27522,6 +29128,7 @@ const attachmentData = {
                 "AUGMuzzle"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Ase Utra",
             "manufacturerUrl": "https://www.aseutra.fi/"
         },
@@ -27545,7 +29152,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "subCategory": "multi_caliber"
+            "subCategory": "multi_caliber",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AseUltra_BoreLock_338_Suppressor",
@@ -27565,6 +29173,7 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Ase Utra",
             "manufacturerUrl": "https://www.aseutra.fi/"
         },
@@ -27586,6 +29195,7 @@ const attachmentData = {
                 "M107A1Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/"
@@ -27612,6 +29222,7 @@ const attachmentData = {
                 "weaponFlashlight"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -27633,7 +29244,8 @@ const attachmentData = {
             "inventorySlots": [
                 "FSSuppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Gemtech_ONE_Multi_Caliber_Suppressor",
@@ -27655,7 +29267,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "subCategory": "multi_caliber"
+            "subCategory": "multi_caliber",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK_G28_762_Suppressor",
@@ -27674,7 +29287,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
@@ -27700,14 +29314,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Tan",
                     "id": "SMPZ_Attachments_HUXWRX_762x51_Suppressor_Tan",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_Hekate_338_Suppressor",
@@ -27726,7 +29343,8 @@ const attachmentData = {
             "inventorySlots": [
                 "338Muzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Helix_762_Suppressor",
@@ -27745,7 +29363,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762Suppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Hexagon_12ga_Suppressor",
@@ -27765,7 +29384,8 @@ const attachmentData = {
             "inventorySlots": [
                 "12gaMuzzle"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Hybrid46Suppressor",
@@ -27801,14 +29421,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Hybrid46Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Hybrid46Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -27834,14 +29457,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Taupe",
                     "id": "SMPZ_Attachments_KAC_Mk11_762x51_Suppressor_Taupe",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27865,6 +29491,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27887,6 +29514,7 @@ const attachmentData = {
                 "weaponMuzzleM4"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27916,9 +29544,11 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_KAC_QDC_Multi_Caliber_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27945,14 +29575,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_KAC_QDC_NT4_556_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -27980,14 +29613,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_M4SD_556_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_M4SD_556_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor",
@@ -28012,24 +29648,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_MCX_SPEAR_Suppressor_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_MP7_Suppressor",
@@ -28048,7 +29689,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MP7Suppressor"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP9_Suppressor",
@@ -28070,7 +29712,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_SD_Suppressor",
@@ -28090,7 +29733,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MPXSD"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MSR_300Winchester_Suppressor",
@@ -28109,7 +29753,8 @@ const attachmentData = {
             "inventorySlots": [
                 "300WinSuppressor"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Mosin_Bramit_Suppressor",
@@ -28129,7 +29774,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MosinSuppressor"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Omega_45ACP_Suppressor",
@@ -28150,6 +29796,7 @@ const attachmentData = {
                 "45ACPSuppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -28173,6 +29820,7 @@ const attachmentData = {
                 "GlockSuppressorSecond"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -28195,6 +29843,7 @@ const attachmentData = {
                 "P90Suppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -28217,7 +29866,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKMSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKP_DTKP_Suppressor",
@@ -28237,7 +29887,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PKPSuppressor"
             ],
-            "subCategory": "762_ar10"
+            "subCategory": "762_ar10",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PP19_Suppressor",
@@ -28257,7 +29908,8 @@ const attachmentData = {
                 "GlockSuppressor",
                 "GlockSuppressorSecond"
             ],
-            "subCategory": "pistol_smg_other"
+            "subCategory": "pistol_smg_other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Rotor43_366TKM_Suppressor",
@@ -28277,6 +29929,7 @@ const attachmentData = {
                 "366Muzzle"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Rotor 43",
             "manufacturerUrl": "https://rotor43.ru/"
         },
@@ -28297,7 +29950,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SR1MPSuppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SR2M_Suppressor",
@@ -28316,7 +29970,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SR2MSuppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SR3M_Suppressor",
@@ -28335,7 +29990,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SR3MSuppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SRD762QD",
@@ -28358,6 +30014,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -28383,6 +30040,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "762_ar10",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -28405,7 +30063,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SV98Suppressor"
             ],
-            "subCategory": "heavy_shotgun"
+            "subCategory": "heavy_shotgun",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Rotor43_Suppressor",
@@ -28424,7 +30083,8 @@ const attachmentData = {
             "inventorySlots": [
                 "762x54Suppressor"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
@@ -28449,14 +30109,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_Saker_ASR556_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Saker_ASR556_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -28478,6 +30141,7 @@ const attachmentData = {
                 "12gaMuzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -28500,6 +30164,7 @@ const attachmentData = {
                 "45ACPSuppressor"
             ],
             "subCategory": "pistol_smg_other",
+            "canBePainted": false,
             "manufacturer": "SilencerCo",
             "manufacturerUrl": "https://silencerco.com/"
         },
@@ -28523,6 +30188,7 @@ const attachmentData = {
                 "MP7SureFireSuppressor"
             ],
             "subCategory": "556_ar15",
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -28550,14 +30216,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SureFire_SOCOM556_RC2_556x45_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -28585,24 +30254,29 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_SureFire_SOCOM762_RC2_762x51_Suppressor_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -28625,6 +30299,7 @@ const attachmentData = {
                 "338Muzzle"
             ],
             "subCategory": "heavy_shotgun",
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -28646,7 +30321,8 @@ const attachmentData = {
             "inventorySlots": [
                 "UCPSuppressor"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Ultra5_Multi_Caliber_556Suppressor",
@@ -28668,7 +30344,8 @@ const attachmentData = {
                 "weaponMuzzleM4",
                 "SPEARSuppressor"
             ],
-            "subCategory": "multi_caliber"
+            "subCategory": "multi_caliber",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_WAVE_Multi_Caliber_Suppressor",
@@ -28691,6 +30368,7 @@ const attachmentData = {
                 "SPEARSuppressor"
             ],
             "subCategory": "multi_caliber",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -28711,7 +30389,8 @@ const attachmentData = {
             "inventorySlots": [
                 "XM109Muzzle"
             ],
-            "subCategory": "556_ar15"
+            "subCategory": "556_ar15",
+            "canBePainted": false
         }
     ],
     "pistol_grip": [
@@ -28733,7 +30412,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AGS74_pistolgrip",
@@ -28752,7 +30432,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
@@ -28776,9 +30457,11 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AK_AGR47_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
@@ -28802,14 +30485,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AK_EPG_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -28831,7 +30517,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
@@ -28855,9 +30542,11 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_MOE_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -28879,7 +30568,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKpistolgrip"
             ],
-            "subCategory": "ak"
+            "subCategory": "ak",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
@@ -28903,14 +30593,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_AK_SAW_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AK_SAW_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Zenit_RK3_pistolgrip",
@@ -28931,6 +30624,7 @@ const attachmentData = {
                 "VALAdapter"
             ],
             "subCategory": "other",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -28956,14 +30650,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_B5_System_PGrip23_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_Colt_A1_pistolgrip",
@@ -28983,6 +30680,7 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -29004,7 +30702,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
@@ -29028,14 +30727,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mil Spec+",
                     "id": "SMPZ_Attachments_DanielDefense_Enhanced_pistolgrip_MilSpec",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -29057,6 +30759,7 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -29078,7 +30781,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_PC_pistolgrip",
@@ -29097,7 +30801,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_F1_Skeletonized_STY2_pistolgrip",
@@ -29116,7 +30821,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Glock_GripGlove",
@@ -29136,6 +30842,7 @@ const attachmentData = {
                 "GlockGrip"
             ],
             "subCategory": "other",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -29157,7 +30864,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
@@ -29181,14 +30889,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -29215,24 +30926,29 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Hogue_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Hogue_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Ghillie Green",
                     "id": "SMPZ_Attachments_Hogue_pistolgrip_GG",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Attachments_Hogue_pistolgrip_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_Hogue_pistolgrip_GE",
@@ -29251,7 +30967,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip",
@@ -29266,7 +30983,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M60Pistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E4_Pistolgrip_Group",
@@ -29287,7 +31005,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "M60Pistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E6_Pistolgrip",
@@ -29307,14 +31026,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_M60E6_Pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_M60E6_Pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
@@ -29340,14 +31062,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_M60E6_Pistolgrip_Group_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MIAD_pistolgrip",
@@ -29371,14 +31096,17 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MIAD_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MIAD_pistolgrip_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -29404,24 +31132,29 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_MOE_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_MOE_pistolgrip_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_MOE_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_MOE_pistolgrip_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -29442,7 +31175,8 @@ const attachmentData = {
             "inventorySlots": [
                 "UltimaPistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
@@ -29466,14 +31200,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -29499,19 +31236,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_Naroh_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_Naroh_pistolgrip_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_Naroh_pistolgrip_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Orion_pistolgrip",
@@ -29530,7 +31271,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RK3_pistolgrip",
@@ -29550,6 +31292,7 @@ const attachmentData = {
                 "AKpistolgrip"
             ],
             "subCategory": "ak",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -29571,7 +31314,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Pistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_SAW_Style_pistolgrip",
@@ -29591,7 +31335,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Pistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SIG_MCX_pistolgrip",
@@ -29611,6 +31356,7 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -29633,6 +31379,7 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ar15_m4",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -29659,24 +31406,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -29700,7 +31452,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Sierra_Precision_SPR_pistolgrip",
@@ -29719,7 +31472,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Stark_pistolgrip",
@@ -29743,14 +31497,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Stark_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Stark_pistolgrip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TD_HEX_pistolgrip",
@@ -29769,7 +31526,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TD_Skeletonzied_pistolgrip",
@@ -29788,7 +31546,8 @@ const attachmentData = {
             "inventorySlots": [
                 "ARpistolgrip"
             ],
-            "subCategory": "ar15_m4"
+            "subCategory": "ar15_m4",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
@@ -29812,19 +31571,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Yellow",
                     "id": "SMPZ_Attachments_TyrantDesigns_Chevron_pistolgrip_Yellow",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_UCP_Rubber_Grip_Glove",
@@ -29842,7 +31605,8 @@ const attachmentData = {
             "inventorySlots": [
                 "UCPPistolgrip"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         }
     ],
     "receiver": [
@@ -29866,7 +31630,8 @@ const attachmentData = {
                 "AKRearsightBase",
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK308_Cover",
@@ -29888,7 +31653,8 @@ const attachmentData = {
                 "AKRearsightBase",
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK50_Cover",
@@ -29909,7 +31675,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "Rearsight"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74M_Cover",
@@ -29927,7 +31694,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74_Cover",
@@ -29945,7 +31713,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Cover",
@@ -29963,7 +31732,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Cover",
@@ -29984,7 +31754,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKS74URearsight"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Pilgrim_Receiver",
@@ -30005,7 +31776,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_DogLeg_Receiver",
@@ -30026,7 +31798,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_PDC_Receiver",
@@ -30047,7 +31820,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_Zenit_B33_Receiver",
@@ -30069,6 +31843,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "ak_dustcover",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -30089,7 +31864,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Receiver"
             ],
-            "subCategory": "ar15_upper"
+            "subCategory": "ar15_upper",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_AX15_Receiver",
@@ -30108,7 +31884,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Receiver"
             ],
-            "subCategory": "ar15_upper"
+            "subCategory": "ar15_upper",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MK2_Receiver",
@@ -30128,6 +31905,7 @@ const attachmentData = {
                 "M4Receiver"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -30148,7 +31926,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Receiver"
             ],
-            "subCategory": "ar15_upper"
+            "subCategory": "ar15_upper",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_LoneStar_Receiver",
@@ -30167,7 +31946,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Receiver"
             ],
-            "subCategory": "ar15_upper"
+            "subCategory": "ar15_upper",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_M16A1_Standard_Receiver",
@@ -30190,6 +31970,7 @@ const attachmentData = {
                 "M16Mount"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -30215,6 +31996,7 @@ const attachmentData = {
                 "M16Mount"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -30237,6 +32019,7 @@ const attachmentData = {
                 "M4Receiver"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -30259,6 +32042,7 @@ const attachmentData = {
                 "M4Receiver"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -30284,14 +32068,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Receiver",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Model1_Receiver_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -30314,6 +32101,7 @@ const attachmentData = {
                 "M4Receiver"
             ],
             "subCategory": "ar15_upper",
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -30334,7 +32122,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Receiver"
             ],
-            "subCategory": "ar15_upper"
+            "subCategory": "ar15_upper",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Mod4_Top_Cover",
@@ -30356,7 +32145,8 @@ const attachmentData = {
                 "Rearsight",
                 "weaponOptics"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_Cover",
@@ -30374,7 +32164,8 @@ const attachmentData = {
             "inventorySlots": [
                 "VSSCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AUG_Vltor_Receiver_with_Rail",
@@ -30400,6 +32191,7 @@ const attachmentData = {
                 "Frontsight"
             ],
             "subCategory": "other",
+            "canBePainted": false,
             "manufacturer": "Steyr Mannlicher",
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/"
@@ -30421,6 +32213,7 @@ const attachmentData = {
                 "GlockSlide"
             ],
             "subCategory": "pistol_slide",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -30442,6 +32235,7 @@ const attachmentData = {
                 "GlockSlide"
             ],
             "subCategory": "pistol_slide",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -30466,6 +32260,7 @@ const attachmentData = {
                 "noMountRMROptics"
             ],
             "subCategory": "pistol_slide",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -30490,6 +32285,7 @@ const attachmentData = {
                 "noMountRMROptics"
             ],
             "subCategory": "pistol_slide",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -30516,14 +32312,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Bottom",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Bottom_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left",
@@ -30547,14 +32346,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Left_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right",
@@ -30578,14 +32380,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_IWI_TavorX95_Cover_Right_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_M45A1_Slide",
@@ -30603,7 +32408,8 @@ const attachmentData = {
             "inventorySlots": [
                 "M1911Slide"
             ],
-            "subCategory": "pistol_slide"
+            "subCategory": "pistol_slide",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_P90_Effen90_Upper_Receiver",
@@ -30627,6 +32433,7 @@ const attachmentData = {
                 "weaponFlashlightThird"
             ],
             "subCategory": "other",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -30647,7 +32454,8 @@ const attachmentData = {
             "inventorySlots": [
                 "PP19Cover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RD704_Cover",
@@ -30665,7 +32473,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPK16_Cover",
@@ -30689,7 +32498,8 @@ const attachmentData = {
                 "AKRearsightBase",
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Extreme_Duty_Dust_Cover",
@@ -30710,7 +32520,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SA58_Standard_Cover",
@@ -30728,7 +32539,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SA58Cover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SCAR_H_X17_Lower_Receiver",
@@ -30746,7 +32558,8 @@ const attachmentData = {
             "inventorySlots": [
                 "X17Receiver"
             ],
-            "subCategory": "other"
+            "subCategory": "other",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVDS_Cutoff_Cover",
@@ -30764,7 +32577,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SVDCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Cover",
@@ -30782,7 +32596,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SVDCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_Cover",
@@ -30800,7 +32615,8 @@ const attachmentData = {
             "inventorySlots": [
                 "SaigaCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO101_Cover",
@@ -30818,7 +32634,8 @@ const attachmentData = {
             "inventorySlots": [
                 "VPO101Cover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_VPO136_Cover",
@@ -30836,7 +32653,8 @@ const attachmentData = {
             "inventorySlots": [
                 "AKCover"
             ],
-            "subCategory": "ak_dustcover"
+            "subCategory": "ak_dustcover",
+            "canBePainted": false
         }
     ],
     "mount": [
@@ -30859,7 +32677,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK308_Rearsight_Base_Mount",
@@ -30880,7 +32699,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_ME4_Buffer_Adapter",
@@ -30902,7 +32722,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "subCategory": "stock_adapter"
+            "subCategory": "stock_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_RD_AKtoM4_Buffer_Adapter",
@@ -30923,7 +32744,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "subCategory": "stock_adapter"
+            "subCategory": "stock_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKS74U_Zenit_B18_Mount",
@@ -30947,6 +32769,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -30969,7 +32792,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_AK74M_Zenit_PT_Lock_Stock_Adapter",
@@ -30992,6 +32816,7 @@ const attachmentData = {
                 "AKZenitStock"
             ],
             "subCategory": "stock_adapter",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -31015,6 +32840,7 @@ const attachmentData = {
                 "AKZenitStock"
             ],
             "subCategory": "stock_adapter",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -31038,6 +32864,7 @@ const attachmentData = {
                 "AKZenitStock"
             ],
             "subCategory": "stock_adapter",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -31060,7 +32887,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_RSA55_Stock_Adapter",
@@ -31082,7 +32910,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "MCXButtstock"
             ],
-            "subCategory": "stock_adapter"
+            "subCategory": "stock_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_SAG_SVD_Low_Sidemount",
@@ -31103,7 +32932,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_SVD_CAA_RGL_Sidemount",
@@ -31124,7 +32954,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_6P29M_Mount",
@@ -31147,7 +32978,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_VSS_SR3MP_SideMount",
@@ -31168,7 +33000,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AUG_Corvus_Keymod_Rail",
@@ -31189,7 +33022,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "GripCASV"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AUG_M1_High_Mount",
@@ -31211,6 +33045,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Steyr Mannlicher",
             "manufacturerLogo": "assets/steyr-logo.png",
             "manufacturerUrl": "https://www.steyr-arms.com/en/"
@@ -31235,6 +33070,7 @@ const attachmentData = {
                 "BipodKeymod"
             ],
             "subCategory": "bipod_adapter",
+            "canBePainted": false,
             "manufacturer": "Accuracy International",
             "manufacturerLogo": "assets/ai-logo.png",
             "manufacturerUrl": "https://www.accuracyinternational.com/"
@@ -31259,6 +33095,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -31283,6 +33120,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -31307,6 +33145,7 @@ const attachmentData = {
                 "AimpointACRO"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -31331,7 +33170,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "pistolOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_CASV_4_Rail",
@@ -31349,7 +33189,8 @@ const attachmentData = {
             "inventorySlots": [
                 "MCXRail"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_DanielDefense_25mm_Ring_Mount",
@@ -31384,6 +33225,7 @@ const attachmentData = {
                 "Flashlight"
             ],
             "subCategory": "flashlight_mount",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -31405,6 +33247,7 @@ const attachmentData = {
                 "DDCover2"
             ],
             "subCategory": "rail_panel",
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -31429,7 +33272,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
@@ -31451,6 +33295,7 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Trijicon",
             "manufacturerUrl": "https://www.trijicon.com/"
         },
@@ -31475,6 +33320,7 @@ const attachmentData = {
                 "AimpointT1"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -31498,6 +33344,7 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -31523,6 +33370,7 @@ const attachmentData = {
                 "weaponFlashlightFirst"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -31543,7 +33391,8 @@ const attachmentData = {
             "inventorySlots": [
                 "G36Magwell"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
@@ -31570,14 +33419,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_GBRS_Hydra_Riser_Mount_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -31601,6 +33453,7 @@ const attachmentData = {
                 "Grip"
             ],
             "subCategory": "rail_panel",
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -31626,6 +33479,7 @@ const attachmentData = {
                 "weaponFlashlight"
             ],
             "subCategory": "flashlight_mount",
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -31646,6 +33500,7 @@ const attachmentData = {
                 "noMountRMROptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -31670,6 +33525,7 @@ const attachmentData = {
                 "BipodKeymod"
             ],
             "subCategory": "bipod_adapter",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -31696,14 +33552,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_KAC_URX_Long_Panel",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_KAC_URX_Long_Panel_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -31740,7 +33599,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "Flashlight"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
@@ -31761,7 +33621,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Leapers_UTG_Universal_Shotgun_Mount",
@@ -31785,7 +33646,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_NcSTAR_Mount",
@@ -31806,7 +33668,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlight"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_Weig_SightMount",
@@ -31827,7 +33690,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
@@ -31848,7 +33712,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_DCSB_Mount",
@@ -31869,7 +33734,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_Leapers_UTG4_Scope_Mount",
@@ -31890,7 +33756,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_SOCOM_Upper_Mount",
@@ -31912,7 +33779,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1A_Vltor_CASV_Rail_Mount",
@@ -31936,6 +33804,7 @@ const attachmentData = {
                 "weaponFlashlightFirst"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "VLTOR Weapon Systems",
             "manufacturerUrl": "https://www.vltor.com/"
         },
@@ -31964,7 +33833,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Frontsight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M9A3_Mount",
@@ -31985,7 +33855,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MLOK_25_Rail",
@@ -32003,7 +33874,8 @@ const attachmentData = {
             "inventorySlots": [
                 "CASVHandguardRail"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MLOK_4_Rail",
@@ -32021,7 +33893,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RailMLOK4"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP155_Ultima_Mount",
@@ -32047,7 +33920,8 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Frontsight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MP5_MTI_Scope_Mount",
@@ -32069,6 +33943,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -32092,7 +33967,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Magpul_MLOK_Bipod_Adapter",
@@ -32114,6 +33990,7 @@ const attachmentData = {
                 "BipodKeymod"
             ],
             "subCategory": "bipod_adapter",
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -32136,7 +34013,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_OMM_Riser_Mount",
@@ -32163,14 +34041,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_OMM_Riser_Mount",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_OMM_Riser_Mount_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_OdinWorks_KeyMod_Bipod_Adapter",
@@ -32191,7 +34072,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "BipodKeymod"
             ],
-            "subCategory": "bipod_adapter"
+            "subCategory": "bipod_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_P90_Top_Rail_Mount",
@@ -32213,6 +34095,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
             "manufacturerUrl": "https://fnherstal.com/"
@@ -32237,7 +34120,8 @@ const attachmentData = {
                 "OpticsOnAKHndgrd",
                 "weaponFlashlightFirst"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_B51_Mount",
@@ -32259,6 +34143,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -32282,7 +34167,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "subCategory": "stock_adapter"
+            "subCategory": "stock_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Precision_Reflex_GEN3_SPR_Rail",
@@ -32303,7 +34189,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponFlashlightFirst"
             ],
-            "subCategory": "flashlight_mount"
+            "subCategory": "flashlight_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
@@ -32324,7 +34211,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RMR_Mount",
@@ -32348,6 +34236,7 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Trijicon",
             "manufacturerUrl": "https://www.trijicon.com/"
         },
@@ -32375,14 +34264,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_ROF90_RMR_Mount",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_ROF90_RMR_Mount_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -32405,7 +34297,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "AKRearsight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Remington_RAHG_2inch_Rail",
@@ -32423,7 +34316,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RAHGRailFlashlight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Remington_RAHG_4inch_Rail",
@@ -32441,7 +34335,8 @@ const attachmentData = {
             "inventorySlots": [
                 "RAHGRailGrip"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SAG_Sidemount",
@@ -32462,7 +34357,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SIG_Knuckle_Stock_Adapter",
@@ -32484,6 +34380,7 @@ const attachmentData = {
                 "ARBuffer"
             ],
             "subCategory": "stock_adapter",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -32508,6 +34405,7 @@ const attachmentData = {
                 "LPTBuffer"
             ],
             "subCategory": "stock_adapter",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -32531,7 +34429,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SKS_UTG_SOCOM_Mount",
@@ -32556,7 +34455,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SR1MP_QuadRail_Mount",
@@ -32580,7 +34480,8 @@ const attachmentData = {
                 "weaponFlashlightSecond",
                 "weaponFlashlightThird"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVDS_Stock_Adapter",
@@ -32601,7 +34502,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARBuffer"
             ],
-            "subCategory": "stock_adapter"
+            "subCategory": "stock_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_CAA_DRG_Mount",
@@ -32623,7 +34525,8 @@ const attachmentData = {
                 "weaponFlashlight",
                 "Bipod"
             ],
-            "subCategory": "bipod_adapter"
+            "subCategory": "bipod_adapter",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVD_Modernization_Kit_Rail_Mount",
@@ -32645,7 +34548,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SVT_AVT_APS_ScopeMount",
@@ -32666,7 +34570,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Saiga_CSS_Rail",
@@ -32687,7 +34592,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
@@ -32708,7 +34614,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_TigerShark_SightMount",
@@ -32730,6 +34637,7 @@ const attachmentData = {
                 "OpticsOnAKHndgrd"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -32754,6 +34662,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -32778,7 +34687,8 @@ const attachmentData = {
                 "OpticsOnAKHndgrd",
                 "weaponFlashlight"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_USP_Mount",
@@ -32800,6 +34710,7 @@ const attachmentData = {
                 "FFP3"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -32823,7 +34734,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "weaponOptics"
             ],
-            "subCategory": "scope_mount"
+            "subCategory": "scope_mount",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Zenit_B13V_Sidemount",
@@ -32845,6 +34757,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -32868,6 +34781,7 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         }
@@ -32894,7 +34808,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK74M_AK74_CAA_AKTS_TubeBuffer",
@@ -32916,7 +34831,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKMS_TubeBuffer",
@@ -32937,7 +34853,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_AK74_CAA_AKTS_TubeBuffer",
@@ -32958,7 +34875,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ARE_TubeBuffer",
@@ -32984,14 +34902,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_ARE_TubeBuffer",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_ARE_TubeBuffer_Red",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -33014,7 +34935,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_ASVAL_Rotor43_Pistolgrip_Adapter",
@@ -33037,6 +34959,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
+            "canBePainted": false,
             "manufacturer": "Rotor 43",
             "manufacturerUrl": "https://rotor43.ru/"
         },
@@ -33059,7 +34982,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_CGNL_TubeBuffer",
@@ -33085,14 +35009,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CGNL_TubeBuffer",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_CGNL_TubeBuffer_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Custom Guns"
         },
         {
@@ -33115,6 +35042,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "PRSStock"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -33139,6 +35067,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "ARButtstock"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/"
@@ -33163,7 +35092,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_HK417_TubeBuffer",
@@ -33184,7 +35114,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "417Buttstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
@@ -33210,9 +35141,11 @@ const attachmentData = {
                 {
                     "name": "Coyote Tan",
                     "id": "SMPZ_Attachments_MCX_MPX_SIG_LPT_TubeBuffer",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -33236,7 +35169,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "UMSButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RPK16_TubeBuffer",
@@ -33258,7 +35192,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "ARButtstock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_SCAR_TubeBuffer",
@@ -33284,9 +35219,11 @@ const attachmentData = {
                 {
                     "name": "Patriot Brown",
                     "id": "SMPZ_Attachments_SCAR_TubeBuffer",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "gas_block": [
@@ -33308,7 +35245,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AKM_Gasblock",
@@ -33328,7 +35266,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AK_VDM_Gasblock",
@@ -33348,7 +35287,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_GS6_Gasblock",
@@ -33368,7 +35308,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "Frontsight"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock",
@@ -33391,14 +35332,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Taupe",
                     "id": "SMPZ_Attachments_AR10_KAC_M110_Gasblock_Taupe",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -33419,7 +35363,8 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ARGasblock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_LoPro_Gasblock",
@@ -33437,7 +35382,8 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ARGasblock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Precision_Reflex_Mk12_Gasblock",
@@ -33455,7 +35401,8 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ARGasblock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Sentry7_Gasblock",
@@ -33473,7 +35420,8 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ARGasblock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Windham_Weaponry_Rail_Gasblock",
@@ -33494,7 +35442,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "Frontsight"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M4_Gasblock_WIG",
@@ -33511,7 +35460,8 @@ const attachmentData = {
             "itemSlots": 1,
             "inventorySlots": [
                 "ARGasblock"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Mk12_Gasblock",
@@ -33530,6 +35480,7 @@ const attachmentData = {
             "inventorySlots": [
                 "ARGasblock"
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -33551,7 +35502,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "AKHandguard"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "charging_handle": [
@@ -33573,6 +35525,7 @@ const attachmentData = {
             "inventorySlots": [
                 "AKChargingHandle"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -33598,9 +35551,11 @@ const attachmentData = {
                 {
                     "name": "DDC",
                     "id": "SMPZ_Attachments_AR15_ACH_ChargingHandle",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         },
@@ -33621,7 +35576,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Badger_Ordnance_ChargingHandle",
@@ -33640,7 +35596,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_ChargingHandle",
@@ -33660,6 +35617,7 @@ const attachmentData = {
             "inventorySlots": [
                 "ARChargingHandle"
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -33681,6 +35639,7 @@ const attachmentData = {
             "inventorySlots": [
                 "ARChargingHandle"
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -33706,14 +35665,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "RAL 8000",
                     "id": "SMPZ_Attachments_AR15_HK_Latch_ChargingHandle_RAL8000",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -33735,7 +35697,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Noveske_SBA_ChargingHandle",
@@ -33754,7 +35717,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "ARChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle",
@@ -33778,14 +35742,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_AR15_Radian_Weapons_Raptor_SD_ChargingHandle_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -33812,14 +35779,17 @@ const attachmentData = {
                 {
                     "name": "Grey",
                     "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_AR15_Raptor_ChargingHandle_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Radian Weapons",
             "manufacturerLogo": "assets/radian-logo.png",
             "manufacturerUrl": "https://www.radianweapons.com/"
@@ -33840,7 +35810,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MPXChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_Latch_ChargingHandle",
@@ -33858,7 +35829,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "MPXChargingHandle"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_SCH_ChargingHandle",
@@ -33877,6 +35849,7 @@ const attachmentData = {
             "inventorySlots": [
                 "MPXChargingHandle"
             ],
+            "canBePainted": false,
             "manufacturer": "Geissele Automatics",
             "manufacturerUrl": "https://geissele.com/"
         }
@@ -33904,6 +35877,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -33933,14 +35907,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_BCM_GUNFIGHTER_MLOK_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
             "manufacturerUrl": "https://bravocompanyusa.com/"
         },
@@ -33970,19 +35947,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_BGV_MK46K_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_BGV_MK46K_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Stealth Grey",
                     "id": "SMPZ_Attachments_BGV_MK46K_Grip_SG",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "TangoDown",
             "manufacturerUrl": "https://tangodown.com/"
         },
@@ -34012,14 +35993,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_BGV_QDITI_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_BGV_QDITI_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "TangoDown",
             "manufacturerUrl": "https://tangodown.com/"
         },
@@ -34049,14 +36033,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_CQR_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Attachments_CQR_Grip_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -34084,14 +36071,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_Cobra_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Cobra_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Strike Industries",
             "manufacturerUrl": "https://www.strikeindustries.com/"
         },
@@ -34121,14 +36111,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_DD_MLOK_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_DD_MLOK_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -34158,14 +36151,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Mil Spec+",
                     "id": "SMPZ_Attachments_DanielDefense_Vertical_Grip_MilSpec",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/"
         },
@@ -34190,7 +36186,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_IRBIS_45AL_Grip",
@@ -34213,7 +36210,8 @@ const attachmentData = {
                 "GripThird",
                 "GripFourth"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
@@ -34238,14 +36236,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_KAC_URX_Stopper_Panel_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -34272,6 +36273,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/"
@@ -34302,24 +36304,29 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Magpul_AFG_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Magpul_AFG_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Forest Green",
                     "id": "SMPZ_Attachments_Magpul_AFG_FG",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Olive Drab",
                     "id": "SMPZ_Attachments_Magpul_AFG_OD",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -34349,9 +36356,11 @@ const attachmentData = {
                 {
                     "name": "Red",
                     "id": "SMPZ_Attachments_RTM_Pillau_P2_Grip_RED",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_RVG_Grip",
@@ -34379,14 +36388,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_RVG_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_RVG_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/"
         },
@@ -34416,14 +36428,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Attachments_SE5_Grip",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_SE5_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Attachments_SIG_Vertical_KeyMod_Foregrip",
@@ -34447,6 +36462,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "keymod",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -34473,6 +36489,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Fortis Manufacturing",
             "manufacturerUrl": "https://fortismfg.com/"
         },
@@ -34502,14 +36519,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Attachments_Sturmgriff_Grip_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Attachments_Sturmgriff_Grip_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en"
@@ -34536,6 +36556,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34561,6 +36582,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34586,6 +36608,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34611,6 +36634,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34636,6 +36660,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34661,6 +36686,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -34686,6 +36712,7 @@ const attachmentData = {
                 "GripFourth"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         }
@@ -34707,7 +36734,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "FSBarrel"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_Glock_AlphaWolf_Barrel",
@@ -34726,6 +36754,7 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockBarrel"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -34747,6 +36776,7 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockBarrel"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -34768,6 +36798,7 @@ const attachmentData = {
             "inventorySlots": [
                 "GlockBarrel"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/"
@@ -34787,7 +36818,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Barrel"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_MPX_14inch_Barrel",
@@ -34805,6 +36837,7 @@ const attachmentData = {
             "inventorySlots": [
                 "MPXBarrel"
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -34825,7 +36858,8 @@ const attachmentData = {
             "itemSlots": 6,
             "inventorySlots": [
                 "M203"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "hammer": [
@@ -34844,7 +36878,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Hammer"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_STI_HEX_Hammer",
@@ -34861,7 +36896,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Hammer"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_Wilson_Retro_Hammer",
@@ -34878,7 +36914,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Hammer"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_Wilson_Skeletonized_Hammer",
@@ -34895,7 +36932,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Hammer"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "trigger": [
@@ -34914,7 +36952,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Trigger"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Attachments_M1911_Trik_Trigger",
@@ -34931,7 +36970,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "M1911Trigger"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "bipod": [
@@ -34952,7 +36992,8 @@ const attachmentData = {
             "itemSlots": 2,
             "inventorySlots": [
                 "Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Bipod_Harris_HBR",
@@ -34972,7 +37013,8 @@ const attachmentData = {
             "inventorySlots": [
                 "BipodKeymod",
                 "BipodKeySlot"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Bipod_M107A1",
@@ -34992,6 +37034,7 @@ const attachmentData = {
             "inventorySlots": [
                 "M107A1Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/"
@@ -35014,6 +37057,7 @@ const attachmentData = {
             "inventorySlots": [
                 "M200Bipod"
             ],
+            "canBePainted": false,
             "manufacturer": "CheyTac USA",
             "manufacturerLogo": "assets/cheytac-logo.png",
             "manufacturerUrl": "https://cheytac.com/"
@@ -35035,7 +37079,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "M60Bipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Bipod_PKM_PKP",
@@ -35054,7 +37099,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "PKBipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Bipod_RPD",
@@ -35073,7 +37119,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "RPDBipod"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Bipod_SV98",
@@ -35092,7 +37139,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SV98Bipod"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "tactical_flashlight": [
@@ -35114,7 +37162,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Flashlights_Olight_Baldr_Pro",
@@ -35153,14 +37202,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Flashlights_Olight_Baldr_Pro",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Flashlights_Olight_Baldr_Pro_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Flashlights_SureFire_M600",
@@ -35194,6 +37246,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -35230,6 +37283,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -35252,7 +37306,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Flashlights_WMX",
@@ -35286,7 +37341,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Flashlights_X400U",
@@ -35321,6 +37377,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/"
         },
@@ -35357,6 +37414,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         }
@@ -35400,29 +37458,35 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Lasers_Anpeq15",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Lasers_Anpeq15_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Lasers_Anpeq15_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Tropic",
                     "id": "SMPZ_Lasers_Anpeq15_Multicam_Tropic",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Lasers_Anpeq15_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Lasers_BE_Meyers_MAWL",
@@ -35457,7 +37521,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Lasers_Insight_Anpeq2_IR",
@@ -35492,7 +37557,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Lasers_NcSTAR_TBL",
@@ -35527,7 +37593,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Lasers_Perst3",
@@ -35563,6 +37630,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "Zenitco",
             "manufacturerUrl": "https://zenitco.ru/"
         },
@@ -35600,6 +37668,7 @@ const attachmentData = {
             "attachmentSlots": [
                 "BatteryD"
             ],
+            "canBePainted": false,
             "manufacturer": "Steiner Optics",
             "manufacturerUrl": "https://www.steiner-optics.com/"
         },
@@ -35641,14 +37710,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Lasers_Wilcox_RAID_XE_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Lasers_Wilcox_RAID_XE_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         }
     ],
     "magazine": [
@@ -35674,6 +37746,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -35701,6 +37774,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -35731,14 +37805,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_6L23_545_30Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Plum",
                     "id": "SMPZ_Mag_6L23_545_30Rnd_Plum",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -35765,6 +37842,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -35792,6 +37870,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -35818,6 +37897,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x39mm"
             ]
@@ -35844,6 +37924,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -35871,6 +37952,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -35897,6 +37979,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -35923,6 +38006,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.56x45mm"
             ]
@@ -35949,6 +38033,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.56x45mm"
             ]
@@ -35975,6 +38060,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36002,6 +38088,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -36028,6 +38115,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -36054,6 +38142,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -36080,6 +38169,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".50 BMG"
             ]
@@ -36106,6 +38196,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".50 BMG"
             ]
@@ -36132,6 +38223,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36159,6 +38251,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36186,6 +38279,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36213,6 +38307,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36241,6 +38336,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36268,6 +38364,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12.7x55mm"
             ]
@@ -36294,6 +38391,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x39mm"
             ]
@@ -36320,6 +38418,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".338 Lapua"
             ]
@@ -36346,6 +38445,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.56x45mm"
             ]
@@ -36372,6 +38472,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -36398,6 +38499,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -36424,6 +38526,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -36451,6 +38554,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36479,6 +38583,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36506,6 +38611,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".338 Lapua"
             ]
@@ -36536,14 +38642,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_Daniel_Defense_X_300BLK_37Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36575,14 +38684,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_Daniel_Defense_X_556_37Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/",
             "calibers": [
@@ -36612,6 +38724,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".357 Magnum"
             ]
@@ -36638,6 +38751,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".50 AE"
             ]
@@ -36669,14 +38783,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_AP_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_AP_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36709,14 +38826,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_BCP_FMJ_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36749,14 +38869,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_CBJ_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36789,14 +38912,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_M62_Tracer_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36829,14 +38955,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_VMAX_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36869,14 +38998,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG300_Whisper_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -36909,14 +39041,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_DrumPMAG556_60Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_DrumPMAG556_60Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -36947,6 +39082,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -36975,6 +39111,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37003,6 +39140,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37031,6 +39169,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -37058,6 +39197,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37084,6 +39224,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37110,6 +39251,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37136,6 +39278,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37162,6 +39305,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37188,6 +39332,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37214,6 +39359,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -37240,6 +39386,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Barrett Firearms",
             "manufacturerLogo": "assets/barrett-logo.png",
             "manufacturerUrl": "https://barrett.net/",
@@ -37268,7 +39415,8 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Mag_Glock_17Rnd",
@@ -37292,6 +39440,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -37318,6 +39467,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -37345,6 +39495,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
             "manufacturerUrl": "https://us.glock.com/",
@@ -37374,6 +39525,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37400,6 +39552,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37426,6 +39579,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -37456,6 +39610,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -37486,6 +39641,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37513,6 +39669,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Knight's Armament Company",
             "manufacturerLogo": "assets/kac-logo.png",
             "manufacturerUrl": "https://www.knightarmco.com/",
@@ -37543,6 +39700,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -37574,24 +39732,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_L7AWM_68x51_20Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_L7AWM_68x51_20Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37623,24 +39786,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_L7AWM_68x51_25Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_L7AWM_68x51_25Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37672,24 +39840,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_L7AWM_762x51_20Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_L7AWM_762x51_20Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37721,24 +39894,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_L7AWM_762x51_25Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_L7AWM_762x51_25Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -37766,6 +39944,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".45 ACP"
             ]
@@ -37792,6 +39971,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".45 ACP"
             ]
@@ -37818,6 +39998,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37844,6 +40025,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37870,6 +40052,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37897,6 +40080,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37923,6 +40107,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".408 CheyTac"
             ]
@@ -37949,6 +40134,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -37975,6 +40161,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -38001,6 +40188,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -38027,6 +40215,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38055,6 +40244,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".338 Lapua"
             ]
@@ -38081,6 +40271,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -38107,6 +40298,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -38136,6 +40328,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -38165,6 +40358,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -38194,6 +40388,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -38223,6 +40418,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "4.6x30mm"
             ]
@@ -38249,6 +40445,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -38275,6 +40472,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -38302,6 +40500,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -38328,6 +40527,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 Win"
             ]
@@ -38354,6 +40554,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 Win"
             ]
@@ -38380,6 +40581,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Remington Arms",
             "manufacturerLogo": "assets/remington-logo.png",
             "manufacturerUrl": "https://www.remarms.com/",
@@ -38409,6 +40611,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 Win"
             ]
@@ -38435,6 +40638,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.7x28mm"
             ]
@@ -38461,6 +40665,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK"
             ]
@@ -38487,6 +40692,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -38513,6 +40719,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38540,6 +40747,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38567,6 +40775,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38594,6 +40803,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38621,6 +40831,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38648,6 +40859,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -38675,6 +40887,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
             "manufacturerUrl": "https://www.heckler-koch.com/en",
@@ -38709,14 +40922,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_40Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_PMAG_40Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38750,19 +40966,23 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_PMAG_556x45_W_30Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38796,19 +41016,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_68x51_20Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_PMAG_68x51_20Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_PMAG_68x51_20Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38842,14 +41066,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_68x51_25Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_PMAG_68x51_25Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -38881,19 +41108,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_762x51_20Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_PMAG_762x51_20Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_PMAG_762x51_20Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38927,19 +41158,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_762x51_25Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Mag_PMAG_762x51_25Rnd_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_PMAG_762x51_25Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -38973,14 +41208,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_PMAG_Gen3_545_30Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -39013,14 +41251,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_PMAG_Gen3_762x39_30Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Magpul Industries",
             "manufacturerUrl": "https://magpul.com/",
             "calibers": [
@@ -39050,6 +41291,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -39076,6 +41318,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -39103,6 +41346,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -39129,6 +41373,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x25mm"
             ]
@@ -39156,6 +41401,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x25mm"
             ]
@@ -39182,6 +41428,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x39mm"
             ]
@@ -39208,6 +41455,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "5.45x39mm"
             ]
@@ -39234,6 +41482,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -39260,6 +41509,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -39286,6 +41536,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -39312,6 +41563,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -39339,6 +41591,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -39369,14 +41622,17 @@ const attachmentData = {
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_SCAR_H_20Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_SCAR_H_20Rnd_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 "6.8x51mm",
                 "7.62x51mm"
@@ -39408,14 +41664,17 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Mag_SCAR_L_30Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Mag_SCAR_L_30Rnd_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -39443,6 +41702,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x21mm"
             ]
@@ -39469,6 +41729,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x21mm"
             ]
@@ -39495,6 +41756,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x21mm"
             ]
@@ -39521,6 +41783,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x39mm"
             ]
@@ -39548,6 +41811,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/",
             "calibers": [
@@ -39577,6 +41841,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -39605,6 +41870,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -39632,6 +41898,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -39660,6 +41927,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".300 BLK",
                 "5.56x45mm"
@@ -39687,6 +41955,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
             "manufacturerUrl": "https://www.colt.com/",
@@ -39718,6 +41987,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "SureFire",
             "manufacturerUrl": "https://www.surefire.com/",
             "calibers": [
@@ -39747,6 +42017,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39773,6 +42044,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39799,6 +42071,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39825,6 +42098,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39851,6 +42125,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39881,19 +42156,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_SVT_AVT_10Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Mag_SVT_AVT_10Rnd_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Mag_SVT_AVT_10Rnd_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39924,19 +42203,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_SVT_AVT_15Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Mountain Flora",
                     "id": "SMPZ_Mag_SVT_AVT_15Rnd_Mountain_Flora",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "SURPAT",
                     "id": "SMPZ_Mag_SVT_AVT_15Rnd_SURPAT",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x54mmR"
             ]
@@ -39963,6 +42246,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -39989,6 +42273,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -40015,6 +42300,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -40041,6 +42327,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "12 Gauge"
             ]
@@ -40067,6 +42354,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "9x19mm"
             ]
@@ -40097,14 +42385,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Mag_TRG_M10_8Rnd",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Mag_TRG_M10_8Rnd_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "calibers": [
                 ".338 Lapua"
             ]
@@ -40131,6 +42422,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/",
             "calibers": [
@@ -40160,6 +42452,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "manufacturer": "Troy Industries",
             "manufacturerUrl": "https://worldoftroy.com/",
             "calibers": [
@@ -40189,6 +42482,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x25mm"
             ]
@@ -40215,6 +42509,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "4.6x30mm"
             ]
@@ -40241,6 +42536,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".45 ACP"
             ]
@@ -40267,6 +42563,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".45 ACP"
             ]
@@ -40293,6 +42590,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM",
                 "7.62x39mm"
@@ -40320,6 +42618,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -40346,6 +42645,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 "7.62x51mm"
             ]
@@ -40372,6 +42672,7 @@ const attachmentData = {
                 "MagPouch2",
                 "MagPouch3"
             ],
+            "canBePainted": false,
             "calibers": [
                 ".366 TKM"
             ]
@@ -40397,7 +42698,8 @@ const attachmentData = {
                 "MagPouch1",
                 "MagPouch2",
                 "MagPouch3"
-            ]
+            ],
+            "canBePainted": false
         }
     ],
     "optic_scope": [
@@ -40424,7 +42726,8 @@ const attachmentData = {
                 "weaponOptics",
                 "weaponFlashlightFirst",
                 "weaponFlashlightSecond"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Burris_FullField_TAC30",
@@ -40453,7 +42756,8 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_EOTECH_G33_Magnifier",
@@ -40481,14 +42785,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_EOTECH_G33_Magnifier",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_EOTECH_G33_Magnifier_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -40518,6 +42825,7 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "canBePainted": false,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -40556,14 +42864,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_EOTECH_Vudu",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE Mount",
                     "id": "SMPZ_Optics_EOTECH_Vudu_MountFDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": false,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -40601,19 +42912,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_Elcan_Specter",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_Elcan_Specter_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Tan",
                     "id": "SMPZ_Optics_Elcan_Specter_Tan",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
-            ]
+            ],
+            "canBePainted": true
         },
         {
             "id": "SMPZ_Optics_F2000",
@@ -40634,7 +42949,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOptics",
                 "weaponOpticsSecond"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_G36_HKV_3x",
@@ -40654,7 +42970,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "G36Optic"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_12x50",
@@ -40687,7 +43004,8 @@ const attachmentData = {
             "attachmentSlots": [
                 "RAPTAR",
                 "RAPTARSecond"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_25x56",
@@ -40716,7 +43034,8 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_HK_PM_II_8x24",
@@ -40749,14 +43068,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_HK_PM_II_8x24",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "FDE Mount",
                     "id": "SMPZ_Optics_HK_PM_II_8x24_MountFDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Helsoldt_FF4_16x56",
@@ -40785,7 +43107,8 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Leupold_HAMR",
@@ -40814,6 +43137,7 @@ const attachmentData = {
                 "M32Optics",
                 "weaponOpticsKobra"
             ],
+            "canBePainted": false,
             "manufacturer": "Leupold & Stevens",
             "manufacturerUrl": "https://www.leupold.com/"
         },
@@ -40845,6 +43169,7 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "canBePainted": false,
             "manufacturer": "Leupold & Stevens",
             "manufacturerUrl": "https://www.leupold.com/"
         },
@@ -40875,7 +43200,8 @@ const attachmentData = {
                 "MK1Optics",
                 "MK12Optics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Nightforce_ATACR_35x56",
@@ -40909,14 +43235,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_Nightforce_ATACR_35x56",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Optics_Nightforce_ATACR_35x56_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Nightforce Optics",
             "manufacturerUrl": "https://www.nightforceoptics.com/"
         },
@@ -40941,7 +43270,8 @@ const attachmentData = {
             ],
             "attachmentSlots": [
                 "BatteryD"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_SIG_Bravo4",
@@ -40969,6 +43299,7 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -40999,6 +43330,7 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -41034,24 +43366,29 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_SIG_Tango6T",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "MultiCam Alpine",
                     "id": "SMPZ_Optics_SIG_Tango6T_Alpine",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Optics_SIG_Tango6T_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "UCP",
                     "id": "SMPZ_Optics_SIG_Tango6T_UCP",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -41074,7 +43411,8 @@ const attachmentData = {
             "itemSlots": 3,
             "inventorySlots": [
                 "SVTOptic"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_SwampFox_Prism",
@@ -41105,7 +43443,8 @@ const attachmentData = {
                 "MK12Optics",
                 "GlockOptics",
                 "weaponOpticsKobra"
-            ]
+            ],
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Vortex_Razor",
@@ -41138,19 +43477,23 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_Vortex_Razor",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Optics_Vortex_Razor_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE Mount",
                     "id": "SMPZ_Optics_Vortex_Razor_MountFDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": false
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Vortex Optics",
             "manufacturerUrl": "https://vortexoptics.com/"
         }
@@ -41176,6 +43519,7 @@ const attachmentData = {
                 "AimpointACRO"
             ],
             "subCategory": "micro_dot",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -41214,6 +43558,7 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -41238,6 +43583,7 @@ const attachmentData = {
                 "HydraOptics"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -41262,6 +43608,7 @@ const attachmentData = {
                 "AimpointT1"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/"
         },
@@ -41298,7 +43645,8 @@ const attachmentData = {
                 "weaponOpticsKobra",
                 "UNITYTOptics"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Burris_FastFire3_FFP",
@@ -41320,7 +43668,8 @@ const attachmentData = {
                 "pistolOptics",
                 "FFP3"
             ],
-            "subCategory": "micro_dot"
+            "subCategory": "micro_dot",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_EKP_1S",
@@ -41341,7 +43690,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "subCategory": "dovetail"
+            "subCategory": "dovetail",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_EOTECH_553",
@@ -41380,14 +43730,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_EOTECH_553",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_EOTECH_553_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -41433,14 +43786,17 @@ const attachmentData = {
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_EOTECH_EXPS3",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "Black",
                     "id": "SMPZ_Optics_EOTECH_EXPS3_Black",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -41479,6 +43835,7 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "EOTech",
             "manufacturerUrl": "https://www.eotechinc.com/"
         },
@@ -41516,7 +43873,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_MRS",
@@ -41550,7 +43908,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Milkor_M32_M2A1_Reflex",
@@ -41577,6 +43936,7 @@ const attachmentData = {
                 "weaponFlashlightThird"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Milkor USA",
             "manufacturerLogo": "assets/milkor-logo.png",
             "manufacturerUrl": "https://milkorusa.com/"
@@ -41600,7 +43960,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "subCategory": "dovetail"
+            "subCategory": "dovetail",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_OKP7",
@@ -41634,7 +43995,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_OKP7_Dovetail",
@@ -41656,7 +44018,8 @@ const attachmentData = {
                 "weaponOpticsAK",
                 "MK12Optics"
             ],
-            "subCategory": "dovetail"
+            "subCategory": "dovetail",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_P90_Reflex_Optic",
@@ -41677,7 +44040,8 @@ const attachmentData = {
             "inventorySlots": [
                 "P90Optic"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_PKAA",
@@ -41698,7 +44062,8 @@ const attachmentData = {
             "inventorySlots": [
                 "weaponOpticsAK"
             ],
-            "subCategory": "dovetail"
+            "subCategory": "dovetail",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_RMR",
@@ -41721,6 +44086,7 @@ const attachmentData = {
                 "noMountRMROptics"
             ],
             "subCategory": "micro_dot",
+            "canBePainted": false,
             "manufacturer": "Trijicon",
             "manufacturerUrl": "https://www.trijicon.com/"
         },
@@ -41745,6 +44111,7 @@ const attachmentData = {
                 "HydraOptics"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -41784,6 +44151,7 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -41823,6 +44191,7 @@ const attachmentData = {
                 "weaponOpticsKobra"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "SIG Sauer",
             "manufacturerLogo": "assets/sigsauer-logo.png",
             "manufacturerUrl": "https://www.sigsauer.com/"
@@ -41848,6 +44217,7 @@ const attachmentData = {
                 "OpticsOnAKHndgrd"
             ],
             "subCategory": "picatinny",
+            "canBePainted": false,
             "manufacturer": "Steiner Optics",
             "manufacturerUrl": "https://www.steiner-optics.com/"
         },
@@ -41871,7 +44241,8 @@ const attachmentData = {
                 "pistolOptics",
                 "noMountRMROptics"
             ],
-            "subCategory": "micro_dot"
+            "subCategory": "micro_dot",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Trijicon_SRO",
@@ -41898,14 +44269,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_Trijicon_SRO",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_Trijicon_SRO_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Trijicon",
             "manufacturerUrl": "https://www.trijicon.com/"
         },
@@ -41929,7 +44303,8 @@ const attachmentData = {
                 "weaponOptics",
                 "OpticsOnAKHndgrd"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Valday_PK120",
@@ -41963,7 +44338,8 @@ const attachmentData = {
                 "MK12Optics",
                 "weaponOpticsKobra"
             ],
-            "subCategory": "picatinny"
+            "subCategory": "picatinny",
+            "canBePainted": false
         },
         {
             "id": "SMPZ_Optics_Vortex_UH1",
@@ -42003,14 +44379,17 @@ const attachmentData = {
                 {
                     "name": "기본형",
                     "id": "SMPZ_Optics_Vortex_UH1",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 },
                 {
                     "name": "FDE",
                     "id": "SMPZ_Optics_Vortex_UH1_FDE",
-                    "image": ""
+                    "image": "",
+                    "canBePainted": true
                 }
             ],
+            "canBePainted": true,
             "manufacturer": "Vortex Optics",
             "manufacturerUrl": "https://vortexoptics.com/"
         }

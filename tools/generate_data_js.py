@@ -243,6 +243,46 @@ def google_translate(text, target_lang='ko', source_lang='auto'):
         print(f"[번역] 경고: {e}")
         return clean_text
 
+def parse_paint_recipes(smpz_dir):
+    smpz_class_re = re.compile(r'"(SMPZ_[A-Za-z0-9_]+)"')
+    paintable_classes = set()
+    c_files = glob.glob(os.path.join(smpz_dir, '**', '*.c'), recursive=True)
+
+    paint_files_count = 0
+    for f in c_files:
+        fl = f.lower()
+        is_paint_file = False
+        if os.path.sep + 'paint' + os.path.sep in fl or '/paint/' in fl or '\\paint\\' in fl:
+            is_paint_file = True
+        elif 'paint' in os.path.basename(fl):
+            is_paint_file = True
+        else:
+            try:
+                with open(f, 'r', encoding='utf-8', errors='ignore') as fp:
+                    head = fp.read(1500)
+                    if 'RecipeBase' in head and ('Spraycan' in head or 'Paint' in head or 'paint' in head):
+                        is_paint_file = True
+            except Exception:
+                continue
+
+        if not is_paint_file or 'pluginrecipesmanager' in fl:
+            continue
+
+        paint_files_count += 1
+        try:
+            with open(f, 'r', encoding='utf-8', errors='ignore') as fp:
+                content = fp.read()
+        except Exception:
+            continue
+
+        matches = smpz_class_re.findall(content)
+        for m in matches:
+            if not m.startswith('SMPZ_Spraycan'):
+                paintable_classes.add(m)
+
+    print(f"[*] 도색 레시피({paint_files_count}개 스크립트 파일) 파싱 완료: 도색 가능 클래스 {len(paintable_classes)}개 추출")
+    return paintable_classes
+
 # ---------------------------------------------------------------------------
 # C++ PARSING ENGINE
 # ---------------------------------------------------------------------------
@@ -1380,6 +1420,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"[*] 메타데이터 항목 {len(metadata)}개 로드 완료: {metadata_js_path}")
     print(f"[*] 캐시된 구글 번역 {len(google_cache)}개 로드 완료.")
 
+    paintable_classes = parse_paint_recipes(smpz_dir)
+
     # 2. Parse C++ Classes across SMPZ packages
     target_dirs = ['SMPZ_Weapons', 'SMPZ_More_Weapons', 'SMPZ_More_Attachment', 'SMPZ_Gears']
     all_classes = {}
@@ -1423,7 +1465,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'stock_types': 0,
         'muzzle_types': 0,
         'suppressor_types': 0,
-        'colors_linked': 0
+        'colors_linked': 0,
+        'paintable_items': 0
     }
 
     def resolve_desc(item_obj, props):
@@ -1561,15 +1604,25 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
+        is_base_paintable = cname in paintable_classes
         if cname in weapon_color_map:
             variants = weapon_color_map[cname]
             base_col = extract_color_from_name(raw_disp_name) or '기본형'
             base_img = file_map.get(cname.lower(), '')
+            formatted_vars = []
+            for v in variants:
+                formatted_vars.append({
+                    'name': v['name'],
+                    'id': v['id'],
+                    'image': v['image'],
+                    'canBePainted': v['id'] in paintable_classes
+                })
             item_obj['color'] = [{
                 'name': base_col,
                 'id': cname,
-                'image': base_img
-            }] + variants
+                'image': base_img,
+                'canBePainted': is_base_paintable
+            }] + formatted_vars
             stats_summary['colors_linked'] += 1
         elif cname != 'SMPZ_Weapon_UCP':
             single_col = extract_color_for_item(cname, raw_disp_name)
@@ -1579,10 +1632,16 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_obj['color'] = [{
                     'name': single_col,
                     'id': cname,
-                    'image': base_img
+                    'image': base_img,
+                    'canBePainted': is_base_paintable
                 }]
                 item_obj['name'] = cleaned_n
                 stats_summary['colors_linked'] += 1
+
+        has_paint = is_base_paintable or (isinstance(item_obj.get('color'), list) and any(c.get('canBePainted') for c in item_obj['color']))
+        item_obj['canBePainted'] = has_paint
+        if has_paint:
+            stats_summary['paintable_items'] += 1
 
         fallback_ids = [v['id'] for v in weapon_color_map.get(cname, [])]
         _merge_manual_fields(item_obj, metadata, fallback_ids=fallback_ids)
@@ -1662,6 +1721,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
+        is_base_paintable = chosen_id in paintable_classes
         if len(kids) > 1:
             gear_colors = []
             for k in kids:
@@ -1672,7 +1732,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 gear_colors.append({
                     'name': k_col,
                     'id': k,
-                    'image': file_map.get(k.lower(), '')
+                    'image': file_map.get(k.lower(), ''),
+                    'canBePainted': k in paintable_classes
                 })
             item_obj['color'] = gear_colors
             stats_summary['colors_linked'] += 1
@@ -1683,10 +1744,16 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_obj['color'] = [{
                     'name': single_col,
                     'id': chosen_id,
-                    'image': file_map.get(chosen_id.lower(), '')
+                    'image': file_map.get(chosen_id.lower(), ''),
+                    'canBePainted': is_base_paintable
                 }]
                 item_obj['name'] = cleaned_n
                 stats_summary['colors_linked'] += 1
+
+        has_paint = is_base_paintable or (isinstance(item_obj.get('color'), list) and any(c.get('canBePainted') for c in item_obj['color']))
+        item_obj['canBePainted'] = has_paint
+        if has_paint:
+            stats_summary['paintable_items'] += 1
 
         _merge_manual_fields(item_obj, metadata, fallback_ids=kids)
         resolve_desc(item_obj, props)
@@ -1844,15 +1911,25 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
             item_obj['model'] = m_mdl
             stats_summary['models_linked'] += 1
 
+        is_base_paintable = cname in paintable_classes
         if cname in att_color_map:
             variants = att_color_map[cname]
             base_col = extract_color_from_name(raw_disp_name) or '기본형'
             base_img = file_map.get(cname.lower(), '')
+            formatted_vars = []
+            for v in variants:
+                formatted_vars.append({
+                    'name': v['name'],
+                    'id': v['id'],
+                    'image': v['image'],
+                    'canBePainted': v['id'] in paintable_classes
+                })
             item_obj['color'] = [{
                 'name': base_col,
                 'id': cname,
-                'image': base_img
-            }] + variants
+                'image': base_img,
+                'canBePainted': is_base_paintable
+            }] + formatted_vars
             stats_summary['colors_linked'] += 1
         else:
             single_col = extract_color_for_item(cname, raw_disp_name)
@@ -1862,10 +1939,16 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
                 item_obj['color'] = [{
                     'name': single_col,
                     'id': cname,
-                    'image': base_img
+                    'image': base_img,
+                    'canBePainted': is_base_paintable
                 }]
                 item_obj['name'] = cleaned_n
                 stats_summary['colors_linked'] += 1
+
+        has_paint = is_base_paintable or (isinstance(item_obj.get('color'), list) and any(c.get('canBePainted') for c in item_obj['color']))
+        item_obj['canBePainted'] = has_paint
+        if has_paint:
+            stats_summary['paintable_items'] += 1
 
         fallback_ids = [v['id'] for v in att_color_map.get(cname, [])]
         _merge_manual_fields(item_obj, metadata, fallback_ids=fallback_ids)
@@ -1891,6 +1974,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 지원 색상(color) 그룹화 연동:  {stats_summary['colors_linked']}개")
+    print(f"    - 도색 가능(canBePainted) 연동:   {stats_summary['paintable_items']}개")
     print(f"    - 마운트 하위 분류(mountType):   {stats_summary['mount_types']}개")
     print(f"    - 기계식 조준기 분류(sightType): {stats_summary['ironsight_types']}개")
     print(f"    - 권총 손잡이 분류(gripPlatform): {stats_summary['pistolgrip_types']}개")

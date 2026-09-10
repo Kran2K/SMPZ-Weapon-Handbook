@@ -1475,6 +1475,20 @@ body {
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
 }
 
+.paint-status-chip.paint-status-yes {
+    background: rgba(46, 204, 113, 0.15);
+    border-color: rgba(46, 204, 113, 0.45);
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.paint-status-chip.paint-status-no {
+    background: rgba(231, 76, 60, 0.12);
+    border-color: rgba(231, 76, 60, 0.35);
+    color: #e74c3c;
+    font-weight: 500;
+}
+
 /* 기어 필터 충전 패널 */
 .gear-filter-charge-panel {
     width: 100%;

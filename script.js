@@ -1502,6 +1502,9 @@ const DataParsers = {
     },
     has3dModel: (item) => {
         return Boolean(item?.model || item?.model3d);
+    },
+    canBePainted: (item) => {
+        return Boolean(item?.canBePainted || (Array.isArray(item?.color) && item.color.some(c => c.canBePainted))) ? 1 : 0;
     }
 };
 
@@ -1549,6 +1552,14 @@ const SORT_METRICS = {
         parser: DataParsers.itemSlots,
         defaultOrder: 'asc',
         badge: (item, val) => val ? `${val}칸` : null
+    },
+    can_be_painted: {
+        id: 'can_be_painted',
+        label: '도색 가능',
+        group: 'common',
+        parser: DataParsers.canBePainted,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? '도색 가능' : null
     },
 
     // 기어 수납
@@ -1875,6 +1886,15 @@ const STATIC_FILTER_CHIPS = [
         group: 'gear',
         panels: ['gear'],
         filter: (item) => (DataParsers.cargoSlots(item) || 0) > 0
+    },
+
+    // 3. 공통: 도색 가능 필터
+    {
+        id: 'can_be_painted',
+        label: '도색 가능',
+        group: 'paint',
+        panels: ['weapon', 'gear', 'attachment'],
+        filter: (item) => Boolean(item?.canBePainted || (Array.isArray(item?.color) && item.color.some(c => c.canBePainted)))
     }
 ];
 
@@ -1963,6 +1983,9 @@ function hasAnyValidValueForMetric(items, metric) {
             const val = metric.parser ? metric.parser(item) : null;
             return val !== null && val > 0;
         });
+    }
+    if (metric.id === 'can_be_painted') {
+        return items.some(item => Boolean(item?.canBePainted || (Array.isArray(item?.color) && item.color.some(c => c.canBePainted))));
     }
 
     return items.some(item => {
@@ -2134,7 +2157,50 @@ function createSubCategoryChipsRow(labelTitle, prefix, types, itemsToCheck) {
 
     row.appendChild(chipsWrap);
     wrap.appendChild(row);
+
+    const paintRow = createPaintFilterRow(itemsToCheck);
+    if (paintRow) {
+        wrap.appendChild(paintRow);
+    }
+
     return wrap;
+}
+
+function createPaintFilterRow(itemsToCheck) {
+    const paintChip = STATIC_FILTER_CHIPS.find(c => c.id === 'can_be_painted');
+    if (!paintChip || !itemsToCheck.some(it => paintChip.filter(it))) return null;
+
+    const row = document.createElement('div');
+    row.className = 'grid-filter-row';
+
+    const label = document.createElement('span');
+    label.className = 'grid-filter-row-label';
+    label.textContent = '특성:';
+    row.appendChild(label);
+
+    const chipsWrap = document.createElement('div');
+    chipsWrap.className = 'grid-filter-chips-list';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `grid-filter-chip ${currentGridActiveChips.has(paintChip.id) ? 'active' : ''}`;
+    btn.dataset.chipId = paintChip.id;
+    btn.innerHTML = `<span>${paintChip.label}</span>`;
+
+    btn.addEventListener('click', () => {
+        if (currentGridActiveChips.has(paintChip.id)) {
+            currentGridActiveChips.delete(paintChip.id);
+            btn.classList.remove('active');
+        } else {
+            currentGridActiveChips.add(paintChip.id);
+            btn.classList.add('active');
+        }
+        applyGridSortAndFilters();
+    });
+
+    chipsWrap.appendChild(btn);
+    row.appendChild(chipsWrap);
+    return row;
 }
 
 // 빠른 필터 칩 바 갱신
@@ -2238,6 +2304,11 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
             wrap.appendChild(modeRow);
         }
 
+        const paintRow = createPaintFilterRow(itemsToCheck);
+        if (paintRow) {
+            wrap.appendChild(paintRow);
+        }
+
         container.appendChild(wrap);
         return;
     }
@@ -2289,11 +2360,16 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
             wrap.appendChild(calRow);
         }
 
+        const paintRow = createPaintFilterRow(itemsToCheck);
+        if (paintRow) {
+            wrap.appendChild(paintRow);
+        }
+
         container.appendChild(wrap);
         return;
     }
 
-    // 3. 기어 탭: 방탄 / 수납 공간 보유
+    // 3. 기어 탭: 방탄 / 수납 공간 보유 / 도색 가능
     if (isGearView) {
         if (categoryKey === 'helmet_attachment' || categoryKey === '헬멧 부착물' || (itemsToCheck.length > 0 && itemsToCheck.every(it => it.category === 'helmet_attachment' || it.category === '헬멧 부착물'))) {
             const helmTypes = ['visor', 'armor_plate', 'mandible', 'other'];
@@ -2310,7 +2386,7 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         const chipsWrap = document.createElement('div');
         chipsWrap.className = 'grid-filter-chips-list';
 
-        const gearChips = STATIC_FILTER_CHIPS.filter(c => c.group === 'gear');
+        const gearChips = STATIC_FILTER_CHIPS.filter(c => c.group === 'gear' || c.group === 'paint');
         gearChips.forEach(chip => {
             if (!itemsToCheck.some(it => chip.filter(it))) return;
 
@@ -2439,6 +2515,15 @@ function updateFilterChipsBar(panelType, categoryKey, items) {
         container.appendChild(createSubCategoryChipsRow('소음기 규격', 'sup', suppressorTypes, itemsToCheck));
         return;
     }
+
+    // 14. 일반 카테고리 및 검색 뷰 기본 처리
+    const paintRow = createPaintFilterRow(itemsToCheck);
+    if (paintRow) {
+        const wrap = document.createElement('div');
+        wrap.className = 'grid-filter-groups';
+        wrap.appendChild(paintRow);
+        container.appendChild(wrap);
+    }
 }
 
 // 그리드 정렬 및 필터 적용 메인 파이프라인
@@ -2471,6 +2556,7 @@ function applyGridSortAndFilters() {
         const activeCalibers = [];
         const activeModes = [];
         const activeGear = [];
+        let activePaint = false;
         const activeSubFilters = new Map();
 
         currentGridActiveChips.forEach(chipId => {
@@ -2480,6 +2566,8 @@ function applyGridSortAndFilters() {
                 activeModes.push(chipId);
             } else if (chipId.startsWith('gear_') || chipId === 'is_armor' || chipId === 'is_storage') {
                 activeGear.push(chipId);
+            } else if (chipId === 'can_be_painted') {
+                activePaint = true;
             } else {
                 const underscoreIdx = chipId.indexOf('_');
                 if (underscoreIdx > 0) {
@@ -2530,6 +2618,12 @@ function applyGridSortAndFilters() {
                         return false;
                     }
                 }
+            }
+
+            // 2-5. 도색 가능 필터
+            if (activePaint) {
+                const passPaint = Boolean(item.canBePainted || (Array.isArray(item.color) && item.color.some(c => c.canBePainted)));
+                if (!passPaint) return false;
             }
 
             return true;
@@ -3342,8 +3436,37 @@ function appendItemSpecRows(statsList, item) {
         statsList.appendChild(row);
     }
 
-    // 지원 색상 (Color Variants)
+    // 도색 여부 (Can Be Painted)
+    const paintRow = document.createElement('div');
+    paintRow.className = 'weapon-stat-row weapon-stat-row-areas';
+
+    const paintLabel = document.createElement('span');
+    paintLabel.className = 'weapon-stat-label';
+    paintLabel.textContent = '도색 여부:';
+
+    const paintChipsWrap = document.createElement('div');
+    paintChipsWrap.className = 'protection-chips-wrapper';
+
+    const paintChip = document.createElement('span');
+    paintChip.className = 'protection-area-chip paint-status-chip';
+
     const colors = item.color;
+    const initialPaintStatus = (colors && colors.length > 0 && colors[0].canBePainted !== undefined)
+        ? Boolean(colors[0].canBePainted)
+        : Boolean(item.canBePainted);
+
+    function updatePaintBadge(isPaintable) {
+        paintChip.className = `protection-area-chip paint-status-chip ${isPaintable ? 'paint-status-yes' : 'paint-status-no'}`;
+        paintChip.textContent = isPaintable ? '가능' : '불가능';
+    }
+
+    updatePaintBadge(initialPaintStatus);
+    paintChipsWrap.appendChild(paintChip);
+    paintRow.appendChild(paintLabel);
+    paintRow.appendChild(paintChipsWrap);
+    statsList.appendChild(paintRow);
+
+    // 지원 색상 (Color Variants)
     if (colors && Array.isArray(colors) && colors.length > 0) {
         const row = document.createElement('div');
         row.className = 'weapon-stat-row weapon-stat-row-areas';
@@ -3373,6 +3496,10 @@ function appendItemSpecRows(statsList, item) {
                     if (mainImg) {
                         mainImg.src = c.image;
                     }
+                }
+
+                if (c.canBePainted !== undefined) {
+                    updatePaintBadge(Boolean(c.canBePainted));
                 }
             };
             chipsWrap.appendChild(chip);
