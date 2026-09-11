@@ -6947,7 +6947,18 @@ const weaponsData = {
             "image": "assets/sa58.png",
             "images": [
                 "assets/sa58.png"
-            ]
+            ],
+            "allowedAttachmentsBySlot": {
+                "SA58Handguard": [
+                    "SMPZ_Attachments_SA58_AIM_Sports_KeyMod_Hndgrd",
+                    "SMPZ_Attachments_SA58_AIM_Sports_MLOK_Hndgrd",
+                    "SMPZ_Attachments_SA58_Belgian_Style_Hndgrd",
+                    "SMPZ_Attachments_SA58_Original_Hndgrd",
+                    "SMPZ_Attachments_SA58_Quad_Rail_Full_Length_Hndgrd",
+                    "SMPZ_Attachments_SA58_Quad_Rail_Short_Length_Hndgrd",
+                    "SMPZ_Attachments_SA58_Vltor_CASV_Hndgrd"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_SCAR_H",
@@ -10299,7 +10310,25 @@ const weaponsData = {
             "barrelVariants": [],
             "manufacturer": "Beretta",
             "manufacturerLogo": "assets/beretta-logo.png",
-            "manufacturerUrl": "https://www.beretta.com/"
+            "manufacturerUrl": "https://www.beretta.com/",
+            "deniedAttachmentsBySlot": {
+                "GlockOptics": [
+                    "SMPZ_Optics_Aimpoint_CompM4",
+                    "SMPZ_Optics_BOSS",
+                    "SMPZ_Optics_Elcan_Specter_HCO",
+                    "SMPZ_Optics_EOTECH_553",
+                    "SMPZ_Optics_EOTECH_EXPS3",
+                    "SMPZ_Optics_EOTECH_XPS3",
+                    "SMPZ_Optics_MRS",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Romeo8T",
+                    "SMPZ_Optics_Steiner_R1X",
+                    "SMPZ_Optics_SwampFox_Prism",
+                    "SMPZ_Optics_Valday_PK120",
+                    "SMPZ_Optics_VOMZ_Pilad_P1x42",
+                    "SMPZ_Optics_Vortex_UH1"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_DeagleL5_357",
@@ -10796,7 +10825,18 @@ const weaponsData = {
             "canBePainted": false,
             "canAdjustBarrel": false,
             "barrelAdjustments": [],
-            "barrelVariants": []
+            "barrelVariants": [],
+            "deniedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Attachments_Burris_FastFire_Weaver_Mount",
+                    "SMPZ_Attachments_Elcan_Specter_RMR_Mount",
+                    "SMPZ_Attachments_FiveSeven_RMR_Mount",
+                    "SMPZ_Attachments_RMR_Mount",
+                    "SMPZ_Attachments_ROF90_RMR_Mount",
+                    "SMPZ_Attachments_Trijicon_ACOG_RMR_Mount",
+                    "SMPZ_Attachments_USP_Mount"
+                ]
+            }
         },
         {
             "id": "SMPZ_Weapon_TT33",
@@ -19855,7 +19895,15 @@ const attachmentData = {
                 "AKButtstock"
             ],
             "subCategory": "ak",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_AK74",
+                "SMPZ_Weapon_AK74N",
+                "SMPZ_Weapon_AKM",
+                "SMPZ_Weapon_AKMN",
+                "SMPZ_Weapon_RD704",
+                "SMPZ_Weapon_VPO136"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AK_EVO_Buttstock",
@@ -19967,7 +20015,15 @@ const attachmentData = {
             "subCategory": "ak",
             "canBePainted": false,
             "manufacturer": "Magpul Industries",
-            "manufacturerUrl": "https://magpul.com/"
+            "manufacturerUrl": "https://magpul.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_AK74",
+                "SMPZ_Weapon_AK74N",
+                "SMPZ_Weapon_AKM",
+                "SMPZ_Weapon_AKMN",
+                "SMPZ_Weapon_RD704",
+                "SMPZ_Weapon_VPO136"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AN94_Buttstock_Standard",
@@ -24231,7 +24287,14 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
-            "manufacturerUrl": "https://bravocompanyusa.com/"
+            "manufacturerUrl": "https://bravocompanyusa.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_7inch_Hndgrd",
@@ -24274,7 +24337,10 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
-            "manufacturerUrl": "https://bravocompanyusa.com/"
+            "manufacturerUrl": "https://bravocompanyusa.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_M4A1"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_KMR_KeyMod_9inch_Hndgrd",
@@ -24317,7 +24383,10 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Bravo Company MFG",
-            "manufacturerUrl": "https://bravocompanyusa.com/"
+            "manufacturerUrl": "https://bravocompanyusa.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_M4A1"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_BCM_MCMR_10inch_Hndgrd",
@@ -24410,7 +24479,12 @@ const attachmentData = {
             "inventorySlots": [
                 "M4Handguard"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Colt_M16A2_Hndgrd",
@@ -24436,7 +24510,12 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Colt",
             "manufacturerLogo": "assets/colt-logo.png",
-            "manufacturerUrl": "https://www.colt.com/"
+            "manufacturerUrl": "https://www.colt.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_DanielDefense_RIS_III_12_Hndgrd",
@@ -24649,7 +24728,15 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "allowedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_FSP_Hndgrd",
@@ -24680,7 +24767,13 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_III_13_FSP",
@@ -24727,6 +24820,11 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Daniel Defense",
             "manufacturerUrl": "https://danieldefense.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ],
             "deniedAttachmentsBySlot": {
                 "GripCASV": [
                     "SMPZ_Attachments_CQR_Grip"
@@ -24762,7 +24860,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
@@ -24803,7 +24906,12 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
@@ -24850,7 +24958,13 @@ const attachmentData = {
             ],
             "canBePainted": true,
             "manufacturer": "Daniel Defense",
-            "manufacturerUrl": "https://danieldefense.com/"
+            "manufacturerUrl": "https://danieldefense.com/",
+            "deniedParents": [
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Geissele_SMR_MK4_13_Hndgrd",
@@ -24929,7 +25043,15 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_14inch_Hndgrd",
@@ -24958,7 +25080,15 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M16A1",
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M16A3",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA",
+                "SMPZ_Weapon_TX15"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_Javelin_16inch_Hndgrd",
@@ -24987,7 +25117,13 @@ const attachmentData = {
                 "weaponFlashlightThird",
                 "Bipod"
             ],
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedParents": [
+                "SMPZ_Weapon_M16A2",
+                "SMPZ_Weapon_M4A1",
+                "SMPZ_Weapon_Radian_Weapons_Model1",
+                "SMPZ_Weapon_Radian_Weapons_Model1_FA"
+            ]
         },
         {
             "id": "SMPZ_Attachments_AR15_KAC_FF_RAS_Hndgrd",
@@ -34106,7 +34242,21 @@ const attachmentData = {
                 "ARpistolgrip"
             ],
             "subCategory": "ak",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "ARpistolgrip": [
+                    "SMPZ_Attachments_DLG123_pistolgrip",
+                    "SMPZ_Attachments_Ergo_pistolgrip",
+                    "SMPZ_Attachments_HG15_pistolgrip",
+                    "SMPZ_Attachments_HK_BattleGrip_Beavertail_pistolgrip",
+                    "SMPZ_Attachments_Magpul_MOE_K2_pistolgrip",
+                    "SMPZ_Attachments_MOE_pistolgrip",
+                    "SMPZ_Attachments_Naroh_pistolgrip",
+                    "SMPZ_Attachments_SIG_MCX_pistolgrip",
+                    "SMPZ_Attachments_SIG_Reduced_Angle_pistolgrip",
+                    "SMPZ_Attachments_Stark_pistolgrip"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_AK_EPG_pistolgrip",
@@ -36134,7 +36284,41 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
-            "manufacturerUrl": "https://fnherstal.com/"
+            "manufacturerUrl": "https://fnherstal.com/",
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
+                    "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_AccA_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
+                    "SMPZ_Attachments_OMM_Riser_Mount",
+                    "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
+                    "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
+                    "SMPZ_Attachments_Unity_FAST_Riser_Mount",
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_PP19_Cover",
@@ -36849,7 +37033,12 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Aimpoint",
             "manufacturerUrl": "https://www.aimpoint.com/",
-            "allowedParents": []
+            "allowedParents": [
+                "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
+                "SMPZ_Attachments_Aimpoint_Standard_Mount",
+                "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
+                "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Aimpoint_Standard_Mount",
@@ -36923,7 +37112,12 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_Burris_FastFire3_FFP"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_CASV_4_Rail",
@@ -37049,7 +37243,14 @@ const attachmentData = {
             "subCategory": "scope_mount",
             "canBePainted": false,
             "manufacturer": "Trijicon",
-            "manufacturerUrl": "https://www.trijicon.com/"
+            "manufacturerUrl": "https://www.trijicon.com/",
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_RMR",
+                    "SMPZ_Optics_SwampFox_Justice",
+                    "SMPZ_Optics_Trijicon_SRO"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_EraTac_Sunshade_Mount",
@@ -37099,7 +37300,14 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
-            "manufacturerUrl": "https://fnherstal.com/"
+            "manufacturerUrl": "https://fnherstal.com/",
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_RMR",
+                    "SMPZ_Optics_SwampFox_Justice",
+                    "SMPZ_Optics_Trijicon_SRO"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_G36_Flip_up_Rail",
@@ -37488,7 +37696,41 @@ const attachmentData = {
                 "weaponOptics"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
+                    "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_AccA_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
+                    "SMPZ_Attachments_OMM_Riser_Mount",
+                    "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
+                    "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
+                    "SMPZ_Attachments_Unity_FAST_Riser_Mount",
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_M1A_Arms18_Scope_Mount",
@@ -37906,7 +38148,41 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "FN Herstal",
             "manufacturerLogo": "assets/fnherstal-logo.png",
-            "manufacturerUrl": "https://fnherstal.com/"
+            "manufacturerUrl": "https://fnherstal.com/",
+            "deniedAttachmentsBySlot": {
+                "weaponOptics": [
+                    "SMPZ_Attachments_Aimpoint_Spacer_High_Mount",
+                    "SMPZ_Attachments_GBRS_Hydra_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_AccA_Riser_Mount",
+                    "SMPZ_Attachments_LaRue_LT101_Riser_Mount",
+                    "SMPZ_Attachments_OMM_Riser_Mount",
+                    "SMPZ_Attachments_ProMag_Delta_Scope_Mount",
+                    "SMPZ_Attachments_Scalarworks_LEAP_Riser_Mount",
+                    "SMPZ_Attachments_Unity_FAST_Riser_Mount",
+                    "SMPZ_Optics_AUG_A3_Optic",
+                    "SMPZ_Optics_Burris_FullField_TAC30",
+                    "SMPZ_Optics_Elcan_Specter",
+                    "SMPZ_Optics_EOTECH_HHS",
+                    "SMPZ_Optics_EOTECH_Vudu",
+                    "SMPZ_Optics_F2000",
+                    "SMPZ_Optics_G36_HKV_3x",
+                    "SMPZ_Optics_Helsoldt_FF4_16x56",
+                    "SMPZ_Optics_HK_PM_II_12x50",
+                    "SMPZ_Optics_HK_PM_II_25x56",
+                    "SMPZ_Optics_HK_PM_II_8x24",
+                    "SMPZ_Optics_KibaArms_Short_Prism",
+                    "SMPZ_Optics_Leupold_HAMR",
+                    "SMPZ_Optics_Leupold_Mark4_LR_65_20x50",
+                    "SMPZ_Optics_MarchTactical_3x24_FFP",
+                    "SMPZ_Optics_Monstrum_Marksman",
+                    "SMPZ_Optics_Nightforce_ATACR_35x56",
+                    "SMPZ_Optics_SIG_Bravo4",
+                    "SMPZ_Optics_SIG_Bravo5",
+                    "SMPZ_Optics_SIG_Tango6T",
+                    "SMPZ_Optics_Trijicon_ACOG_TA01NSN",
+                    "SMPZ_Optics_Vortex_Razor"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_PKM_PKP_Zenit_B50_66mm_Mount",
@@ -38046,7 +38322,14 @@ const attachmentData = {
             "subCategory": "scope_mount",
             "canBePainted": false,
             "manufacturer": "Trijicon",
-            "manufacturerUrl": "https://www.trijicon.com/"
+            "manufacturerUrl": "https://www.trijicon.com/",
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_RMR",
+                    "SMPZ_Optics_SwampFox_Justice",
+                    "SMPZ_Optics_Trijicon_SRO"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_ROF90_RMR_Mount",
@@ -38084,7 +38367,14 @@ const attachmentData = {
             ],
             "canBePainted": false,
             "manufacturer": "Geissele Automatics",
-            "manufacturerUrl": "https://geissele.com/"
+            "manufacturerUrl": "https://geissele.com/",
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_RMR",
+                    "SMPZ_Optics_SwampFox_Justice",
+                    "SMPZ_Optics_Trijicon_SRO"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_RPK16_Rearsight_Base_Mount",
@@ -38289,7 +38579,25 @@ const attachmentData = {
                 "weaponFlashlightThird"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "OpticsOnAKHndgrd": [
+                    "SMPZ_Optics_Aimpoint_CompM4",
+                    "SMPZ_Optics_BOSS",
+                    "SMPZ_Optics_Elcan_Specter_HCO",
+                    "SMPZ_Optics_EOTECH_553",
+                    "SMPZ_Optics_EOTECH_EXPS3",
+                    "SMPZ_Optics_EOTECH_XPS3",
+                    "SMPZ_Optics_MRS",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Romeo8T",
+                    "SMPZ_Optics_Steiner_R1X",
+                    "SMPZ_Optics_SwampFox_Prism",
+                    "SMPZ_Optics_Valday_PK120",
+                    "SMPZ_Optics_VOMZ_Pilad_P1x42",
+                    "SMPZ_Optics_Vortex_UH1"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_SVDS_Stock_Adapter",
@@ -38474,7 +38782,25 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Glock",
             "manufacturerLogo": "assets/glock-logo.png",
-            "manufacturerUrl": "https://us.glock.com/"
+            "manufacturerUrl": "https://us.glock.com/",
+            "deniedAttachmentsBySlot": {
+                "OpticsOnAKHndgrd": [
+                    "SMPZ_Optics_Aimpoint_CompM4",
+                    "SMPZ_Optics_BOSS",
+                    "SMPZ_Optics_Elcan_Specter_HCO",
+                    "SMPZ_Optics_EOTECH_553",
+                    "SMPZ_Optics_EOTECH_EXPS3",
+                    "SMPZ_Optics_EOTECH_XPS3",
+                    "SMPZ_Optics_MRS",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Romeo8T",
+                    "SMPZ_Optics_Steiner_R1X",
+                    "SMPZ_Optics_SwampFox_Prism",
+                    "SMPZ_Optics_Valday_PK120",
+                    "SMPZ_Optics_VOMZ_Pilad_P1x42",
+                    "SMPZ_Optics_Vortex_UH1"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_Trijicon_ACOG_RMR_Mount",
@@ -38496,7 +38822,14 @@ const attachmentData = {
                 "pistolOptics"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Optics_RMR",
+                    "SMPZ_Optics_SwampFox_Justice",
+                    "SMPZ_Optics_Trijicon_SRO"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_Trijicon_ACOG_TA51_Standard_Mount",
@@ -38577,7 +38910,25 @@ const attachmentData = {
                 "weaponFlashlight"
             ],
             "subCategory": "scope_mount",
-            "canBePainted": false
+            "canBePainted": false,
+            "deniedAttachmentsBySlot": {
+                "OpticsOnAKHndgrd": [
+                    "SMPZ_Optics_Aimpoint_CompM4",
+                    "SMPZ_Optics_BOSS",
+                    "SMPZ_Optics_Elcan_Specter_HCO",
+                    "SMPZ_Optics_EOTECH_553",
+                    "SMPZ_Optics_EOTECH_EXPS3",
+                    "SMPZ_Optics_EOTECH_XPS3",
+                    "SMPZ_Optics_MRS",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Romeo8T",
+                    "SMPZ_Optics_Steiner_R1X",
+                    "SMPZ_Optics_SwampFox_Prism",
+                    "SMPZ_Optics_Valday_PK120",
+                    "SMPZ_Optics_VOMZ_Pilad_P1x42",
+                    "SMPZ_Optics_Vortex_UH1"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_USP_Mount",
@@ -38602,7 +38953,25 @@ const attachmentData = {
             "canBePainted": false,
             "manufacturer": "Heckler & Koch",
             "manufacturerLogo": "assets/hk-logo.png",
-            "manufacturerUrl": "https://www.heckler-koch.com/en"
+            "manufacturerUrl": "https://www.heckler-koch.com/en",
+            "deniedAttachmentsBySlot": {
+                "OpticsOnAKHndgrd": [
+                    "SMPZ_Optics_Aimpoint_CompM4",
+                    "SMPZ_Optics_BOSS",
+                    "SMPZ_Optics_Elcan_Specter_HCO",
+                    "SMPZ_Optics_EOTECH_553",
+                    "SMPZ_Optics_EOTECH_EXPS3",
+                    "SMPZ_Optics_EOTECH_XPS3",
+                    "SMPZ_Optics_MRS",
+                    "SMPZ_Optics_OKP7",
+                    "SMPZ_Optics_SIG_Romeo8T",
+                    "SMPZ_Optics_Steiner_R1X",
+                    "SMPZ_Optics_SwampFox_Prism",
+                    "SMPZ_Optics_Valday_PK120",
+                    "SMPZ_Optics_VOMZ_Pilad_P1x42",
+                    "SMPZ_Optics_Vortex_UH1"
+                ]
+            }
         },
         {
             "id": "SMPZ_Attachments_Unity_FAST_Riser_Mount",
@@ -39987,7 +40356,64 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedParents": [
+                "SMPZ_Att_MP5_CAA_HX5_Hndgrd",
+                "SMPZ_Attachments_AK_ASPID_Hndgrd",
+                "SMPZ_Attachments_AK_UFM_Keymod_Hndgrd",
+                "SMPZ_Attachments_AK_Vltor_CMRD_KeyMod_Hndgrd",
+                "SMPZ_Attachments_AK_Zenit_B30B31_Hndgrd",
+                "SMPZ_Attachments_AR10_KAC_URX_2_12inch_Hndgrd",
+                "SMPZ_Attachments_AR10_SWS_Hndgrd",
+                "SMPZ_Attachments_AR10_SWS_Split_Hndgrd",
+                "SMPZ_Attachments_AR15_AlexanderArms_MK10_Hndgrd",
+                "SMPZ_Attachments_AR15_CAR15_Skinny_Hndgrd",
+                "SMPZ_Attachments_AR15_Daniel_Defense_RIS_FSP_Hndgrd",
+                "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12_FSP",
+                "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_12inch_Hndgrd",
+                "SMPZ_Attachments_AR15_Daniel_Defense_RIS_II_9inch_Hndgrd",
+                "SMPZ_Attachments_AR15_KAC_FF_RAS_Hndgrd",
+                "SMPZ_Attachments_AR15_KAC_M5_RAS_Hndgrd",
+                "SMPZ_Attachments_AR15_LVOA_C_Hndgrd",
+                "SMPZ_Attachments_AR15_LVOA_S_Hndgrd",
+                "SMPZ_Attachments_AR15_M4_KAC_RIS_Hndgrd",
+                "SMPZ_Attachments_AR15_Precision_Reflex_Gen3_Round_Hndgrd",
+                "SMPZ_Attachments_AUG_Corvus_Keymod_Rail",
+                "SMPZ_Attachments_CASV_SCAR_Hndgrd_Black",
+                "SMPZ_Attachments_F2000_Tri_Rail_Hndgrd",
+                "SMPZ_Attachments_G36_KAC_Quadrail_Hndgrd",
+                "SMPZ_Attachments_G36_Slimline_Hndgrd",
+                "SMPZ_Attachments_HK416_Extended_Hndgrd",
+                "SMPZ_Attachments_HK416_Hndgrd",
+                "SMPZ_Attachments_HK416_MRS_KeyMod_Hndgrd",
+                "SMPZ_Attachments_HK416A7_G95K_10inch_Hndgrd",
+                "SMPZ_Attachments_HK416A7_G95K_13inch_Hndgrd",
+                "SMPZ_Attachments_HK416A8_G95KA1_Hndgrd",
+                "SMPZ_Attachments_HK417_Hndgrd",
+                "SMPZ_Attachments_HK417_Hndgrd_EXT_FDE",
+                "SMPZ_Attachments_HK417_Hndgrd_Patrol_FDE",
+                "SMPZ_Attachments_Masada_Extended_KeyMod_Hndgrd",
+                "SMPZ_Attachments_Masada_Extended_QuadRail_Hndgrd",
+                "SMPZ_Attachments_MCX_12_KeyMod_Hndgrd",
+                "SMPZ_Attachments_MCX_8_KeyMod_Hndgrd",
+                "SMPZ_Attachments_PKM_PKP_Zenit_B50_Hndgrd",
+                "SMPZ_Attachments_SA58_AIM_Sports_KeyMod_Hndgrd",
+                "SMPZ_Attachments_SA58_Quad_Rail_Full_Length_Hndgrd",
+                "SMPZ_Attachments_SA58_Quad_Rail_Short_Length_Hndgrd",
+                "SMPZ_Attachments_SA58_Vltor_CASV_Hndgrd",
+                "SMPZ_Attachments_SA58_Vltor_CASV_Short_Hndgrd",
+                "SMPZ_Attachments_Saiga_Bravo_Hndgrd",
+                "SMPZ_Attachments_Saiga_Chaos_Hndgrd",
+                "SMPZ_Attachments_Saiga_HedonS_Hndgrd",
+                "SMPZ_Attachments_SVD_SAG_MK1_Chassis",
+                "SMPZ_Attachments_SVD_SAG_MK1_Chassis_Zryachiy",
+                "SMPZ_Weapon_AS1",
+                "SMPZ_Weapon_ASH12",
+                "SMPZ_Weapon_IWI_TavorX95",
+                "SMPZ_Weapon_PDW",
+                "SMPZ_Weapon_SCAR_H",
+                "SMPZ_Weapon_SCAR_L"
+            ]
         },
         {
             "id": "SMPZ_Attachments_Cobra_Grip",
@@ -46934,7 +47360,12 @@ const attachmentData = {
                     "canBePainted": true
                 }
             ],
-            "canBePainted": true
+            "canBePainted": true,
+            "allowedAttachmentsBySlot": {
+                "pistolOptics": [
+                    "SMPZ_Attachments_Elcan_Specter_RMR_Mount"
+                ]
+            }
         },
         {
             "id": "SMPZ_Optics_F2000",

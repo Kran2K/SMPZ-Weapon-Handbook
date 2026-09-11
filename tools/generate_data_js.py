@@ -972,7 +972,266 @@ def _extract_slot_checks(condition, method_body):
     return sorted(set(slots), key=str.lower)
 
 
-def _parse_attachment_method_rule(method_body, method_name, variable):
+def _extract_loops(code_text):
+    loops = []
+    loop_re = re.compile(r'\b(for|while)\s*\(')
+    pos = 0
+    while True:
+        m = loop_re.search(code_text, pos)
+        if not m:
+            break
+        cond_start = code_text.find('(', m.start())
+        cond_end = _find_balanced_end(code_text, cond_start, '(', ')')
+        if cond_end is None:
+            pos = m.end()
+            continue
+        stmt_start = cond_end
+        while stmt_start < len(code_text) and code_text[stmt_start].isspace():
+            stmt_start += 1
+        if stmt_start < len(code_text) and code_text[stmt_start] == '{':
+            stmt_end = _find_balanced_end(code_text, stmt_start, '{', '}')
+            if stmt_end is None:
+                pos = cond_end
+                continue
+            loop_body = code_text[stmt_start + 1:stmt_end - 1]
+            loops.append({
+                'type': m.group(1),
+                'condition': code_text[cond_start + 1:cond_end - 1],
+                'body': loop_body,
+                'start': m.start(),
+                'end': stmt_end
+            })
+            pos = stmt_end
+        else:
+            pos = cond_end
+    return loops
+
+
+def _extract_string_arrays(code_text):
+    arrays = {}
+    pattern = re.compile(
+        r'(?:(?:ref\s+|static\s+|const\s+|protected\s+)*array\s*<\s*string\s*>\s+)?\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{([^}]+)\};',
+        re.DOTALL
+    )
+    for m in pattern.finditer(code_text):
+        var_name = m.group(1)
+        raw_items = m.group(2)
+        items = re.findall(r'"([^"]+)"', raw_items)
+        if items:
+            arrays[var_name] = items
+    return arrays
+
+
+def _extract_any_method_body(class_body, method_name):
+    method_re = re.compile(
+        rf'\b(?:override\s+|protected\s+|private\s+)?(?:bool|void|int|string)\s+{re.escape(method_name)}\s*\([^)]*\)\s*\{{'
+    )
+    m = method_re.search(class_body)
+    if not m:
+        return None
+    start = m.end() - 1
+    end = _find_balanced_end(class_body, start)
+    if not end:
+        return None
+    return class_body[start + 1:end - 1]
+
+
+def _parse_array_and_helper_rules(method_body, method_name, variable, class_body=None):
+    allowed = set()
+    denied = set()
+    allowed_by_slot = {}
+    denied_by_slot = {}
+
+    method_arrays = _extract_string_arrays(method_body)
+    class_arrays = _extract_string_arrays(class_body) if class_body else {}
+    all_arrays = {**class_arrays, **method_arrays}
+
+    loops = _extract_loops(method_body)
+    for loop in loops:
+        loop_body = loop['body']
+        arr_name = None
+        direct_m = re.search(
+            rf'\b{re.escape(variable)}\s*\.\s*IsKindOf\s*\(\s*([A-Za-z0-9_]+)(?:\.Get\s*\([^)]+\)|\[[^\]]+\])?\s*\)',
+            loop_body
+        )
+        if direct_m and direct_m.group(1) in all_arrays:
+            arr_name = direct_m.group(1)
+        else:
+            assign_m = re.search(
+                r'\b([A-Za-z0-9_]+)\s*=\s*([A-Za-z0-9_]+)(?:\.Get\s*\([^)]+\)|\[[^\]]+\])\s*;',
+                loop_body
+            )
+            if assign_m:
+                temp_var, potential_arr = assign_m.group(1), assign_m.group(2)
+                if potential_arr in all_arrays and re.search(rf'\b{re.escape(variable)}\s*\.\s*IsKindOf\s*\(\s*{re.escape(temp_var)}\s*\)', loop_body):
+                    arr_name = potential_arr
+
+        if not arr_name:
+            continue
+        arr_items = all_arrays.get(arr_name, [])
+        if not arr_items:
+            continue
+
+        inner_ret = re.search(r'return\s+(true|false)\s*;', loop_body)
+        if not inner_ret:
+            continue
+        outcome = inner_ret.group(1)
+
+        code_before = method_body[:loop['start']]
+        enclosing_slots = []
+        pos = 0
+        if_re = re.compile(r'\bif\s*\(')
+        while True:
+            m = if_re.search(code_before, pos)
+            if not m:
+                break
+            c_start = code_before.find('(', m.start())
+            c_end = _find_balanced_end(code_before, c_start, '(', ')')
+            if not c_end:
+                break
+            cond = code_before[c_start+1:c_end-1]
+            b_start = c_end
+            while b_start < len(code_before) and code_before[b_start].isspace():
+                b_start += 1
+            if b_start < len(code_before) and code_before[b_start] == '{':
+                b_end = _find_balanced_end(code_before, b_start)
+                if b_end is None or b_end > loop['start']:
+                    s = _extract_slot_checks(cond, method_body)
+                    if s:
+                        enclosing_slots.extend(s)
+            pos = c_end
+
+        if outcome == 'true':
+            if enclosing_slots:
+                for s in set(enclosing_slots):
+                    allowed_by_slot.setdefault(s, set()).update(arr_items)
+            else:
+                allowed.update(arr_items)
+        elif outcome == 'false':
+            if enclosing_slots:
+                for s in set(enclosing_slots):
+                    denied_by_slot.setdefault(s, set()).update(arr_items)
+            else:
+                denied.update(arr_items)
+
+    for condition, branch_body, ancestors in _extract_if_branches(method_body):
+        find_m = re.search(r'\b([A-Za-z0-9_]+)\.Find\s*\(', condition)
+        if not find_m:
+            continue
+        arr_name = find_m.group(1)
+        arr_items = all_arrays.get(arr_name, [])
+        if not arr_items:
+            continue
+
+        ret_m = re.search(r'return\s+(true|false)\s*;', branch_body)
+        if not ret_m:
+            continue
+        outcome = ret_m.group(1)
+
+        slots = []
+        for anc in ancestors:
+            s = _extract_slot_checks(anc, method_body)
+            if s:
+                slots.extend(s)
+
+        if outcome == 'true':
+            if slots:
+                for s in set(slots):
+                    allowed_by_slot.setdefault(s, set()).update(arr_items)
+            else:
+                allowed.update(arr_items)
+        elif outcome == 'false':
+            if slots:
+                for s in set(slots):
+                    denied_by_slot.setdefault(s, set()).update(arr_items)
+            else:
+                denied.update(arr_items)
+
+    if class_body:
+        for condition, branch_body, ancestors in _extract_if_branches(method_body):
+            ret_m = re.search(r'return\s+(true|false)\s*;', branch_body)
+            if not ret_m:
+                continue
+            branch_outcome = ret_m.group(1)
+            helper_m = re.search(rf'(!?)\s*\b([A-Za-z_][A-Za-z0-9_]*)\s*\(\s*{re.escape(variable)}\s*\)', condition)
+            if not helper_m:
+                continue
+            is_negated = bool(helper_m.group(1))
+            helper_name = helper_m.group(2)
+            if helper_name in ('IsKindOf', 'IsInherited', 'Cast', 'FindAttachmentBySlotName') or helper_name == method_name or 'super.' in condition:
+                continue
+
+            helper_body = _extract_any_method_body(class_body, helper_name)
+            if not helper_body:
+                continue
+            h_arrays = _extract_string_arrays(helper_body)
+            if not h_arrays:
+                continue
+            h_loops = _extract_loops(helper_body)
+            for h_loop in h_loops:
+                h_loop_body = h_loop['body']
+                h_arr_name = None
+                h_direct = re.search(
+                    rf'\b{re.escape(variable)}\s*\.\s*IsKindOf\s*\(\s*([A-Za-z0-9_]+)(?:\.Get\s*\([^)]+\)|\[[^\]]+\])?\s*\)',
+                    h_loop_body
+                )
+                if h_direct and h_direct.group(1) in h_arrays:
+                    h_arr_name = h_direct.group(1)
+                else:
+                    h_assign = re.search(
+                        r'\b([A-Za-z0-9_]+)\s*=\s*([A-Za-z0-9_]+)(?:\.Get\s*\([^)]+\)|\[[^\]]+\])\s*;',
+                        h_loop_body
+                    )
+                    if h_assign and h_assign.group(2) in h_arrays:
+                        if re.search(rf'\b{re.escape(variable)}\s*\.\s*IsKindOf\s*\(\s*{re.escape(h_assign.group(1))}\s*\)', h_loop_body):
+                            h_arr_name = h_assign.group(2)
+
+                if not h_arr_name:
+                    continue
+                h_items = h_arrays.get(h_arr_name, [])
+                if not h_items:
+                    continue
+
+                h_inner_ret = re.search(r'return\s+(true|false)\s*;', h_loop_body)
+                if not h_inner_ret:
+                    continue
+                h_match_ret = h_inner_ret.group(1)
+
+                slots = []
+                for anc in ancestors:
+                    s = _extract_slot_checks(anc, method_body)
+                    if s:
+                        slots.extend(s)
+
+                if branch_outcome == 'false':
+                    if h_match_ret == 'true' and not is_negated:
+                        if slots:
+                            for s in set(slots):
+                                denied_by_slot.setdefault(s, set()).update(h_items)
+                        else:
+                            denied.update(h_items)
+                    elif h_match_ret == 'true' and is_negated:
+                        if slots:
+                            for s in set(slots):
+                                allowed_by_slot.setdefault(s, set()).update(h_items)
+                        else:
+                            allowed.update(h_items)
+                    elif h_match_ret == 'false' and is_negated:
+                        if slots:
+                            for s in set(slots):
+                                denied_by_slot.setdefault(s, set()).update(h_items)
+                        else:
+                            denied.update(h_items)
+
+    return {
+        'allowed': allowed,
+        'denied': denied,
+        'allowedBySlot': allowed_by_slot,
+        'deniedBySlot': denied_by_slot
+    }
+
+
+def _parse_attachment_method_rule(method_body, method_name, variable, class_body=None):
     """Extract unconditional class allow/deny constraints from one method."""
     allowed = set()
     denied = set()
@@ -1022,6 +1281,14 @@ def _parse_attachment_method_rule(method_body, method_name, variable):
             allowed_by_slot.setdefault(slot, set()).update(target_allowed)
             denied_by_slot.setdefault(slot, set()).update(target_denied)
 
+    array_rules = _parse_array_and_helper_rules(method_body, method_name, variable, class_body)
+    allowed.update(array_rules.get('allowed', []))
+    denied.update(array_rules.get('denied', []))
+    for slot, roots in array_rules.get('allowedBySlot', {}).items():
+        allowed_by_slot.setdefault(slot, set()).update(roots)
+    for slot, roots in array_rules.get('deniedBySlot', {}).items():
+        denied_by_slot.setdefault(slot, set()).update(roots)
+
     rule = {}
     if allowed:
         rule['allowed'] = sorted(allowed, key=str.lower)
@@ -1064,7 +1331,7 @@ def extract_runtime_attachment_rules(runtime_classes):
             method_rules = []
             for body in info.get('bodies', []):
                 for method_body in _extract_method_bodies(body, method_name):
-                    parsed = _parse_attachment_method_rule(method_body, method_name, variable)
+                    parsed = _parse_attachment_method_rule(method_body, method_name, variable, class_body=body)
                     if parsed:
                         method_rules.append(parsed)
             if method_rules:
