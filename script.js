@@ -1683,6 +1683,12 @@ const DataParsers = {
         const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
         return isNaN(num) ? null : num;
     },
+    healthProtection: (item) => {
+        const val = item?.stats?.healthDamageProtection;
+        if (!val) return null;
+        const num = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+        return isNaN(num) ? null : num;
+    },
     shockProtection: (item) => {
         const val = item?.stats?.shockDamageProtection;
         if (!val) return null;
@@ -1837,6 +1843,14 @@ const SORT_METRICS = {
         defaultOrder: 'desc',
         badge: (item, val) => val ? `방탄 ${val}%` : null
     },
+    health_protection: {
+        id: 'health_protection',
+        label: '체력 보호율',
+        group: 'gear',
+        parser: DataParsers.healthProtection,
+        defaultOrder: 'desc',
+        badge: (item, val) => val ? `체력 ${val}%` : null
+    },
     shock_protection: {
         id: 'shock_protection',
         label: '쇼크 보호율',
@@ -1951,11 +1965,15 @@ function getItemCoreSpecs(item, categoryKey, panelType, activeMetricKey = curren
     const isGear = pType === 'gear' || ['full_body_armor', 'plate_carrier', 'helmet', 'helmet_attachment', 'mask', 'backpack', 'chest_rig', '전신 방탄복', '플레이트 캐리어', '방탄복', '헬멧', '헬멧 부착물', '마스크', '백팩', '체스트 리그'].includes(cat);
     if (isGear) {
         const bProt = DataParsers.bulletProtection(item);
+        const hProt = DataParsers.healthProtection(item);
         const sProt = DataParsers.shockProtection(item);
         const cargo = DataParsers.cargoSlots(item);
 
         if (bProt !== null && bProt > 0) {
             specs.push({ metricKey: 'bullet_protection', label: '방탄', text: `방탄 ${bProt}%`, tagClass: 'spec-armor' });
+        }
+        if (hProt !== null && hProt > 0) {
+            specs.push({ metricKey: 'health_protection', label: '체력', text: `체력 ${hProt}%`, tagClass: 'spec-health' });
         }
         if (sProt !== null && sProt > 0) {
             specs.push({ metricKey: 'shock_protection', label: '쇼크', text: `쇼크 ${sProt}%`, tagClass: 'spec-shock' });
@@ -2093,6 +2111,13 @@ const STATIC_FILTER_CHIPS = [
         filter: (item) => (DataParsers.bulletProtection(item) || 0) > 0
     },
     {
+        id: 'gear_health_protection',
+        label: '체력 보호',
+        group: 'gear',
+        panels: ['gear'],
+        filter: (item) => (DataParsers.healthProtection(item) || 0) > 0
+    },
+    {
         id: 'is_storage',
         label: '수납 공간 보유',
         group: 'gear',
@@ -2205,7 +2230,7 @@ function hasAnyValidValueForMetric(items, metric) {
             return (item.category === 'magazine' || item.category === '탄창' || Boolean(item?.stats?.capacity)) && DataParsers.capacity(item) !== null;
         });
     }
-    if (metric.id === 'bullet_protection' || metric.id === 'shock_protection') {
+    if (metric.id === 'bullet_protection' || metric.id === 'health_protection' || metric.id === 'shock_protection') {
         return items.some(item => {
             const val = metric.parser ? metric.parser(item) : null;
             return val !== null && val > 0;
@@ -4766,10 +4791,11 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         statsList.appendChild(catRow);
 
         if (gear.stats) {
-            const hasProtectionStats = ['bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
+            const hasProtectionStats = ['bulletDamageProtection', 'healthDamageProtection', 'bloodDamageProtection', 'shockDamageProtection'].some(k => gear.stats[k] !== undefined);
             if (hasProtectionStats) {
                 const gearStatsDefs = [
                     { key: 'bulletDamageProtection', label: '총탄 데미지 보호률' },
+                    { key: 'healthDamageProtection', label: '체력 데미지 보호률' },
                     { key: 'bloodDamageProtection', label: '유혈 데미지 보호률' },
                     { key: 'shockDamageProtection', label: '충격 데미지 보호률' }
                 ];

@@ -764,6 +764,12 @@ body {
     color: #8595a8;
 }
 
+.core-spec-tag.spec-health {
+    background: #181d1a;
+    border-color: #26332a;
+    color: #86a88e;
+}
+
 .core-spec-tag.spec-shock {
     background: #1d1a18;
     border-color: #332b25;

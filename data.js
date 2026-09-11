@@ -13418,7 +13418,7 @@ const gearData = {
             "stats": {
                 "bulletDamageProtection": 5,
                 "bloodDamageProtection": 0,
-                "shockDamageProtection": 100,
+                "shockDamageProtection": 0,
                 "hitpoints": 700,
                 "weight": 0
             },
@@ -13943,9 +13943,9 @@ const gearData = {
             "category": "mask",
             "description": "\"\"다음에 또 만나요...\"\"",
             "stats": {
-                "bulletDamageProtection": 50,
+                "bulletDamageProtection": 0,
                 "bloodDamageProtection": 0,
-                "shockDamageProtection": 100,
+                "shockDamageProtection": 0,
                 "hitpoints": 3000,
                 "weight": 0
             },
@@ -13970,6 +13970,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 20,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -14026,6 +14027,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14144,6 +14146,7 @@ const gearData = {
                 "bulletDamageProtection": 50,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 90,
                 "weight": 1
             },
@@ -14178,6 +14181,7 @@ const gearData = {
                 "bulletDamageProtection": 20,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 20,
+                "healthDamageProtection": 65,
                 "hitpoints": 100
             },
             "itemSize": [
@@ -14277,6 +14281,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100
             },
             "itemSize": [
@@ -14382,6 +14387,7 @@ const gearData = {
                 "bulletDamageProtection": 20,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 20,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14468,6 +14474,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 15,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14553,6 +14560,7 @@ const gearData = {
                 "bulletDamageProtection": 65,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 65,
+                "healthDamageProtection": 65,
                 "hitpoints": 110,
                 "weight": 1
             },
@@ -14665,6 +14673,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100
             },
             "itemSize": [
@@ -14764,6 +14773,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100
             },
             "itemSize": [
@@ -14803,6 +14813,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14834,6 +14845,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14860,6 +14872,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -14886,6 +14899,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -14962,6 +14976,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -15044,6 +15059,7 @@ const gearData = {
                 "bulletDamageProtection": 15,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 10,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -15070,6 +15086,7 @@ const gearData = {
                 "bulletDamageProtection": 10,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 10,
+                "healthDamageProtection": 65,
                 "weight": 1
             },
             "itemSize": [
@@ -15164,6 +15181,7 @@ const gearData = {
                 "bulletDamageProtection": 10,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 10,
+                "healthDamageProtection": 65,
                 "weight": 0
             },
             "itemSize": [
@@ -15192,6 +15210,7 @@ const gearData = {
                 "bulletDamageProtection": 15,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 10,
+                "healthDamageProtection": 65,
                 "weight": 0
             },
             "itemSize": [
@@ -15214,6 +15233,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -15243,6 +15263,7 @@ const gearData = {
                 "bulletDamageProtection": 20,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 10,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -15348,6 +15369,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 65,
                 "hitpoints": 130,
                 "weight": 2
             },
@@ -15470,6 +15492,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 65,
                 "hitpoints": 140,
                 "weight": 2
             },
@@ -15503,6 +15526,7 @@ const gearData = {
                 "bulletDamageProtection": 65,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 65,
+                "healthDamageProtection": 65,
                 "hitpoints": 150,
                 "weight": 2
             },
@@ -15621,6 +15645,7 @@ const gearData = {
                 "bulletDamageProtection": 87,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 90,
+                "healthDamageProtection": 65,
                 "hitpoints": 180,
                 "weight": 1
             },
@@ -15664,6 +15689,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 65,
                 "hitpoints": 120,
                 "weight": 3
             },
@@ -15763,6 +15789,7 @@ const gearData = {
                 "bulletDamageProtection": 83,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 150,
                 "weight": 4
             },
@@ -15802,6 +15829,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 140,
                 "weight": 1
             },
@@ -15896,6 +15924,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -15984,6 +16013,7 @@ const gearData = {
                 "bulletDamageProtection": 73,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 110,
                 "weight": 0
             },
@@ -16077,6 +16107,7 @@ const gearData = {
                 "bulletDamageProtection": 73,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 110,
                 "weight": 0
             },
@@ -16168,6 +16199,7 @@ const gearData = {
                 "bulletDamageProtection": 73,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 110,
                 "weight": 0
             },
@@ -16259,6 +16291,7 @@ const gearData = {
                 "bulletDamageProtection": 85,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 65,
                 "hitpoints": 160,
                 "weight": 2
             },
@@ -16305,6 +16338,7 @@ const gearData = {
                 "bulletDamageProtection": 83,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 65,
                 "hitpoints": 150,
                 "weight": 1
             },
@@ -16338,6 +16372,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 75,
+                "healthDamageProtection": 65,
                 "hitpoints": 120,
                 "weight": 3
             },
@@ -16375,6 +16410,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 55,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 0
             },
@@ -16477,6 +16513,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 55,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -16547,6 +16584,7 @@ const gearData = {
                 "bulletDamageProtection": 45,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 70,
                 "weight": 1
             },
@@ -16646,6 +16684,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 65,
                 "hitpoints": 120,
                 "weight": 1
             },
@@ -16723,6 +16762,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 2
             },
@@ -16807,6 +16847,7 @@ const gearData = {
                 "bulletDamageProtection": 35,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 65,
                 "hitpoints": 60,
                 "weight": 3
             },
@@ -16891,6 +16932,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -16995,6 +17037,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 55,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -17076,6 +17119,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 65,
                 "hitpoints": 100,
                 "weight": 1
             },
@@ -17161,6 +17205,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 70,
                 "hitpoints": 175,
                 "weight": 9
             },
@@ -17275,6 +17320,7 @@ const gearData = {
                 "bulletDamageProtection": 30,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 30,
+                "healthDamageProtection": 70,
                 "hitpoints": 110,
                 "weight": 5
             },
@@ -17361,6 +17407,7 @@ const gearData = {
                 "bulletDamageProtection": 65,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 65,
+                "healthDamageProtection": 70,
                 "hitpoints": 190,
                 "weight": 10
             },
@@ -17452,6 +17499,7 @@ const gearData = {
                 "bulletDamageProtection": 85,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 85,
+                "healthDamageProtection": 70,
                 "hitpoints": 400,
                 "weight": 35
             },
@@ -17555,6 +17603,7 @@ const gearData = {
                 "bulletDamageProtection": 73,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 9
             },
@@ -17626,6 +17675,7 @@ const gearData = {
                 "bulletDamageProtection": 78,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 78,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 20
             },
@@ -17674,6 +17724,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 285,
                 "weight": 25
             },
@@ -17795,6 +17846,7 @@ const gearData = {
                 "bulletDamageProtection": 78,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 78,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 15
             },
@@ -17912,6 +17964,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 65,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 8
             },
@@ -18005,6 +18058,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 255,
                 "weight": 25
             },
@@ -18096,6 +18150,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 25
             },
@@ -18203,6 +18258,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 5
             },
@@ -18282,6 +18338,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 55,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 8
             },
@@ -18394,6 +18451,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 6
             },
@@ -18441,6 +18499,7 @@ const gearData = {
                 "bulletDamageProtection": 65,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 70,
                 "hitpoints": 190,
                 "weight": 8
             },
@@ -18538,6 +18597,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 260,
                 "weight": 9
             },
@@ -18580,6 +18640,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 6
             },
@@ -18634,6 +18695,7 @@ const gearData = {
                 "bulletDamageProtection": 45,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 70,
                 "hitpoints": 145,
                 "weight": 5
             },
@@ -18686,6 +18748,7 @@ const gearData = {
                 "bulletDamageProtection": 50,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 60,
+                "healthDamageProtection": 70,
                 "hitpoints": 155,
                 "weight": 5
             },
@@ -18738,6 +18801,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 67,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 11
             },
@@ -18799,6 +18863,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 75,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 13
             },
@@ -18877,6 +18942,7 @@ const gearData = {
                 "bulletDamageProtection": 80,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 65,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 7
             },
@@ -18996,6 +19062,7 @@ const gearData = {
                 "bulletDamageProtection": 70,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 70,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 12
             },
@@ -19110,6 +19177,7 @@ const gearData = {
                 "bulletDamageProtection": 60,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 50,
+                "healthDamageProtection": 70,
                 "hitpoints": 175,
                 "weight": 10
             },
@@ -19204,6 +19272,7 @@ const gearData = {
                 "bulletDamageProtection": 35,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 35,
+                "healthDamageProtection": 70,
                 "hitpoints": 120,
                 "weight": 11
             },
@@ -19295,6 +19364,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 9
             },
@@ -19386,6 +19456,7 @@ const gearData = {
                 "bulletDamageProtection": 75,
                 "bloodDamageProtection": 0,
                 "shockDamageProtection": 80,
+                "healthDamageProtection": 70,
                 "hitpoints": 225,
                 "weight": 5
             },

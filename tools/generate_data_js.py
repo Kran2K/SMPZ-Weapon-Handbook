@@ -2004,13 +2004,63 @@ def extract_weapon_stats(cname, props, all_classes):
 
     return stats
 
+def _damage_coefficient_to_protection(raw_value):
+    try:
+        coefficient = float(raw_value)
+    except (ValueError, TypeError):
+        return None
+    if coefficient <= 0:
+        return 0
+    return max(0, min(100, round((1.0 - coefficient) * 100)))
+
+
+def _extract_armor_protection(body, damage_type, channel):
+    damage_match = re.search(
+        rf'class\s+{re.escape(damage_type)}\b[^{{]*\{{([^{{}}]*(?:\{{[^{{}}]*\}}[^{{}}]*)*)\}}',
+        body
+    )
+    if not damage_match:
+        return None
+    channel_match = re.search(
+        rf'class\s+{re.escape(channel)}\b[^{{]*\{{[^}}]*damage\s*=\s*([^;]+);',
+        damage_match.group(1)
+    )
+    if not channel_match:
+        return None
+    return _damage_coefficient_to_protection(channel_match.group(1))
+
+
+def _inherits_config_class(cname, target, all_classes):
+    curr = cname
+    target_lower = target.lower()
+    visited = set()
+    while curr and curr.lower() not in visited:
+        if curr.lower() == target_lower:
+            return True
+        visited.add(curr.lower())
+        curr = all_classes.get(curr, {}).get('parent')
+    return False
+
+
+def _uses_projectile_protection(cname, cat, all_classes):
+    if cat in ('helmet', 'helmet_attachment', 'full_body_armor', 'plate_carrier'):
+        return True
+    if cat == 'mask':
+        return _inherits_config_class(cname, 'SMPZ_Balistic_Mask_Base', all_classes)
+    return False
+
+
 def extract_gear_stats(cname, props, all_classes, cat):
     stats = {}
     curr = cname
     visited = set()
     hitpoints = None
-    bullet_prot = None
-    shock_prot = None
+    projectile_health_prot = None
+    projectile_blood_prot = None
+    projectile_shock_prot = None
+    melee_health_prot = None
+    melee_blood_prot = None
+    melee_shock_prot = None
 
     while curr and curr not in visited and curr in all_classes:
         visited.add(curr)
@@ -2025,35 +2075,44 @@ def extract_gear_stats(cname, props, all_classes, cat):
                 except (ValueError, TypeError):
                     pass
 
-        if bullet_prot is None or shock_prot is None:
-            m_proj = re.search(r'class\s+Projectile\b[^{]*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}', body)
-            if m_proj:
-                proj_body = m_proj.group(1)
-                if bullet_prot is None:
-                    m_h = re.search(r'class\s+Health\b[^{]*\{[^}]*damage\s*=\s*([^;]+);', proj_body)
-                    if m_h:
-                        try:
-                            bullet_prot = round((1.0 - float(m_h.group(1))) * 100)
-                        except (ValueError, TypeError):
-                            pass
-                if shock_prot is None:
-                    m_s = re.search(r'class\s+Shock\b[^{]*\{[^}]*damage\s*=\s*([^;]+);', proj_body)
-                    if m_s:
-                        try:
-                            shock_prot = round((1.0 - float(m_s.group(1))) * 100)
-                        except (ValueError, TypeError):
-                            pass
+        if projectile_health_prot is None:
+            projectile_health_prot = _extract_armor_protection(body, 'Projectile', 'Health')
+        if projectile_blood_prot is None:
+            projectile_blood_prot = _extract_armor_protection(body, 'Projectile', 'Blood')
+        if projectile_shock_prot is None:
+            projectile_shock_prot = _extract_armor_protection(body, 'Projectile', 'Shock')
+        if melee_health_prot is None:
+            melee_health_prot = _extract_armor_protection(body, 'Melee', 'Health')
+        if melee_blood_prot is None:
+            melee_blood_prot = _extract_armor_protection(body, 'Melee', 'Blood')
+        if melee_shock_prot is None:
+            melee_shock_prot = _extract_armor_protection(body, 'Melee', 'Shock')
 
         curr = c_info.get('parent')
 
-    if bullet_prot is not None:
-        stats['bulletDamageProtection'] = bullet_prot
-        stats['bloodDamageProtection'] = 0
-        stats['shockDamageProtection'] = shock_prot if shock_prot is not None else 0
+    has_projectile_protection = any(value is not None for value in (
+        projectile_health_prot, projectile_blood_prot, projectile_shock_prot
+    ))
+    has_melee_protection = any(value is not None for value in (
+        melee_health_prot, melee_blood_prot, melee_shock_prot
+    ))
+    uses_projectile_protection = _uses_projectile_protection(cname, cat, all_classes)
+
+    if has_projectile_protection or has_melee_protection:
+        stats['bulletDamageProtection'] = (
+            projectile_health_prot if uses_projectile_protection and projectile_health_prot is not None else 0
+        )
+        selected_blood_prot = projectile_blood_prot if uses_projectile_protection else melee_blood_prot
+        selected_shock_prot = projectile_shock_prot if uses_projectile_protection else melee_shock_prot
+        stats['bloodDamageProtection'] = selected_blood_prot if selected_blood_prot is not None else 0
+        stats['shockDamageProtection'] = selected_shock_prot if selected_shock_prot is not None else 0
     elif cat in ('chest_rig', 'mask'):
         stats['bulletDamageProtection'] = 0
         stats['bloodDamageProtection'] = 0
         stats['shockDamageProtection'] = 0
+
+    if melee_health_prot is not None:
+        stats['healthDamageProtection'] = melee_health_prot
 
     if hitpoints is not None:
         stats['hitpoints'] = hitpoints
@@ -2139,7 +2198,7 @@ def clean_item_stats(stats):
             m = re.search(r'\d+', str(v))
             if m:
                 cleaned[k] = int(m.group(0))
-        elif k in ('recoil', 'sway', 'ergonomics', 'bulletDamageProtection', 'bloodDamageProtection', 'shockDamageProtection', 'hitpoints'):
+        elif k in ('recoil', 'sway', 'ergonomics', 'bulletDamageProtection', 'healthDamageProtection', 'bloodDamageProtection', 'shockDamageProtection', 'hitpoints'):
             m = re.search(r'-?\d+', str(v).strip())
             if m:
                 try:
@@ -2474,6 +2533,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         'models_linked': 0,
         'slots_linked': 0,
         'protection_items': 0,
+        'health_protection_items': 0,
         'optics_magnification': 0,
         'mount_types': 0,
         'ironsight_types': 0,
@@ -2720,6 +2780,8 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
         g_stats = extract_gear_stats(chosen_id, props, all_classes, cat)
         if g_stats:
             item_obj['stats'] = g_stats
+            if 'healthDamageProtection' in g_stats:
+                stats_summary['health_protection_items'] += 1
 
         cs = props.get('itemsCargoSize') or props.get('itemCargoSize')
         if cs and len(cs) >= 2:
@@ -3018,6 +3080,7 @@ def build_data_js(smpz_dir, assets_dir=DEFAULT_ASSETS_DIR, models_dir=DEFAULT_MO
     print(f"    - 가방/수납 크기 파싱 완료:      {stats_summary['cargo_items']}개")
     print(f"    - 슬롯(inventorySlots) 연동:     {stats_summary['slots_linked']}개")
     print(f"    - 방호 부위(ProtectionAreas) 연동: {stats_summary['protection_items']}개")
+    print(f"    - 체력 보호율 파싱 완료:         {stats_summary['health_protection_items']}개")
     print(f"    - 조준경 C++ 배율 연동:          {stats_summary['optics_magnification']}개")
     print(f"    - 지원 색상(color) 그룹화 연동:  {stats_summary['colors_linked']}개")
     print(f"    - 도색 가능(canBePainted) 연동:   {stats_summary['paintable_items']}개")
