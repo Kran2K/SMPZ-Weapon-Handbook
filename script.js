@@ -7,6 +7,8 @@ let currentGear = null;
 let lastGalleryImageIndex = 0;
 let lastGridScrollY = 0;
 let compareTarget = null;
+let activeDetailModal = null;
+let detailModalReturnFocus = null;
 const APP_STATE_KEY = 'smpz_handbook_state';
 
 // 네비게이션 히스토리 스택
@@ -785,7 +787,7 @@ function resetToRootGrid() {
         }
     }
     if (!targetView && rootGridState) {
-        targetView = rootGridState;
+        targetView = { ...rootGridState, type: 'grid' };
     }
     if (!targetView && Array.isArray(navStack) && navStack.length > 0 && navStack[0]?.type === 'grid') {
         targetView = navStack[0];
@@ -849,9 +851,9 @@ function createAttachmentSlotsSection(item) {
 
     const header = document.createElement('div');
     header.className = 'weapon-stats-header';
-    const title = document.createElement('div');
+    const title = document.createElement('h3');
     title.className = 'weapon-stats-title';
-    title.textContent = '- 장착 가능한 부착물 -';
+    title.textContent = '장착 가능한 부착물';
     header.appendChild(title);
     container.appendChild(header);
 
@@ -1088,9 +1090,9 @@ function createParentCompatibleSection(item) {
 
     const header = document.createElement('div');
     header.className = 'weapon-stats-header';
-    const title = document.createElement('div');
+    const title = document.createElement('h3');
     title.className = 'weapon-stats-title';
-    title.textContent = '- 이 아이템을 장착할 수 있는 아이템 -';
+    title.textContent = '장착할 수 있는 아이템';
     header.appendChild(title);
     container.appendChild(header);
 
@@ -1236,6 +1238,114 @@ function createWebSearchButton(itemName) {
     return link;
 }
 
+function arrangeDetailCard(card, item, categoryKey, panelType) {
+    const toolbar = document.createElement('div');
+    toolbar.className = 'detail-toolbar';
+    const backButton = document.createElement('button');
+    backButton.type = 'button';
+    backButton.className = 'detail-back-btn';
+    backButton.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>목록으로</span>';
+    backButton.addEventListener('click', resetToRootGrid);
+    const context = document.createElement('div');
+    context.className = 'detail-context';
+    const panelLabel = document.createElement('span');
+    panelLabel.textContent = { weapon: 'SMPZ 웨폰', attachment: 'SMPZ 부착물', gear: 'SMPZ 기어' }[panelType];
+    const category = document.createElement('span');
+    category.className = 'detail-category';
+    category.textContent = getCategoryLabel(item.category || categoryKey);
+    context.append(panelLabel, category);
+    const searchLink = card.querySelector('.item-web-search-btn');
+    if (searchLink) context.appendChild(searchLink);
+    toolbar.append(backButton, context);
+    card.prepend(toolbar);
+
+    const heading = card.querySelector('.weapon-detail-name-container');
+    const gallery = card.querySelector('.gallery-panel-wrapper');
+    const descriptionContainer = card.querySelector('.weapon-detail-description-container');
+    const stats = card.querySelector('.weapon-stats-container');
+    const compatibility = [...card.querySelectorAll('.attachment-slots-container')];
+    const filterPanel = card.querySelector('.gear-filter-charge-panel');
+
+    const layout = document.createElement('div');
+    layout.className = 'detail-overview';
+    const media = document.createElement('div');
+    media.className = 'detail-media-column';
+    media.appendChild(gallery);
+
+    const description = descriptionContainer.querySelector('.weapon-detail-description, .weapon-description-placeholder');
+    if (description) {
+        const section = document.createElement('section');
+        section.className = 'detail-description-section';
+        const title = document.createElement('h3');
+        title.className = 'weapon-stats-title';
+        title.textContent = '아이템 소개';
+        if (description.classList.contains('weapon-description-placeholder')) {
+            description.textContent = '등록된 설명이 없습니다.';
+        }
+        section.append(title, description);
+        media.appendChild(section);
+    }
+    layout.appendChild(media);
+
+    if (stats) {
+        const list = stats.querySelector('.weapon-stats-list');
+        // 수치 행과 뒤따르는 게이지를 하나의 항목으로 묶는다.
+        [...list.children].forEach(row => {
+            if (!row.classList.contains('weapon-stat-row')) return;
+            const metric = document.createElement('div');
+            metric.className = 'detail-stat-item';
+            row.before(metric);
+            metric.appendChild(row);
+            while (metric.nextElementSibling?.matches('.weapon-stat-bar, .detail-compare-value')) {
+                metric.appendChild(metric.nextElementSibling);
+                metric.classList.add('detail-stat-item-meter');
+            }
+        });
+        if (panelType === 'weapon' && compareTarget?.weapon && compareTarget.weapon.id !== item.id) {
+            const legend = document.createElement('div');
+            legend.className = 'detail-compare-legend';
+            [`기준 · ${item.name}`, `비교 · ${compareTarget.weapon.name}`, '초록: 비교 대상 우세 · 빨강: 비교 대상 열세'].forEach(text => {
+                const line = document.createElement('span');
+                line.textContent = text;
+                legend.appendChild(line);
+            });
+            list.before(legend);
+        }
+        layout.appendChild(stats);
+    } else {
+        layout.classList.add('detail-overview-no-stats');
+    }
+
+    const related = document.createElement('div');
+    related.className = 'detail-related';
+    related.append(...compatibility);
+    if (filterPanel) related.prepend(filterPanel);
+    descriptionContainer.remove();
+
+    const sectionNav = document.createElement('nav');
+    sectionNav.className = 'detail-section-nav';
+    sectionNav.setAttribute('aria-label', '상세 정보 바로가기');
+    const sections = [{ label: '개요', target: gallery }];
+    if (stats) sections.push({ label: '능력치', target: stats });
+    if (related.children.length) sections.push({ label: '호환 정보', target: related });
+    sections.forEach(({ label, target }, index) => {
+        target.id = `detail-section-${index}`;
+        target.tabIndex = -1;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = label;
+        button.setAttribute('aria-controls', target.id);
+        button.addEventListener('click', () => {
+            target.focus({ preventScroll: true });
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+        });
+        sectionNav.appendChild(button);
+    });
+    heading.after(sectionNav);
+    card.appendChild(layout);
+    if (related.children.length) card.appendChild(related);
+}
+
 function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) {
     const weaponDetail = showDetailContainer();
     currentCategory = categoryKey;
@@ -1256,7 +1366,7 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
-    const name = document.createElement('div');
+    const name = document.createElement('h2');
     name.className = 'weapon-detail-name';
     const nameWrap = document.createElement('div');
     nameWrap.className = 'weapon-name-wrap';
@@ -1269,9 +1379,6 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
     
-    const divider = document.createElement('div');
-    divider.className = 'weapon-detail-divider';
-    detailCard.appendChild(divider);
     
     const imagePanel = createImagePanelWithArrows(attachment, attachment.name, initialGalleryIndex, (idx) => {
         lastGalleryImageIndex = idx;
@@ -1299,9 +1406,9 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         
         const statsHeader = document.createElement('div');
         statsHeader.className = 'weapon-stats-header';
-        const statsTitle = document.createElement('div');
+        const statsTitle = document.createElement('h3');
         statsTitle.className = 'weapon-stats-title';
-        statsTitle.textContent = '- 능력치 -';
+        statsTitle.textContent = '능력치';
         statsHeader.appendChild(statsTitle);
         statsContainer.appendChild(statsHeader);
         
@@ -1384,6 +1491,7 @@ function showAttachmentDetail(attachment, categoryKey, initialGalleryIndex = 0) 
         slotsParent.appendChild(parentSection);
     }
     
+    arrangeDetailCard(detailCard, attachment, categoryKey, 'attachment');
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
     recordCurrentViewHistory('#' + attachment.id);
@@ -3772,12 +3880,17 @@ function appendItemSpecRows(statsList, item, options = {}) {
                     chip.className = 'protection-area-chip barrel-adjustment-chip';
                     chip.textContent = variant.name;
                     chip.setAttribute('title', variant.isDefault ? `${variant.name} (기본 스폰)` : variant.name);
+                    chip.setAttribute('aria-pressed', String(Boolean(variant.isDefault)));
                     if (variant.isDefault) chip.classList.add('active');
 
                     chip.addEventListener('click', (event) => {
                         event.stopPropagation();
-                        barrelChipsWrap.querySelectorAll('.barrel-adjustment-chip').forEach(button => button.classList.remove('active'));
+                        barrelChipsWrap.querySelectorAll('.barrel-adjustment-chip').forEach(button => {
+                            button.classList.remove('active');
+                            button.setAttribute('aria-pressed', 'false');
+                        });
                         chip.classList.add('active');
+                        chip.setAttribute('aria-pressed', 'true');
                         if (typeof options.onBarrelVariantChange === 'function') {
                             options.onBarrelVariantChange(variant);
                         }
@@ -3811,7 +3924,9 @@ function appendItemSpecRows(statsList, item, options = {}) {
         chipsWrap.className = 'protection-chips-wrapper';
 
         colors.forEach((c, idx) => {
-            const chip = document.createElement('span');
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.setAttribute('aria-pressed', String(idx === 0));
             chip.className = 'protection-area-chip color-variant-chip';
             if (idx === 0) chip.classList.add('active');
             chip.textContent = c.name;
@@ -3819,8 +3934,12 @@ function appendItemSpecRows(statsList, item, options = {}) {
 
             chip.onclick = (e) => {
                 e.stopPropagation();
-                chipsWrap.querySelectorAll('.color-variant-chip').forEach(ch => ch.classList.remove('active'));
+                chipsWrap.querySelectorAll('.color-variant-chip').forEach(ch => {
+                    ch.classList.remove('active');
+                    ch.setAttribute('aria-pressed', 'false');
+                });
                 chip.classList.add('active');
+                chip.setAttribute('aria-pressed', 'true');
 
                 if (c.image) {
                     const detailCard = statsList.closest('.weapon-detail-card') || document.querySelector('.weapon-detail-card');
@@ -3864,9 +3983,9 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     const headerRow = document.createElement('div');
     headerRow.className = 'gallery-header-row';
     
-    const galleryTitle = document.createElement('div');
+    const galleryTitle = document.createElement('h3');
     galleryTitle.className = 'gallery-title';
-    galleryTitle.textContent = '- 갤러리 -';
+    galleryTitle.textContent = '갤러리';
     headerRow.appendChild(galleryTitle);
     
     let is3DMode = false;
@@ -3880,11 +3999,13 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         btn2D.type = 'button';
         btn2D.className = 'gallery-mode-btn active';
         btn2D.textContent = '사진';
+        btn2D.setAttribute('aria-pressed', 'true');
         
         const btn3D = document.createElement('button');
         btn3D.type = 'button';
         btn3D.className = 'gallery-mode-btn';
         btn3D.textContent = '3D';
+        btn3D.setAttribute('aria-pressed', 'false');
         
         modeSwitch.appendChild(btn2D);
         modeSwitch.appendChild(btn3D);
@@ -3915,6 +4036,19 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     const img = document.createElement('img');
     img.className = 'weapon-detail-image';
     let currentIndex = Math.max(0, Math.min(initialImageIndex, Math.max(0, images.length - 1)));
+    const galleryFooter = document.createElement('div');
+    galleryFooter.className = 'gallery-footer';
+    const imageCounter = document.createElement('span');
+    imageCounter.className = 'gallery-counter';
+    imageCounter.setAttribute('aria-live', 'polite');
+    imageCounter.textContent = images.length ? `${currentIndex + 1} / ${images.length}` : '등록된 이미지가 없습니다';
+    const zoomButton = document.createElement('button');
+    zoomButton.type = 'button';
+    zoomButton.className = 'gallery-zoom-btn';
+    zoomButton.textContent = '이미지 확대';
+    zoomButton.hidden = !images.length;
+    zoomButton.addEventListener('click', () => openImageModal(img.src, itemName));
+    galleryFooter.append(imageCounter, zoomButton);
     if (images.length > 0) {
         img.src = images[currentIndex];
         img.alt = itemName;
@@ -3930,9 +4064,17 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         img.onerror = function() {
             this.style.display = 'none';
             placeholder.style.display = 'flex';
+            imageCounter.textContent = '이미지를 불러올 수 없습니다';
+            zoomButton.hidden = true;
+        };
+        img.onload = () => {
+            img.style.display = '';
+            placeholder.style.display = 'none';
+            imageCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+            zoomButton.hidden = false;
         };
         img.onclick = function() {
-            openImageModal(images[currentIndex], itemName);
+            openImageModal(img.src, itemName);
         };
         imgWrapper.appendChild(img);
     }
@@ -3953,29 +4095,24 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         img.alt = itemName;
         img.style.display = '';
         placeholder.style.display = 'none';
-        img.onclick = () => openImageModal(images[currentIndex], itemName);
+        imageCounter.textContent = `${currentIndex + 1} / ${images.length}`;
     }
     
     if (hasMultiple) {
         const notifyChange = () => {
             if (typeof onImageIndexChange === 'function') onImageIndexChange(currentIndex);
         };
-        const blurArrow = (e) => {
-            e.target.blur();
-        };
         arrowLeft.addEventListener('click', (e) => {
             e.stopPropagation();
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateImage();
             notifyChange();
-            blurArrow(e);
         });
         arrowRight.addEventListener('click', (e) => {
             e.stopPropagation();
             currentIndex = (currentIndex + 1) % images.length;
             updateImage();
             notifyChange();
-            blurArrow(e);
         });
     }
     
@@ -3993,11 +4130,14 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         modelViewerEl = document.createElement('model-viewer');
         modelViewerEl.className = 'weapon-model-viewer';
         modelViewerEl.setAttribute('src', item.model);
+        modelViewerEl.setAttribute('alt', `${itemName} 3D 모델`);
         if (images.length > 0) {
             modelViewerEl.setAttribute('poster', images[0]);
         }
         modelViewerEl.setAttribute('camera-controls', '');
-        modelViewerEl.setAttribute('auto-rotate', '');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            modelViewerEl.setAttribute('auto-rotate', '');
+        }
         modelViewerEl.setAttribute('auto-rotate-delay', '3000');
         modelViewerEl.setAttribute('rotation-per-second', '30deg');
         modelViewerEl.setAttribute('shadow-intensity', '1');
@@ -4087,6 +4227,9 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         const btn3D = headerRow.querySelector('.gallery-mode-btn:last-child');
         if (btn2D) btn2D.classList.toggle('active', !to3D);
         if (btn3D) btn3D.classList.toggle('active', to3D);
+        btn2D?.setAttribute('aria-pressed', String(!to3D));
+        btn3D?.setAttribute('aria-pressed', String(to3D));
+        galleryFooter.hidden = to3D;
         
         if (to3D) {
             imgWrapper.style.display = 'none';
@@ -4104,6 +4247,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     }
     
     galleryWrapper.appendChild(imageContainer);
+    galleryWrapper.appendChild(galleryFooter);
     return galleryWrapper;
 }
 
@@ -4198,10 +4342,12 @@ function updateWeaponDetailStats(statsList, baseWeapon, barrelVariant, statsDefs
         if (value) {
             value.textContent = state.displayText;
             if (state.footnoteTooltip) {
-                const footnote = document.createElement('sup');
+                const footnote = document.createElement('button');
+                footnote.type = 'button';
                 footnote.className = 'stat-footnote';
                 footnote.textContent = '*';
                 footnote.setAttribute('data-tooltip', state.footnoteTooltip);
+                footnote.setAttribute('aria-label', footnote.dataset.tooltip);
                 value.appendChild(footnote);
             }
         }
@@ -4261,7 +4407,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
     
-    const name = document.createElement('div');
+    const name = document.createElement('h2');
     name.className = 'weapon-detail-name';
     
     // 제조사 로고가 있으면 표시
@@ -4341,10 +4487,6 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
     
-    // 구분선
-    const divider = document.createElement('div');
-    divider.className = 'weapon-detail-divider';
-    detailCard.appendChild(divider);
     
     // 총기 사진 (화살표로 다중 이미지 탐색)
     const weaponImagePanel = createImagePanelWithArrows(weapon, weapon.name, initialGalleryIndex, (idx) => {
@@ -4380,16 +4522,16 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         const statsHeaderSpacer = document.createElement('div');
         statsHeaderSpacer.className = 'weapon-stats-spacer';
 
-        const statsTitle = document.createElement('div');
+        const statsTitle = document.createElement('h3');
         statsTitle.className = 'weapon-stats-title';
-        statsTitle.textContent = '- 능력치 -';
+        statsTitle.textContent = '능력치';
 
         const compareBtn = document.createElement('button');
         compareBtn.type = 'button';
         compareBtn.className = 'weapon-compare-btn';
         // 비교 대상이 설정되어 있으면 "비교 해제"로 표시
         const hasCompare = !!(compareTarget && compareTarget.weapon);
-        compareBtn.textContent = hasCompare ? '비교 해제' : '비교';
+        compareBtn.textContent = hasCompare ? '비교 해제' : '무기 비교';
         compareBtn.onclick = () => {
             if (compareTarget && compareTarget.weapon) {
                 // 비교 해제: 비교 대상 초기화 후 현재 무기 다시 렌더링
@@ -4463,11 +4605,13 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
             value.textContent = displayText;
 
             if (stat.key === 'velocity' && calcSpeed > 0 && weapon.stats && weapon.stats.velocityMultiplier !== undefined && baseSpeed > 0) {
-                const footnote = document.createElement('sup');
+                const footnote = document.createElement('button');
+                footnote.type = 'button';
                 footnote.className = 'stat-footnote';
                 footnote.textContent = '*';
                 const multStr = Number(weapon.stats.velocityMultiplier).toString();
                 footnote.setAttribute('data-tooltip', `기준 탄속 ${baseSpeed} m/s × 무기 탄속 배율 ${multStr}배`);
+                footnote.setAttribute('aria-label', footnote.dataset.tooltip);
                 value.appendChild(footnote);
             }
 
@@ -4476,7 +4620,8 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
                 if (match) {
                     const moaNum = parseFloat(match[1]);
                     if (!isNaN(moaNum) && moaNum > 0) {
-                        const footnote = document.createElement('sup');
+                        const footnote = document.createElement('button');
+                        footnote.type = 'button';
                         footnote.className = 'stat-footnote';
                         footnote.textContent = '*';
                         const d100 = Number((moaNum * 2.9).toFixed(1));
@@ -4484,6 +4629,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
                         const d500 = Number((moaNum * 2.9 * 5).toFixed(1));
                         const tooltipText = `100m 탄착군 지름 약 ${d100}cm\n300m 탄착군 지름 약 ${d300}cm\n500m 탄착군 지름 약 ${d500}cm`;
                         footnote.setAttribute('data-tooltip', tooltipText);
+                        footnote.setAttribute('aria-label', footnote.dataset.tooltip);
                         value.appendChild(footnote);
                     }
                 }
@@ -4586,6 +4732,10 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
 
                 const compareBar = document.createElement('div');
                 compareBar.className = 'weapon-stat-bar weapon-stat-bar-compare';
+                const compareValue = document.createElement('div');
+                compareValue.className = 'detail-compare-value';
+                compareValue.textContent = `비교 · ${getWeaponDetailStatState(compareWeapon, stat).displayText}`;
+                statsList.appendChild(compareValue);
 
                 const compareFill = document.createElement('div');
                 compareFill.className = 'weapon-stat-bar-fill';
@@ -4644,6 +4794,7 @@ function showWeaponDetail(weapon, categoryKey, initialGalleryIndex = 0) {
         }
     }
     
+    arrangeDetailCard(detailCard, weapon, categoryKey, 'weapon');
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
     recordCurrentViewHistory('#' + weapon.id);
@@ -4673,7 +4824,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     const nameContainer = document.createElement('div');
     nameContainer.className = 'weapon-detail-name-container';
 
-    const name = document.createElement('div');
+    const name = document.createElement('h2');
     name.className = 'weapon-detail-name';
 
     if (gear.manufacturerLogo) {
@@ -4729,9 +4880,6 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
     nameContainer.appendChild(name);
     detailCard.appendChild(nameContainer);
     
-    const divider = document.createElement('div');
-    divider.className = 'weapon-detail-divider';
-    detailCard.appendChild(divider);
     
     // 기어 사진 (화살표로 다중 이미지 탐색)
     const gearImagePanel = createImagePanelWithArrows(gear, gear.name, initialGalleryIndex, (idx) => {
@@ -4764,9 +4912,9 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         statsHeader.className = 'weapon-stats-header';
         const statsHeaderSpacer = document.createElement('div');
         statsHeaderSpacer.className = 'weapon-stats-spacer';
-        const statsTitle = document.createElement('div');
+        const statsTitle = document.createElement('h3');
         statsTitle.className = 'weapon-stats-title';
-        statsTitle.textContent = '- 능력치 -';
+        statsTitle.textContent = '능력치';
         const statsHeaderSpacerRight = document.createElement('div');
         statsHeaderSpacerRight.className = 'weapon-stats-spacer';
         statsHeader.appendChild(statsHeaderSpacer);
@@ -4887,9 +5035,9 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         filterHeader.className = 'weapon-stats-header';
         const filterSpacer = document.createElement('div');
         filterSpacer.className = 'weapon-stats-spacer';
-        const filterTitle = document.createElement('div');
+        const filterTitle = document.createElement('h3');
         filterTitle.className = 'weapon-stats-title';
-        filterTitle.textContent = '- 필터 충전 가능 여부 -';
+        filterTitle.textContent = '필터 충전';
         const filterSpacerRight = document.createElement('div');
         filterSpacerRight.className = 'weapon-stats-spacer';
         filterHeader.appendChild(filterSpacer);
@@ -4938,6 +5086,7 @@ function showGearDetail(gear, categoryKey, initialGalleryIndex = 0) {
         slotsParent.appendChild(parentSection);
     }
     
+    arrangeDetailCard(detailCard, gear, categoryKey, 'gear');
     weaponDetail.appendChild(detailCard);
     updateFloatingNav();
     recordCurrentViewHistory('#' + gear.id);
@@ -5050,14 +5199,14 @@ function setupEventListeners() {
     // 모달 닫기
     document.querySelectorAll('.close').forEach(closeBtn => {
         closeBtn.addEventListener('click', (e) => {
-            e.target.closest('.modal').style.display = 'none';
+            closeDetailModal(e.target.closest('.modal'));
         });
     });
     
     // 모달 외부 클릭 시 닫기
     window.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
+            closeDetailModal(e.target);
         }
     });
     
@@ -5072,21 +5221,38 @@ function setupEventListeners() {
             closeImageBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                imageModal.style.setProperty('display', 'none', 'important');
+                closeDetailModal(imageModal);
             });
         }
         
         // 이미지 모달 외부 클릭 시 닫기
         imageModal.addEventListener('click', (e) => {
             if (e.target === imageModal || e.target.classList.contains('image-modal')) {
-                imageModal.style.setProperty('display', 'none', 'important');
+                closeDetailModal(imageModal);
             }
         });
     }
     
     // ESC 키로 모든 모달 닫기 및 이전 화면 복귀
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab' && activeDetailModal) {
+            const controls = [...activeDetailModal.querySelectorAll('button, a[href], input, select, [tabindex="0"]')]
+                .filter(element => !element.disabled && element.getClientRects().length > 0);
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last?.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first?.focus();
+            }
+        }
         if (e.key === 'Escape') {
+            if (document.activeElement?.classList.contains('stat-footnote')) {
+                document.activeElement.blur();
+                return;
+            }
             let closedSomething = false;
 
             const dropdown = document.getElementById('categoryDropdown');
@@ -5099,7 +5265,7 @@ function setupEventListeners() {
             if (imageModal) {
                 const computedStyle = window.getComputedStyle(imageModal);
                 if (computedStyle.display !== 'none') {
-                    imageModal.style.setProperty('display', 'none', 'important');
+                    closeDetailModal(imageModal);
                     closedSomething = true;
                 }
             }
@@ -5109,7 +5275,7 @@ function setupEventListeners() {
                 if (modal.id !== 'imageModal') {
                     const computedStyle = window.getComputedStyle(modal);
                     if (computedStyle.display !== 'none') {
-                        modal.style.display = 'none';
+                        closeDetailModal(modal);
                         closedSomething = true;
                     }
                 }
@@ -5151,6 +5317,25 @@ function setupEventListeners() {
     });
 }
 
+function openDetailModal(modal, display) {
+    detailModalReturnFocus = document.activeElement;
+    activeDetailModal = modal;
+    modal.style.setProperty('display', display, 'important');
+    document.body.classList.add('detail-modal-open');
+    modal.querySelector('button')?.focus({ preventScroll: true });
+}
+
+function closeDetailModal(modal) {
+    modal.style.setProperty('display', 'none', 'important');
+    if (activeDetailModal !== modal) return;
+    activeDetailModal = null;
+    document.body.classList.remove('detail-modal-open');
+    if (detailModalReturnFocus?.isConnected) {
+        detailModalReturnFocus.focus({ preventScroll: true });
+    }
+    detailModalReturnFocus = null;
+}
+
 // 이미지 확대 모달 열기
 function openImageModal(imageSrc, imageAlt) {
     const imageModal = document.getElementById('imageModal');
@@ -5159,7 +5344,7 @@ function openImageModal(imageSrc, imageAlt) {
     if (imageModal && modalImage) {
         modalImage.src = imageSrc;
         modalImage.alt = imageAlt;
-        imageModal.style.setProperty('display', 'flex', 'important');
+        openDetailModal(imageModal, 'flex');
     }
 }
 
@@ -5197,17 +5382,18 @@ function openCompareModal() {
             btn.textContent = w.name;
             btn.onclick = () => {
                 compareTarget = { weapon: w, categoryKey };
-                modal.style.display = 'none';
+                closeDetailModal(modal);
                 // 현재 무기를 다시 렌더링하여 비교 바를 표시
                 if (currentWeapon && currentCategory) {
                     showWeaponDetail(currentWeapon, currentCategory);
+                    document.querySelector('.weapon-compare-btn')?.focus({ preventScroll: true });
                 }
             };
             listContainer.appendChild(btn);
         });
     });
 
-    modal.style.display = 'block';
+    openDetailModal(modal, 'block');
 }
 
 // 무기/부착물/기어 전체 검색 함수 (검색 결과를 그리드로 표시)
