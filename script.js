@@ -853,7 +853,7 @@ function createAttachmentSlotsSection(item) {
     header.className = 'weapon-stats-header';
     const title = document.createElement('h3');
     title.className = 'weapon-stats-title';
-    title.textContent = '장착 가능한 부착물';
+    title.textContent = '이 아이템에 장착 가능한 부착물';
     header.appendChild(title);
     container.appendChild(header);
 
@@ -1092,7 +1092,7 @@ function createParentCompatibleSection(item) {
     header.className = 'weapon-stats-header';
     const title = document.createElement('h3');
     title.className = 'weapon-stats-title';
-    title.textContent = '장착할 수 있는 아이템';
+    title.textContent = '이 아이템을 장착할 수 있는 대상';
     header.appendChild(title);
     container.appendChild(header);
 
@@ -1244,8 +1244,9 @@ function arrangeDetailCard(card, item, categoryKey, panelType) {
     const backButton = document.createElement('button');
     backButton.type = 'button';
     backButton.className = 'detail-back-btn';
-    backButton.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>목록으로</span>';
-    backButton.addEventListener('click', resetToRootGrid);
+    backButton.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>이전으로</span>';
+    backButton.title = '직전에 보던 화면으로 돌아가기';
+    backButton.addEventListener('click', popNavState);
     const context = document.createElement('div');
     context.className = 'detail-context';
     const panelLabel = document.createElement('span');
@@ -3390,7 +3391,7 @@ function getPlaceholderIconHtml(item, categoryKey, panelType, context = 'card') 
     if (context === 'detail') {
         return `<img src="${filePath}" alt="${altText}" class="${imgClass}">`;
     }
-    return `<div class="grid-card-placeholder-wrap"><img src="${filePath}" alt="${altText}" class="${imgClass}"></div>`;
+    return `<div class="grid-card-placeholder-wrap"><img src="${filePath}" alt="${altText}" class="${imgClass}" loading="lazy" decoding="async"></div>`;
 }
 
 // 그리드 카드 생성 (이미지 + 이름 + 동적 스펙 뱃지)
@@ -3405,6 +3406,8 @@ function createGridCard(item, categoryKey, panelType) {
     const images = getItemImages(item);
     if (images.length > 0) {
         const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.decoding = 'async';
         img.src = images[0];
         img.alt = item.name;
         img.onerror = function() {
@@ -3972,6 +3975,29 @@ function appendItemSpecRows(statsList, item, options = {}) {
     }
 }
 
+let modelViewerLoadingPromise = null;
+function ensureModelViewerLoaded() {
+    if (typeof window === 'undefined') return Promise.resolve();
+    if (window.customElements && window.customElements.get('model-viewer')) {
+        return Promise.resolve();
+    }
+    if (modelViewerLoadingPromise) {
+        return modelViewerLoadingPromise;
+    }
+    modelViewerLoadingPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js';
+        script.onload = () => resolve();
+        script.onerror = (err) => {
+            modelViewerLoadingPromise = null;
+            reject(err);
+        };
+        document.head.appendChild(script);
+    });
+    return modelViewerLoadingPromise;
+}
+
 // 이미지/3D 패널 생성 (갤러리 타이틀 + 화살표 + 3D 인스펙트 뷰어 지원)
 function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onImageIndexChange = null) {
     const images = getItemImages(item);
@@ -4123,6 +4149,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
     // 3D 뷰 요소 (hasModel일 때 준비)
     let modelViewerContainer = null;
     if (hasModel) {
+        ensureModelViewerLoaded();
         modelViewerContainer = document.createElement('div');
         modelViewerContainer.className = 'model-viewer-container';
         modelViewerContainer.style.display = 'none';
@@ -4232,6 +4259,7 @@ function createImagePanelWithArrows(item, itemName, initialImageIndex = 0, onIma
         galleryFooter.hidden = to3D;
         
         if (to3D) {
+            ensureModelViewerLoaded();
             imgWrapper.style.display = 'none';
             arrowLeft.style.display = 'none';
             arrowRight.style.display = 'none';
